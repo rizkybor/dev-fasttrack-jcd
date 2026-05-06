@@ -5,6 +5,7 @@ import { computed, ref } from 'vue';
 const page = usePage();
 const seo = computed(() => page.props.seo || {});
 const servicesOpen = ref(false);
+const tipsOpen = ref(false);
 
 const serviceCategories = [
     {
@@ -135,7 +136,7 @@ const toolGroups = [
         <!-- Header -->
         <header
             class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm"
-            @mouseleave="servicesOpen = false"
+            @mouseleave="servicesOpen = false; tipsOpen = false"
         >
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-20 items-center">
@@ -148,7 +149,7 @@ const toolGroups = [
                     
                     <!-- Desktop Menu -->
                     <nav class="hidden md:flex space-x-8 items-center">
-                        <a href="/" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Home</a>
+                        <a href="/#promo" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Promo</a>
                         <div class="relative" @mouseenter="servicesOpen = true">
                             <button
                                 type="button"
@@ -168,9 +169,50 @@ const toolGroups = [
                                 </svg>
                             </button>
                         </div>
-                        <a href="#" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Harga</a>
-                        <a href="/artikel" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Blog</a>
-                        <a href="/kontak" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Kontak</a>
+                        <a href="/#tentang" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Tentang Kami</a>
+                        <div class="relative" @mouseenter="tipsOpen = true">
+                            <button
+                                type="button"
+                                class="inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide transition"
+                                :class="tipsOpen ? 'text-primary' : 'text-gray-700 hover:text-primary'"
+                                @click="tipsOpen = !tipsOpen"
+                            >
+                                <span>Tips Bisnis</span>
+                                <svg
+                                    class="h-4 w-4 transition-transform duration-200"
+                                    :class="tipsOpen ? 'rotate-180' : ''"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <transition
+                                enter-active-class="transition duration-150 ease-out"
+                                enter-from-class="opacity-0 -translate-y-2"
+                                enter-to-class="opacity-100 translate-y-0"
+                                leave-active-class="transition duration-100 ease-in"
+                                leave-from-class="opacity-100 translate-y-0"
+                                leave-to-class="opacity-0 -translate-y-2"
+                            >
+                                <div
+                                    v-if="tipsOpen"
+                                    class="absolute right-0 top-full mt-4 w-56 rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl"
+                                >
+                                    <a href="/artikel" class="block rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-primary/5 hover:text-primary">
+                                        Blog
+                                    </a>
+                                    <a href="/kbli" class="block rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-primary/5 hover:text-primary">
+                                        KBLI
+                                    </a>
+                                    <a href="/faq" class="block rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-primary/5 hover:text-primary">
+                                        FAQ
+                                    </a>
+                                </div>
+                            </transition>
+                        </div>
                     </nav>
 
                     <!-- CTA Button -->
@@ -201,10 +243,10 @@ const toolGroups = [
             >
                 <div
                     v-if="servicesOpen"
-                    class="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-[95vw] max-w-6xl rounded-3xl border border-gray-100 bg-white shadow-2xl overflow-hidden z-50"
+                    class="hidden md:block absolute left-0 right-0 top-full border-t border-gray-100 bg-white shadow-2xl overflow-hidden z-50"
                     @mouseenter="servicesOpen = true"
                 >
-                    <div class="px-6 py-6 max-h-[85vh] overflow-y-auto">
+                    <div class="max-w-7xl mx-auto px-6 py-6 max-h-[85vh] overflow-y-auto">
                         <div class="text-center mb-5">
                             <h3 class="text-2xl font-bold text-secondary">Layanan Kami</h3>
                         </div>

@@ -145,7 +145,7 @@ const checkPT = () => {
         </section>
 
         <!-- 3. Promos Section -->
-        <section class="py-12 bg-white">
+        <section id="promo" class="py-12 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-end mb-8">
                     <h2 class="text-2xl font-bold text-secondary">Dapatkan Penawaran Menarik dari Kami!</h2>
@@ -161,7 +161,7 @@ const checkPT = () => {
         </section>
 
         <!-- 4. About Section -->
-        <section class="py-16 bg-gray-50 border-y border-gray-200">
+        <section id="tentang" class="py-16 bg-gray-50 border-y border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="w-full md:w-1/2">

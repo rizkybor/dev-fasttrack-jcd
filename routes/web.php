@@ -74,6 +74,24 @@ Route::get('/artikel', function () {
     ]);
 });
 
+Route::get('/kbli', function () {
+    return Inertia::render('Kbli', [
+        'seo' => [
+            'title' => 'Panduan KBLI - FastTrack',
+            'description' => 'Pelajari fungsi dan pemilihan KBLI yang tepat untuk legalitas bisnis Anda.'
+        ]
+    ]);
+});
+
+Route::get('/faq', function () {
+    return Inertia::render('Faq', [
+        'seo' => [
+            'title' => 'FAQ - FastTrack',
+            'description' => 'Jawaban untuk pertanyaan umum terkait legalitas bisnis dan layanan FastTrack.'
+        ]
+    ]);
+});
+
 Route::get('/kontak', function () {
     return Inertia::render('Contact', [
         'seo' => [
