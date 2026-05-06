@@ -28,65 +28,62 @@ const checkPT = () => {
 <template>
     <MainLayout>
         <!-- 1. Hero Section -->
-        <section class="relative bg-gradient-to-r from-secondary to-gray-800 pt-20 pb-24 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center">
+        <section class="relative overflow-hidden bg-gradient-to-r from-secondary to-gray-800 pt-16 pb-20 sm:pt-20 sm:pb-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/2 text-white md:pr-10">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl mb-6">
                         Mulai Usaha dengan Benar
                     </h1>
-                    <p class="text-lg text-gray-300 mb-8 max-w-lg">
+                    <p class="max-w-lg text-base text-gray-300 sm:text-lg mb-8">
                         Wujudkan impian bisnis Anda! FASTTRACK siap membantu Anda mengurus legalitas usaha dengan cepat, transparan, dan terpercaya di seluruh Indonesia.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="/kontak" class="bg-primary hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4">
+                        <a href="/kontak" class="inline-flex justify-center bg-primary hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
                             Konsultasi Gratis &rarr;
                         </a>
-                        <a href="#layanan" class="bg-transparent border border-white text-white hover:bg-white hover:text-secondary font-bold py-3 px-8 rounded-full transition">
+                        <a href="#layanan" class="inline-flex justify-center bg-transparent border border-white text-white hover:bg-white hover:text-secondary font-bold py-3 px-8 rounded-full transition">
                             Lihat Layanan
                         </a>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center md:justify-end">
-                    <!-- Placeholder for person image -->
-                    <img src="https://placehold.co/500x500/1F2937/FFFFFF?text=Hero+Image" alt="Hero" class="rounded-lg shadow-2xl max-w-full h-auto object-cover border-4 border-gray-700">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80&fm=webp" alt="Tim FastTrack sedang berdiskusi tentang legalitas bisnis" class="rounded-[1.75rem] shadow-2xl max-w-full h-auto object-cover border-4 border-gray-700">
                 </div>
             </div>
-            
-            <!-- PT Checker Bar (Floating below hero) -->
-            <!-- <div class="absolute bottom-0 left-0 w-full transform translate-y-1/2 flex justify-center px-4">
-                <div class="bg-white rounded-full shadow-xl border border-gray-200 p-2 flex items-center max-w-3xl w-full">
-                    <form @submit.prevent="checkPT" class="flex w-full items-center">
-                        <div class="px-4 text-gray-400">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                        </div>
-                        <input v-model="ptName" type="text" placeholder="Cek Ketersediaan Nama PT Anda..." class="flex-grow border-none focus:ring-0 text-gray-700 placeholder-gray-400 py-2">
-                        <button type="submit" class="bg-primary text-white font-bold py-2 px-6 rounded-full hover:bg-pink-600 transition" :disabled="isChecking">
-                            {{ isChecking ? 'Mengecek...' : 'Cek Sekarang' }}
-                        </button>
-                    </form>
-                </div>
-            </div> -->
         </section>
 
-        <!-- Result Checker Placeholder -->
-        <!-- <div v-if="checkResult" class="max-w-3xl mx-auto mt-12 px-4">
-            <div :class="checkResult.available ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'" class="p-4 rounded-lg text-center font-semibold">
-                {{ checkResult.message }}
+        <section class="-mt-8 sm:-mt-10 relative z-20 px-4">
+            <div class="mx-auto max-w-4xl rounded-[1.75rem] border border-gray-100 bg-white p-4 shadow-2xl sm:p-5">
+                <form @submit.prevent="checkPT" class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                    <div class="flex items-center gap-3 rounded-2xl border border-gray-200 px-4 py-3 sm:flex-1">
+                        <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input v-model="ptName" type="text" placeholder="Cek ketersediaan nama PT Anda..." class="w-full border-none p-0 text-sm text-gray-700 placeholder-gray-400 focus:ring-0 sm:text-base">
+                    </div>
+                    <button type="submit" class="inline-flex justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-white transition hover:bg-pink-600 disabled:cursor-not-allowed disabled:opacity-70" :disabled="isChecking || !ptName">
+                        {{ isChecking ? 'Mengecek...' : 'Cek Nama PT' }}
+                    </button>
+                </form>
+
+                <div v-if="checkResult" class="mt-4 rounded-2xl px-4 py-3 text-sm font-semibold" :class="checkResult.available ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'">
+                    {{ checkResult.message }}
+                </div>
             </div>
-        </div> -->
+        </section>
 
         <!-- 2. Services Section -->
-        <section id="layanan" class="pt-24 pb-16 bg-gray-50">
+        <section id="layanan" class="pt-20 pb-16 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-end mb-10">
+                <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                     <h2 class="text-3xl font-bold text-secondary">Pilih layanan sesuai dengan kebutuhan Anda</h2>
-                    <a href="/layanan" class="hidden md:inline-block text-primary font-semibold hover:underline">Lihat Semua Layanan &rarr;</a>
+                    <a href="/layanan" class="inline-block text-primary font-semibold hover:underline">Lihat Semua Layanan &rarr;</a>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Service Card 1 -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col">
-                        <img src="https://placehold.co/400x250/F3F4F6/1F2937?text=Pendirian+PT" class="w-full h-40 object-cover" alt="PT">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80&fm=webp" class="w-full h-40 object-cover" alt="Layanan pendirian PT FastTrack">
                         <div class="p-5 flex-grow flex flex-col">
                             <span class="inline-block bg-pink-100 text-primary text-xs font-bold px-2 py-1 rounded mb-3 w-max">POPULER</span>
                             <h3 class="font-bold text-lg mb-2">Pendirian PT</h3>
@@ -94,13 +91,13 @@ const checkPT = () => {
                             <div class="border-t border-gray-100 pt-4 mt-auto">
                                 <p class="text-xs text-gray-500 mb-1">Mulai dari</p>
                                 <p class="font-bold text-primary mb-3">Rp 3.500.000</p>
-                                <a href="/layanan/pendirian-pt" class="block w-full text-center border border-primary text-primary hover:bg-primary hover:text-white py-2 rounded font-semibold text-sm transition">Selengkapnya</a>
+                                <a href="/pendirian-perusahaan" class="block w-full text-center border border-primary text-primary hover:bg-primary hover:text-white py-2 rounded font-semibold text-sm transition">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service Card 2 -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col">
-                        <img src="https://placehold.co/400x250/F3F4F6/1F2937?text=Virtual+Office" class="w-full h-40 object-cover" alt="VO">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80&fm=webp" class="w-full h-40 object-cover" alt="Layanan virtual office FastTrack">
                         <div class="p-5 flex-grow flex flex-col">
                             <span class="inline-block bg-pink-100 text-primary text-xs font-bold px-2 py-1 rounded mb-3 w-max">TERLARIS</span>
                             <h3 class="font-bold text-lg mb-2">Virtual Office</h3>
@@ -108,13 +105,13 @@ const checkPT = () => {
                             <div class="border-t border-gray-100 pt-4 mt-auto">
                                 <p class="text-xs text-gray-500 mb-1">Mulai dari</p>
                                 <p class="font-bold text-primary mb-3">Rp 2.000.000 / thn</p>
-                                <a href="/layanan/virtual-office" class="block w-full text-center border border-primary text-primary hover:bg-primary hover:text-white py-2 rounded font-semibold text-sm transition">Selengkapnya</a>
+                                <a href="/virtual-office-jakarta" class="block w-full text-center border border-primary text-primary hover:bg-primary hover:text-white py-2 rounded font-semibold text-sm transition">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service Card 3 -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col">
-                        <img src="https://placehold.co/400x250/F3F4F6/1F2937?text=Pendirian+CV" class="w-full h-40 object-cover" alt="CV">
+                        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80&fm=webp" class="w-full h-40 object-cover" alt="Layanan pendirian CV FastTrack">
                         <div class="p-5 flex-grow flex flex-col">
                             <span class="inline-block bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded mb-3 w-max">UMKM</span>
                             <h3 class="font-bold text-lg mb-2">Pendirian CV</h3>
@@ -122,13 +119,13 @@ const checkPT = () => {
                             <div class="border-t border-gray-100 pt-4 mt-auto">
                                 <p class="text-xs text-gray-500 mb-1">Mulai dari</p>
                                 <p class="font-bold text-primary mb-3">Rp 2.500.000</p>
-                                <a href="/layanan/pendirian-cv" class="block w-full text-center border border-primary text-primary hover:bg-primary hover:text-white py-2 rounded font-semibold text-sm transition">Selengkapnya</a>
+                                <a href="/pendirian-perusahaan" class="block w-full text-center border border-primary text-primary hover:bg-primary hover:text-white py-2 rounded font-semibold text-sm transition">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
                     <!-- Service Card 4 -->
                     <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col">
-                        <img src="https://placehold.co/400x250/F3F4F6/1F2937?text=Perizinan" class="w-full h-40 object-cover" alt="Izin">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80&fm=webp" class="w-full h-40 object-cover" alt="Layanan perizinan usaha FastTrack">
                         <div class="p-5 flex-grow flex flex-col">
                             <span class="inline-block bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded mb-3 w-max">KHUSUS</span>
                             <h3 class="font-bold text-lg mb-2">Izin Usaha Tambahan</h3>
@@ -136,7 +133,7 @@ const checkPT = () => {
                             <div class="border-t border-gray-100 pt-4 mt-auto">
                                 <p class="text-xs text-gray-500 mb-1">Mulai dari</p>
                                 <p class="font-bold text-primary mb-3">Hubungi Kami</p>
-                                <a href="/kontak" class="block w-full text-center border border-primary text-primary hover:bg-primary hover:text-white py-2 rounded font-semibold text-sm transition">Selengkapnya</a>
+                                <a href="/perizinan" class="block w-full text-center border border-primary text-primary hover:bg-primary hover:text-white py-2 rounded font-semibold text-sm transition">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
@@ -147,15 +144,16 @@ const checkPT = () => {
         <!-- 3. Promos Section -->
         <section id="promo" class="py-12 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-end mb-8">
+                <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                     <h2 class="text-2xl font-bold text-secondary">Dapatkan Penawaran Menarik dari Kami!</h2>
+                    <a href="/promo" class="text-primary font-semibold hover:underline">Lihat Semua Promo &rarr;</a>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div v-for="i in 4" :key="i" class="bg-gray-800 rounded-lg p-4 text-white hover:bg-secondary transition cursor-pointer">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="/promo" v-for="i in 4" :key="i" class="block bg-gray-800 rounded-lg p-4 text-white hover:bg-secondary transition">
                         <div class="text-xs text-primary font-bold mb-1">PROMO SPESIAL</div>
                         <h3 class="font-bold text-lg mb-1">HEMAT HINGGA 30%</h3>
                         <p class="text-xs text-gray-300">Untuk pendirian PT + Virtual Office bulan ini.</p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -165,7 +163,7 @@ const checkPT = () => {
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="w-full md:w-1/2">
-                        <img src="https://placehold.co/600x400/E5E7EB/1F2937?text=Kantor+Kami" alt="About" class="rounded-xl shadow-lg w-full">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80&fm=webp" alt="Kantor FastTrack untuk konsultasi legalitas bisnis" class="rounded-xl shadow-lg w-full">
                     </div>
                     <div class="w-full md:w-1/2">
                         <h2 class="text-3xl font-bold mb-6 text-secondary">Tentang FASTTRACK</h2>
@@ -176,7 +174,7 @@ const checkPT = () => {
                             Dedikasi kami adalah menjadi partner pertumbuhan bisnis Anda dengan proses yang 100% transparan dan bisa dilacak secara real-time.
                         </p>
                         
-                        <div class="grid grid-cols-3 gap-4 border-t border-gray-200 pt-8">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-gray-200 pt-8">
                             <div class="text-center">
                                 <div class="text-3xl font-extrabold text-primary mb-1">12+</div>
                                 <div class="text-sm text-gray-500 font-medium">Tahun Pengalaman</div>
@@ -208,7 +206,7 @@ const checkPT = () => {
                     </a>
                 </div>
                 <div class="w-full md:w-1/2 flex justify-center">
-                    <img src="https://placehold.co/300x600/1F2937/FFFFFF?text=App+Mockup" alt="App Mockup" class="rounded-3xl shadow-2xl border-8 border-gray-800 transform rotate-2 hover:rotate-0 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Dashboard pelacakan layanan FastTrack di perangkat mobile" class="w-full max-w-xs rounded-3xl shadow-2xl border-8 border-gray-800 transform rotate-2 hover:rotate-0 transition duration-500">
                 </div>
             </div>
         </section>
@@ -219,7 +217,7 @@ const checkPT = () => {
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-secondary">Fitur FASTTRACK</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
                     <div v-for="i in 4" :key="i" class="text-center">
                         <div class="w-16 h-16 mx-auto bg-pink-50 rounded-full flex items-center justify-center mb-4 text-primary">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -242,12 +240,12 @@ const checkPT = () => {
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <!-- Main Post -->
                     <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col md:flex-row">
-                        <img src="https://placehold.co/400x300/E5E7EB/1F2937?text=Blog+Image" class="w-full md:w-1/2 h-48 md:h-auto object-cover" alt="Blog">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80&fm=webp" class="w-full md:w-1/2 h-48 md:h-auto object-cover" alt="Artikel panduan mendirikan PT">
                         <div class="p-6 flex flex-col justify-center w-full md:w-1/2">
                             <div class="text-xs text-gray-500 mb-2">12 Mei 2024</div>
                             <h3 class="text-xl font-bold mb-3 hover:text-primary cursor-pointer transition">Panduan Lengkap Mendirikan PT Tahun 2024</h3>
                             <p class="text-gray-600 text-sm mb-4">Mendirikan Perseroan Terbatas kini semakin mudah dengan adanya sistem OSS. Pelajari langkah-langkahnya.</p>
-                            <a href="#" class="text-primary font-semibold text-sm hover:underline mt-auto">Baca Selengkapnya &rarr;</a>
+                            <a href="/artikel" class="text-primary font-semibold text-sm hover:underline mt-auto">Baca Selengkapnya &rarr;</a>
                         </div>
                     </div>
                     
@@ -256,7 +254,7 @@ const checkPT = () => {
                         <h4 class="font-bold text-lg mb-4 border-b border-gray-100 pb-2">Artikel Terbaru</h4>
                         <ul class="space-y-4">
                             <li v-for="i in 4" :key="i" class="flex flex-col">
-                                <a href="#" class="font-semibold hover:text-primary transition text-sm mb-1">Perbedaan PT dan CV: Mana yang Cocok Untuk Bisnis Anda?</a>
+                                <a href="/artikel" class="font-semibold hover:text-primary transition text-sm mb-1">Perbedaan PT dan CV: Mana yang Cocok Untuk Bisnis Anda?</a>
                                 <span class="text-xs text-gray-500">10 Mei 2024</span>
                             </li>
                         </ul>
@@ -299,7 +297,7 @@ const checkPT = () => {
                     <div class="h-full min-h-[400px] rounded-xl overflow-hidden shadow-lg border border-gray-100">
                         <!-- Placeholder Map -->
                         <div class="w-full h-full bg-gray-200 flex items-center justify-center relative">
-                            <img src="https://placehold.co/800x600/E5E7EB/A3A8B8?text=Map+Location" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Map">
+                            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80&fm=webp" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Lokasi kantor FastTrack di Jakarta Selatan">
                             <div class="relative z-10 bg-white p-4 rounded-lg shadow-md text-center">
                                 <h4 class="font-bold text-secondary">Head Office FASTTRACK</h4>
                                 <p class="text-sm text-gray-500 mt-1">Sudirman, Jakarta Selatan</p>

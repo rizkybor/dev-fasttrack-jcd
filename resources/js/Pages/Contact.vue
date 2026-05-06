@@ -1,53 +1,9 @@
 <script setup>
-import { Head } from '@inertiajs/vue3';
 import MainLayout from '@/Layouts/MainLayout.vue';
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "FastTrack Legalitas",
-  "image": "https://fasttrack.test/logo.png",
-  "url": "https://fasttrack.test",
-  "telephone": "+6281234567890",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Jl. Sudirman Kav 1",
-    "addressLocality": "Jakarta Selatan",
-    "postalCode": "12190",
-    "addressCountry": "ID"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -6.225014,
-    "longitude": 106.809715
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "09:00",
-    "closes": "17:00"
-  },
-  "sameAs": [
-    "https://facebook.com/fasttrack",
-    "https://instagram.com/fasttrack"
-  ]
-};
 </script>
 
 <template>
     <MainLayout>
-        <Head>
-            <component :is="'script'" type="application/ld+json">
-                {{ JSON.stringify(jsonLd) }}
-            </component>
-        </Head>
-        
         <div class="bg-gray-50 py-12 border-b border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Hubungi Kami</h1>

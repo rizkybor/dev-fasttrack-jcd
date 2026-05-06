@@ -30,18 +30,36 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
+        $currentUrl = $request->url();
+        $configuredUrl = rtrim((string) config('app.url'), '/');
+        $siteUrl = $configuredUrl && ! str_contains($configuredUrl, 'localhost')
+            ? $configuredUrl
+            : $request->getSchemeAndHttpHost();
+        $defaultImage = $siteUrl . '/fasttrack-og.svg';
+
         return [
             ...parent::share($request),
             'auth' => [
                 'user' => $request->user(),
             ],
+            'site' => [
+                'name' => config('app.name', 'FastTrack'),
+                'url' => $siteUrl,
+                'current_url' => $currentUrl,
+                'default_image' => $defaultImage,
+                'locale' => 'id_ID',
+            ],
             'seo' => fn () => [
                 'title' => $request->session()->get('seo.title', 'Layanan Legalitas Bisnis | FastTrack'),
                 'description' => $request->session()->get('seo.description', 'Platform layanan legalitas pendirian PT/CV dengan standar profesional tinggi.'),
+                'canonical' => $currentUrl,
+                'image' => $defaultImage,
+                'type' => 'website',
+                'robots' => 'index, follow, max-image-preview:large',
             ],
             'ziggy' => fn () => [
                 ...(new Ziggy)->toArray(),
-                'location' => $request->url(),
+                'location' => $currentUrl,
             ],
         ];
     }
