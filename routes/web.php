@@ -199,6 +199,321 @@ $customServices = [
     ['component' => 'Services/LayananLainnya/Index', 'title' => 'Layanan Lainnya', 'path' => '/layanan-lain', 'description' => 'Berbagai layanan tambahan untuk mendukung kelancaran operasional bisnis Anda.']
 ];
 
+$foundingProducts = [
+    [
+        'id' => 1,
+        'name' => 'Paket Pendirian PT',
+        'tag' => 'Paling Diminati',
+        'price' => '5500000',
+        'price_label' => 'Rp 5.500.000',
+        'duration' => 'Estimasi 7-14 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Solusi pendirian Perseroan Terbatas untuk bisnis yang ingin tampil kredibel, siap bekerja sama dengan klien korporasi, dan bertumbuh secara profesional.',
+        'excerpt' => 'Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.',
+        'audience' => 'Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.',
+        'content' => [
+            'Perseroan Terbatas menjadi bentuk badan usaha yang paling sering dipilih ketika bisnis mulai membutuhkan struktur yang lebih tertata, pemisahan tanggung jawab yang lebih jelas, dan kredibilitas yang lebih kuat di mata mitra maupun investor.',
+            'Melalui paket pendirian PT, FastTrack membantu Anda mulai dari diskusi struktur usaha, pemilihan KBLI, pengecekan nama perusahaan, penyusunan dokumen pendirian, hingga pendampingan pada proses legalitas dasar yang dibutuhkan agar bisnis dapat segera berjalan.',
+            'Layanan ini tidak hanya berfokus pada terbitnya dokumen, tetapi juga memastikan fondasi legal bisnis Anda selaras dengan kebutuhan operasional dan rencana pengembangan usaha.',
+        ],
+        'benefits' => [
+            'Badan hukum terpisah yang lebih kredibel untuk kerja sama bisnis',
+            'Pendampingan pemilihan KBLI dan struktur usaha sejak awal',
+            'Dokumen pendirian disusun lebih rapi dan mudah ditindaklanjuti',
+            'Lebih siap untuk kebutuhan investor, tender, dan kemitraan',
+        ],
+        'requirements' => [
+            'Nama perusahaan dan alternatif cadangan',
+            'Data pendiri, pengurus, dan komposisi kepemilikan',
+            'Alamat usaha yang akan digunakan',
+            'Rencana kegiatan usaha untuk penentuan KBLI',
+        ],
+        'process' => [
+            'Konsultasi awal untuk memahami model bisnis dan kebutuhan legalitas',
+            'Verifikasi data, penyusunan struktur, dan pemilihan KBLI',
+            'Penyusunan dokumen pendirian dan pengurusan legalitas dasar',
+            'Serah terima dokumen dan arahan langkah lanjutan bisnis',
+        ],
+        'faq' => [
+            ['question' => 'Kapan sebaiknya memilih PT?', 'answer' => 'PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas.'],
+            ['question' => 'Apakah FastTrack membantu memilih KBLI?', 'answer' => 'Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien.'],
+        ],
+    ],
+    [
+        'id' => 2,
+        'name' => 'Paket Pendirian CV',
+        'tag' => 'UMKM Favorit',
+        'price' => '3500000',
+        'price_label' => 'Rp 3.500.000',
+        'duration' => 'Estimasi 5-10 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Pilihan praktis untuk pelaku usaha yang membutuhkan legalitas usaha dengan proses yang efisien dan biaya lebih terjangkau.',
+        'excerpt' => 'Paket pendirian CV untuk UMKM dan bisnis jasa yang ingin segera memiliki legalitas usaha dengan proses yang efisien.',
+        'audience' => 'Cocok untuk UMKM, bisnis keluarga, kontraktor kecil, perdagangan, dan penyedia jasa lokal.',
+        'content' => [
+            'Commanditaire Vennootschap atau CV sering menjadi pilihan pelaku usaha yang ingin segera memiliki legalitas bisnis dengan proses yang relatif efisien.',
+            'Bentuk usaha ini banyak digunakan oleh bisnis skala kecil hingga menengah yang memerlukan identitas usaha resmi untuk operasional, kerja sama dengan vendor, maupun pengurusan izin lanjutan.',
+            'FastTrack membantu proses pendirian CV agar lebih ringkas, mulai dari pemeriksaan data, penyusunan dokumen, hingga memastikan kebutuhan dasar legalitas Anda tertangani dengan jelas.',
+        ],
+        'benefits' => [
+            'Biaya awal lebih efisien untuk legalitas usaha',
+            'Proses pendirian ringkas dan mudah dipahami',
+            'Cocok untuk bisnis operasional yang ingin segera berjalan',
+            'Pendampingan agar dokumen dan data usaha lebih tertata',
+        ],
+        'requirements' => [
+            'Nama usaha dan data sekutu aktif maupun pasif',
+            'Alamat usaha dan kegiatan usaha utama',
+            'Identitas para pihak yang terlibat',
+            'Informasi modal awal dan gambaran operasional',
+        ],
+        'process' => [
+            'Diskusi singkat untuk menentukan struktur CV yang sesuai',
+            'Pengumpulan data dan pengecekan kesiapan dokumen',
+            'Penyusunan dokumen pendirian dan pengurusan legalitas dasar',
+            'Finalisasi dokumen dan briefing penggunaan dokumen usaha',
+        ],
+        'faq' => [
+            ['question' => 'Apa keunggulan CV dibanding usaha perorangan?', 'answer' => 'CV memberi bentuk usaha yang lebih formal dan sering lebih mudah diterima dalam kerja sama bisnis tertentu.'],
+            ['question' => 'Siapa yang cocok memakai CV?', 'answer' => 'CV cocok untuk usaha skala kecil hingga menengah yang membutuhkan legalitas operasional namun tetap ingin proses yang efisien.'],
+        ],
+    ],
+    [
+        'id' => 3,
+        'name' => 'Paket Pendirian Firma',
+        'tag' => 'Profesional',
+        'price' => '4200000',
+        'price_label' => 'Rp 4.200.000',
+        'duration' => 'Estimasi 7-12 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Dirancang untuk usaha bersama yang dibangun atas kepercayaan dan keterlibatan aktif para sekutu dalam operasional bisnis.',
+        'excerpt' => 'Paket pendirian firma untuk usaha profesional yang dijalankan bersama oleh para sekutu aktif.',
+        'audience' => 'Cocok untuk kantor konsultan, firma profesional, studio kreatif, dan usaha berbasis kemitraan aktif.',
+        'content' => [
+            'Firma umum digunakan ketika beberapa pihak ingin menjalankan usaha bersama dengan keterlibatan aktif dalam pengelolaan bisnis sehari-hari.',
+            'Karena karakter firma sangat menekankan kepercayaan dan tanggung jawab antar sekutu, penyusunan struktur, ruang lingkup wewenang, dan dokumen pendirian perlu dipikirkan secara matang sejak awal.',
+            'FastTrack membantu Anda memahami implikasi bentuk usaha ini, sekaligus menyusun dokumen yang lebih terarah agar hubungan kerja sama para sekutu menjadi lebih jelas.',
+        ],
+        'benefits' => [
+            'Struktur kerja sama aktif antarsekutu lebih jelas',
+            'Cocok untuk usaha profesional berbasis reputasi',
+            'Dokumen pendirian membantu mengurangi potensi salah paham',
+            'Pendampingan penyesuaian model bisnis dan legalitas',
+        ],
+        'requirements' => [
+            'Data seluruh sekutu yang terlibat',
+            'Kesepakatan pembagian peran dan kewenangan',
+            'Alamat dan ruang lingkup usaha firma',
+            'Nama usaha dan data identitas pendukung',
+        ],
+        'process' => [
+            'Konsultasi model kemitraan dan struktur peran para sekutu',
+            'Pengecekan data, nama usaha, dan ruang lingkup kegiatan',
+            'Penyusunan dokumen pendirian dan kelengkapan legalitas',
+            'Serah terima dokumen serta arahan implementasi',
+        ],
+        'faq' => [
+            ['question' => 'Apa pembeda firma dengan CV?', 'answer' => 'Firma umumnya menekankan keterlibatan aktif para sekutu dalam menjalankan usaha, sedangkan CV mengenal sekutu aktif dan pasif.'],
+            ['question' => 'Apakah firma cocok untuk usaha jasa profesional?', 'answer' => 'Ya, firma sering digunakan untuk usaha yang dibangun atas reputasi dan keterlibatan aktif para pendirinya.'],
+        ],
+    ],
+    [
+        'id' => 4,
+        'name' => 'Persekutuan Perdata',
+        'tag' => 'Kolaboratif',
+        'price' => '3900000',
+        'price_label' => 'Rp 3.900.000',
+        'duration' => 'Estimasi 5-10 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Solusi legal untuk para pihak yang ingin bekerja sama secara perdata dengan pengaturan kontribusi, tujuan, dan pembagian tanggung jawab yang lebih jelas.',
+        'excerpt' => 'Paket persekutuan perdata untuk kerja sama usaha atau proyek yang membutuhkan struktur perdata yang lebih tertata.',
+        'audience' => 'Cocok untuk kolaborasi proyek, konsorsium kecil, studio, klinik, dan kerja sama profesional tertentu.',
+        'content' => [
+            'Persekutuan perdata sering digunakan untuk kerja sama usaha atau profesi yang mengutamakan kesepakatan antar pihak mengenai kontribusi, tujuan, dan pembagian hasil.',
+            'Struktur ini menuntut kejelasan dalam ruang lingkup kerja sama agar hak dan kewajiban masing-masing pihak tidak menimbulkan sengketa di kemudian hari.',
+            'FastTrack membantu menyiapkan dasar legalnya dengan pendekatan yang terstruktur agar kerja sama dapat berjalan lebih tertib sejak awal.',
+        ],
+        'benefits' => [
+            'Pengaturan hak dan kewajiban para pihak lebih jelas',
+            'Mendukung kerja sama usaha atau proyek secara profesional',
+            'Meminimalkan salah tafsir dalam pembagian kontribusi',
+            'Lebih siap untuk kerja sama jangka menengah dan panjang',
+        ],
+        'requirements' => [
+            'Data para pihak yang akan bersekutu',
+            'Tujuan kerja sama dan bentuk kontribusi masing-masing',
+            'Alamat korespondensi dan ruang lingkup kegiatan',
+            'Kesepakatan awal pembagian hasil atau manfaat',
+        ],
+        'process' => [
+            'Konsultasi struktur kerja sama perdata yang diinginkan',
+            'Identifikasi hak, kewajiban, dan kontribusi para pihak',
+            'Penyusunan dokumen dasar dan penguatan legalitas',
+            'Finalisasi dokumen kerja sama dan arahan implementasi',
+        ],
+        'faq' => [
+            ['question' => 'Apakah persekutuan perdata cocok untuk proyek bersama?', 'answer' => 'Ya, bentuk ini sering dipakai ketika beberapa pihak ingin berkolaborasi dengan pembagian kontribusi yang jelas.'],
+            ['question' => 'Mengapa dokumen kerja sama harus detail?', 'answer' => 'Dokumen yang detail membantu mengurangi potensi sengketa dan membuat pelaksanaan kerja sama lebih terukur.'],
+        ],
+    ],
+    [
+        'id' => 5,
+        'name' => 'PMA',
+        'tag' => 'Investor Asing',
+        'price' => '12500000',
+        'price_label' => 'Rp 12.500.000',
+        'duration' => 'Estimasi 14-30 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Paket pendirian PMA untuk investor asing yang ingin masuk ke pasar Indonesia dengan struktur legal yang lebih siap dan terarah.',
+        'excerpt' => 'Paket PMA untuk investor asing atau joint venture yang ingin membangun bisnis resmi di Indonesia.',
+        'audience' => 'Cocok untuk investor asing, joint venture, holding regional, dan bisnis ekspansi lintas negara.',
+        'content' => [
+            'Perusahaan Penanaman Modal Asing atau PMA membutuhkan pendekatan yang lebih hati-hati karena menyangkut kepatuhan investasi, struktur kepemilikan, perizinan, dan kelayakan model bisnis di Indonesia.',
+            'Dalam banyak kasus, investor asing tidak hanya membutuhkan dokumen pendirian, tetapi juga membutuhkan pemetaan langkah, pemahaman regulasi, dan komunikasi yang jelas mengenai prosesnya.',
+            'FastTrack mendampingi tahap awal pendirian PMA dengan bahasa yang lebih mudah dipahami dan workflow yang dirancang agar proses lebih efisien dan minim kebingungan.',
+        ],
+        'benefits' => [
+            'Pendampingan awal untuk memahami struktur PMA',
+            'Komunikasi proses yang lebih jelas untuk investor',
+            'Membantu menyesuaikan model bisnis dengan kebutuhan legal',
+            'Lebih siap untuk ekspansi bisnis lintas negara',
+        ],
+        'requirements' => [
+            'Data pemegang saham dan struktur kepemilikan',
+            'Rencana bisnis serta aktivitas usaha utama',
+            'Alamat usaha dan data pengurus perusahaan',
+            'Dokumen identitas dan data korporasi yang relevan',
+        ],
+        'process' => [
+            'Kickoff meeting untuk memahami tujuan investasi dan model usaha',
+            'Review struktur kepemilikan, ruang lingkup usaha, dan kesiapan data',
+            'Penyusunan dokumen pendirian dan koordinasi legalitas dasar',
+            'Serah terima dokumen dan pengarahan langkah lanjutan operasional',
+        ],
+        'faq' => [
+            ['question' => 'Apakah PMA cocok untuk joint venture?', 'answer' => 'Ya, PMA sering menjadi opsi untuk kolaborasi investasi asing yang memerlukan entitas resmi di Indonesia.'],
+            ['question' => 'Mengapa PMA memerlukan pendampingan lebih detail?', 'answer' => 'Karena pendirian PMA berkaitan dengan struktur investasi dan kepatuhan yang umumnya lebih kompleks dibanding badan usaha lokal biasa.'],
+        ],
+    ],
+    [
+        'id' => 6,
+        'name' => 'Pendirian Yayasan',
+        'tag' => 'Sosial & Pendidikan',
+        'price' => '4800000',
+        'price_label' => 'Rp 4.800.000',
+        'duration' => 'Estimasi 7-14 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Layanan pendirian yayasan untuk kegiatan sosial, pendidikan, keagamaan, dan kemanusiaan dengan struktur dokumen yang tertib.',
+        'excerpt' => 'Paket pendirian yayasan untuk organisasi nirlaba yang membutuhkan dasar hukum yang lebih jelas dan profesional.',
+        'audience' => 'Cocok untuk lembaga pendidikan, kegiatan sosial, komunitas keagamaan, dan organisasi kemanusiaan.',
+        'content' => [
+            'Yayasan banyak dipilih untuk kegiatan nirlaba yang berorientasi pada tujuan sosial, pendidikan, keagamaan, atau kemanusiaan.',
+            'Agar yayasan dapat berjalan dengan baik, penting untuk merancang struktur pembina, pengurus, dan pengawas secara proporsional serta memastikan tujuan organisasi dituangkan dengan jelas.',
+            'FastTrack membantu pendirian yayasan secara lebih rapi agar organisasi Anda memiliki fondasi legal yang siap digunakan untuk operasional maupun kolaborasi ke depan.',
+        ],
+        'benefits' => [
+            'Struktur organisasi yayasan lebih jelas sejak awal',
+            'Dokumen tujuan dan kegiatan lebih tertata',
+            'Mendukung kerja sama dengan donor atau mitra institusi',
+            'Pendampingan proses legalitas yang mudah dipahami',
+        ],
+        'requirements' => [
+            'Nama yayasan dan tujuan utama organisasi',
+            'Data pembina, pengurus, dan pengawas',
+            'Alamat domisili yayasan',
+            'Rencana kegiatan pokok dan dukungan data identitas',
+        ],
+        'process' => [
+            'Diskusi tujuan yayasan dan struktur organisasi',
+            'Pengumpulan data serta validasi kebutuhan dokumen',
+            'Penyusunan dokumen pendirian dan pengurusan legalitas awal',
+            'Serah terima dokumen dan pengarahan operasional dasar',
+        ],
+        'faq' => [
+            ['question' => 'Apakah yayasan bisa dipakai untuk kegiatan sosial dan pendidikan?', 'answer' => 'Ya, yayasan umum dipakai untuk kegiatan nirlaba di bidang sosial, pendidikan, keagamaan, dan kemanusiaan.'],
+            ['question' => 'Mengapa struktur pengurus yayasan penting?', 'answer' => 'Karena struktur pengurus yang jelas membantu organisasi berjalan lebih tertib dan akuntabel.'],
+        ],
+    ],
+    [
+        'id' => 7,
+        'name' => 'Pendirian Koperasi',
+        'tag' => 'Komunitas Tumbuh',
+        'price' => '6500000',
+        'price_label' => 'Rp 6.500.000',
+        'duration' => 'Estimasi 10-20 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Pendampingan pendirian koperasi untuk komunitas, asosiasi, atau kelompok usaha yang ingin tumbuh bersama secara lebih terstruktur.',
+        'excerpt' => 'Paket pendirian koperasi untuk kelompok usaha atau komunitas yang ingin memiliki wadah legal yang lebih kuat.',
+        'audience' => 'Cocok untuk koperasi karyawan, koperasi simpan pinjam, komunitas usaha, dan asosiasi ekonomi bersama.',
+        'content' => [
+            'Koperasi menjadi pilihan tepat bagi kelompok usaha atau komunitas yang ingin berkembang bersama dengan prinsip kebersamaan dan manfaat kolektif.',
+            'Pendirian koperasi memerlukan kesiapan struktur anggota, tujuan organisasi, dan pengelolaan yang lebih disiplin agar tata kelolanya sehat sejak awal.',
+            'FastTrack membantu Anda menyiapkan dasar legal koperasi agar pembentukan organisasi, dokumen, dan arah operasionalnya lebih tertib.',
+        ],
+        'benefits' => [
+            'Mendukung pertumbuhan ekonomi bersama dalam satu wadah legal',
+            'Struktur anggota dan pengurus lebih terorganisir',
+            'Dokumen koperasi lebih siap untuk operasional dan koordinasi',
+            'Pendampingan proses yang ramah bagi komunitas atau kelompok usaha',
+        ],
+        'requirements' => [
+            'Data pendiri atau anggota awal koperasi',
+            'Tujuan, jenis koperasi, dan ruang lingkup kegiatan',
+            'Data pengurus yang akan ditunjuk',
+            'Alamat dan dokumen identitas pendukung',
+        ],
+        'process' => [
+            'Konsultasi tipe koperasi dan tujuan pembentukannya',
+            'Verifikasi data anggota, pengurus, dan ruang lingkup kegiatan',
+            'Penyusunan dokumen pendirian serta koordinasi legalitas',
+            'Finalisasi dokumen dan arahan langkah awal operasional koperasi',
+        ],
+        'faq' => [
+            ['question' => 'Apakah koperasi cocok untuk komunitas usaha?', 'answer' => 'Ya, koperasi sangat relevan untuk kelompok yang ingin bertumbuh bersama secara kolektif dan terstruktur.'],
+            ['question' => 'Apa manfaat legalitas koperasi?', 'answer' => 'Legalitas membantu koperasi berjalan lebih tertib, mudah berkoordinasi, dan lebih dipercaya oleh para anggotanya maupun mitra.'],
+        ],
+    ],
+    [
+        'id' => 8,
+        'name' => 'Pendirian Perkumpulan',
+        'tag' => 'Komunitas Resmi',
+        'price' => '4300000',
+        'price_label' => 'Rp 4.300.000',
+        'duration' => 'Estimasi 7-14 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Layanan pendirian perkumpulan untuk organisasi berbasis komunitas, hobi, profesi, atau kepentingan bersama yang ingin tampil lebih resmi.',
+        'excerpt' => 'Paket pendirian perkumpulan untuk komunitas atau organisasi keanggotaan yang membutuhkan legalitas formal.',
+        'audience' => 'Cocok untuk komunitas profesi, asosiasi, organisasi hobi, dan kelompok kepentingan bersama.',
+        'content' => [
+            'Perkumpulan cocok untuk komunitas atau organisasi yang dibangun atas dasar kesamaan minat, profesi, atau tujuan bersama dan ingin memiliki identitas hukum yang lebih resmi.',
+            'Dengan legalitas yang lebih jelas, perkumpulan akan lebih siap dalam koordinasi keanggotaan, penyelenggaraan kegiatan, maupun kerja sama dengan pihak eksternal.',
+            'FastTrack membantu proses pendiriannya dengan pendekatan yang praktis agar komunitas Anda dapat fokus pada pertumbuhan organisasi tanpa terbebani proses administratif yang membingungkan.',
+        ],
+        'benefits' => [
+            'Status organisasi lebih resmi dan profesional',
+            'Memudahkan koordinasi kegiatan dan keanggotaan',
+            'Lebih siap untuk kolaborasi dengan sponsor atau mitra',
+            'Pendampingan legalitas komunitas secara lebih praktis',
+        ],
+        'requirements' => [
+            'Nama organisasi dan tujuan perkumpulan',
+            'Data pendiri dan pengurus awal',
+            'Alamat domisili atau alamat korespondensi',
+            'Rencana kegiatan inti organisasi',
+        ],
+        'process' => [
+            'Konsultasi tujuan organisasi dan bentuk perkumpulan',
+            'Pengumpulan data pendiri, pengurus, dan aktivitas organisasi',
+            'Penyusunan dokumen pendirian dan koordinasi legalitas',
+            'Penyerahan dokumen dan arahan pengelolaan dasar organisasi',
+        ],
+        'faq' => [
+            ['question' => 'Apakah perkumpulan cocok untuk asosiasi profesi?', 'answer' => 'Ya, perkumpulan banyak dipilih oleh asosiasi profesi atau komunitas yang ingin memiliki struktur organisasi lebih formal.'],
+            ['question' => 'Apa manfaat legalitas perkumpulan?', 'answer' => 'Legalitas membuat organisasi lebih mudah dipercaya, lebih tertata, dan lebih siap menjalin kerja sama eksternal.'],
+        ],
+    ],
+];
+
 $articles = [
     [
         'id' => 1,
@@ -310,7 +625,7 @@ Route::get('/robots.txt', function (Request $request) use ($resolveBaseUrl) {
     return response($content, 200)->header('Content-Type', 'text/plain');
 });
 
-Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $customServices, $articles, $resolveBaseUrl) {
+Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $customServices, $articles, $resolveBaseUrl, $foundingProducts) {
     $baseUrl = $resolveBaseUrl($request);
 
     $urls = collect($staticPages)
@@ -344,6 +659,14 @@ Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $custo
                 'priority' => '0.7',
             ])
         )
+        ->merge(
+            collect($foundingProducts)->map(fn ($product) => [
+                'loc' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+                'lastmod' => now()->toDateString(),
+                'changefreq' => 'monthly',
+                'priority' => '0.7',
+            ])
+        )
         ->unique('loc')
         ->values();
 
@@ -353,10 +676,9 @@ Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $custo
 });
 
 foreach ($customServices as $service) {
-    Route::get($service['path'], function (Request $request) use ($service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema) {
+    Route::get($service['path'], function (Request $request) use ($service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts) {
         $baseUrl = $resolveBaseUrl($request);
-
-        return Inertia::render($service['component'], [
+        $props = [
             'service' => $service,
             'seo' => [
                 'title' => $service['title'] . ' - FastTrack',
@@ -372,9 +694,99 @@ foreach ($customServices as $service) {
                 ]),
                 $serviceSchema($baseUrl, $service, null),
             ],
-        ]);
+        ];
+
+        if ($service['path'] === '/pendirian-perusahaan') {
+            $props['products'] = $foundingProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Product Pendirian Perusahaan - FastTrack',
+                'description' => 'Daftar produk pendirian perusahaan FastTrack untuk PT, CV, Firma, PMA, yayasan, koperasi, dan perkumpulan.',
+                'url' => $baseUrl . '/pendirian-perusahaan',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($foundingProducts)->values()->map(
+                        static fn (array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        return Inertia::render($service['component'], $props);
     });
 }
+
+Route::get('/pendirian-perusahaan/{id}', function (Request $request, int $id) use ($foundingProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($foundingProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($foundingProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Services/PendirianPerusahaan/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $product['name'] . ' - FastTrack',
+            'description' => $product['excerpt'],
+            'canonical' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $product['name'],
+                'description' => $product['excerpt'],
+                'serviceType' => $product['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => [
+                    '@type' => 'Country',
+                    'name' => 'Indonesia',
+                ],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($product['faq'])->map(
+                    static fn (array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => [
+                            '@type' => 'Answer',
+                            'text' => $faq['answer'],
+                        ],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Pendirian Perusahaan', 'item' => $baseUrl . '/pendirian-perusahaan'],
+                ['name' => $product['name'], 'item' => $baseUrl . '/pendirian-perusahaan/' . $product['id']],
+            ]),
+        ],
+    ]);
+});
 
 Route::get('/layanan/{slug}', function (Request $request, $slug) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema) {
     $baseUrl = $resolveBaseUrl($request);
