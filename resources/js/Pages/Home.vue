@@ -28,26 +28,61 @@ const checkPT = () => {
 <template>
     <MainLayout>
         <!-- 1. Hero Section -->
-        <section class="relative overflow-hidden bg-gradient-to-r from-secondary to-gray-800 pt-16 pb-20 sm:pt-20 sm:pb-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center gap-10">
-                <div class="w-full md:w-1/2 text-white md:pr-10">
-                    <h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl mb-6">
-                        Mulai Usaha dengan Benar
+        <section class="relative overflow-hidden bg-gradient-to-br from-secondary via-slate-800 to-slate-900 pt-16 pb-20 sm:pt-20 sm:pb-24 lg:min-h-[52vh] lg:py-16">
+            <div class="absolute inset-0 opacity-15">
+                <div class="absolute -left-20 top-10 h-44 w-44 rounded-full bg-primary blur-3xl"></div>
+                <div class="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-fuchsia-500/20 blur-3xl"></div>
+            </div>
+
+            <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:min-h-[44vh] lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:px-8">
+                <div class="text-white">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary backdrop-blur">
+                        FastTrack Legalitas Bisnis
+                    </div>
+
+                    <h1 class="mt-6 max-w-3xl text-4xl font-extrabold leading-tight sm:text-5xl lg:max-w-2xl lg:text-5xl">
+                        Bangun Bisnis Lebih Cepat dengan Legalitas yang Tepat
                     </h1>
-                    <p class="max-w-lg text-base text-gray-300 sm:text-lg mb-8">
-                        Wujudkan impian bisnis Anda! FASTTRACK siap membantu Anda mengurus legalitas usaha dengan cepat, transparan, dan terpercaya di seluruh Indonesia.
+                    <p class="mt-5 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg lg:max-w-xl">
+                        FASTTRACK membantu pendirian PT, CV, virtual office, perizinan usaha, hingga kebutuhan legal perusahaan dengan alur yang rapi, transparan, dan nyaman diakses dari mana saja.
                     </p>
-                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4">
-                        <a href="/kontak" class="inline-flex justify-center bg-primary hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
-                            Konsultasi Gratis &rarr;
+
+                    <div class="mt-7 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                        <a href="/kontak" class="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/30 transition hover:bg-pink-600">
+                            Konsultasi Gratis
                         </a>
-                        <a href="#layanan" class="inline-flex justify-center bg-transparent border border-white text-white hover:bg-white hover:text-secondary font-bold py-3 px-8 rounded-full transition">
-                            Lihat Layanan
+                        <a href="#layanan" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-secondary">
+                            Jelajahi Layanan
                         </a>
                     </div>
+
+                    <div class="mt-8 flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
+                        <div class="flex items-center gap-3">
+                            <span class="h-2.5 w-2.5 rounded-full bg-primary"></span>
+                            <span><strong class="font-bold text-white">10.000+</strong> klien bisnis dilayani</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="h-2.5 w-2.5 rounded-full bg-primary"></span>
+                            <span><strong class="font-bold text-white">40+</strong> jangkauan kota layanan</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="h-2.5 w-2.5 rounded-full bg-primary"></span>
+                            <span><strong class="font-bold text-white">12+</strong> tahun pengalaman tim</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center md:justify-end">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80&fm=webp" alt="Tim FastTrack sedang berdiskusi tentang legalitas bisnis" class="rounded-[1.75rem] shadow-2xl max-w-full h-auto object-cover border-4 border-gray-700">
+
+                <div class="relative flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 p-3 shadow-2xl backdrop-blur lg:max-w-[500px]">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80&fm=webp" alt="Tim FastTrack sedang berdiskusi tentang legalitas bisnis" class="h-[320px] w-full rounded-[1.5rem] object-cover sm:h-[380px] lg:h-[430px]">
+                        <div class="absolute inset-x-5 bottom-5 rounded-[1.5rem] border border-white/10 bg-slate-950/78 p-4 text-white backdrop-blur sm:inset-x-8 sm:bottom-8 sm:p-5">
+                            <div class="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Mengapa FastTrack</div>
+                            <div class="mt-2 text-lg font-bold leading-snug">Pendampingan legal yang jelas, cepat, dan profesional.</div>
+                            <div class="mt-3 text-sm text-slate-300">
+                                Setiap proses dibangun agar mudah dipahami klien sejak konsultasi awal hingga dokumen selesai.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -229,11 +264,11 @@ const checkPT = () => {
             </div>
         </section>
 
-        <!-- 7. Blog Section -->
+        <!-- 7. Artikel Section -->
         <section class="py-16 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-end mb-8">
-                    <h2 class="text-3xl font-bold text-secondary">BLOG</h2>
+                    <h2 class="text-3xl font-bold text-secondary">ARTIKEL</h2>
                     <a href="/artikel" class="text-primary font-semibold hover:underline">Lihat Semua &rarr;</a>
                 </div>
                 
@@ -243,9 +278,9 @@ const checkPT = () => {
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80&fm=webp" class="w-full md:w-1/2 h-48 md:h-auto object-cover" alt="Artikel panduan mendirikan PT">
                         <div class="p-6 flex flex-col justify-center w-full md:w-1/2">
                             <div class="text-xs text-gray-500 mb-2">12 Mei 2024</div>
-                            <h3 class="text-xl font-bold mb-3 hover:text-primary cursor-pointer transition">Panduan Lengkap Mendirikan PT Tahun 2024</h3>
+                            <a href="/artikel/1" class="text-xl font-bold mb-3 hover:text-primary transition">Panduan Lengkap Mendirikan PT Tahun 2024</a>
                             <p class="text-gray-600 text-sm mb-4">Mendirikan Perseroan Terbatas kini semakin mudah dengan adanya sistem OSS. Pelajari langkah-langkahnya.</p>
-                            <a href="/artikel" class="text-primary font-semibold text-sm hover:underline mt-auto">Baca Selengkapnya &rarr;</a>
+                            <a href="/artikel/1" class="text-primary font-semibold text-sm hover:underline mt-auto">Baca Selengkapnya &rarr;</a>
                         </div>
                     </div>
                     
@@ -254,7 +289,7 @@ const checkPT = () => {
                         <h4 class="font-bold text-lg mb-4 border-b border-gray-100 pb-2">Artikel Terbaru</h4>
                         <ul class="space-y-4">
                             <li v-for="i in 4" :key="i" class="flex flex-col">
-                                <a href="/artikel" class="font-semibold hover:text-primary transition text-sm mb-1">Perbedaan PT dan CV: Mana yang Cocok Untuk Bisnis Anda?</a>
+                                <a :href="`/artikel/${i + 1}`" class="font-semibold hover:text-primary transition text-sm mb-1">Perbedaan PT dan CV: Mana yang Cocok Untuk Bisnis Anda?</a>
                                 <span class="text-xs text-gray-500">10 Mei 2024</span>
                             </li>
                         </ul>
@@ -300,7 +335,7 @@ const checkPT = () => {
                             <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80&fm=webp" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Lokasi kantor FastTrack di Jakarta Selatan">
                             <div class="relative z-10 bg-white p-4 rounded-lg shadow-md text-center">
                                 <h4 class="font-bold text-secondary">Head Office FASTTRACK</h4>
-                                <p class="text-sm text-gray-500 mt-1">Sudirman, Jakarta Selatan</p>
+                                <p class="text-sm text-gray-500 mt-1">Grand Bintaro, Jakarta Selatan</p>
                             </div>
                         </div>
                     </div>

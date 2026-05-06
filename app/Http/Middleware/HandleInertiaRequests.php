@@ -44,6 +44,7 @@ class HandleInertiaRequests extends Middleware
             ],
             'site' => [
                 'name' => config('app.name', 'FastTrack'),
+                'tagline' => 'Legal Services - Partner Terbaik Perusahaan Anda',
                 'url' => $siteUrl,
                 'current_url' => $currentUrl,
                 'default_image' => $defaultImage,
@@ -51,7 +52,7 @@ class HandleInertiaRequests extends Middleware
             ],
             'seo' => fn () => [
                 'title' => $request->session()->get('seo.title', 'Layanan Legalitas Bisnis | FastTrack'),
-                'description' => $request->session()->get('seo.description', 'Platform layanan legalitas pendirian PT/CV dengan standar profesional tinggi.'),
+                'description' => $request->session()->get('seo.description', 'Legal Services - Partner Terbaik Perusahaan Anda'),
                 'canonical' => $currentUrl,
                 'image' => $defaultImage,
                 'type' => 'website',

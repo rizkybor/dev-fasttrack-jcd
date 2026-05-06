@@ -22,7 +22,7 @@ defineProps({
                     <!-- Left Content -->
                     <div class="w-full lg:w-1/2">
                         <!-- Breadcrumb -->
-                        <nav class="text-sm font-medium text-gray-500 mb-6">
+                        <nav class="text-sm font-medium text-gray-500 mb-6" aria-label="Breadcrumb">
                             <a href="/" class="hover:text-gray-800 transition">Beranda</a> 
                             <span class="mx-1">&raquo;</span> 
                             <a href="/layanan" class="hover:text-gray-800 transition">Layanan</a> 
@@ -41,12 +41,12 @@ defineProps({
                         </p>
 
                         <!-- Buttons -->
-                        <div class="flex flex-wrap gap-4">
-                            <a href="#detail" class="inline-flex items-center px-6 py-3 border-2 border-gray-900 text-gray-900 bg-white hover:bg-gray-50 font-bold rounded-full transition shadow-sm">
+                        <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                            <a href="#detail" class="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-900 text-gray-900 bg-white hover:bg-gray-50 font-bold rounded-full transition shadow-sm">
                                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M7 7h10v10"></path></svg>
                                 Lihat Selengkapnya
                             </a>
-                            <a href="/kontak" class="inline-flex items-center px-6 py-3 bg-[#1E7E34] hover:bg-[#155d27] text-white font-bold rounded-full transition shadow-sm border-2 border-[#1E7E34]">
+                            <a href="/kontak" class="inline-flex items-center justify-center px-6 py-3 bg-[#1E7E34] hover:bg-[#155d27] text-white font-bold rounded-full transition shadow-sm border-2 border-[#1E7E34]">
                                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M7 7h10v10"></path></svg>
                                 Hubungi Kami
                             </a>

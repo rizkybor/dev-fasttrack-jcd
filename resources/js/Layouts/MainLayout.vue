@@ -12,11 +12,12 @@ const mobileServicesOpen = ref(false);
 const mobileTipsOpen = ref(false);
 const currentUrl = computed(() => seo.value.canonical || site.value.current_url || page.props.ziggy?.location || '');
 const pageTitle = computed(() => seo.value.title || 'Layanan Legalitas Bisnis | FastTrack');
-const pageDescription = computed(() => seo.value.description || 'Platform layanan legalitas pendirian PT/CV dengan standar profesional tinggi.');
+const pageDescription = computed(() => seo.value.description || 'Legal Services - Partner Terbaik Perusahaan Anda');
 const pageImage = computed(() => seo.value.image || site.value.default_image || '/fasttrack-og.svg');
 const pageType = computed(() => seo.value.type || 'website');
 const pageRobots = computed(() => seo.value.robots || 'index, follow, max-image-preview:large');
 const siteName = computed(() => site.value.name || 'FastTrack');
+const siteTagline = computed(() => site.value.tagline || 'Legal Services - Partner Terbaik Perusahaan Anda');
 const siteLocale = computed(() => site.value.locale || 'id_ID');
 const pageSchemas = computed(() => Array.isArray(page.props.schemas) ? page.props.schemas : []);
 const globalSchemas = computed(() => {
@@ -31,13 +32,13 @@ const globalSchemas = computed(() => {
             url: baseUrl,
             logo: image,
             image,
-            email: 'halo@fasttrack.test',
-            telephone: '+6281234567890',
+            email: 'cs@fasttrack.legal',
+            telephone: '+622173885036',
             address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Jl. Sudirman Kav 1',
+                streetAddress: 'Grand Bintaro Blok A7, Jl. Raya Bintaro Permai, Pesanggrahan, Bintaro',
                 addressLocality: 'Jakarta Selatan',
-                postalCode: '12190',
+                postalCode: '12330',
                 addressCountry: 'ID',
             },
             sameAs: [
@@ -237,7 +238,7 @@ const toggleMobileMenu = () => {
 
         <!-- Header -->
         <header
-            class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm"
+            class="sticky top-0 z-50 border-b border-gray-100 bg-white shadow-sm md:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.45)]"
             @mouseleave="servicesOpen = false; tipsOpen = false"
         >
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -304,7 +305,7 @@ const toggleMobileMenu = () => {
                                     class="absolute right-0 top-full mt-4 w-56 rounded-2xl border border-gray-100 bg-white p-2 shadow-2xl"
                                 >
                                     <a href="/artikel" class="block rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-primary/5 hover:text-primary">
-                                        Blog
+                                        Artikel
                                     </a>
                                     <a href="/kbli" class="block rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-primary/5 hover:text-primary">
                                         KBLI
@@ -356,9 +357,9 @@ const toggleMobileMenu = () => {
                 <div
                     v-if="mobileMenuOpen"
                     id="mobile-navigation"
-                    class="md:hidden border-t border-gray-100 bg-white shadow-lg"
+                    class="md:hidden max-h-[calc(100vh-5rem)] overflow-y-auto overscroll-contain border-t border-gray-100 bg-white shadow-lg"
                 >
-                    <nav class="space-y-2 px-4 py-4" aria-label="Mobile Navigation">
+                    <nav class="space-y-2 px-4 py-4 pb-6" aria-label="Mobile Navigation">
                         <a href="/promo" class="block rounded-2xl px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-primary/5 hover:text-primary" @click="closeAllMenus">
                             Promo
                         </a>
@@ -407,7 +408,7 @@ const toggleMobileMenu = () => {
                             </button>
 
                             <div v-if="mobileTipsOpen" class="space-y-1 border-t border-gray-100 px-3 py-3">
-                                <a href="/artikel" class="block rounded-xl px-3 py-2 text-sm text-gray-600 transition hover:bg-primary/5 hover:text-primary" @click="closeAllMenus">Blog</a>
+                                <a href="/artikel" class="block rounded-xl px-3 py-2 text-sm text-gray-600 transition hover:bg-primary/5 hover:text-primary" @click="closeAllMenus">Artikel</a>
                                 <a href="/kbli" class="block rounded-xl px-3 py-2 text-sm text-gray-600 transition hover:bg-primary/5 hover:text-primary" @click="closeAllMenus">KBLI</a>
                                 <a href="/faq" class="block rounded-xl px-3 py-2 text-sm text-gray-600 transition hover:bg-primary/5 hover:text-primary" @click="closeAllMenus">FAQ</a>
                             </div>
@@ -430,14 +431,29 @@ const toggleMobileMenu = () => {
             >
                 <div
                     v-if="servicesOpen"
-                    class="hidden md:block absolute left-0 right-0 top-full border-t border-gray-100 bg-white shadow-2xl overflow-hidden z-50"
+                    class="hidden md:block absolute left-0 right-0 top-full z-50 border-t border-gray-100 bg-white shadow-2xl h-screen overflow-y-auto overscroll-contain"
                     @mouseenter="servicesOpen = true"
                 >
-                    <div class="max-w-7xl mx-auto px-6 py-6 max-h-[85vh] overflow-y-auto">
-                        <div class="text-center mb-5">
-                            <h3 class="text-2xl font-bold text-secondary">Layanan Kami</h3>
+                    <div class="sticky top-0 z-10 border-b border-gray-100 bg-white/95 backdrop-blur">
+                        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-secondary">Layanan Kami</h3>
+                                <p class="mt-1 text-sm text-gray-500">Pilih layanan yang paling sesuai dengan kebutuhan bisnis Anda.</p>
+                            </div>
+                            <button
+                                type="button"
+                                class="inline-flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-semibold text-gray-600 transition hover:border-primary hover:text-primary"
+                                @click="servicesOpen = false"
+                            >
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                Close
+                            </button>
                         </div>
+                    </div>
 
+                    <div class="max-w-7xl mx-auto px-6 py-6">
                         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                             <a
                                 v-for="group in serviceCategories"
@@ -538,6 +554,19 @@ const toggleMobileMenu = () => {
                                     </div>
                                 </a>
                             </div>
+
+                            <div class="mt-8 flex justify-center">
+                                <button
+                                    type="button"
+                                    class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-pink-600"
+                                    @click="servicesOpen = false"
+                                >
+                                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                    Tutup Menu
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -554,8 +583,11 @@ const toggleMobileMenu = () => {
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Trust Badge / Logo Row -->
                 <div class="mb-12 pb-8 border-b border-gray-700 flex flex-col md:flex-row items-center justify-between">
-                    <div class="flex items-center space-x-2 mb-4 md:mb-0">
-                        <span class="text-3xl font-extrabold text-white tracking-tight">FAST<span class="text-primary">TRACK</span></span>
+                    <div class="mb-4 md:mb-0">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-3xl font-extrabold text-white tracking-tight">FAST<span class="text-primary">TRACK</span></span>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-400">{{ siteTagline }}</p>
                     </div>
                     <div class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg">
                         <span class="text-sm font-semibold text-white">EXCELLENT REVIEWS</span>
@@ -573,15 +605,22 @@ const toggleMobileMenu = () => {
                         <div class="space-y-4 text-sm">
                             <p class="flex items-start">
                                 <svg class="w-5 h-5 mr-3 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                Gedung Sudirman Center, Lt 5<br>Jl. Sudirman Kav 1<br>Jakarta Selatan 12190
+                                <span>
+                                    <strong class="text-white">Head Office</strong><br>
+                                    Grand Bintaro Blok A7, Jl. Raya Bintaro Permai, Pesanggrahan, Bintaro, Jakarta Selatan - 12330
+                                </span>
                             </p>
                             <p class="flex items-center">
                                 <svg class="w-5 h-5 mr-3 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                                0812-3456-7890
+                                Telp. 021 73885036
+                            </p>
+                            <p class="flex items-center">
+                                <svg class="w-5 h-5 mr-3 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2h2m10 0V6a5 5 0 00-10 0v2m10 0H7"/></svg>
+                                WhatsApp 0822 9860 4144
                             </p>
                             <p class="flex items-center">
                                 <svg class="w-5 h-5 mr-3 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                                halo@fasttrack.test
+                                cs@fasttrack.legal
                             </p>
                         </div>
                     </div>
@@ -602,7 +641,7 @@ const toggleMobileMenu = () => {
                     <div>
                         <h4 class="text-white text-lg font-bold mb-6">Informasi</h4>
                         <ul class="space-y-3 text-sm">
-                            <li><a href="/artikel" class="hover:text-primary transition flex items-center"><span class="mr-2">&rsaquo;</span> Blog & Edukasi</a></li>
+                            <li><a href="/artikel" class="hover:text-primary transition flex items-center"><span class="mr-2">&rsaquo;</span> Artikel & Edukasi</a></li>
                             <li><a href="/faq" class="hover:text-primary transition flex items-center"><span class="mr-2">&rsaquo;</span> FAQ</a></li>
                             <li><a href="/tentang-kami" class="hover:text-primary transition flex items-center"><span class="mr-2">&rsaquo;</span> Tentang Kami</a></li>
                             <li><a href="/kbli" class="hover:text-primary transition flex items-center"><span class="mr-2">&rsaquo;</span> KBLI</a></li>
@@ -613,12 +652,19 @@ const toggleMobileMenu = () => {
 
                     <!-- Column 4 -->
                     <div>
-                        <h4 class="text-white text-lg font-bold mb-6">Sertifikasi & Legalitas</h4>
-                        <p class="text-sm mb-4">Kami adalah perusahaan konsultan legalitas berbadan hukum resmi yang terdaftar dan diawasi oleh kementerian terkait.</p>
-                        <div class="flex space-x-4">
-                            <!-- Mock badges -->
-                            <div class="w-12 h-12 bg-white rounded flex items-center justify-center text-xs font-bold text-gray-800">ISO</div>
-                            <div class="w-12 h-12 bg-white rounded flex items-center justify-center text-xs font-bold text-gray-800">KEMEN</div>
+                        <h4 class="text-white text-lg font-bold mb-6">Cabang Kantor</h4>
+                        <div class="space-y-5 text-sm">
+                            <div>
+                                <p class="font-semibold text-white">Surabaya Office</p>
+                                <p class="mt-1 leading-6">Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, Jawa Timur 61256</p>
+                                <p class="mt-1">Tel. (62-31) 58285209</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Bali Office</p>
+                                <p class="mt-1 leading-6">Jl. By Pass Ngurah Rai No. 264, Sanur, Denpasar - Bali 80228</p>
+                                <p class="mt-1">Tel. (62-361) 282105, 270067</p>
+                                <p class="mt-1">Fax. (62-361) 270067</p>
+                            </div>
                         </div>
                     </div>
                 </div>

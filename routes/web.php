@@ -199,6 +199,93 @@ $customServices = [
     ['component' => 'Services/LayananLainnya/Index', 'title' => 'Layanan Lainnya', 'path' => '/layanan-lain', 'description' => 'Berbagai layanan tambahan untuk mendukung kelancaran operasional bisnis Anda.']
 ];
 
+$articles = [
+    [
+        'id' => 1,
+        'title' => 'Panduan Lengkap Mendirikan PT Tahun 2024',
+        'excerpt' => 'Mendirikan Perseroan Terbatas kini semakin mudah dengan adanya sistem OSS. Pelajari langkah-langkah penting, dokumen, dan estimasi prosesnya.',
+        'content' => [
+            'Mendirikan PT menjadi langkah penting bagi pelaku usaha yang ingin membangun bisnis dengan struktur legal yang lebih profesional. Dengan badan hukum yang jelas, perusahaan memiliki kredibilitas lebih tinggi di mata mitra, investor, maupun pelanggan.',
+            'Proses pendirian PT umumnya dimulai dari penentuan nama perusahaan, pemilihan KBLI yang relevan, penyusunan akta pendirian, hingga pengurusan NIB dan dokumen penunjang lainnya. Ketelitian pada tahap awal akan membantu proses berjalan lebih cepat dan minim revisi.',
+            'FastTrack membantu Anda mengelola proses tersebut dengan pendampingan yang terstruktur, komunikasi yang jelas, dan timeline yang realistis agar bisnis bisa segera berjalan dengan pondasi legal yang kuat.',
+        ],
+        'category' => 'Legalitas',
+        'date' => '12 Mei 2024',
+        'reading_time' => '5 menit baca',
+        'image' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80&fm=webp',
+    ],
+    [
+        'id' => 2,
+        'title' => 'Perbedaan PT dan CV: Mana yang Cocok Untuk Bisnis Anda?',
+        'excerpt' => 'Kenali perbedaan mendasar antara PT dan CV agar Anda bisa memilih bentuk usaha yang sesuai dengan kebutuhan operasional dan pengembangan bisnis.',
+        'content' => [
+            'PT dan CV adalah dua bentuk usaha yang paling sering dipilih oleh pelaku bisnis di Indonesia. Masing-masing memiliki karakteristik, struktur tanggung jawab, dan implikasi legal yang berbeda.',
+            'PT lebih cocok bagi bisnis yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab terbatas, dan peluang pengembangan usaha yang lebih luas. Sementara itu, CV kerap dipilih oleh usaha skala kecil hingga menengah yang mengutamakan fleksibilitas awal.',
+            'Sebelum memutuskan, penting untuk mempertimbangkan model bisnis, kebutuhan perizinan, rencana investasi, dan risiko usaha. Konsultasi yang tepat akan membantu Anda memilih struktur yang paling efisien.',
+        ],
+        'category' => 'Bisnis',
+        'date' => '10 Mei 2024',
+        'reading_time' => '6 menit baca',
+        'image' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp',
+    ],
+    [
+        'id' => 3,
+        'title' => 'Pentingnya Memilih KBLI Yang Tepat Sebelum Mengurus NIB',
+        'excerpt' => 'Pemilihan KBLI yang akurat membantu proses OSS lebih lancar dan mengurangi risiko kendala legal saat bisnis mulai berjalan.',
+        'content' => [
+            'KBLI adalah fondasi penting dalam proses legalitas usaha karena menjadi acuan utama dalam menentukan jenis kegiatan bisnis yang dijalankan perusahaan.',
+            'Kesalahan memilih KBLI dapat berdampak pada terhambatnya proses perizinan, ketidaksesuaian dokumen usaha, hingga hambatan saat bekerja sama dengan pihak lain atau mengurus izin lanjutan.',
+            'Dengan analisis kegiatan usaha yang tepat, pemilik bisnis dapat memilih KBLI yang paling relevan agar proses pengurusan NIB dan legalitas lain berjalan lebih aman dan efisien.',
+        ],
+        'category' => 'KBLI',
+        'date' => '8 Mei 2024',
+        'reading_time' => '4 menit baca',
+        'image' => 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80&fm=webp',
+    ],
+    [
+        'id' => 4,
+        'title' => 'Kapan Bisnis Membutuhkan Virtual Office?',
+        'excerpt' => 'Virtual office menjadi solusi efisien untuk bisnis modern yang ingin tetap terlihat profesional tanpa harus menyewa kantor fisik penuh.',
+        'content' => [
+            'Virtual office banyak dipilih oleh startup, konsultan, hingga bisnis digital yang membutuhkan alamat usaha strategis namun tetap ingin menjaga efisiensi biaya operasional.',
+            'Selain menunjang citra perusahaan, virtual office juga membantu pemenuhan kebutuhan administratif dan legal untuk jenis usaha tertentu, terutama di kota besar seperti Jakarta.',
+            'Sebelum memilih layanan virtual office, pastikan lokasi, legalitas penyedia, dan fasilitas pendukungnya benar-benar sesuai dengan kebutuhan bisnis Anda.',
+        ],
+        'category' => 'Virtual Office',
+        'date' => '5 Mei 2024',
+        'reading_time' => '4 menit baca',
+        'image' => 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80&fm=webp',
+    ],
+    [
+        'id' => 5,
+        'title' => 'Cara Mengurus Perubahan Akta Perusahaan Dengan Efisien',
+        'excerpt' => 'Perubahan data perusahaan perlu ditangani dengan teliti agar tidak mengganggu legalitas, operasional, dan administrasi bisnis.',
+        'content' => [
+            'Perubahan akta perusahaan dapat terjadi karena perubahan direksi, pemegang saham, alamat kantor, modal, maupun kegiatan usaha. Semua perubahan tersebut perlu disesuaikan secara legal.',
+            'Dokumen pendukung, notulen, hingga penyesuaian data pada sistem administrasi perusahaan perlu dipastikan konsisten agar tidak memunculkan masalah pada tahap berikutnya.',
+            'Pendampingan profesional membantu proses perubahan akta menjadi lebih ringkas, akurat, dan sesuai dengan ketentuan yang berlaku.',
+        ],
+        'category' => 'Dokumen',
+        'date' => '2 Mei 2024',
+        'reading_time' => '5 menit baca',
+        'image' => 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80&fm=webp',
+    ],
+    [
+        'id' => 6,
+        'title' => 'Tips Menyiapkan Legalitas Bisnis Untuk Menarik Investor',
+        'excerpt' => 'Legalitas yang tertata rapi menjadi salah satu faktor penting ketika bisnis Anda mulai dilirik oleh investor atau mitra strategis.',
+        'content' => [
+            'Investor akan lebih percaya pada bisnis yang memiliki struktur legal yang jelas, dokumen korporasi yang tertata, dan kepatuhan administratif yang baik.',
+            'Selain pendirian badan usaha, aspek seperti perjanjian, perlindungan merek, pajak, dan perizinan operasional juga memengaruhi tingkat kesiapan bisnis untuk berkembang lebih besar.',
+            'Dengan fondasi legal yang kuat, perusahaan tidak hanya lebih siap untuk tumbuh, tetapi juga lebih meyakinkan dalam proses due diligence dan negosiasi bisnis.',
+        ],
+        'category' => 'Investasi',
+        'date' => '30 April 2024',
+        'reading_time' => '6 menit baca',
+        'image' => 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80&fm=webp',
+    ],
+];
+
 $staticPages = [
     '/',
     '/promo',
@@ -223,7 +310,7 @@ Route::get('/robots.txt', function (Request $request) use ($resolveBaseUrl) {
     return response($content, 200)->header('Content-Type', 'text/plain');
 });
 
-Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $customServices, $resolveBaseUrl) {
+Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $customServices, $articles, $resolveBaseUrl) {
     $baseUrl = $resolveBaseUrl($request);
 
     $urls = collect($staticPages)
@@ -245,6 +332,14 @@ Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $custo
             Service::query()->get()->map(fn ($service) => [
                 'loc' => $baseUrl . '/layanan/' . $service->slug,
                 'lastmod' => $service->updated_at?->toDateString() ?? now()->toDateString(),
+                'changefreq' => 'monthly',
+                'priority' => '0.7',
+            ])
+        )
+        ->merge(
+            collect($articles)->map(fn ($article) => [
+                'loc' => $baseUrl . '/artikel/' . $article['id'],
+                'lastmod' => now()->toDateString(),
                 'changefreq' => 'monthly',
                 'priority' => '0.7',
             ])
@@ -304,10 +399,11 @@ Route::get('/layanan/{slug}', function (Request $request, $slug) use ($resolveBa
     ]);
 });
 
-Route::get('/artikel', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
+Route::get('/artikel', function (Request $request) use ($articles, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
 
     return Inertia::render('Blog', [
+        'articles' => $articles,
         'seo' => [
             'title' => 'Artikel & Edukasi Hukum Bisnis - FastTrack',
             'description' => 'Dapatkan informasi terbaru seputar legalitas, perpajakan, dan regulasi bisnis di Indonesia.',
@@ -321,10 +417,64 @@ Route::get('/artikel', function (Request $request) use ($resolveBaseUrl, $defaul
                 'name' => 'Artikel & Edukasi Hukum Bisnis - FastTrack',
                 'description' => 'Dapatkan informasi terbaru seputar legalitas, perpajakan, dan regulasi bisnis di Indonesia.',
                 'url' => $baseUrl . '/artikel',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($articles)->values()->map(
+                        static fn (array $article, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $article['title'],
+                            'url' => $baseUrl . '/artikel/' . $article['id'],
+                        ]
+                    )->all(),
+                ],
             ],
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'Artikel', 'item' => $baseUrl . '/artikel'],
+            ]),
+        ],
+    ]);
+});
+
+Route::get('/artikel/{id}', function (Request $request, int $id) use ($articles, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $article = collect($articles)->firstWhere('id', $id);
+
+    abort_if($article === null, 404);
+
+    $relatedArticles = collect($articles)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Articles/Show', [
+        'article' => $article,
+        'relatedArticles' => $relatedArticles,
+        'seo' => [
+            'title' => $article['title'] . ' - FastTrack',
+            'description' => $article['excerpt'],
+            'canonical' => $baseUrl . '/artikel/' . $article['id'],
+            'image' => $article['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Article',
+                'headline' => $article['title'],
+                'description' => $article['excerpt'],
+                'image' => $article['image'] ?: $defaultImageUrl($baseUrl),
+                'author' => $organizationReference($baseUrl),
+                'publisher' => $organizationReference($baseUrl),
+                'datePublished' => '2024-05-12',
+                'dateModified' => now()->toDateString(),
+                'mainEntityOfPage' => $baseUrl . '/artikel/' . $article['id'],
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Artikel', 'item' => $baseUrl . '/artikel'],
+                ['name' => $article['title'], 'item' => $baseUrl . '/artikel/' . $article['id']],
             ]),
         ],
     ]);
@@ -458,13 +608,22 @@ Route::get('/kontak', function (Request $request) use ($resolveBaseUrl, $default
                 'name' => 'FastTrack Legalitas',
                 'image' => $defaultImageUrl($baseUrl),
                 'url' => $baseUrl,
-                'telephone' => '+6281234567890',
+                'telephone' => '+622173885036',
+                'email' => 'cs@fasttrack.legal',
                 'address' => [
                     '@type' => 'PostalAddress',
-                    'streetAddress' => 'Jl. Sudirman Kav 1',
+                    'streetAddress' => 'Grand Bintaro Blok A7, Jl. Raya Bintaro Permai, Pesanggrahan, Bintaro',
                     'addressLocality' => 'Jakarta Selatan',
-                    'postalCode' => '12190',
+                    'postalCode' => '12330',
                     'addressCountry' => 'ID',
+                ],
+                'contactPoint' => [
+                    '@type' => 'ContactPoint',
+                    'telephone' => '+6282298604144',
+                    'contactType' => 'customer service',
+                    'email' => 'cs@fasttrack.legal',
+                    'areaServed' => 'ID',
+                    'availableLanguage' => ['id', 'en'],
                 ],
                 'openingHoursSpecification' => [
                     '@type' => 'OpeningHoursSpecification',
