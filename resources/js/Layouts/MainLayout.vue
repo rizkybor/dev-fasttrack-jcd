@@ -1,9 +1,128 @@
 <script setup>
 import { Head, usePage } from '@inertiajs/vue3';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 const page = usePage();
 const seo = computed(() => page.props.seo || {});
+const servicesOpen = ref(false);
+
+const serviceCategories = [
+    {
+        title: 'Pendirian Perusahaan',
+        path: '/pendirian-perusahaan',
+        icon: 'building',
+        items: ['Pendirian PT', 'Pendirian CV']
+    },
+    {
+        title: 'Pembuatan dan Peninjauan Perjanjian',
+        path: '/pembuatan-perjanjian',
+        icon: 'document',
+        items: ['Perjanjian Kerja', 'Perjanjian Investasi']
+    },
+    {
+        title: 'IZINTAX',
+        path: '/perpajakan',
+        isLogo: true,
+        logoText: 'IZIN<span class="text-blue-600">TAX</span>',
+        desc: 'Layanan perpajakan dan pembukuan'
+    },
+    {
+        title: 'IZINHUKUM',
+        path: '/hukum',
+        isLogo: true,
+        logoText: 'IZIN<span class="text-indigo-900">HU<span class="text-red-500">Q</span>UM</span>',
+        desc: 'Solusi Hukum Profesional dengan Biaya yang Transparan'
+    },
+    {
+        title: 'Penutupan Perusahaan',
+        path: '/penutupan-perusahaan',
+        icon: 'building',
+        items: ['Penutupan PT', 'Penutupan CV']
+    },
+    {
+        title: 'Pembuatan dan Perubahan Dokumen Perusahaan',
+        path: '/perubahan-akta',
+        icon: 'document-check',
+        items: ['Perubahan Dokumen', 'Anggaran Dasar', 'Perubahan Data Perseroan']
+    },
+    {
+        title: 'IZINHAKI',
+        path: '/haki',
+        isLogo: true,
+        logoText: 'IZIN<span class="text-blue-500 border border-blue-500 px-1 ml-1 rounded">HAKI</span>',
+        desc: 'Layanan perlindungan Hak Kekayaan Intelektual'
+    },
+    {
+        title: 'IZINPROPERTI',
+        path: '/izin-properti',
+        isLogo: true,
+        logoText: 'IZIN<span class="text-red-700">PROPERTI</span>',
+        desc: 'Solusi untuk mengurus seluruh kebutuhan legalitas seputar tanah dan properti'
+    },
+    {
+        title: 'Virtual Office',
+        path: '/virtual-office-jakarta',
+        icon: 'pin',
+        items: ['Virtual Office Lite', 'Virtual Office Premium']
+    },
+    {
+        title: 'Digital Marketing',
+        path: '/digital-marketing',
+        icon: 'globe',
+        items: ['Pembuatan Website', 'Pendaftaran Domain']
+    },
+    {
+        title: 'invest in asia',
+        path: '/foreignservice',
+        isLogo: true,
+        logoText: '<span class="text-blue-900 lowercase font-serif">invest<span class="text-green-500">in</span>asia</span>',
+        desc: 'Professional services to set up companies and to own business permits in Indonesia'
+    },
+    {
+        title: 'IZIN PRIVILEGE',
+        path: '/izin-privilege',
+        isLogo: true,
+        logoText: 'IZIN <span class="font-normal tracking-widest">PRIVILEGE</span>',
+        desc: 'Benefit untuk Klien yang menggunakan layanan khusus.'
+    },
+    {
+        title: 'Perizinan Khusus',
+        path: '/perizinan',
+        icon: 'doc-stack',
+        items: ['Perizinan Perusahaan', 'Perizinan Khusus/Sektoral']
+    },
+    {
+        title: 'Perizinan Usaha',
+        path: '/perizinan-usaha',
+        icon: 'license',
+        items: ['OSS', 'NIB']
+    },
+    {
+        title: 'Layanan Lainnya',
+        path: '/layanan-lain',
+        icon: 'grid',
+        items: ['Penerjemah', 'Pelaporan LKPM']
+    }
+];
+
+const toolGroups = [
+    {
+        title: 'Pengecekan Merek',
+        icon: 'search',
+    },
+    {
+        title: 'Pengecekan Nama PT',
+        icon: 'refresh',
+    },
+    {
+        title: 'KBLI',
+        icon: 'kbli',
+    },
+    {
+        title: 'Kalkulator Pajak Properti',
+        icon: 'calculator',
+    },
+];
 </script>
 
 <template>
@@ -14,7 +133,10 @@ const seo = computed(() => page.props.seo || {});
 
     <div class="min-h-screen bg-white text-secondary font-sans flex flex-col">
         <!-- Header -->
-        <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <header
+            class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm"
+            @mouseleave="servicesOpen = false"
+        >
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-20 items-center">
                     <!-- Logo -->
@@ -27,7 +149,25 @@ const seo = computed(() => page.props.seo || {});
                     <!-- Desktop Menu -->
                     <nav class="hidden md:flex space-x-8 items-center">
                         <a href="/" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Home</a>
-                        <a href="/layanan" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Layanan</a>
+                        <div class="relative" @mouseenter="servicesOpen = true">
+                            <button
+                                type="button"
+                                class="inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide transition"
+                                :class="servicesOpen ? 'text-primary' : 'text-gray-700 hover:text-primary'"
+                                @click="servicesOpen = !servicesOpen"
+                            >
+                                <span>Layanan</span>
+                                <svg
+                                    class="h-4 w-4 transition-transform duration-200"
+                                    :class="servicesOpen ? 'rotate-180' : ''"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                        </div>
                         <a href="#" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Harga</a>
                         <a href="/artikel" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Blog</a>
                         <a href="/kontak" class="text-sm font-semibold text-gray-700 hover:text-primary transition uppercase tracking-wide">Kontak</a>
@@ -50,6 +190,129 @@ const seo = computed(() => page.props.seo || {});
                     </div>
                 </div>
             </div>
+
+            <transition
+                enter-active-class="transition duration-200 ease-out"
+                enter-from-class="opacity-0 -translate-y-2"
+                enter-to-class="opacity-100 translate-y-0"
+                leave-active-class="transition duration-150 ease-in"
+                leave-from-class="opacity-100 translate-y-0"
+                leave-to-class="opacity-0 -translate-y-2"
+            >
+                <div
+                    v-if="servicesOpen"
+                    class="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-[95vw] max-w-6xl rounded-3xl border border-gray-100 bg-white shadow-2xl overflow-hidden z-50"
+                    @mouseenter="servicesOpen = true"
+                >
+                    <div class="px-6 py-6 max-h-[85vh] overflow-y-auto">
+                        <div class="text-center mb-5">
+                            <h3 class="text-2xl font-bold text-secondary">Layanan Kami</h3>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            <a
+                                v-for="group in serviceCategories"
+                                :key="group.title"
+                                :href="group.path"
+                                class="group rounded-2xl border border-gray-100 bg-white p-4 transition duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg"
+                            >
+                                <template v-if="!group.isLogo">
+                                    <div class="flex items-start gap-3">
+                                        <div class="relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-gray-50 text-secondary transition group-hover:border-primary/40 group-hover:bg-primary/5">
+                                            <span class="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-green-500"></span>
+
+                                            <svg v-if="group.icon === 'building'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 21h18M5 21V7l7-4v18M19 21V11h-4M9 9h1M9 13h1M9 17h1M13 9h1M13 13h1M13 17h1" />
+                                            </svg>
+                                            <svg v-else-if="group.icon === 'document'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 3h7l5 5v13H7z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 3v6h6M9 13h6M9 17h6" />
+                                            </svg>
+                                            <svg v-else-if="group.icon === 'pin'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 21s-6-5.686-6-11a6 6 0 1112 0c0 5.314-6 11-6 11z" />
+                                                <circle cx="12" cy="10" r="2.5" stroke-width="1.8" />
+                                            </svg>
+                                            <svg v-else-if="group.icon === 'document-check'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 3h7l5 5v13H7z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 3v6h6M9 13h4M9 17h3M14 17l1.5 1.5L19 15" />
+                                            </svg>
+                                            <svg v-else-if="group.icon === 'doc-stack'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7h10v13H8z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 4h10M4 1h10" />
+                                            </svg>
+                                            <svg v-else-if="group.icon === 'globe'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <circle cx="12" cy="12" r="9" stroke-width="1.8" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18" />
+                                            </svg>
+                                            <svg v-else-if="group.icon === 'license'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 3h10v18l-5-3-5 3z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 8h6M9 12h4" />
+                                            </svg>
+                                            <svg v-else class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" />
+                                            </svg>
+                                        </div>
+
+                                        <div>
+                                            <h4 class="text-base font-bold text-secondary transition group-hover:text-primary">
+                                                {{ group.title }}
+                                            </h4>
+                                            <ul class="mt-2 space-y-1 text-xs text-gray-600">
+                                                <li v-for="item in group.items" :key="item">
+                                                    {{ item }}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </template>
+                                <template v-else>
+                                    <div class="flex flex-col justify-center h-full">
+                                        <div class="text-xl font-bold mb-1" v-html="group.logoText"></div>
+                                        <p class="text-xs text-gray-500 leading-tight">{{ group.desc }}</p>
+                                    </div>
+                                </template>
+                            </a>
+                        </div>
+
+                        <div class="mt-6 border-t border-gray-100 pt-5">
+                            <div class="text-center mb-4">
+                                <h4 class="text-xl font-bold text-secondary">Tools</h4>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <a
+                                    v-for="tool in toolGroups"
+                                    :key="tool.title"
+                                    href="/"
+                                    class="group flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-3 transition duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg"
+                                >
+                                    <div class="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-gray-50 text-secondary transition group-hover:border-primary/40 group-hover:bg-primary/5">
+                                        <span class="absolute -left-1 bottom-1 h-2.5 w-2.5 rounded-full bg-green-500"></span>
+
+                                        <svg v-if="tool.icon === 'search'" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11 4a7 7 0 105.293 11.586L20 19.293" />
+                                        </svg>
+                                        <svg v-else-if="tool.icon === 'refresh'" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 12a8 8 0 11-2.343-5.657M20 4v6h-6" />
+                                        </svg>
+                                        <svg v-else-if="tool.icon === 'kbli'" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 3h10v18H7z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 8h6M9 12h6M9 16h4" />
+                                        </svg>
+                                        <svg v-else class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 3h6M5 7h14v14H5zM8 11h2M14 11h2M8 15h2M14 15h2" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="text-sm font-semibold text-secondary transition group-hover:text-primary">
+                                        {{ tool.title }}
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </transition>
         </header>
 
         <!-- Main Content -->
