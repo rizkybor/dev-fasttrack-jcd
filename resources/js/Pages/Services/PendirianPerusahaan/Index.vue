@@ -20,8 +20,8 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-const goToProduct = (productId) => {
-    window.location.href = `/pendirian-perusahaan/${productId}`;
+const goToProduct = (detailPath) => {
+    window.location.href = detailPath;
 };
 
 const processSteps = [
@@ -154,9 +154,9 @@ const processSteps = [
                         role="link"
                         tabindex="0"
                         :aria-label="`Buka detail ${product.name}`"
-                        @click="goToProduct(product.id)"
-                        @keydown.enter="goToProduct(product.id)"
-                        @keydown.space.prevent="goToProduct(product.id)"
+                        @click="goToProduct(product.detail_path)"
+                        @keydown.enter="goToProduct(product.detail_path)"
+                        @keydown.space.prevent="goToProduct(product.detail_path)"
                     >
                         <div class="relative overflow-hidden">
                             <img

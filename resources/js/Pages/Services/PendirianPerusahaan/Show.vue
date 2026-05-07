@@ -36,7 +36,7 @@ const buildWhatsappLink = (productName) => {
                 <div class="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr]">
                     <div>
                         <span class="inline-flex rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-                            Detail Product by ID #{{ product.id }}
+                            Detail Produk
                         </span>
                         <h1 class="mt-5 text-4xl font-extrabold leading-tight text-secondary sm:text-5xl">
                             {{ product.name }}
@@ -267,7 +267,7 @@ const buildWhatsappLink = (productName) => {
                             <p class="mt-3 text-sm leading-7 text-gray-600">{{ item.excerpt }}</p>
                             <div class="mt-6 grid gap-3 sm:grid-cols-2">
                                 <a
-                                    :href="`/pendirian-perusahaan/${item.id}`"
+                                    :href="item.detail_path"
                                     class="inline-flex items-center justify-center rounded-full border border-secondary px-4 py-3 text-sm font-bold text-secondary transition hover:bg-secondary hover:text-white"
                                 >
                                     Lihat Detail

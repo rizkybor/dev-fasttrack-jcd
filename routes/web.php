@@ -514,6 +514,312 @@ $foundingProducts = [
     ],
 ];
 
+$foundingProducts = collect($foundingProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = $product['id'] === 1
+            ? '/pendirian-perusahaan/paket'
+            : '/pendirian-perusahaan/' . $product['id'];
+
+        return $product;
+    })
+    ->all();
+
+$foundingPackages = [
+    [
+        'id' => 1,
+        'slug' => 'persekutuan-modal',
+        'name' => 'PT Persekutuan Modal',
+        'short_name' => 'Persekutuan Modal',
+        'tag' => 'Pilihan Umum',
+        'price' => '5500000',
+        'price_label' => 'Rp 5.500.000',
+        'duration' => 'Estimasi 7-14 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Pilihan paket untuk pendirian PT dengan lebih dari satu pihak pemegang saham yang ingin membangun perusahaan dengan struktur modal yang jelas dan profesional.',
+        'excerpt' => 'Paket PT Persekutuan Modal untuk bisnis dengan dua pihak atau lebih yang ingin memiliki badan hukum Perseroan Terbatas.',
+        'audience' => 'Cocok untuk founder bersama, agency, distributor, bisnis keluarga modern, dan perusahaan yang akan berkembang dengan lebih dari satu pemegang saham.',
+        'content' => [
+            'PT Persekutuan Modal adalah bentuk Perseroan Terbatas yang didirikan oleh dua pihak atau lebih dengan pembagian saham, peran, dan tanggung jawab yang disusun lebih jelas sejak awal.',
+            'Bentuk ini cocok ketika bisnis dibangun bersama partner atau investor dan membutuhkan struktur korporasi yang lebih siap untuk kerja sama, pengembangan usaha, maupun pengelolaan internal.',
+            'Melalui FastTrack, proses pendiriannya dirancang agar user memahami struktur dasar PT, pilihan KBLI, kebutuhan dokumen, dan langkah legalitas penting tanpa merasa rumit.',
+        ],
+        'benefits' => [
+            'Struktur kepemilikan saham lebih jelas untuk dua pihak atau lebih',
+            'Lebih siap untuk kerja sama bisnis, tender, dan ekspansi',
+            'Meningkatkan kredibilitas usaha di mata klien dan partner',
+            'Dokumen legal disusun lebih rapi sesuai kebutuhan usaha',
+        ],
+        'requirements' => [
+            'Data seluruh pemegang saham dan pengurus',
+            'Nama perusahaan beserta alternatif cadangan',
+            'Alamat usaha yang akan digunakan',
+            'Ruang lingkup kegiatan usaha untuk penentuan KBLI',
+        ],
+        'process' => [
+            'Konsultasi struktur perusahaan dan pembagian saham',
+            'Pemeriksaan data pendiri, pengurus, dan nama perusahaan',
+            'Penyusunan akta pendirian serta proses legalitas dasar',
+            'Serah terima dokumen dan pengarahan langkah lanjutan',
+        ],
+        'faq' => [
+            ['question' => 'Kapan memilih PT Persekutuan Modal?', 'answer' => 'Paket ini tepat ketika bisnis dibangun oleh dua pihak atau lebih dan membutuhkan struktur saham yang lebih jelas.'],
+            ['question' => 'Apakah cocok untuk bisnis yang ingin berkembang?', 'answer' => 'Ya, PT Persekutuan Modal sangat cocok untuk bisnis yang menargetkan pertumbuhan, kerja sama korporasi, dan peluang investasi.'],
+        ],
+        'why_cards' => [
+            [
+                'icon' => 'shield',
+                'title' => 'Meningkatkan Kredibilitas Bisnis',
+                'description' => 'PT memberi citra usaha yang lebih profesional saat berhadapan dengan klien, vendor, institusi, dan calon investor.',
+            ],
+            [
+                'icon' => 'office',
+                'title' => 'Alamat Bisnis Lebih Siap Pakai',
+                'description' => 'Virtual Office membantu bisnis memiliki alamat usaha yang lebih representatif untuk kebutuhan administrasi dan komunikasi usaha.',
+            ],
+            [
+                'icon' => 'document',
+                'title' => 'Mempermudah Proses Legalitas Lanjutan',
+                'description' => 'Struktur PT dan dukungan alamat usaha yang tepat membantu proses pengurusan dokumen lanjutan menjadi lebih tertata.',
+            ],
+            [
+                'icon' => 'growth',
+                'title' => 'Lebih Siap untuk Ekspansi',
+                'description' => 'Kombinasi PT dan Virtual Office cocok untuk pengusaha yang ingin bertumbuh lebih cepat tanpa harus langsung menanggung biaya kantor penuh.',
+            ],
+        ],
+        'plans' => [
+            [
+                'name' => 'PT Lite',
+                'highlight' => 'Pilihan hemat',
+                'subtitle' => 'Solusi awal untuk memulai legalitas PT dengan alur yang lebih sederhana.',
+                'promo_price' => null,
+                'price' => 'Mulai dari Rp 5.500.000',
+                'includes' => [
+                    'Konsultasi struktur PT dan pilihan KBLI',
+                    'Penyusunan dokumen pendirian dasar',
+                    'Pendampingan proses legalitas awal',
+                ],
+                'note' => 'Cocok untuk bisnis yang ingin bergerak cepat dengan kebutuhan dokumen dasar yang efisien.',
+            ],
+            [
+                'name' => 'PT Lengkap',
+                'highlight' => 'Paling fleksibel',
+                'subtitle' => 'Dirancang untuk bisnis yang membutuhkan paket pendirian lebih komprehensif.',
+                'promo_price' => 'Promo Rp 7.500.000',
+                'price' => 'Harga normal Rp 8.500.000',
+                'includes' => [
+                    'Kelengkapan dokumen pendirian yang lebih luas',
+                    'Pendampingan legalitas dasar hingga siap digunakan',
+                    'Arahan penggunaan dokumen untuk operasional awal',
+                ],
+                'note' => 'Pilihan yang pas untuk bisnis yang ingin fondasi legal lebih matang sejak awal.',
+            ],
+            [
+                'name' => 'PT Lengkap + PKP',
+                'highlight' => 'Untuk bisnis berkembang',
+                'subtitle' => 'Paket untuk usaha yang membutuhkan kesiapan legalitas dan administrasi pajak lebih lanjut.',
+                'promo_price' => null,
+                'price' => 'Mulai dari Rp 11.500.000',
+                'includes' => [
+                    'Paket pendirian PT lengkap',
+                    'Pendampingan kebutuhan PKP sejak awal',
+                    'Konsultasi kesiapan dokumen perpajakan',
+                ],
+                'note' => 'Ideal untuk bisnis yang menargetkan transaksi lebih formal dan pertumbuhan lebih cepat.',
+            ],
+            [
+                'name' => 'PT Lengkap + Daftar Merek',
+                'highlight' => 'Lindungi brand',
+                'subtitle' => 'Gabungan legalitas PT dan langkah awal perlindungan identitas merek bisnis.',
+                'promo_price' => 'Promo Rp 10.900.000',
+                'price' => 'Harga normal Rp 12.000.000',
+                'includes' => [
+                    'Paket PT lengkap',
+                    'Pendampingan awal pendaftaran merek',
+                    'Review dasar nama dan identitas brand',
+                ],
+                'note' => 'Direkomendasikan untuk bisnis yang serius membangun brand jangka panjang.',
+            ],
+            [
+                'name' => 'PT Lengkap + Virtual Office by vOffice',
+                'highlight' => 'Alamat strategis',
+                'subtitle' => 'Menggabungkan legalitas PT dan kebutuhan alamat usaha yang lebih representatif.',
+                'promo_price' => 'Promo Rp 9.900.000',
+                'price' => 'Harga normal Rp 11.500.000',
+                'includes' => [
+                    'Paket PT lengkap',
+                    'Virtual Office by vOffice',
+                    'Pendampingan kebutuhan administrasi alamat usaha',
+                ],
+                'note' => 'Sesuai untuk bisnis yang ingin tampil profesional tanpa langsung menyewa kantor fisik penuh.',
+            ],
+            [
+                'name' => 'PT Lengkap + Virtual Office Premium by vOffice',
+                'highlight' => 'Kelas premium',
+                'subtitle' => 'Pilihan premium untuk bisnis yang membutuhkan kesan profesional dan eksklusif.',
+                'promo_price' => 'Promo Rp 12.900.000',
+                'price' => 'Harga normal Rp 14.500.000',
+                'includes' => [
+                    'Paket PT lengkap',
+                    'Virtual Office Premium by vOffice',
+                    'Dukungan citra bisnis yang lebih eksklusif',
+                ],
+                'note' => 'Direkomendasikan untuk bisnis yang banyak berinteraksi dengan klien korporasi dan partner strategis.',
+            ],
+            [
+                'name' => 'PAKET PT + VO (Free Trade)',
+                'highlight' => 'Bundling praktis',
+                'subtitle' => 'Bundling legalitas PT dan virtual office untuk kebutuhan operasional yang lebih dinamis.',
+                'promo_price' => null,
+                'price' => 'Mulai dari Rp 9.500.000',
+                'includes' => [
+                    'Pendirian PT dasar',
+                    'Fasilitas Virtual Office pilihan',
+                    'Pendampingan proses yang lebih praktis dalam satu alur',
+                ],
+                'note' => 'Pilihan tepat untuk owner yang ingin solusi bundling praktis dan efisien.',
+            ],
+        ],
+    ],
+    [
+        'id' => 2,
+        'slug' => 'perorangan',
+        'name' => 'PT Perorangan',
+        'short_name' => 'Perorangan',
+        'tag' => 'Praktis',
+        'price' => '2500000',
+        'price_label' => 'Rp 2.500.000',
+        'duration' => 'Estimasi 3-7 hari kerja',
+        'image' => 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80&fm=webp',
+        'description' => 'Pilihan paket untuk pemilik usaha tunggal yang ingin memiliki badan hukum PT dengan proses yang lebih sederhana, efisien, dan tetap profesional.',
+        'excerpt' => 'Paket PT Perorangan untuk pelaku usaha tunggal yang ingin naik kelas dengan badan hukum yang lebih formal.',
+        'audience' => 'Cocok untuk solo founder, konsultan, bisnis digital, UMKM yang berkembang, dan pemilik usaha yang ingin legalitas lebih rapi.',
+        'content' => [
+            'PT Perorangan menjadi pilihan menarik bagi pemilik usaha tunggal yang ingin memiliki badan hukum lebih formal tanpa struktur multi pemegang saham.',
+            'Bentuk ini cocok untuk usaha yang sudah berjalan atau sedang bersiap tumbuh dan membutuhkan identitas hukum yang lebih kredibel untuk kebutuhan operasional maupun kerja sama.',
+            'FastTrack membantu user memahami apakah PT Perorangan merupakan opsi yang tepat, sekaligus mendampingi proses dokumen agar tetap efisien dan nyaman diikuti.',
+        ],
+        'benefits' => [
+            'Proses pendirian lebih sederhana untuk pemilik usaha tunggal',
+            'Membantu bisnis tampil lebih kredibel dan profesional',
+            'Cocok untuk solo founder yang ingin menata legalitas bisnis',
+            'Lebih efisien sebagai langkah awal naik kelas usaha',
+        ],
+        'requirements' => [
+            'Identitas pemilik usaha',
+            'Nama perusahaan dan alternatif cadangan',
+            'Alamat usaha yang akan digunakan',
+            'Deskripsi kegiatan usaha utama',
+        ],
+        'process' => [
+            'Diskusi model usaha dan kecocokan PT Perorangan',
+            'Persiapan data dan validasi nama perusahaan',
+            'Pengurusan dokumen pendirian dan legalitas dasar',
+            'Serah terima dokumen dan arahan penggunaan awal',
+        ],
+        'faq' => [
+            ['question' => 'Siapa yang cocok memakai PT Perorangan?', 'answer' => 'PT Perorangan cocok untuk pelaku usaha tunggal yang ingin memiliki badan hukum yang lebih formal dan profesional.'],
+            ['question' => 'Apakah PT Perorangan cocok untuk UMKM?', 'answer' => 'Ya, paket ini relevan untuk UMKM yang sedang berkembang dan ingin menata fondasi legal usahanya dengan lebih baik.'],
+        ],
+        'about' => [
+            'PT Perorangan adalah bentuk badan hukum yang dirancang untuk pemilik usaha tunggal yang ingin meningkatkan legalitas usahanya tanpa harus membangun struktur multi pemegang saham.',
+            'Bentuk ini menjadi solusi menarik bagi pelaku usaha mikro dan kecil yang ingin tampil lebih profesional, memiliki entitas usaha yang lebih formal, dan mulai menata administrasi bisnis dengan lebih baik.',
+            'Dengan pendekatan yang lebih sederhana, PT Perorangan membantu solo founder atau owner bisnis agar bisa naik kelas tanpa harus langsung masuk ke struktur PT biasa yang lebih kompleks.',
+        ],
+        'plans' => [
+            [
+                'name' => 'PT Lite',
+                'highlight' => 'Mulai cepat',
+                'subtitle' => 'Paket awal untuk owner tunggal yang ingin menata legalitas bisnis lebih cepat.',
+                'promo_price' => null,
+                'price' => 'Mulai dari Rp 2.500.000',
+                'includes' => [
+                    'Konsultasi dasar PT Perorangan',
+                    'Pendampingan proses legalitas awal',
+                    'Checklist dokumen dan arahan penggunaan',
+                ],
+                'note' => 'Cocok untuk usaha yang baru naik kelas dan ingin struktur legal lebih rapi.',
+            ],
+            [
+                'name' => 'PT Perorangan Lengkap',
+                'highlight' => 'Paket utama',
+                'subtitle' => 'Pilihan lengkap untuk usaha yang ingin fondasi legal lebih matang sejak awal.',
+                'promo_price' => 'Promo Rp 3.900.000',
+                'price' => 'Harga normal Rp 4.500.000',
+                'includes' => [
+                    'Dokumen PT Perorangan yang lebih lengkap',
+                    'Pendampingan proses hingga siap digunakan',
+                    'Briefing tindak lanjut operasional awal',
+                ],
+                'note' => 'Sesuai untuk owner bisnis yang ingin paket lebih lengkap tanpa proses yang terasa rumit.',
+            ],
+            [
+                'name' => 'PT Perorangan Lengkap + Virtual Office Silver Promo by vOffice',
+                'highlight' => 'Promo VO',
+                'subtitle' => 'Gabungan legalitas PT Perorangan dan virtual office untuk citra usaha yang lebih rapi.',
+                'promo_price' => 'Promo Rp 5.900.000',
+                'price' => 'Harga normal Rp 6.800.000',
+                'includes' => [
+                    'Paket PT Perorangan lengkap',
+                    'Virtual Office Silver Promo by vOffice',
+                    'Pendampingan kebutuhan alamat usaha',
+                ],
+                'note' => 'Direkomendasikan untuk bisnis digital, jasa, dan usaha modern yang perlu alamat usaha representatif.',
+            ],
+            [
+                'name' => 'PT Perorangan Lengkap + Virtual Office Premium by vOffice',
+                'highlight' => 'Premium',
+                'subtitle' => 'Solusi premium untuk owner bisnis yang ingin tampil lebih profesional dan eksklusif.',
+                'promo_price' => 'Promo Rp 7.900.000',
+                'price' => 'Harga normal Rp 9.000.000',
+                'includes' => [
+                    'Paket PT Perorangan lengkap',
+                    'Virtual Office Premium by vOffice',
+                    'Kesan brand dan alamat usaha yang lebih kuat',
+                ],
+                'note' => 'Cocok untuk bisnis yang ingin menaikkan citra brand dan kenyamanan komunikasi bisnis.',
+            ],
+        ],
+        'differences' => [
+            [
+                'aspect' => 'Jumlah Pendiri',
+                'perorangan' => 'Didirikan oleh satu orang pemilik usaha.',
+                'biasa' => 'Umumnya melibatkan dua pihak atau lebih sebagai pemegang saham.',
+            ],
+            [
+                'aspect' => 'Struktur Kepemilikan',
+                'perorangan' => 'Lebih sederhana karena fokus pada satu owner.',
+                'biasa' => 'Lebih kompleks karena ada pembagian saham, peran, dan pengambilan keputusan bersama.',
+            ],
+            [
+                'aspect' => 'Kecocokan Bisnis',
+                'perorangan' => 'Ideal untuk usaha mikro dan kecil yang sedang bertumbuh.',
+                'biasa' => 'Lebih cocok untuk bisnis yang menargetkan skala lebih besar atau melibatkan partner/investor.',
+            ],
+            [
+                'aspect' => 'Administrasi Awal',
+                'perorangan' => 'Cenderung lebih ringkas bagi owner tunggal.',
+                'biasa' => 'Perlu penyesuaian lebih banyak karena melibatkan beberapa pihak dan struktur korporasi.',
+            ],
+        ],
+        'business_types' => [
+            'Bisnis digital dan jasa profesional yang dijalankan owner tunggal',
+            'Konsultan, agency kecil, dan freelancer yang ingin naik kelas',
+            'UMKM produk atau perdagangan yang mulai berkembang',
+            'Bisnis online yang ingin terlihat lebih profesional di mata klien atau partner',
+            'Usaha layanan yang membutuhkan identitas badan hukum lebih rapi',
+            'Owner bisnis yang ingin menyiapkan fondasi legal sebelum ekspansi',
+        ],
+        'requirements_detail' => [
+            'Pendiri merupakan WNI dan menjalankan usaha atas nama sendiri',
+            'Menyiapkan nama perusahaan dan deskripsi kegiatan usaha',
+            'Memiliki alamat usaha yang dapat digunakan untuk kebutuhan administrasi',
+            'Menentukan modal, kegiatan usaha, dan data identitas pendukung',
+            'Memastikan usaha masuk dalam kategori yang relevan untuk skema PT Perorangan',
+        ],
+    ],
+];
+
 $articles = [
     [
         'id' => 1,
@@ -625,7 +931,7 @@ Route::get('/robots.txt', function (Request $request) use ($resolveBaseUrl) {
     return response($content, 200)->header('Content-Type', 'text/plain');
 });
 
-Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $customServices, $articles, $resolveBaseUrl, $foundingProducts) {
+Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $customServices, $articles, $resolveBaseUrl, $foundingProducts, $foundingPackages) {
     $baseUrl = $resolveBaseUrl($request);
 
     $urls = collect($staticPages)
@@ -661,7 +967,15 @@ Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $custo
         )
         ->merge(
             collect($foundingProducts)->map(fn ($product) => [
-                'loc' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+                'loc' => $baseUrl . $product['detail_path'],
+                'lastmod' => now()->toDateString(),
+                'changefreq' => 'monthly',
+                'priority' => '0.7',
+            ])
+        )
+        ->merge(
+            collect($foundingPackages)->map(fn ($package) => [
+                'loc' => $baseUrl . '/pendirian-perusahaan/paket/' . $package['slug'],
                 'lastmod' => now()->toDateString(),
                 'changefreq' => 'monthly',
                 'priority' => '0.7',
@@ -711,7 +1025,7 @@ foreach ($customServices as $service) {
                             '@type' => 'ListItem',
                             'position' => $index + 1,
                             'name' => $product['name'],
-                            'url' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+                            'url' => $baseUrl . $product['detail_path'],
                         ]
                     )->all(),
                 ],
@@ -721,6 +1035,110 @@ foreach ($customServices as $service) {
         return Inertia::render($service['component'], $props);
     });
 }
+
+Route::get('/pendirian-perusahaan/1', function () {
+    return redirect('/pendirian-perusahaan/paket', 301);
+});
+
+Route::get('/pendirian-perusahaan/paket', function (Request $request) use ($foundingPackages, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+
+    return Inertia::render('Services/PendirianPerusahaan/Paket/Index', [
+        'packages' => $foundingPackages,
+        'seo' => [
+            'title' => 'Paket Pendirian PT - FastTrack',
+            'description' => 'Pilih paket pendirian PT yang sesuai: PT Persekutuan Modal atau PT Perorangan dengan alur legalitas yang lebih rapi dan profesional.',
+            'canonical' => $baseUrl . '/pendirian-perusahaan/paket',
+            'image' => $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Paket Pendirian PT - FastTrack',
+                'description' => 'Pilihan paket pendirian PT untuk kebutuhan bisnis yang berbeda.',
+                'url' => $baseUrl . '/pendirian-perusahaan/paket',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($foundingPackages)->values()->map(
+                        static fn (array $package, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $package['name'],
+                            'url' => $baseUrl . '/pendirian-perusahaan/paket/' . $package['slug'],
+                        ]
+                    )->all(),
+                ],
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Pendirian Perusahaan', 'item' => $baseUrl . '/pendirian-perusahaan'],
+                ['name' => 'Paket', 'item' => $baseUrl . '/pendirian-perusahaan/paket'],
+            ]),
+        ],
+    ]);
+});
+
+Route::get('/pendirian-perusahaan/paket/{slug}', function (Request $request, string $slug) use ($foundingPackages, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $package = collect($foundingPackages)->firstWhere('slug', $slug);
+
+    abort_if($package === null, 404);
+
+    return Inertia::render('Services/PendirianPerusahaan/Paket/Show', [
+        'package' => $package,
+        'relatedPackages' => collect($foundingPackages)->where('slug', '!=', $slug)->values()->all(),
+        'seo' => [
+            'title' => $package['name'] . ' - FastTrack',
+            'description' => $package['excerpt'],
+            'canonical' => $baseUrl . '/pendirian-perusahaan/paket/' . $package['slug'],
+            'image' => $package['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $package['name'],
+                'description' => $package['excerpt'],
+                'serviceType' => $package['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => [
+                    '@type' => 'Country',
+                    'name' => 'Indonesia',
+                ],
+                'image' => $package['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . '/pendirian-perusahaan/paket/' . $package['slug'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $package['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . '/pendirian-perusahaan/paket/' . $package['slug'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($package['faq'])->map(
+                    static fn (array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => [
+                            '@type' => 'Answer',
+                            'text' => $faq['answer'],
+                        ],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Pendirian Perusahaan', 'item' => $baseUrl . '/pendirian-perusahaan'],
+                ['name' => 'Paket', 'item' => $baseUrl . '/pendirian-perusahaan/paket'],
+                ['name' => $package['short_name'], 'item' => $baseUrl . '/pendirian-perusahaan/paket/' . $package['slug']],
+            ]),
+        ],
+    ]);
+});
 
 Route::get('/pendirian-perusahaan/{id}', function (Request $request, int $id) use ($foundingProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
@@ -740,7 +1158,7 @@ Route::get('/pendirian-perusahaan/{id}', function (Request $request, int $id) us
         'seo' => [
             'title' => $product['name'] . ' - FastTrack',
             'description' => $product['excerpt'],
-            'canonical' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+            'canonical' => $baseUrl . $product['detail_path'],
             'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
         ],
         'schemas' => [
@@ -756,13 +1174,13 @@ Route::get('/pendirian-perusahaan/{id}', function (Request $request, int $id) us
                     'name' => 'Indonesia',
                 ],
                 'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
-                'url' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+                'url' => $baseUrl . $product['detail_path'],
                 'offers' => [
                     '@type' => 'Offer',
                     'priceCurrency' => 'IDR',
                     'price' => $product['price'],
                     'availability' => 'https://schema.org/InStock',
-                    'url' => $baseUrl . '/pendirian-perusahaan/' . $product['id'],
+                    'url' => $baseUrl . $product['detail_path'],
                 ],
             ],
             [
@@ -782,11 +1200,11 @@ Route::get('/pendirian-perusahaan/{id}', function (Request $request, int $id) us
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'Pendirian Perusahaan', 'item' => $baseUrl . '/pendirian-perusahaan'],
-                ['name' => $product['name'], 'item' => $baseUrl . '/pendirian-perusahaan/' . $product['id']],
+                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
             ]),
         ],
     ]);
-});
+})->whereNumber('id');
 
 Route::get('/layanan/{slug}', function (Request $request, $slug) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema) {
     $baseUrl = $resolveBaseUrl($request);
