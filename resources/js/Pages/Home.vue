@@ -518,7 +518,7 @@ const virtualOffices = [
 
         <!-- ===== 4. SUB-SERVICE CARDS ===== -->
         <section id="layanan" class="py-[52px]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="flex flex-col gap-8">
                     <div
                         class="flex items-center justify-between border-b border-[#D9DAD8] pb-4"
@@ -720,7 +720,7 @@ const virtualOffices = [
 
         <!-- ===== 5. PROMO SECTION ===== -->
         <section class="bg-[#42443D] pt-[52px] pb-[120px]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="flex items-center justify-between">
                     <h2
                         class="text-[24px] font-bold leading-[36px] text-[#F9F9F9]"
@@ -761,7 +761,7 @@ const virtualOffices = [
                             class="relative flex flex-col items-center justify-end h-[80px] gap-2"
                         >
                             <span
-                                class="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center justify-center rounded-b-lg bg-[#FED7DA] px-3 py-1 h-[26px] text-[12px] font-semibold leading-[18px] text-[#FB3748]"
+                                class="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center justify-center rounded-b-lg bg-[#FED7DA] px-3 py-1 h-[26px] text-[10px] font-semibold leading-[18px] text-[#FB3748]"
                                 >PROMO SPECIAL</span
                             >
                             <div class="flex flex-col items-center gap-1">
@@ -820,7 +820,7 @@ const virtualOffices = [
                                 loading="lazy"
                             />
                         </div>
-                        <div class="flex flex-col flex-grow gap-8">
+                         <div class="w-full md:w-[550px] flex-shrink-0">
                             <div class="flex flex-col gap-2">
                                 <h2
                                     class="text-[28px] font-bold leading-[42px] text-[#1A1B18]"
@@ -1229,14 +1229,14 @@ const virtualOffices = [
         <!-- ===== 8. TOOLS SECTION ===== -->
         <section class="pt-[52px] pb-0 bg-[#F9F9F9]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
-                <div class="flex flex-col items-center gap-8">
+                <div class="flex flex-col items-center gap-8 pb-10">
                     <h2
                         class="text-[28px] font-bold leading-[42px] text-[#1A1B18] text-center"
                     >
                         Peralatan dan Fitur Gratis untuk Kemudahan Bisnis Anda
                     </h2>
 
-                    <div
+                    <!-- <div
                         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 self-stretch rounded-b-2xl"
                     >
                         <a
@@ -1344,7 +1344,93 @@ const virtualOffices = [
                                 >{{ tool.cta }}</span
                             >
                         </a>
-                    </div>
+                    </div> -->
+
+                    <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 self-stretch rounded-b-2xl"
+>
+    <a
+        v-for="tool in tools"
+        :key="tool.title"
+        :href="tool.path"
+        class="group flex flex-col rounded-[14px] bg-[#FEFEFE] p-5 gap-3 border border-slate-100
+               hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5
+               hover:border-primary/20 transition-all duration-200"
+    >
+        <!-- Icon -->
+        <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg p-2.5"
+            :style="{ backgroundColor: tool.bg }"
+        >
+            <svg
+                v-if="tool.icon === 'check-circle'"
+                class="h-5 w-5"
+                :style="{ color: tool.iconColor }"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+            </svg>
+            <svg
+                v-else-if="tool.icon === 'book'"
+                class="h-5 w-5"
+                :style="{ color: tool.iconColor }"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+            </svg>
+            <svg
+                v-else-if="tool.icon === 'clipboard'"
+                class="h-5 w-5"
+                :style="{ color: tool.iconColor }"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                />
+            </svg>
+            <svg
+                v-else-if="tool.icon === 'file-edit'"
+                class="h-5 w-5"
+                :style="{ color: tool.iconColor }"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                />
+            </svg>
+            <svg
+                v-else
+                class="h-5 w-5"
+                :style="{ color: tool.iconColor }"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                />
+            </svg>
+        </div>
+
+        <!-- Text content -->
+        <div class="flex flex-col gap-1 flex-1">
+            <h3 class="text-sm font-bold leading-snug text-[#1A1B18]">
+                {{ tool.title }}
+            </h3>
+            <p class="text-sm leading-relaxed text-slate-500">
+                {{ tool.description }}
+            </p>
+        </div>
+
+        <!-- CTA -->
+        <span class="text-xs font-semibold text-primary mt-auto pt-1">
+            {{ tool.cta }}
+        </span>
+    </a>
+</div>
+
                 </div>
             </div>
         </section>

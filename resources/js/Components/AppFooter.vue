@@ -14,7 +14,7 @@ const siteTagline = computed(() => site.value.tagline || 'Legal Services - Partn
                 <!-- frame49: Left column — flex-shrink-0, natural width -->
                 <div class="flex flex-col flex-shrink-0 gap-6">
                     <a href="/" aria-label="FastTrack Beranda">
-                        <img src="/images/logo-fasttrack.png" alt="FastTrack Logo" class="w-[203px] h-[38px] object-contain brightness-0 invert overflow-hidden">
+                        <img src="/icons/logo-fasttrack-white.svg" alt="FastTrack Logo" class="h-8 w-auto object-contain">
                     </a>
 
                     <div class="flex flex-col gap-4">

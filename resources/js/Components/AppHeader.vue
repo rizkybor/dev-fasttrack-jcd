@@ -79,7 +79,7 @@ const toggleMobileMenu = () => {
             <div class="flex items-center justify-between h-16 lg:h-[60px]">
                 <!-- Logo -->
                 <a href="/" class="flex-shrink-0 flex items-center" aria-label="FastTrack Beranda">
-                    <img src="/images/logo-fasttrack.png" alt="FastTrack Logo" class="h-8 w-auto object-contain">
+                    <img src="/icons/logo-fasttrack.svg" alt="FastTrack Logo" class="h-8 w-auto object-contain">
                 </a>
 
                 <!-- Desktop Nav -->
@@ -90,7 +90,7 @@ const toggleMobileMenu = () => {
                         class="flex items-center gap-1 px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
                     >
                         PENAWARAN KHUSUS
-                        <span class="text-[10px]">🌈</span>
+                        <img src="/icons/half-rounded.svg" class="w-4 h-4" alt="">
                     </a>
 
                     <!-- LAYANAN dropdown -->
@@ -214,7 +214,7 @@ const toggleMobileMenu = () => {
             >
                 <nav class="space-y-1 px-4 py-4 pb-6" aria-label="Mobile Navigation">
                     <a href="/promo" class="block rounded-xl px-4 py-3 text-sm font-semibold text-[#1A1B18] hover:bg-primary/5 hover:text-primary transition-colors" @click="closeAllMenus">
-                        PENAWARAN KHUSUS 🌈
+                        <span class="inline-flex items-center gap-1">PENAWARAN KHUSUS <img src="/icons/half-rounded.svg" class="w-4 h-4" alt=""></span>
                     </a>
 
                     <div class="rounded-xl border border-[#D9DAD8]">
