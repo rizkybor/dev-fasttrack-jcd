@@ -282,10 +282,34 @@ const tools = [
 ];
 
 const virtualOffices = [
-    { name: "Centennial Tower", location: "Jakarta Selatan", kpp: "KPP Setia Budi", status: "TERSEDIA", image: "/images/vo-centennial.png" },
-    { name: "Menara Kuningan", location: "Jakarta Selatan", kpp: "KPP Setia Budi", status: "TERSEDIA", image: "/images/vo-kuningan.png" },
-    { name: "Sudirman Business District", location: "Jakarta Selatan", kpp: "KPP Tanah Abang", status: "TERSEDIA", image: "/images/vo-sudirman.png" },
-    { name: "Pondok Indah Office", location: "Jakarta Selatan", kpp: "KPP Kebayoran Baru", status: "TERSEDIA", image: "/images/vo-pondokindah.png" },
+    {
+        name: "Centennial Tower",
+        location: "Jakarta Selatan",
+        kpp: "KPP Setia Budi",
+        status: "TERSEDIA",
+        image: "/images/vo-centennial.png",
+    },
+    {
+        name: "Menara Kuningan",
+        location: "Jakarta Selatan",
+        kpp: "KPP Setia Budi",
+        status: "TERSEDIA",
+        image: "/images/vo-kuningan.png",
+    },
+    {
+        name: "Sudirman Business District",
+        location: "Jakarta Selatan",
+        kpp: "KPP Tanah Abang",
+        status: "TERSEDIA",
+        image: "/images/vo-sudirman.png",
+    },
+    {
+        name: "Pondok Indah Office",
+        location: "Jakarta Selatan",
+        kpp: "KPP Kebayoran Baru",
+        status: "TERSEDIA",
+        image: "/images/vo-pondokindah.png",
+    },
 ];
 </script>
 
@@ -363,7 +387,7 @@ const virtualOffices = [
 
         <!-- ===== 2. STATS DIVIDER ===== -->
         <section class="relative z-20">
-            <div class="max-w-3xl mx-auto px-4 -mt-12 lg:-mt-14">
+            <div class="max-w-3xl ml-auto px-4 -mt-12 lg:-mt-14">
                 <div
                     class="bg-primary rounded-xl px-6 py-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-4"
                 >
@@ -424,15 +448,70 @@ const virtualOffices = [
         <section class="py-8">
             <div class="bg-primary">
                 <div
-                    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-4 flex flex-col gap-1"
+                    class="flex items-center justify-between px-4 sm:px-6 lg:px-[84px] h-[160px]"
                 >
-                    <h2 class="text-[16px] font-bold text-[#F9F9F9]">
-                        VIP-express untuk kebutuhan legalitas bisnis Anda
-                    </h2>
-                    <p class="text-sm text-[#F9F9F9]/80">
-                        Layanan prioritas dengan proses lebih cepat dan
-                        pendampingan eksklusif
-                    </p>
+                    <div class="inline-flex items-end gap-2">
+                        <div class="inline-flex flex-col items-start gap-2">
+                            <div
+                                class="inline-flex items-center justify-center rounded-lg bg-[#FEFEFE] px-4 py-2"
+                            >
+                                <span
+                                    class="text-[28px] font-bold leading-[42px] text-primary"
+                                    >FASTRACK - VIP LINE&nbsp;</span
+                                >
+                            </div>
+                            <p
+                                class="text-[24px] font-semibold leading-[36px] text-[#F9F9F9]"
+                            >
+                                PENDIRIAN BADAN USAHA SELESAI DALAM 1 HARI
+                            </p>
+                        </div>
+                        <p
+                            class="text-[14px] font-light leading-[21px] text-[#F9F9F9] underline italic"
+                        >
+                            * (S&K BERLAKU)
+                        </p>
+                    </div>
+
+                    <svg
+                        class="hidden lg:block flex-shrink-0"
+                        width="250"
+                        height="200"
+                        viewBox="0 0 90 100"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M40 0L0 50L40 100"
+                            stroke="#FEFEFE"
+                            stroke-width="20"
+                            stroke-linecap="butt"
+                            stroke-linejoin="miter"
+                        />
+                    </svg>
+
+                    <a
+                        href="/konsultasi"
+                        class="hidden lg:inline-flex items-center justify-center gap-2 rounded-lg border border-[#F9F9F9] bg-primary px-[23px] h-[52px] hover:bg-[#d13a3f] transition-colors"
+                    >
+                        <span
+                            class="text-[16px] font-semibold leading-[24px] text-[#F9F9F9]"
+                            >Konsultasi Sekarang</span
+                        >
+                        <svg
+                            class="w-6 h-6 text-[#F9F9F9]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -1274,9 +1353,15 @@ const virtualOffices = [
         <section class="py-[52px] bg-[#42443D]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                 <div class="flex flex-col items-center gap-8">
-                    <h2 class="text-[28px] font-bold leading-[42px] text-[#F9F9F9] text-center">Alamat Bisnis Prestisius di Lokasi Strategis</h2>
+                    <h2
+                        class="text-[28px] font-bold leading-[42px] text-[#F9F9F9] text-center"
+                    >
+                        Alamat Bisnis Prestisius di Lokasi Strategis
+                    </h2>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 self-stretch bg-white/[0.01] rounded-b-2xl backdrop-blur-[13px]">
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 self-stretch bg-white/[0.01] rounded-b-2xl backdrop-blur-[13px]"
+                    >
                         <a
                             v-for="office in virtualOffices"
                             :key="office.name"
@@ -1285,22 +1370,70 @@ const virtualOffices = [
                             :style="{ backgroundImage: `url(${office.image})` }"
                         >
                             <div class="flex flex-col items-end p-4">
-                                <span class="inline-flex items-center justify-center rounded-lg bg-[#32DE83] px-3 py-1 text-[12px] font-semibold leading-[18px] text-[#F9F9F9]">{{ office.status }}</span>
+                                <span
+                                    class="inline-flex items-center justify-center rounded-lg bg-[#32DE83] px-3 py-1 text-[12px] font-semibold leading-[18px] text-[#F9F9F9]"
+                                    >{{ office.status }}</span
+                                >
                             </div>
-                            <div class="flex flex-col gap-3 rounded-b-xl bg-white/[0.01] backdrop-blur-[13px] p-4">
-                                <h3 class="text-[16px] font-bold leading-[24px] text-[#F9F9F9]">{{ office.name }}</h3>
+                            <div
+                                class="flex flex-col gap-3 rounded-b-xl bg-white/[0.01] backdrop-blur-[13px] p-4"
+                            >
+                                <h3
+                                    class="text-[16px] font-bold leading-[24px] text-[#F9F9F9]"
+                                >
+                                    {{ office.name }}
+                                </h3>
                                 <div class="flex items-center gap-2">
-                                    <svg class="w-[18px] h-[18px] text-[#F9F9F9] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                    <span class="text-[14px] leading-[21px] text-[#F9F9F9]">{{ office.location }}</span>
+                                    <svg
+                                        class="w-[18px] h-[18px] text-[#F9F9F9] flex-shrink-0"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                        />
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                        />
+                                    </svg>
+                                    <span
+                                        class="text-[14px] leading-[21px] text-[#F9F9F9]"
+                                        >{{ office.location }}</span
+                                    >
                                 </div>
-                                <span class="inline-flex items-center justify-center self-start rounded-lg bg-[#A8BDED] px-2.5 py-1 text-[12px] leading-[18px] text-[#314777]">{{ office.kpp }}</span>
+                                <span
+                                    class="inline-flex items-center justify-center self-start rounded-lg bg-[#A8BDED] px-2.5 py-1 text-[12px] leading-[18px] text-[#314777]"
+                                    >{{ office.kpp }}</span
+                                >
                             </div>
                         </a>
                     </div>
 
-                    <a href="/virtual-office-jakarta" class="inline-flex items-center gap-2 rounded-lg py-3 text-[14px] font-semibold text-primary hover:underline">
+                    <a
+                        href="/virtual-office-jakarta"
+                        class="inline-flex items-center gap-2 rounded-lg py-3 text-[14px] font-semibold text-primary hover:underline"
+                    >
                         Lihat Semua Lokasi
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -1311,7 +1444,9 @@ const virtualOffices = [
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                 <div class="flex flex-col gap-6">
                     <div class="flex items-center justify-between">
-                        <h2 class="text-[28px] font-bold leading-[42px] text-[#1A1B18]">
+                        <h2
+                            class="text-[28px] font-bold leading-[42px] text-[#1A1B18]"
+                        >
                             Wawasan Hukum & Bisnis Terkini
                         </h2>
                         <a
@@ -1319,59 +1454,143 @@ const virtualOffices = [
                             class="inline-flex items-center gap-2 border border-[#E74247] text-[#E74247] hover:bg-[#E74247] hover:text-white font-semibold text-sm px-[11px] h-[44px] rounded-lg transition-colors"
                         >
                             Lihat Semua Artikel
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            <svg
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
                             </svg>
                         </a>
                     </div>
 
-                    <div class="flex flex-col gap-6 bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl">
-                        <div class="flex flex-col gap-6 border border-[#D9DAD8] rounded-xl bg-[#FEFEFE] p-[23px]">
+                    <div
+                        class="flex flex-col gap-6 bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl"
+                    >
+                        <div
+                            class="flex flex-col gap-6 border border-[#D9DAD8] rounded-xl bg-[#FEFEFE] p-[23px]"
+                        >
                             <div class="flex flex-col gap-4">
                                 <div class="flex flex-col gap-1">
-                                    <h3 class="text-[24px] font-bold leading-[36px] text-[#1A1B18]">
-                                        RUPS TAHUNAN KINI WAJIB DI BUAT AKTA DAN DILAPORAKAN!
+                                    <h3
+                                        class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
+                                    >
+                                        RUPS TAHUNAN KINI WAJIB DI BUAT AKTA DAN
+                                        DILAPORAKAN!
                                     </h3>
-                                    <p class="text-[14px] leading-[21px] text-[#1A1B18]">
-                                        Semua yang perlu Anda ketahui tentang syarat, dokumen, biaya, dan proses mendirikan PT PMDN secara legal dan efisien...
+                                    <p
+                                        class="text-[14px] leading-[21px] text-[#1A1B18]"
+                                    >
+                                        Semua yang perlu Anda ketahui tentang
+                                        syarat, dokumen, biaya, dan proses
+                                        mendirikan PT PMDN secara legal dan
+                                        efisien...
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center gap-1">
-                                    <svg class="w-5 h-5 text-[#8E8F8B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    <svg
+                                        class="w-5 h-5 text-[#8E8F8B]"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                        />
                                     </svg>
-                                    <span class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]">12 Mei 2025</span>
+                                    <span
+                                        class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]"
+                                        >12 Mei 2025</span
+                                    >
                                 </div>
                             </div>
-                            <a href="/artikel/1" class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E74247] hover:underline w-max">
+                            <a
+                                href="/artikel/1"
+                                class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E74247] hover:underline w-max"
+                            >
                                 Baca Selengkapnya
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"
+                                    />
                                 </svg>
                             </a>
                         </div>
 
-                        <div class="flex flex-col gap-6 border border-[#D9DAD8] rounded-xl bg-[#FEFEFE] p-[23px]">
+                        <div
+                            class="flex flex-col gap-6 border border-[#D9DAD8] rounded-xl bg-[#FEFEFE] p-[23px]"
+                        >
                             <div class="flex flex-col gap-4">
                                 <div class="flex flex-col gap-1">
-                                    <h3 class="text-[24px] font-bold leading-[36px] text-[#1A1B18]">
-                                        KEWAJIBAN MELAKUKAN PENDAFTARAN PENERIMA MANFAAT PERSEROAN
+                                    <h3
+                                        class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
+                                    >
+                                        KEWAJIBAN MELAKUKAN PENDAFTARAN PENERIMA
+                                        MANFAAT PERSEROAN
                                     </h3>
-                                    <p class="text-[14px] leading-[21px] text-[#1A1B18]">
-                                        Semua yang perlu Anda ketahui tentang syarat, dokumen, biaya, dan proses mendirikan PT PMDN secara legal dan efisien...
+                                    <p
+                                        class="text-[14px] leading-[21px] text-[#1A1B18]"
+                                    >
+                                        Semua yang perlu Anda ketahui tentang
+                                        syarat, dokumen, biaya, dan proses
+                                        mendirikan PT PMDN secara legal dan
+                                        efisien...
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center gap-1">
-                                    <svg class="w-5 h-5 text-[#8E8F8B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    <svg
+                                        class="w-5 h-5 text-[#8E8F8B]"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                        />
                                     </svg>
-                                    <span class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]">12 Mei 2025</span>
+                                    <span
+                                        class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]"
+                                        >12 Mei 2025</span
+                                    >
                                 </div>
                             </div>
-                            <a href="/artikel/2" class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E74247] hover:underline w-max">
+                            <a
+                                href="/artikel/2"
+                                class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E74247] hover:underline w-max"
+                            >
                                 Baca Selengkapnya
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                <svg
+                                    class="w-6 h-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"
+                                    />
                                 </svg>
                             </a>
                         </div>
@@ -1382,40 +1601,121 @@ const virtualOffices = [
 
         <!-- ===== 11. KLIEN & PARTNER ===== -->
         <section class="bg-[#42443D] pt-[52px] pb-0 overflow-hidden">
-            <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col items-center gap-8 pb-10">
                 <h2 class="text-[28px] font-bold leading-[42px] text-[#F9F9F9]">
                     Klien Kami
                 </h2>
 
                 <div class="flex flex-col gap-6 w-full">
-                    <div class="relative flex items-center overflow-hidden bg-[#ffffff03] backdrop-blur-[13px] h-20">
-                        <div class="absolute left-0 top-0 h-full w-48 z-10 pointer-events-none" style="background: linear-gradient(270deg, #42443D00 0%, #42443D 100%);"></div>
+                    <div
+                        class="relative flex items-center overflow-hidden bg-[#ffffff03] backdrop-blur-[13px] h-20"
+                    >
+                        <div
+                            class="absolute left-0 top-0 h-full w-48 z-10 pointer-events-none"
+                            style="
+                                background: linear-gradient(
+                                    270deg,
+                                    #42443d00 0%,
+                                    #42443d 100%
+                                );
+                            "
+                        ></div>
                         <div class="flex items-center gap-6 px-6">
-                            <div v-for="i in 5" :key="i" class="flex-shrink-0 w-[240px] h-[80px] bg-white flex items-center justify-center">
-                                <span class="text-xl font-black text-[#1A1B18] uppercase">DUMMY</span>
+                            <div
+                                v-for="i in 5"
+                                :key="i"
+                                class="flex-shrink-0 w-[240px] h-[80px] bg-white flex items-center justify-center"
+                            >
+                                <span
+                                    class="text-xl font-black text-[#1A1B18] uppercase"
+                                    >DUMMY</span
+                                >
                             </div>
                         </div>
-                        <div class="absolute right-0 top-0 h-full w-48 z-10 pointer-events-none" style="background: linear-gradient(90deg, #42443D00 0%, #42443D 100%);"></div>
+                        <div
+                            class="absolute right-0 top-0 h-full w-48 z-10 pointer-events-none"
+                            style="
+                                background: linear-gradient(
+                                    90deg,
+                                    #42443d00 0%,
+                                    #42443d 100%
+                                );
+                            "
+                        ></div>
                     </div>
 
-                    <div class="relative flex items-center overflow-hidden bg-[#ffffff03] backdrop-blur-[13px] h-20">
-                        <div class="absolute left-0 top-0 h-full w-48 z-10 pointer-events-none" style="background: linear-gradient(270deg, #42443D00 0%, #42443D 100%);"></div>
+                    <div
+                        class="relative flex items-center overflow-hidden bg-[#ffffff03] backdrop-blur-[13px] h-20"
+                    >
+                        <div
+                            class="absolute left-0 top-0 h-full w-48 z-10 pointer-events-none"
+                            style="
+                                background: linear-gradient(
+                                    270deg,
+                                    #42443d00 0%,
+                                    #42443d 100%
+                                );
+                            "
+                        ></div>
                         <div class="flex items-center gap-6 pl-[120px] pr-6">
-                            <div v-for="i in 5" :key="i" class="flex-shrink-0 w-[240px] h-[80px] bg-white flex items-center justify-center">
-                                <span class="text-xl font-black text-[#1A1B18] uppercase">DUMMY</span>
+                            <div
+                                v-for="i in 5"
+                                :key="i"
+                                class="flex-shrink-0 w-[240px] h-[80px] bg-white flex items-center justify-center"
+                            >
+                                <span
+                                    class="text-xl font-black text-[#1A1B18] uppercase"
+                                    >DUMMY</span
+                                >
                             </div>
                         </div>
-                        <div class="absolute right-0 top-0 h-full w-48 z-10 pointer-events-none" style="background: linear-gradient(90deg, #42443D00 0%, #42443D 100%);"></div>
+                        <div
+                            class="absolute right-0 top-0 h-full w-48 z-10 pointer-events-none"
+                            style="
+                                background: linear-gradient(
+                                    90deg,
+                                    #42443d00 0%,
+                                    #42443d 100%
+                                );
+                            "
+                        ></div>
                     </div>
 
-                    <div class="relative flex items-center overflow-hidden bg-[#ffffff03] backdrop-blur-[13px] h-20">
-                        <div class="absolute left-0 top-0 h-full w-48 z-10 pointer-events-none" style="background: linear-gradient(270deg, #42443D00 0%, #42443D 100%);"></div>
+                    <div
+                        class="relative flex items-center overflow-hidden bg-[#ffffff03] backdrop-blur-[13px] h-20"
+                    >
+                        <div
+                            class="absolute left-0 top-0 h-full w-48 z-10 pointer-events-none"
+                            style="
+                                background: linear-gradient(
+                                    270deg,
+                                    #42443d00 0%,
+                                    #42443d 100%
+                                );
+                            "
+                        ></div>
                         <div class="flex items-center gap-6 px-6">
-                            <div v-for="i in 5" :key="i" class="flex-shrink-0 w-[240px] h-[80px] bg-white flex items-center justify-center">
-                                <span class="text-xl font-black text-[#1A1B18] uppercase">DUMMY</span>
+                            <div
+                                v-for="i in 5"
+                                :key="i"
+                                class="flex-shrink-0 w-[240px] h-[80px] bg-white flex items-center justify-center"
+                            >
+                                <span
+                                    class="text-xl font-black text-[#1A1B18] uppercase"
+                                    >DUMMY</span
+                                >
                             </div>
                         </div>
-                        <div class="absolute right-0 top-0 h-full w-48 z-10 pointer-events-none" style="background: linear-gradient(90deg, #42443D00 0%, #42443D 100%);"></div>
+                        <div
+                            class="absolute right-0 top-0 h-full w-48 z-10 pointer-events-none"
+                            style="
+                                background: linear-gradient(
+                                    90deg,
+                                    #42443d00 0%,
+                                    #42443d 100%
+                                );
+                            "
+                        ></div>
                     </div>
                 </div>
             </div>
@@ -1427,14 +1727,21 @@ const virtualOffices = [
                 <h2 class="text-[28px] font-bold leading-[42px] text-[#1A1B18]">
                     Afiliasi
                 </h2>
-                <div class="flex items-center justify-center gap-12 w-full bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl overflow-hidden px-[84px] pb-[52px]">
+                <div
+                    class="flex items-center justify-center gap-12 w-full bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl overflow-hidden px-[84px] pb-[52px]"
+                >
                     <div
                         v-for="i in 4"
                         :key="i"
                         class="flex-shrink-0 w-[200px] rounded-xl bg-[#D9DAD8] p-2"
                     >
-                        <div class="w-[185px] h-[62px] flex items-center justify-center">
-                            <span class="text-base font-black text-[#1A1B18] uppercase">DUMMY</span>
+                        <div
+                            class="w-[185px] h-[62px] flex items-center justify-center"
+                        >
+                            <span
+                                class="text-base font-black text-[#1A1B18] uppercase"
+                                >DUMMY</span
+                            >
                         </div>
                     </div>
                 </div>
@@ -1442,57 +1749,142 @@ const virtualOffices = [
         </section>
 
         <!-- ===== 13. KONTAK SECTION ===== -->
-        <section class="py-[52px] bg-[#42443D]">
+        <section class="py-[52px] bg-[#42443D] mb-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                 <div class="flex flex-col lg:flex-row gap-6">
                     <!-- Left: Form -->
-                    <div class="flex-1 flex flex-col justify-center bg-[#FEFEFE] rounded-xl p-6 gap-8 shadow-[0px_1px_2px_0px_#0000004d,0px_1px_3px_1px_#00000026]">
-                        <h2 class="text-[24px] font-bold leading-[36px] text-[#1A1B18]">
+                    <div
+                        class="flex-1 flex flex-col justify-center bg-[#FEFEFE] rounded-xl p-6 gap-8 shadow-[0px_1px_2px_0px_#0000004d,0px_1px_3px_1px_#00000026]"
+                    >
+                        <h2
+                            class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
+                        >
                             Special Promo & Penawaran Menarik
                         </h2>
                         <form @submit.prevent class="flex flex-col gap-4">
                             <div class="flex flex-col gap-4">
-                                <div class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden">
-                                    <input type="text" placeholder="Nama Lengkap" class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]" required />
+                                <div
+                                    class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
+                                >
+                                    <input
+                                        type="text"
+                                        placeholder="Nama Lengkap"
+                                        class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
+                                        required
+                                    />
                                 </div>
-                                <div class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden">
-                                    <input type="email" placeholder="Alamat Email" class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]" required />
+                                <div
+                                    class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
+                                >
+                                    <input
+                                        type="email"
+                                        placeholder="Alamat Email"
+                                        class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
+                                        required
+                                    />
                                 </div>
-                                <div class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden">
-                                    <input type="tel" placeholder="Nomor Whatsapp" class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]" required />
+                                <div
+                                    class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
+                                >
+                                    <input
+                                        type="tel"
+                                        placeholder="Nomor Whatsapp"
+                                        class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
+                                        required
+                                    />
                                 </div>
-                                <div class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden">
-                                    <input type="text" placeholder="Bidang Usaha" class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]" />
+                                <div
+                                    class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
+                                >
+                                    <input
+                                        type="text"
+                                        placeholder="Bidang Usaha"
+                                        class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
+                                    />
                                 </div>
-                                <div class="relative rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden">
-                                    <textarea rows="5" placeholder="Pesan / Kebutuhan Layanan" class="w-full px-4 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B] resize-none" required></textarea>
-                                    <svg class="absolute right-3 bottom-3 w-2 h-2 text-[#8E8F8B]" viewBox="0 0 8 8" fill="currentColor">
-                                        <path d="M6 0L8 2V8H6V0ZM0 6L2 8H8V6H0Z"/>
+                                <div
+                                    class="relative rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
+                                >
+                                    <textarea
+                                        rows="5"
+                                        placeholder="Pesan / Kebutuhan Layanan"
+                                        class="w-full px-4 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B] resize-none"
+                                        required
+                                    ></textarea>
+                                    <svg
+                                        class="absolute right-3 bottom-3 w-2 h-2 text-[#8E8F8B]"
+                                        viewBox="0 0 8 8"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M6 0L8 2V8H6V0ZM0 6L2 8H8V6H0Z"
+                                        />
                                     </svg>
                                 </div>
                             </div>
-                            <div class="flex items-center h-[53px] rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3">
+                            <div
+                                class="flex items-center h-[53px] rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3"
+                            >
                                 <div class="flex items-center gap-2">
-                                    <div class="w-[14px] h-[14px] rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"></div>
-                                    <span class="text-[12px] text-[#8E8F8B]">I'm not a robot</span>
+                                    <div
+                                        class="w-[14px] h-[14px] rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
+                                    ></div>
+                                    <span class="text-[12px] text-[#8E8F8B]"
+                                        >I'm not a robot</span
+                                    >
                                 </div>
                                 <div class="ml-auto flex flex-col items-center">
-                                    <svg class="w-8 h-8 text-[#4A90D9]" viewBox="0 0 38 38" fill="none">
-                                        <path d="M19 4C10.716 4 4 10.716 4 19C4 27.284 10.716 34 19 34C27.284 34 34 27.284 34 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                                        <path d="M34 19C34 15.5 32.5 12.3 30 10" stroke="#E74247" stroke-width="2.5" stroke-linecap="round"/>
+                                    <svg
+                                        class="w-8 h-8 text-[#4A90D9]"
+                                        viewBox="0 0 38 38"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M19 4C10.716 4 4 10.716 4 19C4 27.284 10.716 34 19 34C27.284 34 34 27.284 34 19"
+                                            stroke="currentColor"
+                                            stroke-width="2.5"
+                                            stroke-linecap="round"
+                                        />
+                                        <path
+                                            d="M34 19C34 15.5 32.5 12.3 30 10"
+                                            stroke="#E74247"
+                                            stroke-width="2.5"
+                                            stroke-linecap="round"
+                                        />
                                     </svg>
-                                    <span class="text-[8px] text-[#8E8F8B] leading-none">reCAPTCHA</span>
-                                    <span class="text-[6px] text-[#8E8F8B] leading-none">Privacy - Terms</span>
+                                    <span
+                                        class="text-[8px] text-[#8E8F8B] leading-none"
+                                        >reCAPTCHA</span
+                                    >
+                                    <span
+                                        class="text-[6px] text-[#8E8F8B] leading-none"
+                                        >Privacy - Terms</span
+                                    >
                                 </div>
                             </div>
                             <div class="flex flex-col gap-4">
-                                <label class="inline-flex items-center gap-[9px]">
-                                    <div class="w-[14px] h-[14px] flex-shrink-0 rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"></div>
-                                    <span class="text-[12px] text-[#1A1B18]">Saya telah membaca dan setuju </span>
-                                    <span class="text-[12px] text-[#E74247] cursor-pointer">Ketentuan Legal*</span>
+                                <label
+                                    class="inline-flex items-center gap-[9px]"
+                                >
+                                    <div
+                                        class="w-[14px] h-[14px] flex-shrink-0 rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
+                                    ></div>
+                                    <span class="text-[12px] text-[#1A1B18]"
+                                        >Saya telah membaca dan setuju
+                                    </span>
+                                    <span
+                                        class="text-[12px] text-[#E74247] cursor-pointer"
+                                        >Ketentuan Legal*</span
+                                    >
                                 </label>
-                                <button type="submit" class="w-full h-[44px] flex items-center justify-center rounded-lg bg-[#E74247] hover:bg-red-600 transition-colors">
-                                    <span class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9]">Submit</span>
+                                <button
+                                    type="submit"
+                                    class="w-full h-[44px] flex items-center justify-center rounded-lg bg-[#E74247] hover:bg-red-600 transition-colors"
+                                >
+                                    <span
+                                        class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9]"
+                                        >Submit</span
+                                    >
                                 </button>
                             </div>
                         </form>
@@ -1500,61 +1892,181 @@ const virtualOffices = [
 
                     <!-- Right: Contact info + Map -->
                     <div class="flex-1 flex flex-col gap-6">
-                        <div class="bg-[#FEFEFE] rounded-xl p-6 flex flex-col gap-6 shadow-[0px_1px_2px_0px_#0000004d,0px_1px_3px_1px_#00000026]">
-                            <h3 class="text-[18px] font-bold leading-[27px] text-[#1A1B18]">Hubungi Kami</h3>
+                        <div
+                            class="bg-[#FEFEFE] rounded-xl p-6 flex flex-col gap-6 shadow-[0px_1px_2px_0px_#0000004d,0px_1px_3px_1px_#00000026]"
+                        >
+                            <h3
+                                class="text-[18px] font-bold leading-[27px] text-[#1A1B18]"
+                            >
+                                Hubungi Kami
+                            </h3>
                             <div class="flex flex-col gap-4">
                                 <div class="flex items-start gap-4">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-[#E74247]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                    >
+                                        <svg
+                                            class="w-5 h-5 text-[#E74247]"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                            />
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                            />
                                         </svg>
                                     </div>
-                                    <p class="text-[14px] leading-[21px] text-[#1A1B18]">Grand Bintaro Blok A7, JI. Raya Bintaro Permai, Pesanggrahan, Bintaro, Jakarta Selatan - 12330</p>
+                                    <p
+                                        class="text-[14px] leading-[21px] text-[#1A1B18]"
+                                    >
+                                        Grand Bintaro Blok A7, JI. Raya Bintaro
+                                        Permai, Pesanggrahan, Bintaro, Jakarta
+                                        Selatan - 12330
+                                    </p>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-[#E74247]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                    >
+                                        <svg
+                                            class="w-5 h-5 text-[#E74247]"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                            />
                                         </svg>
                                     </div>
-                                    <a href="tel:02173885036" class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#E74247]">0217 3885 036</a>
+                                    <a
+                                        href="tel:02173885036"
+                                        class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#E74247]"
+                                        >0217 3885 036</a
+                                    >
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-[#E74247]" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                    >
+                                        <svg
+                                            class="w-5 h-5 text-[#E74247]"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                            />
                                         </svg>
                                     </div>
-                                    <a href="https://wa.me/6282298604144" class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#E74247]">0822 9860 4144</a>
+                                    <a
+                                        href="https://wa.me/6282298604144"
+                                        class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#E74247]"
+                                        >0822 9860 4144</a
+                                    >
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center">
-                                        <svg class="w-5 h-5 text-[#E74247]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                    >
+                                        <svg
+                                            class="w-5 h-5 text-[#E74247]"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                            />
                                         </svg>
                                     </div>
-                                    <a href="mailto:cs@fasttrack.legal" class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#E74247]">cs@fasttrack.legal</a>
+                                    <a
+                                        href="mailto:cs@fasttrack.legal"
+                                        class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#E74247]"
+                                        >cs@fasttrack.legal</a
+                                    >
                                 </div>
                             </div>
                         </div>
 
-                        <div class="relative flex-1 min-h-[280px] rounded-xl overflow-hidden shadow-[0px_1px_2px_0px_#0000004d,0px_1px_3px_1px_#00000026] flex items-center justify-center bg-[#00000066]" style="background-image: url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=google%20maps%20aerial%20view%20jakarta%20south%20indonesia%20city%20streets%20satellite%20realistic&image_size=landscape_4_3'); background-size: cover; background-position: center;">
+                        <div
+                            class="relative flex-1 min-h-[280px] rounded-xl overflow-hidden shadow-[0px_1px_2px_0px_#0000004d,0px_1px_3px_1px_#00000026] flex items-center justify-center bg-[#00000066]"
+                            style="
+                                background-image: url(&quot;https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=google%20maps%20aerial%20view%20jakarta%20south%20indonesia%20city%20streets%20satellite%20realistic&image_size=landscape_4_3&quot;);
+                                background-size: cover;
+                                background-position: center;
+                            "
+                        >
                             <div class="absolute inset-0 bg-black/40"></div>
-                            <div class="relative z-10 flex flex-col items-center gap-1">
-                                <div class="w-[60px] h-[60px] rounded-full bg-[#D9DAD8] flex items-center justify-center">
-                                    <svg class="w-8 h-8 text-[#42443D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <div
+                                class="relative z-10 flex flex-col items-center gap-1"
+                            >
+                                <div
+                                    class="w-[60px] h-[60px] rounded-full bg-[#D9DAD8] flex items-center justify-center"
+                                >
+                                    <svg
+                                        class="w-8 h-8 text-[#42443D]"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                        />
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                        />
                                     </svg>
                                 </div>
-                                <p class="text-[16px] font-bold leading-[24px] text-[#FAFAFA]">HEAD OFFICE FASTTRACK</p>
+                                <p
+                                    class="text-[16px] font-bold leading-[24px] text-[#FAFAFA]"
+                                >
+                                    HEAD OFFICE FASTTRACK
+                                </p>
                             </div>
-                            <a href="https://maps.google.com/?q=Grand+Bintaro+Jakarta+Selatan" target="_blank" class="absolute top-[10px] left-[14px] z-10 inline-flex items-center gap-1 bg-[#F9F9F9] rounded-lg px-[10px] h-[29px]">
-                                <svg class="w-4 h-4 text-[#0077FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            <a
+                                href="https://maps.google.com/?q=Grand+Bintaro+Jakarta+Selatan"
+                                target="_blank"
+                                class="absolute top-[10px] left-[14px] z-10 inline-flex items-center gap-1 bg-[#F9F9F9] rounded-lg px-[10px] h-[29px]"
+                            >
+                                <svg
+                                    class="w-4 h-4 text-[#0077FF]"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                    />
                                 </svg>
-                                <span class="text-[14px] text-[#0077FF] leading-[21px]">Open in Maps</span>
+                                <span
+                                    class="text-[14px] text-[#0077FF] leading-[21px]"
+                                    >Open in Maps</span
+                                >
                             </a>
                         </div>
                     </div>
