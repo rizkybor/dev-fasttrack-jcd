@@ -10,7 +10,7 @@ const site = computed(() => page.props.site || {});
 const currentUrl = computed(() => seo.value.canonical || site.value.current_url || page.props.ziggy?.location || '');
 const pageTitle = computed(() => seo.value.title || 'Layanan Legalitas Bisnis | FastTrack');
 const pageDescription = computed(() => seo.value.description || 'Legal Services - Partner Terbaik Perusahaan Anda');
-const pageImage = computed(() => seo.value.image || site.value.default_image || '/fasttrack-og.svg');
+const pageImage = computed(() => seo.value.image || site.value.default_image || '/favicon.ico');
 const pageType = computed(() => seo.value.type || 'website');
 const pageRobots = computed(() => seo.value.robots || 'index, follow, max-image-preview:large');
 const siteName = computed(() => site.value.name || 'FastTrack');

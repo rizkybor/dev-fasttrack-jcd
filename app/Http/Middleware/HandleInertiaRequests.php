@@ -35,7 +35,7 @@ class HandleInertiaRequests extends Middleware
         $siteUrl = $configuredUrl && ! str_contains($configuredUrl, 'localhost')
             ? $configuredUrl
             : $request->getSchemeAndHttpHost();
-        $defaultImage = $siteUrl . '/fasttrack-og.svg';
+        $defaultImage = $siteUrl . '/favicon.ico';
 
         return [
             ...parent::share($request),
