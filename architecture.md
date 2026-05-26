@@ -352,7 +352,7 @@ resources/views/
   sitemap.blade.php
 
 public/
-  fasttrack-og.svg
+  favicon.ico
 ```
 
 ## Catatan Teknis Penting

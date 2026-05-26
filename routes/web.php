@@ -13,7 +13,7 @@ $resolveBaseUrl = static function (Request $request): string {
         : $request->getSchemeAndHttpHost();
 };
 
-$defaultImageUrl = static fn (string $baseUrl): string => $baseUrl . '/fasttrack-og.svg';
+$defaultImageUrl = static fn (string $baseUrl): string => $baseUrl . '/favicon.ico';
 
 $organizationReference = static fn (string $baseUrl): array => [
     '@type' => 'Organization',
@@ -53,7 +53,7 @@ $serviceSchema = static function (string $baseUrl, array $service, ?string $pric
             'name' => 'Indonesia',
         ],
         'url' => $baseUrl . ($service['path'] ?? '/layanan/' . $service['slug']),
-        'image' => $baseUrl . '/fasttrack-og.svg',
+        'image' => $baseUrl . '/favicon.ico',
     ];
 
     if ($price !== null) {

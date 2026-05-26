@@ -6,7 +6,7 @@
         <meta name="theme-color" content="#FF2D55">
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
-        <link rel="icon" type="image/svg+xml" href="/fasttrack-og.svg">
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
