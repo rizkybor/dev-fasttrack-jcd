@@ -22,6 +22,12 @@ const checkPT = () => {
     }, 1500);
 };
 
+const marqueeRows = [
+    { id: 'r1', reverse: false },
+    { id: 'r2', reverse: true },
+    { id: 'r3', reverse: false },
+];
+
 const serviceSearch = ref("");
 
 const serviceCategories = [
@@ -1609,122 +1615,28 @@ const virtualOffices = [
         </section>
 
         <!-- ===== 11. KLIEN & PARTNER ===== -->
-        <section class="bg-[#42443D] pt-[52px] pb-0 overflow-hidden">
-            <div class="flex flex-col items-center gap-8 pb-10">
-                <h2 class="text-[28px] font-bold leading-[42px] text-[#F9F9F9]">
+        <section class="bg-[#42443D] py-10 sm:pt-[52px] sm:pb-10 overflow-hidden">
+            <div class="flex flex-col items-center gap-6 sm:gap-8">
+                <h2 class="text-[24px] sm:text-[28px] font-bold leading-[42px] text-[#F9F9F9]">
                     Klien Kami
                 </h2>
 
-                <div class="flex flex-col gap-6 w-full">
-                    <div
-                        class="relative flex items-center overflow-hidden bg-[#ffffff03] backdrop-blur-[13px] h-20"
-                    >
-                        <div
-                            class="absolute left-0 top-0 h-full w-48 z-10 pointer-events-none"
-                            style="
-                                background: linear-gradient(
-                                    270deg,
-                                    #42443d00 0%,
-                                    #42443d 100%
-                                );
-                            "
-                        ></div>
-                        <div class="flex items-center gap-6 px-6">
-                            <div
-                                v-for="i in 5"
-                                :key="i"
-                                class="flex-shrink-0 w-[240px] h-[80px] bg-white flex items-center justify-center"
-                            >
-                                <span
-                                    class="text-xl font-black text-[#1A1B18] uppercase"
-                                    >DUMMY</span
-                                >
+                <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
+                    <div v-for="row in marqueeRows" :key="row.id" class="marquee-row">
+                        <div class="marquee-fade-left"></div>
+                        <div :class="['marquee-track', row.reverse ? 'animate-marquee-reverse' : 'animate-marquee']">
+                            <div class="marquee-set">
+                                <div v-for="i in 8" :key="row.id+'-'+i" class="marquee-card">
+                                    <img src="/images/DUMMY.png" alt="Klien">
+                                </div>
+                            </div>
+                            <div class="marquee-set" aria-hidden="true">
+                                <div v-for="i in 8" :key="row.id+'-d'+i" class="marquee-card">
+                                    <img src="/images/DUMMY.png" alt="Klien">
+                                </div>
                             </div>
                         </div>
-                        <div
-                            class="absolute right-0 top-0 h-full w-48 z-10 pointer-events-none"
-                            style="
-                                background: linear-gradient(
-                                    90deg,
-                                    #42443d00 0%,
-                                    #42443d 100%
-                                );
-                            "
-                        ></div>
-                    </div>
-
-                    <div
-                        class="relative flex items-center overflow-hidden bg-[#ffffff03] backdrop-blur-[13px] h-20"
-                    >
-                        <div
-                            class="absolute left-0 top-0 h-full w-48 z-10 pointer-events-none"
-                            style="
-                                background: linear-gradient(
-                                    270deg,
-                                    #42443d00 0%,
-                                    #42443d 100%
-                                );
-                            "
-                        ></div>
-                        <div class="flex items-center gap-6 pl-[120px] pr-6">
-                            <div
-                                v-for="i in 5"
-                                :key="i"
-                                class="flex-shrink-0 w-[240px] h-[80px] bg-white flex items-center justify-center"
-                            >
-                                <span
-                                    class="text-xl font-black text-[#1A1B18] uppercase"
-                                    >DUMMY</span
-                                >
-                            </div>
-                        </div>
-                        <div
-                            class="absolute right-0 top-0 h-full w-48 z-10 pointer-events-none"
-                            style="
-                                background: linear-gradient(
-                                    90deg,
-                                    #42443d00 0%,
-                                    #42443d 100%
-                                );
-                            "
-                        ></div>
-                    </div>
-
-                    <div
-                        class="relative flex items-center overflow-hidden bg-[#ffffff03] backdrop-blur-[13px] h-20"
-                    >
-                        <div
-                            class="absolute left-0 top-0 h-full w-48 z-10 pointer-events-none"
-                            style="
-                                background: linear-gradient(
-                                    270deg,
-                                    #42443d00 0%,
-                                    #42443d 100%
-                                );
-                            "
-                        ></div>
-                        <div class="flex items-center gap-6 px-6">
-                            <div
-                                v-for="i in 5"
-                                :key="i"
-                                class="flex-shrink-0 w-[240px] h-[80px] bg-white flex items-center justify-center"
-                            >
-                                <span
-                                    class="text-xl font-black text-[#1A1B18] uppercase"
-                                    >DUMMY</span
-                                >
-                            </div>
-                        </div>
-                        <div
-                            class="absolute right-0 top-0 h-full w-48 z-10 pointer-events-none"
-                            style="
-                                background: linear-gradient(
-                                    90deg,
-                                    #42443d00 0%,
-                                    #42443d 100%
-                                );
-                            "
-                        ></div>
+                        <div class="marquee-fade-right"></div>
                     </div>
                 </div>
             </div>
