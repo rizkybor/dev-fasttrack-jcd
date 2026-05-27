@@ -19,6 +19,20 @@ export default {
             fontFamily: {
                 sans: ['"Plus Jakarta Sans"', ...defaultTheme.fontFamily.sans],
             },
+            keyframes: {
+                marquee: {
+                    from: { transform: 'translateX(0)' },
+                    to: { transform: 'translateX(-50%)' },
+                },
+                'marquee-reverse': {
+                    from: { transform: 'translateX(-50%)' },
+                    to: { transform: 'translateX(0)' },
+                },
+            },
+            animation: {
+                'marquee': 'marquee 45s linear infinite',
+                'marquee-reverse': 'marquee-reverse 45s linear infinite',
+            },
         },
     },
 
