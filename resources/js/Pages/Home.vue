@@ -413,7 +413,7 @@ const virtualOffices = [
         </section>
 
         <!-- ===== 2. STATS DIVIDER ===== -->
-        <section class="relative z-20">
+        <section class="relative z-20 mb-5">
             <div class="max-w-3xl ml-auto px-4 -mt-12 lg:-mt-14">
                 <div
                     class="bg-[#E74247] rounded-xl px-6 py-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-4"
@@ -452,7 +452,7 @@ const virtualOffices = [
                                 10+
                             </div>
                             <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                Tipe layanan tersedia
+                                Virtual Office
                             </div>
                         </div>
                         <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
@@ -461,13 +461,26 @@ const virtualOffices = [
                         <div
                             class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
                         >
-                            40+
+                            99.9%
                         </div>
                         <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                            Jangkauan kota
+                            Kepuasan Klien
                         </div>
                     </div>
                 </div>
+
+                <!-- Speech bubble tail (triangle) -->
+            <svg
+                class="absolute -bottom-[30px] right-[10%] z-10"
+                width="35"
+                height="32"
+                viewBox="0 0 100 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+            >
+                <path d="M0 0H100L0 32Z" fill="#E74247"/>
+            </svg>
             </div>
         </section>
 
