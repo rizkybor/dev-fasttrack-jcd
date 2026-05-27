@@ -23,9 +23,9 @@ const checkPT = () => {
 };
 
 const marqueeRows = [
-    { id: 'r1', reverse: false },
-    { id: 'r2', reverse: true },
-    { id: 'r3', reverse: false },
+    { id: "r1", reverse: false },
+    { id: "r2", reverse: true },
+    { id: "r3", reverse: false },
 ];
 
 const serviceSearch = ref("");
@@ -822,25 +822,36 @@ const virtualOffices = [
         <section class="py-[52px] bg-[#F9F9F9]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                 <div class="flex flex-col gap-12">
-                    <div class="flex flex-col md:flex-row items-center gap-6">
-                        <div class="w-full md:w-[550px] flex-shrink-0">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start"
+                    >
+                        <!-- Image -->
+                        <div>
                             <img
                                 src="/images/ft-img-tentang-kami.png"
                                 alt="Tim FastTrack di kantor"
-                                class="w-full h-[300px] md:h-[386px] rounded-2xl object-cover backdrop-blur-sm"
+                                class="w-full h-[300px] md:h-[386px] rounded-2xl object-cover"
                                 loading="lazy"
                             />
                         </div>
-                        <div class="w-full md:w-[550px] flex-shrink-0">
-                            <div class="flex flex-col gap-2">
-                                <h2
-                                    class="text-[28px] font-bold leading-[42px] text-[#1A1B18]"
-                                >
-                                    Tentang Kami
-                                </h2>
-                                <div class="py-2.5">
+
+                        <!-- Text -->
+                        <div class="flex flex-col justify-center">
+                            <div class="flex flex-col gap-5">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="h-1 w-8 rounded-full bg-primary"
+                                    ></div>
+                                    <h2
+                                        class="text-[28px] font-bold leading-[36px] text-[#1A1B18]"
+                                    >
+                                        Tentang Kami
+                                    </h2>
+                                </div>
+
+                                <div class="space-y-3">
                                     <p
-                                        class="text-[14px] leading-[21px] text-[#1A1B18]"
+                                        class="text-[14px] leading-[22px] text-[#4A4B47] text-justify"
                                     >
                                         Fastrack.legal adalah perusahaan yang
                                         telah berdiri sejak 2001 yang bergerak
@@ -861,7 +872,7 @@ const virtualOffices = [
                                         pada undang-undang yang ditetapkan.
                                     </p>
                                     <p
-                                        class="mt-4 text-[14px] leading-[21px] text-[#1A1B18]"
+                                        class="text-[14px] leading-[22px] text-[#4A4B47] text-justify"
                                     >
                                         Telah membantu lebih dari 13.000 klien
                                         dengan berbagai layanan kami.
@@ -872,60 +883,47 @@ const virtualOffices = [
                                         hukum di Indonesia.
                                     </p>
                                 </div>
-                            </div>
 
-                            <div
-                                class="inline-flex items-start gap-4 self-stretch mr-0 lg:mr-[246px]"
-                            >
-                                <div
-                                    class="inline-flex flex-col items-center justify-center gap-1"
-                                >
-                                    <span
-                                        class="text-[28px] font-bold leading-[42px] text-primary"
-                                        >20+</span
-                                    >
-                                    <span
-                                        class="text-[14px] leading-[21px] text-[#1A1B18]"
-                                        >Tahun Pengalaman</span
-                                    >
-                                </div>
-                                <div
-                                    class="relative w-px h-[67px] flex-shrink-0"
-                                >
+                                <!-- Stats -->
+                                <div class="flex items-center gap-5 pt-3">
                                     <div
-                                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[67px] h-px bg-[#8A8D7F]/40 rotate-90"
-                                    ></div>
-                                </div>
-                                <div
-                                    class="flex flex-col items-center justify-center w-[132px] gap-1"
-                                >
-                                    <span
-                                        class="text-[28px] font-bold leading-[42px] text-primary"
-                                        >10+</span
+                                        class="flex flex-col items-center gap-0.5 min-w-[100px]"
                                     >
-                                    <span
-                                        class="text-[14px] leading-[21px] text-[#1A1B18]"
-                                        >Virtual Office</span
-                                    >
-                                </div>
-                                <div
-                                    class="relative w-px h-[67px] flex-shrink-0"
-                                >
+                                        <span
+                                            class="text-[26px] font-bold leading-tight text-primary"
+                                            >20+</span
+                                        >
+                                        <span
+                                            class="text-[12px] text-[#4A4B47] text-center"
+                                            >Tahun Pengalaman</span
+                                        >
+                                    </div>
+                                    <div class="h-12 w-px bg-[#D9DAD8]"></div>
                                     <div
-                                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[67px] h-px bg-[#8A8D7F]/40 rotate-90"
-                                    ></div>
-                                </div>
-                                <div
-                                    class="flex flex-col items-center justify-center w-[132px] gap-1"
-                                >
-                                    <span
-                                        class="text-[28px] font-bold leading-[42px] text-primary"
-                                        >10.000+</span
+                                        class="flex flex-col items-center gap-0.5 min-w-[100px]"
                                     >
-                                    <span
-                                        class="text-[14px] leading-[21px] text-[#1A1B18]"
-                                        >Klien bisnis dilayani</span
+                                        <span
+                                            class="text-[26px] font-bold leading-tight text-primary"
+                                            >10+</span
+                                        >
+                                        <span
+                                            class="text-[12px] text-[#4A4B47] text-center"
+                                            >Virtual Office</span
+                                        >
+                                    </div>
+                                    <div class="h-12 w-px bg-[#D9DAD8]"></div>
+                                    <div
+                                        class="flex flex-col items-center gap-0.5 min-w-[110px]"
                                     >
+                                        <span
+                                            class="text-[26px] font-bold leading-tight text-primary"
+                                            >10.000+</span
+                                        >
+                                        <span
+                                            class="text-[12px] text-[#4A4B47] text-center"
+                                            >Klien bisnis dilayani</span
+                                        >
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1615,24 +1613,47 @@ const virtualOffices = [
         </section>
 
         <!-- ===== 11. KLIEN & PARTNER ===== -->
-        <section class="bg-[#42443D] py-10 sm:pt-[52px] sm:pb-10 overflow-hidden">
+        <section
+            class="bg-[#42443D] py-10 sm:pt-[52px] sm:pb-10 overflow-hidden"
+        >
             <div class="flex flex-col items-center gap-6 sm:gap-8">
-                <h2 class="text-[24px] sm:text-[28px] font-bold leading-[42px] text-[#F9F9F9]">
+                <h2
+                    class="text-[24px] sm:text-[28px] font-bold leading-[42px] text-[#F9F9F9]"
+                >
                     Klien Kami
                 </h2>
 
                 <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
-                    <div v-for="row in marqueeRows" :key="row.id" class="marquee-row">
+                    <div
+                        v-for="row in marqueeRows"
+                        :key="row.id"
+                        class="marquee-row"
+                    >
                         <div class="marquee-fade-left"></div>
-                        <div :class="['marquee-track', row.reverse ? 'animate-marquee-reverse' : 'animate-marquee']">
+                        <div
+                            :class="[
+                                'marquee-track',
+                                row.reverse
+                                    ? 'animate-marquee-reverse'
+                                    : 'animate-marquee',
+                            ]"
+                        >
                             <div class="marquee-set">
-                                <div v-for="i in 8" :key="row.id+'-'+i" class="marquee-card">
-                                    <img src="/images/DUMMY.png" alt="Klien">
+                                <div
+                                    v-for="i in 8"
+                                    :key="row.id + '-' + i"
+                                    class="marquee-card"
+                                >
+                                    <img src="/images/DUMMY.png" alt="Klien" />
                                 </div>
                             </div>
                             <div class="marquee-set" aria-hidden="true">
-                                <div v-for="i in 8" :key="row.id+'-d'+i" class="marquee-card">
-                                    <img src="/images/DUMMY.png" alt="Klien">
+                                <div
+                                    v-for="i in 8"
+                                    :key="row.id + '-d' + i"
+                                    class="marquee-card"
+                                >
+                                    <img src="/images/DUMMY.png" alt="Klien" />
                                 </div>
                             </div>
                         </div>
