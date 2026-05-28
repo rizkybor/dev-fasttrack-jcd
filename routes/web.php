@@ -1470,4 +1470,85 @@ Route::get('/kontak', function (Request $request) use ($resolveBaseUrl, $default
     ]);
 });
 
+Route::get('/kebijakan-cookie', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+
+    return Inertia::render('CookiePolicy', [
+        'seo' => [
+            'title' => 'Kebijakan Cookie - FastTrack',
+            'description' => 'Kebijakan cookie FastTrack. Pelajari bagaimana kami menggunakan cookie dan teknologi serupa untuk meningkatkan pengalaman Anda.',
+            'canonical' => $baseUrl . '/kebijakan-cookie',
+            'image' => $defaultImageUrl($baseUrl),
+            'type' => 'website',
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'WebPage',
+                'name' => 'Kebijakan Cookie - FastTrack',
+                'description' => 'Kebijakan cookie FastTrack. Pelajari bagaimana kami menggunakan cookie dan teknologi serupa untuk meningkatkan pengalaman Anda.',
+                'url' => $baseUrl . '/kebijakan-cookie',
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Kebijakan Cookie', 'item' => $baseUrl . '/kebijakan-cookie'],
+            ]),
+        ],
+    ]);
+});
+
+Route::get('/kebijakan-privasi', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+
+    return Inertia::render('PrivacyPolicy', [
+        'seo' => [
+            'title' => 'Kebijakan Privasi - FastTrack',
+            'description' => 'Kebijakan privasi FastTrack. Pelajari bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda.',
+            'canonical' => $baseUrl . '/kebijakan-privasi',
+            'image' => $defaultImageUrl($baseUrl),
+            'type' => 'website',
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'WebPage',
+                'name' => 'Kebijakan Privasi - FastTrack',
+                'description' => 'Kebijakan privasi FastTrack. Pelajari bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda.',
+                'url' => $baseUrl . '/kebijakan-privasi',
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Kebijakan Privasi', 'item' => $baseUrl . '/kebijakan-privasi'],
+            ]),
+        ],
+    ]);
+});
+
+Route::get('/syarat-ketentuan', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+
+    return Inertia::render('TermCondition', [
+        'seo' => [
+            'title' => 'Syarat dan Ketentuan - FastTrack',
+            'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+            'canonical' => $baseUrl . '/syarat-ketentuan',
+            'image' => $defaultImageUrl($baseUrl),
+            'type' => 'website',
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'WebPage',
+                'name' => 'Syarat dan Ketentuan - FastTrack',
+                'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+                'url' => $baseUrl . '/syarat-ketentuan',
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Syarat dan Ketentuan', 'item' => $baseUrl . '/syarat-ketentuan'],
+            ]),
+        ],
+    ]);
+});
+
 // require __DIR__.'/auth.php';

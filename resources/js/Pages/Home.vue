@@ -402,7 +402,7 @@ const virtualOffices = [
                             </svg>
                         </a>
                         <a
-                            href="#layanan"
+                            href="/layanan"
                             class="inline-flex items-center gap-2 border border-[#F9F9F9] text-[#F9F9F9] hover:bg-white/10 font-semibold text-base px-6 py-3 rounded-lg transition-colors"
                         >
                             Jelajah Layanan
