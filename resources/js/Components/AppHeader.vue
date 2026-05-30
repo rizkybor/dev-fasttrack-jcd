@@ -182,7 +182,7 @@ const toggleMobileMenu = () => {
                     width: 62.2%;
                     clip-path: polygon(
                         0 0,
-                        100% 0,
+                        99% 0,
                         calc(100% - 50px) 100%,
                         0 100%
                     );

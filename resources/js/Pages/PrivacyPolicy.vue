@@ -15,7 +15,6 @@ const buildWhatsappLink = (serviceName) => {
 
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
-
 </script>
 
 <template>
@@ -23,11 +22,11 @@ const buildWhatsappLink = (serviceName) => {
         <!-- Hero Section - Services Page -->
         <section class="relative overflow-hidden bg-[#E63946]">
             <div class="ml-5">
-            <img
-                src="/icons/left-arrow.svg"
-                class="absolute right-[0%] -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block"
-                alt=""
-            >
+                <img
+                    src="/icons/left-arrow.svg"
+                    class="absolute right-[0%] -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block"
+                    alt=""
+                />
             </div>
 
             <div
@@ -84,8 +83,7 @@ const buildWhatsappLink = (serviceName) => {
                         <h1
                             class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.5rem]"
                         >
-                            Kebijakan<br class="hidden sm:block" />
-                            <span class="text-white/90">Privasi</span>
+                            Kebijakan Privasi
                         </h1>
 
                         <!-- CTA Button -->
@@ -121,21 +119,26 @@ const buildWhatsappLink = (serviceName) => {
             </div>
         </section>
 
-         <!-- CONTENT SECTION -->
+        <!-- CONTENT SECTION -->
         <section class="py-[52px] bg-[#F9F9F9]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div
                     class="rounded-xl border border-[#D9DAD8] bg-white p-6 sm:p-8 lg:p-10"
                 >
-                    <!-- Title -->
-                    <div class="flex flex-col gap-2 mb-8">
-                        <h1
-                            class="text-[24px] sm:text-[28px] font-bold leading-[36px] sm:leading-[42px] text-[#1A1B18]"
-                        >
-                            Kebijakan Cookie
-                        </h1>
-                        <p class="text-[14px] leading-[22px] text-[#6B6B6B]">
-                            Terakhir diperbarui: 28 Mei 2026
+                    <!-- Intro -->
+                    <div class="flex flex-col gap-2 mb-8 text-justify">
+                        <p class="text-[12px] leading-[22px]">
+                            Halaman ini mengatur mengenai Syarat dan Ketentuan
+                            <b>("Syarat dan Ketentuan")</b> dimana anda
+                            <b>(“Anda”)</b> menggunakan layanan www.<b
+                                >Fasttrack.legal</b
+                            >
+                            <b>(“<b>Fasttrack.legal</b>”)</b>.
+                        </p>
+                        <p class="text-[12px] leading-[22px]">
+                            Dengan menggunakan layanan
+                            <b>Fasttrack.legal</b> Kamu dianggap telah membaca
+                            dan setuju dengan Syarat & Ketentuan ini.
                         </p>
                     </div>
 
@@ -143,254 +146,266 @@ const buildWhatsappLink = (serviceName) => {
                     <div class="h-px w-full bg-[#E0E0E0] mb-8"></div>
 
                     <!-- Content Sections -->
-                    <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-8 text-justify">
                         <!-- Section 1 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[12px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Pengaturan Kebijakan Cookie
+                                1. Umum
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Bagian ini mengatur mengenai kebijakan cookie
-                                ("Kebijakan Cookie") yang berlaku bagi seluruh
-                                pengguna layanan fasttrack.legal. Dengan
-                                mengakses atau menggunakan layanan kami, Anda
-                                menyetujui penggunaan cookie sesuai dengan
-                                kebijakan ini. Jika Anda tidak setuju dengan
-                                kebijakan cookie ini, silakan tidak melakukan
-                                registrasi atau tidak menggunakan layanan
-                                fasttrack.legal.
+                                Kebijakan Privasi ini menjelaskan tentang
+                                bagaimana kami mengumpulkan, menggunakan,
+                                menampilkan serta memproses informasi milik Anda
+                                terkait dengan layanan yang tersedia di
+                                Fasttrack.legal (“Layanan”).
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Apabila Anda memiliki pertanyaan sehubungan
+                                dengan Kebijakan Privasi ini, Anda dapat
+                                menghubungi kami pada bagian Kontak Kami di
+                                bagian bawah Kebijakan Privasi ini.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Kebijakan Privasi ini dapat diubah, modifikasi,
+                                tambah, hapus atau koreksi (“Perubahan”) setiap
+                                saat dan setiap perubahan itu berlaku sejak saat
+                                Legalitas.org nyatakan berlaku atau pada waktu
+                                lain yang ditetapkan oleh Legalitas.org.
+                                Legalitas.org tidak memberikan pemberitahuan
+                                apabila terjadi Perubahan Kebijakan Privasi dan
+                                karenanya, Legalitas.org menganjurkan untuk
+                                mengunjungi Layanan Legalitas.org secara berkala
+                                agar dapat mengetahui adanya perubahan tersebut.
                             </p>
                         </div>
 
                         <!-- Section 2 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Pengumpulan Informasi di dalam Cookie
+                                2. Pengumpulan Informasi
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Cookie adalah berkas teks kecil yang ditempatkan
-                                pada perangkat keras komputer atau perangkat
-                                seluler Anda melalui browser saat Anda
-                                mengunjungi situs web. Cookie memungkinkan kami
-                                untuk menyimpan informasi tertentu yang
-                                berkaitan dengan Anda dan perangkat Anda,
-                                sehingga kami dapat memberikan layanan yang
-                                lebih baik dan lebih personal.
+                                Informasi yang kami kumpulkan :
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Apabila Anda berlangganan blog dalam Layanan,
+                                kami dapat menyimpan catatan mengenai email anda
+                                tersebut.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Apabila Anda mengunjungi Layanan
+                                Fasttrack.legal, maka kami secara otomatis akan
+                                mengumpulkan informasi mengenai tentang
+                                kunjungan Anda kepada website kami, termasuk
+                                alamat IP, log files, tanggal, waktu dan durasi
+                                kunjungan.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Apabila Anda melakukan pengecekan nama
+                                perusahaan dan membuat simulasi draft Akta
+                                Pendirian dalam Layanan Fasttrack.legal, kami
+                                dapat menyimpan catatan mengenai seluruh
+                                informasi yang Anda isi tersebut.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Kami menggunakan teknologi “cookie” dalam
+                                Layanan. Cookie adalah kode berukuran kecil,
+                                umumnya disimpan pada hard drive komputer
+                                pengguna, yang memungkinkan situs web untuk
+                                "mempersonalisasikan" dirinya bagi setiap
+                                pengguna dengan mengingat informasi mengenai
+                                kunjungan Anda ke situs kami.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Untuk memberikan mutu layanan terbaik, kami
+                                dapat mengumpulkan informasi tambahan kepada
+                                Anda melalui kontes, survey dan program-program
+                                lainnya
                             </p>
                         </div>
 
                         <!-- Section 3 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Informasi yang Kami Kumpulkan
+                                3. Penggunaan Informasi
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Ketika Anda menggunakan layanan kami, informasi
-                                berikut dapat dikumpulkan melalui cookie dan
-                                teknologi serupa:
+                                Kami menggunakan informasi yang Anda berikan
+                                pada saat Anda berlangganan blog, hubungi kami,
+                                pengecekan nama perusahaan dan mengisi simulasi
+                                draft Akta Pendirian dalam Layanan. Informasi
+                                tersebut digunakan untuk memberikan informasi
+                                seputar informasi hukum terbaru, meningkatkan
+                                mutu Layanan, dan untuk melakukan promosi kepada
+                                Anda.
                             </p>
-                            <ul class="flex flex-col gap-2 pl-6">
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    <span class="font-medium text-[#1A1B18]"
-                                        >Data Kontak:</span
-                                    >
-                                    Informasi yang Anda berikan saat menghubungi
-                                    kami, termasuk nama, nomor telepon, dan
-                                    alamat email.
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    <span class="font-medium text-[#1A1B18]"
-                                        >Data Kunjungan:</span
-                                    >
-                                    Informasi tentang kunjungan Anda ke situs
-                                    kami, termasuk alamat IP, berkas log,
-                                    tanggal dan waktu kunjungan, serta durasi
-                                    kunjungan.
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    <span class="font-medium text-[#1A1B18]"
-                                        >Preferensi Pengguna:</span
-                                    >
-                                    Pengaturan bahasa, tema, dan preferensi
-                                    lainnya yang disimpan untuk meningkatkan
-                                    pengalaman pengguna.
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    <span class="font-medium text-[#1A1B18]"
-                                        >Data Analitik:</span
-                                    >
-                                    Informasi tentang bagaimana Anda
-                                    berinteraksi dengan halaman dan konten di
-                                    situs kami untuk tujuan analitik dan
-                                    peningkatan layanan.
-                                </li>
-                            </ul>
                         </div>
 
                         <!-- Section 4 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Jenis Cookie yang Kami Gunakan
+                                4. Pengungkapan Informasi
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Kami menggunakan beberapa jenis cookie untuk
-                                menjalankan layanan kami, termasuk namun tidak
-                                terbatas pada:
+                                <b>Fasttrack.legal</b> tidak akan menjual dan
+                                menyewakan informasi Anda kepada pihak lainnya.
                             </p>
-
-                            <!-- Cookie Types -->
-                            <div class="flex flex-col gap-4 mt-2">
-                                <div
-                                    class="rounded-lg border border-[#E0E0E0] p-4"
-                                >
-                                    <h3
-                                        class="text-[15px] font-semibold leading-[22px] text-[#1A1B18] mb-2"
-                                    >
-                                        Cookie Esensial
-                                    </h3>
-                                    <p
-                                        class="text-[13px] leading-[20px] text-[#6B6B6B]"
-                                    >
-                                        Cookie yang diperlukan untuk operasional
-                                        dasar situs web. Tanpa cookie ini, situs
-                                        kami tidak dapat berfungsi dengan baik.
-                                    </p>
-                                </div>
-                                <div
-                                    class="rounded-lg border border-[#E0E0E0] p-4"
-                                >
-                                    <h3
-                                        class="text-[15px] font-semibold leading-[22px] text-[#1A1B18] mb-2"
-                                    >
-                                        Cookie Analitik
-                                    </h3>
-                                    <p
-                                        class="text-[13px] leading-[20px] text-[#6B6B6B]"
-                                    >
-                                        Cookie yang membantu kami memahami
-                                        bagaimana pengunjung berinteraksi dengan
-                                        situs web kami dengan mengumpulkan dan
-                                        melaporkan informasi secara anonim.
-                                    </p>
-                                </div>
-                                <div
-                                    class="rounded-lg border border-[#E0E0E0] p-4"
-                                >
-                                    <h3
-                                        class="text-[15px] font-semibold leading-[22px] text-[#1A1B18] mb-2"
-                                    >
-                                        Cookie Fungsional
-                                    </h3>
-                                    <p
-                                        class="text-[13px] leading-[20px] text-[#6B6B6B]"
-                                    >
-                                        Cookie yang memungkinkan situs web untuk
-                                        menyediakan fungsi yang lebih baik dan
-                                        personalisasi seperti bahasa pilihan dan
-                                        preferensi regional.
-                                    </p>
-                                </div>
-                            </div>
                         </div>
 
                         <!-- Section 5 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Pengelolaan Cookie
+                                5. Penyimpanan dan Keamanan Informasi
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Anda dapat mengatur atau menghapus cookie
-                                melalui pengaturan browser Anda. Sebagian besar
-                                browser memungkinkan Anda untuk mengontrol
-                                cookie melalui preferensi. Perlu diingat bahwa
-                                menghapus atau memblokir cookie tertentu dapat
-                                mempengaruhi fungsionalitas situs web kami.
-                                Untuk informasi lebih lanjut tentang cara
-                                mengelola cookie, silakan kunjungi halaman
-                                bantuan browser yang Anda gunakan.
+                                Ketika Fasttrack.legal menerima informasi yang
+                                Anda berikan dalam Layanan, informasi tersebut
+                                akan Fasttrack.legal akan disimpan dalam Layanan
+                                Fasttrack.legal untuk yang akan digunakan untuk
+                                memenuhi tujuan penggunaan informasi.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Fasttrack.legal berupaya untuk menjaga informasi
+                                dengan aman. Diantaranya dengan memberikan akses
+                                Secure Server Layer (SSL) yang akan mengenkripsi
+                                informasi yang ditampilkan dalam Layanan
+                                Legalitas.org.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Untuk mencegah akses tanpa otorisasi,
+                                Fasttrack.legal memberlakukan berbagai prosedur
+                                fisik, elektronik dan organisasional yang wajar
+                                untuk melindungi data pribadi dari penghancuran
+                                yang melanggar hukum atau secara tak sengaja,
+                                atau kehilangan, pengubahan secara tak sengaja,
+                                atau penyingkapan maupun akses tanpa otorisasi.
+                            </p>
+
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                <b>Fasttrack.legal</b> mengikuti standar umum
+                                teknologi untuk menjaga informasi yang diberikan
+                                oleh Anda dalam Layanan Fasttrack.legal.
+                                Bagaimanapun juga, tidak akan terdapat metode
+                                transmisi di internet atau penyimpanan
+                                elektronik yang memberikan jaminan 100% aman.
+                                Karenanya, Fasttrack.legal tidak dapat menjamin
+                                keamanan atas informasi secara mutlak.
                             </p>
                         </div>
 
                         <!-- Section 6 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Perubahan Kebijakan Cookie
+                                6. Perubahan/Penghapusan Informasi
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Kami berhak untuk memperbarui kebijakan cookie
-                                ini sewaktu-waktu. Setiap perubahan akan
-                                dipublikasikan di halaman ini dengan tanggal
-                                pembaruan yang terbaru. Kami menyarankan Anda
-                                untuk meninjau kebijakan ini secara berkala agar
-                                selalu mengetahui informasi terbaru mengenai
-                                penggunaan cookie di situs kami.
+                                Anda sewaktu-waktu dapat melakukan perubahan
+                                dan/atau penghapusan informasi.
                             </p>
                         </div>
 
                         <!-- Section 7 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Hubungi Kami
+                                7. Tautan Lain
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Jika Anda memiliki pertanyaan mengenai kebijakan
-                                cookie kami, silakan hubungi kami melalui:
+                                Dalam Layanan Fasttrack.legal mungkin saja
+                                terdapat tautan ke website lain di luar Layanan
+                                Legalitas.org. Legalitas.org tidak bertanggung
+                                jawab atas kejadian akibat tautan di website
+                                lain tersebut.
                             </p>
-                            <ul class="flex flex-col gap-1.5 pl-6">
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
+                        </div>
+
+                        <!-- Section 8 -->
+                        <div class="flex flex-col gap-3">
+                            <h2
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                            >
+                                8. Lain-lain
+                            </h2>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Versi asli dari Kebijakan Privasi ini adalah
+                                dalam Bahasa Indonesia, dan dapat diterjemahkan
+                                ke dalam bahasa lain. Versi terjemahan dibuat
+                                untuk memberi kemudahan bagi pengguna asing, dan
+                                tidak bisa dianggap sebagai terjemahan resmi.
+                                Jika ditemukan adanya perbedaan antara versi
+                                Bahasa Indonesia dan versi bahasa lainnya dari
+                                Kebijakan Privasi ini, maka yang berlaku dan
+                                mengikat adalah versi Bahasa Indonesia.
+                            </p>
+                        </div>
+
+                        <!-- Section 9 -->
+                        <div class="flex flex-col gap-3">
+                            <h2
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                            >
+                                9. Kontak Kami
+                            </h2>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Apabila Anda memiliki pertanyaan terkait dengan
+                                Syarat dan Ketentuan ini, hubungi kami di:
+                                <a
+                                    href="mailto:cs@<b>Fasttrack.legal</b>"
+                                    class="text-primary hover:underline"
+                                    >cs@<b>Fasttrack.legal</b></a
                                 >
-                                    Email: contact@fasttrack.legal
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    WhatsApp: (+62) 878 8279 2511
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    Alamat: Jl. Pd. Cabe Raya No.7, Pd. Cabe
-                                    Udik, Kec. Pamulang, Kota Tangerang Selatan,
-                                    Banten 15418
-                                </li>
-                            </ul>
+                            </p>
                         </div>
                     </div>
                 </div>
