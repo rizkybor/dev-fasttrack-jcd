@@ -36,208 +36,244 @@ const trustPoints = [
 
 const serviceCategories = [
     {
-        title: "PENDIRIAN BADAN USAHA",
-        path: "/pendirian-perusahaan",
+        title: "BISNIS & KORPORASI",
+        path: "/",
         items: [
             {
-                title: "PT Perorangan",
+                title: "Badan Usaha",
                 description:
-                    "Perseroan Terbatas (PT) Perorangan adalah Badan Hukum yang didirikan oleh 1 (satu) seorang",
+                    "Pendirian PT Perorangan, PT PMDN, PT PMA, CV, hingga Yayasan.",
                 price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/pendirian-perusahaan",
+                packages: "3 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-bu.png",
+            },
+            {
+                title: "Kantor Perwakilan",
+                description:
+                    "KPPA, KPPPA, dan perwakilan perusahaan asing di Indonesia.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-kantor-perwakilan.png",
+            },
+            {
+                title: "Badan Hukum Luar Negeri",
+                description:
+                    "Registrasi badan hukum asing yang beroperasi di wilayah Indonesia.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-badan-hukum-luar-negeri.png",
+            },
+            {
+                title: "Online Single Submission",
+                description:
+                    "Pendaftaran NIB, perubahan data usaha, dan perizinan via OSS.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-one-single-submission.png",
+            },
+            {
+                title: "Perizinan",
+                description:
+                    "Izin dasar, izin berusaha sektoral, dan perizinan berusaha penunjang.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-perizinan.png",
+            },
+            {
+                title: "Perizinan Lainnya",
+                description:
+                    "NPWP badan, SKD, Tanda Daftar Yayasan, dan Peraturan Perusahaan.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-perizinan-lainnya.png",
+            },
+            {
+                title: "Notaris Virtual",
+                description:
+                    "Akta pendirian, perubahan AD, RUPS, jual beli, hingga perjanjian kawin.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-notaris-virtual.png",
+            },
+            {
+                title: "Restrukturisasi Perseroan Terbatas",
+                description:
+                    "Akuisisi, merger, dan perubahan struktur perseroan secara legal.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-restrukturisasi-perseroan-terbatas.png",
+            },
+            {
+                title: "Penutupan Badan Usaha",
+                description:
+                    "Penutupan PT PMDN, PT PMA, CV, dan kantor perwakilan asing.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-penutupan-badan-usaha.png",
+            },
+            {
+                title: "Kewajiban Pelaporan Perusahaan",
+                description:
+                    "LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-kewajiban-pelaporan-usaha.png",
+            },
+            {
+                title: "Sertifikasi Badan Usaha",
+                description:
+                    "Sertifikasi Kamar Dagang dan Industri (KADIN) untuk badan usaha.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-sertifikasi-badan-usaha.png",
+            },
+            {
+                title: "Retainer / Berlangganan",
+                description:
+                    "Layanan pendampingan hukum korporasi berkelanjutan.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-retainer-berlangganan.png",
+            },
+            {
+                title: "Virtual Office",
+                description:
+                    "Penutupan PT PMDN, PT PMA, CV, dan kantor perwakilan asing.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-virtual-office.png",
+            },
+            {
+                title: "Design & Digital Marketing",
+                description:
+                    "LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/",
+                image: "/images/layanan-card/layanan-design-digmart.png",
+            },
+        ],
+    },
+    {
+        title: "HUKUM & KONTRAK",
+        path: "/",
+        items: [
+            {
+                title: "Penyusunan & Peninjauan Perjanjian",
+                description:
+                    "Drafting dan review kontrak kerja, investasi, JV, waralaba, dan lainnya.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/perizinan-usaha",
                 image: "/images/dummy-card.png",
             },
             {
-                title: "PT. PMDN",
+                title: "Legalisasi Kedutaan / Apostilled",
                 description:
-                    "Penanaman Modal Dalam Negeri (PMDN) adalah kegiatan menanam modal menggunakan Modal Dalam Negeri.",
-                price: "Rp 3.250.000",
-                packages: "5 Paket",
-                path: "/pendirian-perusahaan",
+                    "Legalisasi dokumen untuk keperluan internasional dan kedutaan.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/perizinan-usaha",
                 image: "/images/dummy-card.png",
             },
             {
-                title: "PT. PMA",
+                title: "Penerjemah / Translator",
                 description:
-                    "Penanaman Modal Asing (PMA) adalah kegiatan investasi atau menanam modal oleh Penanam Modal Asing",
-                price: "Rp 17.250.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
+                    "Jasa penerjemah dokumen hukum dan bisnis tersumpah.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/perizinan-usaha",
                 image: "/images/dummy-card.png",
             },
             {
-                title: "Pendirian CV",
+                title: "Kekayaan Intelektual",
                 description:
-                    "CV merupakan bentuk persekutuan yang didirikan oleh dua orang atau lebih",
-                price: "Rp 2.750.000",
-                packages: "4 Paket",
-                path: "/pendirian-perusahaan",
+                    "Pendaftaran & perpanjangan merek, hak cipta, dan analisa merek.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/perizinan-usaha",
+                image: "/images/dummy-card.png",
+            },
+            {
+                title: "Uji Tuntas Hukum",
+                description:
+                    "Legal due diligence menyeluruh untuk transaksi dan investasi.",
+                price: "Rp 750.000",
+                packages: "6 Layanan",
+                path: "/perizinan-usaha",
                 image: "/images/dummy-card.png",
             },
         ],
     },
     {
-        title: "ONLINE SINGLE SUBMISSION (OSS)",
-        path: "/perizinan-usaha",
+        title: "EXPATRIATE & KEIMIGRASIAN",
+        path: "/",
         items: [
             {
-                title: "NIB – PERORANGAN",
+                title: "Izin Tinggal Terbatas (ITAS)",
                 description:
-                    "Pengurusan NIB resmi untuk pelaku usaha perseorangan melalui sistem OSS.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
+                    "ITAS kerja, investor, keluarga, pasangan, dan perpanjangan.",
+                price: "Rp 3.500.000",
+                packages: "6 Layanan",
                 path: "/perizinan-usaha",
                 image: "/images/dummy-card.png",
             },
             {
-                title: "NIB – PT – UMK",
+                title: "Izin Tinggal Tetap (ITAP)",
                 description:
-                    "Pengurusan NIB untuk Perseroan Terbatas berkategori Usaha Mikro dan Kecil.",
+                    "Izin tinggal permanen bagi WNA yang memenuhi syarat di Indonesia.",
                 price: "Rp 750.000",
-                packages: "3 Paket",
+                packages: "6 Layanan",
+                path: "/perizinan-usaha",
+                image: "/images/layanan-card/layanan-itap.png",
+            },
+            {
+                title: "Visa ke Indonesia",
+                description:
+                    "Visa kunjungan, kerja, investor, keluarga, lansia, hingga Golden Visa.",
+                price: "Rp 3.500.000",
+                packages: "6 Layanan",
                 path: "/perizinan-usaha",
                 image: "/images/dummy-card.png",
             },
             {
-                title: "NIB – PT – NON UMK",
+                title: "Visa ke Mancanegara",
                 description:
-                    "Pengurusan NIB untuk PT skala menengah, besar, PMDN, maupun PMA.",
+                    "Pengurusan visa ke luar negeri untuk berbagai keperluan.",
                 price: "Rp 750.000",
-                packages: "3 Paket",
+                packages: "6 Layanan",
                 path: "/perizinan-usaha",
                 image: "/images/dummy-card.png",
             },
             {
-                title: "NIB – CV",
+                title: "Keimigrasian",
                 description:
-                    "Pengurusan NIB resmi untuk badan usaha berbentuk Commanditaire Vennootschap (CV).",
+                    "Paspor Republik Indonesia dan layanan keimigrasian lainnya.",
                 price: "Rp 750.000",
-                packages: "3 Paket",
+                packages: "6 Layanan",
                 path: "/perizinan-usaha",
-                image: "/images/dummy-card.png",
-            },
-        ],
-    },
-    {
-        title: "NOTARIS VIRTUAL – AKTA PERUSAHAAN DAN PERORANGAN",
-        path: "/perubahan-akta",
-        items: [
-            {
-                title: "PT (PERSEROAN TERBATAS) MODAL DIBAWAH 1M :",
-                description: "Perubahan Anggaran Dasar Perseroan Pasal 1–4",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perubahan-akta",
-                image: "/images/dummy-card.png",
+                image: "/images/layanan-card/layanan-keimigrasian.png",
             },
             {
-                title: "PT (PERSEROAN TERBATAS) MODAL DIBAWAH 1M :",
+                title: "Naturalisasi",
                 description:
-                    "Perubahan Anggaran Dasar Perseroan Selain Pasal 1–4",
+                    "Alih kewarganegaraan (naturalisasi) bagi WNA menjadi WNI.",
                 price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perubahan-akta",
-                image: "/images/dummy-card.png",
-            },
-            {
-                title: "PT (PERSEROAN TERBATAS) MODAL DIATAS 1M :",
-                description: "Perubahan Anggaran Dasar Perseroan Pasal 3",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perubahan-akta",
-                image: "/images/dummy-card.png",
-            },
-            {
-                title: "PT (PERSEROAN TERBATAS) MODAL DIATAS 1M :",
-                description: "Perubahan Anggaran Dasar Perseroan Pasal 4",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perubahan-akta",
-                image: "/images/dummy-card.png",
-            },
-        ],
-    },
-    {
-        title: "IZIN TINGGAL TERBATAS",
-        path: "/foreignservice",
-        items: [
-            {
-                title: "IZIN TINGGAL TERBATAS DAN KERJA TENAGA KERJA ASING",
-                description:
-                    "Pengurusan ITAS dan izin kerja resmi untuk tenaga kerja asing di Indonesia.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                image: "/images/dummy-card.png",
-            },
-            {
-                title: "IZIN TINGGAL TERBATAS KELUARGA TENAGA KERJA ASING",
-                description:
-                    "Pengurusan ITAS untuk anggota keluarga yang mengikuti tenaga kerja asing.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                image: "/images/dummy-card.png",
-            },
-            {
-                title: "IZIN TINGGAL TERBATAS INVESTOR",
-                description:
-                    "Pengurusan ITAS untuk investor asing yang menanamkan modal di Indonesia.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                image: "/images/dummy-card.png",
-            },
-            {
-                title: "IZIN TINGGAL TERBATAS PASANGAN (SPOUSE)",
-                description:
-                    "Pengurusan ITAS untuk pasangan sah dari pemegang izin tinggal terbatas.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                image: "/images/dummy-card.png",
-            },
-        ],
-    },
-    {
-        title: "VISA KE INDONESIA",
-        path: "/foreignservice",
-        items: [
-            {
-                title: "Visa Bisnis",
-                description:
-                    "Pengurusan visa bisnis untuk kunjungan bisnis ke Indonesia.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                image: "/images/dummy-card.png",
-            },
-            {
-                title: "Visa Kerja",
-                description:
-                    "Pengurusan visa kerja untuk tenaga kerja asing di Indonesia.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                image: "/images/dummy-card.png",
-            },
-            {
-                title: "Visa Investor",
-                description:
-                    "Pengurusan visa investor untuk penanam modal asing.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                image: "/images/dummy-card.png",
-            },
-            {
-                title: "Visa Keluarga",
-                description:
-                    "Pengurusan visa untuk anggota keluarga tenaga kerja asing.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
+                packages: "6 Layanan",
+                path: "/perizinan-usaha",
                 image: "/images/dummy-card.png",
             },
         ],
@@ -277,11 +313,11 @@ const serviceCategories = [
                         <!-- Breadcrumb -->
                         <nav class="mb-8" aria-label="Breadcrumb">
                             <div
-                                class="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-sm px-4 py-2"
+                                class="inline-flex items-center gap-2 rounded-md bg-white backdrop-blur-sm px-4 py-2"
                             >
                                 <a
                                     href="/"
-                                    class="text-white/90 hover:text-white transition"
+                                    class="text-[#E63946] hover:text-black transition"
                                 >
                                     <svg
                                         class="h-4 w-4"
@@ -298,7 +334,7 @@ const serviceCategories = [
                                     </svg>
                                 </a>
                                 <svg
-                                    class="h-3 w-3 text-white/60"
+                                    class="h-3 w-3 text-[#E63946]"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -310,7 +346,7 @@ const serviceCategories = [
                                         d="M9 5l7 7-7 7"
                                     />
                                 </svg>
-                                <span class="text-sm font-medium text-white"
+                                <span class="text-sm font-medium text-[#E63946]"
                                     >Layanan</span
                                 >
                             </div>
@@ -351,7 +387,7 @@ const serviceCategories = [
                                 "
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="group inline-flex items-center gap-2.5 rounded-full border-2 border-white bg-transparent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#E63946]"
+                                class="group inline-flex items-center gap-2.5 rounded-md border-2 border-white bg-transparent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#E63946]"
                             >
                                 Konsultasi via WhatsApp
                                 <svg
@@ -374,7 +410,7 @@ const serviceCategories = [
                     <!-- Right Image -->
                     <div class="relative z-10 order-first lg:order-last">
                         <div
-                            class="relative rounded-2xl border-4 border-gray-800/90 overflow-hidden shadow-2xl aspect-[3/2]"
+                            class="relative rounded-2xl border-8 border-gray-800/90 overflow-hidden shadow-2xl aspect-[3/2]"
                         >
                             <img
                                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp"
@@ -462,9 +498,10 @@ const serviceCategories = [
 
                                     <!-- Price & Packages -->
                                     <div
-                                        class="flex items-end justify-between gap-3"
+                                        class="flex items-start justify-between gap-3"
                                     >
-                                        <div class="flex flex-col gap-0.5">
+                                        <!-- Kiri: Mulai dari + Price -->
+                                        <div class="flex flex-col gap-1">
                                             <span
                                                 class="text-[11px] font-medium leading-[16px] text-[#6B6B6B]"
                                                 >Mulai dari</span
@@ -474,8 +511,9 @@ const serviceCategories = [
                                                 >{{ item.price }}</span
                                             >
                                         </div>
+                                        <!-- Kanan: Packages badge -->
                                         <span
-                                            class="inline-flex items-center rounded-md bg-[#F1F1F1] px-2 py-1 text-[11px] font-medium leading-[16px] text-[#6B6B6B]"
+                                            class="inline-flex items-center rounded-md bg-[#F1F1F1] px-2 py-1 text-[11px] font-medium leading-[16px] text-[#6B6B6B] flex-shrink-0"
                                         >
                                             {{ item.packages }}
                                         </span>
@@ -541,17 +579,12 @@ const serviceCategories = [
                                 rel="noopener noreferrer"
                                 class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]"
                             >
-                                <!-- WhatsApp Icon -->
-                                <svg
-                                    class="h-5 w-5"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                >
-                                    <path
-                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-                                    />
-                                </svg>
                                 Chat Langsung via WhatsApp
+                                <img
+                                    src="/icons/ft-wa.svg"
+                                    alt="WhatsApp"
+                                    class="h-5 w-5"
+                                />
                             </a>
                         </div>
                     </div>
