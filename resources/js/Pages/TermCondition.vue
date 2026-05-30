@@ -83,8 +83,7 @@ const buildWhatsappLink = (serviceName) => {
                         <h1
                             class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.5rem]"
                         >
-                            Syarat dan<br class="hidden sm:block" />
-                            <span class="text-white/90">Ketentuan</span>
+                            Syarat & Ketentuan
                         </h1>
 
                         <!-- CTA Button -->
@@ -126,15 +125,20 @@ const buildWhatsappLink = (serviceName) => {
                 <div
                     class="rounded-xl border border-[#D9DAD8] bg-white p-6 sm:p-8 lg:p-10"
                 >
-                    <!-- Title -->
-                    <div class="flex flex-col gap-2 mb-8">
-                        <h1
-                            class="text-[24px] sm:text-[28px] font-bold leading-[36px] sm:leading-[42px] text-[#1A1B18]"
-                        >
-                            Kebijakan Cookie
-                        </h1>
-                        <p class="text-[14px] leading-[22px] text-[#6B6B6B]">
-                            Terakhir diperbarui: 28 Mei 2026
+                    <!-- Intro -->
+                    <div class="flex flex-col gap-2 mb-8 text-justify">
+                        <p class="text-[12px] leading-[22px]">
+                            Halaman ini mengatur mengenai Syarat dan Ketentuan
+                            <b>("Syarat dan Ketentuan")</b> dimana anda
+                            <b>(“Anda”)</b> menggunakan layanan www.<b
+                                >Fasttrack.legal</b
+                            >
+                            <b>(“<b>Fasttrack.legal</b>”)</b>.
+                        </p>
+                        <p class="text-[12px] leading-[22px]">
+                            Dengan menggunakan layanan
+                            <b>Fasttrack.legal</b> Kamu dianggap telah membaca
+                            dan setuju dengan Syarat & Ketentuan ini.
                         </p>
                     </div>
 
@@ -142,254 +146,470 @@ const buildWhatsappLink = (serviceName) => {
                     <div class="h-px w-full bg-[#E0E0E0] mb-8"></div>
 
                     <!-- Content Sections -->
-                    <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-8 text-justify">
                         <!-- Section 1 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[12px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Pengaturan Kebijakan Cookie
+                                1. Nama
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Bagian ini mengatur mengenai kebijakan cookie
-                                ("Kebijakan Cookie") yang berlaku bagi seluruh
-                                pengguna layanan fasttrack.legal. Dengan
-                                mengakses atau menggunakan layanan kami, Anda
-                                menyetujui penggunaan cookie sesuai dengan
-                                kebijakan ini. Jika Anda tidak setuju dengan
-                                kebijakan cookie ini, silakan tidak melakukan
-                                registrasi atau tidak menggunakan layanan
-                                fasttrack.legal.
+                                Syarat dan Ketentuan ini mengatur penggunaan
+                                seluruh layanan dan fitur-fitur yang tersedia di
+                                website Legalitas.org berikut segala informasi,
+                                tulisan, gambar atau material lainnya yang di
+                                upload, di download atau ditampilkan dalam
+                                website <b>Fasttrack.legal</b> (secara
+                                bersama-sama disebut sebagai <b>"Layanan"</b>).
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Layanan ini dimiliki, dioperasikan dan
+                                diselenggarakan oleh PT Jakarta Bisnis Servis,
+                                perseorangan terbatas yang didirikan berdasarkan
+                                hukum Republik Indonesia yang telah memperoleh
+                                izin dalam melakukan kegiatan usaha dan Layanan
+                                <b>Fasttrack.legal</b> tersedia secara online
+                                melalui website <b>Fasttrack.legal</b> atau
+                                berbagai akses, media, perangkat dan platform
+                                lainnya, baik yang sudah atau akan tersedia
+                                dikemudian hari.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Dengan telah melakukan menggunakan Layanan
+                                <b>Fasttrack.legal</b>, Anda dianggap:
+                            </p>
+                            <ol class="flex flex-col gap-1.5 pl-6">
+                                <li
+                                    class="text-[12px] leading-[22px] text-[#4A4B47] list-decimal"
+                                >
+                                    Memberikan persetujuan kepada
+                                    <b>Fasttrack.legal</b> untuk menggunakan
+                                    informasi yang diberikan untuk tujuan
+                                    sebagaimana diatur dalam Syarat dan
+                                    Ketentuan ini.
+                                </li>
+                                <li
+                                    class="text-[12px] leading-[22px] text-[#4A4B47] list-decimal"
+                                >
+                                    Melepaskan hak untuk menggugat maupun
+                                    menuntut atas segala pernyataan, kekeliruan,
+                                    ketidaktepatan atau kekurangan dalam setiap
+                                    konten yang dicantumkan dan disampaikan
+                                    dalam situs Legalitas.org.
+                                </li>
+                            </ol>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Pemberian layanan dari
+                                <b>Fasttrack.legal</b> atas hal-hal yang diatur
+                                dalam bagian Layanan, akan diatur lebih lanjut
+                                di dalam Perjanjian lebih rinci.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Apabila Anda memiliki pertanyaan sehubungan
+                                dengan Syarat dan Ketentuan ini, Anda dapat
+                                menghubungi kami pada bagian Kontak Kami di
+                                bagian bawah Syarat dan Ketentuan ini.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Syarat dan Ketentuan ini dapat diubah,
+                                modifikasi, tambah, hapus atau koreksi
+                                <b>("Perubahan")</b> setiap saat dan setiap
+                                perubahan itu berlaku sejak saat
+                                <b>Fasttrack.legal</b> nyatakan berlaku atau
+                                pada waktu lain yang ditetapkan oleh
+                                <b>Fasttrack.legal</b>.
+                                <b>Fasttrack.legal</b> tidak memberikan
+                                pemberitahuan apabila terjadi Perubahan Syarat
+                                dan Ketentuan dan karenanya,
+                                <b>Fasttrack.legal</b> menganjurkan untuk
+                                mengunjungi <b>Fasttrack.legal</b> secara
+                                berkala agar dapat mengetahui adanya perubahan
+                                tersebut.
                             </p>
                         </div>
 
                         <!-- Section 2 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Pengumpulan Informasi di dalam Cookie
+                                2. Berlangganan Blog atau Hubungi Kami
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Cookie adalah berkas teks kecil yang ditempatkan
-                                pada perangkat keras komputer atau perangkat
-                                seluler Anda melalui browser saat Anda
-                                mengunjungi situs web. Cookie memungkinkan kami
-                                untuk menyimpan informasi tertentu yang
-                                berkaitan dengan Anda dan perangkat Anda,
-                                sehingga kami dapat memberikan layanan yang
-                                lebih baik dan lebih personal.
+                                Ketika Anda mengisikan email maupun Data Pribadi
+                                lainnya untuk berlangganan blog atau menghubungi
+                                kami, Anda bersedia untuk menerima email dari
+                                <b>Fasttrack.legal</b> berupa informasi hukum
+                                terbaru, promosi-promosi, serta hal-hal lain
+                                yang dapat membantu Legalitas.org agar dapat
+                                memberikan layanan terbaik.
                             </p>
                         </div>
 
                         <!-- Section 3 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Informasi yang Kami Kumpulkan
+                                3. Pemberian Layanan Oleh <b>Fasttrack.legal</b>
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Ketika Anda menggunakan layanan kami, informasi
-                                berikut dapat dikumpulkan melalui cookie dan
-                                teknologi serupa:
+                                Seluruh informasi dan data yang disediakan pada
+                                <b>Fasttrack.legal</b> adalah bersifat umum dan
+                                disediakan untuk tujuan pendidikan dan
+                                pengenalan hukum terhadap masyarakat. Dengan
+                                demikian tidak dianggap sebagai suatu kebenaran
+                                mutlak.
                             </p>
-                            <ul class="flex flex-col gap-2 pl-6">
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    <span class="font-medium text-[#1A1B18]"
-                                        >Data Kontak:</span
-                                    >
-                                    Informasi yang Anda berikan saat menghubungi
-                                    kami, termasuk nama, nomor telepon, dan
-                                    alamat email.
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    <span class="font-medium text-[#1A1B18]"
-                                        >Data Kunjungan:</span
-                                    >
-                                    Informasi tentang kunjungan Anda ke situs
-                                    kami, termasuk alamat IP, berkas log,
-                                    tanggal dan waktu kunjungan, serta durasi
-                                    kunjungan.
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    <span class="font-medium text-[#1A1B18]"
-                                        >Preferensi Pengguna:</span
-                                    >
-                                    Pengaturan bahasa, tema, dan preferensi
-                                    lainnya yang disimpan untuk meningkatkan
-                                    pengalaman pengguna.
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    <span class="font-medium text-[#1A1B18]"
-                                        >Data Analitik:</span
-                                    >
-                                    Informasi tentang bagaimana Anda
-                                    berinteraksi dengan halaman dan konten di
-                                    situs kami untuk tujuan analitik dan
-                                    peningkatan layanan.
-                                </li>
-                            </ul>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Pada dasarnya <b>Fasttrack.legal</b> tidak
+                                menyediakan informasi yang bersifat rahasia.
+                                <b>Fasttrack.legal</b>
+                                dengan ini menjamin kerahasiaan untuk menjaga
+                                informasi yang telah anda berikan, kecuali apa
+                                yang akan digunakan dalam Layanan
+                                <b>Fasttrack.legal</b>.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Pada layanan Cek Nama Perusahaan (PT/CV) akan
+                                dilakukan re-konfirmasi pengecekan nama
+                                bersumber dari website Kementrian Hukum Republik
+                                Indonesia (Kemenkum RI), dan karenanya hasil
+                                konfirmasi pengecekan nama yang kami berikan
+                                tidak memberikan suatu jaminan atas tersedianya
+                                atau tidak tersedianya keakuratan nama tersebut.
+                                Untuk keakuratan nama akan menjadi valid apabila
+                                nama tersebut telah di proses hingga penerbitan
+                                Pengesahan/Sertifikat Pendirian Badan
+                                Hukum/Usaha dari Kemenkum RI.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Pada layanan simulasi Akta Pendirian PT maupun
+                                layanan simulasi Akta Pendirian CV akan
+                                diberikan draft simulasi Akta Pendirian yang
+                                sesuai dengan ketentuan yang berlaku. Hasil
+                                simulasi tersebut bukanlah hasil akhir yang
+                                bersifat final, sebaiknya dilakukan pembahasan
+                                lebih lanjut oleh calon pendiri ketika memasuki
+                                tahap penyusunan draft Akta Pendirian oleh
+                                Notaris. Dan karenanya kami tidak dapat
+                                dimintakan pertanggungjawaban atas penggunaan
+                                hasil simulasi tersebut selain dari apa yang
+                                menjadi tujuan layanan simulasi ini. Untuk
+                                proses lebih lanjut dan hal-hal lain yang lebih
+                                detail, disarankan menghubungi kantor Notaris
+                                terdekat.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Akses Anda terhadap Layanan Legalitas.org tidak
+                                selalu tersedia sewaktu-waktu, karena terhadap
+                                Layanan dapat dilakukan perbaikan, perawatan,
+                                penambahan konten baru, fasilitas atau layanan
+                                lainnya. <b>Fasttrack.legal</b> akan memberikan
+                                pemberitahuan apabila sewaktu-waktu terjadi
+                                pembatasan akses.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                <b>Fasttrack.legal</b> tidak dapat menjamin
+                                bahwa Layanan <b>Fasttrack.legal</b> akan bebas
+                                dari gangguan, kerusakan atau memiliki masalah
+                                server, bebas dari virus dan masalah lainnya.
+                                Apabila terjadi gangguan dalam Layanan
+                                <b>Fasttrack.legal</b>, Anda harus memberi tahu
+                                kepada <b>Fasttrack.legal</b> dan Legalitas.org
+                                akan melakukan perbaikan secepat mungkin.
+                            </p>
                         </div>
 
                         <!-- Section 4 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Jenis Cookie yang Kami Gunakan
+                                4. Pengungkapan / Disclaimer
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Kami menggunakan beberapa jenis cookie untuk
-                                menjalankan layanan kami, termasuk namun tidak
-                                terbatas pada:
+                                <b>Fasttrack.legal</b> tidak dapat digugat
+                                maupun dituntut atas segala pernyataan,
+                                kekeliruan, ketidaktepatan atau kekurangan dalam
+                                setiap konten yang dicantumkan dan disampaikan
+                                melalui <b>Fasttrack.legal</b>.
                             </p>
-
-                            <!-- Cookie Types -->
-                            <div class="flex flex-col gap-4 mt-2">
-                                <div
-                                    class="rounded-lg border border-[#E0E0E0] p-4"
-                                >
-                                    <h3
-                                        class="text-[15px] font-semibold leading-[22px] text-[#1A1B18] mb-2"
-                                    >
-                                        Cookie Esensial
-                                    </h3>
-                                    <p
-                                        class="text-[13px] leading-[20px] text-[#6B6B6B]"
-                                    >
-                                        Cookie yang diperlukan untuk operasional
-                                        dasar situs web. Tanpa cookie ini, situs
-                                        kami tidak dapat berfungsi dengan baik.
-                                    </p>
-                                </div>
-                                <div
-                                    class="rounded-lg border border-[#E0E0E0] p-4"
-                                >
-                                    <h3
-                                        class="text-[15px] font-semibold leading-[22px] text-[#1A1B18] mb-2"
-                                    >
-                                        Cookie Analitik
-                                    </h3>
-                                    <p
-                                        class="text-[13px] leading-[20px] text-[#6B6B6B]"
-                                    >
-                                        Cookie yang membantu kami memahami
-                                        bagaimana pengunjung berinteraksi dengan
-                                        situs web kami dengan mengumpulkan dan
-                                        melaporkan informasi secara anonim.
-                                    </p>
-                                </div>
-                                <div
-                                    class="rounded-lg border border-[#E0E0E0] p-4"
-                                >
-                                    <h3
-                                        class="text-[15px] font-semibold leading-[22px] text-[#1A1B18] mb-2"
-                                    >
-                                        Cookie Fungsional
-                                    </h3>
-                                    <p
-                                        class="text-[13px] leading-[20px] text-[#6B6B6B]"
-                                    >
-                                        Cookie yang memungkinkan situs web untuk
-                                        menyediakan fungsi yang lebih baik dan
-                                        personalisasi seperti bahasa pilihan dan
-                                        preferensi regional.
-                                    </p>
-                                </div>
-                            </div>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                <b>Fasttrack.legal</b> berhak sepenuhnya
+                                mengubah judul dan/atau isi pertanyaan tanpa
+                                mengubah substansi dari hal-hal yang ditanyakan
+                                kepada <b>Fasttrack.legal</b>.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Artikel-artikel maupun ketentuan hukum tertentu
+                                yang termuat pada <b>Fasttrack.legal</b> mungkin
+                                sudah tidak sesuai/tidak relevan dengan
+                                peraturan perundang-undangan yang berlaku saat
+                                ini.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Disarankan untuk mengecek kembali dasar hukum
+                                yang digunakan dalam artikel-artikel
+                                Legalitas.org untuk memastikan keberlakuan
+                                peraturan perundang-undangan.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Untuk memastikan suatu kebenaran atas artikel,
+                                anda dapat menghubungi seorang penasehat hukum
+                                yang ahli di bidangnya.
+                            </p>
                         </div>
 
                         <!-- Section 5 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Pengelolaan Cookie
+                                5. Iklan
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Anda dapat mengatur atau menghapus cookie
-                                melalui pengaturan browser Anda. Sebagian besar
-                                browser memungkinkan Anda untuk mengontrol
-                                cookie melalui preferensi. Perlu diingat bahwa
-                                menghapus atau memblokir cookie tertentu dapat
-                                mempengaruhi fungsionalitas situs web kami.
-                                Untuk informasi lebih lanjut tentang cara
-                                mengelola cookie, silakan kunjungi halaman
-                                bantuan browser yang Anda gunakan.
+                                Dalam Layanan <b>Fasttrack.legal</b> terdapat
+                                iklan yang dilakukan oleh pengguna sponsor pihak
+                                ketiga <b>("Pengiklan")</b>.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                <b>Fasttrack.legal</b> berhak menghapus atau
+                                mengubah atau mengganti atau menolak pemasangan
+                                materi iklan oleh Pengiklan tanpa memberikan
+                                alasan.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Pengiklan bertanggung jawab atas materi iklan
+                                dalam Layanan <b>Fasttrack.legal</b>, dan
+                                karenanya Pengiklan melepaskannya
+                                <b>Fasttrack.legal</b> dari tanggung jawab atas
+                                materi iklan yang dilakukan oleh Pengiklan.
                             </p>
                         </div>
 
                         <!-- Section 6 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Perubahan Kebijakan Cookie
+                                6. Pembayaran Fee
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Kami berhak untuk memperbarui kebijakan cookie
-                                ini sewaktu-waktu. Setiap perubahan akan
-                                dipublikasikan di halaman ini dengan tanggal
-                                pembaruan yang terbaru. Kami menyarankan Anda
-                                untuk meninjau kebijakan ini secara berkala agar
-                                selalu mengetahui informasi terbaru mengenai
-                                penggunaan cookie di situs kami.
+                                Pemberian Layanan pada dasarnya adalah gratis.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Khusus untuk pemberian Layanan Services, akan
+                                didasarkan pada perjanjian terpisah diluar dari
+                                Syarat dan Ketentuan ini.
                             </p>
                         </div>
 
                         <!-- Section 7 -->
                         <div class="flex flex-col gap-3">
                             <h2
-                                class="text-[18px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                Hubungi Kami
+                                7. Pelepasan Hak
                             </h2>
                             <p
-                                class="text-[14px] leading-[22px] text-[#4A4B47]"
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
                             >
-                                Jika Anda memiliki pertanyaan mengenai kebijakan
-                                cookie kami, silakan hubungi kami melalui:
+                                Anda setuju bahwa pada dasarnya Layanan
+                                <b>Fasttrack.legal</b> adalah bertujuan untuk
+                                pendidikan dan pengenalan hukum kepada
+                                masyarakat, dan karenanya Anda dengan ini
+                                melepaskannya <b>Fasttrack.legal</b>, karyawan
+                                <b>Fasttrack.legal</b>, penulis artikel serta
+                                pihak manapun yang bekerjasama dengan
+                                Legalitas.org atas segala tanggung jawab
+                                sehubungan dengan pemberian Layanan dalam
+                                <b>Fasttrack.legal</b>.
                             </p>
-                            <ul class="flex flex-col gap-1.5 pl-6">
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Anda setuju bahwa Anda tidak akan melakukan
+                                klaim, gugatan, maupun tuntutan kepada
+                                <b>Fasttrack.legal</b>, karyawan
+                                <b>Fasttrack.legal</b>, penulis artikel serta
+                                pihak manapun yang bekerjasama dengan
+                                <b>Fasttrack.legal</b>, baik untuk sekarang
+                                maupun di kemudian hari.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Apabila terdapat artikel yang setidak-tidaknya
+                                terdapat ketidaktepatan atas fakta dan/atau
+                                penggunaan peraturan dan/atau penggunaan sumber
+                                tulisan dan kejadian lainnya yang dapat
+                                mengakibatkan pemberian Layanan menjadi
+                                merugikan pihak lain, maka Anda dapat meminta
+                                kepada <b>Fasttrack.legal</b> untuk tidak
+                                menampilkan artikel dalam Layanan dengan
+                                mengirimkan email keberatan yang ditujukan
+                                kepada alamat email sebagaimana dimaksud dalam
+                                Kontak Kami di bagian paling bawah Syarat dan
+                                Ketentuan ini.
+                            </p>
+                        </div>
+
+                        <!-- Section 8 -->
+                        <div class="flex flex-col gap-3">
+                            <h2
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                            >
+                                8. Layanan Tersedia "As Is"
+                            </h2>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Seluruh informasi, atau konten dalam bentuk
+                                apapun yang tersedia pada website layanan ini
+                                disediakan sebagaimana adanya dan sebagaimana
+                                tersedia tanpa adanya jaminan apapun baik
+                                tersirat maupun tersurat.
+                            </p>
+                        </div>
+
+                        <!-- Section 9 -->
+                        <div class="flex flex-col gap-3">
+                            <h2
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                            >
+                                9. Keamanan
+                            </h2>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Dalam mengakses informasi Akun Anda dalam
+                                Layanan <b>Fasttrack.legal</b>, Anda akan
+                                menggunakan akses Secure Server Layer (SSL) yang
+                                akan mengenkripsi informasi yang ditampilkan
+                                dalam Layanan <b>Fasttrack.legal</b>.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                <b>Fasttrack.legal</b> tidak bisa menjamin
+                                seberapa kuat atau efektifnya enkripsi ini dan
+                                Legalitas.org tidak akan bertanggung jawab atas
+                                masalah yang terjadi akibat pengaksesan tanpa
+                                ijin dari informasi yang Anda sediakan.
+                            </p>
+                        </div>
+
+                        <!-- Section 10 -->
+                        <div class="flex flex-col gap-3">
+                            <h2
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                            >
+                                10. Hukum Yang Berlaku
+                            </h2>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Hukum yang berlaku dalam Syarat dan Ketentuan
+                                ini adalah Hukum Negara Republik Indonesia.
+                            </p>
+                        </div>
+
+                        <!-- Section 11 -->
+                        <div class="flex flex-col gap-3">
+                            <h2
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                            >
+                                11. Bahasa
+                            </h2>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Versi asli dari Syarat dan Ketentuan ini adalah
+                                dalam Bahasa Indonesia, dan dapat diterjemahkan
+                                ke dalam bahasa lain. Versi terjemahan dibuat
+                                untuk memberi kemudahan bagi pengguna asing, dan
+                                tidak bisa dianggap sebagai terjemahan resmi.
+                                Jika ditemukan adanya perbedaan antara versi
+                                Bahasa Indonesia dan versi bahasa lainnya dari
+                                syarat dan ketentuan ini, maka yang berlaku dan
+                                mengikat adalah versi Bahasa Indonesia.
+                            </p>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Setiap perselisihan dalam Layanan Legalitas.org
+                                akan diselesaikan secara musyawarah mufakat dan
+                                apabila tidak tercapai musyawarah mufakat, maka
+                                akan diselesaikan di badan arbitrasi.
+                            </p>
+                        </div>
+
+                        <!-- Section 12 -->
+                        <div class="flex flex-col gap-3">
+                            <h2
+                                class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
+                            >
+                                12. Kontak Kami
+                            </h2>
+                            <p
+                                class="text-[12px] leading-[22px] text-[#4A4B47]"
+                            >
+                                Apabila Anda memiliki pertanyaan terkait dengan
+                                Syarat dan Ketentuan ini, hubungi kami di:
+                                <a
+                                    href="mailto:cs@<b>Fasttrack.legal</b>"
+                                    class="text-primary hover:underline"
+                                    >cs@<b>Fasttrack.legal</b></a
                                 >
-                                    Email: contact@fasttrack.legal
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    WhatsApp: (+62) 878 8279 2511
-                                </li>
-                                <li
-                                    class="text-[14px] leading-[22px] text-[#4A4B47] list-disc"
-                                >
-                                    Alamat: Jl. Pd. Cabe Raya No.7, Pd. Cabe
-                                    Udik, Kec. Pamulang, Kota Tangerang Selatan,
-                                    Banten 15418
-                                </li>
-                            </ul>
+                            </p>
                         </div>
                     </div>
                 </div>
