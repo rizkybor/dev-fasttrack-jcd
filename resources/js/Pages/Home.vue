@@ -264,8 +264,8 @@ const tools = [
         cta: "Cek Nama PT",
         bg: "#D6F8E6",
         iconColor: "#22C55E",
-        icon: "check-circle",
-        path: "/cek-nama-pt",
+        icon: "/icons/ic-tools-sedianamapt.svg",
+        url: "/cek-nama-pt",
     },
     {
         title: "Panduan KBLI 2025",
@@ -274,8 +274,8 @@ const tools = [
         cta: "Lihat Panduan",
         bg: "#FFF6D0",
         iconColor: "#EAB308",
-        icon: "book",
-        path: "/kbli",
+        icon: "/icons/ic-tools-panduankbli.svg",
+        url: "/panduan-kbli",
     },
     {
         title: "Tabel Konversi KBLI 2020 x KBLI 2025",
@@ -283,8 +283,8 @@ const tools = [
         cta: "Buka Tabel",
         bg: "#A8BDED",
         iconColor: "#3B82F6",
-        icon: "clipboard",
-        path: "/kbli",
+        icon: "/icons/ic-tools-tablekonversi.svg",
+        url: "/tabel-konversi-kbli",
     },
     {
         title: "Simulasi AKTA Pendirian",
@@ -293,8 +293,8 @@ const tools = [
         cta: "Mulai Simulasi",
         bg: "#FFD4AE",
         iconColor: "#F97316",
-        icon: "file-edit",
-        path: "/buat-akta",
+        icon: "/icons/ic-tools-simulasiakta.svg",
+        url: "/simulasi-akta",
     },
     {
         title: "Generator Nama",
@@ -303,8 +303,8 @@ const tools = [
         cta: "Generate Sekarang",
         bg: "#CAF6FF",
         iconColor: "#06B6D4",
-        icon: "wand",
-        path: "/generate",
+        icon: "/icons/ic-tools-gennama.svg",
+        url: "/generator-nama",
     },
 ];
 
@@ -314,28 +314,28 @@ const virtualOffices = [
         location: "Jakarta Selatan",
         kpp: "KPP Setia Budi",
         status: "TERSEDIA",
-        image: "/images/vo-centennial.png",
+        image: "/images/dummy-virtual-office.png",
     },
     {
         name: "Menara Kuningan",
         location: "Jakarta Selatan",
         kpp: "KPP Setia Budi",
         status: "TERSEDIA",
-        image: "/images/vo-kuningan.png",
+        image: "/images/dummy-virtual-office.png",
     },
     {
         name: "Sudirman Business District",
         location: "Jakarta Selatan",
         kpp: "KPP Tanah Abang",
         status: "TERSEDIA",
-        image: "/images/vo-sudirman.png",
+        image: "/images/dummy-virtual-office.png",
     },
     {
         name: "Pondok Indah Office",
         location: "Jakarta Selatan",
         kpp: "KPP Kebayoran Baru",
         status: "TERSEDIA",
-        image: "/images/vo-pondokindah.png",
+        image: "/images/dummy-virtual-office.png",
     },
 ];
 </script>
@@ -346,10 +346,12 @@ const virtualOffices = [
         <section
             class="relative min-h-[520px] lg:min-h-[580px] flex items-center overflow-hidden"
         >
-            <div
-                class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style="background-image: url(&quot;/images/hero-bg.png&quot;)"
-            ></div>
+            <img
+                src="/images/hero-banner.png"
+                alt="Hero Banner JC Digital"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+            />
             <div class="absolute inset-0 bg-black/60"></div>
 
             <div
@@ -367,13 +369,18 @@ const virtualOffices = [
 
                         <div class="flex flex-col gap-4">
                             <h1
-                                class="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-tight text-[#F9F9F9]"
+                                class="text-3xl sm:text-4xl lg:text-[38px] font-bold text-[#F9F9F9]"
                             >
-                                Partner Terbaik Anda Dalam Memulai Dan
-                                Mengembangkan Perusahaan Anda
+                                <span class="block mb-2"
+                                    >Partner Terbaik Anda Dalam
+                                </span>
+                                <span class="block mb-2"
+                                    >Memulai Dan Mengembangkan</span
+                                >
+                                <span class="block">Perusahaan Anda</span>
                             </h1>
                             <p
-                                class="text-base lg:text-[16px] text-[#F9F9F9]/90 leading-relaxed"
+                                class="text-base lg:text-[16px] text-[#F9F9F9]/90 leading-loose"
                             >
                                 Memberikan pelayanan yang professional, unggul,
                                 praktis, efektif dan efisien
@@ -470,17 +477,17 @@ const virtualOffices = [
                 </div>
 
                 <!-- Speech bubble tail (triangle) -->
-            <svg
-                class="absolute -bottom-[30px] right-[10%] z-10"
-                width="35"
-                height="32"
-                viewBox="0 0 100 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-            >
-                <path d="M0 0H100L0 32Z" fill="#E74247"/>
-            </svg>
+                <svg
+                    class="absolute -bottom-[30px] right-[10%] z-10"
+                    width="35"
+                    height="32"
+                    viewBox="0 0 100 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                >
+                    <path d="M0 0H100L0 32Z" fill="#E74247" />
+                </svg>
             </div>
         </section>
 
@@ -898,42 +905,42 @@ const virtualOffices = [
                                 </div>
 
                                 <!-- Stats -->
-                                <div class="flex items-center gap-5 pt-3">
+                                <div
+                                    class="grid grid-cols-3 divide-x divide-[#D9DAD8] pt-3"
+                                >
                                     <div
-                                        class="flex flex-col items-center gap-0.5 min-w-[100px]"
+                                        class="flex flex-col items-center gap-1 px-2"
                                     >
                                         <span
-                                            class="text-[26px] font-bold leading-tight text-primary"
+                                            class="text-[19px] sm:text-[26px] font-bold leading-tight text-primary"
                                             >20+</span
                                         >
                                         <span
-                                            class="text-[12px] text-[#4A4B47] text-center"
+                                            class="text-[10px] sm:text-[12px] text-[#4A4B47] text-center leading-tight"
                                             >Tahun Pengalaman</span
                                         >
                                     </div>
-                                    <div class="h-12 w-px bg-[#D9DAD8]"></div>
                                     <div
-                                        class="flex flex-col items-center gap-0.5 min-w-[100px]"
+                                        class="flex flex-col items-center gap-1 px-2"
                                     >
                                         <span
-                                            class="text-[26px] font-bold leading-tight text-primary"
+                                            class="text-[19px] sm:text-[26px] font-bold leading-tight text-primary"
                                             >10+</span
                                         >
                                         <span
-                                            class="text-[12px] text-[#4A4B47] text-center"
+                                            class="text-[10px] sm:text-[12px] text-[#4A4B47] text-center leading-tight"
                                             >Virtual Office</span
                                         >
                                     </div>
-                                    <div class="h-12 w-px bg-[#D9DAD8]"></div>
                                     <div
-                                        class="flex flex-col items-center gap-0.5 min-w-[110px]"
+                                        class="flex flex-col items-center gap-1 px-2"
                                     >
                                         <span
-                                            class="text-[26px] font-bold leading-tight text-primary"
+                                            class="text-[19px] sm:text-[26px] font-bold leading-tight text-primary"
                                             >10.000+</span
                                         >
                                         <span
-                                            class="text-[12px] text-[#4A4B47] text-center"
+                                            class="text-[10px] sm:text-[12px] text-[#4A4B47] text-center leading-tight"
                                             >Klien bisnis dilayani</span
                                         >
                                     </div>
@@ -1264,90 +1271,15 @@ const virtualOffices = [
                         <a
                             v-for="tool in tools"
                             :key="tool.title"
-                            :href="tool.path"
+                            :href="tool.url"
                             class="group flex flex-col rounded-[14px] bg-[#FEFEFE] p-5 gap-3 border border-slate-100 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 hover:border-primary/20 transition-all duration-200"
                         >
                             <!-- Icon -->
-                            <div
-                                class="flex h-10 w-10 items-center justify-center rounded-lg p-2.5"
-                                :style="{ backgroundColor: tool.bg }"
-                            >
-                                <svg
-                                    v-if="tool.icon === 'check-circle'"
-                                    class="h-5 w-5"
-                                    :style="{ color: tool.iconColor }"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    />
-                                </svg>
-                                <svg
-                                    v-else-if="tool.icon === 'book'"
-                                    class="h-5 w-5"
-                                    :style="{ color: tool.iconColor }"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                    />
-                                </svg>
-                                <svg
-                                    v-else-if="tool.icon === 'clipboard'"
-                                    class="h-5 w-5"
-                                    :style="{ color: tool.iconColor }"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                                    />
-                                </svg>
-                                <svg
-                                    v-else-if="tool.icon === 'file-edit'"
-                                    class="h-5 w-5"
-                                    :style="{ color: tool.iconColor }"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                                    />
-                                </svg>
-                                <svg
-                                    v-else
-                                    class="h-5 w-5"
-                                    :style="{ color: tool.iconColor }"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                                    />
-                                </svg>
-                            </div>
+                            <img
+                                :src="tool.icon"
+                                :alt="tool.title"
+                                class="h-12 w-12"
+                            />
 
                             <!-- Text content -->
                             <div class="flex flex-col gap-1 flex-1">
@@ -1357,7 +1289,7 @@ const virtualOffices = [
                                     {{ tool.title }}
                                 </h3>
                                 <p
-                                    class="text-sm leading-relaxed text-slate-500"
+                                    class="text-sm leading-relaxed text-[#1A1B18]"
                                 >
                                     {{ tool.description }}
                                 </p>
