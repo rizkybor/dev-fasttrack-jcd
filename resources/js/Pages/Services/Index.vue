@@ -354,7 +354,7 @@ const serviceCategories = [
 
                         <!-- Heading -->
                         <h1
-                            class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.5rem]"
+                            class="text-xl font-extrabold leading-tight text-white sm:text-4xl lg:text-2xl xl:text-[2rem]"
                         >
                             Layanan Legalitas dan Perizinan<br
                                 class="hidden sm:block"
