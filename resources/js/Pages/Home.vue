@@ -1,25 +1,23 @@
 <script setup>
 import { ref, computed } from "vue";
 import MainLayout from "@/Layouts/MainLayout.vue";
+import { useModals } from "@/Composables/useModals";
+import GeneratorNamaModal from "@/Components/ModalGenerateName.vue";
+import CekNamaModal from "@/Components/ModalCheckName.vue";
 
-const ptName = ref("");
-const isChecking = ref(false);
-const checkResult = ref(null);
+const {
+    showGeneratorModal,
+    showCheckNameModal,
+    prefillCheckName,
+    openGenerator,
+    openCheckName,
+    closeCheckName,
+    transferToCheckName,
+} = useModals();
 
-const checkPT = () => {
-    if (!ptName.value) return;
-    isChecking.value = true;
-    checkResult.value = null;
-    setTimeout(() => {
-        isChecking.value = false;
-        const isAvailable = Math.random() > 0.5;
-        checkResult.value = {
-            available: isAvailable,
-            message: isAvailable
-                ? `Nama PT "${ptName.value}" tersedia.`
-                : `Nama PT "${ptName.value}" sudah digunakan.`,
-        };
-    }, 1500);
+const handleToolClick = (tool) => {
+    if (tool.id === "generator-nama") openGenerator();
+    if (tool.id === "cek-nama-pt") openCheckName();
 };
 
 const marqueeRows = [
@@ -258,19 +256,19 @@ const filteredCategories = computed(() => {
 
 const tools = [
     {
+        id: "cek-nama-pt",
         title: "Cek Ketersediaan Nama PT",
-        description:
-            "Cek ketersediaan nama PT Anda sebelum mendaftar ke AHU Kemenkum RI.",
+        description: "Cek ketersediaan nama PT Anda sebelum mendaftar ke AHU Kemenkum RI.",
         cta: "Cek Nama PT",
         bg: "#D6F8E6",
         iconColor: "#22C55E",
         icon: "/icons/ic-tools-sedianamapt.svg",
-        url: "/cek-nama-pt",
+        url: null,
     },
     {
+        id: "panduan-kbli",
         title: "Panduan KBLI 2025",
-        description:
-            "Temukan kode KBLI yang tepat untuk bidang usaha Anda berdasarkan data terbaru 2025.",
+        description: "Temukan kode KBLI yang tepat untuk bidang usaha Anda berdasarkan data terbaru 2025.",
         cta: "Lihat Panduan",
         bg: "#FFF6D0",
         iconColor: "#EAB308",
@@ -278,6 +276,7 @@ const tools = [
         url: "/panduan-kbli",
     },
     {
+        id: "tabel-konversi",
         title: "Tabel Konversi KBLI 2020 x KBLI 2025",
         description: "Konversi kode KBLI lama ke format terbaru 2025.",
         cta: "Buka Tabel",
@@ -287,9 +286,9 @@ const tools = [
         url: "/tabel-konversi-kbli",
     },
     {
+        id: "simulasi-akta",
         title: "Simulasi AKTA Pendirian",
-        description:
-            "Simulasikan dokumen akta pendirian Perseroan Terbatas sebelum proses resmi dimulai.",
+        description: "Simulasikan dokumen akta pendirian Perseroan Terbatas sebelum proses resmi dimulai.",
         cta: "Mulai Simulasi",
         bg: "#FFD4AE",
         iconColor: "#F97316",
@@ -297,14 +296,14 @@ const tools = [
         url: "/simulasi-akta",
     },
     {
+        id: "generator-nama",
         title: "Generator Nama",
-        description:
-            "Kesulitan menemukan nama Perusahaan untuk PT yang mau kamu buat?",
+        description: "Kesulitan menemukan nama Perusahaan untuk PT yang mau kamu buat?",
         cta: "Generate Sekarang",
         bg: "#CAF6FF",
         iconColor: "#06B6D4",
         icon: "/icons/ic-tools-gennama.svg",
-        url: "/generator-nama",
+        url: null,
     },
 ];
 
@@ -1264,44 +1263,24 @@ const virtualOffices = [
                     >
                         Peralatan dan Fitur Gratis untuk Kemudahan Bisnis Anda
                     </h2>
-
                     <div
                         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 self-stretch rounded-b-2xl"
                     >
-                        <a
-                            v-for="tool in tools"
-                            :key="tool.title"
-                            :href="tool.url"
-                            class="group flex flex-col rounded-[14px] bg-[#FEFEFE] p-5 gap-3 border border-slate-100 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 hover:border-primary/20 transition-all duration-200"
-                        >
-                            <!-- Icon -->
-                            <img
-                                :src="tool.icon"
-                                :alt="tool.title"
-                                class="h-12 w-12"
-                            />
-
-                            <!-- Text content -->
-                            <div class="flex flex-col gap-1 flex-1">
-                                <h3
-                                    class="text-sm font-bold leading-snug text-[#1A1B18]"
-                                >
-                                    {{ tool.title }}
-                                </h3>
-                                <p
-                                    class="text-sm leading-relaxed text-[#1A1B18]"
-                                >
-                                    {{ tool.description }}
-                                </p>
-                            </div>
-
-                            <!-- CTA -->
-                            <span
-                                class="text-xs font-semibold text-primary mt-auto pt-1"
-                            >
-                                {{ tool.cta }}
-                            </span>
-                        </a>
+                          <component
+                        :is="tool.url ? 'a' : 'button'"
+                        v-for="tool in tools"
+                        :key="tool.title"
+                        v-bind="tool.url ? { href: tool.url } : { type: 'button' }"
+                        class="group flex flex-col rounded-[14px] bg-[#FEFEFE] p-5 gap-3 border border-slate-100 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 hover:border-primary/20 transition-all duration-200 text-left"
+                        @click="handleToolClick(tool)"
+                    >
+                        <img :src="tool.icon" :alt="tool.title" class="h-12 w-12" />
+                        <div class="flex flex-col gap-1 flex-1">
+                            <h3 class="text-sm font-bold leading-snug text-[#1A1B18]">{{ tool.title }}</h3>
+                            <p class="text-sm leading-relaxed text-[#1A1B18]">{{ tool.description }}</p>
+                        </div>
+                        <span class="text-xs font-semibold text-primary mt-auto pt-1">{{ tool.cta }}</span>
+                    </component>
                     </div>
                 </div>
             </div>
@@ -1928,5 +1907,18 @@ const virtualOffices = [
                 </div>
             </div>
         </section>
+
+        <!-- ===== 14. GENERATE NAME MODAL ===== -->
+        <GeneratorNamaModal
+            v-model="showGeneratorModal"
+            @check-name="transferToCheckName"
+        />
+
+        <!-- ===== 15. CHECK NAME MODAL ===== -->
+        <CekNamaModal
+            v-model="showCheckNameModal"
+            :prefill-name="prefillCheckName"
+            @update:modelValue="(val) => !val && closeCheckName()"
+        />
     </MainLayout>
 </template>
