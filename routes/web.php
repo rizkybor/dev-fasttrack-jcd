@@ -13,9 +13,9 @@ $resolveBaseUrl = static function (Request $request): string {
         : $request->getSchemeAndHttpHost();
 };
 
-$defaultImageUrl = static fn (string $baseUrl): string => $baseUrl . '/favicon.ico';
+$defaultImageUrl = static fn(string $baseUrl): string => $baseUrl . '/favicon.ico';
 
-$organizationReference = static fn (string $baseUrl): array => [
+$organizationReference = static fn(string $baseUrl): array => [
     '@type' => 'Organization',
     'name' => 'FastTrack',
     'url' => $baseUrl,
@@ -26,7 +26,7 @@ $breadcrumbSchema = static function (array $items): array {
         '@context' => 'https://schema.org',
         '@type' => 'BreadcrumbList',
         'itemListElement' => collect($items)->values()->map(
-            static fn (array $item, int $index): array => [
+            static fn(array $item, int $index): array => [
                 '@type' => 'ListItem',
                 'position' => $index + 1,
                 'name' => $item['name'],
@@ -166,7 +166,7 @@ Route::get('/layanan', function (Request $request) use ($resolveBaseUrl, $defaul
                 'name' => 'Daftar Layanan Legalitas - FastTrack',
                 'description' => 'Pilih layanan legalitas bisnis yang sesuai dengan kebutuhan Anda.',
                 'url' => $baseUrl . '/layanan',
-                'hasPart' => $services->map(static fn (Service $service): array => [
+                'hasPart' => $services->map(static fn(Service $service): array => [
                     '@type' => 'Service',
                     'name' => $service->name,
                     'url' => $baseUrl . '/layanan/' . $service->slug,
@@ -237,6 +237,93 @@ $foundingProducts = [
         'faq' => [
             ['question' => 'Kapan sebaiknya memilih PT?', 'answer' => 'PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas.'],
             ['question' => 'Apakah FastTrack membantu memilih KBLI?', 'answer' => 'Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien.'],
+        ],
+        'plans' => [
+            [
+                'name' => 'PT Perorangan Starter',
+                'popular' => false,
+                'price' => 'Rp. 750.000,-',
+                'bonus_note' => 'GRATIS Konsultasi Persiapan dan Pasca Selesai',
+                'dokumen' => [
+                    ['label' => 'Pengecekan Nama Perseroan', 'included' => true],
+                    ['label' => 'Sertifikat Pendirian', 'included' => true],
+                    ['label' => 'NPWP & SKT', 'included' => true],
+                    ['label' => 'Pendaftaran OSS', 'included' => true],
+                    ['label' => 'Nomor Induk Berusaha 20 KBLI*', 'included' => false],
+                    ['label' => 'Sertifikat Standar/Izin*', 'included' => false],
+                    ['label' => 'Virtual Office 1 (satu) Tahun', 'included' => false],
+                ],
+                'termasuk' => [
+                    ['label' => 'Fasttrack Document Delivery S...', 'included' => true],
+                    ['label' => 'Fasttrack Digital Files Secure St...', 'included' => true],
+                    ['label' => 'Fasttrack Kit', 'included' => true],
+                ],
+                'bonus' => [
+                    ['label' => 'Pembukaan Rekening Bank', 'included' => false],
+                    ['label' => 'Logo Perusahaan', 'included' => false],
+                    ['label' => 'Stempel Perusahaan', 'included' => false],
+                    ['label' => 'Kartu Nama', 'included' => false],
+                ],
+            ],
+            [
+                'name' => 'PT Perorangan Standart',
+                'popular' => true,
+                'price' => 'Rp. 3.500.000,-',
+                'bonus_note' => 'GRATIS Konsultasi Persiapan dan Pasca Selesai',
+                'dokumen' => [
+                    ['label' => 'Pengecekan Nama Perseroan', 'included' => true],
+                    ['label' => 'Sertifikat Pendirian', 'included' => true],
+                    ['label' => 'NPWP & SKT', 'included' => true],
+                    ['label' => 'Pendaftaran OSS', 'included' => true],
+                    ['label' => 'Nomor Induk Berusaha 20 KBLI*', 'included' => false],
+                    ['label' => 'Sertifikat Standar/Izin*', 'included' => false],
+                    ['label' => 'Virtual Office 1 (satu) Tahun', 'included' => false],
+                ],
+                'termasuk' => [
+                    ['label' => 'Fasttrack Document Delivery S...', 'included' => true],
+                    ['label' => 'Fasttrack Digital Files Secure St...', 'included' => true],
+                    ['label' => 'Fasttrack Kit', 'included' => true],
+                ],
+                'bonus' => [
+                    ['label' => 'Pembukaan Rekening Bank', 'included' => false],
+                    ['label' => 'Logo Perusahaan', 'included' => true],
+                    ['label' => 'Stempel Perusahaan', 'included' => true],
+                    ['label' => 'Kartu Nama', 'included' => false],
+                ],
+            ],
+            [
+                'name' => 'PT Perorangan Premium + VO',
+                'popular' => false,
+                'price' => 'Rp. 6.000.000,-',
+                'bonus_note' => 'GRATIS Konsultasi Persiapan dan Pasca Selesai',
+                'dokumen' => [
+                    ['label' => 'Pengecekan Nama Perseroan', 'included' => true],
+                    ['label' => 'Sertifikat Pendirian', 'included' => true],
+                    ['label' => 'NPWP & SKT', 'included' => true],
+                    ['label' => 'Pendaftaran OSS', 'included' => true],
+                    ['label' => 'Nomor Induk Berusaha 20 KBLI*', 'included' => true],
+                    ['label' => 'Sertifikat Standar/Izin*', 'included' => true],
+                    ['label' => 'Virtual Office 1 (satu) Tahun', 'included' => true],
+                ],
+                'termasuk' => [
+                    ['label' => 'Fasttrack Document Delivery S...', 'included' => true],
+                    ['label' => 'Fasttrack Digital Files Secure St...', 'included' => true],
+                    ['label' => 'Fasttrack Kit', 'included' => true],
+                ],
+                'bonus' => [
+                    ['label' => 'Pembukaan Rekening Bank', 'included' => true],
+                    ['label' => 'Logo Perusahaan', 'included' => true],
+                    ['label' => 'Stempel Perusahaan', 'included' => true],
+                    ['label' => 'Kartu Nama', 'included' => true],
+                ],
+            ],
+        ],
+        'dasar_hukum' => [
+            'Undang-undang No. 6 Tahun 2023 Penetapan Peraturan Pemerintah Pengganti Undang-undang Nomor 2 Tahun 2022 Tentang Cipta Kerja menjadi Undang-Undang',
+            'Peraturan Pemerintah (PP) Republik Indonesia No. 8 Tahun 2021:',
+            'Peraturan Pemerintah (PP) Republik Indonesia No. 7 Tahun 2021 tentang Kemudahan, Pelindungan, dan Pemberdayaan Koperasi dan Usaha Mikro, Kecil, dan Menengah (UMKM):',
+            'Peraturan Menteri Hukum Republik Indonesia Nomor 49 Tahun 2025 tentang Syarat dan Tata Cara Pendirian, Perubahan, dan Pembubaran Badan Hukum Perseroan Terbatas',
+            'Peraturan Direktur Jenderal Pajak Nomor Per-7/PJ/2025 Tentang Petunjuk Pelaksanaan Administrasi Nomor Pokok Wajib Pajak, Pengusaha Kena Pajak, Objek Pajak Pajak Bumi Dan Bangunan Serta Perincian Jenis, Dokumen, Dan Saluran Untuk Pelaksanaan Hak Dan Pemenuhan Kewajiban Perpajakan',
         ],
     ],
     [
@@ -1021,7 +1108,7 @@ foreach ($customServices as $service) {
                 'mainEntity' => [
                     '@type' => 'ItemList',
                     'itemListElement' => collect($foundingProducts)->values()->map(
-                        static fn (array $product, int $index): array => [
+                        static fn(array $product, int $index): array => [
                             '@type' => 'ListItem',
                             'position' => $index + 1,
                             'name' => $product['name'],
@@ -1187,7 +1274,7 @@ Route::get('/badan-usaha/{id}', function (Request $request, int $id) use ($found
                 '@context' => 'https://schema.org',
                 '@type' => 'FAQPage',
                 'mainEntity' => collect($product['faq'])->map(
-                    static fn (array $faq): array => [
+                    static fn(array $faq): array => [
                         '@type' => 'Question',
                         'name' => $faq['question'],
                         'acceptedAnswer' => [

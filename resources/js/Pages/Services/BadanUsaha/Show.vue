@@ -5,119 +5,6 @@ import { ref, computed } from "vue";
 const docsOpen = ref(false);
 const dasarHukumOpen = ref(false);
 
-const plansByProduct = {
-    1: {
-        plans: [
-            {
-                name: "PT Perorangan Starter",
-                popular: false,
-                price: "Rp. 750.000,-",
-                bonus_note: "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                dokumen: [
-                    { label: "Pengecekan Nama Perseroan", included: true },
-                    { label: "Sertifikat Pendirian", included: true },
-                    { label: "NPWP & SKT", included: true },
-                    { label: "Pendaftaran OSS", included: true },
-                    { label: "Nomor Induk Berusaha 20 KBLI*", included: false },
-                    { label: "Sertifikat Standar/Izin*", included: false },
-                    { label: "Virtual Office 1 (satu) Tahun", included: false },
-                ],
-                termasuk: [
-                    {
-                        label: "Fasttrack Document Delivery S...",
-                        included: true,
-                    },
-                    {
-                        label: "Fasttrack Digital Files Secure St...",
-                        included: true,
-                    },
-                    { label: "Fasttrack Kit", included: true },
-                ],
-                bonus: [
-                    { label: "Pembukaan Rekening Bank", included: false },
-                    { label: "Logo Perusahaan", included: false },
-                    { label: "Stempel Perusahaan", included: false },
-                    { label: "Kartu Nama", included: false },
-                ],
-            },
-            {
-                name: "PT Perorangan Standart",
-                popular: true,
-                price: "Rp. 3.500.000,-",
-                bonus_note: "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                dokumen: [
-                    { label: "Pengecekan Nama Perseroan", included: true },
-                    { label: "Sertifikat Pendirian", included: true },
-                    { label: "NPWP & SKT", included: true },
-                    { label: "Pendaftaran OSS", included: true },
-                    { label: "Nomor Induk Berusaha 20 KBLI*", included: false },
-                    { label: "Sertifikat Standar/Izin*", included: false },
-                    { label: "Virtual Office 1 (satu) Tahun", included: false },
-                ],
-                termasuk: [
-                    {
-                        label: "Fasttrack Document Delivery S...",
-                        included: true,
-                    },
-                    {
-                        label: "Fasttrack Digital Files Secure St...",
-                        included: true,
-                    },
-                    { label: "Fasttrack Kit", included: true },
-                ],
-                bonus: [
-                    { label: "Pembukaan Rekening Bank", included: false },
-                    { label: "Logo Perusahaan", included: true },
-                    { label: "Stempel Perusahaan", included: true },
-                    { label: "Kartu Nama", included: false },
-                ],
-            },
-            {
-                name: "PT Perorangan Premium + VO",
-                popular: false,
-                price: "Rp. 6.000.000,-",
-                bonus_note: "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                dokumen: [
-                    { label: "Pengecekan Nama Perseroan", included: true },
-                    { label: "Sertifikat Pendirian", included: true },
-                    { label: "NPWP & SKT", included: true },
-                    { label: "Pendaftaran OSS", included: true },
-                    { label: "Nomor Induk Berusaha 20 KBLI*", included: true },
-                    { label: "Sertifikat Standar/Izin*", included: true },
-                    { label: "Virtual Office 1 (satu) Tahun", included: true },
-                ],
-                termasuk: [
-                    {
-                        label: "Fasttrack Document Delivery S...",
-                        included: true,
-                    },
-                    {
-                        label: "Fasttrack Digital Files Secure St...",
-                        included: true,
-                    },
-                    { label: "Fasttrack Kit", included: true },
-                ],
-                bonus: [
-                    { label: "Pembukaan Rekening Bank", included: true },
-                    { label: "Logo Perusahaan", included: true },
-                    { label: "Stempel Perusahaan", included: true },
-                    { label: "Kartu Nama", included: true },
-                ],
-            },
-        ],
-    },
-};
-
-const dasarHukumByProduct = {
-    1: [
-        "Undang-undang No. 6 Tahun 2023 Penetapan Peraturan Pemerintah Pengganti Undang-undang Nomor 2 Tahun 2022 Tentang Cipta Kerja menjadi Undang-Undang",
-        "Peraturan Pemerintah (PP) Republik Indonesia No. 8 Tahun 2021:",
-        "Peraturan Pemerintah (PP) Republik Indonesia No. 7 Tahun 2021 tentang Kemudahan, Pelindungan, dan Pemberdayaan Koperasi dan Usaha Mikro, Kecil, dan Menengah (UMKM):",
-        "Peraturan Menteri Hukum Republik Indonesia Nomor 49 Tahun 2025 tentang Syarat dan Tata Cara Pendirian, Perubahan, dan Pembubaran Badan Hukum Perseroan Terbatas",
-        "Peraturan Direktur Jenderal Pajak Nomor Per-7/PJ/2025 Tentang Petunjuk Pelaksanaan Administrasi Nomor Pokok Wajib Pajak, Pengusaha Kena Pajak, Objek Pajak Pajak Bumi Dan Bangunan Serta Perincian Jenis, Dokumen, Dan Saluran Untuk Pelaksanaan Hak Dan Pemenuhan Kewajiban Perpajakan",
-    ],
-};
-
 const props = defineProps({
     product: {
         type: Object,
@@ -136,12 +23,8 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-const currentPlans = computed(
-    () => plansByProduct[props.product?.id]?.plans ?? [],
-);
-const currentDasarHukum = computed(
-    () => dasarHukumByProduct[props.product?.id] ?? [],
-);
+const currentPlans = computed(() => props.product?.plans ?? []);
+const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
 </script>
 
 <template>
@@ -239,39 +122,28 @@ const currentDasarHukum = computed(
                     </div>
                 </nav>
 
-                <!-- Bottom: Heading + Back -->
-                <div class="mt-auto pt-8">
-                    <h1
-                        class="text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl"
-                    >
+                <!-- Center: Heading -->
+                <div class="flex items-center gap-5">
+                    <div class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md">
+                        <img
+                            src="/icons/ft-person.svg"
+                            class="w-9 h-9"
+                            alt=""
+                        />
+                    </div>
+                    <h1 class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
                         {{ product.name }}
                     </h1>
-                    <p
-                        class="mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base sm:leading-7"
-                    >
-                        {{ product.description }}
-                    </p>
-                    <div class="mt-6">
-                        <a
-                            href="/badan-usaha"
-                            class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-white/70 transition"
-                        >
-                            <svg
-                                class="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2.5"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                                />
-                            </svg>
-                            Kembali
-                        </a>
-                    </div>
+                </div>
+
+                <!-- Bottom: Back button -->
+                <div>
+                    <a href="/badan-usaha" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Kembali
+                    </a>
                 </div>
             </div>
         </section>
@@ -289,25 +161,13 @@ const currentDasarHukum = computed(
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-5">
-                                <span
-                                    class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10"
-                                >
-                                    <svg
-                                        class="h-4 w-4 text-primary"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M9 5l7 7-7 7"
-                                        />
-                                    </svg>
-                                </span>
+                                <img
+                                    src="/icons/ic-menu-arrow.svg"
+                                    class="w-6 h-6"
+                                    alt=""
+                                />
                                 <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-primary"
+                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
                                     Penjelasan Umum
                                 </h2>
@@ -330,25 +190,13 @@ const currentDasarHukum = computed(
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-5">
-                                <span
-                                    class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10"
-                                >
-                                    <svg
-                                        class="h-4 w-4 text-primary"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M9 5l7 7-7 7"
-                                        />
-                                    </svg>
-                                </span>
+                                <img
+                                    src="/icons/ic-menu-arrow.svg"
+                                    class="w-6 h-6"
+                                    alt=""
+                                />
                                 <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-primary"
+                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
                                     Syarat dan Ketentuan
                                 </h2>
@@ -373,25 +221,13 @@ const currentDasarHukum = computed(
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-6">
-                                <span
-                                    class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10"
-                                >
-                                    <svg
-                                        class="h-4 w-4 text-primary"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M9 5l7 7-7 7"
-                                        />
-                                    </svg>
-                                </span>
+                                <img
+                                    src="/icons/ic-menu-arrow.svg"
+                                    class="w-6 h-6"
+                                    alt=""
+                                />
                                 <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-primary"
+                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
                                     Keuntungan &amp; Manfaat
                                 </h2>
@@ -433,25 +269,13 @@ const currentDasarHukum = computed(
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-8">
-                                <span
-                                    class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10"
-                                >
-                                    <svg
-                                        class="h-4 w-4 text-primary"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M9 5l7 7-7 7"
-                                        />
-                                    </svg>
-                                </span>
+                                <img
+                                    src="/icons/ic-menu-arrow.svg"
+                                    class="w-6 h-6"
+                                    alt=""
+                                />
                                 <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-primary"
+                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
                                     Alur Proses
                                 </h2>
@@ -464,14 +288,12 @@ const currentDasarHukum = computed(
                                     :key="`step-${index}`"
                                     class="relative flex flex-col items-center text-center flex-1"
                                 >
-                                    <!-- Connector line -->
                                     <div
                                         v-if="
                                             index < product.process.length - 1
                                         "
                                         class="absolute top-[22px] left-[calc(50%+22px)] hidden sm:block h-px w-[calc(100%-44px)] bg-primary/20"
                                     ></div>
-                                    <!-- Icon -->
                                     <div
                                         class="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-[#FAD9DA] border-2 border-primary/20 mb-3"
                                     >
@@ -507,25 +329,13 @@ const currentDasarHukum = computed(
                                 class="w-full flex items-center justify-between p-6 sm:p-8 text-left"
                             >
                                 <div class="flex items-center gap-3">
-                                    <span
-                                        class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10"
-                                    >
-                                        <svg
-                                            class="h-4 w-4 text-primary"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            stroke-width="2.5"
-                                        >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                d="M9 5l7 7-7 7"
-                                            />
-                                        </svg>
-                                    </span>
+                                    <img
+                                        src="/icons/ic-menu-arrow.svg"
+                                        class="w-6 h-6"
+                                        alt=""
+                                    />
                                     <h2
-                                        class="text-[15px] font-bold uppercase tracking-widest text-primary"
+                                        class="text-[15px] font-bold uppercase tracking-widest text-black"
                                     >
                                         Dokumen dan Informasi yang Diperlukan
                                     </h2>
@@ -559,9 +369,8 @@ const currentDasarHukum = computed(
                                     >
                                         <span
                                             class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white text-[12px] font-bold"
+                                            >{{ index + 1 }}</span
                                         >
-                                            {{ index + 1 }}
-                                        </span>
                                         <span
                                             class="text-[14px] leading-[1.7] text-[#3D3D3A] pt-0.5"
                                             >{{ req }}</span
@@ -577,30 +386,17 @@ const currentDasarHukum = computed(
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-6">
-                                <span
-                                    class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10"
-                                >
-                                    <svg
-                                        class="h-4 w-4 text-primary"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M9 5l7 7-7 7"
-                                        />
-                                    </svg>
-                                </span>
+                                <img
+                                    src="/icons/ic-menu-arrow.svg"
+                                    class="w-6 h-6"
+                                    alt=""
+                                />
                                 <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-primary"
+                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
                                     Paket &amp; Harga
                                 </h2>
                             </div>
-
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <div
                                     v-for="(plan, pi) in currentPlans"
@@ -612,27 +408,21 @@ const currentDasarHukum = computed(
                                             : 'border-[#E8E8E6]'
                                     "
                                 >
-                                    <!-- Popular badge -->
                                     <div
                                         v-if="plan.popular"
                                         class="absolute -top-3.5 left-1/2 -translate-x-1/2"
                                     >
                                         <span
                                             class="inline-flex items-center rounded-full border border-primary bg-white px-3 py-0.5 text-[11px] font-semibold text-primary"
+                                            >Paling Populer</span
                                         >
-                                            Paling Populer
-                                        </span>
                                     </div>
-
                                     <div class="p-4 flex flex-col gap-3 flex-1">
-                                        <!-- Plan name -->
                                         <div
                                             class="text-[12px] font-bold uppercase tracking-wide text-[#1A1B18]"
                                         >
                                             {{ plan.name }}
                                         </div>
-
-                                        <!-- Price -->
                                         <div>
                                             <div
                                                 class="text-[11px] text-[#686964]"
@@ -645,8 +435,6 @@ const currentDasarHukum = computed(
                                                 {{ plan.price }}
                                             </div>
                                         </div>
-
-                                        <!-- Bonus note -->
                                         <div
                                             class="flex items-start gap-1.5 text-[11px] text-[#3D3D3A]"
                                         >
@@ -665,10 +453,7 @@ const currentDasarHukum = computed(
                                             </svg>
                                             {{ plan.bonus_note }}
                                         </div>
-
-                                        <!-- Divider -->
                                         <div class="h-px bg-[#E8E8E6]"></div>
-
                                         <!-- Dokumen Legalitas -->
                                         <div>
                                             <div
@@ -719,7 +504,6 @@ const currentDasarHukum = computed(
                                                 </li>
                                             </ul>
                                         </div>
-
                                         <!-- Termasuk -->
                                         <div>
                                             <div
@@ -770,7 +554,6 @@ const currentDasarHukum = computed(
                                                 </li>
                                             </ul>
                                         </div>
-
                                         <!-- Bonus -->
                                         <div>
                                             <div
@@ -822,7 +605,6 @@ const currentDasarHukum = computed(
                                             </ul>
                                         </div>
                                     </div>
-
                                     <!-- CTA -->
                                     <div class="p-4 pt-0">
                                         <a
@@ -866,25 +648,13 @@ const currentDasarHukum = computed(
                                 class="w-full flex items-center justify-between p-6 sm:p-8 text-left"
                             >
                                 <div class="flex items-center gap-3">
-                                    <span
-                                        class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10"
-                                    >
-                                        <svg
-                                            class="h-4 w-4 text-primary"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            stroke-width="2.5"
-                                        >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                d="M9 5l7 7-7 7"
-                                            />
-                                        </svg>
-                                    </span>
+                                    <img
+                                        src="/icons/ic-menu-arrow.svg"
+                                        class="w-6 h-6"
+                                        alt=""
+                                    />
                                     <h2
-                                        class="text-[15px] font-bold uppercase tracking-widest text-primary"
+                                        class="text-[15px] font-bold uppercase tracking-widest text-black"
                                     >
                                         Dasar Hukum
                                     </h2>
@@ -914,7 +684,6 @@ const currentDasarHukum = computed(
                                         :key="`hukum-${hi}`"
                                         class="flex items-start gap-4"
                                     >
-                                        <!-- Download icon -->
                                         <span
                                             class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-[#E8E8E6] bg-[#F7F7F5]"
                                         >
@@ -950,7 +719,6 @@ const currentDasarHukum = computed(
                         <div
                             class="rounded-2xl bg-gradient-to-br from-[#E63946] to-[#c0202c] px-5 py-6 text-center overflow-hidden relative"
                         >
-                            <!-- Subtle diagonal decoration -->
                             <div class="absolute inset-0 opacity-10">
                                 <svg
                                     class="absolute right-0 top-0 h-full w-auto"
@@ -973,7 +741,6 @@ const currentDasarHukum = computed(
                                     />
                                 </svg>
                             </div>
-                            <!-- Title with border -->
                             <div class="relative mb-4">
                                 <div
                                     class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5"
@@ -984,14 +751,12 @@ const currentDasarHukum = computed(
                                     >
                                 </div>
                             </div>
-                            <!-- Subtitle -->
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
                             >
                                 Pendirian Badan Usaha Selesai dalam<br />1
                                 (Satu) Hari
                             </p>
-                            <!-- CTA Button -->
                             <a
                                 :href="buildWhatsappLink(product.name)"
                                 target="_blank"
@@ -1020,7 +785,6 @@ const currentDasarHukum = computed(
                         <div
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-5"
                         >
-                            <!-- Package label -->
                             <div
                                 class="mb-4 flex items-center justify-between rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3 py-2.5"
                             >
@@ -1041,7 +805,6 @@ const currentDasarHukum = computed(
                                     />
                                 </svg>
                             </div>
-
                             <div class="text-[12px] text-[#686964] mb-1">
                                 Estimasi total biaya
                             </div>
@@ -1053,7 +816,6 @@ const currentDasarHukum = computed(
                             <div class="text-[11px] text-[#686964] mb-4">
                                 *Harga final dikonfirmasi setelah konsultasi
                             </div>
-
                             <a
                                 :href="buildWhatsappLink(product.name)"
                                 target="_blank"
@@ -1071,8 +833,6 @@ const currentDasarHukum = computed(
                                 </svg>
                                 Konsultasi Gratis via Whatsapp
                             </a>
-
-                            <!-- Checklist Features -->
                             <ul class="mt-4 space-y-2">
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -1225,13 +985,11 @@ const currentDasarHukum = computed(
                 <div
                     class="relative overflow-hidden rounded-2xl bg-[#E63946] px-6 py-12 sm:px-10 sm:py-14"
                 >
-                    <!-- Decorative icon -->
                     <img
                         src="/icons/ft-docs.svg"
                         alt=""
                         class="absolute right-6 top-6 h-16 w-16 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24"
                     />
-
                     <div
                         class="relative flex flex-col items-center text-center"
                     >
