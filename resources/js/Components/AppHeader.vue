@@ -9,10 +9,10 @@ const mobileInformasiOpen = ref(false);
 
 const serviceCategories = [
     {
-        title: "Pendirian Perusahaan",
+        title: "Badan Usaha",
         path: "/badan-usaha",
         icon: "building",
-        items: ["Pendirian PT", "Pendirian CV"],
+        items: ["Pendirian PT", "Pendirian CV", "Pendirian Yayasan", "dan sejenisnya"],
     },
     {
         title: "Pembuatan dan Peninjauan Perjanjian",
@@ -845,7 +845,7 @@ const toggleMobileMenu = () => {
                         </a>
                     </div>
                     <div
-                        class="mt-4 pt-4 border-t border-[#D9DAD8] flex justify-center"
+                        class="mt-6 pt-6 border-t border-[#D9DAD8] flex justify-center"
                     >
                         <div
                             class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
