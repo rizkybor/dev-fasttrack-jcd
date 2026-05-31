@@ -74,7 +74,7 @@ const buildWhatsappLink = (serviceName) => {
                                     />
                                 </svg>
                                 <span class="text-sm font-medium text-white"
-                                    >Layanan</span
+                                    >Kebijakan Privasi</span
                                 >
                             </div>
                         </nav>
@@ -86,21 +86,14 @@ const buildWhatsappLink = (serviceName) => {
                             Kebijakan Privasi
                         </h1>
 
-                        <!-- CTA Button -->
+                         <!-- Bottom: Back button -->
                         <div class="mt-10">
                             <a
-                                :href="
-                                    buildWhatsappLink(
-                                        'kebutuhan legalitas bisnis',
-                                    )
-                                "
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="group inline-flex items-center gap-2.5 rounded-full border-2 border-white bg-transparent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#E63946]"
+                                href="/"
+                                class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition"
                             >
-                                Kembali
                                 <svg
-                                    class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                                    class="h-4 w-4"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -109,9 +102,10 @@ const buildWhatsappLink = (serviceName) => {
                                     <path
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
-                                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                                        d="M10 19l-7-7m0 0l7-7m-7 7h18"
                                     />
                                 </svg>
+                                Kembali
                             </a>
                         </div>
                     </div>
