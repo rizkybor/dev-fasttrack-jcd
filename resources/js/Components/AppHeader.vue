@@ -10,7 +10,7 @@ const mobileInformasiOpen = ref(false);
 const serviceCategories = [
     {
         title: "Pendirian Perusahaan",
-        path: "/pendirian-perusahaan",
+        path: "/badan-usaha",
         icon: "building",
         items: ["Pendirian PT", "Pendirian CV"],
     },
@@ -113,7 +113,7 @@ const serviceCategories = [
 const serviceTools = [
     {
         title: "Cek Ketersediaan Nama PT",
-        path: "/pendirian-perusahaan",
+        path: "/badan-usaha",
         icon: "/icons/ic-tools-sedianamapt.svg",
         items: [],
     },
