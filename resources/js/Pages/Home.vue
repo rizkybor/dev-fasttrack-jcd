@@ -421,7 +421,7 @@ const virtualOffices = [
 
         <!-- ===== 2. STATS DIVIDER ===== -->
         <section class="relative z-20 mb-5">
-            <div class="max-w-3xl ml-auto px-4 -mt-12 lg:-mt-14">
+            <div class="max-w-3xl ml-auto px-8 -mt-12">
                 <div
                     class="bg-[#E74247] rounded-xl px-6 py-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-4"
                 >
