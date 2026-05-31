@@ -12,7 +12,12 @@ const serviceCategories = [
         title: "Badan Usaha",
         path: "/badan-usaha",
         icon: "building",
-        items: ["Pendirian PT", "Pendirian CV", "Pendirian Yayasan", "dan sejenisnya"],
+        items: [
+            "Pendirian PT",
+            "Pendirian CV",
+            "Pendirian Yayasan",
+            "dan sejenisnya",
+        ],
     },
     {
         title: "Pembuatan dan Peninjauan Perjanjian",
@@ -163,6 +168,20 @@ const toggleMobileMenu = () => {
         mobileServicesOpen.value = false;
         mobileInformasiOpen.value = false;
     }
+};
+
+const langOpen = ref(false);
+const selectedLang = ref({ code: "ID", label: "Indonesia", flag: "🇮🇩" });
+
+const languages = [
+    { code: "ID", label: "Indonesia", flag: "🇮🇩" },
+    { code: "EN", label: "English", flag: "🇬🇧" },
+    { code: "ZH", label: "中文", flag: "🇨🇳" },
+];
+
+const selectLang = (lang) => {
+    selectedLang.value = lang;
+    langOpen.value = false;
 };
 </script>
 
@@ -387,25 +406,92 @@ const toggleMobileMenu = () => {
 
                 <!-- Right: Lang + CTA -->
                 <div class="hidden lg:flex items-center gap-2">
-                    <button
-                        type="button"
-                        class="flex items-center gap-1 border border-[#D9DAD8] rounded-lg px-3 py-2 text-[14px] font-semibold text-[#1A1B18] hover:border-primary hover:text-primary transition-colors"
-                    >
-                        ID
-                        <svg
-                            class="w-4 h-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                    <div class="relative">
+                        <button
+                            type="button"
+                            class="flex items-center gap-1.5 border border-[#D9DAD8] rounded-lg px-3 py-2 text-[14px] font-semibold text-[#1A1B18] hover:border-primary hover:text-primary transition-colors"
+                            @click="langOpen = !langOpen"
+                            @blur="langOpen = false"
+                            :aria-expanded="langOpen"
                         >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </button>
+                            <span class="text-base leading-none">{{
+                                selectedLang.flag
+                            }}</span>
+                            <span>{{ selectedLang.code }}</span>
+                            <svg
+                                class="w-4 h-4 transition-transform duration-200"
+                                :class="
+                                    langOpen ? 'rotate-180 text-primary' : ''
+                                "
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"
+                                />
+                            </svg>
+                        </button>
+
+                        <transition
+                            enter-active-class="transition duration-200 ease-out"
+                            enter-from-class="opacity-0 scale-95 -translate-y-2"
+                            enter-to-class="opacity-100 scale-100 translate-y-0"
+                            leave-active-class="transition duration-150 ease-in"
+                            leave-from-class="opacity-100 scale-100 translate-y-0"
+                            leave-to-class="opacity-0 scale-95 -translate-y-2"
+                        >
+                            <div
+                                v-if="langOpen"
+                                class="absolute right-0 top-full mt-1.5 w-44 rounded-xl border border-[#D9DAD8] bg-white p-1.5 shadow-xl origin-top-right z-50"
+                            >
+                                <button
+                                    v-for="lang in languages"
+                                    :key="lang.code"
+                                    type="button"
+                                    class="flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors"
+                                    :class="
+                                        selectedLang.code === lang.code
+                                            ? 'bg-[#E74247]/8 text-primary'
+                                            : 'text-[#1A1B18] hover:bg-[#E74247]/5 hover:text-primary'
+                                    "
+                                    @mousedown.prevent="selectLang(lang)"
+                                >
+                                    <span class="text-xl leading-none">{{
+                                        lang.flag
+                                    }}</span>
+                                    <div
+                                        class="flex flex-col items-start leading-none"
+                                    >
+                                        <span class="font-bold">{{
+                                            lang.code
+                                        }}</span>
+                                        <span
+                                            class="text-xs text-[#42443D] mt-0.5 font-normal"
+                                            >{{ lang.label }}</span
+                                        >
+                                    </div>
+                                    <svg
+                                        v-if="selectedLang.code === lang.code"
+                                        class="ml-auto h-4 w-4 text-primary"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2.5"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </transition>
+                    </div>
                     <a
                         href="/kontak"
                         class="inline-flex items-center gap-2 bg-[#E74247] hover:bg-red-600 text-white font-semibold text-[16px] px-6 py-3 rounded-lg transition-colors shadow-sm whitespace-nowrap"
@@ -480,134 +566,248 @@ const toggleMobileMenu = () => {
             <div
                 v-if="mobileMenuOpen"
                 id="mobile-navigation"
-                class="lg:hidden max-h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain border-t border-[#D9DAD8] bg-white shadow-lg"
+                class="lg:hidden fixed left-0 right-0 z-50 h-[calc(100vh-60px)] overflow-y-auto overscroll-contain border-t border-[#E5E5E0] bg-white shadow-xl"
+                style="top: 60px"
             >
-                <nav
-                    class="space-y-1 px-4 py-4 pb-6"
-                    aria-label="Mobile Navigation"
-                >
+                <nav class="px-3 pt-3 pb-5" aria-label="Mobile Navigation">
+                    <!-- Label -->
+                    <p
+                        class="text-[10px] font-bold tracking-widest text-[#AAAAAA] uppercase px-2 pb-2"
+                    >
+                        Menu
+                    </p>
+
+                    <!-- PENAWARAN KHUSUS -->
                     <a
                         href="/promo"
-                        class="block rounded-xl px-4 py-3 text-sm font-semibold text-[#1A1B18] hover:bg-[#E74247]/5 hover:text-primary transition-colors"
+                        class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors"
                         @click="closeAllMenus"
                     >
-                        <span class="inline-flex items-center gap-1"
-                            >PENAWARAN KHUSUS
-                            <img
-                                src="/icons/half-rounded.svg"
-                                class="w-4 h-4"
-                                alt=""
-                        /></span>
+                        <span
+                            class="flex-shrink-0 w-8 h-8 rounded-lg bg-[#F5F5F3] flex items-center justify-center text-base"
+                            >🏷️</span
+                        >
+                        Penawaran Khusus
+                        <span
+                            class="ml-auto text-[10px] font-bold bg-[#E74247] text-white px-2 py-0.5 rounded-full tracking-wide"
+                            >HOT</span
+                        >
                     </a>
 
-                    <div class="rounded-xl border border-[#D9DAD8]">
+                    <div class="h-1"></div>
+
+                    <!-- LAYANAN accordion -->
+                    <div
+                        class="rounded-xl border border-[#E5E5E0] overflow-hidden"
+                    >
                         <button
                             type="button"
-                            class="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold text-[#1A1B18]"
+                            class="flex w-full items-center gap-3 px-3 py-3 text-[13.5px] font-semibold transition-colors"
+                            :class="
+                                mobileServicesOpen
+                                    ? 'bg-[#FEF0F0] text-[#E74247]'
+                                    : 'bg-[#FAFAF8] text-[#1A1B18]'
+                            "
                             :aria-expanded="mobileServicesOpen"
                             @click="mobileServicesOpen = !mobileServicesOpen"
                         >
-                            <span>LAYANAN</span>
-                            <svg
-                                class="h-4 w-4 transition-transform duration-200"
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-base transition-colors"
                                 :class="
                                     mobileServicesOpen
-                                        ? 'rotate-180 text-primary'
-                                        : ''
+                                        ? 'bg-[#FEF0F0]'
+                                        : 'bg-[#F0F0EE]'
+                                "
+                                >🏢</span
+                            >
+                            Layanan
+                            <svg
+                                class="ml-auto h-[18px] w-[18px] transition-transform duration-200 flex-shrink-0"
+                                :class="
+                                    mobileServicesOpen
+                                        ? 'rotate-180 text-[#E74247]'
+                                        : 'text-[#999]'
                                 "
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
+                                stroke-width="2.5"
                             >
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    stroke-width="2"
                                     d="M19 9l-7 7-7-7"
                                 />
                             </svg>
                         </button>
                         <div
                             v-if="mobileServicesOpen"
-                            class="space-y-0.5 border-t border-[#D9DAD8] px-3 py-2"
+                            class="border-t border-[#E5E5E0] bg-[#FAFAF8] p-1.5 grid grid-cols-2 gap-1"
                         >
                             <a
                                 v-for="group in serviceCategories"
                                 :key="`mobile-${group.title}`"
                                 :href="group.path"
-                                class="block rounded-lg px-3 py-2 text-sm text-[#42443D] hover:bg-[#E74247]/5 hover:text-primary transition-colors"
+                                class="px-3 py-2.5 rounded-lg text-[12.5px] font-medium text-[#42443D] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors leading-snug"
                                 @click="closeAllMenus"
                                 >{{ group.title }}</a
                             >
                         </div>
                     </div>
 
+                    <div class="h-1"></div>
+
+                    <!-- TENTANG KAMI -->
                     <a
                         href="/tentang-kami"
-                        class="block rounded-xl px-4 py-3 text-sm font-semibold text-[#1A1B18] hover:bg-[#E74247]/5 hover:text-primary transition-colors"
+                        class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors"
                         @click="closeAllMenus"
                     >
-                        TENTANG KAMI
+                        <span
+                            class="flex-shrink-0 w-8 h-8 rounded-lg bg-[#F5F5F3] flex items-center justify-center text-base"
+                            >ℹ️</span
+                        >
+                        Tentang Kami
                     </a>
 
+                    <!-- BLOG -->
                     <a
                         href="/artikel"
-                        class="block rounded-xl px-4 py-3 text-sm font-semibold text-[#1A1B18] hover:bg-[#E74247]/5 hover:text-primary transition-colors"
+                        class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors"
                         @click="closeAllMenus"
                     >
-                        BLOG
+                        <span
+                            class="flex-shrink-0 w-8 h-8 rounded-lg bg-[#F5F5F3] flex items-center justify-center text-base"
+                            >📝</span
+                        >
+                        Blog
                     </a>
 
-                    <div class="rounded-xl border border-[#D9DAD8]">
+                    <div class="h-1"></div>
+
+                    <!-- INFORMASI accordion -->
+                    <div
+                        class="rounded-xl border border-[#E5E5E0] overflow-hidden"
+                    >
                         <button
                             type="button"
-                            class="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold text-[#1A1B18]"
+                            class="flex w-full items-center gap-3 px-3 py-3 text-[13.5px] font-semibold transition-colors"
+                            :class="
+                                mobileInformasiOpen
+                                    ? 'bg-[#FEF0F0] text-[#E74247]'
+                                    : 'bg-[#FAFAF8] text-[#1A1B18]'
+                            "
                             :aria-expanded="mobileInformasiOpen"
                             @click="mobileInformasiOpen = !mobileInformasiOpen"
                         >
-                            <span>INFORMASI</span>
-                            <svg
-                                class="h-4 w-4 transition-transform duration-200"
+                            <span
+                                class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-base transition-colors"
                                 :class="
                                     mobileInformasiOpen
-                                        ? 'rotate-180 text-primary'
-                                        : ''
+                                        ? 'bg-[#FEF0F0]'
+                                        : 'bg-[#F0F0EE]'
+                                "
+                                >📚</span
+                            >
+                            Informasi
+                            <svg
+                                class="ml-auto h-[18px] w-[18px] transition-transform duration-200 flex-shrink-0"
+                                :class="
+                                    mobileInformasiOpen
+                                        ? 'rotate-180 text-[#E74247]'
+                                        : 'text-[#999]'
                                 "
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
+                                stroke-width="2.5"
                             >
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    stroke-width="2"
                                     d="M19 9l-7 7-7-7"
                                 />
                             </svg>
                         </button>
                         <div
                             v-if="mobileInformasiOpen"
-                            class="space-y-0.5 border-t border-[#D9DAD8] px-3 py-2"
+                            class="border-t border-[#E5E5E0] bg-[#FAFAF8] p-1.5 flex flex-col gap-1"
                         >
                             <a
                                 v-for="link in informasiLinks"
                                 :key="link.path"
                                 :href="link.path"
-                                class="block rounded-lg px-3 py-2 text-sm text-[#42443D] hover:bg-[#E74247]/5 hover:text-primary transition-colors"
+                                class="px-3 py-2.5 rounded-lg text-[13px] font-medium text-[#42443D] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors"
                                 @click="closeAllMenus"
                                 >{{ link.label }}</a
                             >
                         </div>
                     </div>
 
+                    <!-- Divider -->
+                    <div class="my-3 h-px bg-[#F0F0EE]"></div>
+
+                    <!-- Language Selector -->
+                    <div class="grid grid-cols-3 gap-2 px-0.5">
+                        <button
+                            v-for="lang in languages"
+                            :key="lang.code"
+                            type="button"
+                            class="flex flex-col items-center justify-center gap-1 py-3 px-2 rounded-xl border text-center transition-all"
+                            :class="
+                                selectedLang.code === lang.code
+                                    ? 'border-[#E74247] bg-[#FEF0F0] text-[#E74247]'
+                                    : 'border-[#E5E5E0] bg-[#FAFAF8] text-[#1A1B18] hover:border-[#E74247]/40 hover:bg-[#FEF0F0]/50'
+                            "
+                            @click="selectLang(lang)"
+                        >
+                            <span class="text-2xl leading-none">{{
+                                lang.flag
+                            }}</span>
+                            <span class="text-[12px] font-bold leading-none">{{
+                                lang.code
+                            }}</span>
+                            <span
+                                class="text-[10px] font-medium leading-none"
+                                :class="
+                                    selectedLang.code === lang.code
+                                        ? 'text-[#E74247]/70'
+                                        : 'text-[#999]'
+                                "
+                                >{{ lang.label }}</span
+                            >
+                        </button>
+                    </div>
+
+                    <!-- CTA -->
                     <a
                         href="/kontak"
-                        class="mt-2 block rounded-lg bg-[#E74247] px-5 py-3 text-center text-sm font-semibold text-white hover:bg-red-600 transition-colors"
+                        class="mt-3 flex items-center justify-center gap-2 rounded-xl bg-[#E74247] hover:bg-[#C8353A] px-5 py-4 text-[14px] font-bold text-white transition-colors tracking-wide"
                         @click="closeAllMenus"
                     >
                         Minta Penawaran
+                        <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                        </svg>
                     </a>
+                    <p
+                    class="mt-2 text-[9px] font-semibold leading-[21px] text-black text-center"
+                >
+                    © Copyright 2026 fastrack.legal – All Rights Reserved a Business
+                    of PT Jakarta Bisnis Servis
+                </p>
                 </nav>
+
             </div>
         </transition>
 
