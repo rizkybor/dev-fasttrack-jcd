@@ -58,8 +58,8 @@ const siteTagline = computed(() => site.value.tagline || 'Legal Services - Partn
                         <div class="flex flex-col gap-2">
                             <a href="/" class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9] hover:text-primary transition-colors">Beranda</a>
                             <a href="/layanan" class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9] hover:text-primary transition-colors">Layanan</a>
-                            <a href="/pendirian-perusahaan" class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9] hover:text-primary transition-colors">Pendirian PT</a>
-                            <a href="/pendirian-perusahaan" class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9] hover:text-primary transition-colors">Pendirian CV</a>
+                            <a href="/badan-usaha" class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9] hover:text-primary transition-colors">Pendirian PT</a>
+                            <a href="/badan-usaha" class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9] hover:text-primary transition-colors">Pendirian CV</a>
                             <a href="/foreignservice" class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9] hover:text-primary transition-colors">Visa</a>
                             <a href="/virtual-office-jakarta" class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9] hover:text-primary transition-colors">Virtual Office</a>
                             <a href="/kbli" class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9] hover:text-primary transition-colors">Peralatan dan Fitur</a>

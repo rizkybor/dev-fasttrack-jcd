@@ -274,7 +274,7 @@ Sitemap saat ini mencakup:
 
 ### Custom Service Pages
 
-- `/pendirian-perusahaan`
+- `/badan-usaha`
 - `/penutupan-perusahaan`
 - `/virtual-office-jakarta`
 - `/perizinan`
@@ -306,7 +306,7 @@ Berasal dari data artikel:
 
 Berasal dari data product pendirian:
 
-- `/pendirian-perusahaan/{id}`
+- `/badan-usaha/{id}`
 
 ## Robots
 

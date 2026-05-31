@@ -33,7 +33,7 @@ const serviceSearch = ref("");
 const serviceCategories = [
     {
         title: "PENDIRIAN BADAN USAHA",
-        path: "/pendirian-perusahaan",
+        path: "/badan-usaha",
         items: [
             {
                 title: "PT Perorangan",
@@ -41,7 +41,7 @@ const serviceCategories = [
                     "Perseroan Terbatas (PT) Perorangan adalah Badan Hukum yang didirikan oleh 1 (satu) seorang",
                 price: "Rp 750.000",
                 packages: "3 Paket",
-                path: "/pendirian-perusahaan",
+                path: "/badan-usaha",
                 icon: "/icons/ft-person.svg",
             },
             {
@@ -50,7 +50,7 @@ const serviceCategories = [
                     "Penanaman Modal Dalam Negeri (PMDN) adalah kegiatan menanam modal menggunakan Modal Dalam Negeri.",
                 price: "Rp 3.250.000",
                 packages: "5 Paket",
-                path: "/pendirian-perusahaan",
+                path: "/badan-usaha",
                 icon: "/icons/ft-persons.svg",
             },
             {
@@ -68,7 +68,7 @@ const serviceCategories = [
                     "CV merupakan bentuk persekutuan yang didirikan oleh dua orang atau lebih",
                 price: "Rp 2.750.000",
                 packages: "4 Paket",
-                path: "/pendirian-perusahaan",
+                path: "/badan-usaha",
                 icon: "/icons/ft-building.svg",
             },
         ],
@@ -510,7 +510,7 @@ const virtualOffices = [
                             <p
                                 class="text-[24px] font-semibold leading-[36px] text-[#F9F9F9]"
                             >
-                                PENDIRIAN BADAN USAHA SELESAI DALAM 1 HARI
+                                Badan Usaha SELESAI DALAM 1 HARI
                             </p>
                         </div>
                         <p
