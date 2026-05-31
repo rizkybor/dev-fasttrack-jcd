@@ -352,7 +352,7 @@ const virtualOffices = [
                 class="absolute inset-0 w-full h-full object-cover"
                 loading="eager"
             />
-            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="absolute inset-0 bg-black/20"></div>
 
             <div
                 class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-14 lg:py-[52px]"
@@ -1892,53 +1892,22 @@ const virtualOffices = [
                         </div>
 
                         <div
-                            class="relative flex-1 min-h-[280px] rounded-xl overflow-hidden shadow-[0px_1px_2px_0px_#0000004d,0px_1px_3px_1px_#00000026] flex items-center justify-center bg-[#00000066]"
-                            style="
-                                background-image: url(&quot;https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=google%20maps%20aerial%20view%20jakarta%20south%20indonesia%20city%20streets%20satellite%20realistic&image_size=landscape_4_3&quot;);
-                                background-size: cover;
-                                background-position: center;
-                            "
+                            class="relative flex-1 min-h-[280px] rounded-xl overflow-hidden shadow-[0px_1px_2px_0px_#0000004d,0px_1px_3px_1px_#00000026]"
                         >
-                            <div class="absolute inset-0 bg-black/40"></div>
-                            <div
-                                class="relative z-10 flex flex-col items-center gap-1"
-                            >
-                                <div
-                                    class="w-[60px] h-[60px] rounded-full bg-[#D9DAD8] flex items-center justify-center"
-                                >
-                                    <svg
-                                        class="w-8 h-8 text-[#42443D]"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                                        />
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                                        />
-                                    </svg>
-                                </div>
-                                <p
-                                    class="text-[16px] font-bold leading-[24px] text-[#FAFAFA]"
-                                >
-                                    HEAD OFFICE FASTTRACK
-                                </p>
-                            </div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1274.742131028067!2d106.76295574149604!3d-6.256294232030823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f0f9114766dd%3A0x27b09ab8adc5d72b!2sJakarta%20Business%20Services!5e0!3m2!1sen!2sid!4v1780242883873!5m2!1sen!2sid"
+                                class="absolute inset-0 w-full h-full border-0"
+                                allowfullscreen
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
                             <a
-                                href="https://maps.google.com/?q=Grand+Bintaro+Jakarta+Selatan"
+                                href="https://maps.google.com/?q=Jakarta+Business+Services+Grand+Bintaro"
                                 target="_blank"
-                                class="absolute top-[10px] left-[14px] z-10 inline-flex items-center gap-1 bg-[#F9F9F9] rounded-lg px-[10px] h-[29px]"
+                                class="absolute top-[10px] right-[14px] z-10 inline-flex items-center gap-1 hover:bg-[#F9F9F9] rounded-lg px-[10px] h-[29px] shadow-sm hover:text-[#E74247] text-[#F9F9F9] bg-[#E74247] transition-colors"
                             >
                                 <svg
-                                    class="w-4 h-4 text-[#0077FF]"
+                                    class="w-4 h-4"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -1950,8 +1919,7 @@ const virtualOffices = [
                                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                                     />
                                 </svg>
-                                <span
-                                    class="text-[14px] text-[#0077FF] leading-[21px]"
+                                <span class="text-[14px] leading-[21px]"
                                     >Open in Maps</span
                                 >
                             </a>
