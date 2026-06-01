@@ -45,7 +45,7 @@ const serviceCategories = [
                     "Pendirian PT Perorangan, PT PMDN, PT PMA, CV, hingga Yayasan.",
                 price: "Rp 750.000",
                 packages: "3 Layanan",
-                path: "/",
+                path: "/badan-usaha",
                 image: "/images/layanan-card/layanan-bu.png",
             },
             {
@@ -54,7 +54,7 @@ const serviceCategories = [
                     "KPPA, KPPPA, dan perwakilan perusahaan asing di Indonesia.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/",
+                path: "/kantor-perwakilan",
                 image: "/images/layanan-card/layanan-kantor-perwakilan.png",
             },
             {
