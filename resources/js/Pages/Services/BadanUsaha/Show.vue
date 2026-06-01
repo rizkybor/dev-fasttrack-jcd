@@ -25,6 +25,12 @@ const buildWhatsappLink = (productName) => {
 
 const currentPlans = computed(() => props.product?.plans ?? []);
 const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
+
+// Toggle truncate per doc item
+const expandedDocs = ref({});
+const toggleDoc = (key) => {
+    expandedDocs.value[key] = !expandedDocs.value[key];
+};
 </script>
 
 <template>
@@ -128,7 +134,7 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                         class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
                     >
                         <img
-                            src="/icons/ft-person.svg"
+                            src="/icons/ft-persons.svg"
                             class="w-9 h-9"
                             alt=""
                         />
@@ -218,7 +224,8 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                     Syarat dan Ketentuan
                                 </h2>
                             </div>
-                            <ol class="space-y-3">
+
+                            <ol class="space-y-4">
                                 <li
                                     v-for="(
                                         req, index
@@ -228,9 +235,59 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                 >
                                     <span
                                         class="mt-0.5 flex-shrink-0 text-[13px] font-semibold text-[#1A1B18]"
-                                        >{{ index + 1 }}.</span
                                     >
-                                    <span>{{ req }}</span>
+                                        {{ index + 1 }}.
+                                    </span>
+                                    <div>
+                                        <!-- Title: hanya tampil jika ada -->
+                                        <p
+                                            v-if="req.title"
+                                            class="text-[14px] font-semibold text-[#1A1B18] mb-0.5"
+                                        >
+                                            {{ req.title }}
+                                        </p>
+                                        <!-- Description -->
+                                        <p
+                                            class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                        >
+                                            {{ req.description ?? req }}
+                                        </p>
+                                        <!-- Notes (bullet list) -->
+                                        <ul
+                                            v-if="req.notes"
+                                            class="mt-1 space-y-0.5 list-disc list-inside"
+                                        >
+                                            <li
+                                                v-for="(
+                                                    note, nIndex
+                                                ) in req.notes"
+                                                :key="`note-${nIndex}`"
+                                                class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                            >
+                                                {{ note }}
+                                            </li>
+                                        </ul>
+                                        <!-- Notes extra (label + items tambahan) -->
+                                        <template v-if="req.notes_extra">
+                                            <p
+                                                class="text-[13px] leading-[1.6] text-[#3D3D3A] mt-2"
+                                            >
+                                                {{ req.notes_extra.label }}
+                                            </p>
+                                            <ul
+                                                class="mt-1 space-y-0.5 list-disc list-inside"
+                                            >
+                                                <li
+                                                    v-for="(item, iIndex) in req
+                                                        .notes_extra.items"
+                                                    :key="`extra-${iIndex}`"
+                                                    class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                >
+                                                    {{ item }}
+                                                </li>
+                                            </ul>
+                                        </template>
+                                    </div>
                                 </li>
                             </ol>
                         </div>
@@ -269,7 +326,7 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                             {{ benefit.title }}
                                         </p>
                                         <p
-                                            class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                            class="text-[13px] leading-[1.6] text-[#3D3D3A] text-justify"
                                         >
                                             {{ benefit.description }}
                                         </p>
@@ -390,20 +447,30 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                         >
                                             {{ index + 1 }}
                                         </span>
-                                        <div class="pt-0.5">
+                                        <div class="pt-0.5 flex-1">
+                                            <!-- Title -->
                                             <p
-                                                class="text-[14px] font-semibold text-black leading-snug mb-0.5"
+                                                class="text-[14px] font-semibold text-black leading-snug mb-1"
                                             >
                                                 {{ req.title }}
                                             </p>
+
+                                            <!-- Description biasa -->
                                             <p
+                                                v-if="req.description"
                                                 class="text-[13px] leading-[1.6] text-[#3D3D3A]"
                                             >
                                                 {{ req.description }}
                                             </p>
+
+                                            <!-- Notes: bisa string biasa atau object { bold, detail } -->
                                             <ul
-                                                v-if="req.notes"
-                                                class="mt-1.5 space-y-0.5 list-disc list-inside"
+                                                v-if="
+                                                    req.notes &&
+                                                    typeof req.notes[0] ===
+                                                        'string'
+                                                "
+                                                class="mt-1 space-y-0.5 list-disc list-inside"
                                             >
                                                 <li
                                                     v-for="(
@@ -415,6 +482,74 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                     {{ note }}
                                                 </li>
                                             </ul>
+
+                                            <!-- Notes: object { bold, detail } -->
+                                            <ul
+                                                v-if="
+                                                    req.notes &&
+                                                    typeof req.notes[0] ===
+                                                        'object'
+                                                "
+                                                class="mt-1.5 space-y-2 list-disc list-inside"
+                                            >
+                                                <li
+                                                    v-for="(
+                                                        note, nIndex
+                                                    ) in req.notes"
+                                                    :key="`note-obj-${nIndex}`"
+                                                    class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                >
+                                                    <span
+                                                        class="font-semibold text-black"
+                                                        >{{ note.bold }}</span
+                                                    >
+                                                    <p
+                                                        v-if="note.detail"
+                                                        class="ml-4 mt-0.5 text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                    >
+                                                        {{ note.detail }}
+                                                    </p>
+                                                </li>
+                                            </ul>
+
+                                            <!-- Groups: { label, description?, notes? } -->
+                                            <div
+                                                v-if="req.groups"
+                                                class="mt-1 space-y-2"
+                                            >
+                                                <div
+                                                    v-for="(
+                                                        group, gIndex
+                                                    ) in req.groups"
+                                                    :key="`group-${gIndex}`"
+                                                >
+                                                    <p
+                                                        class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                    >
+                                                        {{ group.label }}
+                                                    </p>
+                                                    <p
+                                                        v-if="group.description"
+                                                        class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                    >
+                                                        {{ group.description }}
+                                                    </p>
+                                                    <ul
+                                                        v-if="group.notes"
+                                                        class="mt-0.5 space-y-0.5 list-disc list-inside"
+                                                    >
+                                                        <li
+                                                            v-for="(
+                                                                note, nIndex
+                                                            ) in group.notes"
+                                                            :key="`gnote-${nIndex}`"
+                                                            class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                        >
+                                                            {{ note }}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </li>
                                 </ol>
@@ -438,7 +573,12 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                     Paket &amp; Harga
                                 </h2>
                             </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+                            <!-- Layout untuk <= 3 paket: grid biasa -->
+                            <div
+                                v-if="currentPlans.length <= 3"
+                                class="grid grid-cols-1 sm:grid-cols-3 gap-4"
+                            >
                                 <div
                                     v-for="(plan, pi) in currentPlans"
                                     :key="`plan-${pi}`"
@@ -449,15 +589,18 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                             : 'border-[#E8E8E6]'
                                     "
                                 >
-                                    <div
-                                        v-if="plan.popular"
-                                        class="absolute -top-3.5 left-1/2 -translate-x-1/2"
-                                    >
-                                        <span
-                                            class="inline-flex items-center rounded-full border border-primary bg-white px-3 py-0.5 text-[11px] font-semibold text-primary"
-                                            >Paling Populer</span
+                                    <template v-if="plan.popular">
+                                        <div
+                                            class="absolute -top-3.5 left-1/2 -translate-x-1/2"
                                         >
-                                    </div>
+                                            <span
+                                                class="inline-flex items-center rounded-full border border-primary bg-white px-3 py-0.5 text-[11px] font-semibold text-primary"
+                                            >
+                                                Paling Populer
+                                            </span>
+                                        </div>
+                                    </template>
+                                    <!-- Card Content -->
                                     <div class="p-4 flex flex-col gap-3 flex-1">
                                         <div
                                             class="text-[12px] font-bold uppercase tracking-wide text-[#1A1B18]"
@@ -510,20 +653,12 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                     :key="`doc-${di}`"
                                                     class="flex items-start gap-1.5"
                                                 >
-                                                    <svg
+                                                    <img
                                                         v-if="doc.included"
-                                                        class="h-3.5 w-3.5 text-[#25D366] flex-shrink-0 mt-0.5"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                        stroke-width="2.5"
-                                                    >
-                                                        <path
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            d="M5 13l4 4L19 7"
-                                                        />
-                                                    </svg>
+                                                        src="/icons/ft-done.svg"
+                                                        class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                        alt="done"
+                                                    />
                                                     <img
                                                         v-else
                                                         src="/icons/ft-wrong.svg"
@@ -531,7 +666,19 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                         alt="wrong"
                                                     />
                                                     <span
-                                                        class="text-[11px] leading-[1.5] text-[#3D3D3A]"
+                                                        class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                        :class="
+                                                            expandedDocs[
+                                                                `${pi}-${di}`
+                                                            ]
+                                                                ? ''
+                                                                : 'truncate'
+                                                        "
+                                                        @click="
+                                                            toggleDoc(
+                                                                `${pi}-${di}`,
+                                                            )
+                                                        "
                                                         >{{ doc.label }}</span
                                                     >
                                                 </li>
@@ -552,20 +699,12 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                     :key="`termasuk-${ti}`"
                                                     class="flex items-start gap-1.5"
                                                 >
-                                                    <svg
+                                                    <img
                                                         v-if="item.included"
-                                                        class="h-3.5 w-3.5 text-[#25D366] flex-shrink-0 mt-0.5"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                        stroke-width="2.5"
-                                                    >
-                                                        <path
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            d="M5 13l4 4L19 7"
-                                                        />
-                                                    </svg>
+                                                        src="/icons/ft-done.svg"
+                                                        class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                        alt="done"
+                                                    />
                                                     <img
                                                         v-else
                                                         src="/icons/ft-wrong.svg"
@@ -573,7 +712,19 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                         alt="wrong"
                                                     />
                                                     <span
-                                                        class="text-[11px] leading-[1.5] text-[#3D3D3A]"
+                                                        class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                        :class="
+                                                            expandedDocs[
+                                                                `termasuk-${pi}-${ti}`
+                                                            ]
+                                                                ? ''
+                                                                : 'truncate'
+                                                        "
+                                                        @click="
+                                                            toggleDoc(
+                                                                `termasuk-${pi}-${ti}`,
+                                                            )
+                                                        "
                                                         >{{ item.label }}</span
                                                     >
                                                 </li>
@@ -594,20 +745,12 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                     :key="`bonus-${bi}`"
                                                     class="flex items-start gap-1.5"
                                                 >
-                                                    <svg
+                                                    <img
                                                         v-if="bon.included"
-                                                        class="h-3.5 w-3.5 text-[#25D366] flex-shrink-0 mt-0.5"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                        stroke-width="2.5"
-                                                    >
-                                                        <path
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            d="M5 13l4 4L19 7"
-                                                        />
-                                                    </svg>
+                                                        src="/icons/ft-done.svg"
+                                                        class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                        alt="done"
+                                                    />
                                                     <img
                                                         v-else
                                                         src="/icons/ft-wrong.svg"
@@ -615,7 +758,19 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                         alt="wrong"
                                                     />
                                                     <span
-                                                        class="text-[11px] leading-[1.5] text-[#3D3D3A]"
+                                                        class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                        :class="
+                                                            expandedDocs[
+                                                                `bonus-${pi}-${bi}`
+                                                            ]
+                                                                ? ''
+                                                                : 'truncate'
+                                                        "
+                                                        @click="
+                                                            toggleDoc(
+                                                                `bonus-${pi}-${bi}`,
+                                                            )
+                                                        "
                                                         >{{ bon.label }}</span
                                                     >
                                                 </li>
@@ -653,6 +808,501 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Layout untuk > 3 paket: baris 1 (3 kolom) + baris 2 (sisa, centered) -->
+                            <template v-else>
+                                <!-- Baris 1: 3 paket pertama -->
+                                <div
+                                    class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4"
+                                >
+                                    <div
+                                        v-for="(plan, pi) in currentPlans.slice(
+                                            0,
+                                            3,
+                                        )"
+                                        :key="`plan-${pi}`"
+                                        class="relative flex flex-col rounded-xl border"
+                                        :class="
+                                            plan.popular
+                                                ? 'border-primary shadow-md shadow-primary/10'
+                                                : 'border-[#E8E8E6]'
+                                        "
+                                    >
+                                        <template v-if="plan.popular">
+                                            <div
+                                                class="absolute -top-3.5 left-1/2 -translate-x-1/2"
+                                            >
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-primary bg-white px-3 py-0.5 text-[11px] font-semibold text-primary"
+                                                >
+                                                    Paling Populer
+                                                </span>
+                                            </div>
+                                        </template>
+                                        <div
+                                            class="p-4 flex flex-col gap-3 flex-1"
+                                        >
+                                            <div
+                                                class="text-[12px] font-bold uppercase tracking-wide text-[#1A1B18]"
+                                            >
+                                                {{ plan.name }}
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] text-[#686964]"
+                                                >
+                                                    Mulai dari
+                                                </div>
+                                                <div
+                                                    class="text-[20px] font-bold leading-tight text-primary"
+                                                >
+                                                    {{ plan.price }}
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-start gap-1.5 text-[11px] text-[#3D3D3A]"
+                                            >
+                                                <svg
+                                                    class="h-3.5 w-3.5 text-[#25D366] flex-shrink-0 mt-0.5"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    stroke-width="2.5"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M5 13l4 4L19 7"
+                                                    />
+                                                </svg>
+                                                {{ plan.bonus_note }}
+                                            </div>
+                                            <div
+                                                class="h-px bg-[#E8E8E6]"
+                                            ></div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Dokumen Legalitas
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            doc, di
+                                                        ) in plan.dokumen"
+                                                        :key="`doc-${di}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="doc.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `${pi}-${di}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `${pi}-${di}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                doc.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Termasuk
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            item, ti
+                                                        ) in plan.termasuk"
+                                                        :key="`termasuk-${ti}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="item.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `termasuk-${pi}-${ti}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `termasuk-${pi}-${ti}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                item.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Bonus
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            bon, bi
+                                                        ) in plan.bonus"
+                                                        :key="`bonus-${bi}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="bon.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `bonus-${pi}-${bi}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `bonus-${pi}-${bi}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                bon.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <a
+                                                :href="
+                                                    buildWhatsappLink(plan.name)
+                                                "
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-[12px] font-semibold transition-colors"
+                                                :class="
+                                                    plan.popular
+                                                        ? 'bg-primary text-white hover:bg-primary/90'
+                                                        : 'border border-primary text-primary hover:bg-primary hover:text-white'
+                                                "
+                                            >
+                                                Pesan Sekarang
+                                                <svg
+                                                    class="h-3.5 w-3.5"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    stroke-width="2.5"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Baris 2: sisa paket, centered -->
+                                <div
+                                    class="grid grid-cols-1 gap-4"
+                                    :class="
+                                        currentPlans.slice(3).length === 1
+                                            ? 'sm:grid-cols-1 sm:w-1/3 sm:mx-auto'
+                                            : 'sm:grid-cols-2'
+                                    "
+                                >
+                                    <div
+                                        v-for="(plan, pi) in currentPlans.slice(
+                                            3,
+                                        )"
+                                        :key="`plan-extra-${pi}`"
+                                        class="relative flex flex-col rounded-xl border"
+                                        :class="
+                                            plan.popular
+                                                ? 'border-primary shadow-md shadow-primary/10'
+                                                : 'border-[#E8E8E6]'
+                                        "
+                                    >
+                                        <template v-if="plan.popular">
+                                            <div
+                                                class="absolute -top-3.5 left-1/2 -translate-x-1/2"
+                                            >
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-primary bg-white px-3 py-0.5 text-[11px] font-semibold text-primary"
+                                                >
+                                                    Paling Populer
+                                                </span>
+                                            </div>
+                                        </template>
+                                        <div
+                                            class="p-4 flex flex-col gap-3 flex-1"
+                                        >
+                                            <div
+                                                class="text-[12px] font-bold uppercase tracking-wide text-[#1A1B18]"
+                                            >
+                                                {{ plan.name }}
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] text-[#686964]"
+                                                >
+                                                    Mulai dari
+                                                </div>
+                                                <div
+                                                    class="text-[20px] font-bold leading-tight text-primary"
+                                                >
+                                                    {{ plan.price }}
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-start gap-1.5 text-[11px] text-[#3D3D3A]"
+                                            >
+                                                <svg
+                                                    class="h-3.5 w-3.5 text-[#25D366] flex-shrink-0 mt-0.5"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    stroke-width="2.5"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M5 13l4 4L19 7"
+                                                    />
+                                                </svg>
+                                                {{ plan.bonus_note }}
+                                            </div>
+                                            <div
+                                                class="h-px bg-[#E8E8E6]"
+                                            ></div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Dokumen Legalitas
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            doc, di
+                                                        ) in plan.dokumen"
+                                                        :key="`doc-${di}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="doc.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `extra-${pi}-${di}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `extra-${pi}-${di}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                doc.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Termasuk
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            item, ti
+                                                        ) in plan.termasuk"
+                                                        :key="`termasuk-${ti}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="item.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `extra-termasuk-${pi}-${ti}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `extra-termasuk-${pi}-${ti}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                item.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Bonus
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            bon, bi
+                                                        ) in plan.bonus"
+                                                        :key="`bonus-${bi}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="bon.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `extra-bonus-${pi}-${bi}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `extra-bonus-${pi}-${bi}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                bon.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <a
+                                                :href="
+                                                    buildWhatsappLink(plan.name)
+                                                "
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-[12px] font-semibold transition-colors"
+                                                :class="
+                                                    plan.popular
+                                                        ? 'bg-primary text-white hover:bg-primary/90'
+                                                        : 'border border-primary text-primary hover:bg-primary hover:text-white'
+                                                "
+                                            >
+                                                Pesan Sekarang
+                                                <svg
+                                                    class="h-3.5 w-3.5"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    stroke-width="2.5"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
                         </div>
 
                         <!-- 7. Dasar Hukum (Accordion) -->
