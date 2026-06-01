@@ -212,27 +212,104 @@ $foundingProducts = [
         'excerpt' => 'Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.',
         'audience' => 'Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.',
         'content' => [
-            'Perseroan Terbatas menjadi bentuk badan usaha yang paling sering dipilih ketika bisnis mulai membutuhkan struktur yang lebih tertata, pemisahan tanggung jawab yang lebih jelas, dan kredibilitas yang lebih kuat di mata mitra maupun investor.',
-            'Melalui paket pendirian PT, FastTrack membantu Anda mulai dari diskusi struktur usaha, pemilihan KBLI, pengecekan nama perusahaan, penyusunan dokumen pendirian, hingga pendampingan pada proses legalitas dasar yang dibutuhkan agar bisnis dapat segera berjalan.',
-            'Layanan ini tidak hanya berfokus pada terbitnya dokumen, tetapi juga memastikan fondasi legal bisnis Anda selaras dengan kebutuhan operasional dan rencana pengembangan usaha.',
+            'PT Perorangan adalah badan hukum yang didirikan oleh satu orang, yang sekaligus merangkap sebagai pemegang saham dan direktur.',
+        ],
+         'term_condition' => [
+            'Perseroan Terbatas yang selanjutnya disebut Persero merupakan badan hukum yang dibentuk berdasarkan kriteria usaha mikro dan kecil.',
+            'Menyusun Surat Pernyataan Pendirian sesuai dengan format yang tercantum dalam lampiran PP Nomor 8  Tahun 2021 tentang Modal UMK.',
+            'Perseroan perorangan hanya dapat didirikan oleh satu orang pendiri.',
+            'Perseroan perorangan wajib mempunyai modal dasar dan modal disetor. Ketentuan modal disetor sama seperti Perseroan Terbatas, yaitu sekurang-kurangnya 25% dari modal dasar yang dibuktikan dengan bukti penyetoran yang sah.',
+            'Perseroan perorangan didirikan oleh Warga Negara Indonesia dengan mengisi pernyataan pendirian dalam Bahasa Indonesia.',
+            'Warga Negara Indonesia sebagaimana dimaksud wajib memenuhi persyaratan, yaitu berusia minimal 17 tahun dan memiliki kecakapan hukum.',
         ],
         'benefits' => [
-            'Badan hukum terpisah yang lebih kredibel untuk kerja sama bisnis',
-            'Pendampingan pemilihan KBLI dan struktur usaha sejak awal',
-            'Dokumen pendirian disusun lebih rapi dan mudah ditindaklanjuti',
-            'Lebih siap untuk kebutuhan investor, tender, dan kemitraan',
+            [
+                'title' => 'Legalitas Resmi dan Kredibel',
+                'description' => 'PT Perorangan memiliki status badan hukum yang sah dan tercatat di Kementerian Hukum, sehingga dapat meningkatkan kepercayaan dari pihak bank, rekan usaha, maupun pelanggan.',
+            ],
+            [
+                'title' => 'Pemisahan Aset Pribadi & Bisnis',
+                'description' => 'Harta pribadi pemilik terpisah dari aset perusahaan, sehingga memberikan perlindungan terhadap risiko kerugian usaha.',
+            ],
+            [
+                'title' => 'Proses Praktis & Terjangkau',
+                'description' => 'PT Perorangan dapat didirikan hanya oleh satu orang tanpa memerlukan akta notaris.',
+            ],
+            [
+                'title' => 'Kebebasan Mengelola Usaha',
+                'description' => 'Sebagai pemilik tunggal, Anda memiliki kendali penuh dalam mengambil keputusan bisnis tanpa harus mengadakan rapat pemegang saham.',
+            ],
+            [
+                'title' => 'Seluruh Keuntungan Menjadi Hak Pemilik',
+                'description' => 'Semua laba atau dividen usaha dapat dinikmati sepenuhnya tanpa perlu dibagikan kepada partner bisnis.',
+            ],
+            [
+                'title' => 'Lebih Mudah Mendapatkan Pendanaan',
+                'description' => 'Dengan legalitas usaha yang jelas, proses pengajuan pinjaman atau pembiayaan ke bank maupun lembaga keuangan menjadi lebih mudah.',
+            ],
         ],
         'requirements' => [
-            'Nama perusahaan dan alternatif cadangan',
-            'Data pendiri, pengurus, dan komposisi kepemilikan',
-            'Alamat usaha yang akan digunakan',
-            'Rencana kegiatan usaha untuk penentuan KBLI',
+            [
+                'title' => 'KTP/NIK Pendiri',
+                'description' => 'Scan berwarna, masih berlaku',
+            ],
+            [
+                'title' => 'Nomor Pokok Wajib Pajak (NPWP) Pendiri',
+                'description' => 'Scan berwarna, masih berlaku',
+            ],
+            [
+                'title' => 'Nama Perseroan Terbatas yang akan Dimohon',
+                'description' => 'Penamaan wajib dalam Bahasa Indonesia dengan ketentuan berikut:',
+                'notes' => [
+                    'Terdiri dari minimal tiga kata',
+                    'Belum digunakan oleh perseroan lain di Kementerian Hukum',
+                    'Menggunakan huruf Latin',
+                    'Mencantumkan bentuk badan usaha "PT" atau "Perseroan Terbatas"',
+                    'Tidak memakai angka, simbol, atau karakter yang tidak membentuk kata jelas',
+                ],
+            ],
+            [
+                'title' => 'Alamat Kantor/Usaha',
+                'description' => 'Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office',
+            ],
+            [
+                'title' => 'Nomor Telepon Lokasi Usaha',
+                'description' => 'Tidak menggunakan layanan Virtual Office',
+            ],
+            [
+                'title' => 'Alamat Email Usaha',
+                'description' => 'Alamat email aktif perusahaan',
+            ],
+            [
+                'title' => 'Uraian Kegiatan Usaha',
+                'description' => 'Untuk menentukan kode KBLI yang akan didaftarkan',
+            ],
+            [
+                'title' => 'Modal Usaha',
+                'description' => 'Besaran modal dasar dan modal disetor perseroan',
+            ],
+            [
+                'title' => 'Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak',
+                'description' => 'Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima',
+            ],
         ],
         'process' => [
-            'Konsultasi awal untuk memahami model bisnis dan kebutuhan legalitas',
-            'Verifikasi data, penyusunan struktur, dan pemilihan KBLI',
-            'Penyusunan dokumen pendirian dan pengurusan legalitas dasar',
-            'Serah terima dokumen dan arahan langkah lanjutan bisnis',
+            [
+                'title' => 'Konsultasi & Persiapan',
+                'description' => 'Dokumen dikumpulkan',
+            ],
+            [
+                'title' => 'Pengecekan Nama',
+                'description' => 'Drafting akta notaris',
+            ],
+            [
+                'title' => 'Proses Kemenkumham',
+                'description' => 'Pengesahan resmi',
+            ],
+            [
+                'title' => 'Selesai & Dikirim',
+                'description' => 'Dokumen Anda siap',
+            ],
         ],
         'faq' => [
             ['question' => 'Kapan sebaiknya memilih PT?', 'answer' => 'PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas.'],
@@ -247,16 +324,16 @@ $foundingProducts = [
                 'dokumen' => [
                     ['label' => 'Pengecekan Nama Perseroan', 'included' => true],
                     ['label' => 'Sertifikat Pendirian', 'included' => true],
-                    ['label' => 'NPWP & SKT', 'included' => true],
-                    ['label' => 'Pendaftaran OSS', 'included' => true],
+                    ['label' => 'NPWP & SKT', 'included' => false],
+                    ['label' => 'Pendaftaran OSS', 'included' => false],
                     ['label' => 'Nomor Induk Berusaha 20 KBLI*', 'included' => false],
                     ['label' => 'Sertifikat Standar/Izin*', 'included' => false],
                     ['label' => 'Virtual Office 1 (satu) Tahun', 'included' => false],
                 ],
                 'termasuk' => [
-                    ['label' => 'Fasttrack Document Delivery S...', 'included' => true],
-                    ['label' => 'Fasttrack Digital Files Secure St...', 'included' => true],
-                    ['label' => 'Fasttrack Kit', 'included' => true],
+                    ['label' => 'Fasttrack Document Delivery S...', 'included' => false],
+                    ['label' => 'Fasttrack Digital Files Secure St...', 'included' => false],
+                    ['label' => 'Fasttrack Kit', 'included' => false],
                 ],
                 'bonus' => [
                     ['label' => 'Pembukaan Rekening Bank', 'included' => false],
@@ -275,7 +352,7 @@ $foundingProducts = [
                     ['label' => 'Sertifikat Pendirian', 'included' => true],
                     ['label' => 'NPWP & SKT', 'included' => true],
                     ['label' => 'Pendaftaran OSS', 'included' => true],
-                    ['label' => 'Nomor Induk Berusaha 20 KBLI*', 'included' => false],
+                    ['label' => 'Nomor Induk Berusaha 20 KBLI*', 'included' => true],
                     ['label' => 'Sertifikat Standar/Izin*', 'included' => false],
                     ['label' => 'Virtual Office 1 (satu) Tahun', 'included' => false],
                 ],
@@ -288,7 +365,7 @@ $foundingProducts = [
                     ['label' => 'Pembukaan Rekening Bank', 'included' => false],
                     ['label' => 'Logo Perusahaan', 'included' => true],
                     ['label' => 'Stempel Perusahaan', 'included' => true],
-                    ['label' => 'Kartu Nama', 'included' => false],
+                    ['label' => 'Kartu Nama', 'included' => true],
                 ],
             ],
             [
@@ -328,7 +405,7 @@ $foundingProducts = [
     ],
     [
         'id' => 2,
-        'name' => 'Paket Pendirian CV',
+        'name' => 'Pendirian PT PMDN',
         'tag' => 'UMKM Favorit',
         'price' => '3500000',
         'price_label' => 'Rp 3.500.000',

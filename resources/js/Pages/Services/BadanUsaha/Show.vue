@@ -124,23 +124,40 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
 
                 <!-- Center: Heading -->
                 <div class="flex items-center gap-5">
-                    <div class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md">
+                    <div
+                        class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
+                    >
                         <img
                             src="/icons/ft-person.svg"
                             class="w-9 h-9"
                             alt=""
                         />
                     </div>
-                    <h1 class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
+                    <h1
+                        class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl"
+                    >
                         {{ product.name }}
                     </h1>
                 </div>
 
                 <!-- Bottom: Back button -->
                 <div>
-                    <a href="/badan-usaha" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition">
-                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    <a
+                        href="/badan-usaha"
+                        class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition"
+                    >
+                        <svg
+                            class="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                            />
                         </svg>
                         Kembali
                     </a>
@@ -203,7 +220,9 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                             </div>
                             <ol class="space-y-3">
                                 <li
-                                    v-for="(req, index) in product.requirements"
+                                    v-for="(
+                                        req, index
+                                    ) in product.term_condition"
                                     :key="`req-${index}`"
                                     class="flex gap-3 text-[14px] leading-[1.7] text-[#3D3D3A]"
                                 >
@@ -238,28 +257,23 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                     :key="`benefit-${index}`"
                                     class="flex gap-3 rounded-xl border border-[#E8E8E6] p-4"
                                 >
-                                    <span
-                                        class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/10"
-                                    >
-                                        <svg
-                                            class="h-3 w-3 text-primary"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            stroke-width="3"
+                                    <img
+                                        src="/icons/ft-done.svg"
+                                        class="mt-0.5 h-5 w-5 flex-shrink-0"
+                                        alt="done"
+                                    />
+                                    <div>
+                                        <p
+                                            class="text-[13px] font-semibold text-black leading-snug mb-1"
                                         >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                d="M5 13l4 4L19 7"
-                                            />
-                                        </svg>
-                                    </span>
-                                    <p
-                                        class="text-[13px] leading-[1.6] text-[#3D3D3A]"
-                                    >
-                                        {{ benefit }}
-                                    </p>
+                                            {{ benefit.title }}
+                                        </p>
+                                        <p
+                                            class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                        >
+                                            {{ benefit.description }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -288,33 +302,37 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                     :key="`step-${index}`"
                                     class="relative flex flex-col items-center text-center flex-1"
                                 >
+                                    <!-- Connector line -->
                                     <div
                                         v-if="
                                             index < product.process.length - 1
                                         "
-                                        class="absolute top-[22px] left-[calc(50%+22px)] hidden sm:block h-px w-[calc(100%-44px)] bg-primary/20"
+                                        class="absolute top-[22px] left-[calc(50%+22px)] hidden sm:block h-px w-[calc(100%-44px)] bg-[#E8E8E6]"
                                     ></div>
+
+                                    <!-- Icon circle -->
                                     <div
-                                        class="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-[#FAD9DA] border-2 border-primary/20 mb-3"
+                                        class="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-primary mb-3"
                                     >
-                                        <svg
-                                            class="h-5 w-5 text-primary"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                        >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                            />
-                                        </svg>
+                                        <img
+                                            src="/icons/ft-docs-white.svg"
+                                            class="mt-0.5 h-5 w-5 flex-shrink-0"
+                                            alt="docs-white"
+                                        />
                                     </div>
+
+                                    <!-- Title -->
                                     <p
-                                        class="text-[12px] leading-[1.5] text-[#3D3D3A] px-2 max-w-[120px]"
+                                        class="text-[13px] font-semibold text-black leading-snug mb-1 px-2"
                                     >
-                                        {{ step }}
+                                        {{ step.title }}
+                                    </p>
+
+                                    <!-- Description -->
+                                    <p
+                                        class="text-[12px] leading-[1.5] text-black px-2 max-w-[140px]"
+                                    >
+                                        {{ step.description }}
                                     </p>
                                 </div>
                             </div>
@@ -369,12 +387,35 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                     >
                                         <span
                                             class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white text-[12px] font-bold"
-                                            >{{ index + 1 }}</span
                                         >
-                                        <span
-                                            class="text-[14px] leading-[1.7] text-[#3D3D3A] pt-0.5"
-                                            >{{ req }}</span
-                                        >
+                                            {{ index + 1 }}
+                                        </span>
+                                        <div class="pt-0.5">
+                                            <p
+                                                class="text-[14px] font-semibold text-black leading-snug mb-0.5"
+                                            >
+                                                {{ req.title }}
+                                            </p>
+                                            <p
+                                                class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                            >
+                                                {{ req.description }}
+                                            </p>
+                                            <ul
+                                                v-if="req.notes"
+                                                class="mt-1.5 space-y-0.5 list-disc list-inside"
+                                            >
+                                                <li
+                                                    v-for="(
+                                                        note, nIndex
+                                                    ) in req.notes"
+                                                    :key="`note-${nIndex}`"
+                                                    class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                >
+                                                    {{ note }}
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                 </ol>
                             </div>
@@ -483,20 +524,12 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                             d="M5 13l4 4L19 7"
                                                         />
                                                     </svg>
-                                                    <svg
+                                                    <img
                                                         v-else
-                                                        class="h-3.5 w-3.5 text-[#E63946] flex-shrink-0 mt-0.5"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                        stroke-width="2.5"
-                                                    >
-                                                        <path
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            d="M6 18L18 6M6 6l12 12"
-                                                        />
-                                                    </svg>
+                                                        src="/icons/ft-wrong.svg"
+                                                        class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                        alt="wrong"
+                                                    />
                                                     <span
                                                         class="text-[11px] leading-[1.5] text-[#3D3D3A]"
                                                         >{{ doc.label }}</span
@@ -533,20 +566,12 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                             d="M5 13l4 4L19 7"
                                                         />
                                                     </svg>
-                                                    <svg
+                                                    <img
                                                         v-else
-                                                        class="h-3.5 w-3.5 text-[#E63946] flex-shrink-0 mt-0.5"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                        stroke-width="2.5"
-                                                    >
-                                                        <path
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            d="M6 18L18 6M6 6l12 12"
-                                                        />
-                                                    </svg>
+                                                        src="/icons/ft-wrong.svg"
+                                                        class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                        alt="wrong"
+                                                    />
                                                     <span
                                                         class="text-[11px] leading-[1.5] text-[#3D3D3A]"
                                                         >{{ item.label }}</span
@@ -583,20 +608,12 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                                             d="M5 13l4 4L19 7"
                                                         />
                                                     </svg>
-                                                    <svg
+                                                    <img
                                                         v-else
-                                                        class="h-3.5 w-3.5 text-[#E63946] flex-shrink-0 mt-0.5"
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                        stroke-width="2.5"
-                                                    >
-                                                        <path
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            d="M6 18L18 6M6 6l12 12"
-                                                        />
-                                                    </svg>
+                                                        src="/icons/ft-wrong.svg"
+                                                        class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                        alt="wrong"
+                                                    />
                                                     <span
                                                         class="text-[11px] leading-[1.5] text-[#3D3D3A]"
                                                         >{{ bon.label }}</span
@@ -685,21 +702,13 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                         class="flex items-start gap-4"
                                     >
                                         <span
-                                            class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-[#E8E8E6] bg-[#F7F7F5]"
+                                            class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#ddffe3]"
                                         >
-                                            <svg
-                                                class="h-4 w-4 text-primary"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                                                />
-                                            </svg>
+                                            <img
+                                                src="/icons/ft-save.svg"
+                                                class="w-4 h-4"
+                                                alt=""
+                                            />
                                         </span>
                                         <span
                                             class="text-[13px] leading-[1.7] text-[#3D3D3A]"
@@ -763,15 +772,11 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                 rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20"
                             >
-                                <svg
-                                    class="h-4 w-4 flex-shrink-0"
-                                    fill="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
-                                    />
-                                </svg>
+                                <img
+                                    src="/icons/ft-wa.svg"
+                                    class="mt-0.5 h-5 w-5 flex-shrink-0"
+                                    alt="wa"
+                                />
                                 Pesan Layanan Sekarang
                             </a>
                             <div
@@ -822,88 +827,52 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                 rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors"
                             >
-                                <svg
-                                    class="h-4 w-4"
-                                    fill="currentColor"
-                                    viewBox="0 0 448 512"
-                                >
-                                    <path
-                                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.1-115-63.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
-                                    />
-                                </svg>
+                                <img
+                                    src="/icons/ft-wa.svg"
+                                    class="mt-0.5 h-6 w-6 flex-shrink-0"
+                                    alt="wa"
+                                />
                                 Konsultasi Gratis via Whatsapp
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
                                 >
-                                    <svg
-                                        class="h-4 w-4 text-[#25D366] flex-shrink-0"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M5 13l4 4L19 7"
-                                        />
-                                    </svg>
+                                    <img
+                                        src="/icons/ft-done.svg"
+                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
+                                        alt="done"
+                                    />
                                     Konsultasi pertama gratis
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
                                 >
-                                    <svg
-                                        class="h-4 w-4 text-[#25D366] flex-shrink-0"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M5 13l4 4L19 7"
-                                        />
-                                    </svg>
+                                    <img
+                                        src="/icons/ft-done.svg"
+                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
+                                        alt="done"
+                                    />
                                     Harga transparan, tanpa biaya tersembunyi
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
                                 >
-                                    <svg
-                                        class="h-4 w-4 text-[#25D366] flex-shrink-0"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M5 13l4 4L19 7"
-                                        />
-                                    </svg>
+                                    <img
+                                        src="/icons/ft-done.svg"
+                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
+                                        alt="done"
+                                    />
                                     Tim berpengalaman 18+ tahun
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
                                 >
-                                    <svg
-                                        class="h-4 w-4 text-[#25D366] flex-shrink-0"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M5 13l4 4L19 7"
-                                        />
-                                    </svg>
+                                    <img
+                                        src="/icons/ft-done.svg"
+                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
+                                        alt="done"
+                                    />
                                     Update proses berkala via WhatsApp
                                 </li>
                             </ul>
@@ -925,40 +894,62 @@ const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
                                     ) in relatedProducts.slice(0, 3)"
                                     :key="`related-${index}`"
                                     :href="related.detail_path"
-                                    class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] p-4 hover:border-primary/30 hover:shadow-sm transition-all"
+                                    class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] bg-white p-4 hover:border-primary/30 hover:shadow-sm transition-all"
                                 >
+                                    <!-- Name -->
                                     <div
-                                        class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors"
+                                        class="text-[14px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors"
                                     >
                                         {{ related.name }}
                                     </div>
+
+                                    <!-- Description -->
                                     <p
-                                        class="text-[11px] leading-[1.6] text-[#686964] line-clamp-2"
+                                        class="text-[12px] leading-[1.6] text-[#686964] line-clamp-3"
                                     >
-                                        {{ related.description }}
+                                        {{
+                                            related.excerpt ??
+                                            related.description
+                                        }}
                                     </p>
+
+                                    <hr class="border-[#E8E8E6]" />
+
+                                    <!-- Price row -->
                                     <div
-                                        class="flex items-center justify-between mt-1"
+                                        class="flex items-center justify-between"
                                     >
                                         <div>
                                             <div
-                                                class="text-[10px] text-[#686964]"
+                                                class="text-[11px] text-[#686964] mb-0.5"
                                             >
                                                 Mulai dari
                                             </div>
                                             <div
-                                                class="text-[15px] font-bold text-primary"
+                                                class="text-[18px] font-bold text-primary leading-none"
                                             >
                                                 {{ related.price_label }}
                                             </div>
                                         </div>
+                                        <span
+                                            class="text-[11px] font-medium text-[#3D3D3A] border border-[#E8E8E6] rounded-md px-2 py-1"
+                                        >
+                                            {{
+                                                related.plans
+                                                    ? related.plans.length
+                                                    : 0
+                                            }}
+                                            Paket
+                                        </span>
                                     </div>
+
+                                    <!-- CTA Button -->
                                     <div
-                                        class="flex items-center gap-1 text-[11px] font-semibold text-primary"
+                                        class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors"
                                     >
                                         Selengkapnya
                                         <svg
-                                            class="h-3 w-3 group-hover:translate-x-0.5 transition-transform"
+                                            class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
