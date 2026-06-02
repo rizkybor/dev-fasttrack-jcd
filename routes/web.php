@@ -395,6 +395,7 @@ $foundingProducts = [
                 ],
             ],
         ],
+        'plans_alert' => [],
         'dasar_hukum' => [
             'Undang-undang No. 6 Tahun 2023 Penetapan Peraturan Pemerintah Pengganti Undang-undang Nomor 2 Tahun 2022 Tentang Cipta Kerja menjadi Undang-Undang',
             'Peraturan Pemerintah (PP) Republik Indonesia No. 8 Tahun 2021:',
@@ -828,6 +829,7 @@ $foundingProducts = [
                 ],
             ],
         ],
+        'plans_alert' => ['+ Rp. 1.000.000,- bila Modal PT di atas Rp. 1 Miliar.'],
         'dasar_hukum' => [
             'Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal',
             'Undang-undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas',
@@ -845,76 +847,321 @@ $foundingProducts = [
     ],
     [
         'id' => 3,
-        'name' => 'Paket Pendirian Firma',
+        'name' => 'PT Pendirian PMA',
         'tag' => 'Profesional',
-        'price' => '4200000',
-        'price_label' => 'Rp 4.200.000',
+        'price' => '17250000',
+        'price_label' => 'Rp 17.250.000',
         'duration' => 'Estimasi 7-12 hari kerja',
         'image' => 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80&fm=webp',
         'description' => 'Dirancang untuk usaha bersama yang dibangun atas kepercayaan dan keterlibatan aktif para sekutu dalam operasional bisnis.',
         'excerpt' => 'Paket pendirian firma untuk usaha profesional yang dijalankan bersama oleh para sekutu aktif.',
         'audience' => 'Cocok untuk kantor konsultan, firma profesional, studio kreatif, dan usaha berbasis kemitraan aktif.',
         'content' => [
-            'Firma umum digunakan ketika beberapa pihak ingin menjalankan usaha bersama dengan keterlibatan aktif dalam pengelolaan bisnis sehari-hari.',
+            'Penanaman Modal Asing (PMA) adalah kegiatan menanam modal untuk melakukan usaha di wilayah negara Republik Indonesia yang dilakukan oleh Penanam Modal Asing, baik yang menggunakan modal asing sepenuhnya maupun yang berpatungan dengan penanam modal dalam negeri.',
+            'Penanam Modal Asing dapat dilakukan oleh perseorangan warga negara asing, badan usaha asing, dan/atau pemerintah asing yang melakukan penanaman modal di wilayah negara Republik Indonesia. Kegiatan usaha atau jenis usaha terbuka bagi kegiatan penanaman modal, kecuali bidang usaha atau jenis usaha yang dinyatakan tertutup dan terbuka dengan persyaratan dan batasan kepemilikan modal asing atas bidang usaha perusahaan diatur di dalam Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal dan Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;',
+        ],
+        'term_condition' => [
+            [
+                'title' => 'Pendiri',
+                'description' => 'Berdasarkan ketentuan umum:',
+                'notes' => [
+                    'Minimal didirikan oleh 2 orang atau lebih;',
+                    'Pendiri dapat orang perseorangan atau badan hukum.',
+                ],
+            ],
+            [
+                'title' => 'Akta Pendirian',
+                'description' => 'Pendirian PT wajib dibuat dengan:',
+                'notes' => [
+                    'Akta notaris;',
+                    'Dalam bahasa Indonesia.',
+                ],
+                'notes_extra' => [
+                    'label' => 'Akta pendirian memuat antara lain:',
+                    'items' => [
+                        'Nama dan tempat kedudukan PT;',
+                        'Maksud dan Tujuan usaha;',
+                        'Modal Dasar;',
+                        'Susunan Pemegang Saham;',
+                        'Susunan Direksi dan Dewan Komisaris.',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Nama Perseroan',
+                'description' => 'Nama PT harus:',
+                'notes' => [
+                    'Menggunakan huruf latin;',
+                    'Belum dipakai secara sah oleh PT lain;',
+                    'Tidak menggunakan symbol;',
+                    'Tidak bertentangan dengan ketertiban umum dan kesusilaan.',
+                ],
+            ],
+            [
+                'title' => 'Modal Perseroan',
+                'description' => 'Sebelumnya modal dasar minimal PT adalah Rp50.000.000. Namun setelah PP 8 Tahun 2021:',
+                'notes' => [
+                    'Besaran modal dasar ditentukan berdasarkan keputusan para pendiri;',
+                    'Khusus UMK diberikan kemudahan modal.',
+                ],
+            ],
         ],
         'benefits' => [
             [
-                'title' => 'Struktur Kemitraan yang Jelas',
-                'description' => 'Firma memberikan kerangka hukum yang jelas bagi para sekutu dalam menjalankan usaha bersama dengan pembagian peran yang terdefinisi.',
+                'title' => 'Memiliki Status dan Badan Hukum Resmi',
+                'description' => 'PT memiliki kedudukan hukum terpisah dari pemegang saham — dapat memiliki kekayaan, melakukan perjanjian, dan menggugat atas nama perusahaan.',
             ],
             [
-                'title' => 'Cocok untuk Usaha Profesional',
-                'description' => 'Firma sering dipilih oleh kantor konsultan, firma hukum, dan studio kreatif yang dibangun atas reputasi dan keterlibatan aktif para pendirinya.',
+                'title' => 'Struktur Organisasi Lebih Jelas',
+                'description' => 'PT memiliki organ resmi (RUPS, Direksi, Komisaris) yang membuat pengelolaan perusahaan lebih terstruktur, profesional, dan mudah diawasi.',
             ],
             [
-                'title' => 'Pengambilan Keputusan Kolektif',
-                'description' => 'Setiap sekutu memiliki suara dalam pengambilan keputusan bisnis, mendorong rasa kepemilikan dan tanggung jawab bersama.',
+                'title' => 'Tanggung Jawab Pemegang Saham Terbatas',
+                'description' => 'Pemegang saham hanya bertanggung jawab sebesar modal yang dimiliki — harta pribadi tidak ikut menanggung utang perusahaan.',
             ],
             [
-                'title' => 'Biaya Pendirian Lebih Efisien',
-                'description' => 'Proses pendirian firma relatif lebih sederhana dibanding PT, sehingga lebih efisien dari sisi biaya dan waktu.',
+                'title' => 'Mudah Ekspansi & Ikut Tender',
+                'description' => 'Badan hukum yang kuat memudahkan PT mengikuti tender, memperoleh pembiayaan bank, membuka cabang, dan menjalin kerja sama perusahaan lain.',
             ],
             [
-                'title' => 'Identitas Usaha Lebih Formal',
-                'description' => 'Firma memiliki nama usaha resmi yang meningkatkan kredibilitas dalam menjalin kerja sama dengan klien dan mitra bisnis.',
+                'title' => 'Lebih Mudah Mendapat Modal & Investor',
+                'description' => 'Modal terbagi dalam saham sehingga perusahaan lebih fleksibel memperoleh tambahan modal melalui penambahan pemegang saham atau kerja sama investasi.',
             ],
             [
-                'title' => 'Fleksibilitas Pembagian Peran',
-                'description' => 'Para sekutu dapat menyesuaikan pembagian tugas dan kewenangan sesuai keahlian masing-masing dalam akta pendirian.',
+                'title' => 'Saham Dapat Dialihkan',
+                'description' => 'Saham PT dapat dialihkan atau diperjualbelikan sesuai anggaran dasar — memberikan fleksibilitas bagi pemegang saham dalam mengelola investasi.',
+            ],
+            [
+                'title' => 'Kredibilitas Lebih Tinggi',
+                'description' => 'PT dipandang lebih profesional oleh perbankan, investor, mitra usaha, dan instansi pemerintah — memperkuat kepercayaan dalam kerja sama bisnis.',
+            ],
+            [
+                'title' => 'Perlindungan Nama & Legalitas Usaha',
+                'description' => 'Nama PT yang disahkan Kemenkumham memperoleh perlindungan hukum dan tidak dapat digunakan perusahaan lain.',
+            ],
+            [
+                'title' => 'Kelangsungan Usaha Lebih Stabil',
+                'description' => 'Perusahaan tetap berjalan meski terjadi pergantian pemegang saham, direksi, atau komisaris — kesinambungan usaha lebih terjamin jangka panjang.',
+            ],
+            [
+                'title' => ' Peluang Kerja Sama Bisnis Lebih Luas',
+                'description' => 'Banyak perusahaan dan instansi pemerintah lebih memilih bermitra dengan PT karena legalitas yang jelas, struktur profesional, dan kemampuan bisnis yang terukur.',
             ],
         ],
         'requirements' => [
             [
-                'title' => 'KTP/NIK Seluruh Sekutu',
-                'description' => 'Scan berwarna, masih berlaku untuk semua pihak yang terlibat',
+                'title' => 'Data para Pemegang Saham',
+                'sections' => [
+                    [
+                        'label' => 'A. Peserta Asing',
+                        'groups' => [
+                            [
+                                'label' => 'Dokumen:',
+                                'notes' => [
+                                    'Perseorangan asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor.',
+                                    'Badan Hukum/Usaha Asing, agar melampirkan copy anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab.',
+                                ],
+                            ],
+                            [
+                                'label' => 'Data:',
+                                'notes' => [
+                                    'Nomor telepon',
+                                    'Alamat email',
+                                    'Alamat/Domisili di Negara Asal',
+                                ],
+                            ],
+                        ],
+                    ],
+                    [
+                        'label' => 'B. Peserta Dalam Negeri',
+                        'groups' => [
+                            [
+                                'label' => 'Dokumen:',
+                                'notes' => [
+                                    'Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;',
+                                    'Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.',
+                                ],
+                            ],
+                            [
+                                'label' => 'Data:',
+                                'notes' => [
+                                    'Nomor telepon',
+                                    'Alamat email',
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
             ],
             [
-                'title' => 'NPWP Seluruh Sekutu',
-                'description' => 'Scan berwarna, masih berlaku',
+                'title' => 'Data para Direksi',
+                'sections' => [
+                    [
+                        'label' => 'A. Warga Negara Indonesia :',
+                        'groups' => [
+                            [
+                                'label' => 'Dokumen:',
+                                'description' => 'Scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP);',
+                            ],
+                            [
+                                'label' => 'Data:',
+                                'notes' => [
+                                    'Nomor telepon',
+                                    'Alamat email',
+                                ],
+                            ],
+                        ],
+                    ],
+                    [
+                        'label' => 'B. Warga Negara Asing :',
+                        'groups' => [
+                            [
+                                'label' => 'Dokumen:',
+                                'description' => 'Scancopy bewarna paspor yang masih berlaku;',
+                            ],
+                            [
+                                'label' => 'Data:',
+                                'notes' => [
+                                    'Nomor telepon',
+                                    'Alamat email',
+                                    'Alamat tempat tinggal',
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
             ],
             [
-                'title' => 'Nama Firma yang akan Digunakan',
-                'description' => 'Nama usaha yang akan dicantumkan dalam akta pendirian firma',
+                'title' => 'Data para Komisaris',
+                'sections' => [
+                    [
+                        'label' => 'A. Warga Negara Indonesia :',
+                        'groups' => [
+                            [
+                                'label' => 'Dokumen:',
+                                'description' => 'Scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP);',
+                            ],
+                            [
+                                'label' => 'Data:',
+                                'notes' => [
+                                    'Nomor telepon',
+                                    'Alamat email',
+                                ],
+                            ],
+                        ],
+                    ],
+                    [
+                        'label' => 'B. Warga Negara Asing :',
+                        'groups' => [
+                            [
+                                'label' => 'Dokumen:',
+                                'description' => 'Scancopy bewarna paspor yang masih berlaku;',
+                            ],
+                            [
+                                'label' => 'Data:',
+                                'notes' => [
+                                    'Nomor telepon',
+                                    'Alamat email',
+                                    'Alamat tempat tinggal',
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Bukti Kepemilikan/Perjanjian Sewa Lokasi Usaha',
+                'notes' => [
+                    'Scan copy bewarna.',
+                    'Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office.',
+                ],
+            ],
+            [
+                'title' => 'Copy Izin Mendirikan Bangunan (IMB)',
+                'notes' => [
+                    'Scan copy bewarna.',
+                ],
+            ],
+            [
+                'title' => 'Konfirmasi/Persetujuan Kesesuaian Kegiatan Pemanfaatan Ruang (P/KKKPR)',
+                'notes' => [
+                    'Scan copy bewarna.',
+                    'Apabila pada lokasi usaha yang digunakan baik pemilik/pengguna sebelum-nya telah memiliki K/PKKPR.',
+                ],
+            ],
+            [
+                'title' => 'Nama Perseroan Terbatas yang akan Dimohon',
+                'description' => 'Nama perseroan yang seluruh kepemilikan saham oleh warga negara Indonesia atau badan hukum Indonesia, maka dalam hal penamaan perusahaan wajib memakai **Bahasa Indonesia**, dengan ketentuan sebagai berikut :',
+                'notes' => [
+                    [
+                        'bold' => 'Terdiri dari Minimal Tiga Kata',
+                        'detail' => 'Nama perseroan pada umumnya harus memuat sedikitnya tiga kata dalam Bahasa Indonesia.',
+                    ],
+                    [
+                        'bold' => 'Belum Digunakan oleh Perseroan Lain',
+                        'detail' => 'Nama yang diajukan harus diawali dengan denominasi yang identik ataupun memiliki kemiripan dengan nama PT lain yang sudah tercatat di Kementerian Hukum.',
+                    ],
+                    [
+                        'bold' => 'Menggunakan Huruf Latin',
+                        'detail' => 'Penulisan nama perseroan wajib memakai alfabet atau huruf Latin.',
+                    ],
+                    [
+                        'bold' => 'Mencantumkan Bentuk Badan Usaha',
+                        'detail' => 'Nama perseroan harus diawali dengan frasa "Perseroan Terbatas" atau menggunakan singkatan "PT".',
+                    ],
+                    [
+                        'bold' => 'Tidak Memakai Karakter Tertentu',
+                        'detail' => 'Nama perseroan dilarang menggunakan angka, gabungan angka, maupun rangkaian huruf yang tidak membentuk suatu kata yang jelas.',
+                    ],
+                ],
             ],
             [
                 'title' => 'Alamat Kantor/Usaha',
-                'description' => 'Alamat domisili operasional firma yang akan didaftarkan',
+                'description' => 'Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office',
             ],
             [
-                'title' => 'Kesepakatan Pembagian Peran & Kewenangan',
-                'description' => 'Dokumen kesepakatan mengenai tugas, wewenang, dan tanggung jawab masing-masing sekutu',
+                'title' => 'Nomor Telepon Lokasi Usaha',
+                'description' => 'Tidak menggunakan layanan Virtual Office',
+            ],
+            [
+                'title' => 'Alamat Email Usaha',
+                'description' => 'Alamat email aktif perusahaan.',
             ],
             [
                 'title' => 'Uraian Kegiatan Usaha',
-                'description' => 'Untuk menentukan kode KBLI yang sesuai dengan aktivitas firma',
+                'description' => 'Untuk menentukan KBLI yang akan di daftarkan',
             ],
             [
-                'title' => 'Nomor Telepon & Email Usaha',
-                'description' => 'Kontak aktif yang akan digunakan untuk keperluan administrasi firma',
+                'title' => 'Modal Perseroan',
+                'notes' => [
+                    'Modal Dasar',
+                    'Modal Disetor (minimal 25% dari Modal Dasar)',
+                    'Modal Ditempatkan (sama dengan Modal Disetor)',
+                ],
+            ],
+            [
+                'title' => 'Nilai Saham',
+                'description' => 'Yakni nilai perlembar saham',
+            ],
+            [
+                'title' => 'Komposisi Kepemilikan Saham',
+                'description' => 'Jumlah lembar saham yang dimiliki oleh masing-masing Pendiri/Pemegang Saham',
+            ],
+            [
+                'title' => 'Susunan Direksi',
+                'description' => 'Jika lebih dari 1 (satu) orang, salah satu ditunjuk sebagai Direktur Utama',
+            ],
+            [
+                'title' => 'Susunan Dewan Komisaris',
+                'description' => 'Jika lebih dari 1 (satu) orang, salah satu ditunjuk sebagai Komisaris Utama',
+            ],
+            [
+                'title' => 'Tahun Buku',
+                'description' => 'Umumnya 1 Januari hingga 31 Desember',
             ],
             [
                 'title' => 'Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak',
-                'description' => 'Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima',
+                'description' => 'Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima',
             ],
         ],
         'process' => [
@@ -924,11 +1171,11 @@ $foundingProducts = [
             ],
             [
                 'title' => 'Pengecekan Nama',
-                'description' => 'Penyusunan struktur firma',
+                'description' => 'Drafting akta notaris',
             ],
             [
-                'title' => 'Proses Legalitas',
-                'description' => 'Pengesahan dokumen',
+                'title' => 'Proses Kemenkumham',
+                'description' => 'Pengesahan resmi',
             ],
             [
                 'title' => 'Selesai & Dikirim',
@@ -936,79 +1183,94 @@ $foundingProducts = [
             ],
         ],
         'faq' => [
-            ['question' => 'Apa pembeda firma dengan CV?', 'answer' => 'Firma umumnya menekankan keterlibatan aktif para sekutu dalam menjalankan usaha, sedangkan CV mengenal sekutu aktif dan pasif.'],
-            ['question' => 'Apakah firma cocok untuk usaha jasa profesional?', 'answer' => 'Ya, firma sering digunakan untuk usaha yang dibangun atas reputasi dan keterlibatan aktif para pendirinya.'],
+            ['question' => 'Apa perbedaan PT PMDN dan PT Perorangan?', 'answer' => 'PT PMDN dapat didirikan oleh lebih dari satu pemegang saham dan cocok untuk usaha yang membutuhkan struktur kepemilikan bersama, sedangkan PT Perorangan hanya untuk satu pendiri.'],
+            ['question' => 'Apakah FastTrack membantu memilih KBLI?', 'answer' => 'Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien.'],
         ],
         'plans' => [
             [
-                'name' => 'Firma Starter',
+                'name' => 'PT PMA',
                 'popular' => false,
-                'price' => 'Rp. 4.200.000,-',
+                'price' => 'Rp. 17.250.000,-',
                 'bonus_note' => 'GRATIS Konsultasi Persiapan dan Pasca Selesai',
                 'dokumen' => [
-                    ['label' => 'Pengecekan Nama Firma', 'included' => true],
-                    ['label' => 'Akta Pendirian Notaris', 'included' => true],
-                    ['label' => 'NPWP & SKT', 'included' => false],
-                    ['label' => 'Pendaftaran OSS', 'included' => false],
-                    ['label' => 'Nomor Induk Berusaha 20 KBLI*', 'included' => false],
-                    ['label' => 'Sertifikat Standar/Izin*', 'included' => false],
-                    ['label' => 'Virtual Office 1 (satu) Tahun', 'included' => false],
-                ],
-                'termasuk' => [
-                    ['label' => 'Fasttrack Document Delivery S...', 'included' => true],
-                    ['label' => 'Fasttrack Digital Files Secure St...', 'included' => true],
-                    ['label' => 'Fasttrack Kit', 'included' => true],
-                ],
-                'bonus' => [
-                    ['label' => 'Pembukaan Rekening Bank', 'included' => false],
-                    ['label' => 'Logo Perusahaan', 'included' => false],
-                    ['label' => 'Stempel Perusahaan', 'included' => false],
-                    ['label' => 'Kartu Nama', 'included' => false],
-                ],
-            ],
-            [
-                'name' => 'Firma Standart',
-                'popular' => true,
-                'price' => 'Rp. 6.500.000,-',
-                'bonus_note' => 'GRATIS Konsultasi Persiapan dan Pasca Selesai',
-                'dokumen' => [
-                    ['label' => 'Pengecekan Nama Firma', 'included' => true],
-                    ['label' => 'Akta Pendirian Notaris', 'included' => true],
-                    ['label' => 'NPWP & SKT', 'included' => true],
+                    ['label' => 'Pengecekan Nama Perseroan', 'included' => true],
+                    ['label' => 'Drafting Akta Perusahaan', 'included' => true],
+                    ['label' => 'Akta Pendirian Perusahaan', 'included' => true],
+                    ['label' => 'Pengesahan Akta Pendirian Perusahaan dari Kementerian Hukum RI', 'included' => true],
+                    ['label' => 'Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)', 'included' => true],
                     ['label' => 'Pendaftaran OSS', 'included' => true],
-                    ['label' => 'Nomor Induk Berusaha 20 KBLI*', 'included' => true],
-                    ['label' => 'Sertifikat Standar/Izin*', 'included' => false],
-                    ['label' => 'Virtual Office 1 (satu) Tahun', 'included' => false],
+                    ['label' => 'Pembuatan poligon', 'included' => true],
+                    ['label' => 'Nomor Induk Berusaha 20 KBLI', 'included' => true],
+                    ['label' => 'Aktifasi Angka Pengenal Importir', 'included' => true],
+                    ['label' => 'Perizinan Dasar (Penapisan Izin Lingkungan & KKKPR) dan Perizinan Berusaha (Sertifikat Standar) non-verifikasi', 'included' => true],
+                    ['label' => 'Pengukuhan – Pengusaha Kena Pajak (PKP)', 'included' => false],
+                    ['label' => 'Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun', 'included' => false],
                 ],
                 'termasuk' => [
-                    ['label' => 'Fasttrack Document Delivery S...', 'included' => true],
-                    ['label' => 'Fasttrack Digital Files Secure St...', 'included' => true],
+                    ['label' => 'Fasttrack Document Delivery Service', 'included' => true],
+                    ['label' => 'Fasttrack Digital Files Secure Storage', 'included' => true],
                     ['label' => 'Fasttrack Kit', 'included' => true],
                 ],
                 'bonus' => [
-                    ['label' => 'Pembukaan Rekening Bank', 'included' => false],
+                    ['label' => 'Pembukaan Rekening Bank', 'included' => true],
                     ['label' => 'Logo Perusahaan', 'included' => true],
                     ['label' => 'Stempel Perusahaan', 'included' => true],
-                    ['label' => 'Kartu Nama', 'included' => false],
+                    ['label' => 'Kartu Nama', 'included' => true],
                 ],
             ],
             [
-                'name' => 'Firma Premium + VO',
-                'popular' => false,
-                'price' => 'Rp. 9.000.000,-',
+                'name' => 'PT PMA  + PKP',
+                'popular' => true,
+                'price' => 'Rp. 19.500.000,-',
                 'bonus_note' => 'GRATIS Konsultasi Persiapan dan Pasca Selesai',
                 'dokumen' => [
-                    ['label' => 'Pengecekan Nama Firma', 'included' => true],
-                    ['label' => 'Akta Pendirian Notaris', 'included' => true],
-                    ['label' => 'NPWP & SKT', 'included' => true],
+                    ['label' => 'Pengecekan Nama Perseroan', 'included' => true],
+                    ['label' => 'Drafting Akta Perusahaan', 'included' => true],
+                    ['label' => 'Akta Pendirian Perusahaan', 'included' => true],
+                    ['label' => 'Pengesahan Akta Pendirian Perusahaan dari Kementerian Hukum RI', 'included' => true],
+                    ['label' => 'Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)', 'included' => true],
                     ['label' => 'Pendaftaran OSS', 'included' => true],
-                    ['label' => 'Nomor Induk Berusaha 20 KBLI*', 'included' => true],
-                    ['label' => 'Sertifikat Standar/Izin*', 'included' => true],
-                    ['label' => 'Virtual Office 1 (satu) Tahun', 'included' => true],
+                    ['label' => 'Pembuatan poligon', 'included' => true],
+                    ['label' => 'Nomor Induk Berusaha 20 KBLI', 'included' => true],
+                    ['label' => 'Aktifasi Angka Pengenal Importir', 'included' => true],
+                    ['label' => 'Perizinan Dasar (Penapisan Izin Lingkungan & KKKPR) dan Perizinan Berusaha (Sertifikat Standar) non-verifikasi', 'included' => true],
+                    ['label' => 'Pengukuhan – Pengusaha Kena Pajak (PKP)', 'included' => true],
+                    ['label' => 'Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun', 'included' => false],
                 ],
                 'termasuk' => [
-                    ['label' => 'Fasttrack Document Delivery S...', 'included' => true],
-                    ['label' => 'Fasttrack Digital Files Secure St...', 'included' => true],
+                    ['label' => 'Fasttrack Document Delivery Service', 'included' => true],
+                    ['label' => 'Fasttrack Digital Files Secure Storage', 'included' => true],
+                    ['label' => 'Fasttrack Kit', 'included' => true],
+                ],
+                'bonus' => [
+                    ['label' => 'Pembukaan Rekening Bank', 'included' => true],
+                    ['label' => 'Logo Perusahaan', 'included' => true],
+                    ['label' => 'Stempel Perusahaan', 'included' => true],
+                    ['label' => 'Kartu Nama', 'included' => true],
+                ],
+            ],
+            [
+                'name' => 'PT PMA  + PKP + VO',
+                'popular' => false,
+                'price' => 'Rp. 26.750.000,-',
+                'bonus_note' => 'GRATIS Konsultasi Persiapan dan Pasca Selesai',
+                'dokumen' => [
+                    ['label' => 'Pengecekan Nama Perseroan', 'included' => true],
+                    ['label' => 'Drafting Akta Perusahaan', 'included' => true],
+                    ['label' => 'Akta Pendirian Perusahaan', 'included' => true],
+                    ['label' => 'Pengesahan Akta Pendirian Perusahaan dari Kementerian Hukum RI', 'included' => true],
+                    ['label' => 'Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)', 'included' => true],
+                    ['label' => 'Pendaftaran OSS', 'included' => true],
+                    ['label' => 'Pembuatan poligon', 'included' => true],
+                    ['label' => 'Nomor Induk Berusaha 20 KBLI', 'included' => true],
+                    ['label' => 'Aktifasi Angka Pengenal Importir', 'included' => true],
+                    ['label' => 'Perizinan Dasar (Penapisan Izin Lingkungan & KKKPR) dan Perizinan Berusaha (Sertifikat Standar) non-verifikasi', 'included' => true],
+                    ['label' => 'Pengukuhan – Pengusaha Kena Pajak (PKP)', 'included' => true],
+                    ['label' => 'Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun', 'included' => true],
+                ],
+                'termasuk' => [
+                    ['label' => 'Fasttrack Document Delivery Service', 'included' => true],
+                    ['label' => 'Fasttrack Digital Files Secure Storage', 'included' => true],
                     ['label' => 'Fasttrack Kit', 'included' => true],
                 ],
                 'bonus' => [
@@ -1019,11 +1281,20 @@ $foundingProducts = [
                 ],
             ],
         ],
+        'plans_alert' => ['+ Rp. 1.000.000,- bila Modal PT di atas Rp. 1 Miliar.'],
         'dasar_hukum' => [
-            'Kitab Undang-Undang Hukum Dagang (KUHD) Pasal 16-35 tentang Firma',
-            'Undang-undang No. 6 Tahun 2023 Penetapan Peraturan Pemerintah Pengganti Undang-undang Nomor 2 Tahun 2022 Tentang Cipta Kerja menjadi Undang-Undang',
-            'Peraturan Pemerintah (PP) Republik Indonesia No. 7 Tahun 2021 tentang Kemudahan, Pelindungan, dan Pemberdayaan Koperasi dan Usaha Mikro, Kecil, dan Menengah (UMKM)',
-            'Peraturan Direktur Jenderal Pajak Nomor Per-7/PJ/2025 Tentang Petunjuk Pelaksanaan Administrasi Nomor Pokok Wajib Pajak',
+            'Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal',
+            'Undang-undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas',
+            'Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja',
+            'Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang',
+            'Peraturan Pemerintah Nomor 7 Tahun 2021 tentang Kemudahan, Perlindungan, dan Pemberdayaan Koperasi dan Usaha Mikro, Kecil, dan Menengah',
+            'Peraturan Pemerintah Nomor 8 Tahun 2021 tentang Modal Dasar Perseroan serta Pendaftaran Pendirian, Perubahan, dan Pembubaran Perseroan yang Memenuhi Kriteria untuk Usaha Mikro dan Kecil',
+            'Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko',
+            'Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal',
+            'Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal',
+            'Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)',
+            'Peraturan Menteri Hukum Nomor 49 Tahun 2025 tentang Syarat dan Tata Cara Pendirian, Perubahan, dan Pembubaran Badan Hukum Perseroan Terbatas.',
+            'Peraturan Direktur Jenderal Pajak Nomor Per-7/PJ/2025 Tentang Petunjuk Pelaksanaan Administrasi Nomor Pokok Wajib Pajak, Pengusaha Kena Pajak, Objek Pajak Pajak Bumi Dan Bangunan Serta Perincian Jenis, Dokumen, Dan Saluran Untuk Pelaksanaan Hak Dan Pemenuhan Kewajiban Perpajakan.',
         ],
     ],
 
