@@ -16,6 +16,11 @@ const props = defineProps({
     },
 });
 
+const parseBold = (text) => {
+    if (!text) return '';
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+};
+
 const whatsappNumber = "6282298604144";
 
 const buildWhatsappLink = (productName) => {
@@ -430,6 +435,7 @@ const toggleDoc = (key) => {
                                     />
                                 </svg>
                             </button>
+
                             <div
                                 v-show="docsOpen"
                                 class="px-6 sm:px-8 pb-6 sm:pb-8 border-t border-[#E8E8E6]"
@@ -442,11 +448,13 @@ const toggleDoc = (key) => {
                                         :key="`doc-${index}`"
                                         class="flex gap-4"
                                     >
+                                        <!-- Nomor -->
                                         <span
                                             class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white text-[12px] font-bold"
                                         >
                                             {{ index + 1 }}
                                         </span>
+
                                         <div class="pt-0.5 flex-1">
                                             <!-- Title -->
                                             <p
@@ -455,15 +463,16 @@ const toggleDoc = (key) => {
                                                 {{ req.title }}
                                             </p>
 
-                                            <!-- Description biasa -->
+                                            <!-- Description (support **bold** markdown) -->
                                             <p
                                                 v-if="req.description"
                                                 class="text-[13px] leading-[1.6] text-[#3D3D3A]"
-                                            >
-                                                {{ req.description }}
-                                            </p>
+                                                v-html="
+                                                    parseBold(req.description)
+                                                "
+                                            ></p>
 
-                                            <!-- Notes: bisa string biasa atau object { bold, detail } -->
+                                            <!-- Notes: string biasa -->
                                             <ul
                                                 v-if="
                                                     req.notes &&
@@ -512,9 +521,76 @@ const toggleDoc = (key) => {
                                                 </li>
                                             </ul>
 
-                                            <!-- Groups: { label, description?, notes? } -->
+                                            <!-- Sections: { label, groups } -->
                                             <div
-                                                v-if="req.groups"
+                                                v-if="req.sections"
+                                                class="mt-1 space-y-3"
+                                            >
+                                                <div
+                                                    v-for="(
+                                                        section, sIndex
+                                                    ) in req.sections"
+                                                    :key="`section-${sIndex}`"
+                                                >
+                                                    <!-- Label section (A. / B.) -->
+                                                    <p
+                                                        class="text-[13px] font-semibold text-[#1A1B18] mb-1"
+                                                    >
+                                                        {{ section.label }}
+                                                    </p>
+
+                                                    <!-- Groups dalam section -->
+                                                    <div class="space-y-1.5">
+                                                        <div
+                                                            v-for="(
+                                                                group, gIndex
+                                                            ) in section.groups"
+                                                            :key="`sg-${gIndex}`"
+                                                        >
+                                                            <p
+                                                                class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                            >
+                                                                {{
+                                                                    group.label
+                                                                }}
+                                                            </p>
+                                                            <p
+                                                                v-if="
+                                                                    group.description
+                                                                "
+                                                                class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                            >
+                                                                {{
+                                                                    group.description
+                                                                }}
+                                                            </p>
+                                                            <ul
+                                                                v-if="
+                                                                    group.notes
+                                                                "
+                                                                class="mt-0.5 space-y-0.5 list-disc list-inside"
+                                                            >
+                                                                <li
+                                                                    v-for="(
+                                                                        note,
+                                                                        nIndex
+                                                                    ) in group.notes"
+                                                                    :key="`gnote-${nIndex}`"
+                                                                    class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                                >
+                                                                    {{ note }}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Groups langsung (tanpa sections) -->
+                                            <div
+                                                v-if="
+                                                    req.groups && !req.sections
+                                                "
                                                 class="mt-1 space-y-2"
                                             >
                                                 <div
@@ -1303,6 +1379,36 @@ const toggleDoc = (key) => {
                                     </div>
                                 </div>
                             </template>
+
+                            <!-- Alert Info -->
+                            <div
+                                v-if="product.plans_alert.length"
+                                class="mt-4 space-y-2"
+                            >
+                                <div
+                                    v-for="(alert, ai) in product.plans_alert"
+                                    :key="`alert-${ai}`"
+                                    class="flex items-center gap-2.5 rounded-2xl bg-[#D6F0FA] px-4 py-3.5"
+                                >
+                                    <svg
+                                        class="h-4 w-4 text-[#5BB8D4] flex-shrink-0"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    >
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M12 8v4m0 4h.01"
+                                        />
+                                    </svg>
+                                    <span class="text-[13px] text-[#5BB8D4]">{{
+                                        alert
+                                    }}</span>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- 7. Dasar Hukum (Accordion) -->
@@ -1376,40 +1482,26 @@ const toggleDoc = (key) => {
                     >
                         <!-- VIP Line Banner -->
                         <div
-                            class="rounded-2xl bg-gradient-to-br from-[#E63946] to-[#c0202c] px-5 py-6 text-center overflow-hidden relative"
+                            class="rounded-2xl px-5 py-6 text-center overflow-hidden relative"
+                            style="
+                                background-image: url(&quot;/images/card-arrow-bg.png&quot;);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            "
                         >
-                            <div class="absolute inset-0 opacity-10">
-                                <svg
-                                    class="absolute right-0 top-0 h-full w-auto"
-                                    viewBox="0 0 100 100"
-                                    preserveAspectRatio="none"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M60 0L20 50L60 100"
-                                        stroke="white"
-                                        stroke-width="18"
-                                        stroke-linecap="butt"
-                                    />
-                                    <path
-                                        d="M85 0L45 50L85 100"
-                                        stroke="white"
-                                        stroke-width="18"
-                                        stroke-linecap="butt"
-                                    />
-                                </svg>
-                            </div>
                             <div class="relative mb-4">
                                 <div
                                     class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5"
                                 >
                                     <span
                                         class="text-[14px] font-extrabold uppercase tracking-widest text-white"
-                                        >FASTRACK – VIP LINE</span
                                     >
+                                        FASTRACK – VIP LINE
+                                    </span>
                                 </div>
                             </div>
+
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
                             >
@@ -1429,6 +1521,7 @@ const toggleDoc = (key) => {
                                 />
                                 Pesan Layanan Sekarang
                             </a>
+
                             <div
                                 class="relative mt-3 text-[11px] text-white/60"
                             >
