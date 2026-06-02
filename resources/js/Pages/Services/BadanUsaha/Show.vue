@@ -17,8 +17,8 @@ const props = defineProps({
 });
 
 const parseBold = (text) => {
-    if (!text) return '';
-    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    if (!text) return "";
+    return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 };
 
 const whatsappNumber = "6282298604144";
@@ -215,6 +215,7 @@ const toggleDoc = (key) => {
 
                         <!-- 2. Syarat dan Ketentuan -->
                         <div
+                            v-if="product.term_condition.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-5">
@@ -292,6 +293,27 @@ const toggleDoc = (key) => {
                                                 </li>
                                             </ul>
                                         </template>
+
+                                        <!-- Notes extra (label + items tambahan) -->
+                                        <template v-if="req.notes_extra_plus">
+                                            <p
+                                                class="text-[13px] leading-[1.6] text-[#3D3D3A] mt-2"
+                                            >
+                                                {{ req.notes_extra_plus.label }}
+                                            </p>
+                                            <ul
+                                                class="mt-1 space-y-0.5 list-disc list-inside"
+                                            >
+                                                <li
+                                                    v-for="(item, iIndex) in req
+                                                        .notes_extra_plus.items"
+                                                    :key="`extra-${iIndex}`"
+                                                    class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                                >
+                                                    {{ item }}
+                                                </li>
+                                            </ul>
+                                        </template>
                                     </div>
                                 </li>
                             </ol>
@@ -299,6 +321,7 @@ const toggleDoc = (key) => {
 
                         <!-- 3. Keuntungan & Manfaat -->
                         <div
+                            v-if="product.benefits.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-6">
@@ -313,7 +336,14 @@ const toggleDoc = (key) => {
                                     Keuntungan &amp; Manfaat
                                 </h2>
                             </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Benefits: < 4 item = 1 kolom full, >= 4 item = 2 kolom grid -->
+                            <div
+                                :class="
+                                    product.benefits.length < 4
+                                        ? 'flex flex-col gap-4'
+                                        : 'grid grid-cols-1 sm:grid-cols-2 gap-4'
+                                "
+                            >
                                 <div
                                     v-for="(benefit, index) in product.benefits"
                                     :key="`benefit-${index}`"
@@ -324,16 +354,53 @@ const toggleDoc = (key) => {
                                         class="mt-0.5 h-5 w-5 flex-shrink-0"
                                         alt="done"
                                     />
-                                    <div>
+                                    <div class="flex-1">
                                         <p
                                             class="text-[13px] font-semibold text-black leading-snug mb-1"
                                         >
                                             {{ benefit.title }}
                                         </p>
+
                                         <p
-                                            class="text-[13px] leading-[1.6] text-[#3D3D3A] text-justify"
+                                            v-if="benefit.description"
+                                            class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                            :class="
+                                                product.benefits.length >= 4
+                                                    ? 'text-justify'
+                                                    : ''
+                                            "
                                         >
                                             {{ benefit.description }}
+                                        </p>
+
+                                        <!-- Notes (bullet list), hanya muncul di layout < 4 -->
+                                        <ul
+                                            v-if="
+                                                benefit.notes &&
+                                                product.benefits.length < 4
+                                            "
+                                            class="mt-1 space-y-0.5 list-disc list-inside"
+                                        >
+                                            <li
+                                                v-for="(
+                                                    note, nIndex
+                                                ) in benefit.notes"
+                                                :key="`bnote-${nIndex}`"
+                                                class="text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                            >
+                                                {{ note }}
+                                            </li>
+                                        </ul>
+
+                                        <!-- Footer text, hanya muncul di layout < 4 -->
+                                        <p
+                                            v-if="
+                                                benefit.footer &&
+                                                product.benefits.length < 4
+                                            "
+                                            class="mt-1.5 text-[13px] leading-[1.6] text-[#3D3D3A]"
+                                        >
+                                            {{ benefit.footer }}
                                         </p>
                                     </div>
                                 </div>
@@ -885,7 +952,495 @@ const toggleDoc = (key) => {
                                 </div>
                             </div>
 
-                            <!-- Layout untuk > 3 paket: baris 1 (3 kolom) + baris 2 (sisa, centered) -->
+                            <!-- Layout untuk == 4 paket: baris 1 (3 kolom) + baris 2 (sisa, centered) -->
+                            <template v-else-if="currentPlans.length <= 4">
+                                <!-- Baris 1: 3 paket pertama -->
+                                <div
+                                    class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4"
+                                >
+                                    <div
+                                        v-for="(plan, pi) in currentPlans.slice(
+                                            0,
+                                            3,
+                                        )"
+                                        :key="`plan-${pi}`"
+                                        class="relative flex flex-col rounded-xl border"
+                                        :class="
+                                            plan.popular
+                                                ? 'border-primary shadow-md shadow-primary/10'
+                                                : 'border-[#E8E8E6]'
+                                        "
+                                    >
+                                        <template v-if="plan.popular">
+                                            <div
+                                                class="absolute -top-3.5 left-1/2 -translate-x-1/2"
+                                            >
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-primary bg-white px-3 py-0.5 text-[11px] font-semibold text-primary"
+                                                >
+                                                    Paling Populer
+                                                </span>
+                                            </div>
+                                        </template>
+                                        <div
+                                            class="p-4 flex flex-col gap-3 flex-1"
+                                        >
+                                            <div
+                                                class="text-[12px] font-bold uppercase tracking-wide text-[#1A1B18]"
+                                            >
+                                                {{ plan.name }}
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] text-[#686964]"
+                                                >
+                                                    Mulai dari
+                                                </div>
+                                                <div
+                                                    class="text-[20px] font-bold leading-tight text-primary"
+                                                >
+                                                    {{ plan.price }}
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-start gap-1.5 text-[11px] text-[#3D3D3A]"
+                                            >
+                                                <svg
+                                                    class="h-3.5 w-3.5 text-[#25D366] flex-shrink-0 mt-0.5"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    stroke-width="2.5"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M5 13l4 4L19 7"
+                                                    />
+                                                </svg>
+                                                {{ plan.bonus_note }}
+                                            </div>
+                                            <div
+                                                class="h-px bg-[#E8E8E6]"
+                                            ></div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Dokumen Legalitas
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            doc, di
+                                                        ) in plan.dokumen"
+                                                        :key="`doc-${di}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="doc.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `${pi}-${di}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `${pi}-${di}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                doc.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Termasuk
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            item, ti
+                                                        ) in plan.termasuk"
+                                                        :key="`termasuk-${ti}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="item.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `termasuk-${pi}-${ti}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `termasuk-${pi}-${ti}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                item.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Bonus
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            bon, bi
+                                                        ) in plan.bonus"
+                                                        :key="`bonus-${bi}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="bon.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `bonus-${pi}-${bi}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `bonus-${pi}-${bi}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                bon.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <a
+                                                :href="
+                                                    buildWhatsappLink(plan.name)
+                                                "
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-[12px] font-semibold transition-colors"
+                                                :class="
+                                                    plan.popular
+                                                        ? 'bg-primary text-white hover:bg-primary/90'
+                                                        : 'border border-primary text-primary hover:bg-primary hover:text-white'
+                                                "
+                                            >
+                                                Pesan Sekarang
+                                                <svg
+                                                    class="h-3.5 w-3.5"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    stroke-width="2.5"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Baris 2: sisa paket, centered -->
+                                <div class="grid grid-cols-1 gap-4">
+                                    <div
+                                        v-for="(plan, pi) in currentPlans.slice(
+                                            3,
+                                        )"
+                                        :key="`plan-extra-${pi}`"
+                                        class="relative flex flex-col rounded-xl border"
+                                        :class="
+                                            plan.popular
+                                                ? 'border-primary shadow-md shadow-primary/10'
+                                                : 'border-[#E8E8E6]'
+                                        "
+                                    >
+                                        <template v-if="plan.popular">
+                                            <div
+                                                class="absolute -top-3.5 left-1/2 -translate-x-1/2"
+                                            >
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-primary bg-white px-3 py-0.5 text-[11px] font-semibold text-primary"
+                                                >
+                                                    Paling Populer
+                                                </span>
+                                            </div>
+                                        </template>
+                                        <div
+                                            class="p-4 flex flex-col gap-3 flex-1"
+                                        >
+                                            <div
+                                                class="text-[12px] font-bold uppercase tracking-wide text-[#1A1B18]"
+                                            >
+                                                {{ plan.name }}
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] text-[#686964]"
+                                                >
+                                                    Mulai dari
+                                                </div>
+                                                <div
+                                                    class="text-[20px] font-bold leading-tight text-primary"
+                                                >
+                                                    {{ plan.price }}
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-start gap-1.5 text-[11px] text-[#3D3D3A]"
+                                            >
+                                                <svg
+                                                    class="h-3.5 w-3.5 text-[#25D366] flex-shrink-0 mt-0.5"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    stroke-width="2.5"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M5 13l4 4L19 7"
+                                                    />
+                                                </svg>
+                                                {{ plan.bonus_note }}
+                                            </div>
+                                            <div
+                                                class="h-px bg-[#E8E8E6]"
+                                            ></div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Dokumen Legalitas
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            doc, di
+                                                        ) in plan.dokumen"
+                                                        :key="`doc-${di}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="doc.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `extra-${pi}-${di}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `extra-${pi}-${di}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                doc.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Termasuk
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            item, ti
+                                                        ) in plan.termasuk"
+                                                        :key="`termasuk-${ti}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="item.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `extra-termasuk-${pi}-${ti}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `extra-termasuk-${pi}-${ti}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                item.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div
+                                                    class="text-[11px] font-semibold text-[#1A1B18] mb-2"
+                                                >
+                                                    Bonus
+                                                </div>
+                                                <ul class="space-y-1.5">
+                                                    <li
+                                                        v-for="(
+                                                            bon, bi
+                                                        ) in plan.bonus"
+                                                        :key="`bonus-${bi}`"
+                                                        class="flex items-start gap-1.5"
+                                                    >
+                                                        <img
+                                                            v-if="bon.included"
+                                                            src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="done"
+                                                        />
+                                                        <img
+                                                            v-else
+                                                            src="/icons/ft-wrong.svg"
+                                                            class="mt-0.5 h-3 w-3 flex-shrink-0"
+                                                            alt="wrong"
+                                                        />
+                                                        <span
+                                                            class="text-[11px] leading-[1.5] text-[#3D3D3A] cursor-pointer"
+                                                            :class="
+                                                                expandedDocs[
+                                                                    `extra-bonus-${pi}-${bi}`
+                                                                ]
+                                                                    ? ''
+                                                                    : 'truncate'
+                                                            "
+                                                            @click="
+                                                                toggleDoc(
+                                                                    `extra-bonus-${pi}-${bi}`,
+                                                                )
+                                                            "
+                                                            >{{
+                                                                bon.label
+                                                            }}</span
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <a
+                                                :href="
+                                                    buildWhatsappLink(plan.name)
+                                                "
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-[12px] font-semibold transition-colors"
+                                                :class="
+                                                    plan.popular
+                                                        ? 'bg-primary text-white hover:bg-primary/90'
+                                                        : 'border border-primary text-primary hover:bg-primary hover:text-white'
+                                                "
+                                            >
+                                                Pesan Sekarang
+                                                <svg
+                                                    class="h-3.5 w-3.5"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    stroke-width="2.5"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+
+                            <!-- Layout untuk == 5 paket: baris 1 (3 kolom) + baris 2 (sisa, centered) -->
                             <template v-else>
                                 <!-- Baris 1: 3 paket pertama -->
                                 <div
@@ -1467,7 +2022,7 @@ const toggleDoc = (key) => {
                                             />
                                         </span>
                                         <span
-                                            class="text-[13px] leading-[1.7] text-[#3D3D3A]"
+                                            class="text-[13px] leading-[1.7] text-[#3D3D3A] text-justify"
                                             >{{ hukum }}</span
                                         >
                                     </li>
