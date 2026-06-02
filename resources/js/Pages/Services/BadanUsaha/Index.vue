@@ -104,7 +104,7 @@ const serviceCategories = [
                 title: "Persekutuan Firma",
                 description:
                     "Persekutuan Firma merupakan bentuk persekutuan yang dijalankan lebih dari satu orang",
-                price: "Rp 2.500.000",
+                price: "Rp 2.750.000",
                 packages: "3 Paket",
                 path: "/foreignservice",
                 icon: "/icons/ft-building.svg",

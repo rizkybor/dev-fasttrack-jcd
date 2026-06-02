@@ -2558,10 +2558,10 @@ $foundingProducts = [
     ],
     [
         'id' => 8,
-        'name' => 'Pendirian Firma',
+        'name' => 'Persekutuan Firma',
         'tag' => 'Komunitas Resmi',
-        'price' => '4300000',
-        'price_label' => 'Rp 4.300.000',
+        'price' => '2750000',
+        'price_label' => 'Rp 2.750.000',
         'duration' => 'Estimasi 7-14 hari kerja',
         'image' => 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80&fm=webp',
         'description' => 'Layanan pendirian perkumpulan untuk organisasi berbasis komunitas, hobi, profesi, atau kepentingan bersama yang ingin tampil lebih resmi.',
