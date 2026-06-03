@@ -283,7 +283,7 @@ const tools = [
         bg: "#A8BDED",
         iconColor: "#3B82F6",
         icon: "/icons/ic-tools-tablekonversi.svg",
-        url: "/tabel-konversi-kbli",
+        url: "/konversi-kbli",
     },
     {
         id: "simulasi-akta",
