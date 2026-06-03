@@ -439,7 +439,7 @@ const serviceCategories = [
                                 <img
                                     src="/icons/ft-docs.svg"
                                     class="w-6 h-6"
-                                    alt=""
+                                    alt="docs categories"
                                 />
                                 <h3
                                     class="text-[18px] font-bold leading-[27px] text-[#1A1B18]"

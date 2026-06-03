@@ -3478,6 +3478,72 @@ Route::get('/layanan/{slug}', function (Request $request, $slug) use ($resolveBa
     ]);
 });
 
+// Route Tools KBLI 2025
+Route::get('/panduan-kbli', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+
+    $kbliData = [];
+    $kbliPath = public_path('data/kbli2025.json');
+    if (file_exists($kbliPath)) {
+        $kbliData = json_decode(file_get_contents($kbliPath), true) ?? [];
+    }
+
+    return Inertia::render('PanduanKBLI/Index', [
+        'seo' => [
+            'title' => 'Panduan KBLI - FastTrack',
+            'description' => 'Jelajahi Klasifikasi Baku Lapangan Usaha Indonesia (KBLI) secara bertahap — dari Kategori, Golongan Pokok, Golongan, Subgolongan, hingga Kelompok usaha yang sesuai.',
+            'canonical' => $baseUrl . '/panduan-kbli',
+            'image' => $defaultImageUrl($baseUrl),
+            'type' => 'website',
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'WebPage',
+                'name' => 'Panduan KBLI - FastTrack',
+                'description' => 'Jelajahi Klasifikasi Baku Lapangan Usaha Indonesia (KBLI) secara bertahap.',
+                'url' => $baseUrl . '/panduan-kbli',
+                'inLanguage' => 'id-ID',
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Panduan KBLI', 'item' => $baseUrl . '/panduan-kbli'],
+            ]),
+        ],
+        'kbliData' => $kbliData,
+    ]);
+});
+
+// Route Konversi KBLI 2020 x 2025
+Route::get('/konversi-kbli', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+
+    return Inertia::render('KonversiKBLI/Index', [
+        'seo' => [
+            'title' => 'Tabel Konversi KBLI 2020 x KBLI 2025 - FastTrack',
+            'description' => 'Panduan penyesuaian kode lapangan usaha dari KBLI 2020 ke KBLI 2025 untuk kepentingan statistik maupun administrasi.',
+            'canonical' => $baseUrl . '/konversi-kbli',
+            'image' => $defaultImageUrl($baseUrl),
+            'type' => 'website',
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'WebPage',
+                'name' => 'Tabel Konversi KBLI 2020 x KBLI 2025 - FastTrack',
+                'description' => 'Panduan penyesuaian kode lapangan usaha dari KBLI 2020 ke KBLI 2025.',
+                'url' => $baseUrl . '/konversi-kbli',
+                'inLanguage' => 'id-ID',
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Layanan', 'item' => $baseUrl . '/layanan'],
+                ['name' => 'Konversi KBLI', 'item' => $baseUrl . '/konversi-kbli'],
+            ]),
+        ],
+    ]);
+});
+
 // Route::get('/artikel', function (Request $request) use ($articles, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
 //     $baseUrl = $resolveBaseUrl($request);
 
