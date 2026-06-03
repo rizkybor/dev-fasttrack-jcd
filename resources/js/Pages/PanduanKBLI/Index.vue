@@ -2,50 +2,6 @@
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed, onMounted } from "vue";
 
-/**
- * Props: array of KBLI data dengan struktur hierarki:
- *
- * [
- *   {
- *     kategori: "A",
- *     nama: "PERTANIAN, KEHUTANAN, DAN PERIKANAN",
- *     description: "...",
- *     children: [                          // Golongan Pokok
- *       {
- *         nomor_kbli: "01",
- *         nama: "...",
- *         description: "...",
- *         type_kbli: "Golongan Pokok",
- *         children: [                      // Golongan
- *           {
- *             nomor_kbli: "011",
- *             nama: "...",
- *             description: "...",
- *             type_kbli: "Golongan",
- *             children: [                  // Subgolongan
- *               {
- *                 nomor_kbli: "0111",
- *                 nama: "...",
- *                 description: "...",
- *                 type_kbli: "Subgolongan",
- *                 children: [              // Kelompok
- *                   {
- *                     nomor_kbli: "01111",
- *                     nama: "...",
- *                     description: "...",
- *                     type_kbli: "Kelompok",
- *                     children: []
- *                   }
- *                 ]
- *               }
- *             ]
- *           }
- *         ]
- *       }
- *     ]
- *   }
- * ]
- */
 const props = defineProps({
     kbliData: {
         type: Array,
@@ -59,176 +15,6 @@ const buildWhatsappLink = () => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-// ─── Dummy data (dipakai jika props kosong) ───────────────────────────────────
-const dummyData = [
-    {
-        kategori: "A",
-        nama: "PERTANIAN, KEHUTANAN, DAN PERIKANAN",
-        description: "Pemanenan, dan kegiatan pascapanen yang dilakukan sebagai satu rangkaian kegiatan.",
-        children: [
-            {
-                nomor_kbli: "01",
-                nama: "PERTANIAN TANAMAN, PETERNAKAN, PERBURUAN, DAN KEGIATAN JASA TERKAIT",
-                description: "Golongan pokok ini mencakup dua kegiatan dasar yakni produksi tanaman dan hewan.",
-                type_kbli: "Golongan Pokok",
-                children: [
-                    {
-                        nomor_kbli: "011",
-                        nama: "PERTANIAN TANAMAN SEMUSIM",
-                        description: "Golongan ini mencakup kegiatan penanaman tanaman yang berlangsung tidak lebih dari dua musim panen.",
-                        type_kbli: "Golongan",
-                        children: [
-                            {
-                                nomor_kbli: "0111",
-                                nama: "PERTANIAN SEREALIA (BUKAN PADI), ANEKA KACANG, DAN BIJI-BIJIAN",
-                                description: "Subgolongan ini mencakup semua jenis pertanian tanaman serealia, aneka kacang, dan biji-bijian.",
-                                type_kbli: "Subgolongan",
-                                children: [
-                                    {
-                                        nomor_kbli: "01111",
-                                        nama: "PERTANIAN JAGUNG",
-                                        description: "Kelompok ini mencakup kegiatan pertanian jagung, termasuk di dalamnya kegiatan pengolahan lahan, penanaman, pemeliharaan, panen, dan pasca panen jagung untuk menghasilkan benih berupa biji. Kelompok ini tidak mencakup pertanian jagung manis, lihat kelompok 01133.",
-                                        type_kbli: "Kelompok",
-                                        children: [],
-                                    },
-                                    {
-                                        nomor_kbli: "01112",
-                                        nama: "PERTANIAN SEREALIA SELAIN PADI DAN JAGUNG",
-                                        description: "Kelompok ini mencakup kegiatan pertanian serealia selain padi dan jagung, seperti gandum, sorgum/cantel, barli.",
-                                        type_kbli: "Kelompok",
-                                        children: [],
-                                    },
-                                    {
-                                        nomor_kbli: "01113",
-                                        nama: "PERTANIAN KEDELAI",
-                                        description: "Kelompok ini mencakup kegiatan pertanian kedelai, termasuk di dalamnya kegiatan pengolahan lahan, penanaman, pemeliharaan.",
-                                        type_kbli: "Kelompok",
-                                        children: [],
-                                    },
-                                    {
-                                        nomor_kbli: "01114",
-                                        nama: "PERTANIAN KACANG TANAH",
-                                        description: "Kelompok ini mencakup kegiatan pertanian kacang tanah, termasuk di dalamnya kegiatan pengolahan lahan.",
-                                        type_kbli: "Kelompok",
-                                        children: [],
-                                    },
-                                ],
-                            },
-                            {
-                                nomor_kbli: "0112",
-                                nama: "PERTANIAN PADI",
-                                description: "Subgolongan ini mencakup pertanian padi, termasuk benih padi.",
-                                type_kbli: "Subgolongan",
-                                children: [
-                                    {
-                                        nomor_kbli: "01120",
-                                        nama: "PERTANIAN PADI",
-                                        description: "Kelompok ini mencakup kegiatan pertanian padi termasuk pengolahan lahan, penanaman, pemeliharaan, dan pemanenan.",
-                                        type_kbli: "Kelompok",
-                                        children: [],
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-                    {
-                        nomor_kbli: "012",
-                        nama: "PERTANIAN TANAMAN HORTIKULTURA",
-                        description: "Golongan ini mencakup kegiatan pertanian tanaman hortikultura.",
-                        type_kbli: "Golongan",
-                        children: [
-                            {
-                                nomor_kbli: "0121",
-                                nama: "PERTANIAN ANEKA BUAH MENGANDUNG MINYAK",
-                                description: "Subgolongan ini mencakup pertanian buah-buahan penghasil minyak.",
-                                type_kbli: "Subgolongan",
-                                children: [
-                                    {
-                                        nomor_kbli: "01211",
-                                        nama: "PERTANIAN KELAPA SAWIT",
-                                        description: "Kelompok ini mencakup kegiatan pertanian kelapa sawit.",
-                                        type_kbli: "Kelompok",
-                                        children: [],
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-                ],
-            },
-            {
-                nomor_kbli: "02",
-                nama: "KEHUTANAN DAN PENEBANGAN KAYU",
-                description: "Golongan pokok ini mencakup produksi kayu bundar dan hasil hutan lainnya.",
-                type_kbli: "Golongan Pokok",
-                children: [
-                    {
-                        nomor_kbli: "021",
-                        nama: "KEHUTANAN",
-                        description: "Golongan ini mencakup produksi kayu dan hasil hutan.",
-                        type_kbli: "Golongan",
-                        children: [
-                            {
-                                nomor_kbli: "0210",
-                                nama: "KEHUTANAN",
-                                description: "Subgolongan ini mencakup pengelolaan hutan dan pemanenan kayu.",
-                                type_kbli: "Subgolongan",
-                                children: [
-                                    {
-                                        nomor_kbli: "02100",
-                                        nama: "KEHUTANAN",
-                                        description: "Kelompok ini mencakup kegiatan usaha kehutanan dan penebangan kayu.",
-                                        type_kbli: "Kelompok",
-                                        children: [],
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-                ],
-            },
-        ],
-    },
-    {
-        kategori: "B",
-        nama: "PERTAMBANGAN DAN PENGGALIAN",
-        description: "Kategori ini mencakup kegiatan ekonomi/lapangan usaha di bidang pertambangan.",
-        children: [
-            {
-                nomor_kbli: "05",
-                nama: "PERTAMBANGAN BATUBARA DAN LIGNIT",
-                description: "Golongan pokok ini mencakup pertambangan batubara dan lignit.",
-                type_kbli: "Golongan Pokok",
-                children: [
-                    {
-                        nomor_kbli: "051",
-                        nama: "PERTAMBANGAN BATUBARA",
-                        description: "Golongan ini mencakup pertambangan batubara.",
-                        type_kbli: "Golongan",
-                        children: [
-                            {
-                                nomor_kbli: "0510",
-                                nama: "PERTAMBANGAN BATUBARA",
-                                description: "Subgolongan ini mencakup pertambangan batubara.",
-                                type_kbli: "Subgolongan",
-                                children: [
-                                    {
-                                        nomor_kbli: "05100",
-                                        nama: "PERTAMBANGAN BATUBARA",
-                                        description: "Kelompok ini mencakup kegiatan pertambangan batubara.",
-                                        type_kbli: "Kelompok",
-                                        children: [],
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-                ],
-            },
-        ],
-    },
-];
-
 const fetchedData = ref([]);
 const isLoading = ref(false);
 
@@ -236,12 +22,12 @@ onMounted(async () => {
     if (!props.kbliData.length) {
         isLoading.value = true;
         try {
-            const res = await fetch('/data/kbli2025.json');
+            const res = await fetch("/data/kbli2025.json");
             if (res.ok) {
                 fetchedData.value = await res.json();
             }
         } catch (e) {
-            console.error('Gagal memuat data KBLI:', e);
+            console.error("Gagal memuat data KBLI:", e);
         } finally {
             isLoading.value = false;
         }
@@ -251,80 +37,22 @@ onMounted(async () => {
 const data = computed(() => {
     if (props.kbliData.length) return props.kbliData;
     if (fetchedData.value.length) return fetchedData.value;
-    return dummyData;
+    return [];
 });
 
-// ─── Search global ────────────────────────────────────────────────────────────
+// ─── Search ───────────────────────────────────────────────────────────────────
 const globalSearch = ref("");
 
-// ─── Navigasi hierarki (breadcrumb stack) ────────────────────────────────────
-// Stack berisi objek { label, node }
-// node = null  → tampilkan daftar Kategori
-// node = { kategori, ... } → tampilkan children (Golongan Pokok)
-// node = { nomor_kbli, type_kbli, ... } → tampilkan children-nya
-const breadcrumbs = ref([]); // [{ label, node }]
-
-// Node yang sedang aktif (null = root / daftar Kategori)
+// ─── Navigation stack ────────────────────────────────────────────────────────
+// Stack of { node } — each entry is a node we drilled into
+const navigationStack = ref([]); // array of nodes (ancestors)
 const activeNode = ref(null);
 
-// Anak-anak yang sedang ditampilkan
 const currentChildren = computed(() => {
-    if (!activeNode.value) return data.value; // daftar Kategori
+    if (!activeNode.value) return data.value;
     return activeNode.value.children ?? [];
 });
 
-// Level saat ini
-const currentLevel = computed(() => {
-    if (!activeNode.value) return "Kategori";
-    if ("kategori" in activeNode.value) return "Golongan Pokok";
-    const map = {
-        "Golongan Pokok": "Golongan",
-        "Golongan": "Subgolongan",
-        "Subgolongan": "Kelompok",
-        "Kelompok": "Detail",
-    };
-    return map[activeNode.value.type_kbli] ?? "Detail";
-});
-
-const levelColors = {
-    Kategori: { bg: "bg-[#FAD9DA]", text: "text-[#E63946]", border: "border-[#F5A8AE]" },
-    "Golongan Pokok": { bg: "bg-[#FEF3C7]", text: "text-[#D97706]", border: "border-[#FDE68A]" },
-    Golongan: { bg: "bg-[#D1FAE5]", text: "text-[#059669]", border: "border-[#A7F3D0]" },
-    Subgolongan: { bg: "bg-[#DBEAFE]", text: "text-[#2563EB]", border: "border-[#BFDBFE]" },
-    Kelompok: { bg: "bg-[#EDE9FE]", text: "text-[#7C3AED]", border: "border-[#DDD6FE]" },
-};
-
-const getLevelColor = (level) => levelColors[level] ?? levelColors["Kategori"];
-
-// Drill-down: masuk ke node
-const drillDown = (node) => {
-    const hasChildren = node.children && node.children.length > 0;
-    if (!hasChildren) return; // Kelompok leaf — tidak bisa masuk lebih dalam
-
-    const label = node.kategori
-        ? `${node.kategori} — ${node.nama}`
-        : `${node.nomor_kbli} — ${node.nama}`;
-
-    breadcrumbs.value.push({ label, node: activeNode.value });
-    activeNode.value = node;
-    globalSearch.value = "";
-};
-
-// Breadcrumb: kembali ke level tertentu
-const goToBreadcrumb = (idx) => {
-    // idx = -1 → root
-    if (idx === -1) {
-        breadcrumbs.value = [];
-        activeNode.value = null;
-    } else {
-        const crumb = breadcrumbs.value[idx];
-        breadcrumbs.value = breadcrumbs.value.slice(0, idx);
-        activeNode.value = crumb.node;
-    }
-    globalSearch.value = "";
-};
-
-// ─── Filter + search pada currentChildren ────────────────────────────────────
 const filteredChildren = computed(() => {
     const q = globalSearch.value.trim().toLowerCase();
     if (!q) return currentChildren.value;
@@ -336,72 +64,116 @@ const filteredChildren = computed(() => {
     });
 });
 
-// Helper: ambil kode tampil
+// Ancestors list for "SEBELUMNYA" section (all ancestors in order)
+const ancestors = computed(() => navigationStack.value);
+
+const drillDown = (node) => {
+    if (activeNode.value) {
+        navigationStack.value.push(activeNode.value);
+    }
+    activeNode.value = node;
+    globalSearch.value = "";
+};
+
+const goBack = () => {
+    if (navigationStack.value.length > 0) {
+        activeNode.value = navigationStack.value.pop();
+    } else {
+        activeNode.value = null;
+    }
+    globalSearch.value = "";
+};
+
+const goToRoot = () => {
+    navigationStack.value = [];
+    activeNode.value = null;
+    globalSearch.value = "";
+};
+
+const goToAncestor = (idx) => {
+    // idx is index in navigationStack
+    const target = navigationStack.value[idx];
+    navigationStack.value = navigationStack.value.slice(0, idx);
+    activeNode.value = target;
+    globalSearch.value = "";
+};
+
 const getKode = (node) => node.kategori ?? node.nomor_kbli ?? "";
 const hasChildren = (node) => node.children && node.children.length > 0;
+const getDesc = (node) => node.description ?? node.deskripsi ?? "";
 
-// Label level badge untuk setiap anak
-const childLevel = computed(() => {
-    if (!activeNode.value) return "Golongan Pokok"; // anak Kategori adalah Golongan Pokok
-    const map = {
-        "Golongan Pokok": "Golongan",
-        "Golongan": "Subgolongan",
-        "Subgolongan": "Kelompok",
-    };
-    if ("kategori" in activeNode.value) return "Golongan Pokok";
-    return map[activeNode.value.type_kbli] ?? "Kelompok";
-});
+// Whether current view is root (Kategori list)
+const isRoot = computed(() => !activeNode.value);
+
+// Is the current active node a leaf (Kelompok)
+const isLeaf = computed(
+    () => activeNode.value && !hasChildren(activeNode.value),
+);
 </script>
 
 <template>
     <MainLayout>
-        <!-- ── Hero ──────────────────────────────────────────────────────── -->
-        <section class="relative overflow-hidden min-h-[280px] sm:min-h-[320px]">
-            <div class="absolute inset-0">
-                <img
-                    src="/images/layanan-badan-usaha/ft-hero-badan-usaha.png"
-                    alt="Hero background"
-                    class="h-full w-full object-cover object-center"
-                />
-                <div class="absolute inset-0 bg-black/40"></div>
-            </div>
-            <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px]">
-                <!-- Breadcrumb -->
-                <nav aria-label="Breadcrumb">
-                    <div class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
-                        <a href="/" class="text-[#E63946] hover:text-black transition">
-                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
-                            </svg>
-                        </a>
-                        <svg class="h-3 w-3 text-[#E63946]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#E63946] hover:underline">Layanan</a>
-                        <svg class="h-3 w-3 text-[#E63946]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
-                        <span class="text-sm font-medium text-[#E63946]">Panduan KBLI</span>
-                    </div>
-                </nav>
+         <!-- ── Hero ──────────────────────────────────────────────────────── -->
+        <section class="relative overflow-hidden bg-[#E63946]">
+            <!-- Decorative arrow shape (right side, matches site pattern) -->
+            <img
+                src="/icons/left-arrow.svg"
+                class="absolute right-0 -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block"
+                alt=""
+            />
 
-                <!-- Heading -->
-                <div class="mt-auto pt-8">
-                    <h1 class="text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl">
-                        Panduan KBLI<br class="hidden sm:block" />
-                        <span class="text-white/90">Klasifikasi Baku Lapangan Usaha Indonesia</span>
-                    </h1>
-                    <p class="mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base sm:leading-7">
-                        Jelajahi kode KBLI secara bertahap — mulai dari Kategori, Golongan Pokok, Golongan, Subgolongan, hingga Kelompok usaha yang sesuai.
-                    </p>
-                    <div class="mt-6">
-                        <a href="/layanan" class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-white/70 transition">
-                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                            </svg>
-                            Kembali
-                        </a>
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+                <div class="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+
+                    <!-- ── Left: Text content ─────────────────────────────── -->
+                    <div class="relative z-10">
+                        <!-- Breadcrumb -->
+                        <nav class="mb-8" aria-label="Breadcrumb">
+                            <div class="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-sm px-4 py-2">
+                                <a href="/" class="text-white/90 hover:text-white transition">
+                                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
+                                    </svg>
+                                </a>
+                                <svg class="h-3 w-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                                <span class="text-sm font-medium text-white">Panduan KBLI</span>
+                            </div>
+                        </nav>
+
+                        <!-- Heading -->
+                        <h1 class="text-2xl font-extrabold leading-tight text-white sm:text-4xl lg:text-4xl">
+                            Klasifikasi Buku Lapangan Usaha<br />Indonesia (KBLI) 2025
+                        </h1>
+                        <p class="mt-5 text-[15px] leading-relaxed text-white/80 max-w-lg">
+                            Temukan kode KBLI yang tepat untuk bidang usaha Anda berdasarkan data terbaru.
+                        </p>
+
+                        <!-- Download button -->
+                        <div class="mt-8">
+                            <a
+                                href="/files/panduan-kbli.pdf"
+                                download
+                                class="inline-flex items-center gap-2.5 rounded-lg border-2 border-white bg-transparent px-6 py-3 text-[14px] font-semibold text-white hover:bg-white hover:text-[#E63946] transition-all duration-200"
+                            >
+                                Download KBLI 2025
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- ── Right: Book image ──────────────────────────────── -->
+                    <div class="hidden lg:flex items-end justify-center">
+                        <img
+                            src="/images/ft-kbli.png"
+                            alt="Buku KBLI 2025"
+                            class="h-auto max-h-[320px] w-auto object-contain drop-shadow-2xl"
+                        />
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -409,199 +181,351 @@ const childLevel = computed(() => {
         <!-- ── Main Content ──────────────────────────────────────────────── -->
         <section class="py-[52px]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-6">
-
-                <!-- ── Level Indicator + Breadcrumb Trail ──────────────── -->
-                <div class="flex flex-col gap-3">
-                    <!-- Level steps indicator -->
-                    <div class="flex items-center gap-1 overflow-x-auto pb-1 flex-wrap">
-                        <template v-for="(step, idx) in ['Kategori', 'Golongan Pokok', 'Golongan', 'Subgolongan', 'Kelompok']" :key="step">
-                            <span
-                                :class="[
-                                    'flex-shrink-0 px-3 py-1 rounded-full text-[12px] font-semibold transition-all',
-                                    currentLevel === step || (currentLevel === 'Golongan Pokok' && step === 'Golongan Pokok')
-                                        ? getLevelColor(step).bg + ' ' + getLevelColor(step).text
-                                        : breadcrumbs.length > idx
-                                            ? 'bg-[#F3F4F6] text-[#6B7280] line-through'
-                                            : 'bg-[#F9F9F9] text-[#9CA3AF]',
-                                ]"
-                            >{{ step }}</span>
-                            <svg v-if="idx < 4" class="flex-shrink-0 h-3 w-3 text-[#D1D5DB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </template>
-                    </div>
-
-                    <!-- Breadcrumb navigation -->
-                    <nav class="flex items-center gap-1 flex-wrap text-[13px]">
-                        <button
-                            @click="goToBreadcrumb(-1)"
-                            class="flex items-center gap-1 text-[#E63946] hover:underline font-medium"
-                        >
-                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
-                            </svg>
-                            Semua Kategori
-                        </button>
-                        <template v-for="(crumb, idx) in breadcrumbs" :key="idx">
-                            <svg class="h-3 w-3 text-[#D1D5DB] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                            <button
-                                @click="goToBreadcrumb(idx)"
-                                class="text-[#E63946] hover:underline max-w-[200px] truncate"
-                                :title="crumb.label"
-                            >
-                                {{ crumb.label }}
-                            </button>
-                        </template>
-                        <template v-if="activeNode">
-                            <svg class="h-3 w-3 text-[#D1D5DB] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                            <span class="text-[#686964] max-w-[200px] truncate font-medium">
-                                {{ activeNode.kategori ?? activeNode.nomor_kbli }} — {{ activeNode.nama }}
-                            </span>
-                        </template>
-                    </nav>
-                </div>
-
-                <!-- ── Card Konten ─────────────────────────────────────── -->
-                <div class="rounded-2xl border border-[#D9DAD8] bg-white shadow-sm overflow-hidden">
-
-                    <!-- Header Card: info node aktif -->
+                <!-- ── Main Card ──────────────────────────────────────────── -->
+                <div
+                    class="rounded-2xl border border-[#E5E7EB] bg-white shadow-sm overflow-hidden"
+                >
+                    <!-- ── Card Header ────────────────────────────────────── -->
                     <div
-                        v-if="activeNode"
-                        :class="['px-6 py-5 border-b border-[#D9DAD8]', getLevelColor(activeNode.type_kbli ?? 'Kategori').bg]"
+                        class="flex items-center gap-3 px-6 py-4 border-b border-[#E5E7EB]"
                     >
-                        <div class="flex items-start gap-3">
-                            <span
-                                :class="['flex-shrink-0 inline-flex items-center justify-center rounded-lg px-3 py-1 text-[13px] font-extrabold', getLevelColor(activeNode.type_kbli ?? 'Kategori').bg, getLevelColor(activeNode.type_kbli ?? 'Kategori').text]"
+                        <img
+                            src="/icons/ft-docs.svg"
+                            alt=""
+                            class="h-8 w-8 text-[#E63946]"
+                            onerror="
+                                this.style.display = 'none';
+                                this.nextElementSibling.style.display = 'block';
+                            "
+                        />
+                        <span class="text-[15px] font-bold text-[#1A1B18]">
+                            {{ isRoot ? "KBLI 2025" : "Detail KBLI 2025" }}
+                        </span>
+                    </div>
+
+                    <!-- ── Search Bar ──────────────────────────────────────── -->
+                    <div class="px-6 py-4 border-b border-[#E5E7EB]">
+                        <div class="flex items-center gap-3">
+                            <div class="relative flex-1">
+                                <svg
+                                    class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#9CA3AF]"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                                    />
+                                </svg>
+                                <input
+                                    v-model="globalSearch"
+                                    type="text"
+                                    placeholder="Cari Kode KBLI atau Nama Kegiatan"
+                                    class="w-full pl-10 pr-4 py-2.5 text-[13px] border border-[#E5E7EB] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E63946]/20 focus:border-[#E63946] placeholder-[#9CA3AF] bg-white"
+                                />
+                            </div>
+                            <!-- Filter dropdown placeholder -->
+                            <!-- <button
+                                class="flex items-center gap-1.5 px-4 py-2.5 text-[13px] font-medium text-[#374151] border border-[#E5E7EB] rounded-lg bg-white hover:bg-[#F9FAFB] transition whitespace-nowrap"
                             >
-                                {{ getKode(activeNode) }}
-                            </span>
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2 flex-wrap">
-                                    <h2 class="text-[16px] font-bold text-[#1A1B18]">{{ activeNode.nama }}</h2>
-                                    <span
-                                        :class="['text-[11px] font-semibold px-2 py-0.5 rounded-full', getLevelColor(activeNode.type_kbli ?? 'Kategori').bg, getLevelColor(activeNode.type_kbli ?? 'Kategori').text]"
-                                    >{{ activeNode.type_kbli ?? "Kategori" }}</span>
-                                </div>
-                                <p class="text-[13px] leading-[21px] text-[#686964] max-w-3xl">
-                                    {{ activeNode.description ?? activeNode.deskripsi }}
+                                Semua
+                                <svg
+                                    class="h-3.5 w-3.5 text-[#9CA3AF]"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button> -->
+                        </div>
+                    </div>
+
+                    <!-- ── Loading ─────────────────────────────────────────── -->
+                    <div
+                        v-if="isLoading"
+                        class="px-6 py-16 flex flex-col items-center gap-3"
+                    >
+                        <div
+                            class="w-7 h-7 border-2 border-[#E63946] border-t-transparent rounded-full animate-spin"
+                        ></div>
+                        <p class="text-[13px] text-[#686964]">
+                            Memuat data KBLI...
+                        </p>
+                    </div>
+
+                    <!-- ── Content ─────────────────────────────────────────── -->
+                    <div v-if="!isLoading">
+                        <!-- ═══════ ROOT: Daftar Kategori ═══════════════════ -->
+                        <template v-if="isRoot">
+                            <!-- Description block -->
+                            <div class="px-6 py-5 border-b border-[#F3F4F6]">
+                                <p
+                                    class="text-[13px] leading-[22px] text-[#374151]"
+                                >
+                                    Untuk mempermudah Anda sebagai pelaku usaha
+                                    menentukan kategori Bidang Usaha yang akan
+                                    dikembangkan di Indonesia, pemerintah
+                                    melalui Badan Pusat Statistik (BPS) menyusun
+                                    Klasifikasi Baku Lapangan Usaha Indonesia
+                                    (KBLI) sebagai panduan penentuan jenis
+                                    kegiatan usaha/bisnis. Acuan ini sesuai
+                                    dengan Peraturan BPS Nomor 7 Tahun 2025
+                                    tentang Klasifikasi Baku Lapangan Usaha
+                                    Indonesia.
+                                </p>
+                                <p
+                                    class="mt-3 text-[13px] leading-[22px] text-[#374151]"
+                                >
+                                    KBLI adalah pengklasifikasian
+                                    aktivitas/kegiatan ekonomi Indonesia yang
+                                    menghasilkan produk/output, baik berupa
+                                    barang maupun jasa, berdasarkan lapangan
+                                    usaha untuk memberikan keseragaman konsep,
+                                    definisi, dan klasifikasi lapangan usaha
+                                    dalam perkembangan dan pergeseran kegiatan
+                                    ekonomi di Indonesia.
                                 </p>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Search + judul level -->
-                    <div class="px-6 py-4 border-b border-[#D9DAD8] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                        <div class="flex items-center gap-2">
-                            <span
-                                :class="['inline-flex items-center px-3 py-1 rounded-full text-[12px] font-semibold', getLevelColor(childLevel).bg, getLevelColor(childLevel).text]"
+                            <!-- Kategori list -->
+                            <div class="divide-y divide-[#F3F4F6]">
+                                <div
+                                    v-for="(item, i) in filteredChildren"
+                                    :key="i"
+                                    :class="[
+                                        'flex items-center gap-4 px-6 py-4 transition-all group',
+                                        hasChildren(item)
+                                            ? 'cursor-pointer hover:bg-[#FEF9F9]'
+                                            : 'cursor-default',
+                                    ]"
+                                    @click="drillDown(item)"
+                                >
+                                    <!-- Kode badge -->
+                                    <span
+                                        class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-lg text-[13px] font-extrabold bg-[#F3F4F6] text-[#374151] group-hover:bg-[#FAD9DA] group-hover:text-[#E63946] transition-colors"
+                                    >
+                                        {{ getKode(item) }}
+                                    </span>
+
+                                    <!-- Nama -->
+                                    <span
+                                        class="flex-1 text-[14px] font-medium text-[#1A1B18] group-hover:text-[#E63946] transition-colors"
+                                    >
+                                        {{ item.nama }}
+                                    </span>
+                                </div>
+
+                                <!-- Empty state -->
+                                <div
+                                    v-if="filteredChildren.length === 0"
+                                    class="px-6 py-16 flex flex-col items-center gap-3 text-center"
+                                >
+                                    <svg
+                                        class="h-10 w-10 text-[#D1D5DB]"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.5"
+                                            d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        />
+                                    </svg>
+                                    <p
+                                        class="text-[14px] font-medium text-[#686964]"
+                                    >
+                                        Tidak ada data ditemukan
+                                    </p>
+                                    <p class="text-[13px] text-[#9CA3AF]">
+                                        Coba gunakan kata kunci lain
+                                    </p>
+                                </div>
+                            </div>
+                        </template>
+
+                        <!-- ═══════ DETAIL: Active Node ═════════════════════ -->
+                        <template v-if="!isRoot && activeNode">
+                            <!-- ── Header Node ─────────────────────────── -->
+                            <div
+                                class="flex items-center gap-0 border-b border-[#E5E7EB]"
                             >
-                                {{ childLevel }}
-                            </span>
-                            <span class="text-[13px] text-[#686964]">
-                                {{ filteredChildren.length }} item ditemukan
-                            </span>
-                        </div>
-                        <div class="relative w-full sm:w-72">
-                            <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#9CA3AF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                            <input
-                                v-model="globalSearch"
-                                type="text"
-                                placeholder="Cari kode atau nama kegiatan..."
-                                class="w-full pl-9 pr-4 py-2 text-[13px] border border-[#D9DAD8] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E63946]/30 focus:border-[#E63946] placeholder-[#9CA3AF]"
-                            />
-                        </div>
-                    </div>
+                                <div
+                                    class="flex items-center justify-center bg-[#E63946] px-5 py-5 min-w-[72px]"
+                                >
+                                    <span
+                                        class="text-[15px] font-extrabold text-white text-center"
+                                        >{{ getKode(activeNode) }}</span
+                                    >
+                                </div>
+                                <div class="flex-1 px-5 py-4">
+                                    <h2
+                                        class="text-[15px] font-bold text-[#1A1B18] leading-[22px]"
+                                    >
+                                        {{ activeNode.nama }}
+                                    </h2>
+                                </div>
+                            </div>
 
-                    <!-- Loading state -->
-                    <div v-if="isLoading" class="px-6 py-16 flex flex-col items-center gap-3">
-                        <div class="w-8 h-8 border-2 border-[#E63946] border-t-transparent rounded-full animate-spin"></div>
-                        <p class="text-[13px] text-[#686964]">Memuat data KBLI...</p>
-                    </div>
+                            <!-- ── URAIAN ──────────────────────────────── -->
+                            <div class="px-6 py-5 border-b border-[#F3F4F6]">
+                                <h3
+                                    class="text-[11px] font-bold text-[#9CA3AF] uppercase tracking-widest mb-2"
+                                >
+                                    Uraian
+                                </h3>
+                                <p
+                                    class="text-[13px] leading-[22px] text-[#374151]"
+                                >
+                                    {{ getDesc(activeNode) }}
+                                </p>
+                            </div>
 
-                    <!-- Daftar Item -->
-                    <div v-if="!isLoading" class="divide-y divide-[#F3F4F6]">
-                        <div
-                            v-for="(item, i) in filteredChildren"
-                            :key="i"
-                            :class="[
-                                'flex items-start gap-4 px-6 py-4 transition-all group',
-                                hasChildren(item) ? 'cursor-pointer hover:bg-[#FEF9F9]' : 'cursor-default',
-                            ]"
-                            @click="drillDown(item)"
-                        >
-                            <!-- Kode badge -->
-                            <span
+                            <!-- ── SEBELUMNYA ──────────────────────────── -->
+                            <div
+                                v-if="ancestors.length > 0"
                                 :class="[
-                                    'flex-shrink-0 inline-flex items-center justify-center rounded-lg px-3 py-1.5 text-[13px] font-extrabold min-w-[60px] text-center',
-                                    getLevelColor(childLevel).bg,
-                                    getLevelColor(childLevel).text,
+                                    'px-6 py-5',
+                                    !isLeaf
+                                        ? 'border-b border-[#F3F4F6]'
+                                        : 'px-6 py-5',
                                 ]"
                             >
-                                {{ getKode(item) }}
-                            </span>
-
-                            <!-- Info -->
-                            <div class="flex-1 min-w-0 flex flex-col gap-1">
-                                <div class="flex items-center gap-2 flex-wrap">
-                                    <h4 class="text-[14px] font-bold text-[#1A1B18] leading-[21px]">{{ item.nama }}</h4>
-                                    <span
-                                        v-if="item.type_kbli"
-                                        :class="['text-[11px] font-medium px-2 py-0.5 rounded-full border', getLevelColor(item.type_kbli).bg, getLevelColor(item.type_kbli).text, getLevelColor(item.type_kbli).border]"
-                                    >{{ item.type_kbli }}</span>
+                                <h3
+                                    class="text-[11px] font-bold text-[#9CA3AF] uppercase tracking-widest mb-3"
+                                >
+                                    Sebelumnya
+                                </h3>
+                                <div class="flex flex-col gap-2">
+                                    <div
+                                        v-for="(anc, idx) in ancestors"
+                                        :key="idx"
+                                        class="flex items-center gap-3 px-4 py-3 rounded-xl border border-[#E5E7EB] bg-white hover:border-[#E63946]/30 hover:bg-[#FEF9F9] cursor-pointer transition-all group"
+                                        @click="goToAncestor(idx)"
+                                    >
+                                        <span
+                                            class="flex-shrink-0 inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-[12px] font-extrabold min-w-[40px] text-center bg-[#F3F4F6] text-[#374151] group-hover:bg-[#FAD9DA] group-hover:text-[#E63946] transition-colors"
+                                        >
+                                            {{ getKode(anc) }}
+                                        </span>
+                                        <span
+                                            class="flex-1 text-[13px] font-medium text-[#374151] group-hover:text-[#E63946] transition-colors truncate"
+                                        >
+                                            {{ anc.nama }}
+                                        </span>
+                                    </div>
                                 </div>
-                                <p class="text-[13px] leading-[20px] text-[#686964] line-clamp-2">
-                                    {{ item.description ?? item.deskripsi }}
-                                </p>
-                                <div v-if="hasChildren(item)" class="flex items-center gap-1 mt-1">
-                                    <span class="text-[12px] text-[#9CA3AF]">{{ item.children.length }} sub-item</span>
+                            </div>
+
+                            <!-- ── TURUNAN ─────────────────────────────── -->
+                            <div v-if="!isLeaf" class="px-6 py-5">
+                                <h3
+                                    class="text-[11px] font-bold text-[#9CA3AF] uppercase tracking-widest mb-3"
+                                >
+                                    Turunan
+                                </h3>
+                                <div class="flex flex-col gap-2">
+                                    <div
+                                        v-for="(item, i) in filteredChildren"
+                                        :key="i"
+                                        class="flex items-center gap-3 px-4 py-3 rounded-xl border border-[#E5E7EB] transition-all group cursor-pointer hover:border-[#E63946]/30 hover:bg-[#FEF9F9]"
+                                        @click="drillDown(item)"
+                                    >
+                                        <span
+                                            class="flex-shrink-0 inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-[12px] font-extrabold min-w-[48px] text-center bg-[#F3F4F6] text-[#374151] group-hover:bg-[#FAD9DA] group-hover:text-[#E63946] transition-colors"
+                                        >
+                                            {{ getKode(item) }}
+                                        </span>
+                                        <span
+                                            class="flex-1 text-[13px] font-medium text-[#374151] group-hover:text-[#E63946] transition-colors"
+                                        >
+                                            {{ item.nama }}
+                                        </span>
+                                    </div>
+
+                                    <!-- Empty state -->
+                                    <div
+                                        v-if="filteredChildren.length === 0"
+                                        class="py-12 flex flex-col items-center gap-3 text-center"
+                                    >
+                                        <svg
+                                            class="h-10 w-10 text-[#D1D5DB]"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="1.5"
+                                                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                            />
+                                        </svg>
+                                        <p class="text-[13px] text-[#686964]">
+                                            Tidak ada data ditemukan
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Arrow: hanya jika ada children -->
-                            <div
-                                v-if="hasChildren(item)"
-                                class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-[#F9F9F9] group-hover:bg-[#FAD9DA] transition-colors mt-0.5"
-                            >
-                                <svg class="h-4 w-4 text-[#686964] group-hover:text-[#E63946] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                                </svg>
+                            <!-- ── Tombol Kembali ──────────────────────── -->
+                            <div class="px-6 pb-6">
+                                <button
+                                    @click="goBack"
+                                    class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[#E63946] text-[#E63946] text-[13px] font-semibold hover:bg-[#FEF9F9] transition-all"
+                                >
+                                    <svg
+                                        class="h-4 w-4"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                                        />
+                                    </svg>
+                                    Kembali ya
+                                </button>
                             </div>
-
-                            <!-- Leaf badge -->
-                            <div
-                                v-else
-                                class="flex-shrink-0 flex items-center"
-                            >
-                                <span class="text-[11px] text-[#9CA3AF] bg-[#F9F9F9] px-2 py-1 rounded-full">Kelompok</span>
-                            </div>
-                        </div>
-
-                        <!-- Empty state -->
-                        <div v-if="filteredChildren.length === 0" class="px-6 py-16 flex flex-col items-center gap-3 text-center">
-                            <svg class="h-12 w-12 text-[#D1D5DB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <p class="text-[14px] font-medium text-[#686964]">Tidak ada data ditemukan</p>
-                            <p class="text-[13px] text-[#9CA3AF]">Coba gunakan kata kunci lain</p>
-                        </div>
+                        </template>
                     </div>
                 </div>
 
-                <!-- ── Footer CTA ──────────────────────────────────────── -->
-                <div class="relative overflow-hidden rounded-2xl bg-[#E63946] px-6 py-12 sm:px-10 sm:py-14">
-                    <img src="/icons/ft-docs.svg" alt="" class="absolute right-6 top-6 h-16 w-16 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24" />
-                    <div class="relative flex flex-col items-center text-center">
-                        <h3 class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]">
+                <!-- ── Footer CTA ──────────────────────────────────────────── -->
+                <div
+                    class="relative overflow-hidden rounded-2xl bg-[#E63946] px-6 py-12 sm:px-10 sm:py-14"
+                >
+                    <img
+                        src="/icons/ft-docs.svg"
+                        alt=""
+                        class="absolute right-6 top-6 h-16 w-16 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24"
+                    />
+                    <div
+                        class="relative flex flex-col items-center text-center"
+                    >
+                        <h3
+                            class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]"
+                        >
                             Tidak Menemukan KBLI yang Anda Cari?
                         </h3>
-                        <p class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]">
-                            Tim kami siap membantu Anda menemukan solusi yang tepat<br class="hidden sm:block" />
+                        <p
+                            class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]"
+                        >
+                            Tim kami siap membantu Anda menemukan solusi yang
+                            tepat<br class="hidden sm:block" />
                             untuk kebutuhan legalitas bisnis Anda.
                         </p>
                         <a
@@ -611,11 +535,14 @@ const childLevel = computed(() => {
                             class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] sm:px-8 sm:py-3.5 sm:text-[15px]"
                         >
                             Chat Langsung via WhatsApp
-                            <img src="/icons/ft-wa.svg" alt="WhatsApp" class="h-5 w-5" />
+                            <img
+                                src="/icons/ft-wa.svg"
+                                alt="WhatsApp"
+                                class="h-5 w-5"
+                            />
                         </a>
                     </div>
                 </div>
-
             </div>
         </section>
     </MainLayout>
