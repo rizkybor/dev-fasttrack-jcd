@@ -118,31 +118,31 @@ const serviceCategories = [
 const serviceTools = [
     {
         title: "Cek Ketersediaan Nama PT",
-        path: "/badan-usaha",
+        path: "/",
         icon: "/icons/ic-tools-sedianamapt.svg",
         items: [],
     },
     {
         title: "Panduan KBLI 2025",
-        path: "/pembuatan-perjanjian",
+        path: "/panduan-kbli",
         icon: "/icons/ic-tools-panduankbli.svg",
         items: [],
     },
     {
         title: "Tabel Konversi KBLI 2020 x KBLI 2025",
-        path: "/perpajakan",
+        path: "/konversi-kbli",
         icon: "/icons/ic-tools-tablekonversi.svg",
         desc: "",
     },
     {
         title: "Simulasi Akta Pendirian",
-        path: "/hukum",
+        path: "",
         icon: "/icons/ic-tools-simulasiakta.svg",
         desc: "",
     },
     {
         title: "Generator Nama",
-        path: "/penutupan-perusahaan",
+        path: "/",
         icon: "/icons/ic-tools-gennama.svg",
         items: [],
     },
