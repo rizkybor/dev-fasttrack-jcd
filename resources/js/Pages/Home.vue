@@ -21,64 +21,94 @@ const handleToolClick = (tool) => {
 };
 
 const marqueeRows = [
-  {
-    id: 1,
-    reverse: false,
-    logos: [
-      { src: "/images/klien-kami/ft-kk-1-bni.svg",         alt: "BNI" },
-      { src: "/images/klien-kami/ft-kk-2-hpplaw.svg",      alt: "HPP Law" },
-      { src: "/images/klien-kami/ft-kk-3-traveloka.svg",   alt: "Traveloka" },
-      { src: "/images/klien-kami/ft-kk-4-bd.svg",          alt: "BD" },
-      { src: "/images/klien-kami/ft-kk-5-solenis.svg",     alt: "Solenis" },
-      { src: "/images/klien-kami/ft-kk-6-holcim.svg",      alt: "Holcim" },
-      { src: "/images/klien-kami/ft-kk-7-lv.svg",          alt: "LV" },
-      { src: "/images/klien-kami/ft-kk-8-haskoning.svg",   alt: "Haskoning" },
-      { src: "/images/klien-kami/ft-kk-9-iss.svg",         alt: "ISS" },
-      { src: "/images/klien-kami/ft-kk-10-giift.svg",      alt: "Giift" },
-      { src: "/images/klien-kami/ft-kk-11-xanhsm.svg",     alt: "Xan HSM" },
-      { src: "/images/klien-kami/ft-kk-12-awantunai.svg",  alt: "Awantunai" },
-      { src: "/images/klien-kami/ft-kk-13-issfacilityservices.svg", alt: "ISS Facility Services" },
-    ],
-  },
-  {
-    id: 2,
-    reverse: true,
-    logos: [
-      { src: "/images/klien-kami/ft-kk-14-infinID.svg",           alt: "InfinID" },
-      { src: "/images/klien-kami/ft-kk-15-glico.svg",             alt: "Glico" },
-      { src: "/images/klien-kami/ft-kk-16-whiteevenbos.svg",      alt: "Whiteevenbos" },
-      { src: "/images/klien-kami/ft-kk-17-dimo.svg",              alt: "Dimo" },
-      { src: "/images/klien-kami/ft-kk-18-salestock.svg",         alt: "Salestock" },
-      { src: "/images/klien-kami/ft-kk-19-spruson.svg",           alt: "Spruson" },
-      { src: "/images/klien-kami/ft-kk-20-BKtel.svg",             alt: "BK Tel" },
-      { src: "/images/klien-kami/ft-kk-21-unilever.svg",          alt: "Unilever" },
-      { src: "/images/klien-kami/ft-kk-22-its.svg",               alt: "ITS" },
-      { src: "/images/klien-kami/ft-kk-23-smec.svg",              alt: "SMEC" },
-      { src: "/images/klien-kami/ft-kk-24-amdocs.svg",            alt: "Amdocs" },
-      { src: "/images/klien-kami/ft-kk-25-kargo.svg",             alt: "Kargo" },
-      { src: "/images/klien-kami/ft-kk-26-assegaf.svg",           alt: "Assegaf" },
-    ],
-  },
-  {
-    id: 3,
-    reverse: false,
-    logos: [
-      { src: "/images/klien-kami/ft-kk-27-asiafoundation.svg",          alt: "Asia Foundation" },
-      { src: "/images/klien-kami/ft-kk-28-apx.svg",                     alt: "APX" },
-      { src: "/images/klien-kami/ft-kk-29-maka.svg",                    alt: "Maka" },
-      { src: "/images/klien-kami/ft-kk-30-etana.svg",                   alt: "Etana" },
-      { src: "/images/klien-kami/ft-kk-31-brankas.svg",                 alt: "Brankas" },
-      { src: "/images/klien-kami/ft-kk-32-umbra.svg",                   alt: "Umbra" },
-      { src: "/images/klien-kami/ft-kk-33-azo.svg",                     alt: "Azo" },
-      { src: "/images/klien-kami/ft-kk-34-australianembassy.svg",       alt: "Australian Embassy" },
-      { src: "/images/klien-kami/ft-kk-35-yayasankemahpeduli.svg",      alt: "Yayasan Kemah Peduli" },
-      { src: "/images/klien-kami/ft-kk-36-hivos.svg",                   alt: "Hivos" },
-      { src: "/images/klien-kami/ft-kk-37-borneo.svg",                  alt: "Borneo" },
-      { src: "/images/klien-kami/ft-kk-38-aspire.svg",                  alt: "Aspire" },
-      { src: "/images/klien-kami/ft-kk-39-ollion.svg",                  alt: "Ollion" },
-      { src: "/images/klien-kami/ft-kk-40-diamond.svg",                 alt: "Diamond" },
-    ],
-  },
+    {
+        id: 1,
+        reverse: false,
+        logos: [
+            { src: "/images/klien-kami/ft-kk-1-bni.svg", alt: "BNI" },
+            { src: "/images/klien-kami/ft-kk-2-hpplaw.svg", alt: "HPP Law" },
+            {
+                src: "/images/klien-kami/ft-kk-3-traveloka.svg",
+                alt: "Traveloka",
+            },
+            { src: "/images/klien-kami/ft-kk-4-bd.svg", alt: "BD" },
+            { src: "/images/klien-kami/ft-kk-5-solenis.svg", alt: "Solenis" },
+            { src: "/images/klien-kami/ft-kk-6-holcim.svg", alt: "Holcim" },
+            { src: "/images/klien-kami/ft-kk-7-lv.svg", alt: "LV" },
+            {
+                src: "/images/klien-kami/ft-kk-8-haskoning.svg",
+                alt: "Haskoning",
+            },
+            { src: "/images/klien-kami/ft-kk-9-iss.svg", alt: "ISS" },
+            { src: "/images/klien-kami/ft-kk-10-giift.svg", alt: "Giift" },
+            { src: "/images/klien-kami/ft-kk-11-xanhsm.svg", alt: "Xan HSM" },
+            {
+                src: "/images/klien-kami/ft-kk-12-awantunai.svg",
+                alt: "Awantunai",
+            },
+            {
+                src: "/images/klien-kami/ft-kk-13-issfacilityservices.svg",
+                alt: "ISS Facility Services",
+            },
+        ],
+    },
+    {
+        id: 2,
+        reverse: true,
+        logos: [
+            { src: "/images/klien-kami/ft-kk-14-infinID.svg", alt: "InfinID" },
+            { src: "/images/klien-kami/ft-kk-15-glico.svg", alt: "Glico" },
+            {
+                src: "/images/klien-kami/ft-kk-16-whiteevenbos.svg",
+                alt: "Whiteevenbos",
+            },
+            { src: "/images/klien-kami/ft-kk-17-dimo.svg", alt: "Dimo" },
+            {
+                src: "/images/klien-kami/ft-kk-18-salestock.svg",
+                alt: "Salestock",
+            },
+            { src: "/images/klien-kami/ft-kk-19-spruson.svg", alt: "Spruson" },
+            { src: "/images/klien-kami/ft-kk-20-BKtel.svg", alt: "BK Tel" },
+            {
+                src: "/images/klien-kami/ft-kk-21-unilever.svg",
+                alt: "Unilever",
+            },
+            { src: "/images/klien-kami/ft-kk-22-its.svg", alt: "ITS" },
+            { src: "/images/klien-kami/ft-kk-23-smec.svg", alt: "SMEC" },
+            { src: "/images/klien-kami/ft-kk-24-amdocs.svg", alt: "Amdocs" },
+            { src: "/images/klien-kami/ft-kk-25-kargo.svg", alt: "Kargo" },
+            { src: "/images/klien-kami/ft-kk-26-assegaf.svg", alt: "Assegaf" },
+        ],
+    },
+    {
+        id: 3,
+        reverse: false,
+        logos: [
+            {
+                src: "/images/klien-kami/ft-kk-27-asiafoundation.svg",
+                alt: "Asia Foundation",
+            },
+            { src: "/images/klien-kami/ft-kk-28-apx.svg", alt: "APX" },
+            { src: "/images/klien-kami/ft-kk-29-maka.svg", alt: "Maka" },
+            { src: "/images/klien-kami/ft-kk-30-etana.svg", alt: "Etana" },
+            { src: "/images/klien-kami/ft-kk-31-brankas.svg", alt: "Brankas" },
+            { src: "/images/klien-kami/ft-kk-32-umbra.svg", alt: "Umbra" },
+            { src: "/images/klien-kami/ft-kk-33-azo.svg", alt: "Azo" },
+            {
+                src: "/images/klien-kami/ft-kk-34-australianembassy.svg",
+                alt: "Australian Embassy",
+            },
+            {
+                src: "/images/klien-kami/ft-kk-35-yayasankemahpeduli.svg",
+                alt: "Yayasan Kemah Peduli",
+            },
+            { src: "/images/klien-kami/ft-kk-36-hivos.svg", alt: "Hivos" },
+            { src: "/images/klien-kami/ft-kk-37-borneo.svg", alt: "Borneo" },
+            { src: "/images/klien-kami/ft-kk-38-aspire.svg", alt: "Aspire" },
+            { src: "/images/klien-kami/ft-kk-39-ollion.svg", alt: "Ollion" },
+            { src: "/images/klien-kami/ft-kk-40-diamond.svg", alt: "Diamond" },
+        ],
+    },
 ];
 
 const serviceSearch = ref("");
@@ -592,7 +622,9 @@ const virtualOffices = [
                     </div>
 
                     <!-- Divider mobile -->
-                    <div class="w-full h-px bg-white/20 block mt-5 sm:hidden"></div>
+                    <div
+                        class="w-full h-px bg-white/20 block mt-5 sm:hidden"
+                    ></div>
 
                     <!-- Stat 3 -->
                     <div
@@ -1822,7 +1854,6 @@ const virtualOffices = [
                                     />
                                 </div>
                             </div>
-
                             <!-- Set 2 (duplikat untuk seamless loop) -->
                             <div class="marquee-set" aria-hidden="true">
                                 <div
@@ -1844,51 +1875,35 @@ const virtualOffices = [
             </div>
         </section>
 
-        <!-- ===== 12. AFILIASI ===== -->
-        <section class="bg-[#F9F9F9] pt-[52px] pb-0 overflow-hidden">
-            <div class="flex flex-col items-center gap-8">
-                <h2 class="text-[28px] font-bold leading-[42px] text-[#1A1B18]">
-                    Afiliasi
-                </h2>
-                <div
-                    class="flex items-center justify-center gap-12 w-full bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl overflow-hidden px-[84px] pb-[52px]"
-                >
-                    <div
-                        v-for="(afiliasi, i) in [
-                            {
-                                src: '/images/afiliasi/ft-af-1.svg',
-                                alt: 'Afiliasi 1',
-                            },
-                            {
-                                src: '/images/afiliasi/ft-af-2.svg',
-                                alt: 'Afiliasi 2',
-                            },
-                            {
-                                src: '/images/afiliasi/ft-af-3.svg',
-                                alt: 'Afiliasi 3',
-                            },
-                            {
-                                src: '/images/afiliasi/ft-af-4.svg',
-                                alt: 'Afiliasi 4',
-                            },
-                        ]"
-                        :key="i"
-                        class="flex-shrink-0 w-[200px] rounded-xl shadow-md bg-white p-2"
-                    >
-                        <div
-                            class="w-[185px] h-[62px] flex items-center justify-center"
-                        >
-                            <img
-                                :src="afiliasi.src"
-                                :alt="afiliasi.alt"
-                                class="w-[100px] h-auto object-contain"
-                                loading="lazy"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <!-- ===== 12. AFILIASI ===== -->
+<section class="bg-[#F9F9F9] pt-10 sm:pt-[52px] pb-0 overflow-hidden">
+  <div class="flex flex-col items-center gap-6 sm:gap-8">
+    <h2 class="text-[24px] sm:text-[28px] font-bold leading-[42px] text-[#1A1B18]">
+      Afiliasi
+    </h2>
+    <div
+      class="grid grid-cols-2 sm:flex sm:flex-row items-center justify-center gap-4 sm:gap-12 w-full bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl overflow-hidden px-6 sm:px-[84px] pb-10 sm:pb-[52px]"
+    >
+      <div
+        v-for="(afiliasi, i) in [
+          { src: '/images/afiliasi/ft-af-1.svg', alt: 'Afiliasi 1' },
+          { src: '/images/afiliasi/ft-af-2.svg', alt: 'Afiliasi 2' },
+          { src: '/images/afiliasi/ft-af-3.svg', alt: 'Afiliasi 3' },
+          { src: '/images/afiliasi/ft-af-4.svg', alt: 'Afiliasi 4' },
+        ]"
+        :key="i"
+        class="flex items-center justify-center rounded-xl shadow-md bg-white p-3 h-[80px] sm:h-[72px] sm:w-[200px]"
+      >
+        <img
+          :src="afiliasi.src"
+          :alt="afiliasi.alt"
+          class="w-full h-full object-contain"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
         <!-- ===== 13. KONTAK SECTION ===== -->
         <section class="py-[52px] bg-[#42443D] mb-20">
