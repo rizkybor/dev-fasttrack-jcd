@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const servicesOpen = ref(false);
 const informasiOpen = ref(false);
@@ -162,6 +162,16 @@ const closeAllMenus = () => {
     mobileInformasiOpen.value = false;
 };
 
+const toggleServices = () => {
+    servicesOpen.value = !servicesOpen.value;
+    informasiOpen.value = false;
+};
+
+const toggleInformasi = () => {
+    informasiOpen.value = !informasiOpen.value;
+    servicesOpen.value = false;
+};
+
 const toggleMobileMenu = () => {
     mobileMenuOpen.value = !mobileMenuOpen.value;
     if (!mobileMenuOpen.value) {
@@ -169,6 +179,17 @@ const toggleMobileMenu = () => {
         mobileInformasiOpen.value = false;
     }
 };
+
+// Close dropdowns when clicking outside the header
+const handleOutsideClick = (e) => {
+    if (!e.target.closest("header")) {
+        servicesOpen.value = false;
+        informasiOpen.value = false;
+    }
+};
+
+onMounted(() => document.addEventListener("click", handleOutsideClick));
+onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
 
 const langOpen = ref(false);
 const selectedLang = ref({ code: "ID", label: "Indonesia", flag: "🇮🇩" });
@@ -188,10 +209,6 @@ const selectLang = (lang) => {
 <template>
     <header
         class="sticky top-0 z-50 bg-[#FEFEFE]/95 backdrop-blur-md border-b border-[#D9DAD8] shadow-sm"
-        @mouseleave="
-            servicesOpen = false;
-            informasiOpen = false;
-        "
     >
         <!-- Top bar: KERJASAMA -->
         <div class="hidden lg:flex items-center h-[48px] overflow-hidden">
@@ -207,7 +224,7 @@ const selectLang = (lang) => {
                     );
                 "
             >
-                <div class="w-full h-full bg-[#E74247]"></div>
+                <div class="w-full h-full bg-[#9e1f16]"></div>
             </div>
             <div
                 class="flex items-center justify-between flex-1 h-full bg-[#42443D]"
@@ -224,7 +241,7 @@ const selectLang = (lang) => {
                     <a
                         href="mailto:cs@fasttrack.legal"
                         aria-label="Email FastTrack"
-                        class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#E74247] hover:bg-[#E74247] hover:text-white transition-colors p-[6px]"
+                        class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#9e1f16] hover:bg-[#9e1f16] hover:text-white transition-colors p-[6px]"
                     >
                         <svg
                             class="w-5 h-5"
@@ -245,7 +262,7 @@ const selectLang = (lang) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram FastTrack"
-                        class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#E74247] hover:bg-[#E74247] hover:text-white transition-colors p-[6px]"
+                        class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#9e1f16] hover:bg-[#9e1f16] hover:text-white transition-colors p-[6px]"
                     >
                         <svg
                             class="w-5 h-5"
@@ -295,8 +312,8 @@ const selectLang = (lang) => {
                         />
                     </a>
 
-                    <!-- LAYANAN dropdown -->
-                    <div class="relative" @mouseenter="servicesOpen = true">
+                    <!-- LAYANAN dropdown — hanya buka saat klik -->
+                    <div class="relative">
                         <button
                             type="button"
                             class="flex items-center gap-1 px-3 py-2.5 text-[14px] font-semibold transition-colors whitespace-nowrap"
@@ -305,7 +322,7 @@ const selectLang = (lang) => {
                                     ? 'text-primary'
                                     : 'text-[#1A1B18] hover:text-primary'
                             "
-                            @click="servicesOpen = !servicesOpen"
+                            @click="toggleServices"
                             :aria-expanded="servicesOpen"
                         >
                             LAYANAN
@@ -346,8 +363,8 @@ const selectLang = (lang) => {
                         BLOG
                     </a>
 
-                    <!-- INFORMASI dropdown -->
-                    <div class="relative" @mouseenter="informasiOpen = true">
+                    <!-- INFORMASI dropdown — hanya buka saat klik -->
+                    <div class="relative">
                         <button
                             type="button"
                             class="flex items-center gap-1 px-3 py-2.5 text-[14px] font-semibold transition-colors whitespace-nowrap"
@@ -356,7 +373,7 @@ const selectLang = (lang) => {
                                     ? 'text-primary'
                                     : 'text-[#1A1B18] hover:text-primary'
                             "
-                            @click="informasiOpen = !informasiOpen"
+                            @click="toggleInformasi"
                             :aria-expanded="informasiOpen"
                         >
                             INFORMASI
@@ -395,7 +412,7 @@ const selectLang = (lang) => {
                                     v-for="link in informasiLinks"
                                     :key="link.path"
                                     :href="link.path"
-                                    class="block rounded-lg px-4 py-2.5 text-sm font-semibold text-[#1A1B18] hover:bg-[#E74247]/5 hover:text-primary transition-colors"
+                                    class="block rounded-lg px-4 py-2.5 text-sm font-semibold text-[#1A1B18] hover:bg-[#9e1f16]/5 hover:text-primary transition-colors"
                                     @click="closeAllMenus"
                                     >{{ link.label }}</a
                                 >
@@ -455,8 +472,8 @@ const selectLang = (lang) => {
                                     class="flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors"
                                     :class="
                                         selectedLang.code === lang.code
-                                            ? 'bg-[#E74247]/8 text-primary'
-                                            : 'text-[#1A1B18] hover:bg-[#E74247]/5 hover:text-primary'
+                                            ? 'bg-[#9e1f16]/8 text-primary'
+                                            : 'text-[#1A1B18] hover:bg-[#9e1f16]/5 hover:text-primary'
                                     "
                                     @mousedown.prevent="selectLang(lang)"
                                 >
@@ -494,7 +511,7 @@ const selectLang = (lang) => {
                     </div>
                     <a
                         href="/kontak"
-                        class="inline-flex items-center gap-2 bg-[#E74247] hover:bg-red-600 text-white font-semibold text-[16px] px-6 py-3 rounded-lg transition-colors shadow-sm whitespace-nowrap"
+                        class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-[16px] px-6 py-3 rounded-lg transition-colors shadow-sm whitespace-nowrap"
                     >
                         Minta Penawaran
                         <svg
@@ -580,7 +597,7 @@ const selectLang = (lang) => {
                     <!-- PENAWARAN KHUSUS -->
                     <a
                         href="/promo"
-                        class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors"
+                        class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#9e1f16] transition-colors"
                         @click="closeAllMenus"
                     >
                         <span
@@ -589,7 +606,7 @@ const selectLang = (lang) => {
                         >
                         Penawaran Khusus
                         <span
-                            class="ml-auto text-[10px] font-bold bg-[#E74247] text-white px-2 py-0.5 rounded-full tracking-wide"
+                            class="ml-auto text-[10px] font-bold bg-[#9e1f16] text-white px-2 py-0.5 rounded-full tracking-wide"
                             >HOT</span
                         >
                     </a>
@@ -605,7 +622,7 @@ const selectLang = (lang) => {
                             class="flex w-full items-center gap-3 px-3 py-3 text-[13.5px] font-semibold transition-colors"
                             :class="
                                 mobileServicesOpen
-                                    ? 'bg-[#FEF0F0] text-[#E74247]'
+                                    ? 'bg-[#FEF0F0] text-[#9e1f16]'
                                     : 'bg-[#FAFAF8] text-[#1A1B18]'
                             "
                             :aria-expanded="mobileServicesOpen"
@@ -625,7 +642,7 @@ const selectLang = (lang) => {
                                 class="ml-auto h-[18px] w-[18px] transition-transform duration-200 flex-shrink-0"
                                 :class="
                                     mobileServicesOpen
-                                        ? 'rotate-180 text-[#E74247]'
+                                        ? 'rotate-180 text-[#9e1f16]'
                                         : 'text-[#999]'
                                 "
                                 fill="none"
@@ -648,7 +665,7 @@ const selectLang = (lang) => {
                                 v-for="group in serviceCategories"
                                 :key="`mobile-${group.title}`"
                                 :href="group.path"
-                                class="px-3 py-2.5 rounded-lg text-[12.5px] font-medium text-[#42443D] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors leading-snug"
+                                class="px-3 py-2.5 rounded-lg text-[12.5px] font-medium text-[#42443D] hover:bg-[#FEF0F0] hover:text-[#9e1f16] transition-colors leading-snug"
                                 @click="closeAllMenus"
                                 >{{ group.title }}</a
                             >
@@ -660,7 +677,7 @@ const selectLang = (lang) => {
                     <!-- TENTANG KAMI -->
                     <a
                         href="/tentang-kami"
-                        class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors"
+                        class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#9e1f16] transition-colors"
                         @click="closeAllMenus"
                     >
                         <span
@@ -673,7 +690,7 @@ const selectLang = (lang) => {
                     <!-- BLOG -->
                     <a
                         href="/artikel"
-                        class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors"
+                        class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#9e1f16] transition-colors"
                         @click="closeAllMenus"
                     >
                         <span
@@ -694,7 +711,7 @@ const selectLang = (lang) => {
                             class="flex w-full items-center gap-3 px-3 py-3 text-[13.5px] font-semibold transition-colors"
                             :class="
                                 mobileInformasiOpen
-                                    ? 'bg-[#FEF0F0] text-[#E74247]'
+                                    ? 'bg-[#FEF0F0] text-[#9e1f16]'
                                     : 'bg-[#FAFAF8] text-[#1A1B18]'
                             "
                             :aria-expanded="mobileInformasiOpen"
@@ -714,7 +731,7 @@ const selectLang = (lang) => {
                                 class="ml-auto h-[18px] w-[18px] transition-transform duration-200 flex-shrink-0"
                                 :class="
                                     mobileInformasiOpen
-                                        ? 'rotate-180 text-[#E74247]'
+                                        ? 'rotate-180 text-[#9e1f16]'
                                         : 'text-[#999]'
                                 "
                                 fill="none"
@@ -737,7 +754,7 @@ const selectLang = (lang) => {
                                 v-for="link in informasiLinks"
                                 :key="link.path"
                                 :href="link.path"
-                                class="px-3 py-2.5 rounded-lg text-[13px] font-medium text-[#42443D] hover:bg-[#FEF0F0] hover:text-[#E74247] transition-colors"
+                                class="px-3 py-2.5 rounded-lg text-[13px] font-medium text-[#42443D] hover:bg-[#FEF0F0] hover:text-[#9e1f16] transition-colors"
                                 @click="closeAllMenus"
                                 >{{ link.label }}</a
                             >
@@ -756,8 +773,8 @@ const selectLang = (lang) => {
                             class="flex flex-col items-center justify-center gap-1 py-3 px-2 rounded-xl border text-center transition-all"
                             :class="
                                 selectedLang.code === lang.code
-                                    ? 'border-[#E74247] bg-[#FEF0F0] text-[#E74247]'
-                                    : 'border-[#E5E5E0] bg-[#FAFAF8] text-[#1A1B18] hover:border-[#E74247]/40 hover:bg-[#FEF0F0]/50'
+                                    ? 'border-[#9e1f16] bg-[#FEF0F0] text-[#9e1f16]'
+                                    : 'border-[#E5E5E0] bg-[#FAFAF8] text-[#1A1B18] hover:border-[#9e1f16]/40 hover:bg-[#FEF0F0]/50'
                             "
                             @click="selectLang(lang)"
                         >
@@ -771,7 +788,7 @@ const selectLang = (lang) => {
                                 class="text-[10px] font-medium leading-none"
                                 :class="
                                     selectedLang.code === lang.code
-                                        ? 'text-[#E74247]/70'
+                                        ? 'text-[#9e1f16]/70'
                                         : 'text-[#999]'
                                 "
                                 >{{ lang.label }}</span
@@ -782,7 +799,7 @@ const selectLang = (lang) => {
                     <!-- CTA -->
                     <a
                         href="/kontak"
-                        class="mt-3 flex items-center justify-center gap-2 rounded-xl bg-[#E74247] hover:bg-[#C8353A] px-5 py-4 text-[14px] font-bold text-white transition-colors tracking-wide"
+                        class="mt-3 flex items-center justify-center gap-2 rounded-xl bg-[#9e1f16] hover:bg-[#C8353A] px-5 py-4 text-[14px] font-bold text-white transition-colors tracking-wide"
                         @click="closeAllMenus"
                     >
                         Minta Penawaran
@@ -801,13 +818,12 @@ const selectLang = (lang) => {
                         </svg>
                     </a>
                     <p
-                    class="mt-2 text-[9px] font-semibold leading-[21px] text-black text-center"
-                >
-                    © Copyright 2026 fastrack.legal – All Rights Reserved a Business
-                    of PT Jakarta Bisnis Servis
-                </p>
+                        class="mt-2 text-[9px] font-semibold leading-[21px] text-black text-center"
+                    >
+                        © Copyright 2026 fastrack.legal – All Rights Reserved a
+                        Business of PT Jakarta Bisnis Servis
+                    </p>
                 </nav>
-
             </div>
         </transition>
 
@@ -821,7 +837,6 @@ const selectLang = (lang) => {
             <div
                 class="absolute left-0 right-0 z-50 border-t border-[#D9DAD8] bg-white shadow-2xl overflow-y-auto overscroll-contain"
                 style="top: 100%; min-height: calc(100vh - 108px)"
-                @mouseenter="servicesOpen = true"
             >
                 <div
                     class="sticky top-0 left-0 right-0 z-10 w-full border-b border-[#D9DAD8] bg-white"
@@ -872,7 +887,7 @@ const selectLang = (lang) => {
                             <template v-if="!group.isLogo">
                                 <div class="flex items-start gap-2.5">
                                     <div
-                                        class="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] text-[#1A1B18] transition group-hover:border-primary/30 group-hover:bg-[#E74247]/5"
+                                        class="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] text-[#1A1B18] transition group-hover:border-primary/30 group-hover:bg-[#9e1f16]/5"
                                     >
                                         <span
                                             class="absolute -right-1 -top-1 h-2.5 w-2.5 rounded-full bg-green-500"
@@ -1069,13 +1084,11 @@ const selectLang = (lang) => {
                             >
                                 <template v-if="!group.isLogo">
                                     <div class="flex items-start gap-2.5">
-                                        <!-- Icon -->
                                         <img
                                             :src="group.icon"
                                             :alt="group.title"
                                             class="h-8 w-8"
                                         />
-
                                         <div>
                                             <h3
                                                 class="text-sm font-bold text-[#1A1B18] group-hover:text-primary transition-colors leading-tight"
@@ -1113,31 +1126,6 @@ const selectLang = (lang) => {
                             </a>
                         </div>
                     </div>
-
-                    <!-- <div
-                        class="mt-4 pt-4 border-t border-[#D9DAD8] flex justify-center"
-                    >
-                        <button
-                            type="button"
-                            class="inline-flex items-center gap-2 rounded-lg bg-[#E74247] px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-600 transition-colors"
-                            @click="servicesOpen = false"
-                        >
-                            <svg
-                                class="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12"
-                                />
-                            </svg>
-                            Tutup Menu
-                        </button>
-                    </div> -->
                 </div>
             </div>
         </template>

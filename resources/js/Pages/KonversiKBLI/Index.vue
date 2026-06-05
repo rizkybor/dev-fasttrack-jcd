@@ -119,7 +119,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
 <template>
     <MainLayout>
         <!-- ── Hero ──────────────────────────────────────────────────────── -->
-        <section class="relative overflow-hidden bg-[#E63946]">
+        <section class="relative overflow-hidden bg-[#9e1f16]">
             <!-- Decorative arrow shape (right side, matches site pattern) -->
             <img
                 src="/icons/left-arrow.svg"
@@ -196,7 +196,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                             <a
                                 href="/files/tabel-konversi-2020-x-2025.pdf"
                                 download
-                                class="inline-flex items-center gap-2.5 rounded-lg border-2 border-white bg-transparent px-6 py-3 text-[14px] font-semibold text-white hover:bg-white hover:text-[#E63946] transition-all duration-200"
+                                class="inline-flex items-center gap-2.5 rounded-lg border-2 border-white bg-transparent px-6 py-3 text-[14px] font-semibold text-white hover:bg-white hover:text-[#9e1f16] transition-all duration-200"
                             >
                                 Download KBLI 2025
                                 <svg
@@ -282,7 +282,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                 v-model="searchQuery"
                                 type="text"
                                 placeholder="Cari berdasarkan kode 5 digit atau kata kunci uraian usaha."
-                                class="w-full pl-10 pr-4 py-2.5 text-[13px] border border-[#D9DAD8] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E63946]/20 focus:border-[#E63946] placeholder-[#9CA3AF] bg-white"
+                                class="w-full pl-10 pr-4 py-2.5 text-[13px] border border-[#D9DAD8] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9e1f16]/20 focus:border-[#9e1f16] placeholder-[#9CA3AF] bg-white"
                             />
                         </div>
 
@@ -321,7 +321,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                     :class="[
                                         'w-full text-left px-4 py-2 text-[13px] hover:bg-[#FEF9F9] transition-colors',
                                         filterKategori === opt
-                                            ? 'text-[#E63946] font-semibold'
+                                            ? 'text-[#9e1f16] font-semibold'
                                             : 'text-[#1A1B18]',
                                     ]"
                                 >
@@ -337,7 +337,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                         class="flex flex-col items-center justify-center py-16 gap-3"
                     >
                         <div
-                            class="w-8 h-8 border-2 border-[#E63946] border-t-transparent rounded-full animate-spin"
+                            class="w-8 h-8 border-2 border-[#9e1f16] border-t-transparent rounded-full animate-spin"
                         ></div>
                         <p class="text-[13px] text-[#686964]">
                             Memuat data konversi KBLI...
@@ -502,7 +502,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                     <select
                                         v-model="perPage"
                                         @change="currentPage = 1"
-                                        class="appearance-none border border-[#D9DAD8] rounded-lg px-3 py-1.5 pr-7 text-[12px] bg-white text-[#1A1B18] focus:outline-none focus:ring-2 focus:ring-[#E63946]/20 cursor-pointer"
+                                        class="appearance-none border border-[#D9DAD8] rounded-lg px-3 py-1.5 pr-7 text-[12px] bg-white text-[#1A1B18] focus:outline-none focus:ring-2 focus:ring-[#9e1f16]/20 cursor-pointer"
                                     >
                                         <option :value="6">6</option>
                                         <option :value="10">10</option>
@@ -530,7 +530,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
 
                 <!-- ── Footer CTA ──────────────────────────────────────────── -->
                 <div
-                    class="relative overflow-hidden rounded-2xl bg-[#E63946] px-6 py-12 sm:px-10 sm:py-14"
+                    class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-12 sm:px-10 sm:py-14"
                 >
                     <img
                         src="/icons/ft-docs.svg"
@@ -577,6 +577,6 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
     @apply flex items-center justify-center w-8 h-8 rounded-lg text-[13px] text-[#686964] border border-[#D9DAD8] bg-white hover:bg-[#F9F9F9] transition-colors disabled:opacity-40 disabled:cursor-not-allowed;
 }
 .pag-btn--active {
-    @apply bg-[#E63946] text-white border-[#E63946] font-semibold hover:bg-[#E63946];
+    @apply bg-[#9e1f16] text-white border-[#9e1f16] font-semibold hover:bg-[#9e1f16];
 }
 </style>

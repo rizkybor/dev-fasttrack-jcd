@@ -114,7 +114,7 @@ const isLeaf = computed(
 <template>
     <MainLayout>
          <!-- ── Hero ──────────────────────────────────────────────────────── -->
-        <section class="relative overflow-hidden bg-[#E63946]">
+        <section class="relative overflow-hidden bg-[#9e1f16]">
             <!-- Decorative arrow shape (right side, matches site pattern) -->
             <img
                 src="/icons/left-arrow.svg"
@@ -155,7 +155,7 @@ const isLeaf = computed(
                             <a
                                 href="/files/panduan-kbli.pdf"
                                 download
-                                class="inline-flex items-center gap-2.5 rounded-lg border-2 border-white bg-transparent px-6 py-3 text-[14px] font-semibold text-white hover:bg-white hover:text-[#E63946] transition-all duration-200"
+                                class="inline-flex items-center gap-2.5 rounded-lg border-2 border-white bg-transparent px-6 py-3 text-[14px] font-semibold text-white hover:bg-white hover:text-[#9e1f16] transition-all duration-200"
                             >
                                 Download KBLI 2025
                                 <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -192,7 +192,7 @@ const isLeaf = computed(
                         <img
                             src="/icons/ft-docs.svg"
                             alt=""
-                            class="h-8 w-8 text-[#E63946]"
+                            class="h-8 w-8 text-[#9e1f16]"
                             onerror="
                                 this.style.display = 'none';
                                 this.nextElementSibling.style.display = 'block';
@@ -224,7 +224,7 @@ const isLeaf = computed(
                                     v-model="globalSearch"
                                     type="text"
                                     placeholder="Cari Kode KBLI atau Nama Kegiatan"
-                                    class="w-full pl-10 pr-4 py-2.5 text-[13px] border border-[#E5E7EB] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E63946]/20 focus:border-[#E63946] placeholder-[#9CA3AF] bg-white"
+                                    class="w-full pl-10 pr-4 py-2.5 text-[13px] border border-[#E5E7EB] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9e1f16]/20 focus:border-[#9e1f16] placeholder-[#9CA3AF] bg-white"
                                 />
                             </div>
                             <!-- Filter dropdown placeholder -->
@@ -255,7 +255,7 @@ const isLeaf = computed(
                         class="px-6 py-16 flex flex-col items-center gap-3"
                     >
                         <div
-                            class="w-7 h-7 border-2 border-[#E63946] border-t-transparent rounded-full animate-spin"
+                            class="w-7 h-7 border-2 border-[#9e1f16] border-t-transparent rounded-full animate-spin"
                         ></div>
                         <p class="text-[13px] text-[#686964]">
                             Memuat data KBLI...
@@ -311,14 +311,14 @@ const isLeaf = computed(
                                 >
                                     <!-- Kode badge -->
                                     <span
-                                        class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-lg text-[13px] font-extrabold bg-[#F3F4F6] text-[#374151] group-hover:bg-[#FAD9DA] group-hover:text-[#E63946] transition-colors"
+                                        class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-lg text-[13px] font-extrabold bg-[#F3F4F6] text-[#374151] group-hover:bg-[#FAD9DA] group-hover:text-[#9e1f16] transition-colors"
                                     >
                                         {{ getKode(item) }}
                                     </span>
 
                                     <!-- Nama -->
                                     <span
-                                        class="flex-1 text-[14px] font-medium text-[#1A1B18] group-hover:text-[#E63946] transition-colors"
+                                        class="flex-1 text-[14px] font-medium text-[#1A1B18] group-hover:text-[#9e1f16] transition-colors"
                                     >
                                         {{ item.nama }}
                                     </span>
@@ -361,7 +361,7 @@ const isLeaf = computed(
                                 class="flex items-center gap-0 border-b border-[#E5E7EB]"
                             >
                                 <div
-                                    class="flex items-center justify-center bg-[#E63946] px-5 py-5 min-w-[72px]"
+                                    class="flex items-center justify-center bg-[#9e1f16] px-5 py-5 min-w-[72px]"
                                 >
                                     <span
                                         class="text-[15px] font-extrabold text-white text-center"
@@ -410,16 +410,16 @@ const isLeaf = computed(
                                     <div
                                         v-for="(anc, idx) in ancestors"
                                         :key="idx"
-                                        class="flex items-center gap-3 px-4 py-3 rounded-xl border border-[#E5E7EB] bg-white hover:border-[#E63946]/30 hover:bg-[#FEF9F9] cursor-pointer transition-all group"
+                                        class="flex items-center gap-3 px-4 py-3 rounded-xl border border-[#E5E7EB] bg-white hover:border-[#9e1f16]/30 hover:bg-[#FEF9F9] cursor-pointer transition-all group"
                                         @click="goToAncestor(idx)"
                                     >
                                         <span
-                                            class="flex-shrink-0 inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-[12px] font-extrabold min-w-[40px] text-center bg-[#F3F4F6] text-[#374151] group-hover:bg-[#FAD9DA] group-hover:text-[#E63946] transition-colors"
+                                            class="flex-shrink-0 inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-[12px] font-extrabold min-w-[40px] text-center bg-[#F3F4F6] text-[#374151] group-hover:bg-[#FAD9DA] group-hover:text-[#9e1f16] transition-colors"
                                         >
                                             {{ getKode(anc) }}
                                         </span>
                                         <span
-                                            class="flex-1 text-[13px] font-medium text-[#374151] group-hover:text-[#E63946] transition-colors truncate"
+                                            class="flex-1 text-[13px] font-medium text-[#374151] group-hover:text-[#9e1f16] transition-colors truncate"
                                         >
                                             {{ anc.nama }}
                                         </span>
@@ -438,16 +438,16 @@ const isLeaf = computed(
                                     <div
                                         v-for="(item, i) in filteredChildren"
                                         :key="i"
-                                        class="flex items-center gap-3 px-4 py-3 rounded-xl border border-[#E5E7EB] transition-all group cursor-pointer hover:border-[#E63946]/30 hover:bg-[#FEF9F9]"
+                                        class="flex items-center gap-3 px-4 py-3 rounded-xl border border-[#E5E7EB] transition-all group cursor-pointer hover:border-[#9e1f16]/30 hover:bg-[#FEF9F9]"
                                         @click="drillDown(item)"
                                     >
                                         <span
-                                            class="flex-shrink-0 inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-[12px] font-extrabold min-w-[48px] text-center bg-[#F3F4F6] text-[#374151] group-hover:bg-[#FAD9DA] group-hover:text-[#E63946] transition-colors"
+                                            class="flex-shrink-0 inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-[12px] font-extrabold min-w-[48px] text-center bg-[#F3F4F6] text-[#374151] group-hover:bg-[#FAD9DA] group-hover:text-[#9e1f16] transition-colors"
                                         >
                                             {{ getKode(item) }}
                                         </span>
                                         <span
-                                            class="flex-1 text-[13px] font-medium text-[#374151] group-hover:text-[#E63946] transition-colors"
+                                            class="flex-1 text-[13px] font-medium text-[#374151] group-hover:text-[#9e1f16] transition-colors"
                                         >
                                             {{ item.nama }}
                                         </span>
@@ -482,7 +482,7 @@ const isLeaf = computed(
                             <div class="px-6 pb-6">
                                 <button
                                     @click="goBack"
-                                    class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[#E63946] text-[#E63946] text-[13px] font-semibold hover:bg-[#FEF9F9] transition-all"
+                                    class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[#9e1f16] text-[#9e1f16] text-[13px] font-semibold hover:bg-[#FEF9F9] transition-all"
                                 >
                                     <svg
                                         class="h-4 w-4"
@@ -506,7 +506,7 @@ const isLeaf = computed(
 
                 <!-- ── Footer CTA ──────────────────────────────────────────── -->
                 <div
-                    class="relative overflow-hidden rounded-2xl bg-[#E63946] px-6 py-12 sm:px-10 sm:py-14"
+                    class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-12 sm:px-10 sm:py-14"
                 >
                     <img
                         src="/icons/ft-docs.svg"

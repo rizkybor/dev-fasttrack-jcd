@@ -142,7 +142,7 @@ const serviceCategories = [
                     >
                         <a
                             href="/"
-                            class="text-[#E63946] hover:text-black transition"
+                            class="text-[#9e1f16] hover:text-black transition"
                         >
                             <svg
                                 class="h-4 w-4"
@@ -159,7 +159,7 @@ const serviceCategories = [
                             </svg>
                         </a>
                         <svg
-                            class="h-3 w-3 text-[#E63946]"
+                            class="h-3 w-3 text-[#9e1f16]"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -173,11 +173,11 @@ const serviceCategories = [
                         </svg>
                         <a
                             href="/layanan"
-                            class="text-sm font-medium text-[#E63946] hover:underline"
+                            class="text-sm font-medium text-[#9e1f16] hover:underline"
                             >Layanan</a
                         >
                         <svg
-                            class="h-3 w-3 text-[#E63946]"
+                            class="h-3 w-3 text-[#9e1f16]"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -189,7 +189,7 @@ const serviceCategories = [
                                 d="M9 5l7 7-7 7"
                             />
                         </svg>
-                        <span class="text-sm font-medium text-[#E63946]"
+                        <span class="text-sm font-medium text-[#9e1f16]"
                             >Badan Usaha</span
                         >
                     </div>
@@ -313,7 +313,7 @@ const serviceCategories = [
                                 </div>
 
                                 <div
-                                    class="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#E74247] group-hover:text-white transition-colors"
+                                    class="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors"
                                 >
                                     Lihat Selengkapnya
                                     <svg
@@ -336,7 +336,7 @@ const serviceCategories = [
 
                     <!-- Footer CTA Banner -->
                     <div
-                        class="relative overflow-hidden rounded-2xl bg-[#E63946] px-6 py-12 sm:px-10 sm:py-14"
+                        class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-12 sm:px-10 sm:py-14"
                     >
                         <!-- Decorative icon -->
                         <img

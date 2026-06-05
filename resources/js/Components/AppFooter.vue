@@ -79,7 +79,7 @@ const siteTagline = computed(
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Instagram FastTrack"
-                            class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#E74247] hover:bg-primary hover:text-white transition-colors p-2"
+                            class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#9e1f16] hover:bg-primary hover:text-white transition-colors p-2"
                         >
                             <svg
                                 class="h-6 w-6"
@@ -96,7 +96,7 @@ const siteTagline = computed(
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Facebook FastTrack"
-                            class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#E74247] hover:bg-primary hover:text-white transition-colors p-2"
+                            class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#9e1f16] hover:bg-primary hover:text-white transition-colors p-2"
                         >
                             <svg
                                 class="h-6 w-6"
@@ -115,7 +115,7 @@ const siteTagline = computed(
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="X (Twitter) FastTrack"
-                            class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#E74247] hover:bg-primary hover:text-white transition-colors p-2"
+                            class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#9e1f16] hover:bg-primary hover:text-white transition-colors p-2"
                         >
                             <svg
                                 class="h-6 w-6"
@@ -132,7 +132,7 @@ const siteTagline = computed(
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="YouTube FastTrack"
-                            class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#E74247] hover:bg-primary hover:text-white transition-colors p-2"
+                            class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#9e1f16] hover:bg-primary hover:text-white transition-colors p-2"
                         >
                             <svg
                                 class="h-6 w-6"

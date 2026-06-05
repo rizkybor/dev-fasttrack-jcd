@@ -83,7 +83,7 @@ const peroranganHighlights = [
                                 :href="buildWhatsappLink(package.name)"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="inline-flex items-center justify-center rounded-full bg-[#E74247] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition hover:bg-pink-600"
+                                class="inline-flex items-center justify-center rounded-full bg-[#9e1f16] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition hover:bg-pink-600"
                             >
                                 Konsultasi via WhatsApp
                             </a>
@@ -108,7 +108,7 @@ const peroranganHighlights = [
             class="relative overflow-hidden bg-gradient-to-b from-rose-50 via-white to-white py-14 sm:py-16 lg:py-20"
         >
             <div class="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top,rgba(255,45,85,0.12),transparent_45%)]"></div>
-            <div class="absolute right-0 top-10 h-56 w-56 rounded-full bg-[#E74247]/10 blur-3xl"></div>
+            <div class="absolute right-0 top-10 h-56 w-56 rounded-full bg-[#9e1f16]/10 blur-3xl"></div>
             <div class="absolute left-0 bottom-0 h-44 w-44 rounded-full bg-slate-200/70 blur-3xl"></div>
 
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -124,7 +124,7 @@ const peroranganHighlights = [
 
                 <div class="grid items-center gap-10 lg:grid-cols-[1fr_0.92fr] lg:gap-14">
                     <div>
-                        <span class="inline-flex rounded-full border border-primary/15 bg-[#E74247]/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+                        <span class="inline-flex rounded-full border border-primary/15 bg-[#9e1f16]/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
                             Solusi Untuk Owner Tunggal
                         </span>
                         <h1 class="mt-6 max-w-4xl text-4xl font-extrabold leading-tight text-secondary sm:text-5xl lg:text-[3.6rem]">
@@ -139,7 +139,7 @@ const peroranganHighlights = [
                                 :href="buildWhatsappLink(package.name)"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="inline-flex items-center justify-center rounded-full bg-[#E74247] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition hover:bg-pink-600"
+                                class="inline-flex items-center justify-center rounded-full bg-[#9e1f16] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition hover:bg-pink-600"
                             >
                                 Konsultasi via WhatsApp
                             </a>
@@ -168,7 +168,7 @@ const peroranganHighlights = [
                     </div>
 
                     <div class="relative">
-                        <div class="absolute -right-4 top-8 hidden h-48 w-48 rounded-full bg-[#E74247]/10 blur-3xl lg:block"></div>
+                        <div class="absolute -right-4 top-8 hidden h-48 w-48 rounded-full bg-[#9e1f16]/10 blur-3xl lg:block"></div>
                         <div class="overflow-hidden rounded-[2rem] border border-gray-100 bg-white p-3 shadow-xl">
                             <img
                                 :src="package.image"
@@ -176,7 +176,7 @@ const peroranganHighlights = [
                                 class="h-[320px] w-full rounded-[1.5rem] object-cover sm:h-[420px] lg:h-[500px]"
                             >
                             <div class="absolute inset-x-8 bottom-8 rounded-[1.5rem] border border-white/80 bg-white/95 p-6 shadow-lg backdrop-blur">
-                                <div class="inline-flex rounded-full bg-[#E74247]/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                                <div class="inline-flex rounded-full bg-[#9e1f16]/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-primary">
                                     {{ package.tag }}
                                 </div>
                                 <div class="mt-4 text-2xl font-extrabold leading-snug text-secondary">{{ package.name }}</div>
@@ -186,7 +186,7 @@ const peroranganHighlights = [
                                         :key="highlight"
                                         class="flex items-start gap-3 text-sm leading-7 text-gray-600"
                                     >
-                                        <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#E74247]/10 text-primary">
+                                        <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#9e1f16]/10 text-primary">
                                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                             </svg>
@@ -240,7 +240,7 @@ const peroranganHighlights = [
                                     :key="benefit"
                                     class="flex items-start gap-3 text-sm leading-7 text-gray-600"
                                 >
-                                    <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#E74247]/10 text-primary">
+                                    <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#9e1f16]/10 text-primary">
                                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                         </svg>
@@ -258,7 +258,7 @@ const peroranganHighlights = [
                                     :key="requirement"
                                     class="flex items-start gap-3 text-sm leading-7 text-gray-600"
                                 >
-                                    <span class="mt-2 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#E74247]"></span>
+                                    <span class="mt-2 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#9e1f16]"></span>
                                     <span>{{ requirement }}</span>
                                 </li>
                             </ul>
@@ -287,7 +287,7 @@ const peroranganHighlights = [
                         :key="item.title"
                         class="rounded-[1.75rem] border border-gray-100 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                     >
-                        <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#E74247]/10 text-primary">
+                        <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#9e1f16]/10 text-primary">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path
                                     stroke-linecap="round"
@@ -320,7 +320,7 @@ const peroranganHighlights = [
                         :href="buildWhatsappLink(package.name)"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="inline-flex items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-bold text-primary transition hover:bg-[#E74247] hover:text-white"
+                        class="inline-flex items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-bold text-primary transition hover:bg-[#9e1f16] hover:text-white"
                     >
                         Konsultasi Struktur Paket
                     </a>
@@ -339,7 +339,7 @@ const peroranganHighlights = [
                         <div class="absolute inset-0 bg-gradient-to-b from-white/92 via-white/95 to-white"></div>
                         <div class="h-1.5 w-full bg-gradient-to-r from-primary via-pink-400 to-secondary"></div>
                         <div class="relative z-10 flex h-full flex-col p-6">
-                            <div class="inline-flex self-start rounded-full bg-[#E74247]/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+                            <div class="inline-flex self-start rounded-full bg-[#9e1f16]/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary">
                                 {{ plan.highlight }}
                             </div>
                             <h3 class="mt-4 text-2xl font-bold leading-tight text-secondary">{{ plan.name }}</h3>
@@ -362,7 +362,7 @@ const peroranganHighlights = [
                                         :key="item"
                                         class="flex items-start gap-3 text-sm leading-7 text-gray-600"
                                     >
-                                        <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#E74247]/10 text-primary">
+                                        <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#9e1f16]/10 text-primary">
                                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                             </svg>
@@ -372,7 +372,7 @@ const peroranganHighlights = [
                                 </div>
                             </div>
 
-                            <div class="my-4 rounded-[1.35rem] border border-primary/10 bg-[#E74247]/5 p-4 text-sm leading-7 text-gray-600">
+                            <div class="my-4 rounded-[1.35rem] border border-primary/10 bg-[#9e1f16]/5 p-4 text-sm leading-7 text-gray-600">
                                 <span class="font-bold text-secondary">Catatan:</span> {{ plan.note }}
                             </div>
 
@@ -380,7 +380,7 @@ const peroranganHighlights = [
                                 :href="buildWhatsappLink(plan.name)"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="mt-auto inline-flex items-center justify-center rounded-full bg-secondary px-5 py-3 text-sm font-bold text-white transition hover:bg-[#E74247]"
+                                class="mt-auto inline-flex items-center justify-center rounded-full bg-secondary px-5 py-3 text-sm font-bold text-white transition hover:bg-[#9e1f16]"
                             >
                                 Konsultasi via WhatsApp
                             </a>
@@ -417,7 +417,7 @@ const peroranganHighlights = [
                                 :key="benefit"
                                 class="flex items-start gap-3 text-sm leading-7 text-gray-600"
                             >
-                                <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#E74247]/10 text-primary">
+                                <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#9e1f16]/10 text-primary">
                                     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                     </svg>
@@ -469,7 +469,7 @@ const peroranganHighlights = [
                                 </h3>
                                 <p class="mt-3 text-sm leading-7 text-gray-600">{{ plan.subtitle }}</p>
                                 <div class="mt-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400">Harga</div>
-                                <div v-if="plan.promo_price" class="mt-3 inline-flex rounded-full bg-[#E74247]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
+                                <div v-if="plan.promo_price" class="mt-3 inline-flex rounded-full bg-[#9e1f16]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
                                     {{ plan.promo_price }}
                                 </div>
                                 <div class="mt-3 text-lg font-bold text-secondary">
@@ -487,7 +487,7 @@ const peroranganHighlights = [
                                         :key="item"
                                         class="flex items-start gap-3 rounded-[1rem] bg-white/90 px-4 py-3 text-sm leading-7 text-gray-600 shadow-[0_6px_16px_rgba(15,23,42,0.03)]"
                                     >
-                                        <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#E74247]/10 text-primary">
+                                        <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#9e1f16]/10 text-primary">
                                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                             </svg>
@@ -506,7 +506,7 @@ const peroranganHighlights = [
                                     :href="buildWhatsappLink(plan.name)"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    class="inline-flex min-h-[3.5rem] w-full items-center justify-center rounded-full bg-[#E74247] px-5 py-3 text-center text-sm font-bold leading-none text-white shadow-md shadow-primary/20 transition duration-200 hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-lg hover:shadow-primary/30"
+                                    class="inline-flex min-h-[3.5rem] w-full items-center justify-center rounded-full bg-[#9e1f16] px-5 py-3 text-center text-sm font-bold leading-none text-white shadow-md shadow-primary/20 transition duration-200 hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-lg hover:shadow-primary/30"
                                 >
                                     Konsultasi via WhatsApp
                                 </a>
@@ -538,7 +538,7 @@ const peroranganHighlights = [
                         class="grid gap-4 border-t border-gray-100 px-6 py-6 md:grid-cols-[0.9fr_1fr_1fr] md:gap-6 md:px-8"
                     >
                         <div class="text-base font-bold text-secondary">{{ item.aspect }}</div>
-                        <div class="rounded-2xl bg-[#E74247]/5 px-4 py-4 text-sm leading-7 text-gray-700 md:bg-transparent md:px-0 md:py-0">
+                        <div class="rounded-2xl bg-[#9e1f16]/5 px-4 py-4 text-sm leading-7 text-gray-700 md:bg-transparent md:px-0 md:py-0">
                             {{ item.perorangan }}
                         </div>
                         <div class="rounded-2xl bg-gray-50 px-4 py-4 text-sm leading-7 text-gray-700 md:bg-transparent md:px-0 md:py-0">
@@ -579,7 +579,7 @@ const peroranganHighlights = [
                                 :key="requirement"
                                 class="flex items-start gap-3 rounded-[1.25rem] border border-white/10 bg-white/5 px-5 py-4 text-sm leading-7 text-slate-100"
                             >
-                                <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#E74247]/20 text-primary">
+                                <span class="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#9e1f16]/20 text-primary">
                                     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                     </svg>
@@ -607,7 +607,7 @@ const peroranganHighlights = [
                         :key="step"
                         :class="isPersekutuanModal ? 'rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-sm backdrop-blur' : 'rounded-[1.75rem] border border-gray-100 bg-white p-6 shadow-sm'"
                     >
-                        <div :class="isPersekutuanModal ? 'inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E74247] text-lg font-bold text-white' : 'inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-lg font-bold text-white'">
+                        <div :class="isPersekutuanModal ? 'inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#9e1f16] text-lg font-bold text-white' : 'inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-lg font-bold text-white'">
                             {{ index + 1 }}
                         </div>
                         <p :class="isPersekutuanModal ? 'mt-5 text-sm leading-7 text-slate-200' : 'mt-5 text-sm leading-7 text-gray-600'">{{ step }}</p>
@@ -629,7 +629,7 @@ const peroranganHighlights = [
                             :href="buildWhatsappLink(package.name)"
                             target="_blank"
                             rel="noopener noreferrer"
-                            :class="isPersekutuanModal ? 'mt-8 inline-flex rounded-full bg-[#E74247] px-6 py-3 font-bold text-white transition hover:bg-pink-600' : 'mt-8 inline-flex rounded-full bg-[#E74247] px-6 py-3 font-bold text-white transition hover:bg-pink-600'"
+                            :class="isPersekutuanModal ? 'mt-8 inline-flex rounded-full bg-[#9e1f16] px-6 py-3 font-bold text-white transition hover:bg-pink-600' : 'mt-8 inline-flex rounded-full bg-[#9e1f16] px-6 py-3 font-bold text-white transition hover:bg-pink-600'"
                         >
                             Hubungi FastTrack
                         </a>
@@ -692,7 +692,7 @@ const peroranganHighlights = [
                                     :href="buildWhatsappLink(item.name)"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    class="inline-flex items-center justify-center rounded-full bg-[#E74247] px-4 py-3 text-sm font-bold text-white transition hover:bg-pink-600"
+                                    class="inline-flex items-center justify-center rounded-full bg-[#9e1f16] px-4 py-3 text-sm font-bold text-white transition hover:bg-pink-600"
                                 >
                                     Konsultasi
                                 </a>

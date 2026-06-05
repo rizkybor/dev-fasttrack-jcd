@@ -284,7 +284,7 @@ const serviceCategories = [
 <template>
     <MainLayout>
         <!-- Hero Section - Services Page -->
-        <section class="relative overflow-hidden bg-[#E63946]">
+        <section class="relative overflow-hidden bg-[#9e1f16]">
             <!-- Diagonal white chevron arrow-left - full height -->
             <svg
                 class="absolute right-[0%] -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block"
@@ -317,7 +317,7 @@ const serviceCategories = [
                             >
                                 <a
                                     href="/"
-                                    class="text-[#E63946] hover:text-black transition"
+                                    class="text-[#9e1f16] hover:text-black transition"
                                 >
                                     <svg
                                         class="h-4 w-4"
@@ -334,7 +334,7 @@ const serviceCategories = [
                                     </svg>
                                 </a>
                                 <svg
-                                    class="h-3 w-3 text-[#E63946]"
+                                    class="h-3 w-3 text-[#9e1f16]"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -346,7 +346,7 @@ const serviceCategories = [
                                         d="M9 5l7 7-7 7"
                                     />
                                 </svg>
-                                <span class="text-sm font-medium text-[#E63946]"
+                                <span class="text-sm font-medium text-[#9e1f16]"
                                     >Layanan</span
                                 >
                             </div>
@@ -387,7 +387,7 @@ const serviceCategories = [
                                 "
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="group inline-flex items-center gap-2.5 rounded-md border-2 border-white bg-transparent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#E63946]"
+                                class="group inline-flex items-center gap-2.5 rounded-md border-2 border-white bg-transparent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#9e1f16]"
                             >
                                 Konsultasi via WhatsApp
                                 <svg
@@ -521,7 +521,7 @@ const serviceCategories = [
 
                                     <!-- CTA Button -->
                                     <div
-                                        class="mt-3 flex items-center justify-center gap-2 rounded-lg border border-primary h-[40px] text-[13px] font-semibold text-primary transition-colors group-hover:bg-[#E74247] group-hover:text-white group-hover:border-[#E74247]"
+                                        class="mt-3 flex items-center justify-center gap-2 rounded-lg border border-primary h-[40px] text-[13px] font-semibold text-primary transition-colors group-hover:bg-[#9e1f16] group-hover:text-white group-hover:border-[#9e1f16]"
                                     >
                                         Selengkapnya
                                         <svg
@@ -545,7 +545,7 @@ const serviceCategories = [
 
                     <!-- Footer CTA Banner -->
                     <div
-                        class="relative overflow-hidden rounded-2xl bg-[#E63946] px-6 py-12 sm:px-10 sm:py-14"
+                        class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-12 sm:px-10 sm:py-14"
                     >
                         <!-- Decorative icon -->
                         <img

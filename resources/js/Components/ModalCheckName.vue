@@ -138,7 +138,7 @@ const submit = () => {
                         </div>
                         <button
                             type="button"
-                            class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg text-[#E74247] hover:bg-[#FEF0F0] transition-colors"
+                            class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg text-[#9e1f16] hover:bg-[#FEF0F0] transition-colors"
                             @click="close"
                             aria-label="Tutup"
                         >
@@ -176,13 +176,13 @@ const submit = () => {
                                 class="w-full h-11 px-4 rounded-xl border text-[14px] text-[#1A1B18] placeholder-[#AAAAAA] outline-none transition-all"
                                 :class="
                                     namaPTError
-                                        ? 'border-[#E74247] bg-[#FEF8F8] focus:ring-2 focus:ring-[#E74247]/10'
+                                        ? 'border-[#9e1f16] bg-[#FEF8F8] focus:ring-2 focus:ring-[#9e1f16]/10'
                                         : 'border-[#D9DAD8] bg-white focus:border-[#22C55E] focus:ring-2 focus:ring-[#22C55E]/10'
                                 "
                             />
                             <p
                                 v-if="namaPTError"
-                                class="mt-1.5 text-[12px] text-[#E74247]"
+                                class="mt-1.5 text-[12px] text-[#9e1f16]"
                             >
                                 {{ namaPTError }}
                             </p>
@@ -209,14 +209,14 @@ const submit = () => {
                                 class="w-full h-11 px-4 rounded-xl border text-[14px] text-[#1A1B18] placeholder-[#AAAAAA] outline-none transition-all"
                                 :class="
                                     emailError
-                                        ? 'border-[#E74247] bg-[#FEF8F8] focus:ring-2 focus:ring-[#E74247]/10'
+                                        ? 'border-[#9e1f16] bg-[#FEF8F8] focus:ring-2 focus:ring-[#9e1f16]/10'
                                         : 'border-[#D9DAD8] bg-white focus:border-[#22C55E] focus:ring-2 focus:ring-[#22C55E]/10'
                                 "
                                 @blur="touchedEmail = true"
                             />
                             <p
                                 v-if="emailError"
-                                class="mt-1.5 text-[12px] text-[#E74247]"
+                                class="mt-1.5 text-[12px] text-[#9e1f16]"
                             >
                                 {{ emailError }}
                             </p>
@@ -234,14 +234,14 @@ const submit = () => {
                                 class="w-full h-11 px-4 rounded-xl border text-[14px] text-[#1A1B18] placeholder-[#AAAAAA] outline-none transition-all"
                                 :class="
                                     teleponError
-                                        ? 'border-[#E74247] bg-[#FEF8F8] focus:ring-2 focus:ring-[#E74247]/10'
+                                        ? 'border-[#9e1f16] bg-[#FEF8F8] focus:ring-2 focus:ring-[#9e1f16]/10'
                                         : 'border-[#D9DAD8] bg-white focus:border-[#22C55E] focus:ring-2 focus:ring-[#22C55E]/10'
                                 "
                                 @blur="touchedTelepon = true"
                             />
                             <p
                                 v-if="teleponError"
-                                class="mt-1.5 text-[12px] text-[#E74247]"
+                                class="mt-1.5 text-[12px] text-[#9e1f16]"
                             >
                                 {{ teleponError }}
                             </p>

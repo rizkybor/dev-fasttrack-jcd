@@ -153,7 +153,7 @@ const reset = () => {
                         </div>
                         <button
                             type="button"
-                            class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg text-[#E74247] hover:bg-[#FEF0F0] transition-colors"
+                            class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg text-[#9e1f16] hover:bg-[#FEF0F0] transition-colors"
                             @click="close"
                             aria-label="Tutup"
                         >
@@ -190,7 +190,7 @@ const reset = () => {
                                 v-model="keyword"
                                 type="text"
                                 placeholder="Contoh: Teknologi"
-                                class="w-full h-11 px-4 rounded-xl border border-[#D9DAD8] bg-white text-[14px] text-[#1A1B18] placeholder-[#AAAAAA] outline-none focus:border-[#E74247] focus:ring-2 focus:ring-[#E74247]/10 transition-all"
+                                class="w-full h-11 px-4 rounded-xl border border-[#D9DAD8] bg-white text-[14px] text-[#1A1B18] placeholder-[#AAAAAA] outline-none focus:border-[#9e1f16] focus:ring-2 focus:ring-[#9e1f16]/10 transition-all"
                                 @keydown.enter="generate"
                             />
                         </div>
@@ -199,7 +199,7 @@ const reset = () => {
                         <div class="relative">
                             <select
                                 v-model="selectedBidang"
-                                class="w-full h-11 px-4 pr-10 rounded-xl border border-[#D9DAD8] bg-white text-[14px] outline-none focus:border-[#E74247] focus:ring-2 focus:ring-[#E74247]/10 transition-all appearance-none cursor-pointer"
+                                class="w-full h-11 px-4 pr-10 rounded-xl border border-[#D9DAD8] bg-white text-[14px] outline-none focus:border-[#9e1f16] focus:ring-2 focus:ring-[#9e1f16]/10 transition-all appearance-none cursor-pointer"
                                 :class="
                                     selectedBidang
                                         ? 'text-[#1A1B18]'
@@ -240,7 +240,7 @@ const reset = () => {
                             class="w-full h-12 rounded-xl font-semibold text-[14px] flex items-center justify-center gap-2 transition-all"
                             :class="
                                 canGenerate && !isLoading
-                                    ? 'bg-[#E74247] hover:bg-[#C8353A] text-white shadow-sm hover:shadow-md active:scale-[0.98]'
+                                    ? 'bg-[#9e1f16] hover:bg-[#C8353A] text-white shadow-sm hover:shadow-md active:scale-[0.98]'
                                     : 'bg-[#E5E5E0] text-[#AAAAAA] cursor-not-allowed'
                             "
                             :disabled="!canGenerate || isLoading"
@@ -310,7 +310,7 @@ const reset = () => {
                                     >
                                     <button
                                         type="button"
-                                        class="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-[#42443D] border border-[#D9DAD8] px-3 py-1.5 rounded-lg hover:border-[#E74247] hover:text-[#E74247] transition-colors"
+                                        class="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-[#42443D] border border-[#D9DAD8] px-3 py-1.5 rounded-lg hover:border-[#9e1f16] hover:text-[#9e1f16] transition-colors"
                                         @click="generate"
                                     >
                                         <svg
@@ -337,7 +337,7 @@ const reset = () => {
                                     <div
                                         v-for="(name, i) in results"
                                         :key="name"
-                                        class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl border border-[#E5E5E0] bg-[#FAFAF8] hover:border-[#E74247]/30 hover:bg-[#FEF0F0]/40 transition-all group"
+                                        class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl border border-[#E5E5E0] bg-[#FAFAF8] hover:border-[#9e1f16]/30 hover:bg-[#FEF0F0]/40 transition-all group"
                                         :style="`animation-delay: ${i * 60}ms`"
                                     >
                                         <span
@@ -346,7 +346,7 @@ const reset = () => {
                                         >
                                         <button
                                             type="button"
-                                            class="flex-shrink-0 inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#E74247] border border-[#E74247]/40 px-3 py-1.5 rounded-lg hover:bg-[#E74247] hover:text-white transition-all whitespace-nowrap"
+                                            class="flex-shrink-0 inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#9e1f16] border border-[#9e1f16]/40 px-3 py-1.5 rounded-lg hover:bg-[#9e1f16] hover:text-white transition-all whitespace-nowrap"
                                             @click="emit('check-name', name)"
                                         >
                                             <svg
