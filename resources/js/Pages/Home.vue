@@ -479,7 +479,7 @@ const virtualOffices = [
                     <div class="flex flex-wrap gap-3">
                         <a
                             href="/kontak"
-                            class="inline-flex items-center gap-2 bg-[#E74247] hover:bg-red-600 text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors shadow-md"
+                            class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors shadow-md"
                         >
                             Hubungi Kami
                             <svg
@@ -511,7 +511,7 @@ const virtualOffices = [
         <!-- <section class="relative z-20 mb-5">
             <div class="max-w-3xl ml-auto px-8 -mt-12">
                 <div
-                    class="bg-[#E74247] rounded-xl px-6 py-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-4"
+                    class="bg-[#9e1f16] rounded-xl px-6 py-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-4"
                 >
                     <div class="flex items-center gap-4">
                         <div class="text-center">
@@ -573,7 +573,7 @@ const virtualOffices = [
                     xmlns="http://www.w3.org/2000/svg"
                     preserveAspectRatio="none"
                 >
-                    <path d="M0 0H100L0 32Z" fill="#E74247" />
+                    <path d="M0 0H100L0 32Z" fill="#9e1f16" />
                 </svg>
             </div>
         </section> -->
@@ -582,7 +582,7 @@ const virtualOffices = [
         <section class="relative z-20 mb-5">
             <div class="max-w-3xl ml-auto px-0 sm:px-8 -mt-6 sm:-mt-12">
                 <div
-                    class="bg-[#E74247] rounded-none sm:rounded-xl px-6 py-5 flex flex-col sm:flex-wrap sm:flex-row items-center justify-center gap-y-4 sm:gap-x-6 sm:gap-y-4"
+                    class="bg-[#9e1f16] rounded-none sm:rounded-xl px-6 py-5 flex flex-col sm:flex-wrap sm:flex-row items-center justify-center gap-y-4 sm:gap-x-6 sm:gap-y-4"
                 >
                     <!-- Stat 1 -->
                     <div
@@ -669,14 +669,14 @@ const virtualOffices = [
                     xmlns="http://www.w3.org/2000/svg"
                     preserveAspectRatio="none"
                 >
-                    <path d="M0 0H100L0 32Z" fill="#E74247" />
+                    <path d="M0 0H100L0 32Z" fill="#9e1f16" />
                 </svg>
             </div>
         </section>
 
         <!-- ===== 3. VIP LINE ===== -->
         <!-- <section class="py-8">
-            <div class="bg-[#E74247]">
+            <div class="bg-[#9e1f16]">
                 <div
                     class="flex items-center justify-between px-4 sm:px-6 lg:px-[84px] h-[160px]"
                 >
@@ -722,7 +722,7 @@ const virtualOffices = [
 
                     <a
                         href="/konsultasi"
-                        class="hidden lg:inline-flex items-center justify-center gap-2 rounded-lg border border-[#F9F9F9] bg-[#E74247] px-[23px] h-[52px] hover:bg-[#d13a3f] transition-colors"
+                        class="hidden lg:inline-flex items-center justify-center gap-2 rounded-lg border border-[#F9F9F9] bg-[#9e1f16] px-[23px] h-[52px] hover:bg-[#d13a3f] transition-colors"
                     >
                         <span
                             class="text-[16px] font-semibold leading-[24px] text-[#F9F9F9]"
@@ -747,7 +747,7 @@ const virtualOffices = [
         </section> -->
         <!-- ===== 3. VIP LINE ===== -->
         <section class="py-8">
-            <div class="bg-[#E74247]">
+            <div class="bg-[#9e1f16]">
                 <div
                     class="flex flex-col sm:flex-row items-start sm:items-center justify-between px-6 sm:px-6 lg:px-[84px] py-6 sm:py-0 sm:h-[160px] gap-5 sm:gap-0"
                 >
@@ -797,7 +797,7 @@ const virtualOffices = [
                     <!-- CTA Button — tampil di semua ukuran -->
                     <a
                         href="/konsultasi"
-                        class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg border border-[#F9F9F9] bg-[#E74247] px-[23px] h-[48px] sm:h-[52px] hover:bg-[#d13a3f] transition-colors"
+                        class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg border border-[#F9F9F9] bg-[#9e1f16] px-[23px] h-[48px] sm:h-[52px] hover:bg-[#d13a3f] transition-colors"
                     >
                         <span
                             class="text-[15px] sm:text-[16px] font-semibold leading-[24px] text-[#F9F9F9]"
@@ -883,7 +883,7 @@ const virtualOffices = [
                             </div>
                             <a
                                 :href="category.path"
-                                class="hidden sm:inline-flex items-center gap-2 rounded-lg px-4 py-3 text-[14px] font-semibold text-primary hover:bg-[#E74247]/5 transition-colors"
+                                class="hidden sm:inline-flex items-center gap-2 rounded-lg px-4 py-3 text-[14px] font-semibold text-primary hover:bg-[#9e1f16]/5 transition-colors"
                             >
                                 <svg
                                     class="w-4 h-4"
@@ -962,7 +962,7 @@ const virtualOffices = [
                                 </div>
 
                                 <div
-                                    class="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#E74247] group-hover:text-white transition-colors"
+                                    class="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors"
                                 >
                                     Lihat Selengkapnya
                                     <svg
@@ -986,7 +986,7 @@ const virtualOffices = [
                     <div class="flex items-center justify-center">
                         <a
                             href="/layanan"
-                            class="inline-flex items-center justify-center gap-2 border border-primary rounded-lg px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary hover:bg-[#E74247] hover:text-white transition-colors"
+                            class="inline-flex items-center justify-center gap-2 border border-primary rounded-lg px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary hover:bg-[#9e1f16] hover:text-white transition-colors"
                         >
                             Lihat Semua Layanan
                             <svg
@@ -1068,7 +1068,7 @@ const virtualOffices = [
                             </div>
                         </div>
                         <div
-                            class="flex items-center justify-center rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#E74247] group-hover:text-white transition-colors"
+                            class="flex items-center justify-center rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors"
                         >
                             Dapatkan Promo
                         </div>
@@ -1265,7 +1265,7 @@ const virtualOffices = [
         </section>
 
         <!-- ===== 7. WHY CHOOSE US ===== -->
-        <section class="py-[52px] bg-[#E74247]">
+        <section class="py-[52px] bg-[#9e1f16]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                 <div class="flex flex-col items-center gap-8">
                     <div
@@ -1667,7 +1667,7 @@ const virtualOffices = [
                         </h2>
                         <a
                             href="/artikel"
-                            class="inline-flex items-center gap-2 border border-[#E74247] text-[#E74247] hover:bg-[#E74247] hover:text-white font-semibold text-sm px-[11px] h-[44px] rounded-lg transition-colors"
+                            class="inline-flex items-center gap-2 border border-[#9e1f16] text-[#9e1f16] hover:bg-[#9e1f16] hover:text-white font-semibold text-sm px-[11px] h-[44px] rounded-lg transition-colors"
                         >
                             Lihat Semua Artikel
                             <svg
@@ -1731,7 +1731,7 @@ const virtualOffices = [
                             </div>
                             <a
                                 href="/artikel/1"
-                                class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E74247] hover:underline w-max"
+                                class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#9e1f16] hover:underline w-max"
                             >
                                 Baca Selengkapnya
                                 <svg
@@ -1792,7 +1792,7 @@ const virtualOffices = [
                             </div>
                             <a
                                 href="/artikel/2"
-                                class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#E74247] hover:underline w-max"
+                                class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#9e1f16] hover:underline w-max"
                             >
                                 Baca Selengkapnya
                                 <svg
@@ -2004,7 +2004,7 @@ const virtualOffices = [
                                         />
                                         <path
                                             d="M34 19C34 15.5 32.5 12.3 30 10"
-                                            stroke="#E74247"
+                                            stroke="#9e1f16"
                                             stroke-width="2.5"
                                             stroke-linecap="round"
                                         />
@@ -2030,13 +2030,13 @@ const virtualOffices = [
                                         >Saya telah membaca dan setuju
                                     </span>
                                     <span
-                                        class="text-[12px] text-[#E74247] cursor-pointer"
+                                        class="text-[12px] text-[#9e1f16] cursor-pointer"
                                         >Ketentuan Legal*</span
                                     >
                                 </label>
                                 <button
                                     type="submit"
-                                    class="w-full h-[44px] flex items-center justify-center rounded-lg bg-[#E74247] hover:bg-red-600 transition-colors"
+                                    class="w-full h-[44px] flex items-center justify-center rounded-lg bg-[#9e1f16] hover:bg-red-600 transition-colors"
                                 >
                                     <span
                                         class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9]"
@@ -2063,7 +2063,7 @@ const virtualOffices = [
                                         class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#E74247]"
+                                            class="w-5 h-5 text-[#9e1f16]"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -2095,7 +2095,7 @@ const virtualOffices = [
                                         class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#E74247]"
+                                            class="w-5 h-5 text-[#9e1f16]"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -2110,7 +2110,7 @@ const virtualOffices = [
                                     </div>
                                     <a
                                         href="tel:02173885036"
-                                        class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#E74247]"
+                                        class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#9e1f16]"
                                         >0217 3885 036</a
                                     >
                                 </div>
@@ -2119,7 +2119,7 @@ const virtualOffices = [
                                         class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#E74247]"
+                                            class="w-5 h-5 text-[#9e1f16]"
                                             fill="currentColor"
                                             viewBox="0 0 24 24"
                                         >
@@ -2130,7 +2130,7 @@ const virtualOffices = [
                                     </div>
                                     <a
                                         href="https://wa.me/6282298604144"
-                                        class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#E74247]"
+                                        class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#9e1f16]"
                                         >0822 9860 4144</a
                                     >
                                 </div>
@@ -2139,7 +2139,7 @@ const virtualOffices = [
                                         class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#E74247]"
+                                            class="w-5 h-5 text-[#9e1f16]"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -2154,7 +2154,7 @@ const virtualOffices = [
                                     </div>
                                     <a
                                         href="mailto:cs@fasttrack.legal"
-                                        class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#E74247]"
+                                        class="text-[14px] leading-[21px] text-[#1A1B18] hover:text-[#9e1f16]"
                                         >cs@fasttrack.legal</a
                                     >
                                 </div>
@@ -2174,7 +2174,7 @@ const virtualOffices = [
                             <a
                                 href="https://maps.google.com/?q=Jakarta+Business+Services+Grand+Bintaro"
                                 target="_blank"
-                                class="absolute top-[10px] right-[14px] z-10 inline-flex items-center gap-1 hover:bg-[#F9F9F9] rounded-lg px-[10px] h-[29px] shadow-sm hover:text-[#E74247] text-[#F9F9F9] bg-[#E74247] transition-colors"
+                                class="absolute top-[10px] right-[14px] z-10 inline-flex items-center gap-1 hover:bg-[#F9F9F9] rounded-lg px-[10px] h-[29px] shadow-sm hover:text-[#9e1f16] text-[#F9F9F9] bg-[#9e1f16] transition-colors"
                             >
                                 <svg
                                     class="w-4 h-4"

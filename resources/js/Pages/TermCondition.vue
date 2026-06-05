@@ -20,7 +20,7 @@ const buildWhatsappLink = (serviceName) => {
 <template>
     <MainLayout>
         <!-- Hero Section - Services Page -->
-        <section class="relative overflow-hidden bg-[#E63946]">
+        <section class="relative overflow-hidden bg-[#9e1f16]">
             <div class="ml-5">
                 <img
                     src="/icons/left-arrow.svg"

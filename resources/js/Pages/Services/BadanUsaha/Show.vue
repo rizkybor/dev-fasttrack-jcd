@@ -42,7 +42,7 @@ const toggleDoc = (key) => {
     <MainLayout>
         <!-- Hero Section -->
         <section
-            class="relative overflow-hidden min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] bg-[#E63946]"
+            class="relative overflow-hidden min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] bg-[#9e1f16]"
         >
             <div class="ml-5">
                 <img
@@ -62,7 +62,7 @@ const toggleDoc = (key) => {
                     >
                         <a
                             href="/"
-                            class="text-[#E63946] hover:text-black transition"
+                            class="text-[#9e1f16] hover:text-black transition"
                         >
                             <svg
                                 class="h-4 w-4"
@@ -79,7 +79,7 @@ const toggleDoc = (key) => {
                             </svg>
                         </a>
                         <svg
-                            class="h-3 w-3 text-[#E63946]"
+                            class="h-3 w-3 text-[#9e1f16]"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -93,11 +93,11 @@ const toggleDoc = (key) => {
                         </svg>
                         <a
                             href="/layanan"
-                            class="text-sm font-medium text-[#E63946] hover:underline"
+                            class="text-sm font-medium text-[#9e1f16] hover:underline"
                             >Layanan</a
                         >
                         <svg
-                            class="h-3 w-3 text-[#E63946]"
+                            class="h-3 w-3 text-[#9e1f16]"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -111,11 +111,11 @@ const toggleDoc = (key) => {
                         </svg>
                         <a
                             href="/badan-usaha"
-                            class="text-sm font-medium text-[#E63946] hover:underline"
+                            class="text-sm font-medium text-[#9e1f16] hover:underline"
                             >Badan Usaha</a
                         >
                         <svg
-                            class="h-3 w-3 text-[#E63946]"
+                            class="h-3 w-3 text-[#9e1f16]"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -127,7 +127,7 @@ const toggleDoc = (key) => {
                                 d="M9 5l7 7-7 7"
                             />
                         </svg>
-                        <span class="text-sm font-medium text-[#E63946]">{{
+                        <span class="text-sm font-medium text-[#9e1f16]">{{
                             product.name
                         }}</span>
                     </div>
@@ -2272,7 +2272,7 @@ const toggleDoc = (key) => {
         <section id="footer" class="bg-[#F7F7F5] mb-12 sm:mb-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div
-                    class="relative overflow-hidden rounded-2xl bg-[#E63946] px-6 py-12 sm:px-10 sm:py-14"
+                    class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-12 sm:px-10 sm:py-14"
                 >
                     <img
                         src="/icons/ft-docs.svg"
