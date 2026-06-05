@@ -21,9 +21,64 @@ const handleToolClick = (tool) => {
 };
 
 const marqueeRows = [
-    { id: "r1", reverse: false },
-    { id: "r2", reverse: true },
-    { id: "r3", reverse: false },
+  {
+    id: 1,
+    reverse: false,
+    logos: [
+      { src: "/images/klien-kami/ft-kk-1-bni.svg",         alt: "BNI" },
+      { src: "/images/klien-kami/ft-kk-2-hpplaw.svg",      alt: "HPP Law" },
+      { src: "/images/klien-kami/ft-kk-3-traveloka.svg",   alt: "Traveloka" },
+      { src: "/images/klien-kami/ft-kk-4-bd.svg",          alt: "BD" },
+      { src: "/images/klien-kami/ft-kk-5-solenis.svg",     alt: "Solenis" },
+      { src: "/images/klien-kami/ft-kk-6-holcim.svg",      alt: "Holcim" },
+      { src: "/images/klien-kami/ft-kk-7-lv.svg",          alt: "LV" },
+      { src: "/images/klien-kami/ft-kk-8-haskoning.svg",   alt: "Haskoning" },
+      { src: "/images/klien-kami/ft-kk-9-iss.svg",         alt: "ISS" },
+      { src: "/images/klien-kami/ft-kk-10-giift.svg",      alt: "Giift" },
+      { src: "/images/klien-kami/ft-kk-11-xanhsm.svg",     alt: "Xan HSM" },
+      { src: "/images/klien-kami/ft-kk-12-awantunai.svg",  alt: "Awantunai" },
+      { src: "/images/klien-kami/ft-kk-13-issfacilityservices.svg", alt: "ISS Facility Services" },
+    ],
+  },
+  {
+    id: 2,
+    reverse: true,
+    logos: [
+      { src: "/images/klien-kami/ft-kk-14-infinID.svg",           alt: "InfinID" },
+      { src: "/images/klien-kami/ft-kk-15-glico.svg",             alt: "Glico" },
+      { src: "/images/klien-kami/ft-kk-16-whiteevenbos.svg",      alt: "Whiteevenbos" },
+      { src: "/images/klien-kami/ft-kk-17-dimo.svg",              alt: "Dimo" },
+      { src: "/images/klien-kami/ft-kk-18-salestock.svg",         alt: "Salestock" },
+      { src: "/images/klien-kami/ft-kk-19-spruson.svg",           alt: "Spruson" },
+      { src: "/images/klien-kami/ft-kk-20-BKtel.svg",             alt: "BK Tel" },
+      { src: "/images/klien-kami/ft-kk-21-unilever.svg",          alt: "Unilever" },
+      { src: "/images/klien-kami/ft-kk-22-its.svg",               alt: "ITS" },
+      { src: "/images/klien-kami/ft-kk-23-smec.svg",              alt: "SMEC" },
+      { src: "/images/klien-kami/ft-kk-24-amdocs.svg",            alt: "Amdocs" },
+      { src: "/images/klien-kami/ft-kk-25-kargo.svg",             alt: "Kargo" },
+      { src: "/images/klien-kami/ft-kk-26-assegaf.svg",           alt: "Assegaf" },
+    ],
+  },
+  {
+    id: 3,
+    reverse: false,
+    logos: [
+      { src: "/images/klien-kami/ft-kk-27-asiafoundation.svg",          alt: "Asia Foundation" },
+      { src: "/images/klien-kami/ft-kk-28-apx.svg",                     alt: "APX" },
+      { src: "/images/klien-kami/ft-kk-29-maka.svg",                    alt: "Maka" },
+      { src: "/images/klien-kami/ft-kk-30-etana.svg",                   alt: "Etana" },
+      { src: "/images/klien-kami/ft-kk-31-brankas.svg",                 alt: "Brankas" },
+      { src: "/images/klien-kami/ft-kk-32-umbra.svg",                   alt: "Umbra" },
+      { src: "/images/klien-kami/ft-kk-33-azo.svg",                     alt: "Azo" },
+      { src: "/images/klien-kami/ft-kk-34-australianembassy.svg",       alt: "Australian Embassy" },
+      { src: "/images/klien-kami/ft-kk-35-yayasankemahpeduli.svg",      alt: "Yayasan Kemah Peduli" },
+      { src: "/images/klien-kami/ft-kk-36-hivos.svg",                   alt: "Hivos" },
+      { src: "/images/klien-kami/ft-kk-37-borneo.svg",                  alt: "Borneo" },
+      { src: "/images/klien-kami/ft-kk-38-aspire.svg",                  alt: "Aspire" },
+      { src: "/images/klien-kami/ft-kk-39-ollion.svg",                  alt: "Ollion" },
+      { src: "/images/klien-kami/ft-kk-40-diamond.svg",                 alt: "Diamond" },
+    ],
+  },
 ];
 
 const serviceSearch = ref("");
@@ -258,7 +313,8 @@ const tools = [
     {
         id: "cek-nama-pt",
         title: "Cek Ketersediaan Nama PT",
-        description: "Cek ketersediaan nama PT Anda sebelum mendaftar ke AHU Kemenkum RI.",
+        description:
+            "Cek ketersediaan nama PT Anda sebelum mendaftar ke AHU Kemenkum RI.",
         cta: "Cek Nama PT",
         bg: "#D6F8E6",
         iconColor: "#22C55E",
@@ -268,7 +324,8 @@ const tools = [
     {
         id: "panduan-kbli",
         title: "Panduan KBLI 2025",
-        description: "Temukan kode KBLI yang tepat untuk bidang usaha Anda berdasarkan data terbaru 2025.",
+        description:
+            "Temukan kode KBLI yang tepat untuk bidang usaha Anda berdasarkan data terbaru 2025.",
         cta: "Lihat Panduan",
         bg: "#FFF6D0",
         iconColor: "#EAB308",
@@ -288,7 +345,8 @@ const tools = [
     {
         id: "simulasi-akta",
         title: "Simulasi AKTA Pendirian",
-        description: "Simulasikan dokumen akta pendirian Perseroan Terbatas sebelum proses resmi dimulai.",
+        description:
+            "Simulasikan dokumen akta pendirian Perseroan Terbatas sebelum proses resmi dimulai.",
         cta: "Mulai Simulasi",
         bg: "#FFD4AE",
         iconColor: "#F97316",
@@ -298,7 +356,8 @@ const tools = [
     {
         id: "generator-nama",
         title: "Generator Nama",
-        description: "Kesulitan menemukan nama Perusahaan untuk PT yang mau kamu buat?",
+        description:
+            "Kesulitan menemukan nama Perusahaan untuk PT yang mau kamu buat?",
         cta: "Generate Sekarang",
         bg: "#CAF6FF",
         iconColor: "#06B6D4",
@@ -419,7 +478,7 @@ const virtualOffices = [
         </section>
 
         <!-- ===== 2. STATS DIVIDER ===== -->
-        <section class="relative z-20 mb-5">
+        <!-- <section class="relative z-20 mb-5">
             <div class="max-w-3xl ml-auto px-8 -mt-12">
                 <div
                     class="bg-[#E74247] rounded-xl px-6 py-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-4"
@@ -475,9 +534,102 @@ const virtualOffices = [
                     </div>
                 </div>
 
-                <!-- Speech bubble tail (triangle) -->
                 <svg
                     class="absolute -bottom-[30px] right-[10%] z-10"
+                    width="35"
+                    height="32"
+                    viewBox="0 0 100 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                >
+                    <path d="M0 0H100L0 32Z" fill="#E74247" />
+                </svg>
+            </div>
+        </section> -->
+
+        <!-- ===== 2. STATS DIVIDER ===== -->
+        <section class="relative z-20 mb-5">
+            <div class="max-w-3xl ml-auto px-0 sm:px-8 -mt-6 sm:-mt-12">
+                <div
+                    class="bg-[#E74247] rounded-none sm:rounded-xl px-6 py-5 flex flex-col sm:flex-wrap sm:flex-row items-center justify-center gap-y-4 sm:gap-x-6 sm:gap-y-4"
+                >
+                    <!-- Stat 1 -->
+                    <div
+                        class="flex items-center gap-4 w-full sm:w-auto justify-center"
+                    >
+                        <div class="text-center">
+                            <div
+                                class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
+                            >
+                                10.000+
+                            </div>
+                            <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
+                                Klien bisnis dilayani
+                            </div>
+                        </div>
+                        <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
+                    </div>
+
+                    <!-- Divider mobile -->
+                    <div class="w-full h-px bg-white/20 block sm:hidden"></div>
+
+                    <!-- Stat 2 -->
+                    <div
+                        class="flex items-center gap-4 w-full sm:w-auto justify-center"
+                    >
+                        <div class="text-center">
+                            <div
+                                class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
+                            >
+                                20+ Tahun
+                            </div>
+                            <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
+                                Pengalaman
+                            </div>
+                        </div>
+                        <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
+                    </div>
+
+                    <!-- Divider mobile -->
+                    <div class="w-full h-px bg-white/20 block mt-5 sm:hidden"></div>
+
+                    <!-- Stat 3 -->
+                    <div
+                        class="flex items-center gap-4 w-full sm:w-auto justify-center"
+                    >
+                        <div class="text-center">
+                            <div
+                                class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
+                            >
+                                10+
+                            </div>
+                            <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
+                                Virtual Office
+                            </div>
+                        </div>
+                        <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
+                    </div>
+
+                    <!-- Divider mobile -->
+                    <div class="w-full h-px bg-white/20 block sm:hidden"></div>
+
+                    <!-- Stat 4 -->
+                    <div class="w-full sm:w-auto text-center">
+                        <div
+                            class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
+                        >
+                            99.9%
+                        </div>
+                        <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
+                            Kepuasan Klien
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speech bubble tail — desktop only -->
+                <svg
+                    class="absolute -bottom-[30px] right-[10%] z-10 hidden sm:block"
                     width="35"
                     height="32"
                     viewBox="0 0 100 32"
@@ -491,7 +643,7 @@ const virtualOffices = [
         </section>
 
         <!-- ===== 3. VIP LINE ===== -->
-        <section class="py-8">
+        <!-- <section class="py-8">
             <div class="bg-[#E74247]">
                 <div
                     class="flex items-center justify-between px-4 sm:px-6 lg:px-[84px] h-[160px]"
@@ -546,6 +698,82 @@ const virtualOffices = [
                         >
                         <svg
                             class="w-6 h-6 text-[#F9F9F9]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section> -->
+        <!-- ===== 3. VIP LINE ===== -->
+        <section class="py-8">
+            <div class="bg-[#E74247]">
+                <div
+                    class="flex flex-col sm:flex-row items-start sm:items-center justify-between px-6 sm:px-6 lg:px-[84px] py-6 sm:py-0 sm:h-[160px] gap-5 sm:gap-0"
+                >
+                    <!-- Teks -->
+                    <div class="inline-flex items-end gap-2">
+                        <div class="inline-flex flex-col items-start gap-2">
+                            <div
+                                class="inline-flex items-center justify-center rounded-lg bg-[#FEFEFE] px-4 py-2"
+                            >
+                                <span
+                                    class="text-[20px] sm:text-[28px] font-bold leading-[1.4] text-primary"
+                                >
+                                    FASTRACK - VIP LINE&nbsp;
+                                </span>
+                            </div>
+                            <p
+                                class="text-[16px] sm:text-[24px] font-semibold leading-[1.5] text-[#F9F9F9]"
+                            >
+                                Badan Usaha SELESAI DALAM 1 HARI
+                            </p>
+                        </div>
+                        <p
+                            class="text-[12px] sm:text-[14px] font-light leading-[21px] text-[#F9F9F9] underline italic"
+                        >
+                            * (S&K BERLAKU)
+                        </p>
+                    </div>
+
+                    <!-- Dekoratif arrow — desktop only -->
+                    <svg
+                        class="hidden lg:block flex-shrink-0"
+                        width="250"
+                        height="200"
+                        viewBox="0 0 90 100"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M40 0L0 50L40 100"
+                            stroke="#F9F9F9"
+                            stroke-width="20"
+                            stroke-linecap="butt"
+                            stroke-linejoin="miter"
+                        />
+                    </svg>
+
+                    <!-- CTA Button — tampil di semua ukuran -->
+                    <a
+                        href="/konsultasi"
+                        class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg border border-[#F9F9F9] bg-[#E74247] px-[23px] h-[48px] sm:h-[52px] hover:bg-[#d13a3f] transition-colors"
+                    >
+                        <span
+                            class="text-[15px] sm:text-[16px] font-semibold leading-[24px] text-[#F9F9F9]"
+                        >
+                            Konsultasi Sekarang
+                        </span>
+                        <svg
+                            class="w-5 h-5 sm:w-6 sm:h-6 text-[#F9F9F9]"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -1266,21 +1494,40 @@ const virtualOffices = [
                     <div
                         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 self-stretch rounded-b-2xl"
                     >
-                          <component
-                        :is="tool.url ? 'a' : 'button'"
-                        v-for="tool in tools"
-                        :key="tool.title"
-                        v-bind="tool.url ? { href: tool.url } : { type: 'button' }"
-                        class="group flex flex-col rounded-[14px] bg-[#FEFEFE] p-5 gap-3 border border-slate-100 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 hover:border-primary/20 transition-all duration-200 text-left"
-                        @click="handleToolClick(tool)"
-                    >
-                        <img :src="tool.icon" :alt="tool.title" class="h-12 w-12" />
-                        <div class="flex flex-col gap-1 flex-1">
-                            <h3 class="text-sm font-bold leading-snug text-[#1A1B18]">{{ tool.title }}</h3>
-                            <p class="text-sm leading-relaxed text-[#1A1B18]">{{ tool.description }}</p>
-                        </div>
-                        <span class="text-xs font-semibold text-primary mt-auto pt-1">{{ tool.cta }}</span>
-                    </component>
+                        <component
+                            :is="tool.url ? 'a' : 'button'"
+                            v-for="tool in tools"
+                            :key="tool.title"
+                            v-bind="
+                                tool.url
+                                    ? { href: tool.url }
+                                    : { type: 'button' }
+                            "
+                            class="group flex flex-col rounded-[14px] bg-[#FEFEFE] p-5 gap-3 border border-slate-100 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5 hover:border-primary/20 transition-all duration-200 text-left"
+                            @click="handleToolClick(tool)"
+                        >
+                            <img
+                                :src="tool.icon"
+                                :alt="tool.title"
+                                class="h-12 w-12"
+                            />
+                            <div class="flex flex-col gap-1 flex-1">
+                                <h3
+                                    class="text-sm font-bold leading-snug text-[#1A1B18]"
+                                >
+                                    {{ tool.title }}
+                                </h3>
+                                <p
+                                    class="text-sm leading-relaxed text-[#1A1B18]"
+                                >
+                                    {{ tool.description }}
+                                </p>
+                            </div>
+                            <span
+                                class="text-xs font-semibold text-primary mt-auto pt-1"
+                                >{{ tool.cta }}</span
+                            >
+                        </component>
                     </div>
                 </div>
             </div>
@@ -1546,7 +1793,6 @@ const virtualOffices = [
                 >
                     Klien Kami
                 </h2>
-
                 <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
                     <div
                         v-for="row in marqueeRows"
@@ -1562,22 +1808,33 @@ const virtualOffices = [
                                     : 'animate-marquee',
                             ]"
                         >
+                            <!-- Set 1 -->
                             <div class="marquee-set">
                                 <div
-                                    v-for="i in 8"
-                                    :key="row.id + '-' + i"
+                                    v-for="logo in row.logos"
+                                    :key="logo.src"
                                     class="marquee-card"
                                 >
-                                    <img src="/images/DUMMY.png" alt="Klien" />
+                                    <img
+                                        :src="logo.src"
+                                        :alt="logo.alt"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
+
+                            <!-- Set 2 (duplikat untuk seamless loop) -->
                             <div class="marquee-set" aria-hidden="true">
                                 <div
-                                    v-for="i in 8"
-                                    :key="row.id + '-d' + i"
+                                    v-for="logo in row.logos"
+                                    :key="logo.src + '-dup'"
                                     class="marquee-card"
                                 >
-                                    <img src="/images/DUMMY.png" alt="Klien" />
+                                    <img
+                                        :src="logo.src"
+                                        :alt="logo.alt"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -1597,17 +1854,36 @@ const virtualOffices = [
                     class="flex items-center justify-center gap-12 w-full bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl overflow-hidden px-[84px] pb-[52px]"
                 >
                     <div
-                        v-for="i in 4"
+                        v-for="(afiliasi, i) in [
+                            {
+                                src: '/images/afiliasi/ft-af-1.svg',
+                                alt: 'Afiliasi 1',
+                            },
+                            {
+                                src: '/images/afiliasi/ft-af-2.svg',
+                                alt: 'Afiliasi 2',
+                            },
+                            {
+                                src: '/images/afiliasi/ft-af-3.svg',
+                                alt: 'Afiliasi 3',
+                            },
+                            {
+                                src: '/images/afiliasi/ft-af-4.svg',
+                                alt: 'Afiliasi 4',
+                            },
+                        ]"
                         :key="i"
-                        class="flex-shrink-0 w-[200px] rounded-xl bg-[#D9DAD8] p-2"
+                        class="flex-shrink-0 w-[200px] rounded-xl shadow-md bg-white p-2"
                     >
                         <div
                             class="w-[185px] h-[62px] flex items-center justify-center"
                         >
-                            <span
-                                class="text-base font-black text-[#1A1B18] uppercase"
-                                >DUMMY</span
-                            >
+                            <img
+                                :src="afiliasi.src"
+                                :alt="afiliasi.alt"
+                                class="w-[100px] h-auto object-contain"
+                                loading="lazy"
+                            />
                         </div>
                     </div>
                 </div>
