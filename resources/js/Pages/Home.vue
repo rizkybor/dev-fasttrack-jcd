@@ -1218,12 +1218,9 @@ const virtualOffices = [
                                 Filosofi
                             </h3>
                             <p
-                                class="text-[14px] leading-[21px] text-[#1A1B18]"
+                                class="text-[14px] leading-[21px] text-[#1A1B18] justify-center"
                             >
-                                "Memastikan bahwa penganggaran yang efektif dan
-                                efisien akan mengoptimalkan layanan yang baik,
-                                memberikan kepuasan kepada klien setia dan
-                                mendapatkan klien baru."
+                                "Memastikan bahwa penganggaran yang efektif dan efisien akan mengoptimalkan layanan yang baik, memberikan kepuasan kepada klien setia dan mendapatkan klien baru."
                             </p>
                         </div>
                         <div
@@ -1235,12 +1232,9 @@ const virtualOffices = [
                                 Visi &amp; Misi
                             </h3>
                             <p
-                                class="text-[14px] leading-[21px] text-[#1A1B18]"
+                                class="text-[14px] leading-[21px] text-[#1A1B18] justify-center"
                             >
-                                "Memberikan upaya terbaik untuk meningkatkan
-                                integritas, kemandirian, dan mampu memberikan
-                                layanan kepada klien kami dengan solusi yang
-                                tidak diragukan."
+                                "Memberikan upaya terbaik untuk meningkatkan integritas, kemandirian, dan mampu memberikan layanan kepada klien kami dengan solusi yang tidak diragukan."
                             </p>
                         </div>
                         <div
@@ -1252,11 +1246,9 @@ const virtualOffices = [
                                 Komitmen
                             </h3>
                             <p
-                                class="text-[14px] leading-[21px] text-[#1A1B18]"
+                                class="text-[14px] leading-[21px] text-[#1A1B18] justify-center"
                             >
-                                "FASTTRACK selalu mempersiapkan dengan baik
-                                dalam memberikan solusi terbaik untuk klien kami
-                                dengan melakukan observasi secara mendalam."
+                                "FASTTRACK selalu mempersiapkan dengan baik dalam memberikan solusi terbaik untuk klien kami dengan melakukan observasi secara mendalam."
                             </p>
                         </div>
                     </div>
@@ -1379,10 +1371,10 @@ const virtualOffices = [
                         </div>
 
                         <div
-                            class="flex flex-col sm:flex-row items-start self-stretch border border-[#D9DAD8] rounded-xl px-[15px] py-[17px] backdrop-blur-[13px]"
+                            class="flex flex-col sm:flex-row items-center self-stretch border border-[#D9DAD8] rounded-xl px-[15px] py-[17px] backdrop-blur-[13px]"
                         >
                             <div
-                                class="flex flex-col items-center flex-grow gap-3 py-2"
+                                class="flex flex-col items-center flex-grow gap-3 py-8"
                             >
                                 <svg
                                     class="w-12 h-12 text-[#F9F9F9]"
@@ -1410,10 +1402,13 @@ const virtualOffices = [
                                 </p>
                             </div>
                             <div
+                                class="block sm:hidden w-full h-px bg-[#D9DAD8]"
+                            ></div>
+                            <div
                                 class="hidden sm:block w-px self-stretch bg-[#D9DAD8]"
                             ></div>
                             <div
-                                class="flex flex-col items-center flex-grow gap-3 py-2"
+                                class="flex flex-col items-center flex-grow gap-3 py-8"
                             >
                                 <svg
                                     class="w-12 h-12 text-[#F9F9F9]"
@@ -1441,10 +1436,13 @@ const virtualOffices = [
                                 </p>
                             </div>
                             <div
+                                class="block sm:hidden w-full h-px bg-[#D9DAD8]"
+                            ></div>
+                            <div
                                 class="hidden sm:block w-px self-stretch bg-[#D9DAD8]"
                             ></div>
                             <div
-                                class="flex flex-col items-center flex-grow gap-3 py-2"
+                                class="flex flex-col items-center flex-grow gap-3 py-8"
                             >
                                 <svg
                                     class="w-12 h-12 text-[#F9F9F9]"
@@ -1472,10 +1470,13 @@ const virtualOffices = [
                                 </p>
                             </div>
                             <div
+                                class="block sm:hidden w-full h-px bg-[#D9DAD8]"
+                            ></div>
+                            <div
                                 class="hidden sm:block w-px self-stretch bg-[#D9DAD8]"
                             ></div>
                             <div
-                                class="flex flex-col items-center flex-grow gap-3 py-2"
+                                class="flex flex-col items-center flex-grow gap-3 py-8"
                             >
                                 <svg
                                     class="w-12 h-12 text-[#F9F9F9]"
@@ -1634,7 +1635,7 @@ const virtualOffices = [
 
                     <a
                         href="/virtual-office-jakarta"
-                        class="inline-flex items-center gap-2 rounded-lg py-3 text-[14px] font-semibold text-primary hover:underline"
+                        class="inline-flex items-center gap-2 rounded-lg py-3 text-[14px] font-semibold text-white hover:underline"
                     >
                         Lihat Semua Lokasi
                         <svg
