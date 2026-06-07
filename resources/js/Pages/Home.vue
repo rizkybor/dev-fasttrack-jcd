@@ -5,6 +5,11 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import { useModals } from "@/Composables/useModals";
 import GeneratorNamaModal from "@/Components/ModalGenerateName.vue";
 import CekNamaModal from "@/Components/ModalCheckName.vue";
+import { useServiceCategories } from '@/Data/serviceCategories'
+import { useTools } from '@/Data/tools'
+import { useVirtualOffices } from '@/Data/virtualOffices'
+
+const { serviceCategories } = useServiceCategories()
 
 const { t } = useI18n()
 
@@ -116,319 +121,27 @@ const marqueeRows = [
 
 const serviceSearch = ref("");
 
-const serviceCategories = [
-    {
-        title: "PENDIRIAN BADAN USAHA",
-        path: "/badan-usaha",
-        items: [
-            {
-                title: "PT Perorangan",
-                description:
-                    "Perseroan Terbatas (PT) Perorangan adalah Badan Hukum yang didirikan oleh 1 (satu) seorang",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/badan-usaha",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "PT. PMDN",
-                description:
-                    "Penanaman Modal Dalam Negeri (PMDN) adalah kegiatan menanam modal menggunakan Modal Dalam Negeri.",
-                price: "Rp 3.250.000",
-                packages: "5 Paket",
-                path: "/badan-usaha",
-                icon: "/icons/ft-persons.svg",
-            },
-            {
-                title: "PT. PMA",
-                description:
-                    "Penanaman Modal Asing (PMA) adalah kegiatan investasi atau menanam modal oleh Penanam Modal Asing",
-                price: "Rp 17.250.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                icon: "/icons/ft-person-check.svg",
-            },
-            {
-                title: "Pendirian CV",
-                description:
-                    "CV merupakan bentuk persekutuan yang didirikan oleh dua orang atau lebih",
-                price: "Rp 2.750.000",
-                packages: "4 Paket",
-                path: "/badan-usaha",
-                icon: "/icons/ft-building.svg",
-            },
-        ],
-    },
-    {
-        title: "ONLINE SINGLE SUBMISSION (OSS)",
-        path: "/perizinan-usaha",
-        items: [
-            {
-                title: "NIB – PERORANGAN",
-                description:
-                    "Pengurusan NIB resmi untuk pelaku usaha perseorangan melalui sistem OSS.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perizinan-usaha",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "NIB – PT – UMK",
-                description:
-                    "Pengurusan NIB untuk Perseroan Terbatas berkategori Usaha Mikro dan Kecil.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perizinan-usaha",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "NIB – PT – NON UMK",
-                description:
-                    "Pengurusan NIB untuk PT skala menengah, besar, PMDN, maupun PMA.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perizinan-usaha",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "NIB – CV",
-                description:
-                    "Pengurusan NIB resmi untuk badan usaha berbentuk Commanditaire Vennootschap (CV).",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perizinan-usaha",
-                icon: "/icons/ft-person.svg",
-            },
-        ],
-    },
-    {
-        title: "NOTARIS VIRTUAL – AKTA PERUSAHAAN DAN PERORANGAN",
-        path: "/perubahan-akta",
-        items: [
-            {
-                title: "PT (PERSEROAN TERBATAS) MODAL DIBAWAH 1M :",
-                description: "Perubahan Anggaran Dasar Perseroan Pasal 1–4",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perubahan-akta",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "PT (PERSEROAN TERBATAS) MODAL DIBAWAH 1M :",
-                description:
-                    "Perubahan Anggaran Dasar Perseroan Selain Pasal 1–4",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perubahan-akta",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "PT (PERSEROAN TERBATAS) MODAL DIATAS 1M :",
-                description: "Perubahan Anggaran Dasar Perseroan Pasal 3",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perubahan-akta",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "PT (PERSEROAN TERBATAS) MODAL DIATAS 1M :",
-                description: "Perubahan Anggaran Dasar Perseroan Pasal 4",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/perubahan-akta",
-                icon: "/icons/ft-person.svg",
-            },
-        ],
-    },
-    {
-        title: "IZIN TINGGAL TERBATAS",
-        path: "/foreignservice",
-        items: [
-            {
-                title: "IZIN TINGGAL TERBATAS DAN KERJA TENAGA KERJA ASING",
-                description:
-                    "Pengurusan ITAS dan izin kerja resmi untuk tenaga kerja asing di Indonesia.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "IZIN TINGGAL TERBATAS KELUARGA TENAGA KERJA ASING",
-                description:
-                    "Pengurusan ITAS untuk anggota keluarga yang mengikuti tenaga kerja asing.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "IZIN TINGGAL TERBATAS INVESTOR",
-                description:
-                    "Pengurusan ITAS untuk investor asing yang menanamkan modal di Indonesia.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "IZIN TINGGAL TERBATAS PASANGAN (SPOUSE)",
-                description:
-                    "Pengurusan ITAS untuk pasangan sah dari pemegang izin tinggal terbatas.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                icon: "/icons/ft-person.svg",
-            },
-        ],
-    },
-    {
-        title: "VISA KE INDONESIA",
-        path: "/foreignservice",
-        items: [
-            {
-                title: "Visa Bisnis",
-                description:
-                    "Pengurusan visa bisnis untuk kunjungan bisnis ke Indonesia.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "Visa Kerja",
-                description:
-                    "Pengurusan visa kerja untuk tenaga kerja asing di Indonesia.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "Visa Investor",
-                description:
-                    "Pengurusan visa investor untuk penanam modal asing.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                icon: "/icons/ft-person.svg",
-            },
-            {
-                title: "Visa Keluarga",
-                description:
-                    "Pengurusan visa untuk anggota keluarga tenaga kerja asing.",
-                price: "Rp 750.000",
-                packages: "3 Paket",
-                path: "/foreignservice",
-                icon: "/icons/ft-person.svg",
-            },
-        ],
-    },
-];
-
 const filteredCategories = computed(() => {
-    if (!serviceSearch.value) return serviceCategories;
-    const q = serviceSearch.value.toLowerCase();
-    return serviceCategories
+    const categories = serviceCategories.value
+    if (!serviceSearch.value) return categories
+    const q = serviceSearch.value.toLowerCase()
+    return categories
         .map((cat) => ({
             ...cat,
             items: cat.items.filter(
                 (item) =>
                     item.title.toLowerCase().includes(q) ||
-                    item.description.toLowerCase().includes(q) ||
-                    item.icon,
+                    item.description.toLowerCase().includes(q),
             ),
         }))
-        .filter((cat) => cat.items.length > 0);
-});
+        .filter((cat) => cat.items.length > 0)
+})
 
-const tools = [
-    {
-        id: "cek-nama-pt",
-        title: "Cek Ketersediaan Nama PT",
-        description:
-            "Cek ketersediaan nama PT Anda sebelum mendaftar ke AHU Kemenkum RI.",
-        cta: "Cek Nama PT",
-        bg: "#D6F8E6",
-        iconColor: "#22C55E",
-        icon: "/icons/ic-tools-sedianamapt.svg",
-        url: null,
-    },
-    {
-        id: "panduan-kbli",
-        title: "Panduan KBLI 2025",
-        description:
-            "Temukan kode KBLI yang tepat untuk bidang usaha Anda berdasarkan data terbaru 2025.",
-        cta: "Lihat Panduan",
-        bg: "#FFF6D0",
-        iconColor: "#EAB308",
-        icon: "/icons/ic-tools-panduankbli.svg",
-        url: "/panduan-kbli",
-    },
-    {
-        id: "tabel-konversi",
-        title: "Tabel Konversi KBLI 2020 x KBLI 2025",
-        description: "Konversi kode KBLI lama ke format terbaru 2025.",
-        cta: "Buka Tabel",
-        bg: "#A8BDED",
-        iconColor: "#3B82F6",
-        icon: "/icons/ic-tools-tablekonversi.svg",
-        url: "/konversi-kbli",
-    },
-    {
-        id: "simulasi-akta",
-        title: "Simulasi AKTA Pendirian",
-        description:
-            "Simulasikan dokumen akta pendirian Perseroan Terbatas sebelum proses resmi dimulai.",
-        cta: "Mulai Simulasi",
-        bg: "#FFD4AE",
-        iconColor: "#F97316",
-        icon: "/icons/ic-tools-simulasiakta.svg",
-        url: "/simulasi-akta",
-    },
-    {
-        id: "generator-nama",
-        title: "Generator Nama",
-        description:
-            "Kesulitan menemukan nama Perusahaan untuk PT yang mau kamu buat?",
-        cta: "Generate Sekarang",
-        bg: "#CAF6FF",
-        iconColor: "#06B6D4",
-        icon: "/icons/ic-tools-gennama.svg",
-        url: null,
-    },
-];
+// Data Tools 
+const { tools } = useTools()
 
-const virtualOffices = [
-    {
-        name: "Centennial Tower",
-        location: "Jakarta Selatan",
-        kpp: "KPP Setia Budi",
-        status: "TERSEDIA",
-        image: "/images/dummy-virtual-office.png",
-    },
-    {
-        name: "Menara Kuningan",
-        location: "Jakarta Selatan",
-        kpp: "KPP Setia Budi",
-        status: "TERSEDIA",
-        image: "/images/dummy-virtual-office.png",
-    },
-    {
-        name: "Sudirman Business District",
-        location: "Jakarta Selatan",
-        kpp: "KPP Tanah Abang",
-        status: "TERSEDIA",
-        image: "/images/dummy-virtual-office.png",
-    },
-    {
-        name: "Pondok Indah Office",
-        location: "Jakarta Selatan",
-        kpp: "KPP Kebayoran Baru",
-        status: "TERSEDIA",
-        image: "/images/dummy-virtual-office.png",
-    },
-];
+// Data Virtual Offices
+const { virtualOffices } = useVirtualOffices()
 </script>
 
 <template>
