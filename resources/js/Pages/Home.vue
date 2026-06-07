@@ -1875,35 +1875,51 @@ const virtualOffices = [
             </div>
         </section>
 
-       <!-- ===== 12. AFILIASI ===== -->
-<section class="bg-[#F9F9F9] pt-10 sm:pt-[52px] pb-0 overflow-hidden">
-  <div class="flex flex-col items-center gap-6 sm:gap-8">
-    <h2 class="text-[24px] sm:text-[28px] font-bold leading-[42px] text-[#1A1B18]">
-      Afiliasi
-    </h2>
-    <div
-      class="grid grid-cols-2 sm:flex sm:flex-row items-center justify-center gap-4 sm:gap-12 w-full bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl overflow-hidden px-6 sm:px-[84px] pb-10 sm:pb-[52px]"
-    >
-      <div
-        v-for="(afiliasi, i) in [
-          { src: '/images/afiliasi/ft-af-1.svg', alt: 'Afiliasi 1' },
-          { src: '/images/afiliasi/ft-af-2.svg', alt: 'Afiliasi 2' },
-          { src: '/images/afiliasi/ft-af-3.svg', alt: 'Afiliasi 3' },
-          { src: '/images/afiliasi/ft-af-4.svg', alt: 'Afiliasi 4' },
-        ]"
-        :key="i"
-        class="flex items-center justify-center rounded-xl shadow-md bg-white p-3 h-[80px] sm:h-[72px] sm:w-[200px]"
-      >
-        <img
-          :src="afiliasi.src"
-          :alt="afiliasi.alt"
-          class="w-full h-full object-contain"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- ===== 12. AFILIASI ===== -->
+        <section class="bg-[#F9F9F9] pt-10 sm:pt-[52px] pb-0 overflow-hidden">
+            <div class="flex flex-col items-center gap-6 sm:gap-8">
+                <h2
+                    class="text-[22px] sm:text-[26px] font-bold leading-[42px] text-[#1A1B18]"
+                >
+                    Afiliasi
+                </h2>
+
+                <div
+                    class="grid grid-cols-2 sm:flex sm:flex-row items-center justify-center gap-4 sm:gap-0 w-full bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl overflow-hidden px-6 sm:px-[84px] pb-10 sm:pb-[52px]"
+                >
+                    <div
+                        v-for="(afiliasi, i) in [
+                            {
+                                src: '/images/afiliasi/ft-af-1.svg',
+                                alt: 'Afiliasi 1',
+                            },
+                            {
+                                src: '/images/afiliasi/ft-af-2.svg',
+                                alt: 'Afiliasi 2',
+                            },
+                            {
+                                src: '/images/afiliasi/ft-af-3.svg',
+                                alt: 'Afiliasi 3',
+                            },
+                            {
+                                src: '/images/afiliasi/ft-af-4.svg',
+                                alt: 'Afiliasi 4',
+                            },
+                        ]"
+                        :key="i"
+                        class="flex items-center justify-center h-[52px] sm:h-[64px] sm:px-9 sm:min-w-[120px]"
+                        :class="{ 'sm:border-r sm:border-[#D3D1C7]': i < 3 }"
+                    >
+                        <img
+                            :src="afiliasi.src"
+                            :alt="afiliasi.alt"
+                            class="w-full h-full sm:w-auto sm:max-h-[40px] sm:max-w-[140px] object-contain"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ===== 13. KONTAK SECTION ===== -->
         <section class="py-[52px] bg-[#42443D] mb-20">
