@@ -1,9 +1,12 @@
 <script setup>
 import { ref, computed } from "vue";
+import { useI18n } from 'vue-i18n'
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { useModals } from "@/Composables/useModals";
 import GeneratorNamaModal from "@/Components/ModalGenerateName.vue";
 import CekNamaModal from "@/Components/ModalCheckName.vue";
+
+const { t } = useI18n()
 
 const {
     showGeneratorModal,
@@ -451,7 +454,7 @@ const virtualOffices = [
                             class="inline-flex items-center gap-2 rounded-full border border-[#FEFEFE]/30 bg-white/10 backdrop-blur-sm px-4 py-2 w-max"
                         >
                             <span class="text-sm text-[#FEFEFE]"
-                                >Dipercaya lebih dari 13.000 Pelaku Usaha</span
+                                >{{ t('home.hero.badge') }}</span
                             >
                         </div>
 
@@ -460,18 +463,17 @@ const virtualOffices = [
                                 class="text-3xl sm:text-4xl lg:text-[38px] font-bold text-[#F9F9F9]"
                             >
                                 <span class="block mb-2"
-                                    >Partner Terbaik Anda Dalam
+                                    >{{ t('home.hero.title1') }}
                                 </span>
                                 <span class="block mb-2"
-                                    >Memulai Dan Mengembangkan</span
+                                    >{{ t('home.hero.title2') }}</span
                                 >
-                                <span class="block">Perusahaan Anda</span>
+                                <span class="block">{{ t('home.hero.title3') }}</span>
                             </h1>
                             <p
                                 class="text-base lg:text-[16px] text-[#F9F9F9]/90 leading-loose"
                             >
-                                Memberikan pelayanan yang professional, unggul,
-                                praktis, efektif dan efisien
+                                {{ t('home.hero.subtitle') }}
                             </p>
                         </div>
                     </div>
@@ -481,7 +483,7 @@ const virtualOffices = [
                             href="/kontak"
                             class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors shadow-md"
                         >
-                            Hubungi Kami
+                            {{ t('home.hero.cta_primary') }}
                             <svg
                                 class="w-5 h-5"
                                 fill="none"
@@ -500,83 +502,12 @@ const virtualOffices = [
                             href="/layanan"
                             class="inline-flex items-center gap-2 border border-[#F9F9F9] text-[#F9F9F9] hover:bg-white/10 font-semibold text-base px-6 py-3 rounded-lg transition-colors"
                         >
-                            Jelajah Layanan
+                            {{ t('home.hero.cta_secondary') }}
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- ===== 2. STATS DIVIDER ===== -->
-        <!-- <section class="relative z-20 mb-5">
-            <div class="max-w-3xl ml-auto px-8 -mt-12">
-                <div
-                    class="bg-[#9e1f16] rounded-xl px-6 py-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-4"
-                >
-                    <div class="flex items-center gap-4">
-                        <div class="text-center">
-                            <div
-                                class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
-                            >
-                                10.000+
-                            </div>
-                            <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                Klien bisnis dilayani
-                            </div>
-                        </div>
-                        <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="text-center">
-                            <div
-                                class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
-                            >
-                                20+ Tahun
-                            </div>
-                            <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                Pengalaman
-                            </div>
-                        </div>
-                        <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="text-center">
-                            <div
-                                class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
-                            >
-                                10+
-                            </div>
-                            <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                Virtual Office
-                            </div>
-                        </div>
-                        <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
-                    </div>
-                    <div class="text-center">
-                        <div
-                            class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
-                        >
-                            99.9%
-                        </div>
-                        <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                            Kepuasan Klien
-                        </div>
-                    </div>
-                </div>
-
-                <svg
-                    class="absolute -bottom-[30px] right-[10%] z-10"
-                    width="35"
-                    height="32"
-                    viewBox="0 0 100 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="none"
-                >
-                    <path d="M0 0H100L0 32Z" fill="#9e1f16" />
-                </svg>
-            </div>
-        </section> -->
 
         <!-- ===== 2. STATS DIVIDER ===== -->
         <section class="relative z-20 mb-5">
@@ -592,10 +523,10 @@ const virtualOffices = [
                             <div
                                 class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
                             >
-                                10.000+
+                                {{ t('home.stats.clients.value') }}
                             </div>
                             <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                Klien bisnis dilayani
+                                {{ t('home.stats.clients.label') }}
                             </div>
                         </div>
                         <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
@@ -612,10 +543,10 @@ const virtualOffices = [
                             <div
                                 class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
                             >
-                                20+ Tahun
+                                {{ t('home.stats.experience.value') }}
                             </div>
                             <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                Pengalaman
+                                {{ t('home.stats.experience.label') }}
                             </div>
                         </div>
                         <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
@@ -634,10 +565,10 @@ const virtualOffices = [
                             <div
                                 class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
                             >
-                                10+
+                                {{ t('home.stats.offices.value') }}
                             </div>
                             <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                Virtual Office
+                                {{ t('home.stats.offices.label') }}
                             </div>
                         </div>
                         <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
@@ -651,10 +582,10 @@ const virtualOffices = [
                         <div
                             class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
                         >
-                            99.9%
+                            {{ t('home.stats.satisfaction.value') }}
                         </div>
                         <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                            Kepuasan Klien
+                            {{ t('home.stats.satisfaction.label') }}
                         </div>
                     </div>
                 </div>
@@ -675,77 +606,6 @@ const virtualOffices = [
         </section>
 
         <!-- ===== 3. VIP LINE ===== -->
-        <!-- <section class="py-8">
-            <div class="bg-[#9e1f16]">
-                <div
-                    class="flex items-center justify-between px-4 sm:px-6 lg:px-[84px] h-[160px]"
-                >
-                    <div class="inline-flex items-end gap-2">
-                        <div class="inline-flex flex-col items-start gap-2">
-                            <div
-                                class="inline-flex items-center justify-center rounded-lg bg-[#FEFEFE] px-4 py-2"
-                            >
-                                <span
-                                    class="text-[28px] font-bold leading-[42px] text-primary"
-                                    >FASTRACK - VIP LINE&nbsp;</span
-                                >
-                            </div>
-                            <p
-                                class="text-[24px] font-semibold leading-[36px] text-[#F9F9F9]"
-                            >
-                                Badan Usaha SELESAI DALAM 1 HARI
-                            </p>
-                        </div>
-                        <p
-                            class="text-[14px] font-light leading-[21px] text-[#F9F9F9] underline italic"
-                        >
-                            * (S&K BERLAKU)
-                        </p>
-                    </div>
-
-                    <svg
-                        class="hidden lg:block flex-shrink-0"
-                        width="250"
-                        height="200"
-                        viewBox="0 0 90 100"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M40 0L0 50L40 100"
-                            stroke="#F9F9F9"
-                            stroke-width="20"
-                            stroke-linecap="butt"
-                            stroke-linejoin="miter"
-                        />
-                    </svg>
-
-                    <a
-                        href="/konsultasi"
-                        class="hidden lg:inline-flex items-center justify-center gap-2 rounded-lg border border-[#F9F9F9] bg-[#9e1f16] px-[23px] h-[52px] hover:bg-[#d13a3f] transition-colors"
-                    >
-                        <span
-                            class="text-[16px] font-semibold leading-[24px] text-[#F9F9F9]"
-                            >Konsultasi Sekarang</span
-                        >
-                        <svg
-                            class="w-6 h-6 text-[#F9F9F9]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section> -->
-        <!-- ===== 3. VIP LINE ===== -->
         <section class="py-8">
             <div class="bg-[#9e1f16]">
                 <div
@@ -760,19 +620,19 @@ const virtualOffices = [
                                 <span
                                     class="text-[20px] sm:text-[28px] font-bold leading-[1.4] text-primary"
                                 >
-                                    FASTRACK - VIP LINE&nbsp;
+                                    {{ t('home.vip.title') }}
                                 </span>
                             </div>
                             <p
                                 class="text-[16px] sm:text-[24px] font-semibold leading-[1.5] text-[#F9F9F9]"
                             >
-                                Badan Usaha SELESAI DALAM 1 HARI
+                                {{ t('home.vip.subtitle') }}
                             </p>
                         </div>
                         <p
                             class="text-[12px] sm:text-[14px] font-light leading-[21px] text-[#F9F9F9] underline italic"
                         >
-                            * (S&K BERLAKU)
+                            {{ t('home.vip.disclaimer') }}
                         </p>
                     </div>
 
@@ -802,7 +662,7 @@ const virtualOffices = [
                         <span
                             class="text-[15px] sm:text-[16px] font-semibold leading-[24px] text-[#F9F9F9]"
                         >
-                            Konsultasi Sekarang
+                            {{ t('home.vip.cta') }}
                         </span>
                         <svg
                             class="w-5 h-5 sm:w-6 sm:h-6 text-[#F9F9F9]"
@@ -832,7 +692,7 @@ const virtualOffices = [
                         <h2
                             class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
                         >
-                            Pilih Layanan Sesuai Dengan Kebutuhan Anda
+                            {{ t('home.services.title') }}
                         </h2>
                         <div
                             class="hidden sm:flex items-center border border-[#D9DAD8] rounded-lg shadow-sm bg-[#FEFEFE] w-[300px] h-[46px] overflow-hidden"
@@ -856,7 +716,7 @@ const virtualOffices = [
                                 <input
                                     v-model="serviceSearch"
                                     type="text"
-                                    placeholder="Cari Layanan..."
+                                    :placeholder="t('home.services.search')"
                                     class="w-full border-none bg-transparent p-0 text-[14px] text-[#42443D] placeholder-[#42443D] focus:ring-0 focus:outline-none"
                                 />
                             </div>
@@ -898,7 +758,7 @@ const virtualOffices = [
                                         d="M12 4v16m8-8H4"
                                     />
                                 </svg>
-                                SELENGKAPNYA
+                                {{ t('home.services.seeMore') }}
                             </a>
                         </div>
 
@@ -948,7 +808,7 @@ const virtualOffices = [
                                     <div class="flex flex-col gap-0.5">
                                         <span
                                             class="text-[12px] leading-[18px] text-[#1A1B18]"
-                                            >Mulai dari</span
+                                            >{{ t('home.services.from') }}</span
                                         >
                                         <span
                                             class="text-[24px] font-bold leading-[36px] text-primary"
@@ -964,7 +824,7 @@ const virtualOffices = [
                                 <div
                                     class="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors"
                                 >
-                                    Lihat Selengkapnya
+                                    {{ t('home.services.cta') }}
                                     <svg
                                         class="w-4 h-4 group-hover:translate-x-1 transition-transform"
                                         fill="none"
@@ -988,7 +848,7 @@ const virtualOffices = [
                             href="/layanan"
                             class="inline-flex items-center justify-center gap-2 border border-primary rounded-lg px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary hover:bg-[#9e1f16] hover:text-white transition-colors"
                         >
-                            Lihat Semua Layanan
+                            {{ t('home.services.seeAll') }}
                             <svg
                                 class="w-4 h-4"
                                 fill="none"
@@ -1015,13 +875,13 @@ const virtualOffices = [
                     <h2
                         class="text-[24px] font-bold leading-[36px] text-[#F9F9F9]"
                     >
-                        Dapatkan Penawaran Menarik dari Kami!
+                        {{ t('home.promo.title') }}
                     </h2>
                     <a
                         href="/promo"
                         class="hidden sm:inline-flex items-center gap-2 border border-[#F9F9F9] rounded-lg px-[11px] py-[11px] h-[44px] text-[14px] font-semibold text-[#F9F9F9] hover:bg-white/10 transition-colors"
                     >
-                        Lihat Semua Promo
+                        {{ t('home.promo.seeAll') }}
                         <svg
                             class="w-6 h-6"
                             fill="none"
@@ -1052,25 +912,25 @@ const virtualOffices = [
                         >
                             <span
                                 class="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center justify-center rounded-b-lg bg-[#FED7DA] px-3 py-1 h-[26px] text-[10px] font-semibold leading-[18px] text-[#FB3748]"
-                                >PROMO SPECIAL</span
+                                >{{ t('home.promo.badge') }}</span
                             >
                             <div class="flex flex-col items-center gap-1">
                                 <h3
                                     class="text-[16px] font-bold leading-[24px] text-[#1A1B18]"
                                 >
-                                    HEMAT HINGGA 30%
+                                    {{ t('home.promo.discount') }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#1A1B18] text-center"
                                 >
-                                    Untuk pendirian PT + Virtual Office
+                                    {{ t('home.promo.desc') }}
                                 </p>
                             </div>
                         </div>
                         <div
                             class="flex items-center justify-center rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors"
                         >
-                            Dapatkan Promo
+                            {{ t('home.promo.cta') }}
                         </div>
                     </a>
                 </div>
@@ -1079,7 +939,7 @@ const virtualOffices = [
                     href="/promo"
                     class="sm:hidden mt-6 inline-flex items-center gap-2 border border-[#F9F9F9] rounded-lg px-[11px] py-[11px] h-[44px] text-[14px] font-semibold text-[#F9F9F9] hover:bg-white/10 transition-colors w-full justify-center"
                 >
-                    Lihat Semua Promo
+                    {{ t('home.promo.seeAll') }}
                     <svg
                         class="w-5 h-5"
                         fill="none"
@@ -1124,7 +984,7 @@ const virtualOffices = [
                                     <h2
                                         class="text-[28px] font-bold leading-[36px] text-[#1A1B18]"
                                     >
-                                        Tentang Kami
+                                        {{ t('home.about.title') }}
                                     </h2>
                                 </div>
 
@@ -1132,34 +992,12 @@ const virtualOffices = [
                                     <p
                                         class="text-[14px] leading-[22px] text-[#4A4B47] text-justify"
                                     >
-                                        Fastrack.legal adalah perusahaan yang
-                                        telah berdiri sejak 2001 yang bergerak
-                                        di bidang layanan jasa perizinan usaha
-                                        tidak terbatas antara lain Konsultasi
-                                        Hukum Investasi &amp; Bisnis, Pendirian
-                                        Perusahaan, Perizinan Perusahaan,
-                                        Perubahan/Perluasan/Restrukturisasi,
-                                        Pendaftaran HKI, Virtual Office,
-                                        Sekretaris Perusahaan &amp; Layanan
-                                        Dukungan Bisnis, Uji Tuntas Hukum, Izin
-                                        Kerja &amp; Tinggal Tenaga Kerja Asing,
-                                        Visa, Visa Lansia, Naturalisasi (Alih
-                                        Kewarganegaraan), Perjanjian Kawin,
-                                        Pendaftaran Perkawinan, Penyusunan
-                                        Laporan Keuangan &amp; Laporan
-                                        Perpajakan yang didasarkan dan mengacu
-                                        pada undang-undang yang ditetapkan.
+                                        {{ t('home.about.desc1') }}
                                     </p>
                                     <p
                                         class="text-[14px] leading-[22px] text-[#4A4B47] text-justify"
                                     >
-                                        Telah membantu lebih dari 13.000 klien
-                                        dengan berbagai layanan kami.
-                                        Fastrack.legal berupaya dan bertekad
-                                        untuk menjadi gerbang utama kepada siapa
-                                        pun yang ingin memulai bisnis dan
-                                        membutuhkan layanan jasa perizinan dan
-                                        hukum di Indonesia.
+                                        {{ t('home.about.desc2') }}
                                     </p>
                                 </div>
 
@@ -1172,11 +1010,11 @@ const virtualOffices = [
                                     >
                                         <span
                                             class="text-[19px] sm:text-[26px] font-bold leading-tight text-primary"
-                                            >20+</span
+                                            >{{ t('home.about.stats.experience.value') }}</span
                                         >
                                         <span
                                             class="text-[10px] sm:text-[12px] text-[#4A4B47] text-center leading-tight"
-                                            >Tahun Pengalaman</span
+                                            >{{ t('home.about.stats.experience.label') }}</span
                                         >
                                     </div>
                                     <div
@@ -1184,11 +1022,11 @@ const virtualOffices = [
                                     >
                                         <span
                                             class="text-[19px] sm:text-[26px] font-bold leading-tight text-primary"
-                                            >10+</span
+                                            >{{ t('home.about.stats.offices.value') }}</span
                                         >
                                         <span
                                             class="text-[10px] sm:text-[12px] text-[#4A4B47] text-center leading-tight"
-                                            >Virtual Office</span
+                                            >{{ t('home.about.stats.offices.label') }}</span
                                         >
                                     </div>
                                     <div
@@ -1196,11 +1034,11 @@ const virtualOffices = [
                                     >
                                         <span
                                             class="text-[19px] sm:text-[26px] font-bold leading-tight text-primary"
-                                            >10.000+</span
+                                            >{{ t('home.about.stats.clients.value') }}</span
                                         >
                                         <span
                                             class="text-[10px] sm:text-[12px] text-[#4A4B47] text-center leading-tight"
-                                            >Klien bisnis dilayani</span
+                                            >{{ t('home.about.stats.clients.label') }}</span
                                         >
                                     </div>
                                 </div>
@@ -1215,12 +1053,12 @@ const virtualOffices = [
                             <h3
                                 class="text-[24px] font-bold leading-[36px] text-primary"
                             >
-                                Filosofi
+                                {{ t('home.about.philosophy.title') }}
                             </h3>
                             <p
                                 class="text-[14px] leading-[21px] text-[#1A1B18] justify-center"
                             >
-                                "Memastikan bahwa penganggaran yang efektif dan efisien akan mengoptimalkan layanan yang baik, memberikan kepuasan kepada klien setia dan mendapatkan klien baru."
+                                {{ t('home.about.philosophy.desc') }}
                             </p>
                         </div>
                         <div
@@ -1229,12 +1067,12 @@ const virtualOffices = [
                             <h3
                                 class="text-[24px] font-bold leading-[36px] text-primary"
                             >
-                                Visi &amp; Misi
+                                {{ t('home.about.vision.title') }}
                             </h3>
                             <p
                                 class="text-[14px] leading-[21px] text-[#1A1B18] justify-center"
                             >
-                                "Memberikan upaya terbaik untuk meningkatkan integritas, kemandirian, dan mampu memberikan layanan kepada klien kami dengan solusi yang tidak diragukan."
+                                {{ t('home.about.vision.desc') }}
                             </p>
                         </div>
                         <div
@@ -1243,12 +1081,12 @@ const virtualOffices = [
                             <h3
                                 class="text-[24px] font-bold leading-[36px] text-primary"
                             >
-                                Komitmen
+                                {{ t('home.about.commitment.title') }}
                             </h3>
                             <p
                                 class="text-[14px] leading-[21px] text-[#1A1B18] justify-center"
                             >
-                                "FASTTRACK selalu mempersiapkan dengan baik dalam memberikan solusi terbaik untuk klien kami dengan melakukan observasi secara mendalam."
+                                {{ t('home.about.commitment.desc') }}
                             </p>
                         </div>
                     </div>
@@ -1266,15 +1104,12 @@ const virtualOffices = [
                         <h2
                             class="text-[28px] font-bold leading-[42px] text-[#F9F9F9]"
                         >
-                            Mengapa Memilih Fasttrack?
+                            {{ t('home.why.title') }}
                         </h2>
                         <p
                             class="text-[16px] leading-[24px] text-[#F9F9F9] max-w-[708px]"
                         >
-                            Profesional, Mudah, Cepat, Inovatif, Berkualitas,
-                            Kompetitif, Ramah serta selalu memahami harapan
-                            klien, dan berkomitmen untuk memberikan solusi
-                            bisnis yang terbaik namun hemat.
+                            {{ t('home.why.subtitle') }}
                         </p>
                     </div>
 
@@ -1288,20 +1123,18 @@ const virtualOffices = [
                             >
                                 <span
                                     class="text-[28px] font-bold leading-[42px] text-primary"
-                                    >10.000+</span
+                                    >{{ t('home.why.portfolio.value') }}</span
                                 >
                                 <div class="flex flex-col gap-2">
                                     <h3
                                         class="text-[18px] font-semibold leading-[27px] text-[#282925]"
                                     >
-                                        Portofolio terbukti
+                                        {{ t('home.why.portfolio.title') }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#42443D]"
                                     >
-                                        Lebih dari 10.000 klien telah
-                                        mempercayakan kebutuhan legalitas bisnis
-                                        mereka kepada kami.
+                                        {{ t('home.why.portfolio.desc') }}
                                     </p>
                                 </div>
                             </div>
@@ -1313,20 +1146,18 @@ const virtualOffices = [
                             >
                                 <span
                                     class="text-[28px] font-bold leading-[42px] text-primary"
-                                    >20 thn</span
+                                    >{{ t('home.why.experience.value') }}</span
                                 >
                                 <div class="flex flex-col gap-2">
                                     <h3
                                         class="text-[18px] font-semibold leading-[27px] text-[#282925]"
                                     >
-                                        Berpengalaman
+                                        {{ t('home.why.experience.title') }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#42443D]"
                                     >
-                                        Pengalaman lebih dari 20 tahun
-                                        menjadikan kami mitra hukum bisnis yang
-                                        tepat dan terpercaya.
+                                        {{ t('home.why.experience.desc') }}
                                     </p>
                                 </div>
                             </div>
@@ -1338,20 +1169,18 @@ const virtualOffices = [
                             >
                                 <span
                                     class="text-[28px] font-bold leading-[42px] text-primary"
-                                    >99,9%</span
+                                    >{{ t('home.why.satisfaction.value') }}</span
                                 >
                                 <div class="flex flex-col gap-2">
                                     <h3
                                         class="text-[18px] font-semibold leading-[27px] text-[#282925]"
                                     >
-                                        Tingkat kepuasan klien
+                                        {{ t('home.why.satisfaction.title') }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#42443D]"
                                     >
-                                        98% klien kami puas dengan layanan dan
-                                        kecepatan penyelesaian proses legalitas
-                                        bisnis mereka.
+                                        {{ t('home.why.satisfaction.desc') }}
                                     </p>
                                 </div>
                             </div>
@@ -1365,7 +1194,7 @@ const virtualOffices = [
                             <div class="flex-grow h-px bg-[#D9DAD8]"></div>
                             <span
                                 class="text-[24px] font-semibold leading-[36px] text-[#F9F9F9] whitespace-nowrap"
-                                >Keunggulan layanan</span
+                                >{{ t('home.why.excellence') }}</span
                             >
                             <div class="flex-grow h-px bg-[#D9DAD8]"></div>
                         </div>
@@ -1392,13 +1221,12 @@ const virtualOffices = [
                                 <h3
                                     class="text-[18px] font-semibold leading-[27px] text-[#FEFEFE]"
                                 >
-                                    Tepat waktu
+                                    {{ t('home.why.onTime.title') }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#F9F9F9] text-center max-w-[219px]"
                                 >
-                                    Penyelesaian sesuai komitmen, tanpa
-                                    penundaan
+                                    {{ t('home.why.onTime.desc') }}
                                 </p>
                             </div>
                             <div
@@ -1426,13 +1254,12 @@ const virtualOffices = [
                                 <h3
                                     class="text-[18px] font-semibold leading-[27px] text-[#FEFEFE]"
                                 >
-                                    Tim profesional
+                                    {{ t('home.why.team.title') }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#F9F9F9] text-center max-w-[229px]"
                                 >
-                                    Konsultan tersertifikasi &amp;
-                                    berkualifikasi multinasional
+                                    {{ t('home.why.team.desc') }}
                                 </p>
                             </div>
                             <div
@@ -1460,13 +1287,12 @@ const virtualOffices = [
                                 <h3
                                     class="text-[18px] font-semibold leading-[27px] text-[#FEFEFE]"
                                 >
-                                    Harga kompetitif
+                                    {{ t('home.why.price.title') }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#F9F9F9] text-center max-w-[190px]"
                                 >
-                                    Transparan, bersahabat, tanpa biaya
-                                    tersembunyi
+                                    {{ t('home.why.price.desc') }}
                                 </p>
                             </div>
                             <div
@@ -1500,13 +1326,12 @@ const virtualOffices = [
                                 <h3
                                     class="text-[18px] font-semibold leading-[27px] text-[#FEFEFE]"
                                 >
-                                    Jangkauan Nasional
+                                    {{ t('home.why.national.title') }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#F9F9F9] text-center max-w-[210px]"
                                 >
-                                    Melayani klien dari seluruh wilayah
-                                    Indonesia
+                                    {{ t('home.why.national.desc') }}
                                 </p>
                             </div>
                         </div>
@@ -1522,7 +1347,7 @@ const virtualOffices = [
                     <h2
                         class="text-[28px] font-bold leading-[42px] text-[#1A1B18] text-center"
                     >
-                        Peralatan dan Fitur Gratis untuk Kemudahan Bisnis Anda
+                        {{ t('home.tools.title') }}
                     </h2>
                     <div
                         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 self-stretch rounded-b-2xl"
@@ -1573,7 +1398,7 @@ const virtualOffices = [
                     <h2
                         class="text-[28px] font-bold leading-[42px] text-[#F9F9F9] text-center"
                     >
-                        Alamat Bisnis Prestisius di Lokasi Strategis
+                        {{ t('home.virtualOffice.title') }}
                     </h2>
 
                     <div
@@ -1637,7 +1462,7 @@ const virtualOffices = [
                         href="/virtual-office-jakarta"
                         class="inline-flex items-center gap-2 rounded-lg py-3 text-[14px] font-semibold text-white hover:underline"
                     >
-                        Lihat Semua Lokasi
+                        {{ t('home.virtualOffice.seeAll') }}
                         <svg
                             class="w-6 h-6"
                             fill="none"
@@ -1664,13 +1489,13 @@ const virtualOffices = [
                         <h2
                             class="text-[28px] font-bold leading-[42px] text-[#1A1B18]"
                         >
-                            Wawasan Hukum & Bisnis Terkini
+                            {{ t('home.blog.title') }}
                         </h2>
                         <a
                             href="/artikel"
                             class="inline-flex items-center gap-2 border border-[#9e1f16] text-[#9e1f16] hover:bg-[#9e1f16] hover:text-white font-semibold text-sm px-[11px] h-[44px] rounded-lg transition-colors"
                         >
-                            Lihat Semua Artikel
+                            {{ t('home.blog.seeAll') }}
                             <svg
                                 class="w-6 h-6"
                                 fill="none"
@@ -1698,16 +1523,12 @@ const virtualOffices = [
                                     <h3
                                         class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
                                     >
-                                        RUPS TAHUNAN KINI WAJIB DI BUAT AKTA DAN
-                                        DILAPORAKAN!
+                                        {{ t('home.blog.article1.title') }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#1A1B18]"
                                     >
-                                        Semua yang perlu Anda ketahui tentang
-                                        syarat, dokumen, biaya, dan proses
-                                        mendirikan PT PMDN secara legal dan
-                                        efisien...
+                                        {{ t('home.blog.article1.desc') }}
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center gap-1">
@@ -1726,7 +1547,7 @@ const virtualOffices = [
                                     </svg>
                                     <span
                                         class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]"
-                                        >12 Mei 2025</span
+                                        >{{ t('home.blog.date') }}</span
                                     >
                                 </div>
                             </div>
@@ -1734,7 +1555,7 @@ const virtualOffices = [
                                 href="/artikel/1"
                                 class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#9e1f16] hover:underline w-max"
                             >
-                                Baca Selengkapnya
+                                {{ t('common.button.readMore') }}
                                 <svg
                                     class="w-6 h-6"
                                     fill="none"
@@ -1759,16 +1580,12 @@ const virtualOffices = [
                                     <h3
                                         class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
                                     >
-                                        KEWAJIBAN MELAKUKAN PENDAFTARAN PENERIMA
-                                        MANFAAT PERSEROAN
+                                        {{ t('home.blog.article2.title') }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#1A1B18]"
                                     >
-                                        Semua yang perlu Anda ketahui tentang
-                                        syarat, dokumen, biaya, dan proses
-                                        mendirikan PT PMDN secara legal dan
-                                        efisien...
+                                        {{ t('home.blog.article2.desc') }}
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center gap-1">
@@ -1787,7 +1604,7 @@ const virtualOffices = [
                                     </svg>
                                     <span
                                         class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]"
-                                        >12 Mei 2025</span
+                                        >{{ t('home.blog.date') }}</span
                                     >
                                 </div>
                             </div>
@@ -1795,7 +1612,7 @@ const virtualOffices = [
                                 href="/artikel/2"
                                 class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#9e1f16] hover:underline w-max"
                             >
-                                Baca Selengkapnya
+                                {{ t('home.blog.readMore') }}
                                 <svg
                                     class="w-6 h-6"
                                     fill="none"
@@ -1824,7 +1641,7 @@ const virtualOffices = [
                 <h2
                     class="text-[24px] sm:text-[28px] font-bold leading-[42px] text-[#F9F9F9]"
                 >
-                    Klien Kami
+                    {{ t('home.clients.title') }}
                 </h2>
                 <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
                     <div
@@ -1882,7 +1699,7 @@ const virtualOffices = [
                 <h2
                     class="text-[22px] sm:text-[26px] font-bold leading-[42px] text-[#1A1B18]"
                 >
-                    Afiliasi
+                    {{ t('home.affiliate.title') }}
                 </h2>
 
                 <div
@@ -1933,7 +1750,7 @@ const virtualOffices = [
                         <h2
                             class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
                         >
-                            Special Promo & Penawaran Menarik
+                            {{ t('home.contact.title') }}
                         </h2>
                         <form @submit.prevent class="flex flex-col gap-4">
                             <div class="flex flex-col gap-4">
@@ -1942,7 +1759,7 @@ const virtualOffices = [
                                 >
                                     <input
                                         type="text"
-                                        placeholder="Nama Lengkap"
+                                        :placeholder="t('home.contact.name')"
                                         class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
                                         required
                                     />
@@ -1952,7 +1769,7 @@ const virtualOffices = [
                                 >
                                     <input
                                         type="email"
-                                        placeholder="Alamat Email"
+                                        :placeholder="t('home.contact.email')"
                                         class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
                                         required
                                     />
@@ -1962,7 +1779,7 @@ const virtualOffices = [
                                 >
                                     <input
                                         type="tel"
-                                        placeholder="Nomor Whatsapp"
+                                        :placeholder="t('home.contact.whatsapp')"
                                         class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
                                         required
                                     />
@@ -1972,7 +1789,7 @@ const virtualOffices = [
                                 >
                                     <input
                                         type="text"
-                                        placeholder="Bidang Usaha"
+                                        :placeholder="t('home.contact.business')"
                                         class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
                                     />
                                 </div>
@@ -1981,7 +1798,7 @@ const virtualOffices = [
                                 >
                                     <textarea
                                         rows="5"
-                                        placeholder="Pesan / Kebutuhan Layanan"
+                                        :placeholder="t('home.contact.message')"
                                         class="w-full px-4 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B] resize-none"
                                         required
                                     ></textarea>
@@ -2004,7 +1821,7 @@ const virtualOffices = [
                                         class="w-[14px] h-[14px] rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
                                     ></div>
                                     <span class="text-[12px] text-[#8E8F8B]"
-                                        >I'm not a robot</span
+                                        >{{ t('home.contact.robot') }}</span
                                     >
                                 </div>
                                 <div class="ml-auto flex flex-col items-center">
@@ -2044,11 +1861,11 @@ const virtualOffices = [
                                         class="w-[14px] h-[14px] flex-shrink-0 rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
                                     ></div>
                                     <span class="text-[12px] text-[#1A1B18]"
-                                        >Saya telah membaca dan setuju
+                                        >{{ t('home.contact.agree') }}
                                     </span>
                                     <span
                                         class="text-[12px] text-[#9e1f16] cursor-pointer"
-                                        >Ketentuan Legal*</span
+                                        >{{ t('home.contact.terms') }}</span
                                     >
                                 </label>
                                 <button
@@ -2057,7 +1874,7 @@ const virtualOffices = [
                                 >
                                     <span
                                         class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9]"
-                                        >Submit</span
+                                        >{{ t('home.contact.submit') }}</span
                                     >
                                 </button>
                             </div>
@@ -2072,7 +1889,7 @@ const virtualOffices = [
                             <h3
                                 class="text-[18px] font-bold leading-[27px] text-[#1A1B18]"
                             >
-                                Hubungi Kami
+                                {{ t('home.contact.hubungi') }}
                             </h3>
                             <div class="flex flex-col gap-4">
                                 <div class="flex items-start gap-4">
@@ -2102,9 +1919,7 @@ const virtualOffices = [
                                     <p
                                         class="text-[14px] leading-[21px] text-[#1A1B18]"
                                     >
-                                        Grand Bintaro Blok A7, JI. Raya Bintaro
-                                        Permai, Pesanggrahan, Bintaro, Jakarta
-                                        Selatan - 12330
+                                        {{ t('home.contact.address') }}
                                     </p>
                                 </div>
                                 <div class="flex items-center gap-4">
