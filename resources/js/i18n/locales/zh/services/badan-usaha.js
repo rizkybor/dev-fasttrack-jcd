@@ -1,0 +1,80 @@
+export default {
+    hero: {
+        breadcrumb: {
+            layanan: '服务',
+            current: '商业实体',
+        },
+        title: '法律和许可服务',
+        titleSub: '助力准备成长的企业',
+        desc: '协助PT、CV注册、虚拟办公室、营业执照及所有公司法律需求，流程规范、透明，可从任何地方便捷访问。',
+        back: '返回',
+    },
+    items: {
+        from: '起价',
+        cta: '查看详情',
+    },
+    cta: {
+        title: '找不到您需要的服务？',
+        desc: '我们的团队随时准备帮助您找到适合您企业合规需求的解决方案。',
+        whatsapp: '通过 WhatsApp 直接聊天',
+        waMessage: '您好 FastTrack，我想咨询关于',
+    },
+    list: [
+        {
+            id: '1',
+            title: '个人PT',
+            description: '个人有限责任公司（PT）是由1（一）人设立的法人实体',
+            price: 'Rp 750.000',
+            packages: '3个套餐',
+        },
+        {
+            id: '2',
+            title: 'PT. PMDN',
+            description: '国内投资（PMDN）是使用国内资本进行投资的活动',
+            price: 'Rp 3.250.000',
+            packages: '5个套餐',
+        },
+        {
+            id: '3',
+            title: 'PT. PMA',
+            description: '外国投资（PMA）是外国投资者进行投资或注入资本的活动',
+            price: 'Rp 17.250.000',
+            packages: '3个套餐',
+        },
+        {
+            id: '4',
+            title: 'CV注册',
+            description: 'CV是由两人或两人以上设立的合伙形式',
+            price: 'Rp 2.750.000',
+            packages: '4个套餐',
+        },
+        {
+            id: '5',
+            title: '基金会注册',
+            description: '基金会是在支持社会活动中发挥重要作用的法人实体',
+            price: 'Rp 3.250.000',
+            packages: '3个套餐',
+        },
+        {
+            id: '6',
+            title: '合作社注册',
+            description: '合作社是在提高福祉方面发挥重要作用的商业实体',
+            price: 'Rp 9.750.000',
+            packages: '3个套餐',
+        },
+        {
+            id: '7',
+            title: '民事合伙',
+            description: '民事合伙（Maatschap）是由两人或两人以上订立的协议形式',
+            price: 'Rp 2.750.000',
+            packages: '3个套餐',
+        },
+        {
+            id: '8',
+            title: '普通合伙',
+            description: '普通合伙是由一人以上经营的合伙形式',
+            price: 'Rp 2.750.000',
+            packages: '3个套餐',
+        },
+    ],
+}

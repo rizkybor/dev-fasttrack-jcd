@@ -1,0 +1,80 @@
+export default {
+    hero: {
+        breadcrumb: {
+            layanan: 'Layanan',
+            current: 'Badan Usaha',
+        },
+        title: 'Layanan Legalitas dan Perizinan',
+        titleSub: 'Untuk Bisnis yang Siap Bertumbuh',
+        desc: 'membantu pendirian PT, CV, virtual office, perizinan usaha, hingga kebutuhan legal perusahaan dengan alur yang rapi, transparan, dan nyaman diakses dari mana saja.',
+        back: 'Kembali',
+    },
+    items: {
+        from: 'Mulai dari',
+        cta: 'Lihat Selengkapnya',
+    },
+    cta: {
+        title: 'Tidak Menemukan Layanan yang Anda Cari?',
+        desc: 'Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.',
+        whatsapp: 'Chat Langsung via WhatsApp',
+        waMessage: 'Halo FastTrack, saya ingin konsultasi mengenai',
+    },
+    list: [
+        {
+            id: '1',
+            title: 'PT Perorangan',
+            description: 'Perseroan Terbatas (PT) Perorangan adalah Badan Hukum yang didirikan oleh 1 (satu) seorang',
+            price: 'Rp 750.000',
+            packages: '3 Paket',
+        },
+        {
+            id: '2',
+            title: 'PT. PMDN',
+            description: 'Penanaman Modal Dalam Negeri (PMDN) adalah kegiatan menanam modal menggunakan Modal Dalam Negeri',
+            price: 'Rp 3.250.000',
+            packages: '5 Paket',
+        },
+        {
+            id: '3',
+            title: 'PT. PMA',
+            description: 'Penanaman Modal Asing (PMA) adalah kegiatan investasi atau menanam modal oleh Penanam Modal Asing',
+            price: 'Rp 17.250.000',
+            packages: '3 Paket',
+        },
+        {
+            id: '4',
+            title: 'Pendirian CV',
+            description: 'CV merupakan bentuk persekutuan yang didirikan oleh dua orang atau lebih',
+            price: 'Rp 2.750.000',
+            packages: '4 Paket',
+        },
+        {
+            id: '5',
+            title: 'Pendirian Yayasan',
+            description: 'Yayasan merupakan badan hukum yang memiliki peranan penting dalam mendukung kegiatan sosial',
+            price: 'Rp 3.250.000',
+            packages: '3 Paket',
+        },
+        {
+            id: '6',
+            title: 'Pendirian Koperasi',
+            description: 'Koperasi merupakan badan usaha yang memiliki peran penting dalam meningkatkan kesejahteraan',
+            price: 'Rp 9.750.000',
+            packages: '3 Paket',
+        },
+        {
+            id: '7',
+            title: 'Persekutuan Perdata',
+            description: 'Persekutuan Perdata (Maatschap) merupakan suatu bentuk perjanjian yang dibuat oleh dua orang atau lebih',
+            price: 'Rp 2.750.000',
+            packages: '3 Paket',
+        },
+        {
+            id: '8',
+            title: 'Persekutuan Firma',
+            description: 'Persekutuan Firma merupakan bentuk persekutuan yang dijalankan lebih dari satu orang',
+            price: 'Rp 2.750.000',
+            packages: '3 Paket',
+        },
+    ],
+}
