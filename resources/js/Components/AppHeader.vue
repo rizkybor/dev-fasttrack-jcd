@@ -1,5 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { useI18n } from "vue-i18n";
+import { useLocale } from "@/Composables/useLocale";
+
+const { t } = useI18n();
+const { languages, current, setLocale } = useLocale();
+const langOpen = ref(false);
 
 const servicesOpen = ref(false);
 const informasiOpen = ref(false);
@@ -149,9 +155,9 @@ const serviceTools = [
 ];
 
 const informasiLinks = [
-    { label: "Artikel", path: "/artikel" },
-    { label: "KBLI", path: "/kbli" },
-    { label: "FAQ", path: "/faq" },
+    { key: "artikel", path: "/artikel" },
+    { key: "kbli", path: "/kbli" },
+    { key: "faq", path: "/faq" },
 ];
 
 const closeAllMenus = () => {
@@ -180,7 +186,6 @@ const toggleMobileMenu = () => {
     }
 };
 
-// Close dropdowns when clicking outside the header
 const handleOutsideClick = (e) => {
     if (!e.target.closest("header")) {
         servicesOpen.value = false;
@@ -190,20 +195,6 @@ const handleOutsideClick = (e) => {
 
 onMounted(() => document.addEventListener("click", handleOutsideClick));
 onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
-
-const langOpen = ref(false);
-const selectedLang = ref({ code: "ID", label: "Indonesia", flag: "🇮🇩" });
-
-const languages = [
-    { code: "ID", label: "Indonesia", flag: "🇮🇩" },
-    { code: "EN", label: "English", flag: "🇬🇧" },
-    { code: "ZH", label: "中文", flag: "🇨🇳" },
-];
-
-const selectLang = (lang) => {
-    selectedLang.value = lang;
-    langOpen.value = false;
-};
 </script>
 
 <template>
@@ -304,7 +295,7 @@ const selectLang = (lang) => {
                         href="/promo"
                         class="flex items-center gap-1 px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
                     >
-                        PENAWARAN KHUSUS
+                        {{ t("common.nav.promo") }}
                         <img
                             src="/icons/half-rounded.svg"
                             class="w-4 h-4"
@@ -312,7 +303,7 @@ const selectLang = (lang) => {
                         />
                     </a>
 
-                    <!-- LAYANAN dropdown — hanya buka saat klik -->
+                    <!-- LAYANAN dropdown -->
                     <div class="relative">
                         <button
                             type="button"
@@ -325,7 +316,7 @@ const selectLang = (lang) => {
                             @click="toggleServices"
                             :aria-expanded="servicesOpen"
                         >
-                            LAYANAN
+                            {{ t("common.nav.services") }}
                             <svg
                                 class="w-4 h-4 transition-transform duration-200"
                                 :class="
@@ -352,7 +343,7 @@ const selectLang = (lang) => {
                         href="/tentang-kami"
                         class="flex items-center px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
                     >
-                        TENTANG KAMI
+                        {{ t("common.nav.about") }}
                     </a>
 
                     <!-- BLOG -->
@@ -360,10 +351,10 @@ const selectLang = (lang) => {
                         href="/artikel"
                         class="flex items-center px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
                     >
-                        BLOG
+                        {{ t("common.nav.blog") }}
                     </a>
 
-                    <!-- INFORMASI dropdown — hanya buka saat klik -->
+                    <!-- INFORMASI dropdown -->
                     <div class="relative">
                         <button
                             type="button"
@@ -376,7 +367,7 @@ const selectLang = (lang) => {
                             @click="toggleInformasi"
                             :aria-expanded="informasiOpen"
                         >
-                            INFORMASI
+                            {{ t("common.nav.info") }}
                             <svg
                                 class="w-4 h-4 transition-transform duration-200"
                                 :class="
@@ -414,8 +405,9 @@ const selectLang = (lang) => {
                                     :href="link.path"
                                     class="block rounded-lg px-4 py-2.5 text-sm font-semibold text-[#1A1B18] hover:bg-[#9e1f16]/5 hover:text-primary transition-colors"
                                     @click="closeAllMenus"
-                                    >{{ link.label }}</a
                                 >
+                                    {{ t(`common.nav.informasi.${link.key}`) }}
+                                </a>
                             </div>
                         </transition>
                     </div>
@@ -423,6 +415,7 @@ const selectLang = (lang) => {
 
                 <!-- Right: Lang + CTA -->
                 <div class="hidden lg:flex items-center gap-2">
+                    <!-- Language Selector Desktop -->
                     <div class="relative">
                         <button
                             type="button"
@@ -432,9 +425,9 @@ const selectLang = (lang) => {
                             :aria-expanded="langOpen"
                         >
                             <span class="text-base leading-none">{{
-                                selectedLang.flag
+                                current.flag
                             }}</span>
-                            <span>{{ selectedLang.code }}</span>
+                            <span>{{ current.code.toUpperCase() }}</span>
                             <svg
                                 class="w-4 h-4 transition-transform duration-200"
                                 :class="
@@ -471,11 +464,14 @@ const selectLang = (lang) => {
                                     type="button"
                                     class="flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors"
                                     :class="
-                                        selectedLang.code === lang.code
+                                        current.code === lang.code
                                             ? 'bg-[#9e1f16]/8 text-primary'
                                             : 'text-[#1A1B18] hover:bg-[#9e1f16]/5 hover:text-primary'
                                     "
-                                    @mousedown.prevent="selectLang(lang)"
+                                    @mousedown.prevent="
+                                        setLocale(lang.code);
+                                        langOpen = false;
+                                    "
                                 >
                                     <span class="text-xl leading-none">{{
                                         lang.flag
@@ -484,15 +480,16 @@ const selectLang = (lang) => {
                                         class="flex flex-col items-start leading-none"
                                     >
                                         <span class="font-bold">{{
-                                            lang.code
+                                            lang.code.toUpperCase()
                                         }}</span>
                                         <span
                                             class="text-xs text-[#42443D] mt-0.5 font-normal"
-                                            >{{ lang.label }}</span
                                         >
+                                            {{ t(`common.lang.${lang.code}`) }}
+                                        </span>
                                     </div>
                                     <svg
-                                        v-if="selectedLang.code === lang.code"
+                                        v-if="current.code === lang.code"
                                         class="ml-auto h-4 w-4 text-primary"
                                         fill="none"
                                         viewBox="0 0 24 24"
@@ -509,11 +506,13 @@ const selectLang = (lang) => {
                             </div>
                         </transition>
                     </div>
+
+                    <!-- CTA Button -->
                     <a
                         href="/kontak"
                         class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-[16px] px-6 py-3 rounded-lg transition-colors shadow-sm whitespace-nowrap"
                     >
-                        Minta Penawaran
+                        {{ t("common.nav.cta") }}
                         <svg
                             class="w-5 h-5"
                             fill="none"
@@ -587,11 +586,10 @@ const selectLang = (lang) => {
                 style="top: 60px"
             >
                 <nav class="px-3 pt-3 pb-5" aria-label="Mobile Navigation">
-                    <!-- Label -->
                     <p
                         class="text-[10px] font-bold tracking-widest text-[#AAAAAA] uppercase px-2 pb-2"
                     >
-                        Menu
+                        {{ t("common.nav.menu") }}
                     </p>
 
                     <!-- PENAWARAN KHUSUS -->
@@ -604,7 +602,7 @@ const selectLang = (lang) => {
                             class="flex-shrink-0 w-8 h-8 rounded-lg bg-[#F5F5F3] flex items-center justify-center text-base"
                             >🏷️</span
                         >
-                        Penawaran Khusus
+                        {{ t("common.nav.promo") }}
                         <span
                             class="ml-auto text-[10px] font-bold bg-[#9e1f16] text-white px-2 py-0.5 rounded-full tracking-wide"
                             >HOT</span
@@ -637,7 +635,7 @@ const selectLang = (lang) => {
                                 "
                                 >🏢</span
                             >
-                            Layanan
+                            {{ t("common.nav.services") }}
                             <svg
                                 class="ml-auto h-[18px] w-[18px] transition-transform duration-200 flex-shrink-0"
                                 :class="
@@ -684,7 +682,7 @@ const selectLang = (lang) => {
                             class="flex-shrink-0 w-8 h-8 rounded-lg bg-[#F5F5F3] flex items-center justify-center text-base"
                             >ℹ️</span
                         >
-                        Tentang Kami
+                        {{ t("common.nav.about") }}
                     </a>
 
                     <!-- BLOG -->
@@ -697,7 +695,7 @@ const selectLang = (lang) => {
                             class="flex-shrink-0 w-8 h-8 rounded-lg bg-[#F5F5F3] flex items-center justify-center text-base"
                             >📝</span
                         >
-                        Blog
+                        {{ t("common.nav.blog") }}
                     </a>
 
                     <div class="h-1"></div>
@@ -726,7 +724,7 @@ const selectLang = (lang) => {
                                 "
                                 >📚</span
                             >
-                            Informasi
+                            {{ t("common.nav.info") }}
                             <svg
                                 class="ml-auto h-[18px] w-[18px] transition-transform duration-200 flex-shrink-0"
                                 :class="
@@ -756,15 +754,16 @@ const selectLang = (lang) => {
                                 :href="link.path"
                                 class="px-3 py-2.5 rounded-lg text-[13px] font-medium text-[#42443D] hover:bg-[#FEF0F0] hover:text-[#9e1f16] transition-colors"
                                 @click="closeAllMenus"
-                                >{{ link.label }}</a
                             >
+                                {{ t(`common.nav.informasi.${link.key}`) }}
+                            </a>
                         </div>
                     </div>
 
                     <!-- Divider -->
                     <div class="my-3 h-px bg-[#F0F0EE]"></div>
 
-                    <!-- Language Selector -->
+                    <!-- Language Selector Mobile -->
                     <div class="grid grid-cols-3 gap-2 px-0.5">
                         <button
                             v-for="lang in languages"
@@ -772,37 +771,38 @@ const selectLang = (lang) => {
                             type="button"
                             class="flex flex-col items-center justify-center gap-1 py-3 px-2 rounded-xl border text-center transition-all"
                             :class="
-                                selectedLang.code === lang.code
+                                current.code === lang.code
                                     ? 'border-[#9e1f16] bg-[#FEF0F0] text-[#9e1f16]'
                                     : 'border-[#E5E5E0] bg-[#FAFAF8] text-[#1A1B18] hover:border-[#9e1f16]/40 hover:bg-[#FEF0F0]/50'
                             "
-                            @click="selectLang(lang)"
+                            @click="setLocale(lang.code)"
                         >
                             <span class="text-2xl leading-none">{{
                                 lang.flag
                             }}</span>
                             <span class="text-[12px] font-bold leading-none">{{
-                                lang.code
+                                lang.code.toUpperCase()
                             }}</span>
                             <span
                                 class="text-[10px] font-medium leading-none"
                                 :class="
-                                    selectedLang.code === lang.code
+                                    current.code === lang.code
                                         ? 'text-[#9e1f16]/70'
                                         : 'text-[#999]'
                                 "
-                                >{{ lang.label }}</span
                             >
+                                {{ t(`common.lang.${lang.code}`) }}
+                            </span>
                         </button>
                     </div>
 
-                    <!-- CTA -->
+                    <!-- CTA Mobile -->
                     <a
                         href="/kontak"
                         class="mt-3 flex items-center justify-center gap-2 rounded-xl bg-[#9e1f16] hover:bg-[#C8353A] px-5 py-4 text-[14px] font-bold text-white transition-colors tracking-wide"
                         @click="closeAllMenus"
                     >
-                        Minta Penawaran
+                        {{ t("common.nav.cta") }}
                         <svg
                             class="w-4 h-4"
                             fill="none"
@@ -817,11 +817,12 @@ const selectLang = (lang) => {
                             />
                         </svg>
                     </a>
+
+                    <!-- Copyright -->
                     <p
                         class="mt-2 text-[9px] font-semibold leading-[21px] text-black text-center"
                     >
-                        © Copyright 2026 fastrack.legal – All Rights Reserved a
-                        Business of PT Jakarta Bisnis Servis
+                        {{ t("common.footer.copyright") }}
                     </p>
                 </nav>
             </div>
@@ -846,11 +847,10 @@ const selectLang = (lang) => {
                     >
                         <div>
                             <h2 class="text-xl font-bold text-[#1A1B18]">
-                                Layanan Kami
+                                {{ t("common.nav.services") }}
                             </h2>
                             <p class="mt-0.5 text-sm text-[#42443D]">
-                                Pilih layanan yang sesuai dengan kebutuhan
-                                bisnis Anda.
+                                {{ t("common.nav.servicesDesc") }}
                             </p>
                         </div>
                         <button
@@ -871,7 +871,7 @@ const selectLang = (lang) => {
                                     d="M6 18L18 6M6 6l12 12"
                                 />
                             </svg>
-                            Tutup
+                            {{ t("common.nav.close") }}
                         </button>
                     </div>
                 </div>
@@ -1059,9 +1059,9 @@ const selectLang = (lang) => {
                             </template>
                         </a>
                     </div>
-                    <div
-                        class="mt-6 pt-6 border-t border-[#D9DAD8] flex justify-center"
-                    >
+
+                    <!-- Tools section -->
+                    <div class="mt-6 pt-6 border-t border-[#D9DAD8]">
                         <div
                             class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
                         >
@@ -1070,7 +1070,7 @@ const selectLang = (lang) => {
                                     Tools
                                 </h2>
                                 <p class="mt-0.5 text-sm text-[#42443D]">
-                                    Pilih tools yang anda butuhkan.
+                                    {{ t("common.nav.toolsDesc") }}
                                 </p>
                             </div>
                         </div>
@@ -1082,47 +1082,30 @@ const selectLang = (lang) => {
                                 class="group rounded-xl border border-[#D9DAD8] bg-white p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md"
                                 @click="closeAllMenus"
                             >
-                                <template v-if="!group.isLogo">
-                                    <div class="flex items-start gap-2.5">
-                                        <img
-                                            :src="group.icon"
-                                            :alt="group.title"
-                                            class="h-8 w-8"
-                                        />
-                                        <div>
-                                            <h3
-                                                class="text-sm font-bold text-[#1A1B18] group-hover:text-primary transition-colors leading-tight"
-                                            >
-                                                {{ group.title }}
-                                            </h3>
-                                            <ul
-                                                class="mt-1 space-y-0.5 text-xs text-[#42443D]"
-                                            >
-                                                <li
-                                                    v-for="item in group.items"
-                                                    :key="item"
-                                                >
-                                                    {{ item }}
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </template>
-                                <template v-else>
-                                    <div
-                                        class="h-full min-h-[60px] flex flex-col justify-center"
-                                    >
-                                        <div
-                                            class="text-lg font-bold mb-1"
-                                            v-html="group.logoText"
-                                        ></div>
-                                        <p
-                                            class="text-xs text-[#42443D] leading-tight"
+                                <div class="flex items-start gap-2.5">
+                                    <img
+                                        :src="group.icon"
+                                        :alt="group.title"
+                                        class="h-8 w-8"
+                                    />
+                                    <div>
+                                        <h3
+                                            class="text-sm font-bold text-[#1A1B18] group-hover:text-primary transition-colors leading-tight"
                                         >
-                                            {{ group.desc }}
-                                        </p>
+                                            {{ group.title }}
+                                        </h3>
+                                        <ul
+                                            class="mt-1 space-y-0.5 text-xs text-[#42443D]"
+                                        >
+                                            <li
+                                                v-for="item in group.items"
+                                                :key="item"
+                                            >
+                                                {{ item }}
+                                            </li>
+                                        </ul>
                                     </div>
-                                </template>
+                                </div>
                             </a>
                         </div>
                     </div>
