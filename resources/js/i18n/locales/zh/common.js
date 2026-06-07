@@ -1,5 +1,6 @@
 export default {
     nav: {
+        cooperation: '合作',
         promo: '特别优惠',
         services: '服务',
         about: '关于我们',

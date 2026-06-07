@@ -224,7 +224,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                 <div class="inline-flex items-center gap-1 h-8">
                     <span
                         class="text-[14px] font-bold leading-[21px] text-[#FEFEFE]"
-                        >KERJASAMA</span
+                        >{{ t("common.nav.cooperation") }}</span
                     >
                     <span class="text-[18px] leading-none">🔥</span>
                 </div>
