@@ -21,6 +21,42 @@ export default {
     },
     footer: {
         copyright: '© 版权所有 2026 fastrack.legal – 保留所有权利，PT Jakarta Bisnis Servis 旗下业务',
+        nav: {
+            title: '导航：',
+            home: '首页',
+            services: '服务',
+            ptSetup: 'PT注册',
+            cvSetup: 'CV注册',
+            visa: '签证',
+            virtualOffice: '虚拟办公室',
+            tools: '工具与功能',
+            blog: '博客',
+            info: '信息',
+        },
+        legal: {
+            terms: '条款与条件',
+            privacy: '隐私政策',
+            cookie: 'Cookie政策',
+        },
+        offices: {
+            head: {
+                title: '总部办公室：',
+                address: 'Grand Bintaro Blok A7, Jl. Raya Bintaro Permai, Pesanggrahan, Bintaro, 南雅加达 - 12330',
+            },
+            bali: {
+                title: '巴厘岛办公室：',
+                address: 'Jl. By Pass Ngurah Rai No. 264, Sanur, Denpasar - 巴厘岛 80228',
+            },
+            surabaya: {
+                title: '泗水办公室：',
+                address: 'Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, 东爪哇 61256',
+            },
+            indramayu: {
+                title: '井里汶办公室：',
+                address: 'Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, 东爪哇 61256',
+            },
+        },
+        popularLinks: '热门链接：PT PMA 和 KITAS 套餐，外国人印尼 PMA 公司注册，印尼投资者签证/KITAS，印尼工作签证/KITAS，印尼商务签证，印尼旅游签证，印尼PT公司注册与设立，印尼代表处（KPPA），虚拟办公室，商标注册，版权，专利，雅加达播客工作室，办公室租赁。',
     },
     button: {
         seeAll: '查看全部',
