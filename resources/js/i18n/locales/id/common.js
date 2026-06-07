@@ -1,5 +1,6 @@
 export default {
     nav: {
+        cooperation: 'KERJASAMA',
         promo: 'PENAWARAN KHUSUS',
         services: 'LAYANAN',
         about: 'TENTANG KAMI',

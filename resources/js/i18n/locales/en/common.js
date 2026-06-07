@@ -1,5 +1,6 @@
 export default {
     nav: {
+        cooperation: 'COOPERATION',
         promo: 'SPECIAL OFFERS',
         services: 'SERVICES',
         about: 'ABOUT US',
