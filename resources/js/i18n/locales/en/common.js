@@ -14,6 +14,8 @@ export default {
             kbli: 'KBLI',
             faq: 'FAQ',
         },
+        servicesDesc: 'Choose services that suit your business needs.',
+        toolsDesc: 'Choose the tools you need.'
     },
     lang: {
         id: 'Indonesia',
@@ -69,5 +71,4 @@ export default {
         getPromo: 'Get Promo',
         openMaps: 'Open in Maps',
     },
-    servicesDesc: 'Choose services that suit your business needs.', toolsDesc: 'Choose the tools you need.'
 }
