@@ -37,57 +37,140 @@ const canGenerate = computed(
     () => keyword.value.trim() && selectedBidang.value,
 );
 
-const mockNames = (kw, bidang) => {
-    const prefixes = [
-        "Cahaya",
-        "Maju",
-        "Prima",
-        "Karya",
-        "Sentosa",
-        "Nusa",
-        "Bumi",
-        "Cipta",
-        "Artha",
-        "Mulia",
-    ];
-    const suffixes = [
-        "Mandiri",
-        "Sejahtera",
-        "Abadi",
-        "Jaya",
-        "Utama",
-        "Persada",
-        "Nusantara",
-        "Indonesia",
-        "Pratama",
-        "Solusi",
-    ];
-    const generated = [];
-    const used = new Set();
-    while (generated.length < 5) {
-        const p = prefixes[Math.floor(Math.random() * prefixes.length)];
-        const s = suffixes[Math.floor(Math.random() * suffixes.length)];
-        const name = `PT ${p} ${kw.charAt(0).toUpperCase() + kw.slice(1)} ${s}`;
-        if (!used.has(name)) {
-            used.add(name);
-            generated.push(name);
-        }
-    }
-    return generated;
+// ─── Kosakata per bidang ──────────────────────────────────────────────────────
+const bidangVocab = {
+    "IT Services": {
+        pre:  ["Nexus", "Synapse", "Digicore", "Infotech", "Cyberlink", "Teknova", "Netwise", "Datasync", "Bitwise", "Cloudera"],
+        mid:  ["Sistem", "Teknologi", "Digital", "Solusi", "Inovasi", "Platform", "Komputasi", "Jaringan", "Data"],
+        suf:  ["Indonesia", "Nusantara", "Andalan", "Utama", "Pratama", "Solutions", "Lab", "Dev"],
+    },
+    "Perdagangan Umum": {
+        pre:  ["Niaga", "Dagang", "Mega", "Prima", "Artha", "Agung", "Sumber", "Tama"],
+        mid:  ["Distribusi", "Perdagangan", "Niaga", "Ekspor", "Suplai", "Ritel", "Grosir"],
+        suf:  ["Mandiri", "Sejahtera", "Nusantara", "Indonesia", "Jaya", "Abadi", "Makmur"],
+    },
+    "Konstruksi": {
+        pre:  ["Bangun", "Cipta", "Graha", "Wira", "Perkasa", "Kokoh", "Teguh", "Pondasi"],
+        mid:  ["Konstruksi", "Infrastruktur", "Teknik", "Bangunan", "Sipil", "Struktur"],
+        suf:  ["Persada", "Nusantara", "Mandiri", "Utama", "Sejahtera", "Abadi", "Perkasa"],
+    },
+    "Properti": {
+        pre:  ["Graha", "Realty", "Lahan", "Arealindo", "Kavling", "Hunian", "Aset"],
+        mid:  ["Properti", "Residensial", "Perumahan", "Kavling", "Hunian", "Realty"],
+        suf:  ["Indonesia", "Nusantara", "Indah", "Permai", "Lestari", "Sejahtera", "Gemilang"],
+    },
+    "Manufaktur": {
+        pre:  ["Industri", "Fabrika", "Produksi", "Karya", "Wahana", "Prima", "Cipta"],
+        mid:  ["Manufaktur", "Industri", "Produksi", "Fabrikasi", "Olahan", "Rakitan"],
+        suf:  ["Indonesia", "Nusantara", "Mandiri", "Utama", "Persada", "Jaya", "Gemilang"],
+    },
+    "Konsultan": {
+        pre:  ["Advisory", "Strategi", "Insight", "Aksara", "Cakra", "Visi", "Mitra"],
+        mid:  ["Konsultasi", "Manajemen", "Strategi", "Advisory", "Riset", "Analitik"],
+        suf:  ["Indonesia", "Partners", "Andalan", "Utama", "Nusantara", "Pratama", "Group"],
+    },
+    "Kesehatan": {
+        pre:  ["Medika", "Husada", "Farma", "Vita", "Wellnes", "Sehat", "Klinik"],
+        mid:  ["Kesehatan", "Medika", "Farmasi", "Husada", "Terapi", "Klinik", "Nutrisi"],
+        suf:  ["Indonesia", "Nusantara", "Sejahtera", "Mandiri", "Abadi", "Utama", "Prima"],
+    },
+    "Pendidikan": {
+        pre:  ["Cendekia", "Widya", "Bina", "Tunas", "Aksara", "Eduka", "Ilmu"],
+        mid:  ["Pendidikan", "Edukasi", "Pelatihan", "Akademi", "Pengembangan", "Talenta"],
+        suf:  ["Indonesia", "Bangsa", "Mandiri", "Sejahtera", "Muda", "Nusantara", "Generasi"],
+    },
+    "Kuliner & F&B": {
+        pre:  ["Cita", "Rasa", "Selera", "Lezat", "Sajian", "Nikmati", "Kuliner"],
+        mid:  ["Kuliner", "Pangan", "Gastro", "Masakan", "Sajian", "Cita Rasa", "Olahan"],
+        suf:  ["Indonesia", "Nusantara", "Mandiri", "Sejahtera", "Abadi", "Jaya", "Prima"],
+    },
+    "Logistik": {
+        pre:  ["Ekspres", "Kargo", "Andal", "Trans", "Cepat", "Sigap", "Armada"],
+        mid:  ["Logistik", "Kargo", "Distribusi", "Pengiriman", "Transportasi", "Supply Chain"],
+        suf:  ["Indonesia", "Nusantara", "Ekspres", "Andalan", "Utama", "Mandiri", "Prima"],
+    },
+    "Keuangan": {
+        pre:  ["Artha", "Dana", "Kapital", "Rupiah", "Modal", "Investasi", "Finansial"],
+        mid:  ["Keuangan", "Finansial", "Investasi", "Kapital", "Aset", "Dana", "Portofolio"],
+        suf:  ["Indonesia", "Nusantara", "Mandiri", "Sejahtera", "Abadi", "Utama", "Capital"],
+    },
+    "Media & Kreatif": {
+        pre:  ["Kreatif", "Visi", "Narasi", "Visual", "Cipta", "Kreasi", "Pixel"],
+        mid:  ["Media", "Kreatif", "Konten", "Desain", "Komunikasi", "Branding", "Produksi"],
+        suf:  ["Indonesia", "Studio", "Agency", "Nusantara", "Mandiri", "Creative", "Works"],
+    },
 };
 
+// ─── Helper ───────────────────────────────────────────────────────────────────
+const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+const formatKw = (kw) =>
+    kw.trim()
+      .split(/\s+/)
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+      .join(" ");
+
+// ─── 5 pola nama yang bervariasi ──────────────────────────────────────────────
+const buildPatterns = (fkw, vocab) => {
+    const { pre, mid, suf } = vocab;
+    return [
+        // [Prefix] [Keyword]
+        () => `PT ${pick(pre)} ${fkw}`,
+        // [Keyword] [Middle] [Suffix]
+        () => `PT ${fkw} ${pick(mid)} ${pick(suf)}`,
+        // [Prefix] [Keyword] [Suffix]
+        () => `PT ${pick(pre)} ${fkw} ${pick(suf)}`,
+        // [Keyword] [Suffix]
+        () => `PT ${fkw} ${pick(suf)}`,
+        // [Prefix] [Middle] [Keyword]
+        () => `PT ${pick(pre)} ${pick(mid)} ${fkw}`,
+    ];
+};
+
+// ─── Core generator ───────────────────────────────────────────────────────────
+const generateNames = (kw, bidang) => {
+    const vocab = bidangVocab[bidang] ?? {
+        pre: ["Karya", "Prima", "Nusa"],
+        mid: ["Solusi", "Usaha"],
+        suf: ["Indonesia", "Mandiri"],
+    };
+
+    const fkw      = formatKw(kw);
+    const patterns = buildPatterns(fkw, vocab).sort(() => Math.random() - 0.5);
+    const used     = new Set();
+    const output   = [];
+
+    for (const pattern of patterns) {
+        // Coba hingga 5x per pola jika nama kebetulan duplikat
+        for (let i = 0; i < 5; i++) {
+            const name = pattern();
+            if (!used.has(name)) {
+                used.add(name);
+                output.push(name);
+                break;
+            }
+        }
+        if (output.length === 5) break;
+    }
+
+    return output;
+};
+
+// ─── Handler ──────────────────────────────────────────────────────────────────
 const generate = async () => {
     if (!canGenerate.value || isLoading.value) return;
     isLoading.value = true;
-    results.value = [];
-    await new Promise((r) => setTimeout(r, 1400));
-    results.value = mockNames(keyword.value.trim(), selectedBidang.value);
+    results.value   = [];
+
+    await new Promise((r) => setTimeout(r, 900));
+
+    results.value   = generateNames(keyword.value.trim(), selectedBidang.value);
     hasGenerated.value = true;
     isLoading.value = false;
 };
 
 const reset = () => {
-    results.value = [];
+    results.value      = [];
     hasGenerated.value = false;
 };
 </script>
