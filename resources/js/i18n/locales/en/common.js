@@ -25,26 +25,26 @@ export default {
     footer: {
         copyright: '© Copyright 2026 fastrack.legal – All Rights Reserved a Business of PT Jakarta Bisnis Servis',
         nav: {
-            title: 'Navigasi:',
-            home: 'Beranda',
-            services: 'Layanan',
-            ptSetup: 'Pendirian PT',
-            cvSetup: 'Pendirian CV',
+            title: 'Navigation:',
+            home: 'Home',
+            services: 'Services',
+            ptSetup: 'PT Establishment',
+            cvSetup: 'CV Establishment',
             visa: 'Visa',
             virtualOffice: 'Virtual Office',
-            tools: 'Peralatan dan Fitur',
+            tools: 'Tools & Features',
             blog: 'Blog',
-            info: 'Informasi',
+            info: 'Information',
         },
         legal: {
-            terms: 'Syarat & Ketentuan',
-            privacy: 'Kebijakan Privasi',
-            cookie: 'Kebijakan Cookie',
+            terms: 'Terms & Conditions',
+            privacy: 'Privacy Policy',
+            cookie: 'Cookie Policy',
         },
         offices: {
             head: {
                 title: 'Head Office:',
-                address: 'Grand Bintaro Blok A7, Jl. Raya Bintaro Permai, Pesanggrahan, Bintaro, Jakarta Selatan - 12330',
+                address: 'Grand Bintaro Blok A7, Jl. Raya Bintaro Permai, Pesanggrahan, Bintaro, South Jakarta - 12330',
             },
             bali: {
                 title: 'Bali Office:',
@@ -52,14 +52,14 @@ export default {
             },
             surabaya: {
                 title: 'Surabaya Office:',
-                address: 'Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, Jawa Timur 61256',
+                address: 'Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, East Java 61256',
             },
             indramayu: {
                 title: 'Indramayu Office:',
-                address: 'Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, Jawa Timur 61256',
+                address: 'Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, East Java 61256',
             },
         },
-        popularLinks: 'Popular Links : PT PMA and KITAS Package , PMA Company Registration Indonesia for Foreigner , Indonesia Investor Visa /KITAS , Indonesia Work Visa / KITAS , Indonesia Business Visa , Indonesia Tourist Visa , Register and Set Up PT Company Indonesia , Representative Office in Indonesia (KPPA) , Virtual Office, Jasa Daftar Merek, Hak Cipta, Hak Paten, Sewa Podcast Jakarta, Sewa Kantor.',
+        popularLinks: 'Popular Links : PT PMA and KITAS Package , PMA Company Registration Indonesia for Foreigner , Indonesia Investor Visa /KITAS , Indonesia Work Visa / KITAS , Indonesia Business Visa , Indonesia Tourist Visa , Register and Set Up PT Company Indonesia , Representative Office in Indonesia (KPPA) , Virtual Office, Trademark Registration, Copyright, Patent, Podcast Studio Jakarta, Office Rental.',
     },
     button: {
         seeAll: 'See All',

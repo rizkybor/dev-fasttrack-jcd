@@ -1,17 +1,17 @@
 <script setup>
-import { ref, computed } from "vue";
-import { useI18n } from 'vue-i18n'
+import { ref, onMounted, onUnmounted, computed } from "vue";
+import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { useModals } from "@/Composables/useModals";
 import GeneratorNamaModal from "@/Components/ModalGenerateName.vue";
 import CekNamaModal from "@/Components/ModalCheckName.vue";
-import { useServiceCategories } from '@/Data/serviceCategories'
-import { useTools } from '@/Data/tools'
-import { useVirtualOffices } from '@/Data/virtualOffices'
+import { useServiceCategories } from "@/Data/serviceCategories";
+import { useTools } from "@/Data/tools";
+import { useVirtualOffices } from "@/Data/virtualOffices";
 
-const { serviceCategories } = useServiceCategories()
+const { serviceCategories } = useServiceCategories();
 
-const { t } = useI18n()
+const { t } = useI18n();
 
 const {
     showGeneratorModal,
@@ -122,9 +122,9 @@ const marqueeRows = [
 const serviceSearch = ref("");
 
 const filteredCategories = computed(() => {
-    const categories = serviceCategories.value
-    if (!serviceSearch.value) return categories
-    const q = serviceSearch.value.toLowerCase()
+    const categories = serviceCategories.value;
+    if (!serviceSearch.value) return categories;
+    const q = serviceSearch.value.toLowerCase();
     return categories
         .map((cat) => ({
             ...cat,
@@ -134,14 +134,42 @@ const filteredCategories = computed(() => {
                     item.description.toLowerCase().includes(q),
             ),
         }))
-        .filter((cat) => cat.items.length > 0)
-})
+        .filter((cat) => cat.items.length > 0);
+});
 
-// Data Tools 
-const { tools } = useTools()
+// Data Tools
+const { tools } = useTools();
 
 // Data Virtual Offices
-const { virtualOffices } = useVirtualOffices()
+const { virtualOffices } = useVirtualOffices();
+
+// ─── Hero Slider ──────────────────────────────────────────────────────────────
+const heroImages = [
+    "/images/hero-banner.png",
+    "/images/hero-banner-2.png", // ← ganti dengan gambar ke-2 kamu
+];
+
+const activeSlide = ref(0);
+let sliderTimer = null;
+
+const goToSlide = (i) => {
+    activeSlide.value = i;
+    // Reset timer saat dot diklik manual
+    clearInterval(sliderTimer);
+    sliderTimer = setInterval(nextSlide, 5000);
+};
+
+const nextSlide = () => {
+    activeSlide.value = (activeSlide.value + 1) % heroImages.length;
+};
+
+onMounted(() => {
+    sliderTimer = setInterval(nextSlide, 5000);
+});
+
+onUnmounted(() => {
+    clearInterval(sliderTimer);
+});
 </script>
 
 <template>
@@ -150,14 +178,22 @@ const { virtualOffices } = useVirtualOffices()
         <section
             class="relative min-h-[520px] lg:min-h-[580px] flex items-center overflow-hidden"
         >
-            <img
-                src="/images/hero-banner.png"
-                alt="Hero Banner JC Digital"
-                class="absolute inset-0 w-full h-full object-cover"
-                loading="eager"
-            />
+            <!-- ── Slide Images ─────────────────────────────────────────────── -->
+            <transition-group name="hero-fade">
+                <img
+                    v-for="(img, i) in heroImages"
+                    v-show="i === activeSlide"
+                    :key="img"
+                    :src="img"
+                    alt="Hero Banner"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    loading="eager"
+                />
+            </transition-group>
+
             <div class="absolute inset-0 bg-black/20"></div>
 
+            <!-- ── Content ─────────────────────────────────────────────────── -->
             <div
                 class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-14 lg:py-[52px]"
             >
@@ -166,37 +202,37 @@ const { virtualOffices } = useVirtualOffices()
                         <div
                             class="inline-flex items-center gap-2 rounded-full border border-[#FEFEFE]/30 bg-white/10 backdrop-blur-sm px-4 py-2 w-max"
                         >
-                            <span class="text-sm text-[#FEFEFE]"
-                                >{{ t('home.hero.badge') }}</span
-                            >
+                            <span class="text-sm text-[#FEFEFE]">{{
+                                t("home.hero.badge")
+                            }}</span>
                         </div>
-
                         <div class="flex flex-col gap-4">
                             <h1
                                 class="text-3xl sm:text-4xl lg:text-[38px] font-bold text-[#F9F9F9]"
                             >
-                                <span class="block mb-2"
-                                    >{{ t('home.hero.title1') }}
-                                </span>
-                                <span class="block mb-2"
-                                    >{{ t('home.hero.title2') }}</span
-                                >
-                                <span class="block">{{ t('home.hero.title3') }}</span>
+                                <span class="block mb-2">{{
+                                    t("home.hero.title1")
+                                }}</span>
+                                <span class="block mb-2">{{
+                                    t("home.hero.title2")
+                                }}</span>
+                                <span class="block">{{
+                                    t("home.hero.title3")
+                                }}</span>
                             </h1>
                             <p
                                 class="text-base lg:text-[16px] text-[#F9F9F9]/90 leading-loose"
                             >
-                                {{ t('home.hero.subtitle') }}
+                                {{ t("home.hero.subtitle") }}
                             </p>
                         </div>
                     </div>
-
                     <div class="flex flex-wrap gap-3">
                         <a
                             href="/kontak"
                             class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors shadow-md"
                         >
-                            {{ t('home.hero.cta_primary') }}
+                            {{ t("home.hero.cta_primary") }}
                             <svg
                                 class="w-5 h-5"
                                 fill="none"
@@ -215,7 +251,7 @@ const { virtualOffices } = useVirtualOffices()
                             href="/layanan"
                             class="inline-flex items-center gap-2 border border-[#F9F9F9] text-[#F9F9F9] hover:bg-white/10 font-semibold text-base px-6 py-3 rounded-lg transition-colors"
                         >
-                            {{ t('home.hero.cta_secondary') }}
+                            {{ t("home.hero.cta_secondary") }}
                         </a>
                     </div>
                 </div>
@@ -236,10 +272,10 @@ const { virtualOffices } = useVirtualOffices()
                             <div
                                 class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
                             >
-                                {{ t('home.stats.clients.value') }}
+                                {{ t("home.stats.clients.value") }}
                             </div>
                             <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                {{ t('home.stats.clients.label') }}
+                                {{ t("home.stats.clients.label") }}
                             </div>
                         </div>
                         <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
@@ -256,10 +292,10 @@ const { virtualOffices } = useVirtualOffices()
                             <div
                                 class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
                             >
-                                {{ t('home.stats.experience.value') }}
+                                {{ t("home.stats.experience.value") }}
                             </div>
                             <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                {{ t('home.stats.experience.label') }}
+                                {{ t("home.stats.experience.label") }}
                             </div>
                         </div>
                         <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
@@ -278,10 +314,10 @@ const { virtualOffices } = useVirtualOffices()
                             <div
                                 class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
                             >
-                                {{ t('home.stats.offices.value') }}
+                                {{ t("home.stats.offices.value") }}
                             </div>
                             <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                                {{ t('home.stats.offices.label') }}
+                                {{ t("home.stats.offices.label") }}
                             </div>
                         </div>
                         <div class="h-8 w-px bg-white/20 hidden sm:block"></div>
@@ -295,10 +331,10 @@ const { virtualOffices } = useVirtualOffices()
                         <div
                             class="text-xl lg:text-2xl font-bold text-[#F9F9F9]"
                         >
-                            {{ t('home.stats.satisfaction.value') }}
+                            {{ t("home.stats.satisfaction.value") }}
                         </div>
                         <div class="text-xs lg:text-sm text-[#F9F9F9]/80">
-                            {{ t('home.stats.satisfaction.label') }}
+                            {{ t("home.stats.satisfaction.label") }}
                         </div>
                     </div>
                 </div>
@@ -333,19 +369,19 @@ const { virtualOffices } = useVirtualOffices()
                                 <span
                                     class="text-[20px] sm:text-[28px] font-bold leading-[1.4] text-primary"
                                 >
-                                    {{ t('home.vip.title') }}
+                                    {{ t("home.vip.title") }}
                                 </span>
                             </div>
                             <p
                                 class="text-[16px] sm:text-[24px] font-semibold leading-[1.5] text-[#F9F9F9]"
                             >
-                                {{ t('home.vip.subtitle') }}
+                                {{ t("home.vip.subtitle") }}
                             </p>
                         </div>
                         <p
                             class="text-[12px] sm:text-[14px] font-light leading-[21px] text-[#F9F9F9] underline italic"
                         >
-                            {{ t('home.vip.disclaimer') }}
+                            {{ t("home.vip.disclaimer") }}
                         </p>
                     </div>
 
@@ -375,7 +411,7 @@ const { virtualOffices } = useVirtualOffices()
                         <span
                             class="text-[15px] sm:text-[16px] font-semibold leading-[24px] text-[#F9F9F9]"
                         >
-                            {{ t('home.vip.cta') }}
+                            {{ t("home.vip.cta") }}
                         </span>
                         <svg
                             class="w-5 h-5 sm:w-6 sm:h-6 text-[#F9F9F9]"
@@ -405,7 +441,7 @@ const { virtualOffices } = useVirtualOffices()
                         <h2
                             class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
                         >
-                            {{ t('home.services.title') }}
+                            {{ t("home.services.title") }}
                         </h2>
                         <div
                             class="hidden sm:flex items-center border border-[#D9DAD8] rounded-lg shadow-sm bg-[#FEFEFE] w-[300px] h-[46px] overflow-hidden"
@@ -471,7 +507,7 @@ const { virtualOffices } = useVirtualOffices()
                                         d="M12 4v16m8-8H4"
                                     />
                                 </svg>
-                                {{ t('home.services.seeMore') }}
+                                {{ t("home.services.seeMore") }}
                             </a>
                         </div>
 
@@ -521,7 +557,7 @@ const { virtualOffices } = useVirtualOffices()
                                     <div class="flex flex-col gap-0.5">
                                         <span
                                             class="text-[12px] leading-[18px] text-[#1A1B18]"
-                                            >{{ t('home.services.from') }}</span
+                                            >{{ t("home.services.from") }}</span
                                         >
                                         <span
                                             class="text-[24px] font-bold leading-[36px] text-primary"
@@ -537,7 +573,7 @@ const { virtualOffices } = useVirtualOffices()
                                 <div
                                     class="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors"
                                 >
-                                    {{ t('home.services.cta') }}
+                                    {{ t("home.services.cta") }}
                                     <svg
                                         class="w-4 h-4 group-hover:translate-x-1 transition-transform"
                                         fill="none"
@@ -561,7 +597,7 @@ const { virtualOffices } = useVirtualOffices()
                             href="/layanan"
                             class="inline-flex items-center justify-center gap-2 border border-primary rounded-lg px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary hover:bg-[#9e1f16] hover:text-white transition-colors"
                         >
-                            {{ t('home.services.seeAll') }}
+                            {{ t("home.services.seeAll") }}
                             <svg
                                 class="w-4 h-4"
                                 fill="none"
@@ -588,13 +624,13 @@ const { virtualOffices } = useVirtualOffices()
                     <h2
                         class="text-[24px] font-bold leading-[36px] text-[#F9F9F9]"
                     >
-                        {{ t('home.promo.title') }}
+                        {{ t("home.promo.title") }}
                     </h2>
                     <a
                         href="/promo"
                         class="hidden sm:inline-flex items-center gap-2 border border-[#F9F9F9] rounded-lg px-[11px] py-[11px] h-[44px] text-[14px] font-semibold text-[#F9F9F9] hover:bg-white/10 transition-colors"
                     >
-                        {{ t('home.promo.seeAll') }}
+                        {{ t("home.promo.seeAll") }}
                         <svg
                             class="w-6 h-6"
                             fill="none"
@@ -625,25 +661,25 @@ const { virtualOffices } = useVirtualOffices()
                         >
                             <span
                                 class="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center justify-center rounded-b-lg bg-[#FED7DA] px-3 py-1 h-[26px] text-[10px] font-semibold leading-[18px] text-[#FB3748]"
-                                >{{ t('home.promo.badge') }}</span
+                                >{{ t("home.promo.badge") }}</span
                             >
                             <div class="flex flex-col items-center gap-1">
                                 <h3
                                     class="text-[16px] font-bold leading-[24px] text-[#1A1B18]"
                                 >
-                                    {{ t('home.promo.discount') }}
+                                    {{ t("home.promo.discount") }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#1A1B18] text-center"
                                 >
-                                    {{ t('home.promo.desc') }}
+                                    {{ t("home.promo.desc") }}
                                 </p>
                             </div>
                         </div>
                         <div
                             class="flex items-center justify-center rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors"
                         >
-                            {{ t('home.promo.cta') }}
+                            {{ t("home.promo.cta") }}
                         </div>
                     </a>
                 </div>
@@ -652,7 +688,7 @@ const { virtualOffices } = useVirtualOffices()
                     href="/promo"
                     class="sm:hidden mt-6 inline-flex items-center gap-2 border border-[#F9F9F9] rounded-lg px-[11px] py-[11px] h-[44px] text-[14px] font-semibold text-[#F9F9F9] hover:bg-white/10 transition-colors w-full justify-center"
                 >
-                    {{ t('home.promo.seeAll') }}
+                    {{ t("home.promo.seeAll") }}
                     <svg
                         class="w-5 h-5"
                         fill="none"
@@ -697,7 +733,7 @@ const { virtualOffices } = useVirtualOffices()
                                     <h2
                                         class="text-[28px] font-bold leading-[36px] text-[#1A1B18]"
                                     >
-                                        {{ t('home.about.title') }}
+                                        {{ t("home.about.title") }}
                                     </h2>
                                 </div>
 
@@ -705,12 +741,12 @@ const { virtualOffices } = useVirtualOffices()
                                     <p
                                         class="text-[14px] leading-[22px] text-[#4A4B47] text-justify"
                                     >
-                                        {{ t('home.about.desc1') }}
+                                        {{ t("home.about.desc1") }}
                                     </p>
                                     <p
                                         class="text-[14px] leading-[22px] text-[#4A4B47] text-justify"
                                     >
-                                        {{ t('home.about.desc2') }}
+                                        {{ t("home.about.desc2") }}
                                     </p>
                                 </div>
 
@@ -723,11 +759,19 @@ const { virtualOffices } = useVirtualOffices()
                                     >
                                         <span
                                             class="text-[19px] sm:text-[26px] font-bold leading-tight text-primary"
-                                            >{{ t('home.about.stats.experience.value') }}</span
+                                            >{{
+                                                t(
+                                                    "home.about.stats.experience.value",
+                                                )
+                                            }}</span
                                         >
                                         <span
                                             class="text-[10px] sm:text-[12px] text-[#4A4B47] text-center leading-tight"
-                                            >{{ t('home.about.stats.experience.label') }}</span
+                                            >{{
+                                                t(
+                                                    "home.about.stats.experience.label",
+                                                )
+                                            }}</span
                                         >
                                     </div>
                                     <div
@@ -735,11 +779,19 @@ const { virtualOffices } = useVirtualOffices()
                                     >
                                         <span
                                             class="text-[19px] sm:text-[26px] font-bold leading-tight text-primary"
-                                            >{{ t('home.about.stats.offices.value') }}</span
+                                            >{{
+                                                t(
+                                                    "home.about.stats.offices.value",
+                                                )
+                                            }}</span
                                         >
                                         <span
                                             class="text-[10px] sm:text-[12px] text-[#4A4B47] text-center leading-tight"
-                                            >{{ t('home.about.stats.offices.label') }}</span
+                                            >{{
+                                                t(
+                                                    "home.about.stats.offices.label",
+                                                )
+                                            }}</span
                                         >
                                     </div>
                                     <div
@@ -747,11 +799,19 @@ const { virtualOffices } = useVirtualOffices()
                                     >
                                         <span
                                             class="text-[19px] sm:text-[26px] font-bold leading-tight text-primary"
-                                            >{{ t('home.about.stats.clients.value') }}</span
+                                            >{{
+                                                t(
+                                                    "home.about.stats.clients.value",
+                                                )
+                                            }}</span
                                         >
                                         <span
                                             class="text-[10px] sm:text-[12px] text-[#4A4B47] text-center leading-tight"
-                                            >{{ t('home.about.stats.clients.label') }}</span
+                                            >{{
+                                                t(
+                                                    "home.about.stats.clients.label",
+                                                )
+                                            }}</span
                                         >
                                     </div>
                                 </div>
@@ -766,12 +826,12 @@ const { virtualOffices } = useVirtualOffices()
                             <h3
                                 class="text-[24px] font-bold leading-[36px] text-primary"
                             >
-                                {{ t('home.about.philosophy.title') }}
+                                {{ t("home.about.philosophy.title") }}
                             </h3>
                             <p
                                 class="text-[14px] leading-[21px] text-[#1A1B18] justify-center"
                             >
-                                {{ t('home.about.philosophy.desc') }}
+                                {{ t("home.about.philosophy.desc") }}
                             </p>
                         </div>
                         <div
@@ -780,12 +840,12 @@ const { virtualOffices } = useVirtualOffices()
                             <h3
                                 class="text-[24px] font-bold leading-[36px] text-primary"
                             >
-                                {{ t('home.about.vision.title') }}
+                                {{ t("home.about.vision.title") }}
                             </h3>
                             <p
                                 class="text-[14px] leading-[21px] text-[#1A1B18] justify-center"
                             >
-                                {{ t('home.about.vision.desc') }}
+                                {{ t("home.about.vision.desc") }}
                             </p>
                         </div>
                         <div
@@ -794,12 +854,12 @@ const { virtualOffices } = useVirtualOffices()
                             <h3
                                 class="text-[24px] font-bold leading-[36px] text-primary"
                             >
-                                {{ t('home.about.commitment.title') }}
+                                {{ t("home.about.commitment.title") }}
                             </h3>
                             <p
                                 class="text-[14px] leading-[21px] text-[#1A1B18] justify-center"
                             >
-                                {{ t('home.about.commitment.desc') }}
+                                {{ t("home.about.commitment.desc") }}
                             </p>
                         </div>
                     </div>
@@ -817,12 +877,12 @@ const { virtualOffices } = useVirtualOffices()
                         <h2
                             class="text-[28px] font-bold leading-[42px] text-[#F9F9F9]"
                         >
-                            {{ t('home.why.title') }}
+                            {{ t("home.why.title") }}
                         </h2>
                         <p
                             class="text-[16px] leading-[24px] text-[#F9F9F9] max-w-[708px]"
                         >
-                            {{ t('home.why.subtitle') }}
+                            {{ t("home.why.subtitle") }}
                         </p>
                     </div>
 
@@ -836,18 +896,18 @@ const { virtualOffices } = useVirtualOffices()
                             >
                                 <span
                                     class="text-[28px] font-bold leading-[42px] text-primary"
-                                    >{{ t('home.why.portfolio.value') }}</span
+                                    >{{ t("home.why.portfolio.value") }}</span
                                 >
                                 <div class="flex flex-col gap-2">
                                     <h3
                                         class="text-[18px] font-semibold leading-[27px] text-[#282925]"
                                     >
-                                        {{ t('home.why.portfolio.title') }}
+                                        {{ t("home.why.portfolio.title") }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#42443D]"
                                     >
-                                        {{ t('home.why.portfolio.desc') }}
+                                        {{ t("home.why.portfolio.desc") }}
                                     </p>
                                 </div>
                             </div>
@@ -859,18 +919,18 @@ const { virtualOffices } = useVirtualOffices()
                             >
                                 <span
                                     class="text-[28px] font-bold leading-[42px] text-primary"
-                                    >{{ t('home.why.experience.value') }}</span
+                                    >{{ t("home.why.experience.value") }}</span
                                 >
                                 <div class="flex flex-col gap-2">
                                     <h3
                                         class="text-[18px] font-semibold leading-[27px] text-[#282925]"
                                     >
-                                        {{ t('home.why.experience.title') }}
+                                        {{ t("home.why.experience.title") }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#42443D]"
                                     >
-                                        {{ t('home.why.experience.desc') }}
+                                        {{ t("home.why.experience.desc") }}
                                     </p>
                                 </div>
                             </div>
@@ -882,18 +942,20 @@ const { virtualOffices } = useVirtualOffices()
                             >
                                 <span
                                     class="text-[28px] font-bold leading-[42px] text-primary"
-                                    >{{ t('home.why.satisfaction.value') }}</span
+                                    >{{
+                                        t("home.why.satisfaction.value")
+                                    }}</span
                                 >
                                 <div class="flex flex-col gap-2">
                                     <h3
                                         class="text-[18px] font-semibold leading-[27px] text-[#282925]"
                                     >
-                                        {{ t('home.why.satisfaction.title') }}
+                                        {{ t("home.why.satisfaction.title") }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#42443D]"
                                     >
-                                        {{ t('home.why.satisfaction.desc') }}
+                                        {{ t("home.why.satisfaction.desc") }}
                                     </p>
                                 </div>
                             </div>
@@ -907,7 +969,7 @@ const { virtualOffices } = useVirtualOffices()
                             <div class="flex-grow h-px bg-[#D9DAD8]"></div>
                             <span
                                 class="text-[24px] font-semibold leading-[36px] text-[#F9F9F9] whitespace-nowrap"
-                                >{{ t('home.why.excellence') }}</span
+                                >{{ t("home.why.excellence") }}</span
                             >
                             <div class="flex-grow h-px bg-[#D9DAD8]"></div>
                         </div>
@@ -934,12 +996,12 @@ const { virtualOffices } = useVirtualOffices()
                                 <h3
                                     class="text-[18px] font-semibold leading-[27px] text-[#FEFEFE]"
                                 >
-                                    {{ t('home.why.onTime.title') }}
+                                    {{ t("home.why.onTime.title") }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#F9F9F9] text-center max-w-[219px]"
                                 >
-                                    {{ t('home.why.onTime.desc') }}
+                                    {{ t("home.why.onTime.desc") }}
                                 </p>
                             </div>
                             <div
@@ -967,12 +1029,12 @@ const { virtualOffices } = useVirtualOffices()
                                 <h3
                                     class="text-[18px] font-semibold leading-[27px] text-[#FEFEFE]"
                                 >
-                                    {{ t('home.why.team.title') }}
+                                    {{ t("home.why.team.title") }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#F9F9F9] text-center max-w-[229px]"
                                 >
-                                    {{ t('home.why.team.desc') }}
+                                    {{ t("home.why.team.desc") }}
                                 </p>
                             </div>
                             <div
@@ -1000,12 +1062,12 @@ const { virtualOffices } = useVirtualOffices()
                                 <h3
                                     class="text-[18px] font-semibold leading-[27px] text-[#FEFEFE]"
                                 >
-                                    {{ t('home.why.price.title') }}
+                                    {{ t("home.why.price.title") }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#F9F9F9] text-center max-w-[190px]"
                                 >
-                                    {{ t('home.why.price.desc') }}
+                                    {{ t("home.why.price.desc") }}
                                 </p>
                             </div>
                             <div
@@ -1039,12 +1101,12 @@ const { virtualOffices } = useVirtualOffices()
                                 <h3
                                     class="text-[18px] font-semibold leading-[27px] text-[#FEFEFE]"
                                 >
-                                    {{ t('home.why.national.title') }}
+                                    {{ t("home.why.national.title") }}
                                 </h3>
                                 <p
                                     class="text-[14px] leading-[21px] text-[#F9F9F9] text-center max-w-[210px]"
                                 >
-                                    {{ t('home.why.national.desc') }}
+                                    {{ t("home.why.national.desc") }}
                                 </p>
                             </div>
                         </div>
@@ -1060,7 +1122,7 @@ const { virtualOffices } = useVirtualOffices()
                     <h2
                         class="text-[28px] font-bold leading-[42px] text-[#1A1B18] text-center"
                     >
-                        {{ t('home.tools.title') }}
+                        {{ t("home.tools.title") }}
                     </h2>
                     <div
                         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 self-stretch rounded-b-2xl"
@@ -1111,7 +1173,7 @@ const { virtualOffices } = useVirtualOffices()
                     <h2
                         class="text-[28px] font-bold leading-[42px] text-[#F9F9F9] text-center"
                     >
-                        {{ t('home.virtualOffice.title') }}
+                        {{ t("home.virtualOffice.title") }}
                     </h2>
 
                     <div
@@ -1175,7 +1237,7 @@ const { virtualOffices } = useVirtualOffices()
                         href="/virtual-office-jakarta"
                         class="inline-flex items-center gap-2 rounded-lg py-3 text-[14px] font-semibold text-white hover:underline"
                     >
-                        {{ t('home.virtualOffice.seeAll') }}
+                        {{ t("home.virtualOffice.seeAll") }}
                         <svg
                             class="w-6 h-6"
                             fill="none"
@@ -1202,13 +1264,13 @@ const { virtualOffices } = useVirtualOffices()
                         <h2
                             class="text-[28px] font-bold leading-[42px] text-[#1A1B18]"
                         >
-                            {{ t('home.blog.title') }}
+                            {{ t("home.blog.title") }}
                         </h2>
                         <a
                             href="/artikel"
                             class="inline-flex items-center gap-2 border border-[#9e1f16] text-[#9e1f16] hover:bg-[#9e1f16] hover:text-white font-semibold text-sm px-[11px] h-[44px] rounded-lg transition-colors"
                         >
-                            {{ t('home.blog.seeAll') }}
+                            {{ t("home.blog.seeAll") }}
                             <svg
                                 class="w-6 h-6"
                                 fill="none"
@@ -1236,12 +1298,12 @@ const { virtualOffices } = useVirtualOffices()
                                     <h3
                                         class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
                                     >
-                                        {{ t('home.blog.article1.title') }}
+                                        {{ t("home.blog.article1.title") }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#1A1B18]"
                                     >
-                                        {{ t('home.blog.article1.desc') }}
+                                        {{ t("home.blog.article1.desc") }}
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center gap-1">
@@ -1260,7 +1322,7 @@ const { virtualOffices } = useVirtualOffices()
                                     </svg>
                                     <span
                                         class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]"
-                                        >{{ t('home.blog.date') }}</span
+                                        >{{ t("home.blog.date") }}</span
                                     >
                                 </div>
                             </div>
@@ -1268,7 +1330,7 @@ const { virtualOffices } = useVirtualOffices()
                                 href="/artikel/1"
                                 class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#9e1f16] hover:underline w-max"
                             >
-                                {{ t('common.button.readMore') }}
+                                {{ t("common.button.readMore") }}
                                 <svg
                                     class="w-6 h-6"
                                     fill="none"
@@ -1293,12 +1355,12 @@ const { virtualOffices } = useVirtualOffices()
                                     <h3
                                         class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
                                     >
-                                        {{ t('home.blog.article2.title') }}
+                                        {{ t("home.blog.article2.title") }}
                                     </h3>
                                     <p
                                         class="text-[14px] leading-[21px] text-[#1A1B18]"
                                     >
-                                        {{ t('home.blog.article2.desc') }}
+                                        {{ t("home.blog.article2.desc") }}
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center gap-1">
@@ -1317,7 +1379,7 @@ const { virtualOffices } = useVirtualOffices()
                                     </svg>
                                     <span
                                         class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]"
-                                        >{{ t('home.blog.date') }}</span
+                                        >{{ t("home.blog.date") }}</span
                                     >
                                 </div>
                             </div>
@@ -1325,7 +1387,7 @@ const { virtualOffices } = useVirtualOffices()
                                 href="/artikel/2"
                                 class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#9e1f16] hover:underline w-max"
                             >
-                                {{ t('home.blog.readMore') }}
+                                {{ t("home.blog.readMore") }}
                                 <svg
                                     class="w-6 h-6"
                                     fill="none"
@@ -1354,7 +1416,7 @@ const { virtualOffices } = useVirtualOffices()
                 <h2
                     class="text-[24px] sm:text-[28px] font-bold leading-[42px] text-[#F9F9F9]"
                 >
-                    {{ t('home.clients.title') }}
+                    {{ t("home.clients.title") }}
                 </h2>
                 <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
                     <div
@@ -1412,7 +1474,7 @@ const { virtualOffices } = useVirtualOffices()
                 <h2
                     class="text-[22px] sm:text-[26px] font-bold leading-[42px] text-[#1A1B18]"
                 >
-                    {{ t('home.affiliate.title') }}
+                    {{ t("home.affiliate.title") }}
                 </h2>
 
                 <div
@@ -1463,7 +1525,7 @@ const { virtualOffices } = useVirtualOffices()
                         <h2
                             class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
                         >
-                            {{ t('home.contact.title') }}
+                            {{ t("home.contact.title") }}
                         </h2>
                         <form @submit.prevent class="flex flex-col gap-4">
                             <div class="flex flex-col gap-4">
@@ -1492,7 +1554,9 @@ const { virtualOffices } = useVirtualOffices()
                                 >
                                     <input
                                         type="tel"
-                                        :placeholder="t('home.contact.whatsapp')"
+                                        :placeholder="
+                                            t('home.contact.whatsapp')
+                                        "
                                         class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
                                         required
                                     />
@@ -1502,7 +1566,9 @@ const { virtualOffices } = useVirtualOffices()
                                 >
                                     <input
                                         type="text"
-                                        :placeholder="t('home.contact.business')"
+                                        :placeholder="
+                                            t('home.contact.business')
+                                        "
                                         class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
                                     />
                                 </div>
@@ -1533,9 +1599,9 @@ const { virtualOffices } = useVirtualOffices()
                                     <div
                                         class="w-[14px] h-[14px] rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
                                     ></div>
-                                    <span class="text-[12px] text-[#8E8F8B]"
-                                        >{{ t('home.contact.robot') }}</span
-                                    >
+                                    <span class="text-[12px] text-[#8E8F8B]">{{
+                                        t("home.contact.robot")
+                                    }}</span>
                                 </div>
                                 <div class="ml-auto flex flex-col items-center">
                                     <svg
@@ -1574,11 +1640,11 @@ const { virtualOffices } = useVirtualOffices()
                                         class="w-[14px] h-[14px] flex-shrink-0 rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
                                     ></div>
                                     <span class="text-[12px] text-[#1A1B18]"
-                                        >{{ t('home.contact.agree') }}
+                                        >{{ t("home.contact.agree") }}
                                     </span>
                                     <span
                                         class="text-[12px] text-[#9e1f16] cursor-pointer"
-                                        >{{ t('home.contact.terms') }}</span
+                                        >{{ t("home.contact.terms") }}</span
                                     >
                                 </label>
                                 <button
@@ -1587,7 +1653,7 @@ const { virtualOffices } = useVirtualOffices()
                                 >
                                     <span
                                         class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9]"
-                                        >{{ t('home.contact.submit') }}</span
+                                        >{{ t("home.contact.submit") }}</span
                                     >
                                 </button>
                             </div>
@@ -1602,7 +1668,7 @@ const { virtualOffices } = useVirtualOffices()
                             <h3
                                 class="text-[18px] font-bold leading-[27px] text-[#1A1B18]"
                             >
-                                {{ t('home.contact.hubungi') }}
+                                {{ t("home.contact.hubungi") }}
                             </h3>
                             <div class="flex flex-col gap-4">
                                 <div class="flex items-start gap-4">
@@ -1632,7 +1698,7 @@ const { virtualOffices } = useVirtualOffices()
                                     <p
                                         class="text-[14px] leading-[21px] text-[#1A1B18]"
                                     >
-                                        {{ t('home.contact.address') }}
+                                        {{ t("home.contact.address") }}
                                     </p>
                                 </div>
                                 <div class="flex items-center gap-4">
@@ -1758,3 +1824,21 @@ const { virtualOffices } = useVirtualOffices()
         />
     </MainLayout>
 </template>
+
+<style scoped>
+/* Hero crossfade */
+.hero-fade-enter-active,
+.hero-fade-leave-active {
+    transition: opacity 1s ease;
+    position: absolute;
+    inset: 0;
+}
+.hero-fade-enter-from,
+.hero-fade-leave-to {
+    opacity: 0;
+}
+.hero-fade-enter-to,
+.hero-fade-leave-from {
+    opacity: 1;
+}
+</style>
