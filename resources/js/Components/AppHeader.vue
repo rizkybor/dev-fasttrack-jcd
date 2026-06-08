@@ -221,18 +221,20 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                 class="flex items-center justify-between flex-1 h-full bg-[#42443D]"
                 style="margin-left: -50px; padding: 7px 84px 9px 80px"
             >
-                <div class="inline-flex items-center gap-1 h-8">
-                    <span
-                        class="text-[14px] font-bold leading-[21px] text-[#FEFEFE]"
-                        >{{ t("common.nav.cooperation") }}</span
-                    >
-                    <span class="text-[18px] leading-none">🔥</span>
-                </div>
+            <a
+                href="/kerja-sama"
+    class="inline-flex items-center gap-1 h-8 group"
+>
+    <span class="text-[14px] font-bold leading-[21px] text-[#FEFEFE] transition-colors group-hover:text-[#FFB347]">
+        {{ t("common.nav.cooperation") }}
+    </span>
+    <span class="text-[18px] leading-none transition-transform group-hover:scale-125">🔥</span>
+</a>
                 <div class="inline-flex items-center gap-2">
                     <a
                         href="mailto:cs@fasttrack.legal"
                         aria-label="Email FastTrack"
-                        class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#9e1f16] hover:bg-[#9e1f16] hover:text-white transition-colors p-[6px]"
+                        class="inline-flex items-center justify-center rounded bg-white text-[#9e1f16] hover:bg-[#9e1f16] hover:text-white transition-colors p-[6px]"
                     >
                         <svg
                             class="w-5 h-5"
@@ -253,7 +255,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram FastTrack"
-                        class="inline-flex items-center justify-center rounded bg-[#FAD9DA] text-[#9e1f16] hover:bg-[#9e1f16] hover:text-white transition-colors p-[6px]"
+                        class="inline-flex items-center justify-center rounded bg-white text-[#9e1f16] hover:bg-[#9e1f16] hover:text-white transition-colors p-[6px]"
                     >
                         <svg
                             class="w-5 h-5"

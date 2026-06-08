@@ -48,13 +48,16 @@ const filteredData = computed(() => {
 
     const q = searchQuery.value.trim().toLowerCase();
     if (q) {
-        data = data.filter(
-            (r) =>
-                r.kbl_2020?.toLowerCase().includes(q) ||
-                r.judul_kbl_2020?.toLowerCase().includes(q) ||
-                r.kbl_2025?.toLowerCase().includes(q) ||
-                r.judul_kbl_2025?.toLowerCase().includes(q),
-        );
+        // Saat ada query: filter 5 digit dulu, baru cocokkan keyword
+        data = data
+            .filter((r) => /^\d{5}$/.test(r.kbl_2020?.trim() ?? ""))
+            .filter(
+                (r) =>
+                    r.kbl_2020?.toLowerCase().includes(q) ||
+                    r.judul_kbl_2020?.toLowerCase().includes(q) ||
+                    r.kbl_2025?.toLowerCase().includes(q) ||
+                    r.judul_kbl_2025?.toLowerCase().includes(q),
+            );
     }
 
     return data;
@@ -381,7 +384,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                         class="bg-[#F3F4F6] border-b border-[#D9DAD8]"
                                     >
                                         <th
-                                            class="text-left px-5 py-3 font-semibold text-[#1A1B18] w-[130px]"
+                                            class="text-center px-5 py-3 font-semibold text-[#1A1B18] w-[130px]"
                                         >
                                             KBLI 2020
                                         </th>
@@ -391,7 +394,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                             JUDUL KBLI 2020
                                         </th>
                                         <th
-                                            class="text-left px-5 py-3 font-semibold text-[#1A1B18] w-[130px]"
+                                            class="text-center px-5 py-3 font-semibold text-[#1A1B18] w-[130px]"
                                         >
                                             KBLI 2025
                                         </th>
@@ -409,7 +412,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                         class="border-b border-[#F3F4F6] last:border-b-0 hover:bg-[#FAFAFA] transition-colors"
                                     >
                                         <td
-                                            class="px-5 py-4 font-medium text-[#1A1B18]"
+                                            class="text-center px-5 py-4 font-medium text-[#1A1B18]"
                                         >
                                             {{ row.kbl_2020?.trim() }}
                                         </td>
@@ -417,7 +420,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                             {{ row.judul_kbl_2020?.trim() }}
                                         </td>
                                         <td
-                                            class="px-5 py-4 font-medium text-[#1A1B18]"
+                                            class="text-center px-5 py-4 font-medium text-[#1A1B18]"
                                         >
                                             {{ row.kbl_2025?.trim() }}
                                         </td>
