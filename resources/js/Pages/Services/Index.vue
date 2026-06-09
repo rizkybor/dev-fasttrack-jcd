@@ -356,25 +356,14 @@ const serviceCategories = [
                         <h1
                             class="text-xl font-extrabold leading-tight text-white sm:text-4xl lg:text-2xl xl:text-[2rem]"
                         >
-                            Layanan Legalitas dan Perizinan<br
-                                class="hidden sm:block"
-                            />
-                            <span class="text-white/90"
-                                >Untuk Bisnis yang Siap Bertumbuh</span
-                            >
+                            Kantor Perwakilan
                         </h1>
 
                         <!-- Description -->
                         <p
                             class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg sm:leading-8"
                         >
-                            <span class="font-semibold text-white"
-                                >FASTTRACK</span
-                            >
-                            membantu pendirian PT, CV, virtual office, perizinan
-                            usaha, hingga kebutuhan legal perusahaan dengan alur
-                            yang rapi, transparan, dan nyaman diakses dari mana
-                            saja.
+                            Solusi resmi untuk perusahaan asing yang ingin hadir dan beroperasi di Indonesia — mulai dari kantor perwakilan umum, perdagangan, hingga konstruksi.
                         </p>
 
                         <!-- CTA Button -->
