@@ -2,11 +2,13 @@
 import common from './common'
 import home from './home'
 import badanUsaha from './services/badan-usaha'
+import kantorPerwakilan from './services/kantor-perwakilan'
 
 export default {
     common,
-    home,          // ← hapus serviceCategories dari sini
+    home,
     services: {
         badanUsaha,
+        kantorPerwakilan
     },
 }
