@@ -717,10 +717,14 @@ const toggleDoc = (key) => {
                                 </h2>
                             </div>
 
-                            <!-- Layout untuk <= 3 paket: grid biasa -->
                             <div
                                 v-if="currentPlans.length <= 3"
-                                class="grid grid-cols-1 sm:grid-cols-3 gap-4"
+                                class="grid grid-cols-1 gap-4"
+                                :class="{
+                                    'sm:grid-cols-1': currentPlans.length === 1,
+                                    'sm:grid-cols-2': currentPlans.length === 2,
+                                    'sm:grid-cols-3': currentPlans.length === 3,
+                                }"
                             >
                                 <div
                                     v-for="(plan, pi) in currentPlans"
@@ -874,7 +878,7 @@ const toggleDoc = (key) => {
                                             </ul>
                                         </div>
                                         <!-- Bonus -->
-                                        <div>
+                                        <div v-if="plan.bonus.length >= 1">
                                             <div
                                                 class="text-[11px] font-semibold text-[#1A1B18] mb-2"
                                             >
