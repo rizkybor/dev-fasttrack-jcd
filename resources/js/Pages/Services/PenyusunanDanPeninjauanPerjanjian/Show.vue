@@ -158,7 +158,7 @@ const filteredContractCategories = computed(() => {
                 <!-- Bottom: Back button -->
                 <div>
                     <a
-                        href="/badan-usaha"
+                        href="/layanan"
                         class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition"
                     >
                         <svg
