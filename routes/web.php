@@ -185,6 +185,7 @@ $customServices = [
     ['component' => 'Services/BadanUsaha/Index', 'title' => 'Pendirian Perusahaan', 'path' => '/badan-usaha', 'description' => 'Membantu Anda menjalankan bisnis dengan legalitas serta badan usaha yang bonafide.'],
     ['component' => 'Services/KantorPerwakilan/Index', 'title' => 'Kantor Perwakilan', 'path' => '/kantor-perwakilan', 'description' => 'Layanan pendirian kantor perwakilan untuk mendukung ekspansi bisnis Anda di Indonesia.'],
     ['component' => 'Services/PenyusunanDanPeninjauanPerjanjian/Index', 'title' => 'Penyusunan Peninjauan', 'path' => '/penyusunan-peninjauan', 'description' => 'Layanan pendirian kantor perwakilan untuk mendukung ekspansi bisnis Anda di Indonesia.'],
+    ['component' => 'Services/RetainerBerlangganan/Index', 'title' => 'Retainer / Berlangganan', 'path' => '/retainer-berlangganan', 'description' => 'Layanan pendirian kantor perwakilan untuk mendukung ekspansi bisnis Anda di Indonesia.'],
     // ['component' => 'Services/PenutupanPerusahaan/Index', 'title' => 'Penutupan Perusahaan', 'path' => '/penutupan-perusahaan', 'description' => 'Proses penutupan perusahaan yang sesuai dengan prosedur hukum yang berlaku.'],
     // ['component' => 'Services/VirtualOffice/Index', 'title' => 'Virtual Office', 'path' => '/virtual-office-jakarta', 'description' => 'Layanan alamat bisnis prestisius untuk meningkatkan citra perusahaan Anda.'],
     // ['component' => 'Services/PerizinanKhusus/Index', 'title' => 'Perizinan Khusus', 'path' => '/perizinan', 'description' => 'Pengurusan izin khusus untuk berbagai sektor bisnis sesuai regulasi terbaru.'],
@@ -259,6 +260,26 @@ $penyusunanDanPeninjauanProducts = (static function (): array {
 $penyusunanDanPeninjauanProducts = collect($penyusunanDanPeninjauanProducts)
     ->map(static function (array $product): array {
         $product['detail_path'] = '/penyusunan-peninjauan/' . $product['id'];
+
+        return $product;
+    })
+    ->all();
+
+$retainerBerlanggananProducts = (static function (): array {
+    $path = public_path('data/foundingRetainerBerlangganan.json');
+
+    if (! file_exists($path)) {
+        return [];
+    }
+
+    $decoded = json_decode(file_get_contents($path), true);
+
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$retainerBerlanggananProducts = collect($retainerBerlanggananProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = '/retainer-berlangganan/' . $product['id'];
 
         return $product;
     })
@@ -347,7 +368,7 @@ $staticPages = [
 // });
 
 foreach ($customServices as $service) {
-    Route::get($service['path'], function (Request $request) use ($service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
+    Route::get($service['path'], function (Request $request) use ($retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
         $baseUrl = $resolveBaseUrl($request);
         $props = [
             'service' => $service,
@@ -422,6 +443,29 @@ foreach ($customServices as $service) {
                 'mainEntity' => [
                     '@type' => 'ItemList',
                     'itemListElement' => collect($penyusunanDanPeninjauanProducts)->values()->map(
+                        static fn(array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . $product['detail_path'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        // RETAINER-BERLANGGANAN
+        if ($service['path'] === '/retainer-berlangganan') {
+            $props['products'] = $retainerBerlanggananProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Product Retainer / Berlangganan - FastTrack',
+                'description' => 'Daftar produk penyusunan peninjauan FastTrack.',
+                'url' => $baseUrl . '/retainer-berlangganan',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($retainerBerlanggananProducts)->values()->map(
                         static fn(array $product, int $index): array => [
                             '@type' => 'ListItem',
                             'position' => $index + 1,
@@ -629,6 +673,73 @@ Route::get('/penyusunan-peninjauan/{id}', function (Request $request, int $id) u
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'Penyusunan Peninjauan', 'item' => $baseUrl . '/penyusunan-peninjauan'],
+                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+            ]),
+        ],
+    ]);
+})->whereNumber('id');
+
+// RETAINER-BERLANGGANAN
+Route::get('/retainer-berlangganan/{id}', function (Request $request, int $id) use ($retainerBerlanggananProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($retainerBerlanggananProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($retainerBerlanggananProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Services/RetainerBerlangganan/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $product['name'] . ' - FastTrack',
+            'description' => $product['excerpt'],
+            'canonical' => $baseUrl . $product['detail_path'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $product['name'],
+                'description' => $product['excerpt'],
+                'serviceType' => $product['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => [
+                    '@type' => 'Country',
+                    'name' => 'Indonesia',
+                ],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . $product['detail_path'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . $product['detail_path'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($product['faq'])->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => [
+                            '@type' => 'Answer',
+                            'text' => $faq['answer'],
+                        ],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Penyusunan Peninjauan', 'item' => $baseUrl . '/retainer-berlangganan'],
                 ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
             ]),
         ],

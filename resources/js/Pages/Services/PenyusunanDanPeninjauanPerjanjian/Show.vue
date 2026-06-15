@@ -2,9 +2,6 @@
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
 
-const docsOpen = ref(false);
-const dasarHukumOpen = ref(false);
-
 const props = defineProps({
     product: {
         type: Object,
@@ -16,25 +13,11 @@ const props = defineProps({
     },
 });
 
-const parseBold = (text) => {
-    if (!text) return "";
-    return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-};
-
 const whatsappNumber = "6282298604144";
 
 const buildWhatsappLink = (productName) => {
     const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
-
-const currentPlans = computed(() => props.product?.plans ?? []);
-const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
-
-// Toggle truncate per doc item
-const expandedDocs = ref({});
-const toggleDoc = (key) => {
-    expandedDocs.value[key] = !expandedDocs.value[key];
 };
 
 // Jenis Perjanjian / Kontrak - search & filter
