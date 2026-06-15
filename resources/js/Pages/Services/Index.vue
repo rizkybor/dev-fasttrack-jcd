@@ -143,8 +143,8 @@ const serviceCategories = [
                 description:
                     "Layanan pendampingan hukum korporasi berkelanjutan.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
-                path: "/",
+                packages: "1 Layanan",
+                path: "/retainer-berlangganan/1",
                 image: "/images/layanan-card/layanan-retainer-berlangganan.png",
             },
             {
@@ -176,7 +176,7 @@ const serviceCategories = [
                 description:
                     "Drafting dan review kontrak kerja, investasi, JV, waralaba, dan lainnya.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
+                packages: "1 Layanan",
                 path: "/penyusunan-peninjauan/1",
                 image: "/images/dummy-card.png",
             },
