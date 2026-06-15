@@ -146,7 +146,7 @@ const { virtualOffices } = useVirtualOffices();
 // ─── Hero Slider ──────────────────────────────────────────────────────────────
 const heroImages = [
     "/images/hero-banner.png",
-    "/images/hero-banner-2.png", // ← ganti dengan gambar ke-2 kamu
+    "/images/hero-banner-2.png",
 ];
 
 const activeSlide = ref(0);

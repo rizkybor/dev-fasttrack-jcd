@@ -228,7 +228,7 @@ const serviceCategories = [
                     "ITAS kerja, investor, keluarga, pasangan, dan perpanjangan.",
                 price: "Rp 3.500.000",
                 packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                path: "/izin-tinggal-terbatas",
                 image: "/images/dummy-card.png",
             },
             {
