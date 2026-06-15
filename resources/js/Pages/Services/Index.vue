@@ -44,7 +44,7 @@ const serviceCategories = [
                 description:
                     "Pendirian PT Perorangan, PT PMDN, PT PMA, CV, hingga Yayasan.",
                 price: "Rp 750.000",
-                packages: "3 Layanan",
+                packages: "7 Layanan",
                 path: "/badan-usaha",
                 image: "/images/layanan-card/layanan-bu.png",
             },
@@ -177,7 +177,7 @@ const serviceCategories = [
                     "Drafting dan review kontrak kerja, investasi, JV, waralaba, dan lainnya.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                path: "/penyusunan-peninjauan/1",
                 image: "/images/dummy-card.png",
             },
             {
