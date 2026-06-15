@@ -362,27 +362,34 @@ onUnmounted(() => {
                 >
                     <!-- Teks -->
                     <div class="inline-flex items-end gap-2">
-                        <div class="inline-flex flex-col items-start gap-2">
+                        <div class="flex flex-col gap-2 sm:gap-3">
+                            <!-- Title badge - berdiri sendiri -->
                             <div
-                                class="inline-flex items-center justify-center rounded-lg bg-[#FEFEFE] px-4 py-2"
+                                class="inline-flex items-center justify-center self-start rounded-lg bg-[#FEFEFE] px-3 sm:px-4 py-1.5 sm:py-2"
                             >
                                 <span
-                                    class="text-[20px] sm:text-[28px] font-bold leading-[1.4] text-primary"
+                                    class="text-[18px] sm:text-[28px] font-bold leading-tight text-primary whitespace-nowrap"
                                 >
                                     {{ t("home.vip.title") }}
                                 </span>
                             </div>
-                            <p
-                                class="text-[16px] sm:text-[24px] font-semibold leading-[1.5] text-[#F9F9F9]"
+
+                            <!-- Subtitle + disclaimer sejajar di desktop -->
+                            <div
+                                class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3"
                             >
-                                {{ t("home.vip.subtitle") }}
-                            </p>
+                                <p
+                                    class="text-[14px] sm:text-[24px] font-semibold leading-tight text-[#F9F9F9]"
+                                >
+                                    {{ t("home.vip.subtitle") }}
+                                </p>
+                                <p
+                                    class="relative -top-0.1 sm:-top-1 text-[11px] sm:text-[14px] font-light italic text-[#F9F9F9] underline"
+                                >
+                                    {{ t("home.vip.disclaimer") }}
+                                </p>
+                            </div>
                         </div>
-                        <p
-                            class="text-[12px] sm:text-[14px] font-light leading-[21px] text-[#F9F9F9] underline italic"
-                        >
-                            {{ t("home.vip.disclaimer") }}
-                        </p>
                     </div>
 
                     <!-- Dekoratif arrow — desktop only -->
