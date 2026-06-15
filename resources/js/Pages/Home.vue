@@ -144,10 +144,7 @@ const { tools } = useTools();
 const { virtualOffices } = useVirtualOffices();
 
 // ─── Hero Slider ──────────────────────────────────────────────────────────────
-const heroImages = [
-    "/images/hero-banner.png",
-    "/images/hero-banner-2.png",
-];
+const heroImages = ["/images/hero-banner.png", "/images/hero-banner-2.png"];
 
 const activeSlide = ref(0);
 let sliderTimer = null;
@@ -1498,9 +1495,17 @@ onUnmounted(() => {
                                 alt: 'Afiliasi 2',
                             },
                             {
+                                src: '/images/afiliasi/ft-af-5.svg',
+                                alt: 'Afiliasi 5',
+                            },
+                            {
+                                src: '/images/afiliasi/ft-af-6.svg',
+                                alt: 'Afiliasi 6',
+                            },
+                            {
                                 src: '/images/afiliasi/ft-af-3.svg',
                                 alt: 'Afiliasi 3',
-                            },
+                            },  
                             {
                                 src: '/images/afiliasi/ft-af-4.svg',
                                 alt: 'Afiliasi 4',
@@ -1508,7 +1513,7 @@ onUnmounted(() => {
                         ]"
                         :key="i"
                         class="flex items-center justify-center h-[52px] sm:h-[64px] sm:px-9 sm:min-w-[120px]"
-                        :class="{ 'sm:border-r sm:border-[#D3D1C7]': i < 3 }"
+                        :class="{ 'sm:border-r sm:border-[#D3D1C7]': i < 5 }"
                     >
                         <img
                             :src="afiliasi.src"
@@ -1680,10 +1685,10 @@ onUnmounted(() => {
                             <div class="flex flex-col gap-4">
                                 <div class="flex items-start gap-4">
                                     <div
-                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#9e1f16] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#9e1f16]"
+                                            class="w-5 h-5 text-white"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -1710,10 +1715,10 @@ onUnmounted(() => {
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div
-                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#9e1f16] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#9e1f16]"
+                                            class="w-5 h-5 text-white"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -1734,10 +1739,10 @@ onUnmounted(() => {
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div
-                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#9e1f16] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#9e1f16]"
+                                            class="w-5 h-5 text-white"
                                             fill="currentColor"
                                             viewBox="0 0 24 24"
                                         >
@@ -1754,10 +1759,10 @@ onUnmounted(() => {
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div
-                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#9e1f16] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#9e1f16]"
+                                            class="w-5 h-5 text-white"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
