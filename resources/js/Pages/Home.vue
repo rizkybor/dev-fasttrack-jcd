@@ -58,12 +58,6 @@ const marqueeRows = [
                 src: "/images/klien-kami/ft-kk-13-issfacilityservices.svg",
                 alt: "ISS Facility Services",
             },
-        ],
-    },
-    {
-        id: 2,
-        reverse: true,
-        logos: [
             { src: "/images/klien-kami/ft-kk-14-infinID.svg", alt: "InfinID" },
             { src: "/images/klien-kami/ft-kk-15-glico.svg", alt: "Glico" },
             {
@@ -86,17 +80,17 @@ const marqueeRows = [
             { src: "/images/klien-kami/ft-kk-24-amdocs.svg", alt: "Amdocs" },
             { src: "/images/klien-kami/ft-kk-25-kargo.svg", alt: "Kargo" },
             { src: "/images/klien-kami/ft-kk-26-assegaf.svg", alt: "Assegaf" },
-        ],
-    },
-    {
-        id: 3,
-        reverse: false,
-        logos: [
             {
                 src: "/images/klien-kami/ft-kk-27-asiafoundation.svg",
                 alt: "Asia Foundation",
             },
             { src: "/images/klien-kami/ft-kk-28-apx.svg", alt: "APX" },
+        ],
+    },
+    {
+        id: 2,
+        reverse: true,
+        logos: [
             { src: "/images/klien-kami/ft-kk-29-maka.svg", alt: "Maka" },
             { src: "/images/klien-kami/ft-kk-30-etana.svg", alt: "Etana" },
             { src: "/images/klien-kami/ft-kk-31-brankas.svg", alt: "Brankas" },
@@ -115,6 +109,83 @@ const marqueeRows = [
             { src: "/images/klien-kami/ft-kk-38-aspire.svg", alt: "Aspire" },
             { src: "/images/klien-kami/ft-kk-39-ollion.svg", alt: "Ollion" },
             { src: "/images/klien-kami/ft-kk-40-diamond.svg", alt: "Diamond" },
+            { src: "/images/klien-kami/ft-kk-41-sonymusic.svg", alt: "Sony" },
+            { src: "/images/klien-kami/ft-kk-42-sosro.svg", alt: "Sosro" },
+            { src: "/images/klien-kami/ft-kk-43-grab.svg", alt: "Grab" },
+            { src: "/images/klien-kami/ft-kk-44-jhonson.svg", alt: "Jhonson" },
+            { src: "/images/klien-kami/ft-kk-45-giift.svg", alt: "Giift" },
+            { src: "/images/klien-kami/ft-kk-46-hangry.svg", alt: "Hangry" },
+            {
+                src: "/images/klien-kami/ft-kk-47-tokopedia.svg",
+                alt: "Tokopedia",
+            },
+            { src: "/images/klien-kami/ft-kk-48-stg.svg", alt: "Stg" },
+            {
+                src: "/images/klien-kami/ft-kk-49-saladstop.svg",
+                alt: "Saladstop",
+            },
+            {
+                src: "/images/klien-kami/ft-kk-50-yakiniku.svg",
+                alt: "Yakiniku",
+            },
+            { src: "/images/klien-kami/ft-kk-51-aidenv.svg", alt: "Aidenv" },
+            { src: "/images/klien-kami/ft-kk-52-falcon.svg", alt: "Falcon" },
+            { src: "/images/klien-kami/ft-kk-53-kalbe.svg", alt: "Kalbe" },
+            { src: "/images/klien-kami/ft-kk-54-aurecon.svg", alt: "Aurecon" },
+            { src: "/images/klien-kami/ft-kk-55-merck.svg", alt: "Merck" },
+            { src: "/images/klien-kami/ft-kk-56-fis.svg", alt: "Fis" },
+            { src: "/images/klien-kami/ft-kk-57-goto.svg", alt: "Goto" },
+            { src: "/images/klien-kami/ft-kk-58-elano.svg", alt: "Elano" },
+        ],
+    },
+    {
+        id: 3,
+        reverse: false,
+        logos: [
+            { src: "/images/klien-kami/ft-kk-59-sem.svg", alt: "Sem" },
+            { src: "/images/klien-kami/ft-kk-60-loreal.svg", alt: "Loreal" },
+            { src: "/images/klien-kami/ft-kk-61-unox.svg", alt: "Unox" },
+            {
+                src: "/images/klien-kami/ft-kk-62-bankfama.svg",
+                alt: "Bankfama",
+            },
+            { src: "/images/klien-kami/ft-kk-63-lg.svg", alt: "Lg" },
+            { src: "/images/klien-kami/ft-kk-64-newland.svg", alt: "Newland" },
+            {
+                src: "/images/klien-kami/ft-kk-65-freeport.svg",
+                alt: "Freeport",
+            },
+            {
+                src: "/images/klien-kami/ft-kk-66-yayasananakbangsa.svg",
+                alt: "Yayasananakbangsa",
+            },
+            { src: "/images/klien-kami/ft-kk-67-bcg.svg", alt: "Bcg" },
+            {
+                src: "/images/klien-kami/ft-kk-68-astraland.svg",
+                alt: "Astraland",
+            },
+            { src: "/images/klien-kami/ft-kk-69-arabica.svg", alt: "Arabica" },
+            {
+                src: "/images/klien-kami/ft-kk-70-dompet-aman.svg",
+                alt: "Dompet Aman",
+            },
+            { src: "/images/klien-kami/ft-kk-71-tiket.svg", alt: "Tiket" },
+            { src: "/images/klien-kami/ft-kk-72-aladin.svg", alt: "Aladin" },
+            { src: "/images/klien-kami/ft-kk-73-dior.svg", alt: "Dior" },
+            { src: "/images/klien-kami/ft-kk-74-vida.svg", alt: "Vida" },
+            { src: "/images/klien-kami/ft-kk-75-oue.svg", alt: "Oue" },
+            { src: "/images/klien-kami/ft-kk-76-wetv.svg", alt: "Wetv" },
+            { src: "/images/klien-kami/ft-kk-77-kraft.svg", alt: "Kraft" },
+            { src: "/images/klien-kami/ft-kk-78-mondele.svg", alt: "Mondele" },
+            { src: "/images/klien-kami/ft-kk-79-pullman.svg", alt: "Pullman" },
+            { src: "/images/klien-kami/ft-kk-80-maeresk.svg", alt: "Maeresk" },
+            { src: "/images/klien-kami/ft-kk-81-ovo.svg", alt: "Ovo" },
+            { src: "/images/klien-kami/ft-kk-82-camel.svg", alt: "Camel" },
+            { src: "/images/klien-kami/ft-kk-83-artotel.svg", alt: "Artotel" },
+            { src: "/images/klien-kami/ft-kk-84-tencent.svg", alt: "Tencent" },
+            { src: "/images/klien-kami/ft-kk-85-ebay.svg", alt: "Ebay" },
+            { src: "/images/klien-kami/ft-kk-86-google.svg", alt: "Google" },
+            { src: "/images/klien-kami/ft-kk-87-apple.svg", alt: "Apple" },
         ],
     },
 ];
@@ -144,10 +215,7 @@ const { tools } = useTools();
 const { virtualOffices } = useVirtualOffices();
 
 // ─── Hero Slider ──────────────────────────────────────────────────────────────
-const heroImages = [
-    "/images/hero-banner.png",
-    "/images/hero-banner-2.png", // ← ganti dengan gambar ke-2 kamu
-];
+const heroImages = ["/images/hero-banner.png", "/images/hero-banner-2.png"];
 
 const activeSlide = ref(0);
 let sliderTimer = null;
@@ -1498,6 +1566,14 @@ onUnmounted(() => {
                                 alt: 'Afiliasi 2',
                             },
                             {
+                                src: '/images/afiliasi/ft-af-5.svg',
+                                alt: 'Afiliasi 5',
+                            },
+                            {
+                                src: '/images/afiliasi/ft-af-6.svg',
+                                alt: 'Afiliasi 6',
+                            },
+                            {
                                 src: '/images/afiliasi/ft-af-3.svg',
                                 alt: 'Afiliasi 3',
                             },
@@ -1508,7 +1584,7 @@ onUnmounted(() => {
                         ]"
                         :key="i"
                         class="flex items-center justify-center h-[52px] sm:h-[64px] sm:px-9 sm:min-w-[120px]"
-                        :class="{ 'sm:border-r sm:border-[#D3D1C7]': i < 3 }"
+                        :class="{ 'sm:border-r sm:border-[#D3D1C7]': i < 5 }"
                     >
                         <img
                             :src="afiliasi.src"
@@ -1680,10 +1756,10 @@ onUnmounted(() => {
                             <div class="flex flex-col gap-4">
                                 <div class="flex items-start gap-4">
                                     <div
-                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#9e1f16] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#9e1f16]"
+                                            class="w-5 h-5 text-white"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -1710,10 +1786,10 @@ onUnmounted(() => {
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div
-                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#9e1f16] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#9e1f16]"
+                                            class="w-5 h-5 text-white"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -1734,10 +1810,10 @@ onUnmounted(() => {
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div
-                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#9e1f16] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#9e1f16]"
+                                            class="w-5 h-5 text-white"
                                             fill="currentColor"
                                             viewBox="0 0 24 24"
                                         >
@@ -1754,10 +1830,10 @@ onUnmounted(() => {
                                 </div>
                                 <div class="flex items-center gap-4">
                                     <div
-                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#FAD9DA] flex items-center justify-center"
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-[#9e1f16] flex items-center justify-center"
                                     >
                                         <svg
-                                            class="w-5 h-5 text-[#9e1f16]"
+                                            class="w-5 h-5 text-white"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
