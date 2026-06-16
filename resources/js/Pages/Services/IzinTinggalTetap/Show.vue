@@ -400,7 +400,7 @@ const currentData = computed(() => props.product?.[jenisPengajuan.value] ?? {});
 
                                 <!-- Card total + CTA -->
                                 <div
-                                    class="rounded-xl px-5 py-4 flex items-center justify-between gap-4 sm:w-[320px]"
+                                    class="rounded-xl px-5 py-4 flex items-center justify-between gap-4 sm:w-[340px]"
                                     style="
                                         background-image: url(&quot;/images/card-arrow-item-bg.png&quot;);
                                         background-size: cover;
