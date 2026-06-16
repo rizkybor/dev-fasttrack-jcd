@@ -4,6 +4,7 @@ import home from './home'
 import badanUsaha from './services/badan-usaha'
 import kantorPerwakilan from './services/kantor-perwakilan'
 import izinTinggalTerbatas from './services/izin-tinggal-terbatas'
+import izinTinggalTetap from './services/izin-tinggal-tetap'
 
 export default {
     common,
@@ -11,6 +12,7 @@ export default {
     services: {
         badanUsaha,
         kantorPerwakilan,
-        izinTinggalTerbatas
+        izinTinggalTerbatas,
+        izinTinggalTetap
     },
 }

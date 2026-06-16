@@ -227,7 +227,7 @@ const serviceCategories = [
                 description:
                     "ITAS kerja, investor, keluarga, pasangan, dan perpanjangan.",
                 price: "Rp 3.500.000",
-                packages: "6 Layanan",
+                packages: "4 Layanan",
                 path: "/izin-tinggal-terbatas",
                 image: "/images/dummy-card.png",
             },
@@ -236,8 +236,8 @@ const serviceCategories = [
                 description:
                     "Izin tinggal permanen bagi WNA yang memenuhi syarat di Indonesia.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                packages: "2 Layanan",
+                path: "/izin-tinggal-tetap",
                 image: "/images/layanan-card/layanan-itap.png",
             },
             {
@@ -356,14 +356,14 @@ const serviceCategories = [
                         <h1
                             class="text-xl font-extrabold leading-tight text-white sm:text-4xl lg:text-2xl xl:text-[2rem]"
                         >
-                            Kantor Perwakilan
+                            Layanan Legalitas dan Perizinan Untuk Bisnis yang Siap Bertumbuh
                         </h1>
 
                         <!-- Description -->
                         <p
                             class="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg sm:leading-8"
                         >
-                            Solusi resmi untuk perusahaan asing yang ingin hadir dan beroperasi di Indonesia — mulai dari kantor perwakilan umum, perdagangan, hingga konstruksi.
+                            FASTTRACK membantu pendirian PT, CV, virtual office, perizinan usaha, hingga kebutuhan legal perusahaan dengan alur yang rapi, transparan, dan nyaman diakses dari mana saja.
                         </p>
 
                         <!-- CTA Button -->

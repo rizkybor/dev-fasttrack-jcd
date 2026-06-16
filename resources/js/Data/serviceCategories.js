@@ -38,12 +38,12 @@ export function useServiceCategories() {
             },
             {
                 title: 'IZIN TINGGAL TERBATAS',
-                path: '/foreignservice',
+                path: '/izin-tinggal-terbatas',
                 items: [
-                    { title: 'IZIN TINGGAL TERBATAS DAN KERJA TENAGA KERJA ASING', description: 'Pengurusan ITAS dan izin kerja resmi untuk tenaga kerja asing di Indonesia.', price: 'Rp 750.000', packages: '3 Paket', path: '/foreignservice', icon: '/icons/ft-person.svg' },
-                    { title: 'IZIN TINGGAL TERBATAS KELUARGA TENAGA KERJA ASING', description: 'Pengurusan ITAS untuk anggota keluarga yang mengikuti tenaga kerja asing.', price: 'Rp 750.000', packages: '3 Paket', path: '/foreignservice', icon: '/icons/ft-person.svg' },
-                    { title: 'IZIN TINGGAL TERBATAS INVESTOR', description: 'Pengurusan ITAS untuk investor asing yang menanamkan modal di Indonesia.', price: 'Rp 750.000', packages: '3 Paket', path: '/foreignservice', icon: '/icons/ft-person.svg' },
-                    { title: 'IZIN TINGGAL TERBATAS PASANGAN (SPOUSE)', description: 'Pengurusan ITAS untuk pasangan sah dari pemegang izin tinggal terbatas.', price: 'Rp 750.000', packages: '3 Paket', path: '/foreignservice', icon: '/icons/ft-person.svg' },
+                    { title: 'IZIN TINGGAL TERBATAS DAN KERJA TENAGA KERJA ASING', description: 'Pengurusan ITAS dan izin kerja resmi untuk tenaga kerja asing di Indonesia.', price: 'Rp 9.050.000', packages: '3 Paket', path: '/izin-tinggal-terbatas/1', icon: '/icons/ft-person.svg' },
+                    { title: 'IZIN TINGGAL TERBATAS KELUARGA TENAGA KERJA ASING', description: 'Pengurusan ITAS untuk anggota keluarga yang mengikuti tenaga kerja asing.', price: 'Rp 9.050.000', packages: '3 Paket', path: '/izin-tinggal-terbatas/2', icon: '/icons/ft-person.svg' },
+                    { title: 'IZIN TINGGAL TERBATAS INVESTOR', description: 'Pengurusan ITAS untuk investor asing yang menanamkan modal di Indonesia.', price: 'Rp 12.750.000', packages: '3 Paket', path: '/izin-tinggal-terbatas/3', icon: '/icons/ft-person.svg' },
+                    { title: 'IZIN TINGGAL TERBATAS PASANGAN (SPOUSE)', description: 'Pengurusan ITAS untuk pasangan sah dari pemegang izin tinggal terbatas.', price: 'Rp 7.000.000', packages: '3 Paket', path: '/izin-tinggal-terbatas/4', icon: '/icons/ft-person.svg' },
                 ],
             },
             {
