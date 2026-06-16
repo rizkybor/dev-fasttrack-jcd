@@ -14,14 +14,10 @@ const whatsappNumber = "6282298604144";
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-person.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-persons.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-person-check.svg", path: "/foreignservice" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/foreignservice" },
+    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
+    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
+    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
+    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
@@ -136,7 +132,6 @@ const buildWhatsappLink = (productName) => {
                     <p
                         class="mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base sm:leading-7"
                     >
-                        <span class="font-semibold text-white">FASTTRACK</span>
                         {{ t("services.izinTinggalTerbatas.hero.desc") }}
                     </p>
                     <div class="mt-6">
@@ -175,12 +170,12 @@ const buildWhatsappLink = (productName) => {
                         <a
                             v-for="(item, idx) in serviceList"
                             :key="idx"
-                            :href="`/badan-usaha/${item.id}`"
+                            :href="`/izin-tinggal-terbatas/${item.id}`"
                             class="group flex flex-col rounded-[14px] border border-[#D9DAD8] bg-[#FEFEFE] p-[15px] backdrop-blur-[13px] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-primary/30"
                         >
                             <div class="flex flex-col gap-4 flex-grow">
                                 <div
-                                    class="flex h-[60px] w-[60px] items-center justify-center rounded-lg bg-[#FAD9DA]"
+                                    class="flex h-[60px] w-[60px] items-center justify-center rounded-lg bg-[#9e1f16]"
                                 >
                                     <img
                                         :src="item.icon"
@@ -227,6 +222,7 @@ const buildWhatsappLink = (productName) => {
                                     </span>
                                 </div>
                                 <span
+                                    v-if="item.packages != ''"
                                     class="inline-flex items-center border border-[#D9DAD8] rounded bg-[#F9F9F9] px-[7px] py-[3px] text-[11px] leading-[18px] text-[#1A1B18] whitespace-nowrap"
                                 >
                                     {{ item.packages }}

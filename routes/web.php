@@ -854,7 +854,7 @@ Route::get('/izin-tinggal-terbatas/{id}', function (Request $request, int $id) u
             ],
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-                ['name' => 'Pendirian Perusahaan', 'item' => $baseUrl . '/izin-tinggal-terbatas'],
+                ['name' => 'Izin Tinggal Terbatas', 'item' => $baseUrl . '/izin-tinggal-terbatas'],
                 ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
             ]),
         ],
