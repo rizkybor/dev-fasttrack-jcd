@@ -110,20 +110,22 @@ const formatKw = (kw) =>
       .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
       .join(" ");
 
-// ─── 5 pola nama yang bervariasi ──────────────────────────────────────────────
+// ─── Pola nama yang WASTI mengeluarkan tepat 3 kata (di luar PT) ─────────────
 const buildPatterns = (fkw, vocab) => {
     const { pre, mid, suf } = vocab;
+    
+    // Ambil kata pertama saja dari keyword untuk mengamankan rumus 3 kata
+    const singleKw = fkw.split(" ")[0];
+
     return [
-        // [Prefix] [Keyword]
-        () => `PT ${pick(pre)} ${fkw}`,
-        // [Keyword] [Middle] [Suffix]
-        () => `PT ${fkw} ${pick(mid)} ${pick(suf)}`,
-        // [Prefix] [Keyword] [Suffix]
-        () => `PT ${pick(pre)} ${fkw} ${pick(suf)}`,
-        // [Keyword] [Suffix]
-        () => `PT ${fkw} ${pick(suf)}`,
-        // [Prefix] [Middle] [Keyword]
-        () => `PT ${pick(pre)} ${pick(mid)} ${fkw}`,
+        // Pola 1: [Prefix] [Middle] [Keyword] -> contoh: PT Nexus Sistem Teknologi
+        () => `PT ${pick(pre)} ${pick(mid)} ${singleKw}`,
+        
+        // Pola 2: [Prefix] [Keyword] [Suffix] -> contoh: PT Nexus Teknologi Indonesia
+        () => `PT ${pick(pre)} ${singleKw} ${pick(suf)}`,
+        
+        // Pola 3: [Keyword] [Middle] [Suffix] -> contoh: PT Teknologi Sistem Indonesia
+        () => `PT ${singleKw} ${pick(mid)} ${pick(suf)}`,
     ];
 };
 
@@ -136,21 +138,24 @@ const generateNames = (kw, bidang) => {
     };
 
     const fkw      = formatKw(kw);
-    const patterns = buildPatterns(fkw, vocab).sort(() => Math.random() - 0.5);
+    const patterns = buildPatterns(fkw, vocab);
     const used     = new Set();
     const output   = [];
 
-    for (const pattern of patterns) {
-        // Coba hingga 5x per pola jika nama kebetulan duplikat
-        for (let i = 0; i < 5; i++) {
-            const name = pattern();
-            if (!used.has(name)) {
-                used.add(name);
-                output.push(name);
-                break;
-            }
+    // Mengacak pola agar variasi urutan tipe nama berbeda setiap generate
+    const shuffledPatterns = [...patterns].sort(() => Math.random() - 0.5);
+
+    // Kumpulkan kombinasi kata hingga mencapai tepat 5 nama unik
+    let attempts = 0;
+    while (output.length < 5 && attempts < 100) {
+        attempts++;
+        const randomPattern = pick(shuffledPatterns);
+        const name = randomPattern();
+        
+        if (!used.has(name)) {
+            used.add(name);
+            output.push(name);
         }
-        if (output.length === 5) break;
     }
 
     return output;
