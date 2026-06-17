@@ -61,20 +61,64 @@ const flattenNodes = (nodes, ancestors = []) => {
 
 const allNodes = computed(() => flattenNodes(data.value));
 
+const getKode     = (node) => node.kategori ?? node.nomor_kbli ?? "";
+const hasChildren = (node) => node.children && node.children.length > 0;
+const getDesc     = (node) => node.description ?? node.deskripsi ?? "";
+
+// Memotong bagian "tidak mencakup ..." dari deskripsi supaya kata kunci yang
+// hanya muncul di teks pengecualian (cross-reference ke kode lain) tidak
+// membuat node tersebut salah dianggap relevan saat dicari.
+const stripExclusions = (desc) => {
+    if (!desc) return "";
+    const idx = desc.search(/tidak mencakup/i);
+    return idx === -1 ? desc : desc.slice(0, idx);
+};
+
+// Node dianggap "placeholder" / sisa data rusak dari parsing PDF (misal nama
+// hanya "[0220]" atau "16", deskripsi kosong) — node ini sebaiknya tidak
+// muncul sebagai hasil pencarian karena tidak informatif buat pengguna.
+const isPlaceholderNode = (node) => {
+    const nama = (node.nama ?? "").trim();
+    const desc = (node.description ?? node.deskripsi ?? "").trim();
+    if (/^\[\d+\]$/.test(nama)) return true;
+    if (!nama || /^\d+$/.test(nama)) return true;
+    if (!desc && hasChildren(node)) return true;
+    return false;
+};
+
 const searchResults = computed(() => {
     const q = searchQuery.value.trim().toLowerCase();
     if (!q || q.length < 2) return [];
-    return allNodes.value
-        .filter(({ node }) => {
-            const kode = node.nomor_kbli ?? node.kategori ?? "";
-            // Hanya tampilkan node dengan kode 4–5 digit angka
-            if (!/^\d{2,5}$/.test(kode)) return false;
 
-            const kodeLower = kode.toLowerCase();
-            const nama = (node.nama ?? "").toLowerCase();
-            const desc = (node.description ?? node.deskripsi ?? "").toLowerCase();
-            return kodeLower.includes(q) || nama.includes(q) || desc.includes(q);
-        })
+    const scored = [];
+
+    for (const { node, ancestors: ancs } of allNodes.value) {
+        const kode = getKode(node);
+        // Hanya tampilkan node dengan kode KBLI (2–5 digit angka) atau kategori (1 huruf)
+        if (!/^\d{2,5}$/.test(kode)) continue;
+        if (isPlaceholderNode(node)) continue;
+
+        const kodeLower = kode.toLowerCase();
+        const nama = (node.nama ?? "").toLowerCase();
+        const descFull = (node.description ?? node.deskripsi ?? "").toLowerCase();
+        const descRelevant = stripExclusions(descFull);
+
+        let score = 0;
+        if (kodeLower === q) score = 100;
+        else if (kodeLower.startsWith(q)) score = 90;
+        else if (nama.startsWith(q)) score = 80;
+        else if (nama.includes(q)) score = 60;
+        else if (descRelevant.includes(q)) score = 30;
+        // Kata yang hanya ditemukan di bagian "tidak mencakup" tetap diberi skor
+        // rendah (bukan dibuang total) agar pencarian istilah jarang masih terbantu,
+        // tapi akan selalu kalah ranking dari match yang lebih relevan.
+        else if (descFull.includes(q)) score = 5;
+
+        if (score > 0) scored.push({ node, ancestors: ancs, score });
+    }
+
+    return scored
+        .sort((a, b) => b.score - a.score)
         .slice(0, 8);
 });
 
@@ -171,10 +215,6 @@ const goToAncestor = (idx) => {
     activeNode.value = target;
     globalSearch.value = "";
 };
-
-const getKode     = (node) => node.kategori ?? node.nomor_kbli ?? "";
-const hasChildren = (node) => node.children && node.children.length > 0;
-const getDesc     = (node) => node.description ?? node.deskripsi ?? "";
 
 const isRoot = computed(() => !activeNode.value);
 const isLeaf = computed(() => activeNode.value && !hasChildren(activeNode.value));
