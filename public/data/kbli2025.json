@@ -744,8 +744,8 @@
                     },
                     {
                         "nomor_kbli": "016",
-                        "nama": "16",
-                        "description": "",
+                        "nama": "JASA PENUNJANG PERTANIAN DAN PASCAPANEN",
+                        "description": "Golongan ini mencakup kegiatan penunjang dalam memproduksi hasil pertanian dan kegiatan sejenis untuk pertanian yang tidak dilakukan untuk keperluan produksi atas dasar balas jasa atau kontrak. Golongan ini juga mencakup jasa pemanenan dan pascapanen untuk menyiapkan hasil pertanian untuk pasar primer.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -1191,7 +1191,7 @@
             {
                 "nomor_kbli": "05",
                 "nama": "PERTAMBANGAN BATU BARA DAN LIGNIT",
-                "description": "Golongan pokok ini mencakup ekstraksi bahan bakar mineral padat melalui penambangan bawah tanah atau terbuka (misalnya penggolongan, pembersihan, pemadatan, dan langkah-langkah lain yang diperlukan untuk diangkut) yang menghasilkan produk yang siap untuk dipasarkan. Golongan pokok ini tidak mencakup - pengolahan batu bara menjadi kokas (lihat subgolongan 1910); - jasa pertambangan batu bara atau lignit (lihat subgolongan 0990); - pembuatan briket (lihat subgolongan 1920).",
+                "description": "Golongan pokok ini mencakup ekstraksi bahan bakar mineral padat melalui penambangan bawah tanah atau terbuka (misalnya penggolongan, pembersihan, pemadatan, dan langkah-langkah lain yang diperlukan untuk diangkut) yang menghasilkan produk yang siap untuk dipasarkan. Golongan pokok ini tidak mencakup\n - pengolahan batu bara menjadi kokas (lihat subgolongan 1910);\n - jasa pertambangan batu bara atau lignit (lihat subgolongan 0990);\n - pembuatan briket (lihat subgolongan 1920).",
                 "type_kbli": "Golongan Pokok",
                 "children": [
                     {
@@ -1203,20 +1203,20 @@
                             {
                                 "nomor_kbli": "0510",
                                 "nama": "PERTAMBANGAN BATU BARA",
-                                "description": "Subgolongan ini mencakup - pertambangan batu bara: pertambangan bawah tanah atau permukaan tanah, termasuk pertambangan dengan metode likuefaksi; - pembersihan, pengukuran, pengelompokan, penghancuran, pemadatan batu bara untuk pengklasifikasian, peningkatan kualitas, kemudahan pengangkutan atau penyimpanan. Kelompok ini juga mencakup o - pemulihan kembali batu bara dari tumpukan limbah tambang (culm banks). Kelompok ini tidak termasuk - pertambangan lignit, lihat subgolongan 0520; - penggalian dan aglomerasi gambut, lihat subgolongan 0892; - jasa penunjang pertambangan batu bara, lihat subgolongan 0990; - uji pengeboran untuk pertambangan batu bara, lihat subgolongan 0990; - tungku kokas untuk memproduksi bahan bakar padat, lihat subgolongan 1910; - industri bahan bakar briket batu bara, ovoid dan bahan bakar padat batu bara yang sejenis, lihat subgolongan 1920; - pengembangan atau penyiapan lahan untuk pertambangan batu bara, lihat subgolongan 4312.",
+                                "description": "Subgolongan ini mencakup\n - pertambangan batu bara: pertambangan bawah tanah atau permukaan tanah, termasuk pertambangan dengan metode likuefaksi;\n - pembersihan, pengukuran, pengelompokan, penghancuran, pemadatan batu bara untuk pengklasifikasian, peningkatan kualitas, kemudahan pengangkutan atau penyimpanan.\n Kelompok ini juga mencakup\n - pemulihan kembali batu bara dari tumpukan limbah tambang (culm banks). Kelompok ini tidak termasuk\n - pertambangan lignit, lihat subgolongan 0520;\n - penggalian dan aglomerasi gambut, lihat subgolongan 0892;\n - jasa penunjang pertambangan batu bara, lihat subgolongan 0990;\n - uji pengeboran untuk pertambangan batu bara, lihat subgolongan 0990;\n - tungku kokas untuk memproduksi bahan bakar padat, lihat subgolongan 1910;\n - industri bahan bakar briket batu bara, ovoid dan bahan bakar padat batu bara yang sejenis, lihat subgolongan 1920;\n - pengembangan atau penyiapan lahan untuk pertambangan batu bara, lihat subgolongan 4312.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
                                         "nomor_kbli": "05101",
                                         "nama": "PERTAMBANGAN BATU BARA",
-                                        "description": "Kelompok ini mencakup - pertambangan batu bara: pertambangan bawah tanah atau permukaan tanah, termasuk pertambangan dengan metode likuefaksi; - pembersihan, pengukuran, pengelompokan, penghancuran, pemadatan batu bara untuk mengklasifikasikan, meningkatkan kualitas, atau memudahkan pengangkutan atau penyimpanan. Kelompok ini juga mencakup - pemulihan kembali batu bara dari tumpukan limbah tambang (culm banks). Kelompok ini tidak mencakup - pertambangan lignit, lihat subgolongan 0520; - penggalian dan aglomerasi gambut, lihat subgolongan 0892; - jasa penunjang pertambangan batu bara, lihat subgolongan 0990; - uji pengeboran untuk pertambangan batu bara, llihat subgolongan 0990; - kegiatan tungku kokas untuk memproduksi bahan bakar padat, lihat subgolongan 1910; - pembuatan bahan bakar briket batu bara, ovoid, dan bahan bakar padat batu bara yang sejenis, lihat subgolongan 1920; - pengembangan atau penyiapan lahan untuk pertambangan batu bara, lihat subgolongan 4312; - benefisiasi batu bara tanpa melakukan aktivitas pertambangan, lihat kelompok 05102.",
+                                        "description": "Kelompok ini mencakup\n - pertambangan batu bara: pertambangan bawah tanah atau permukaan tanah, termasuk pertambangan dengan metode likuefaksi;\n - pembersihan, pengukuran, pengelompokan, penghancuran, pemadatan batu bara untuk mengklasifikasikan, meningkatkan kualitas, atau memudahkan pengangkutan atau penyimpanan.\n Kelompok ini juga mencakup\n - pemulihan kembali batu bara dari tumpukan limbah tambang (culm banks).\n Kelompok ini tidak mencakup\n - pertambangan lignit, lihat subgolongan 0520;\n - penggalian dan aglomerasi gambut, lihat subgolongan 0892;\n - jasa penunjang pertambangan batu bara, lihat subgolongan 0990;\n - uji pengeboran untuk pertambangan batu bara, llihat subgolongan 0990;\n - kegiatan tungku kokas untuk memproduksi bahan bakar padat, lihat subgolongan 1910;\n - pembuatan bahan bakar briket batu bara, ovoid, dan bahan bakar padat batu bara yang sejenis, lihat subgolongan 1920;\n - pengembangan atau penyiapan lahan untuk pertambangan batu bara, lihat subgolongan 4312;\n - benefisiasi batu bara tanpa melakukan aktivitas pertambangan, lihat kelompok 05102.",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
                                     {
                                         "nomor_kbli": "05102",
                                         "nama": "BENEFISIASI ATAU PENINGKATAN KUALITAS BATU BARA",
-                                        "description": "o Kelompok ini mencakup benefisiasi atau peningkatan kualitas batu bara berupa pembersihan, pengukuran, pengelompokan, penghancuran, pemadatan batu bara untuk mengklasifikasikan, meningkatkan kualitas atau kalori batu bara, memudahkan pengangkutan atau penyimpanan yang dilakukan secara terpisah dari proses pertambangan batu bara. Kelompok ini tidak mencakup aktivitas pertambangan batu bara, baik yang disertai peningkatan kualitas atau tidak, lihat kelompok 05101.",
+                                        "description": "Kelompok ini mencakup benefisiasi atau peningkatan kualitas batu bara berupa pembersihan, pengukuran, pengelompokan, penghancuran, pemadatan batu bara untuk mengklasifikasikan, meningkatkan kualitas atau kalori batu bara, memudahkan pengangkutan atau penyimpanan yang dilakukan secara terpisah dari proses pertambangan batu bara.\n Kelompok ini tidak mencakup aktivitas pertambangan batu bara, baik yang disertai peningkatan kualitas atau tidak, lihat kelompok 05101.",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -1838,13 +1838,13 @@
                             },
                             {
                                 "nomor_kbli": "1029",
-                                "nama": "[1029]",
+                                "nama": "PENGOLAHAN DAN PENGAWETAN BIOTA AIR LAINNYA",
                                 "description": "",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
                                         "nomor_kbli": "10291",
-                                        "nama": "PENGOLAHAN DAN PENGAWETAN BIOTA AIR LAINNYA DENGAN",
+                                        "nama": "PENGOLAHAN DAN PENGAWETAN BIOTA AIR LAINNYA",
                                         "description": "PENGGARAMAN ATAU PENGERINGAN Kelompok ini mencakup kegiatan pengolahan dan pengawetan krustasea, moluska, ekinodermata, dan biota air lainnya melalui proses penggaraman atau pengeringan yang menghasilkan produk seperti udang asin, cumi-cumi asin, ebi, ubur-ubur asin, sotong asin, teripang kering, dan sotong kering.",
                                         "type_kbli": "Kelompok",
                                         "children": []
@@ -2657,13 +2657,13 @@
             },
             {
                 "nomor_kbli": "12",
-                "nama": "[12]",
+                "nama": "Industri Produk Tembakau",
                 "description": "",
                 "type_kbli": "Golongan Pokok",
                 "children": [
                     {
                         "nomor_kbli": "120",
-                        "nama": "[120]",
+                        "nama": "Industri Produk Tembakau",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -2729,8 +2729,8 @@
                 "children": [
                     {
                         "nomor_kbli": "131",
-                        "nama": "[131]",
-                        "description": "",
+                        "nama": "PEMINTALAN, PERTENUNAN, DAN PENYEMPURNAAN TEKSTIL",
+                        "description": "Golongan ini mencakup kegiatan pembuatan tekstil, termasuk persiapan, pemintalan serat tekstil, dan pertenunan tekstil. Tekstil dapat dibuat dari berbagai bahan baku, seperti sutra, wol, serat rambut hewan lainnya, serat tumbuhan atau serat buatan, dan serat dari bubur kayu atau serat kaca. Golongan ini juga mencakup kegiatan penyempurnaan tekstil dan pakaian jadi, seperti pengelantangan, pencelupan, dan penyempurnaan akhir.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -2817,7 +2817,7 @@
                     },
                     {
                         "nomor_kbli": "139",
-                        "nama": "[139]",
+                        "nama": "INDUSTRI TEKSTIL LAINNYA",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -2918,7 +2918,7 @@
                             },
                             {
                                 "nomor_kbli": "1399",
-                                "nama": "[1399]",
+                                "nama": "INDUSTRI TEKSTIL LAINNYA",
                                 "description": "",
                                 "type_kbli": "Subgolongan",
                                 "children": [
@@ -3217,8 +3217,8 @@
                 "children": [
                     {
                         "nomor_kbli": "161",
-                        "nama": "[161]",
-                        "description": "",
+                        "nama": "PENGGERGAJIAN DAN PENGHALUSAN KAYU,ROTAN, BAMBU, DAN SEJENISNYA",
+                        "description": "Lihat subgolongan 1610.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -3268,8 +3268,8 @@
                     },
                     {
                         "nomor_kbli": "162",
-                        "nama": "[162]",
-                        "description": "",
+                        "nama": "INDUSTRI BARANG DARI KAYU, GABUS, JERAMI, DAN BAHAN ANYAMAN",
+                        "description": "Golongan ini mencakup pembuatan barang-barang dari kayu, gabus, jerami, atau bahan anyaman seperti bambu dan rotan, termasuk bentuk dasar hingga produk rakitan.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -3310,8 +3310,8 @@
                             },
                             {
                                 "nomor_kbli": "1622",
-                                "nama": "[1622]",
-                                "description": "",
+                                "nama": "INDUSTRI BARANG BANGUNAN DAN BANGUNAN DARI KAYU",
+                               "description": "Subgolongan ini mencakup\n- pembuatan bahan bangunan dari kayu yang digunakan utamanya untuk konstruksi, seperti balok, kasau, rangka atap yang dihaluskan keempat sisinya; tiang penopang yang dibuat dari kayu secara bilah sambung (finger joint) dengan perekat atau dihubungkan dengan logam (metal); pintu, jendela, daun jendela, dan rangkanya (kusen), baik yang mengandung bahan logam, seperti engsel dan kunci, maupun tidak; tangga, susuran tangga; manik-manik dari kayu, cetakan kayu, dan sirap; blok lantai parket, strip, yang dirakit menjadi panel; serta papan penghias tembok dan papan nama;\n- pembuatan bangunan prafabrikasi (seperti rumah bergerak dan karavan) atau elemen-elemennya yang bahannya didominasi oleh kayu;\n- pembuatan partisi kayu (tidak termasuk penyekat ruangan yang berdiri sendiri/furnitur).\nSubgolongan ini tidak mencakup\n- pembuatan lantai kayu yang belum dirakit, lihat subgolongan 1610;\n- pembuatan lemari dapur (kabinet), rak buku, lemari pakaian, dan sebagainya dari kayu, lihat subgolongan 3101;\n- pembuatan partisi kayu, penyekat ruangan yang berdiri sendiri/furnitur, lihat 3101.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -6832,13 +6832,13 @@
                 "children": [
                     {
                         "nomor_kbli": "360",
-                        "nama": "[360]",
+                        "nama": "PENAMPUNGAN, PENGAMBILAN, PENGOLAHAN, DAN PENYEDIAAN AIR",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "3600",
-                                "nama": "[3600]",
+                                "nama": "PENAMPUNGAN, PENGAMBILAN, PENGOLAHAN, DAN PENYEDIAAN AIR",
                                 "description": "",
                                 "type_kbli": "Subgolongan",
                                 "children": [
@@ -6877,7 +6877,7 @@
                 "children": [
                     {
                         "nomor_kbli": "370",
-                        "nama": "[370]",
+                        "nama": "Pengelolaan Air Limbah",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -6915,7 +6915,7 @@
                 "children": [
                     {
                         "nomor_kbli": "381",
-                        "nama": "[381]",
+                        "nama": "Pengumpulan Limbah atau Sampah",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -6960,7 +6960,7 @@
                     },
                     {
                         "nomor_kbli": "382",
-                        "nama": "[382]",
+                        "nama": "Pengolahan dan Pembuangan Limbah atau Sampah",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -7019,7 +7019,7 @@
                     },
                     {
                         "nomor_kbli": "383",
-                        "nama": "[383]",
+                        "nama": "Pemulihan Material, Limbah, atau Sampah Lainnya",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -7057,7 +7057,7 @@
                 "children": [
                     {
                         "nomor_kbli": "390",
-                        "nama": "[390]",
+                        "nama": "Aktivitas Remediasi dan Pengelolaan Limbah atau Sampah Lainnya",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [

@@ -487,7 +487,7 @@ const isLeaf = computed(() => activeNode.value && !hasChildren(activeNode.value)
                             <!-- Uraian -->
                             <div class="px-6 py-5 border-b border-[#F3F4F6]">
                                 <h3 class="text-[11px] font-bold text-[#9CA3AF] uppercase tracking-widest mb-2">Uraian</h3>
-                                <p class="text-[13px] leading-[22px] text-[#374151]">{{ getDesc(activeNode) }}</p>
+                                <p class="text-[13px] leading-[22px] text-[#374151] whitespace-pre-line">{{ getDesc(activeNode) }}</p>
                             </div>
 
                             <!-- Sebelumnya -->
