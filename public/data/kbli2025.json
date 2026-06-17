@@ -16556,14 +16556,14 @@
                 "children": [
                     {
                         "nomor_kbli": "990",
-                        "nama": "[990]",
-                        "description": "",
+                        "nama": "AKTIVITAS BADAN INTERNASIONAL DAN BADAN EKSTRA INTERNASIONAL LAINNYA",
+                        "description": "Lihat subgolongan 9900.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "9900",
                                 "nama": "AKTIVITAS BADAN INTERNASIONAL DAN BADAN EKSTRA INTERNASIONAL LAINNYA",
-                                "description": "Subgolongan ini mencakup : - kegiatan organisasi internasional di bawah perjanjian internasional antar negara seperti PBB dan agen-agen khusus sistem PBB, badan regional, badan keuangan dan moneter internasional, bank dunia, organisasi bea cukai dunia, organisasi untuk kerjasama dan pengembangan ekonomi, organisasi negara-negara pengekspor minyak perhimpunan negara-negara Eropa, perhimpunan perdagangan bebas negara-negara Eropa dan lain-lain; - kegiatan lembaga dan badan Uni Eropa. Subgolongan ini juga mencakup : - lembaga pemerintah umum negara lain, misalnya kedutaan, konsulat, pangkalan militer, pangkalan ilmiah, dll. Subgolongan ini tidak termasuk: - kegiatan organisasi non-pemerintah, lihat 9499",
+                                "description": "Subgolongan ini mencakup :\n - kegiatan organisasi internasional di bawah perjanjian internasional antar negara seperti PBB dan agen-agen khusus sistem PBB, badan regional, badan keuangan dan moneter internasional, bank dunia, organisasi bea cukai dunia, organisasi untuk kerjasama dan pengembangan ekonomi, organisasi negara-negara pengekspor minyak perhimpunan negara-negara Eropa, perhimpunan perdagangan bebas negara-negara Eropa dan lain-lain;\n - kegiatan lembaga dan badan Uni Eropa.\n Subgolongan ini juga mencakup :\n - lembaga pemerintah umum negara lain, misalnya kedutaan, konsulat, pangkalan militer, pangkalan ilmiah, dll.\n Subgolongan ini tidak termasuk:\n - kegiatan organisasi non-pemerintah, lihat 9499",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -16583,8 +16583,8 @@
     },
     {
         "kategori": "V",
-        "nama": "AKTIVITAS BADAN INTERNASIONAL DAN BADAN EKSTRA INTERNASIONAL",
-        "description": ".go",
+        "nama": "AKTIVITAS BADAN INTERNASIONAL DAN BADAN EKSTRA INTERNASIONAL LAINNYA",
+        "description": "Lihat subgolongan 9900.",
         "children": []
     }
 ]
