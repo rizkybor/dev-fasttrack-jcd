@@ -30,8 +30,8 @@ export default {
                 },
             },
             animation: {
-                'marquee': 'marquee 45s linear infinite',
-                'marquee-reverse': 'marquee-reverse 45s linear infinite',
+                'marquee': 'marquee 185s linear infinite',
+                'marquee-reverse': 'marquee-reverse 185s linear infinite',
             },
         },
     },
