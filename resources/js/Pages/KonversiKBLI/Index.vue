@@ -512,7 +512,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                         <option :value="20">20</option>
                                         <option :value="50">50</option>
                                     </select>
-                                    <svg
+                                    <!-- <svg
                                         class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 h-3 w-3 text-[#686964]"
                                         fill="none"
                                         viewBox="0 0 24 24"
@@ -524,7 +524,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                             stroke-linejoin="round"
                                             d="M19 9l-7 7-7-7"
                                         />
-                                    </svg>
+                                    </svg> -->
                                 </div>
                             </div>
                         </div>
