@@ -417,7 +417,7 @@ onUnmounted(() => {
                     xmlns="http://www.w3.org/2000/svg"
                     preserveAspectRatio="none"
                 >
-                    <path d="M0 0H100L0 32Z" fill="#9e1f16" />
+                    <path d="M0 0 H100 L15 28 Q5 30 3 25 Z" fill="#9e1f16" />
                 </svg>
             </div>
         </section>
