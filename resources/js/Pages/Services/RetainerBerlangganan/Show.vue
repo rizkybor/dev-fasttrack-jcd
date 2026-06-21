@@ -99,7 +99,7 @@ const currentCorporatePackages = computed(
             <!-- Background image + overlay -->
             <div class="absolute inset-0">
                 <img
-                    src="/images/retainer-berlangganan/ft-hero-retainer-berlangganan.png"
+                    src="/images/layanan-hero/ft-hero-retainer-berlangganan.png"
                     class="h-full w-full object-cover object-center"
                     alt=""
                 />
