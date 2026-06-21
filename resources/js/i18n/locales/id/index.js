@@ -5,6 +5,11 @@ import badanUsaha from './services/badan-usaha'
 import kantorPerwakilan from './services/kantor-perwakilan'
 import izinTinggalTerbatas from './services/izin-tinggal-terbatas'
 import izinTinggalTetap from './services/izin-tinggal-tetap'
+import badanHukumLuarNegeri from './services/badan-hukum-luar-negeri'
+import kekayaanIntelektual from './services/kekayaan-intelektual'
+import kewajibanPelaporanUsaha from './services/kewajiban-pelaporan-perusahaan'
+import legalisasiKedutaan from './services/legalisasi-kedutaan'
+import oneSingleSubmission from './services/one-single-submission'
 
 export default {
     common,
@@ -13,6 +18,11 @@ export default {
         badanUsaha,
         kantorPerwakilan,
         izinTinggalTerbatas,
-        izinTinggalTetap
+        izinTinggalTetap,
+        badanHukumLuarNegeri,
+        kekayaanIntelektual,
+        kewajibanPelaporanUsaha,
+        legalisasiKedutaan,
+        oneSingleSubmission
     },
 }
