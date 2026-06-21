@@ -44,7 +44,7 @@ const serviceCategories = [
                 description:
                     "Pendirian PT Perorangan, PT PMDN, PT PMA, CV, hingga Yayasan.",
                 price: "Rp 750.000",
-                packages: "7 Layanan",
+                packages: "8 Layanan",
                 path: "/badan-usaha",
                 image: "/images/layanan-card/layanan-bu.png",
             },
@@ -62,8 +62,8 @@ const serviceCategories = [
                 description:
                     "Registrasi badan hukum asing yang beroperasi di wilayah Indonesia.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
-                path: "/",
+                packages: "2 Layanan",
+                path: "/badan-hukum-luar-negeri",
                 image: "/images/layanan-card/layanan-badan-hukum-luar-negeri.png",
             },
             {
@@ -71,8 +71,8 @@ const serviceCategories = [
                 description:
                     "Pendaftaran NIB, perubahan data usaha, dan perizinan via OSS.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
-                path: "/",
+                packages: "2 Layanan",
+                path: "/one-single-submission",
                 image: "/images/layanan-card/layanan-one-single-submission.png",
             },
             {
@@ -125,9 +125,9 @@ const serviceCategories = [
                 description:
                     "LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
-                path: "/",
-                image: "/images/layanan-card/layanan-kewajiban-pelaporan-usaha.png",
+                packages: "3 Layanan",
+                path: "/kewajiban-pelaporan-perusahaan",
+                image: "/images/layanan-card/layanan-kewajiban-pelaporan-perusahaan.png",
             },
             {
                 title: "Sertifikasi Badan Usaha",
@@ -186,7 +186,7 @@ const serviceCategories = [
                     "Legalisasi dokumen untuk keperluan internasional dan kedutaan.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                path: "/legalisasi-kedutaan",
                 image: "/images/dummy-card.png",
             },
             {
@@ -204,7 +204,7 @@ const serviceCategories = [
                     "Pendaftaran & perpanjangan merek, hak cipta, dan analisa merek.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                path: "/kekayaan-intelektual",
                 image: "/images/dummy-card.png",
             },
             {
