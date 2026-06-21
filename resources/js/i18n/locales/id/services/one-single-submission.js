@@ -24,14 +24,14 @@ export default {
             id: '1',
             title: 'Pendaftaran Nomor Induk Berusaha (NIB)',
             description: 'Pendaftaran Nomor Induk Berusaha (NIB)',
-            price: 'Rp 0',
+            price: 'Rp 750.000',
             packages: '4 Paket',
         },
         {
             id: '2',
             title: 'Perubahan/Pemutakhiran NIB',
             description: 'Perubahan/Pemutakhiran NIB',
-            price: 'Rp 0',
+            price: 'Rp 750.000',
             packages: '4 Paket',
         }
     ],
