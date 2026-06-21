@@ -185,7 +185,7 @@ const serviceCategories = [
                 description:
                     "Legalisasi dokumen untuk keperluan internasional dan kedutaan.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
+                packages: "2 Layanan",
                 path: "/legalisasi-kedutaan",
                 image: "/images/dummy-card.png",
             },
@@ -203,7 +203,7 @@ const serviceCategories = [
                 description:
                     "Pendaftaran & perpanjangan merek, hak cipta, dan analisa merek.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
+                packages: "3 Layanan",
                 path: "/kekayaan-intelektual",
                 image: "/images/dummy-card.png",
             },
