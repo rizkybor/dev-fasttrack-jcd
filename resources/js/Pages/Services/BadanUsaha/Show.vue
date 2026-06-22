@@ -1198,7 +1198,7 @@ const toggleDoc = (key) => {
                                     </div>
                                 </div>
 
-                                <!-- Baris 2: sisa paket, centered -->
+                                <!-- Baris 2: 2 paket, centered -->
                                 <div class="grid grid-cols-1 gap-4">
                                     <div
                                         v-for="(plan, pi) in currentPlans.slice(
