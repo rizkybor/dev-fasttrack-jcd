@@ -596,15 +596,12 @@ onUnmounted(() => {
                                 class="group flex flex-col rounded-[14px] border border-[#D9DAD8] bg-[#FEFEFE] p-[15px] backdrop-blur-[13px] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-primary/30"
                             >
                                 <div class="flex flex-col gap-4 flex-grow">
-                                    <div
-                                        class="flex h-[60px] w-[60px] items-center justify-center rounded-lg bg-[#FAD9DA]"
-                                    >
+                                   
                                         <img
                                             :src="item.icon"
-                                            class="w-6 h-6"
+                                            class="w-10 h-10 md:w-14 md:h-14"
                                             alt=""
                                         />
-                                    </div>
 
                                     <div class="flex flex-col gap-1">
                                         <h4
