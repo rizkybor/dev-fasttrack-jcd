@@ -1062,7 +1062,7 @@ const toggleDoc = (key) => {
                         <!-- Layanan Terkait -->
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">
-                                {{ t('services.badanUsahaDetail.sidebar.related_title') }}
+                                {{ t('service.badanUsahaDetail.sidebar.related_title') }}
                             </h3>
                             <div class="flex flex-col gap-3">
                     <a
