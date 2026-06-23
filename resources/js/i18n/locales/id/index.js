@@ -10,12 +10,14 @@ import kekayaanIntelektual from './services/kekayaan-intelektual'
 import kewajibanPelaporanUsaha from './services/kewajiban-pelaporan-perusahaan'
 import legalisasiKedutaan from './services/legalisasi-kedutaan'
 import oneSingleSubmission from './services/one-single-submission'
+import badanUsahaDetail from './services/show/badan-usaha-detail'
 
 export default {
     common,
     home,
     services: {
         badanUsaha,
+        badanUsahaDetail,
         kantorPerwakilan,
         izinTinggalTerbatas,
         izinTinggalTetap,

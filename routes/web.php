@@ -754,8 +754,16 @@ foreach ($customServices as $service) {
         return Inertia::render($service['component'], $props);
     });
 }
+// Helper pick locale — tambahkan di dekat $resolveBaseUrl
+$pickLocale = static function (mixed $field, string $locale = null) use (&$pickLocale): mixed {
+    $locale = $locale ?? app()->getLocale();
+    if (is_array($field) && (isset($field['id']) || isset($field['en']) || isset($field['zh']))) {
+        return $field[$locale] ?? $field['id'] ?? null;
+    }
+    return $field;
+};
 
-Route::get('/badan-usaha/{id}', function (Request $request, int $id) use ($foundingProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/badan-usaha/{id}', function (Request $request, int $id) use ($foundingProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($foundingProducts)->firstWhere('id', $id);
 
@@ -767,55 +775,60 @@ Route::get('/badan-usaha/{id}', function (Request $request, int $id) use ($found
         ->values()
         ->all();
 
+    // Resolve field translatable untuk kebutuhan SEO & Schema
+    $productName    = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq     = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/BadanUsaha/Show', [
-        'product' => $product,
+        'product'         => $product,
         'relatedProducts' => $relatedProducts,
         'seo' => [
-            'title' => $product['name'] . ' - FastTrack',
-            'description' => $product['excerpt'],
-            'canonical' => $baseUrl . $product['detail_path'],
-            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+            'title'       => $productName . ' - FastTrack',
+            'description' => $productExcerpt,
+            'canonical'   => $baseUrl . $product['detail_path'],
+            'image'       => $product['image'] ?: $defaultImageUrl($baseUrl),
         ],
         'schemas' => [
             [
-                '@context' => 'https://schema.org',
-                '@type' => 'Service',
-                'name' => $product['name'],
-                'description' => $product['excerpt'],
-                'serviceType' => $product['name'],
-                'provider' => $organizationReference($baseUrl),
-                'areaServed' => [
+                '@context'    => 'https://schema.org',
+                '@type'       => 'Service',
+                'name'        => $productName,
+                'description' => $productExcerpt,
+                'serviceType' => $productName,
+                'provider'    => $organizationReference($baseUrl),
+                'areaServed'  => [
                     '@type' => 'Country',
-                    'name' => 'Indonesia',
+                    'name'  => 'Indonesia',
                 ],
-                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
-                'url' => $baseUrl . $product['detail_path'],
+                'image'  => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url'    => $baseUrl . $product['detail_path'],
                 'offers' => [
-                    '@type' => 'Offer',
+                    '@type'        => 'Offer',
                     'priceCurrency' => 'IDR',
-                    'price' => $product['price'],
+                    'price'        => $product['price'],
                     'availability' => 'https://schema.org/InStock',
-                    'url' => $baseUrl . $product['detail_path'],
+                    'url'          => $baseUrl . $product['detail_path'],
                 ],
             ],
             [
-                '@context' => 'https://schema.org',
-                '@type' => 'FAQPage',
-                'mainEntity' => collect($product['faq'])->map(
+                '@context'   => 'https://schema.org',
+                '@type'      => 'FAQPage',
+                'mainEntity' => collect($productFaq)->map(
                     static fn(array $faq): array => [
                         '@type' => 'Question',
-                        'name' => $faq['question'],
+                        'name'  => $faq['question'],
                         'acceptedAnswer' => [
                             '@type' => 'Answer',
-                            'text' => $faq['answer'],
+                            'text'  => $faq['answer'],
                         ],
                     ]
                 )->all(),
             ],
             $breadcrumbSchema([
-                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-                ['name' => 'Pendirian Perusahaan', 'item' => $baseUrl . '/badan-usaha'],
-                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+                ['name' => 'Beranda',                'item' => $baseUrl . '/'],
+                ['name' => 'Pendirian Perusahaan',   'item' => $baseUrl . '/badan-usaha'],
+                ['name' => $productName,             'item' => $baseUrl . $product['detail_path']],
             ]),
         ],
     ]);
