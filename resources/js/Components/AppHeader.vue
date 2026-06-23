@@ -283,7 +283,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     <img
                         src="/icons/logo-fasttrack.svg"
                         alt="FastTrack Logo"
-                        class="h-8 w-auto object-contain"
+                        class="h-10 w-auto object-contain"
                     />
                 </a>
 
