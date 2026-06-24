@@ -193,6 +193,8 @@ $customServices = [
     ['component' => 'Services/KewajibanPelaporanPerusahaan/Index', 'title' => 'Kewajiban Pelaporan Perusahaan', 'path' => '/kewajiban-pelaporan-perusahaan', 'description' => 'Layanan pengurusan kewajiban pelaporan perusahaan sesuai regulasi yang berlaku di Indonesia.'],
     ['component' => 'Services/LegalisasiKedutaan/Index', 'title' => 'Legalisasi Kedutaan', 'path' => '/legalisasi-kedutaan', 'description' => 'Layanan legalisasi dokumen melalui kedutaan untuk keperluan bisnis internasional Anda.'],
     ['component' => 'Services/KekayaanIntelektual/Index', 'title' => 'Kekayaan Intelektual', 'path' => '/kekayaan-intelektual', 'description' => 'Layanan pendaftaran dan perlindungan kekayaan intelektual termasuk merek, paten, dan hak cipta.'],
+    ['component' => 'Services/Penerjemah/Show', 'title' => 'Penerjemah', 'path' => '/penerjemah', 'description' => 'Layanan penerjemahan dan legalisasi dokumen yang dirancang untuk memenuhi kebutuhan individu maupun perusahaan di tingkat global.'],
+    ['component' => 'Services/UjiTuntasHukum/Show', 'title' => 'Uji Tuntas Hukum', 'path' => '/uji-tuntas-hukum', 'description' => 'Mengidentifikasi Risiko, Memastikan Kepatuhan, dan Melindungi Investasi Anda dalam setiap transaksi bisnis, investasi, akuisisi, kerja sama strategis, maupun restrukturisasi perusahaan, memahami kondisi hukum suatu Perseroan Terbatas merupakan langkah yang sangat penting.'],
 ];
 
 // BADAN USAHA 
@@ -210,9 +212,7 @@ $foundingProducts = (static function (): array {
 
 $foundingProducts = collect($foundingProducts)
     ->map(static function (array $product): array {
-        $product['detail_path'] = $product['id'] === 1
-            ? '/badan-usaha/paket'
-            : '/badan-usaha/' . $product['id'];
+        $product['detail_path'] = '/badan-usaha/' . $product['id'];
 
         return $product;
     })
@@ -398,6 +398,48 @@ $kekayaanIntelektualProducts = collect($kekayaanIntelektualProducts)
     })
     ->all();
 
+// PENTERJEMAH 
+$penerjemahProducts = (static function (): array {
+    $path = public_path('data/foundingProductsPenerjemah.json');
+
+    if (! file_exists($path)) {
+        return [];
+    }
+
+    $decoded = json_decode(file_get_contents($path), true);
+
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$penerjemahProducts = collect($penerjemahProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = '/penerjemah/' . $product['id'];
+
+        return $product;
+    })
+    ->all();
+
+// UJI TUNTAS HUKUM 
+$ujiTuntasHukumProducts = (static function (): array {
+    $path = public_path('data/foundingProductsUjiTuntasHukum.json');
+
+    if (! file_exists($path)) {
+        return [];
+    }
+
+    $decoded = json_decode(file_get_contents($path), true);
+
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$ujiTuntasHukumProducts = collect($ujiTuntasHukumProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = '/uji-tuntas-hukum/' . $product['id'];
+
+        return $product;
+    })
+    ->all();
+
 $staticPages = [
     '/',
     // '/promo',
@@ -481,7 +523,7 @@ $staticPages = [
 // });
 
 foreach ($customServices as $service) {
-    Route::get($service['path'], function (Request $request) use ($kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanHukumLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
+    Route::get($service['path'], function (Request $request) use ($penerjemahProducts, $ujiTuntasHukumProducts, $kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanHukumLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
         $baseUrl = $resolveBaseUrl($request);
         $props = [
             'service' => $service,
@@ -740,6 +782,52 @@ foreach ($customServices as $service) {
                 'mainEntity' => [
                     '@type' => 'ItemList',
                     'itemListElement' => collect($kekayaanIntelektualProducts)->values()->map(
+                        static fn(array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . $product['detail_path'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        // PENTERJEMAH
+        if ($service['path'] === '/penerjemah') {
+            $props['products'] = $penerjemahProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Product Penerjemah - FastTrack',
+                'description' => 'Daftar produk penyusunan peninjauan FastTrack.',
+                'url' => $baseUrl . '/penerjemah',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($penerjemahProducts)->values()->map(
+                        static fn(array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . $product['detail_path'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        // UJI TUNTAS HUKUM
+        if ($service['path'] === '/uji-tuntas-hukum') {
+            $props['products'] = $ujiTuntasHukumProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Product Uji Tuntas Hukum - FastTrack',
+                'description' => 'Daftar produk penyusunan peninjauan FastTrack.',
+                'url' => $baseUrl . '/uji-tuntas-hukum',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($ujiTuntasHukumProducts)->values()->map(
                         static fn(array $product, int $index): array => [
                             '@type' => 'ListItem',
                             'position' => $index + 1,
@@ -1472,6 +1560,143 @@ Route::get('/kekayaan-intelektual/{id}', function (Request $request, int $id) us
     ]);
 })->whereNumber('id');
 
+// PENTERJEMAH
+Route::get('/penerjemah/{id}', function (Request $request, int $id) use ($penerjemahProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($penerjemahProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($penerjemahProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Services/Penerjemah/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $product['name'] . ' - FastTrack',
+            'description' => $product['excerpt'],
+            'canonical' => $baseUrl . $product['detail_path'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $product['name'],
+                'description' => $product['excerpt'],
+                'serviceType' => $product['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => [
+                    '@type' => 'Country',
+                    'name' => 'Indonesia',
+                ],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . $product['detail_path'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . $product['detail_path'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($product['faq'])->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => [
+                            '@type' => 'Answer',
+                            'text' => $faq['answer'],
+                        ],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Penerjemah', 'item' => $baseUrl . '/penerjemah'],
+                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+            ]),
+        ],
+    ]);
+})->whereNumber('id');
+
+// UJI TUNTAS HUKUM
+Route::get('/uji-tuntas-hukum/{id}', function (Request $request, int $id) use ($ujiTuntasHukumProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($ujiTuntasHukumProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($ujiTuntasHukumProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Services/UjiTuntasHukum/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $product['name'] . ' - FastTrack',
+            'description' => $product['excerpt'],
+            'canonical' => $baseUrl . $product['detail_path'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $product['name'],
+                'description' => $product['excerpt'],
+                'serviceType' => $product['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => [
+                    '@type' => 'Country',
+                    'name' => 'Indonesia',
+                ],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . $product['detail_path'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . $product['detail_path'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($product['faq'])->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => [
+                            '@type' => 'Answer',
+                            'text' => $faq['answer'],
+                        ],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Uji Tuntas Hukum', 'item' => $baseUrl . '/uji-tuntas-hukum'],
+                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+            ]),
+        ],
+    ]);
+})->whereNumber('id');
+
+
+
+// ====== BATAS LAYANAN ======
 Route::get('/layanan/{slug}', function (Request $request, $slug) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema) {
     $baseUrl = $resolveBaseUrl($request);
     $service = Service::where('slug', $slug)->firstOrFail();
