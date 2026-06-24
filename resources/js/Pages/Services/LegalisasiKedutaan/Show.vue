@@ -105,9 +105,9 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                 class="absolute right-0 -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block" alt="" />
             <div
                 class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[240px] sm:min-h-[320px] lg:min-h-[360px] min-w-0">
-                <nav aria-label="Breadcrumb" class="min-w-0">
-                    <div
-                        class="flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 sm:px-4 sm:py-2 max-w-full overflow-x-auto">
+                <!-- Breadcrumb -->
+                <nav aria-label="Breadcrumb">
+                    <div class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
                         <a href="/" class="text-[#9e1f16] hover:text-black transition flex-shrink-0">
                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
