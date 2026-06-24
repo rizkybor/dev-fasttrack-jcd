@@ -1,6 +1,6 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 
 const props = defineProps({
     product: {
@@ -20,8 +20,10 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-// Bahasa & Wilayah search
+// Bahasa & Wilayah search + pagination
 const bahasaSearch = ref("");
+const bahasaPage = ref(1);
+const bahasaRowsPerPage = ref(10);
 
 const bahasaItems = computed(() => props.product?.bahasa_wilayah?.items ?? []);
 
@@ -33,9 +35,21 @@ const filteredBahasa = computed(() => {
     );
 });
 
+const totalBahasaPages = computed(() =>
+    Math.max(1, Math.ceil(filteredBahasa.value.length / (bahasaRowsPerPage.value * 2)))
+);
+
+const paginatedBahasa = computed(() => {
+    const itemsPerPage = bahasaRowsPerPage.value * 2;
+    const start = (bahasaPage.value - 1) * itemsPerPage;
+    return filteredBahasa.value.slice(start, start + itemsPerPage);
+});
+
+const bahasaDisplayCount = computed(() => paginatedBahasa.value.length);
+
 // Desktop: 2-column rows
 const bahasaRows = computed(() => {
-    const items = filteredBahasa.value;
+    const items = paginatedBahasa.value;
     const rows = [];
     for (let i = 0; i < items.length; i += 2) {
         const row = items.slice(i, i + 2);
@@ -45,7 +59,14 @@ const bahasaRows = computed(() => {
     return rows;
 });
 
+// Mobile: 1-column rows
+const bahasaMobileRows = computed(() => paginatedBahasa.value);
+
+// Reset page saat search berubah
+watch(bahasaSearch, () => { bahasaPage.value = 1; });
+
 const keunggulan = computed(() => props.product?.keunggulan ?? null);
+const bannerCta = computed(() => props.product?.banner_cta ?? null);
 </script>
 
 <template>
@@ -129,56 +150,192 @@ const keunggulan = computed(() => props.product?.keunggulan ?? null);
 
                         <!-- 2. Bahasa & Wilayah -->
                         <div v-if="product.bahasa_wilayah"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
+                            class="rounded-2xl border border-[#E8E8E6] bg-white p-5 sm:p-8">
                             <div class="flex items-center gap-3 mb-2">
-                                <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
+                                <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
+                                <h2 class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black">
                                     {{ product.bahasa_wilayah.title }}
                                 </h2>
                             </div>
-                            <p class="text-[13px] text-[#686964] mb-5 leading-[1.7]">
+                            <p v-if="product.bahasa_wilayah.subtitle"
+                                class="text-[12px] sm:text-[13px] leading-[1.7] text-[#686964] mb-5 sm:mb-6 break-words">
                                 {{ product.bahasa_wilayah.subtitle }}
                             </p>
 
-                            <!-- Search -->
-                            <div class="relative mb-5">
-                                <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A8A8A4] pointer-events-none"
+                            <!-- Search desktop -->
+                            <div class="relative mb-4 hidden sm:block">
+                                <svg class="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#A8A8A4] pointer-events-none"
                                     fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
                                 <input v-model="bahasaSearch" type="text"
-                                    placeholder="Cari bahasa... mis. Jepan, Arab, Jerman"
-                                    class="w-full border border-[#D9DAD8] rounded-lg pl-9 pr-3 py-2.5 text-[13px] text-[#3D3D3A] placeholder-[#A8A8A4] focus:outline-none focus:border-[#9e1f16]/40 transition-colors bg-white" />
+                                    placeholder="Cari bahasa... mis. Jepang, Arab, Jerman"
+                                    class="w-full border border-[#D9DAD8] rounded-lg pl-8 pr-3 py-2 text-[11px] sm:text-[12px] text-[#3D3D3A] placeholder-[#A8A8A4] focus:outline-none focus:border-[#9e1f16]/40 transition-colors bg-white" />
                             </div>
 
-                            <!-- Grid 2 kolom -->
-                            <div v-if="bahasaRows.length" class="border border-[#D9DAD8] rounded-lg overflow-hidden">
-                                <div v-for="(row, ri) in bahasaRows" :key="`brow-${ri}`" class="grid grid-cols-2"
-                                    :class="ri < bahasaRows.length - 1 ? 'border-b border-[#E8E8E6]' : ''">
-                                    <template v-for="(item, ci) in row" :key="`bcell-${ri}-${ci}`">
-                                        <div v-if="item"
-                                            class="flex items-center gap-3 px-4 py-3 hover:bg-[#FAFAF8] transition-colors"
-                                            :class="ci === 0 ? 'border-r border-[#E8E8E6]' : ''">
-                                            <img :src="item.img_flag" :alt="item.name"
-                                                class="w-7 h-[18px] object-cover rounded-[2px] flex-shrink-0 shadow-sm"
-                                                loading="lazy" />
-                                            <span class="text-[13px] text-[#3D3D3A]">{{ item.name }}</span>
+                            <!-- ===== DESKTOP: 2-column table ===== -->
+                            <div class="hidden sm:block">
+                                <div class="border border-[#D9DAD8] rounded-lg overflow-hidden">
+                                    <!-- Header -->
+                                    <div class="grid grid-cols-2 bg-[#F5F5F3]">
+                                        <div
+                                            class="px-4 py-2.5 text-[11px] font-semibold text-[#686964] uppercase tracking-wider border-r border-[#D9DAD8]">
+                                            Bahasa / Wilayah</div>
+                                        <div
+                                            class="px-4 py-2.5 text-[11px] font-semibold text-[#686964] uppercase tracking-wider">
+                                            Bahasa / Wilayah</div>
+                                    </div>
+                                    <!-- Body -->
+                                    <template v-if="bahasaRows.length">
+                                        <div v-for="(row, ri) in bahasaRows" :key="`brow-d-${ri}`"
+                                            class="grid grid-cols-2"
+                                            :class="ri < bahasaRows.length - 1 ? 'border-b border-[#E8E8E6]' : ''">
+                                            <template v-for="(item, ci) in row" :key="`bcell-d-${ri}-${ci}`">
+                                                <div v-if="item"
+                                                    class="flex items-center gap-2.5 px-4 py-2.5 min-w-0 hover:bg-[#FAFAF8] transition-colors"
+                                                    :class="ci === 0 ? 'border-r border-[#E8E8E6]' : ''">
+                                                    <img :src="item.img_flag" :alt="item.negara_title"
+                                                        class="w-6 h-[15px] object-cover rounded-[2px] flex-shrink-0 shadow-sm"
+                                                        loading="lazy" />
+                                                    <span class="text-[12px] leading-[1.4] text-[#3D3D3A] truncate">{{
+                                                        item.negara_title }}</span>
+                                                </div>
+                                                <div v-else class="px-4 py-2.5"
+                                                    :class="ci === 0 ? 'border-r border-[#E8E8E6]' : ''"></div>
+                                            </template>
                                         </div>
-                                        <div v-else class="px-4 py-3"
-                                            :class="ci === 0 ? 'border-r border-[#E8E8E6]' : ''"></div>
                                     </template>
+                                    <!-- Empty state -->
+                                    <div v-else class="px-4 py-12 text-center">
+                                        <svg class="mx-auto mb-3 w-10 h-10 text-[#D9DAD8]" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                        </svg>
+                                        <p class="text-[13px] text-[#686964]">Tidak ada bahasa yang cocok dengan "<span
+                                                class="font-semibold text-[#3D3D3A]">{{ bahasaSearch }}</span>"</p>
+                                    </div>
+                                </div>
+
+                                <!-- Pagination Bar Desktop -->
+                                <div class="flex items-center justify-between mt-4 min-w-0 gap-3">
+                                    <span class="text-[11px] sm:text-[12px] text-[#686964] flex-shrink-0 tabular-nums">
+                                        {{ bahasaDisplayCount }} Row
+                                    </span>
+                                    <div class="flex items-center gap-1.5 flex-shrink-0">
+                                        <button @click="bahasaPage = Math.max(1, bahasaPage - 1)"
+                                            :disabled="bahasaPage <= 1"
+                                            class="flex items-center justify-center w-7 h-7 rounded border border-[#D9DAD8] bg-white hover:bg-[#F5F5F3] disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-white transition-colors">
+                                            <svg class="w-3.5 h-3.5 text-[#3D3D3A]" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" stroke-width="2.5">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M15 19l-7-7 7-7" />
+                                            </svg>
+                                        </button>
+                                        <span
+                                            class="text-[11px] sm:text-[12px] text-[#3D3D3A] whitespace-nowrap px-1.5 tabular-nums">
+                                            Page {{ bahasaPage }} of {{ totalBahasaPages }}
+                                        </span>
+                                        <button @click="bahasaPage = Math.min(totalBahasaPages, bahasaPage + 1)"
+                                            :disabled="bahasaPage >= totalBahasaPages"
+                                            class="flex items-center justify-center w-7 h-7 rounded border border-[#D9DAD8] bg-white hover:bg-[#F5F5F3] disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-white transition-colors">
+                                            <svg class="w-3.5 h-3.5 text-[#3D3D3A]" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" stroke-width="2.5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center gap-1.5 flex-shrink-0">
+                                        <span class="text-[11px] sm:text-[12px] text-[#686964] whitespace-nowrap">Rows
+                                            per page</span>
+                                        <select v-model.number="bahasaRowsPerPage"
+                                            class="border border-[#D9DAD8] rounded px-2 py-1 text-[11px] sm:text-[12px] text-[#3D3D3A] bg-white focus:outline-none focus:border-[#9e1f16]/40 cursor-pointer appearance-none pr-5"
+                                            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22%23686694%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z%22 clip-rule=%22evenodd%22 /%3E%3C/svg%3E'); background-position: right 4px center; background-repeat: no-repeat; background-size: 14px;">
+                                            <option :value="5">5</option>
+                                            <option :value="10">10</option>
+                                            <option :value="15">15</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Empty state -->
-                            <div v-else class="border border-[#D9DAD8] rounded-lg px-4 py-10 text-center">
-                                <svg class="mx-auto mb-2 w-8 h-8 text-[#D9DAD8]" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
-                                <p class="text-[13px] text-[#686964]">Bahasa tidak ditemukan</p>
+                            <!-- ===== MOBILE ===== -->
+                            <div class="sm:hidden">
+                                <!-- Search mobile -->
+                                <div class="relative mb-4">
+                                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A8A8A4] pointer-events-none"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                    <input v-model="bahasaSearch" type="text" placeholder="Cari bahasa..."
+                                        class="w-full border border-[#D9DAD8] rounded-lg pl-9 pr-3 py-2.5 text-[13px] text-[#3D3D3A] placeholder-[#A8A8A4] focus:outline-none focus:border-[#9e1f16]/40 transition-colors bg-white" />
+                                </div>
+
+                                <!-- Table mobile -->
+                                <div v-if="bahasaMobileRows.length"
+                                    class="border border-[#D9DAD8] rounded-lg overflow-hidden">
+                                    <div
+                                        class="bg-[#F5F5F3] px-3 py-2 text-[10px] font-semibold text-[#686964] uppercase tracking-wider border-b border-[#D9DAD8]">
+                                        Bahasa / Wilayah
+                                    </div>
+                                    <div v-for="(item, i) in bahasaMobileRows" :key="`bm-${i}`"
+                                        class="flex items-center gap-2.5 px-3 py-2.5"
+                                        :class="i < bahasaMobileRows.length - 1 ? 'border-b border-[#E8E8E6]' : ''">
+                                        <img :src="item.img_flag" :alt="item.name"
+                                            class="w-5 h-[13px] object-cover rounded-[2px] flex-shrink-0 shadow-sm"
+                                            loading="lazy" />
+                                        <span class="text-[12px] text-[#3D3D3A]">{{ item.name }}</span>
+                                    </div>
+                                </div>
+                                <!-- Empty state mobile -->
+                                <div v-else class="border border-[#D9DAD8] rounded-lg px-4 py-10 text-center">
+                                    <svg class="mx-auto mb-2 w-8 h-8 text-[#D9DAD8]" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                    <p class="text-[12px] text-[#686964]">Tidak ada bahasa ditemukan</p>
+                                </div>
+
+                                <!-- Pagination mobile -->
+                                <div class="flex items-center justify-between mt-3 min-w-0 gap-2">
+                                    <span class="text-[10px] text-[#686964] flex-shrink-0 tabular-nums">
+                                        {{ bahasaDisplayCount }} Bahasa
+                                    </span>
+                                    <div class="flex items-center gap-1.5 flex-shrink-0">
+                                        <button @click="bahasaPage = Math.max(1, bahasaPage - 1)"
+                                            :disabled="bahasaPage <= 1"
+                                            class="flex items-center justify-center w-6 h-6 rounded border border-[#D9DAD8] bg-white disabled:opacity-30 disabled:cursor-not-allowed">
+                                            <svg class="w-3 h-3 text-[#3D3D3A]" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" stroke-width="2.5">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M15 19l-7-7 7-7" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-[10px] text-[#3D3D3A] tabular-nums">{{ bahasaPage }}/{{
+                                            totalBahasaPages }}</span>
+                                        <button @click="bahasaPage = Math.min(totalBahasaPages, bahasaPage + 1)"
+                                            :disabled="bahasaPage >= totalBahasaPages"
+                                            class="flex items-center justify-center w-6 h-6 rounded border border-[#D9DAD8] bg-white disabled:opacity-30 disabled:cursor-not-allowed">
+                                            <svg class="w-3 h-3 text-[#3D3D3A]" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" stroke-width="2.5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center gap-1 flex-shrink-0">
+                                        <span class="text-[10px] text-[#686964]">Per hal.</span>
+                                        <select v-model.number="bahasaRowsPerPage"
+                                            class="border border-[#D9DAD8] rounded px-1.5 py-1 text-[10px] text-[#3D3D3A] bg-white focus:outline-none appearance-none pr-3"
+                                            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22%23686694%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z%22 clip-rule=%22evenodd%22 /%3E%3C/svg%3E'); background-position: right 2px center; background-repeat: no-repeat; background-size: 10px;">
+                                            <option :value="5">5</option>
+                                            <option :value="10">10</option>
+                                            <option :value="15">15</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -218,42 +375,33 @@ const keunggulan = computed(() => props.product?.keunggulan ?? null);
                             </div>
                         </div>
 
-                        <!-- 4. Banner Harga -->
-                        <div v-if="product" class="rounded-2xl overflow-hidden relative"
-                            style="background-color: #9e1f16; background-image: url('/images/card-arrow-bg.png'); background-size: cover; background-position: center right; background-repeat: no-repeat;">
-                            <div class="flex items-center justify-between px-5 py-4 sm:px-6 sm:py-5 gap-4">
-                                <!-- Kiri: Icon + Teks -->
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white/15 flex items-center justify-center">
-                                        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor" stroke-width="1.5">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                                        </svg>
+                        <!-- 4. Banner CTA Merah -->
+                        <div v-if="bannerCta"
+                            class="rounded-xl px-4 py-4 sm:px-5 sm:py-5 flex flex-col sm:flex-row sm:flex-nowrap items-stretch sm:items-center justify-between gap-3 sm:gap-4"
+                            style="background-image: url('/images/card-arrow-item-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                            <div class="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
+                                <span
+                                    class="flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white">
+                                    <img src="/icons/ft-persons.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
+                                </span>
+                                <div class="min-w-0">
+                                    <div class="text-[11px] sm:text-[12px] text-white/80 break-words">
+                                        {{ product.name }}
                                     </div>
-                                    <div class="flex flex-col min-w-0">
-                                        <span
-                                            class="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white/80 truncate">
-                                            {{ product.name }}
-                                        </span>
-                                        <span class="text-[22px] sm:text-[28px] font-bold text-white leading-tight">
-                                            Hanya {{ product.price_label }}
-                                        </span>
+                                    <div
+                                        class="text-[12px] sm:text-[15px] font-bold text-white leading-tight break-words">
+                                        {{ bannerCta.text }}
                                     </div>
                                 </div>
-
-                                <!-- Kanan: Tombol -->
-                                <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
-                                    class="flex-shrink-0 inline-flex items-center gap-2 rounded-xl bg-white px-4 sm:px-5 py-2.5 sm:py-3 text-[12px] sm:text-[13px] font-semibold text-[#9e1f16] hover:bg-white/90 transition-colors whitespace-nowrap">
-                                    Hubungi Kami
-                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                        stroke-width="2.5">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>
-                                </a>
                             </div>
+                            <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
+                                class="flex-shrink-0 flex items-center justify-center gap-1.5 rounded-lg bg-white px-3 py-2 sm:px-4 sm:py-2.5 text-[11px] sm:text-[13px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors">
+                                Hubungi Kami
+                                <svg class="h-3 w-3 sm:h-3.5 sm:w-3.5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
                         </div>
 
                     </div>
