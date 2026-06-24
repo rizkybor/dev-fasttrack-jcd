@@ -194,8 +194,8 @@ const serviceCategories = [
                 description:
                     "Jasa penerjemah dokumen hukum dan bisnis tersumpah.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                packages: "1 Layanan",
+                path: "/penerjemah/1",
                 image: "/images/dummy-card.png",
             },
             {
@@ -212,8 +212,8 @@ const serviceCategories = [
                 description:
                     "Legal due diligence menyeluruh untuk transaksi dan investasi.",
                 price: "Rp 750.000",
-                packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                packages: "1 Layanan",
+                path: "/uji-tuntas-hukum/1",
                 image: "/images/dummy-card.png",
             },
         ],
