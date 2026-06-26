@@ -94,7 +94,7 @@ export function useServiceCategories() {
                 title: "PERIZINAN BERUSAHA",
                 path: "/",
                 items: [
-                     {
+                    {
                         title: "Kesesuaian Kegiatan Pemanfaatan Ruang",
                         description:
                             "Perizinan dasar sebagai syarat awal operasional usaha, mencakup kesesuaian tata ruang, lingkungan, dan bangunan.",
@@ -103,7 +103,7 @@ export function useServiceCategories() {
                         path: "/",
                         icon: "/icons/ic-card-4.svg",
                     },
-{
+                    {
                         title: "Perizinan Berusaha (Sertifikat Standar/Izin)",
                         description:
                             "Pengurusan sertifikat standar atau izin berusaha sesuai tingkat risiko kegiatan usaha melalui sistem OSS.",
@@ -153,7 +153,7 @@ export function useServiceCategories() {
                         packages: "4 Paket",
                         path: "/",
                         icon: "/icons/ic-card-4.svg",
-                    }
+                    },
                 ],
             },
             {
@@ -237,13 +237,47 @@ export function useServiceCategories() {
                         packages: "8 Paket",
                         path: "/",
                         icon: "/icons/ic-card-4.svg",
-                    }
+                    },
                 ],
             },
             {
                 title: "VISA MANCANEGARA",
                 path: "/",
-                items: [],
+                items: [
+                    {
+                        title: "China",
+                        description:
+                            "Pengurusan pengukuhan PKP bagi perusahaan yang wajib memungut dan melaporkan PPN.",
+                        price: "Rp 1.750.000",
+                        packages: "2 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "United Stated of America",
+                        description: "coming soon",
+                        price: "Rp 1.750.000",
+                        packages: "1 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Uni Emirate Arab",
+                        description: "coming soon",
+                        price: "Rp 1.750.000",
+                        packages: "1 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Australia",
+                        description: "coming soon",
+                        price: "Rp 1.750.000",
+                        packages: "1 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                ],
             },
             {
                 title: "KEIMIGRASIAN & NATURALISASI",
@@ -284,7 +318,7 @@ export function useServiceCategories() {
                         packages: "2 Paket",
                         path: "/",
                         icon: "/icons/ic-card-4.svg",
-                    }
+                    },
                 ],
             },
         ],
