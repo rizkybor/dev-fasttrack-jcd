@@ -22,7 +22,7 @@ export default {
         pesan: 'Order Now',
     },
     sidebar: {
-        vip_title: 'FASTRACK – VIP LINE',
+        vip_title: 'FASTTRACK – VIP LINE',
         vip_desc: 'Business Entity Establishment Completed in 1 (One) Day',
         vip_cta: 'Order Service Now',
         vip_note: '* (T&C APPLY)',

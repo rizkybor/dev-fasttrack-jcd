@@ -2056,7 +2056,7 @@ const toggleDoc = (key) => {
                                     <span
                                         class="text-[14px] font-extrabold uppercase tracking-widest text-white"
                                     >
-                                        FASTRACK – VIP LINE
+                                        FASTTRACK – VIP LINE
                                     </span>
                                 </div>
                             </div>

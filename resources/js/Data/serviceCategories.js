@@ -51,22 +51,110 @@ export function useServiceCategories() {
             {
                 title: "OSS & NOMOR INDUK BERUSAHA (NIB)",
                 path: "/perizinan-usaha",
-                items: [],
-            },
-            {
-                title: "NOTARIS VIRTUAL – AKTA PERUSAHAAN DAN PERORANGAN",
-                path: "/",
-                items: [],
+                items: [
+                    {
+                        title: "NIB - PERORANGAN",
+                        description:
+                            "Pengurusan NIB resmi untuk pelaku usaha perseorangan melalui sistem OSS.",
+                        price: "Rp 750.000",
+                        packages: "3 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "NIB - PT - UMK",
+                        description:
+                            "Pengurusan NIB untuk Perseroan Terbatas berkategori Usaha Mikro dan Kecil.",
+                        price: "Rp 750.000",
+                        packages: "3 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "NIB - PT - NON UMK",
+                        description:
+                            "Pengurusan NIB untuk PT skala menengah, besar, PMDN, maupun PMA.",
+                        price: "Rp 750.000",
+                        packages: "3 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "NIB - CV",
+                        description:
+                            "Pengurusan NIB resmi untuk badan usaha berbentuk Commanditaire Vennootschap (CV).",
+                        price: "Rp 750.000",
+                        packages: "3 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                ],
             },
             {
                 title: "PERIZINAN BERUSAHA",
                 path: "/",
-                items: [],
+                items: [
+                     {
+                        title: "Kesesuaian Kegiatan Pemanfaatan Ruang",
+                        description:
+                            "Perizinan dasar sebagai syarat awal operasional usaha, mencakup kesesuaian tata ruang, lingkungan, dan bangunan.",
+                        price: "Hubungi Kami",
+                        packages: "3 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+{
+                        title: "Perizinan Berusaha (Sertifikat Standar/Izin)",
+                        description:
+                            "Pengurusan sertifikat standar atau izin berusaha sesuai tingkat risiko kegiatan usaha melalui sistem OSS.",
+                        price: "Hubungi Kami",
+                        packages: "11 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU)",
+                        description:
+                            "Pengurusan izin tambahan yang dibutuhkan untuk menunjang kegiatan usaha utama sesuai regulasi yang berlaku.",
+                        price: "Rp. 2.000.000",
+                        packages: "3 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                ],
             },
             {
-                title: "NOTARIS - AKTA PERUSAHAAN/PERORANGAN",
+                title: "NOTARIS VIRTUAL – AKTA PERUSAHAAN DAN PERORANGAN",
                 path: "/",
-                items: [],
+                items: [
+                    {
+                        title: "Akta Notaris – PT (Perseroan Terbatas)",
+                        description:
+                            "Pengurusan akta perubahan anggaran dasar, pengurus, saham, dan RUPS Tahunan PT secara resmi.",
+                        price: "Rp 3.000.000",
+                        packages: "3 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Akta Lainnya",
+                        description:
+                            "Penerbitan akta cabang, akuisisi, kuasa, jual beli saham, hingga perjanjian pranikah dan pisah harta.Perubahan Anggaran Dasar Perseroan Pasal 1-4",
+                        price: "Rp 750.000",
+                        packages: "7 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Layanan Notaris Lainnya",
+                        description:
+                            "Pengesahan dokumen melalui waarmerking, legalisir, legalisasi, dan penerbitan profil perseroan dari AHU.",
+                        price: "Rp 250.000",
+                        packages: "4 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    }
+                ],
             },
             {
                 title: "IZIN TINGGAL ATAU KERJA WARGA NEGARA ASING",
@@ -113,7 +201,44 @@ export function useServiceCategories() {
             {
                 title: "VISA KE INDONESIA",
                 path: "/",
-                items: [],
+                items: [
+                    {
+                        title: "Visa Kunjungan Satu Kali Perjalanan",
+                        description:
+                            "Visa untuk kunjungan wisata, bisnis, atau keperluan lain dengan satu kali masuk ke Indonesia.",
+                        price: "Rp 3.000.000",
+                        packages: "11 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Visa Kunjungan Beberapa Kali Perjalanan",
+                        description:
+                            "Visa untuk kunjungan berulang ke Indonesia dalam periode tertentu tanpa pengajuan ulang setiap kedatangan.",
+                        price: "Rp 3.500.000",
+                        packages: "4 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Visa Kerja",
+                        description:
+                            "Visa bagi tenaga kerja asing yang akan bekerja secara resmi di perusahaan atau proyek di Indonesia.",
+                        price: "Rp 3.500.000",
+                        packages: "18 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Visa Investor",
+                        description:
+                            "Visa bagi investor asing yang menanamkan modal atau mendirikan usaha di Indonesia.",
+                        price: "Rp 3.000.000",
+                        packages: "8 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    }
+                ],
             },
             {
                 title: "VISA MANCANEGARA",
@@ -123,7 +248,44 @@ export function useServiceCategories() {
             {
                 title: "KEIMIGRASIAN & NATURALISASI",
                 path: "/",
-                items: [],
+                items: [
+                    {
+                        title: "E-Paspor Republik Indonesia",
+                        description:
+                            "Pengurusan penerbitan e-paspor bagi Warga Negara Indonesia untuk keperluan perjalanan internasional secara resmi.",
+                        price: "Rp 3.150.000",
+                        packages: "2 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Mutasi Alamat",
+                        description:
+                            "Pengurusan pengukuhan PKP bagi perusahaan yang wajib memungut dan melaporkan PPN.",
+                        price: "Rp 1.750.000",
+                        packages: "2 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Mutasi Paspor Pemegang ITAS",
+                        description:
+                            "Pengurusan pemindahan data paspor baru pemegang ITAS sesuai ketentuan keimigrasian yang berlaku.",
+                        price: "Rp 1.750.000",
+                        packages: "1 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Exit Permit Only (EPO)",
+                        description:
+                            "Pengurusan izin keluar permanen bagi tenaga kerja asing maupun keluarga yang akan meninggalkan Indonesia dan tidak kembali.",
+                        price: "Rp 3.000.000",
+                        packages: "2 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    }
+                ],
             },
         ],
         en: [

@@ -15,7 +15,7 @@ export default {
         satisfaction: { value: '99.9%', label: 'Client Satisfaction' },
     },
     vip: {
-        title: 'FASTRACK - VIP LINE',
+        title: 'FASTTRACK - VIP LINE',
         subtitle: 'Business Entity COMPLETED IN 1 DAY',
         disclaimer: '* (T&C APPLY)',
         cta: 'Consult Now',
@@ -38,8 +38,8 @@ export default {
     },
     about: {
         title: 'About Us',
-        desc1: 'Fastrack.legal is a company that has been established since 2001 operating in the field of business licensing services including Investment & Business Legal Consultation, Company Establishment, Company Licensing, Amendment/Expansion/Restructuring, IPR Registration, Virtual Office, Corporate Secretary & Business Support Services, Legal Due Diligence, Foreign Worker Work & Stay Permits, Visa, Senior Visa, Naturalization, Marriage Agreement, Marriage Registration, Financial Report & Tax Report Preparation based on applicable laws.',
-        desc2: 'Has helped more than 13,000 clients with our various services. Fastrack.legal strives and is committed to becoming the main gateway for anyone who wants to start a business and needs licensing and legal services in Indonesia.',
+        desc1: 'Fasttrack.legal is a company that has been established since 2001 operating in the field of business licensing services including Investment & Business Legal Consultation, Company Establishment, Company Licensing, Amendment/Expansion/Restructuring, IPR Registration, Virtual Office, Corporate Secretary & Business Support Services, Legal Due Diligence, Foreign Worker Work & Stay Permits, Visa, Senior Visa, Naturalization, Marriage Agreement, Marriage Registration, Financial Report & Tax Report Preparation based on applicable laws.',
+        desc2: 'Has helped more than 13,000 clients with our various services. Fasttrack.legal strives and is committed to becoming the main gateway for anyone who wants to start a business and needs licensing and legal services in Indonesia.',
         stats: {
             experience: { value: '20+', label: 'Years of Experience' },
             offices: { value: '10+', label: 'Virtual Offices' },
