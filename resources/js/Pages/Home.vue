@@ -50,10 +50,10 @@ const marqueeRows = [
             { src: "/images/klien-kami/ft-kk-9-iss.svg", alt: "ISS" },
             { src: "/images/klien-kami/ft-kk-10-giift.svg", alt: "Giift" },
             { src: "/images/klien-kami/ft-kk-11-xanhsm.svg", alt: "Xan HSM" },
-            {
-                src: "/images/klien-kami/ft-kk-12-awantunai.svg",
-                alt: "Awantunai",
-            },
+            // {
+            //     src: "/images/klien-kami/ft-kk-12-awantunai.svg",
+            //     alt: "Awantunai",
+            // },
             {
                 src: "/images/klien-kami/ft-kk-13-issfacilityservices.svg",
                 alt: "ISS Facility Services",
@@ -80,10 +80,10 @@ const marqueeRows = [
             { src: "/images/klien-kami/ft-kk-24-amdocs.svg", alt: "Amdocs" },
             { src: "/images/klien-kami/ft-kk-25-kargo.svg", alt: "Kargo" },
             { src: "/images/klien-kami/ft-kk-26-assegaf.svg", alt: "Assegaf" },
-            {
-                src: "/images/klien-kami/ft-kk-27-asiafoundation.svg",
-                alt: "Asia Foundation",
-            },
+            // {
+            //     src: "/images/klien-kami/ft-kk-27-asiafoundation.svg",
+            //     alt: "Asia Foundation",
+            // },
             { src: "/images/klien-kami/ft-kk-28-apx.svg", alt: "APX" },
         ],
     },
@@ -100,10 +100,10 @@ const marqueeRows = [
                 src: "/images/klien-kami/ft-kk-34-australianembassy.svg",
                 alt: "Australian Embassy",
             },
-            {
-                src: "/images/klien-kami/ft-kk-35-yayasankemahpeduli.svg",
-                alt: "Yayasan Kemah Peduli",
-            },
+            // {
+            //     src: "/images/klien-kami/ft-kk-35-yayasankemahpeduli.svg",
+            //     alt: "Yayasan Kemah Peduli",
+            // },
             { src: "/images/klien-kami/ft-kk-36-hivos.svg", alt: "Hivos" },
             { src: "/images/klien-kami/ft-kk-37-borneo.svg", alt: "Borneo" },
             { src: "/images/klien-kami/ft-kk-38-aspire.svg", alt: "Aspire" },
@@ -114,7 +114,7 @@ const marqueeRows = [
             { src: "/images/klien-kami/ft-kk-43-grab.svg", alt: "Grab" },
             { src: "/images/klien-kami/ft-kk-44-jhonson.svg", alt: "Jhonson" },
             { src: "/images/klien-kami/ft-kk-45-giift.svg", alt: "Giift" },
-            { src: "/images/klien-kami/ft-kk-46-hangry.svg", alt: "Hangry" },
+            // { src: "/images/klien-kami/ft-kk-46-hangry.svg", alt: "Hangry" },
             {
                 src: "/images/klien-kami/ft-kk-47-tokopedia.svg",
                 alt: "Tokopedia",
@@ -124,10 +124,10 @@ const marqueeRows = [
                 src: "/images/klien-kami/ft-kk-49-saladstop.svg",
                 alt: "Saladstop",
             },
-            {
-                src: "/images/klien-kami/ft-kk-50-yakiniku.svg",
-                alt: "Yakiniku",
-            },
+            // {
+            //     src: "/images/klien-kami/ft-kk-50-yakiniku.svg",
+            //     alt: "Yakiniku",
+            // },
             { src: "/images/klien-kami/ft-kk-51-aidenv.svg", alt: "Aidenv" },
             { src: "/images/klien-kami/ft-kk-52-falcon.svg", alt: "Falcon" },
             { src: "/images/klien-kami/ft-kk-53-kalbe.svg", alt: "Kalbe" },
@@ -142,7 +142,7 @@ const marqueeRows = [
         id: 3,
         reverse: false,
         logos: [
-            { src: "/images/klien-kami/ft-kk-59-sem.svg", alt: "Sem" },
+            // { src: "/images/klien-kami/ft-kk-59-sem.svg", alt: "Sem" },
             { src: "/images/klien-kami/ft-kk-60-loreal.svg", alt: "Loreal" },
             { src: "/images/klien-kami/ft-kk-61-unox.svg", alt: "Unox" },
             {
@@ -164,11 +164,11 @@ const marqueeRows = [
                 src: "/images/klien-kami/ft-kk-68-astraland.svg",
                 alt: "Astraland",
             },
-            { src: "/images/klien-kami/ft-kk-69-arabica.svg", alt: "Arabica" },
-            {
-                src: "/images/klien-kami/ft-kk-70-dompet-aman.svg",
-                alt: "Dompet Aman",
-            },
+            // { src: "/images/klien-kami/ft-kk-69-arabica.svg", alt: "Arabica" },
+            // {
+            //     src: "/images/klien-kami/ft-kk-70-dompet-aman.svg",
+            //     alt: "Dompet Aman",
+            // },
             { src: "/images/klien-kami/ft-kk-71-tiket.svg", alt: "Tiket" },
             { src: "/images/klien-kami/ft-kk-72-aladin.svg", alt: "Aladin" },
             { src: "/images/klien-kami/ft-kk-73-dior.svg", alt: "Dior" },

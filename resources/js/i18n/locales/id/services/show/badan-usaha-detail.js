@@ -22,7 +22,7 @@ export default {
         pesan: 'Pesan Sekarang',
     },
     sidebar: {
-        vip_title: 'FASTRACK – VIP LINE',
+        vip_title: 'FASTTRACK – VIP LINE',
         vip_desc: 'Pendirian Badan Usaha Selesai dalam 1 (Satu) Hari',
         vip_cta: 'Pesan Layanan Sekarang',
         vip_note: '* (S&K BERLAKU)',

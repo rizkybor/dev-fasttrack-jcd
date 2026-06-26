@@ -225,7 +225,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                 href="/kerja-sama"
     class="inline-flex items-center gap-1 h-8 group"
 >
-    <span class="text-[14px] font-bold leading-[21px] text-[#FEFEFE] transition-colors group-hover:text-[#FFB347]">
+    <span class="text-[18px] font-bold leading-[21px] text-[#FEFEFE] transition-colors group-hover:text-[#FFB347]">
         {{ t("common.nav.cooperation") }}
     </span>
     <span class="text-[18px] leading-none transition-transform group-hover:scale-125">🔥</span>
@@ -283,7 +283,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     <img
                         src="/icons/logo-fasttrack.svg"
                         alt="FastTrack Logo"
-                        class="h-10 w-auto object-contain"
+                        class="h-13 w-auto object-contain"
                     />
                 </a>
 
@@ -512,7 +512,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     <!-- CTA Button -->
                     <a
                         href="/kontak"
-                        class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-[16px] px-6 py-3 rounded-lg transition-colors shadow-sm whitespace-nowrap"
+                        class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-[16px] px-4 py-2 rounded-lg transition-colors shadow-sm whitespace-nowrap"
                     >
                         {{ t("common.nav.cta") }}
                         <svg

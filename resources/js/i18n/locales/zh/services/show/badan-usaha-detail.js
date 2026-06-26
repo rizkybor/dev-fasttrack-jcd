@@ -22,7 +22,7 @@ export default {
         pesan: '立即订购',
     },
     sidebar: {
-        vip_title: 'FASTRACK – VIP 通道',
+        vip_title: 'FASTTRACK – VIP 通道',
         vip_desc: '商业实体设立在 1（一）个工作日内完成',
         vip_cta: '立即订购服务',
         vip_note: '*（适用条款与条件）',

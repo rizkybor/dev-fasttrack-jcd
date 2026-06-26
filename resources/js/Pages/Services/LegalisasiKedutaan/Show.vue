@@ -703,7 +703,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
                                     <span
                                         class="text-[13px] sm:text-[14px] font-extrabold uppercase tracking-widest text-white">
-                                        FASTRACK – VIP LINE
+                                        FASTTRACK – VIP LINE
                                     </span>
                                 </div>
                             </div>

@@ -23,7 +23,7 @@ export default {
         zh: '中文',
     },
     footer: {
-        copyright: '© Copyright 2026 fastrack.legal – All Rights Reserved a Business of PT Jakarta Bisnis Servis',
+        copyright: '© Copyright 2026 fasttrack.legal – All Rights Reserved a Business of PT Jakarta Bisnis Servis',
         nav: {
             title: 'Navigation:',
             home: 'Home',
@@ -59,7 +59,7 @@ export default {
                 address: 'Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, East Java 61256',
             },
         },
-        popularLinks: 'Popular Links : PT PMA and KITAS Package , PMA Company Registration Indonesia for Foreigner , Indonesia Investor Visa /KITAS , Indonesia Work Visa / KITAS , Indonesia Business Visa , Indonesia Tourist Visa , Register and Set Up PT Company Indonesia , Representative Office in Indonesia (KPPA) , Virtual Office, Trademark Registration, Copyright, Patent, Podcast Studio Jakarta, Office Rental.',
+        popularLinks: 'Popular Links : Pendirian PT, Jasa Pendirian PT, PT PMA, PT PMDN, PT Perorangan, Pendirian CV, NIB OSS, OSS RBA, Konsultan Perizinan, Perizinan Usaha, KKPR, PBG, SLF, Izin Lingkungan, Akta Notaris, Virtual Office Jakarta, Corporate Secretary, Akuisisi PT, Merger PT, Restrukturisasi Perusahaan, Daftar Merek, Hak Cipta, Apostille, Legalisasi Dokumen, KITAS, Visa Indonesia, Investor Visa, Visa Kerja, Naturalisasi, NPWP, PKP, SPT Badan, Pembukuan, Laporan Keuangan, Konsultan Hukum, Legal Services Indonesia, Fasttrack Legal.',
     },
     button: {
         seeAll: 'See All',

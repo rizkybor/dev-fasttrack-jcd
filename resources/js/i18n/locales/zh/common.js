@@ -24,7 +24,7 @@ export default {
     },
     footer: {
         copyright:
-            "© 版权所有 2026 fastrack.legal – 保留所有权利，PT Jakarta Bisnis Servis 旗下业务",
+            "© 版权所有 2026 fasttrack.legal – 保留所有权利，PT Jakarta Bisnis Servis 旗下业务",
         nav: {
             title: "导航：",
             home: "首页",
@@ -64,8 +64,7 @@ export default {
                     "Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, 东爪哇 61256",
             },
         },
-        popularLinks:
-            "热门链接：PT PMA 和 KITAS 套餐，外国人印尼 PMA 公司注册，印尼投资者签证/KITAS，印尼工作签证/KITAS，印尼商务签证，印尼旅游签证，印尼PT公司注册与设立，印尼代表处（KPPA），虚拟办公室，商标注册，版权，专利，雅加达播客工作室，办公室租赁。",
+        popularLinks: 'Popular Links : Pendirian PT, Jasa Pendirian PT, PT PMA, PT PMDN, PT Perorangan, Pendirian CV, NIB OSS, OSS RBA, Konsultan Perizinan, Perizinan Usaha, KKPR, PBG, SLF, Izin Lingkungan, Akta Notaris, Virtual Office Jakarta, Corporate Secretary, Akuisisi PT, Merger PT, Restrukturisasi Perusahaan, Daftar Merek, Hak Cipta, Apostille, Legalisasi Dokumen, KITAS, Visa Indonesia, Investor Visa, Visa Kerja, Naturalisasi, NPWP, PKP, SPT Badan, Pembukuan, Laporan Keuangan, Konsultan Hukum, Legal Services Indonesia, Fasttrack Legal.',
     },
     button: {
         seeAll: "查看全部",

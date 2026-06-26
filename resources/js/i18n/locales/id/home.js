@@ -15,7 +15,7 @@ export default {
         satisfaction: { value: '99.9%', label: 'Kepuasan Klien' },
     },
     vip: {
-        title: 'FASTRACK - VIP LINE',
+        title: 'FASTTRACK - VIP LINE',
         subtitle: 'Badan Usaha SELESAI DALAM 1 HARI',
         disclaimer: '* (S&K BERLAKU)',
         cta: 'Konsultasi Sekarang',
@@ -38,8 +38,8 @@ export default {
     },
     about: {
         title: 'Tentang Kami',
-        desc1: 'Fastrack.legal adalah perusahaan yang telah berdiri sejak 2001 yang bergerak di bidang layanan jasa perizinan usaha tidak terbatas antara lain Konsultasi Hukum Investasi & Bisnis, Pendirian Perusahaan, Perizinan Perusahaan, Perubahan/Perluasan/Restrukturisasi, Pendaftaran HKI, Virtual Office, Sekretaris Perusahaan & Layanan Dukungan Bisnis, Uji Tuntas Hukum, Izin Kerja & Tinggal Tenaga Kerja Asing, Visa, Visa Lansia, Naturalisasi (Alih Kewarganegaraan), Perjanjian Kawin, Pendaftaran Perkawinan, Penyusunan Laporan Keuangan & Laporan Perpajakan yang didasarkan dan mengacu pada undang-undang yang ditetapkan.',
-        desc2: 'Telah membantu lebih dari 13.000 klien dengan berbagai layanan kami. Fastrack.legal berupaya dan bertekad untuk menjadi gerbang utama kepada siapa pun yang ingin memulai bisnis dan membutuhkan layanan jasa perizinan dan hukum di Indonesia.',
+        desc1: 'Fasttrack.legal adalah perusahaan yang telah berdiri sejak 2001 yang bergerak di bidang layanan jasa perizinan usaha tidak terbatas antara lain Konsultasi Hukum Investasi & Bisnis, Pendirian Perusahaan, Perizinan Perusahaan, Perubahan/Perluasan/Restrukturisasi, Pendaftaran HKI, Virtual Office, Sekretaris Perusahaan & Layanan Dukungan Bisnis, Uji Tuntas Hukum, Izin Kerja & Tinggal Tenaga Kerja Asing, Visa, Visa Lansia, Naturalisasi (Alih Kewarganegaraan), Perjanjian Kawin, Pendaftaran Perkawinan, Penyusunan Laporan Keuangan & Laporan Perpajakan yang didasarkan dan mengacu pada undang-undang yang ditetapkan.',
+        desc2: 'Telah membantu lebih dari 13.000 klien dengan berbagai layanan kami. Fasttrack.legal berupaya dan bertekad untuk menjadi gerbang utama kepada siapa pun yang ingin memulai bisnis dan membutuhkan layanan jasa perizinan dan hukum di Indonesia.',
         stats: {
             experience: { value: '20+', label: 'Tahun Pengalaman' },
             offices: { value: '10+', label: 'Virtual Office' },
