@@ -933,7 +933,7 @@ onUnmounted(() => {
                                     <span class="text-[14px] leading-[21px] text-[#F9F9F9]">{{ office.location }}</span>
                                 </div>
                                 <span
-                                    class="inline-flex items-center justify-center self-start rounded-lg bg-[#A8BDED] px-2.5 py-1 text-[12px] leading-[18px] text-[#314777]">
+                                    class="inline-flex items-center justify-center self-start rounded-lg bg-[#9E1F16] px-2.5 py-1 text-[12px] leading-[18px] text-white">
                                     {{ office.kpp }}
                                 </span>
                             </div>
