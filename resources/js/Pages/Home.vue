@@ -7,7 +7,7 @@ import GeneratorNamaModal from "@/Components/ModalGenerateName.vue";
 import CekNamaModal from "@/Components/ModalCheckName.vue";
 import { useServiceCategories } from "@/Data/serviceCategories";
 import { useTools } from "@/Data/tools";
-import { useVirtualOffices } from "@/Data/virtualOffices";
+import { useVirtualOffices } from "@/Data/useVirtualOffices";
 import { waLink } from '@/Composables/useWhatsapp'
 import { usePromoData } from '@/Data/usePromoData'
 
@@ -228,6 +228,10 @@ const { tools } = useTools();
 
 // Data Virtual Offices
 const { virtualOffices } = useVirtualOffices();
+// ─── VO Slider ────────────────────────────────────────────────────────────────
+const voSlides = ref({})
+const getVoSlide = (name) => voSlides.value[name] ?? 0
+let voTimers = []
 
 // ─── Hero Slider ──────────────────────────────────────────────────────────────
 const heroImages = ["/images/hero-banner.png", "/images/hero-banner-2.png"];
@@ -249,11 +253,19 @@ const nextSlide = () => {
 
 onMounted(() => {
     sliderTimer = setInterval(nextSlide, 5000);
+    voTimers = virtualOffices.value.map((office) => {
+        return setInterval(() => {
+            const current = voSlides.value[office.name] ?? 0
+            voSlides.value[office.name] = (current + 1) % office.images.length
+        }, 3000)
+    })
 });
 
 onUnmounted(() => {
     clearInterval(sliderTimer);
+    voTimers.forEach(clearInterval)
 });
+
 </script>
 
 <template>
@@ -276,19 +288,19 @@ onUnmounted(() => {
                             class="inline-flex items-center gap-2 rounded-full border border-[#FEFEFE]/30 bg-white/10 backdrop-blur-sm px-4 py-2 w-max">
                             <span class="text-sm text-[#FEFEFE]">{{
                                 t("home.hero.badge")
-                                }}</span>
+                            }}</span>
                         </div>
                         <div class="flex flex-col gap-4">
                             <h1 class="text-3xl sm:text-4xl lg:text-[38px] font-bold text-[#F9F9F9]">
                                 <span class="block mb-2">{{
                                     t("home.hero.title1")
-                                    }}</span>
+                                }}</span>
                                 <span class="block mb-2">{{
                                     t("home.hero.title2")
-                                    }}</span>
+                                }}</span>
                                 <span class="block">{{
                                     t("home.hero.title3")
-                                    }}</span>
+                                }}</span>
                             </h1>
                             <p class="text-base lg:text-[16px] text-[#F9F9F9]/90 leading-loose">
                                 {{ t("home.hero.subtitle") }}
@@ -504,7 +516,7 @@ onUnmounted(() => {
                                         <span class="text-[12px] leading-[18px] text-[#1A1B18]">{{
                                             t("home.services.from") }}</span>
                                         <span class="text-[24px] font-bold leading-[36px] text-primary">{{ item.price
-                                            }}</span>
+                                        }}</span>
                                     </div>
                                     <span
                                         class="inline-flex items-center border border-[#D9DAD8] rounded bg-[#F9F9F9] px-[7px] py-[3px] text-[12px] leading-[18px] text-[#1A1B18]">{{
@@ -753,7 +765,7 @@ onUnmounted(() => {
                             <div class="flex flex-col gap-3 rounded-b-xl bg-[#FEFEFE] p-4 backdrop-blur-[13px]">
                                 <span class="text-[28px] font-bold leading-[42px] text-primary">{{
                                     t("home.why.satisfaction.value")
-                                }}</span>
+                                    }}</span>
                                 <div class="flex flex-col gap-2">
                                     <h3 class="text-[18px] font-semibold leading-[27px] text-[#282925]">
                                         {{ t("home.why.satisfaction.title") }}
@@ -882,15 +894,31 @@ onUnmounted(() => {
 
                     <div
                         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 self-stretch bg-white/[0.01] rounded-b-2xl backdrop-blur-[13px]">
-                        <a v-for="office in virtualOffices" :key="office.name" href="/virtual-office-jakarta"
-                            class="group flex flex-col justify-between rounded-xl h-[300px] bg-cover bg-center bg-no-repeat backdrop-blur-[10px] overflow-hidden"
-                            :style="{ backgroundImage: `url(${office.image})` }">
-                            <div class="flex flex-col items-end p-4">
-                                <span
-                                    class="inline-flex items-center justify-center rounded-lg bg-[#32DE83] px-3 py-1 text-[12px] font-semibold leading-[18px] text-[#F9F9F9]">{{
-                                        office.status }}</span>
+                        <a v-for="office in virtualOffices" :key="office.name" :href="office.path"
+                            class="group relative flex flex-col justify-between rounded-xl h-[300px] overflow-hidden">
+                            <!-- Slide Images — pure Tailwind transition -->
+                            <img v-for="(img, i) in office.images" :key="img" :src="img" :alt="office.name"
+                                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+                                :class="i === getVoSlide(office.name) ? 'opacity-100' : 'opacity-0'" />
+
+                            <!-- Dots indicator -->
+                            <div class="absolute bottom-[72px] left-1/2 -translate-x-1/2 flex gap-1 z-10">
+                                <span v-for="(_, i) in office.images" :key="i"
+                                    class="w-1.5 h-1.5 rounded-full transition-all duration-300"
+                                    :class="i === getVoSlide(office.name) ? 'bg-white scale-125' : 'bg-white/40'" />
                             </div>
-                            <div class="flex flex-col gap-3 rounded-b-xl bg-white/[0.01] backdrop-blur-[13px] p-4">
+
+                            <!-- Status badge -->
+                            <div class="relative z-10 flex flex-col items-end p-4">
+                                <span
+                                    class="inline-flex items-center justify-center rounded-lg bg-[#32DE83] px-3 py-1 text-[12px] font-semibold leading-[18px] text-[#F9F9F9]">
+                                    {{ office.status }}
+                                </span>
+                            </div>
+
+                            <!-- Info -->
+                            <div
+                                class="relative z-10 flex flex-col gap-3 rounded-b-xl bg-black/30 backdrop-blur-[2px] p-4">
                                 <h3 class="text-[16px] font-bold leading-[24px] text-[#F9F9F9]">
                                     {{ office.name }}
                                 </h3>
@@ -905,12 +933,12 @@ onUnmounted(() => {
                                     <span class="text-[14px] leading-[21px] text-[#F9F9F9]">{{ office.location }}</span>
                                 </div>
                                 <span
-                                    class="inline-flex items-center justify-center self-start rounded-lg bg-[#A8BDED] px-2.5 py-1 text-[12px] leading-[18px] text-[#314777]">{{
-                                        office.kpp }}</span>
+                                    class="inline-flex items-center justify-center self-start rounded-lg bg-[#A8BDED] px-2.5 py-1 text-[12px] leading-[18px] text-[#314777]">
+                                    {{ office.kpp }}
+                                </span>
                             </div>
                         </a>
                     </div>
-
                     <a href="/virtual-office-jakarta"
                         class="inline-flex items-center gap-2 rounded-lg py-3 text-[14px] font-semibold text-white hover:underline">
                         {{ t("home.virtualOffice.seeAll") }}
@@ -1140,7 +1168,7 @@ onUnmounted(() => {
                                     </div>
                                     <span class="text-[12px] text-[#8E8F8B]">{{
                                         t("home.contact.robot")
-                                        }}</span>
+                                    }}</span>
                                 </div>
                                 <div class="ml-auto flex flex-col items-center">
                                     <svg class="w-8 h-8 text-[#4A90D9]" viewBox="0 0 38 38" fill="none">
@@ -1162,7 +1190,7 @@ onUnmounted(() => {
                                     <span class="text-[12px] text-[#1A1B18]">{{ t("home.contact.agree") }}
                                     </span>
                                     <span class="text-[12px] text-[#9e1f16] cursor-pointer">{{ t("home.contact.terms")
-                                        }}</span>
+                                    }}</span>
                                 </label>
                                 <button type="submit"
                                     class="w-full h-[44px] flex items-center justify-center rounded-lg bg-[#9e1f16] hover:bg-red-600 transition-colors">
