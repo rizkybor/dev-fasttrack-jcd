@@ -3,11 +3,11 @@ import { useI18n } from 'vue-i18n'
 
 // Meta yang tidak perlu ditranslasi
 const toolsMeta = [
-    { id: 'cek-nama-pt',     bg: '#D6F8E6', iconColor: '#22C55E', icon: '/icons/ic-tools-sedianamapt.svg', url: null },
-    { id: 'panduan-kbli',    bg: '#FFF6D0', iconColor: '#EAB308', icon: '/icons/ic-tools-panduankbli.svg',  url: '/panduan-kbli' },
-    { id: 'tabel-konversi',  bg: '#A8BDED', iconColor: '#3B82F6', icon: '/icons/ic-tools-tablekonversi.svg', url: '/konversi-kbli' },
-    { id: 'simulasi-akta',   bg: '#FFD4AE', iconColor: '#F97316', icon: '/icons/ic-tools-simulasiakta.svg', url: '/simulasi-akta' },
-    { id: 'generator-nama',  bg: '#CAF6FF', iconColor: '#06B6D4', icon: '/icons/ic-tools-gennama.svg',      url: null },
+    { id: 'cek-nama-pt',     bg: '#9e1f16', iconColor: '#F9F9F9', icon: '/icons/ic-tools-sedianamapt.svg', url: null },
+    { id: 'panduan-kbli',    bg: '#9e1f16', iconColor: '#F9F9F9', icon: '/icons/ic-tools-panduankbli.svg',  url: '/panduan-kbli' },
+    { id: 'tabel-konversi',  bg: '#9e1f16', iconColor: '#F9F9F9', icon: '/icons/ic-tools-tablekonversi.svg', url: '/konversi-kbli' },
+    { id: 'simulasi-akta',   bg: '#9e1f16', iconColor: '#F9F9F9', icon: '/icons/ic-tools-simulasiakta.svg', url: '/simulasi-akta' },
+    { id: 'generator-nama',  bg: '#9e1f16', iconColor: '#F9F9F9', icon: '/icons/ic-tools-gennama.svg',      url: null },
 ]
 
 const data = {
