@@ -195,6 +195,11 @@ $customServices = [
     ['component' => 'Services/KekayaanIntelektual/Index', 'title' => 'Kekayaan Intelektual', 'path' => '/kekayaan-intelektual', 'description' => 'Layanan pendaftaran dan perlindungan kekayaan intelektual termasuk merek, paten, dan hak cipta.'],
     ['component' => 'Services/Penerjemah/Show', 'title' => 'Penerjemah', 'path' => '/penerjemah', 'description' => 'Layanan penerjemahan dan legalisasi dokumen yang dirancang untuk memenuhi kebutuhan individu maupun perusahaan di tingkat global.'],
     ['component' => 'Services/UjiTuntasHukum/Show', 'title' => 'Uji Tuntas Hukum', 'path' => '/uji-tuntas-hukum', 'description' => 'Mengidentifikasi Risiko, Memastikan Kepatuhan, dan Melindungi Investasi Anda dalam setiap transaksi bisnis, investasi, akuisisi, kerja sama strategis, maupun restrukturisasi perusahaan, memahami kondisi hukum suatu Perseroan Terbatas merupakan langkah yang sangat penting.'],
+    ['component' => 'Services/PerizinanLainnya/Index', 'title' => 'Perizinan Lainnya', 'path' => '/perizinan-lainnya', 'description' => 'Layanan pengurusan perizinan usaha lainnya yang dibutuhkan untuk mendukung operasional bisnis Anda di Indonesia.'],
+    ['component' => 'Services/NotarisVirtualDanAkta/Index', 'title' => 'Notaris Virtual & Akta', 'path' => '/notaris-virtual-dan-akta', 'description' => 'Layanan notaris virtual dan pembuatan akta untuk kebutuhan legalitas perusahaan Anda secara efisien.'],
+    ['component' => 'Services/RestrukturisasiPerseroanTerbatas/Index', 'title' => 'Restrukturisasi Perseroan Terbatas', 'path' => '/restrukturisasi-perseroan-terbatas', 'description' => 'Layanan restrukturisasi perseroan terbatas untuk mendukung transformasi dan pengembangan bisnis Anda.'],
+    ['component' => 'Services/PenutupanBadanUsaha/Index', 'title' => 'Penutupan Badan Usaha', 'path' => '/penutupan-badan-usaha', 'description' => 'Layanan pengurusan penutupan badan usaha secara legal dan sesuai regulasi yang berlaku di Indonesia.'],
+    ['component' => 'Services/KeimigrasianWniWna/Index', 'title' => 'Keimigrasian WNI & WNA', 'path' => '/keimigrasian-wni-wna', 'description' => 'Layanan keimigrasian untuk WNI dan WNA termasuk pengurusan visa, izin tinggal, dan dokumen keimigrasian lainnya.'],
 ];
 
 // BADAN USAHA 
@@ -440,6 +445,81 @@ $ujiTuntasHukumProducts = collect($ujiTuntasHukumProducts)
     })
     ->all();
 
+// PERIZINAN LAINNYA
+$perizinanLainnyaProducts = (static function (): array {
+    $path = public_path('data/foundingProductsPerizinanLainnya.json');
+    if (! file_exists($path)) return [];
+    $decoded = json_decode(file_get_contents($path), true);
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$perizinanLainnyaProducts = collect($perizinanLainnyaProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = '/perizinan-lainnya/' . $product['id'];
+        return $product;
+    })
+    ->all();
+
+// NOTARIS VIRTUAL DAN AKTA
+$notarisVirtualDanAktaProducts = (static function (): array {
+    $path = public_path('data/foundingProductsNotarisVirtualDanAkta.json');
+    if (! file_exists($path)) return [];
+    $decoded = json_decode(file_get_contents($path), true);
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$notarisVirtualDanAktaProducts = collect($notarisVirtualDanAktaProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = '/notaris-virtual-dan-akta/' . $product['id'];
+        return $product;
+    })
+    ->all();
+
+// RESTRUKTURISASI PERSEROAN TERBATAS
+$restrukturisasiPerseroanTerbatasProducts = (static function (): array {
+    $path = public_path('data/foundingProductsRestrukturisasiPerseroanTerbatas.json');
+    if (! file_exists($path)) return [];
+    $decoded = json_decode(file_get_contents($path), true);
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$restrukturisasiPerseroanTerbatasProducts = collect($restrukturisasiPerseroanTerbatasProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = '/restrukturisasi-perseroan-terbatas/' . $product['id'];
+        return $product;
+    })
+    ->all();
+
+// PENUTUPAN BADAN USAHA
+$penutupanBadanUsahaProducts = (static function (): array {
+    $path = public_path('data/foundingProductsPenutupanBadanUsaha.json');
+    if (! file_exists($path)) return [];
+    $decoded = json_decode(file_get_contents($path), true);
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$penutupanBadanUsahaProducts = collect($penutupanBadanUsahaProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = '/penutupan-badan-usaha/' . $product['id'];
+        return $product;
+    })
+    ->all();
+
+// KEIMIGRASIAN WNI WNA
+$keimigrasianWniWnaProducts = (static function (): array {
+    $path = public_path('data/foundingProductsKeimigrasianWniWna.json');
+    if (! file_exists($path)) return [];
+    $decoded = json_decode(file_get_contents($path), true);
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$keimigrasianWniWnaProducts = collect($keimigrasianWniWnaProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = '/keimigrasian-wni-wna/' . $product['id'];
+        return $product;
+    })
+    ->all();
+
 $staticPages = [
     '/',
     // '/promo',
@@ -523,7 +603,7 @@ $staticPages = [
 // });
 
 foreach ($customServices as $service) {
-    Route::get($service['path'], function (Request $request) use ($penerjemahProducts, $ujiTuntasHukumProducts, $kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanHukumLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
+    Route::get($service['path'], function (Request $request) use ($keimigrasianWniWnaProducts, $notarisVirtualDanAktaProducts, $perizinanLainnyaProducts, $restrukturisasiPerseroanTerbatasProducts, $penutupanBadanUsahaProducts, $penerjemahProducts, $ujiTuntasHukumProducts, $kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanHukumLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
         $baseUrl = $resolveBaseUrl($request);
         $props = [
             'service' => $service,
@@ -828,6 +908,121 @@ foreach ($customServices as $service) {
                 'mainEntity' => [
                     '@type' => 'ItemList',
                     'itemListElement' => collect($ujiTuntasHukumProducts)->values()->map(
+                        static fn(array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . $product['detail_path'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        // PERIZINAN LAINNYA
+        if ($service['path'] === '/perizinan-lainnya') {
+            $props['products'] = $perizinanLainnyaProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Perizinan Lainnya - FastTrack',
+                'description' => 'Daftar produk perizinan lainnya FastTrack.',
+                'url' => $baseUrl . '/perizinan-lainnya',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($perizinanLainnyaProducts)->values()->map(
+                        static fn(array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . $product['detail_path'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        // NOTARIS VIRTUAL DAN AKTA
+        if ($service['path'] === '/notaris-virtual-dan-akta') {
+            $props['products'] = $notarisVirtualDanAktaProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Notaris Virtual & Akta - FastTrack',
+                'description' => 'Daftar produk notaris virtual dan akta FastTrack.',
+                'url' => $baseUrl . '/notaris-virtual-dan-akta',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($notarisVirtualDanAktaProducts)->values()->map(
+                        static fn(array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . $product['detail_path'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        // RESTRUKTURISASI PERSEROAN TERBATAS
+        if ($service['path'] === '/restrukturisasi-perseroan-terbatas') {
+            $props['products'] = $restrukturisasiPerseroanTerbatasProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Restrukturisasi Perseroan Terbatas - FastTrack',
+                'description' => 'Daftar produk restrukturisasi perseroan terbatas FastTrack.',
+                'url' => $baseUrl . '/restrukturisasi-perseroan-terbatas',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($restrukturisasiPerseroanTerbatasProducts)->values()->map(
+                        static fn(array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . $product['detail_path'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        // PENUTUPAN BADAN USAHA
+        if ($service['path'] === '/penutupan-badan-usaha') {
+            $props['products'] = $penutupanBadanUsahaProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Penutupan Badan Usaha - FastTrack',
+                'description' => 'Daftar produk penutupan badan usaha FastTrack.',
+                'url' => $baseUrl . '/penutupan-badan-usaha',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($penutupanBadanUsahaProducts)->values()->map(
+                        static fn(array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . $product['detail_path'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        // KEIMIGRASIAN WNI WNA
+        if ($service['path'] === '/keimigrasian-wni-wna') {
+            $props['products'] = $keimigrasianWniWnaProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Keimigrasian WNI & WNA - FastTrack',
+                'description' => 'Daftar produk keimigrasian WNI dan WNA FastTrack.',
+                'url' => $baseUrl . '/keimigrasian-wni-wna',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($keimigrasianWniWnaProducts)->values()->map(
                         static fn(array $product, int $index): array => [
                             '@type' => 'ListItem',
                             'position' => $index + 1,
@@ -1688,6 +1883,311 @@ Route::get('/uji-tuntas-hukum/{id}', function (Request $request, int $id) use ($
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'Uji Tuntas Hukum', 'item' => $baseUrl . '/uji-tuntas-hukum'],
+                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+            ]),
+        ],
+    ]);
+})->whereNumber('id');
+
+// PERIZINAN LAINNYA
+Route::get('/perizinan-lainnya/{id}', function (Request $request, int $id) use ($perizinanLainnyaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($perizinanLainnyaProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($perizinanLainnyaProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Services/PerizinanLainnya/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $product['name'] . ' - FastTrack',
+            'description' => $product['excerpt'],
+            'canonical' => $baseUrl . $product['detail_path'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $product['name'],
+                'description' => $product['excerpt'],
+                'serviceType' => $product['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . $product['detail_path'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . $product['detail_path'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($product['faq'])->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Perizinan Lainnya', 'item' => $baseUrl . '/perizinan-lainnya'],
+                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+            ]),
+        ],
+    ]);
+})->whereNumber('id');
+
+// NOTARIS VIRTUAL DAN AKTA
+Route::get('/notaris-virtual-dan-akta/{id}', function (Request $request, int $id) use ($notarisVirtualDanAktaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($notarisVirtualDanAktaProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($notarisVirtualDanAktaProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Services/NotarisVirtualDanAkta/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $product['name'] . ' - FastTrack',
+            'description' => $product['excerpt'],
+            'canonical' => $baseUrl . $product['detail_path'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $product['name'],
+                'description' => $product['excerpt'],
+                'serviceType' => $product['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . $product['detail_path'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . $product['detail_path'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($product['faq'])->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Notaris Virtual & Akta', 'item' => $baseUrl . '/notaris-virtual-dan-akta'],
+                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+            ]),
+        ],
+    ]);
+})->whereNumber('id');
+
+// RESTRUKTURISASI PERSEROAN TERBATAS
+Route::get('/restrukturisasi-perseroan-terbatas/{id}', function (Request $request, int $id) use ($restrukturisasiPerseroanTerbatasProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($restrukturisasiPerseroanTerbatasProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($restrukturisasiPerseroanTerbatasProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Services/RestrukturisasiPerseroanTerbatas/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $product['name'] . ' - FastTrack',
+            'description' => $product['excerpt'],
+            'canonical' => $baseUrl . $product['detail_path'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $product['name'],
+                'description' => $product['excerpt'],
+                'serviceType' => $product['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . $product['detail_path'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . $product['detail_path'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($product['faq'])->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Restrukturisasi Perseroan Terbatas', 'item' => $baseUrl . '/restrukturisasi-perseroan-terbatas'],
+                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+            ]),
+        ],
+    ]);
+})->whereNumber('id');
+
+// PENUTUPAN BADAN USAHA
+Route::get('/penutupan-badan-usaha/{id}', function (Request $request, int $id) use ($penutupanBadanUsahaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($penutupanBadanUsahaProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($penutupanBadanUsahaProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Services/PenutupanBadanUsaha/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $product['name'] . ' - FastTrack',
+            'description' => $product['excerpt'],
+            'canonical' => $baseUrl . $product['detail_path'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $product['name'],
+                'description' => $product['excerpt'],
+                'serviceType' => $product['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . $product['detail_path'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . $product['detail_path'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($product['faq'])->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Penutupan Badan Usaha', 'item' => $baseUrl . '/penutupan-badan-usaha'],
+                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+            ]),
+        ],
+    ]);
+})->whereNumber('id');
+
+// KEIMIGRASIAN WNI WNA
+Route::get('/keimigrasian-wni-wna/{id}', function (Request $request, int $id) use ($keimigrasianWniWnaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($keimigrasianWniWnaProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($keimigrasianWniWnaProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Services/KeimigrasianWniWna/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $product['name'] . ' - FastTrack',
+            'description' => $product['excerpt'],
+            'canonical' => $baseUrl . $product['detail_path'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $product['name'],
+                'description' => $product['excerpt'],
+                'serviceType' => $product['name'],
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . $product['detail_path'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . $product['detail_path'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($product['faq'])->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Keimigrasian WNI & WNA', 'item' => $baseUrl . '/keimigrasian-wni-wna'],
                 ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
             ]),
         ],

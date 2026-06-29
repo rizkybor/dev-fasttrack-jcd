@@ -197,7 +197,7 @@ b, i
                     </div>
                 </div>
 
-                <div class="grid gap-8 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_360px]">
+                <div class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]">
                     <!-- ===== KIRI ===== -->
                     <div class="flex flex-col gap-6">
                         <!-- Konten dinamis per paket -->

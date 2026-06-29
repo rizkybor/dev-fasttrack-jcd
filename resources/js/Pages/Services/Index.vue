@@ -81,7 +81,7 @@ const serviceCategories = [
                     "Izin dasar, izin berusaha sektoral, dan perizinan berusaha penunjang.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/",
+                path: "/perizinan-berusaha",
                 image: "/images/layanan-card/layanan-perizinan.png",
             },
             {
@@ -90,7 +90,7 @@ const serviceCategories = [
                     "NPWP badan, SKD, Tanda Daftar Yayasan, dan Peraturan Perusahaan.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/",
+                path: "/perizinan-lainnya",
                 image: "/images/layanan-card/layanan-perizinan-lainnya.png",
             },
             {
@@ -99,7 +99,7 @@ const serviceCategories = [
                     "Akta pendirian, perubahan AD, RUPS, jual beli, hingga perjanjian kawin.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/",
+                path: "/notaris-virtual-dan-akta",
                 image: "/images/layanan-card/layanan-notaris-virtual.png",
             },
             {
@@ -108,7 +108,7 @@ const serviceCategories = [
                     "Akuisisi, merger, dan perubahan struktur perseroan secara legal.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/",
+                path: "/restrukturisasi-perseroan-terbatas",
                 image: "/images/layanan-card/layanan-restrukturisasi-perseroan-terbatas.png",
             },
             {
@@ -117,7 +117,7 @@ const serviceCategories = [
                     "Penutupan PT PMDN, PT PMA, CV, dan kantor perwakilan asing.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/",
+                path: "/penutupan-badan-usaha",
                 image: "/images/layanan-card/layanan-penutupan-badan-usaha.png",
             },
             {
@@ -135,7 +135,7 @@ const serviceCategories = [
                     "Sertifikasi Kamar Dagang dan Industri (KADIN) untuk badan usaha.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/",
+                path: "/ON-DEV",
                 image: "/images/layanan-card/layanan-sertifikasi-badan-usaha.png",
             },
             {
@@ -153,7 +153,7 @@ const serviceCategories = [
                     "Penutupan PT PMDN, PT PMA, CV, dan kantor perwakilan asing.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/",
+                path: "/ON-DEV",
                 image: "/images/layanan-card/layanan-virtual-office.png",
             },
             {
@@ -162,7 +162,7 @@ const serviceCategories = [
                     "LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/",
+                path: "/ON-DEV",
                 image: "/images/layanan-card/layanan-design-digmart.png",
             },
         ],
@@ -246,7 +246,7 @@ const serviceCategories = [
                     "Visa kunjungan, kerja, investor, keluarga, lansia, hingga Golden Visa.",
                 price: "Rp 3.500.000",
                 packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                path: "/visa-indonesia",
                 image: "/images/dummy-card.png",
             },
             {
@@ -255,7 +255,7 @@ const serviceCategories = [
                     "Pengurusan visa ke luar negeri untuk berbagai keperluan.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                path: "/visa-mancanegara",
                 image: "/images/dummy-card.png",
             },
             {
@@ -264,7 +264,7 @@ const serviceCategories = [
                     "Paspor Republik Indonesia dan layanan keimigrasian lainnya.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                path: "/keimigrasian-wni-wna",
                 image: "/images/layanan-card/layanan-keimigrasian.png",
             },
             {
@@ -273,7 +273,7 @@ const serviceCategories = [
                     "Alih kewarganegaraan (naturalisasi) bagi WNA menjadi WNI.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/perizinan-usaha",
+                path: "/on-dev",
                 image: "/images/dummy-card.png",
             },
         ],

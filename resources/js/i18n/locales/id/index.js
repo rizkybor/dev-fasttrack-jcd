@@ -11,6 +11,11 @@ import kewajibanPelaporanUsaha from './services/kewajiban-pelaporan-perusahaan'
 import legalisasiKedutaan from './services/legalisasi-kedutaan'
 import oneSingleSubmission from './services/one-single-submission'
 import badanUsahaDetail from './services/show/badan-usaha-detail'
+import perizinanLainnya from './services/perizinan-lainnya'
+import notarisVirtualDanAkta from './services/notaris-virtual-dan-akta'
+import restrukturisasiPerseroanTerbatas from './services/restrukturisasi-perseroan-terbatas'
+import penutupanBadanUsaha from './services/penutupan-badan-usaha'
+import keimigrasianWniWna from './services/keimigrasian-wni-wna'
 
 export default {
     common,
@@ -25,6 +30,11 @@ export default {
         kekayaanIntelektual,
         kewajibanPelaporanUsaha,
         legalisasiKedutaan,
-        oneSingleSubmission
+        oneSingleSubmission,
+        perizinanLainnya,
+        notarisVirtualDanAkta,
+        restrukturisasiPerseroanTerbatas,
+        penutupanBadanUsaha,
+        keimigrasianWniWna
     },
 }
