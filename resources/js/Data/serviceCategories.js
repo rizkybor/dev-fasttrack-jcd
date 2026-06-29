@@ -292,7 +292,7 @@ export function useServiceCategories() {
                             "Pengurusan penerbitan e-paspor bagi Warga Negara Indonesia untuk keperluan perjalanan internasional secara resmi.",
                         price: "Rp 3.150.000",
                         packages: "2 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/keimigrasian-wni-wna/1",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -301,7 +301,7 @@ export function useServiceCategories() {
                             "Pengurusan pengukuhan PKP bagi perusahaan yang wajib memungut dan melaporkan PPN.",
                         price: "Rp 1.750.000",
                         packages: "2 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/keimigrasian-wni-wna/2",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -310,7 +310,7 @@ export function useServiceCategories() {
                             "Pengurusan pemindahan data paspor baru pemegang ITAS sesuai ketentuan keimigrasian yang berlaku.",
                         price: "Rp 1.750.000",
                         packages: "1 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/naturalisasi/1",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -319,7 +319,7 @@ export function useServiceCategories() {
                             "Pengurusan izin keluar permanen bagi tenaga kerja asing maupun keluarga yang akan meninggalkan Indonesia dan tidak kembali.",
                         price: "Rp 3.000.000",
                         packages: "2 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/naturalisasi/2",
                         icon: "/icons/ic-card-4.svg",
                     },
                 ],
