@@ -129,7 +129,7 @@ const bannerCta = computed(() => props.product?.banner_cta ?? null);
         <!-- CONTENT SECTION -->
         <section class="bg-[#F7F7F5] py-12 sm:py-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-8 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_360px]">
+                <div class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]">
 
                     <!-- KIRI -->
                     <div class="flex flex-col gap-6">

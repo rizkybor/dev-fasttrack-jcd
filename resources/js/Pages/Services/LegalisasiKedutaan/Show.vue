@@ -161,7 +161,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
         <!-- CONTENT SECTION -->
         <section id="edukasi" class="bg-[#F7F7F5] py-8 sm:py-12 lg:py-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-6 lg:gap-8 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_360px]">
+                <div class="grid gap-6 lg:gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]">
 
                     <!-- ===== KIRI: Konten Utama ===== -->
                     <div class="flex flex-col gap-4 sm:gap-6 min-w-0">
