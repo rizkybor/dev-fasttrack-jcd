@@ -865,5 +865,689 @@
         ],
         "dasar_hukum": [],
         "faq": []
+    },
+    {
+        "id": 2,
+        "name": "Akta Lainnya",
+        "tag": "Profesional",
+        "price": "750000",
+        "price_label": "Rp 750.000",
+        "duration": "Estimasi 3-5 hari kerja",
+        "image": "",
+        "excerpt": "Penerbitan akta cabang, akuisisi, kuasa, jual beli saham, hingga perjanjian pranikah dan pisah harta.",
+        "detail_path": "/notaris-virtual-dan-akta/2",
+        "penjelasan_umum": [
+            "Layanan pengurusan berbagai jenis akta notaris di luar akta pendirian perusahaan, mencakup akta untuk keperluan pengembangan usaha seperti pembukaan cabang, jual beli saham, akuisisi, dan penggabungan perusahaan, serta akta untuk keperluan personal seperti surat kuasa dan perjanjian perkawinan. Seluruh akta disusun dan ditandatangani oleh notaris resmi sesuai ketentuan hukum yang berlaku di Indonesia."
+        ],
+        "paket": [
+            {
+                "id": "akta-cabang",
+                "nama": "Akta Cabang",
+                "deskripsi": "Pembuatan akta pembukaan kantor cabang perusahaan secara resmi melalui notaris yang berwenang.",
+                "harga": "Rp 750.000",
+                "penjelasan_layanan": [
+                    "Akta cabang yang dikenal juga sebagai akta pembukaan cabang merupakan dokumen hukum yang digunakan untuk menyatakan secara resmi pembukaan unit usaha baru dari suatu perusahaan induk. Dokumen ini memiliki kekuatan hukum yang menjadi dasar legal bagi entitas baru tersebut untuk beroperasi, melakukan transaksi bisnis, serta menjalankan seluruh kegiatan yang berhubungan dengan tujuan bisnis perusahaan.",
+                    "Akta ini disusun dan disiapkan oleh notaris yang bertugas untuk memuat berbagai informasi penting, seperti identitas perusahaan induk, alamat cabang yang dibuka, penunjukan pihak yang bertanggung jawab atas kegiatan cabang, serta gambaran umum atau kuasa operasional untuk menjalankan kegiatan usaha di lokasi tersebut.",
+                    "Dengan adanya akta cabang, perusahaan memiliki dasar hukum yang jelas dalam menjalankan kegiatan usaha di wilayah baru. Sekaligus memastikan bahwa operasional cabang setiap tahap kegiatan dalam pengembangan dan tanggung jawab perusahaan dengan proporsional."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "akta-cabang-item",
+                        "paket_harga": {
+                            "nama": "AKTA CABANG",
+                            "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
+                            "harga": "Rp 750.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": [
+                                "Salinan Akta Pembukaan Kantor Cabang"
+                            ],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "Data Para Pemegang Saham",
+                                "items": [
+                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                    "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                    "Data: Nomor telepon, Alamat email"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Legalitas Perusahaan Yang Dimiliki",
+                                "items": [
+                                    "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
+                                    "Seluruh Akta Perusahaan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                    "Nomor Poko Wajib Pajak Perseroan;",
+                                    "Nomor Induk Perusahaan"
+                                ]
+                            },
+                            {
+                                "nomor": 3,
+                                "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                "items": [
+                                    "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                                ]
+                            },
+                            {
+                                "nomor": 4,
+                                "judul": "Identitas Kepala Cabang",
+                                "items": [
+                                    "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP)"
+                                ]
+                            },
+                            {
+                                "nomor": 5,
+                                "judul": "Alamat Kantor Cabang",
+                                "items": []
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            },
+            {
+                "id": "akta-jual-beli-saham",
+                "nama": "Akta Jual Beli Saham",
+                "deskripsi": "Pembuatan akta pengalihan kepemilikan saham antar pemegang saham secara sah di hadapan notaris.",
+                "harga": "Rp 1.500.000",
+                "penjelasan_layanan": [
+                    "Akta Jual Beli (AJB) merupakan akta identik yang dibuat sebagai bukti sah terjadinya peralihan hak dari pihak penjual kepada pihak pembeli. Dokumen ini memiliki kekuatan hukum yang menjadi peralihan dan ketentuan yang harus dipenuhi agar transaksi memiliki kekuatan hukum dan dapat diproses sesuai peraturan yang berlaku.",
+                    "Pembuatan Akta Jual Beli (AJB) merupakan proses hukum yang dilakukan sebagai bukti sah terjadinya peralihan hak dari penjual kepada pembeli. Dokumen ini memuat identitas para pihak, ketentuan, dan ketentuan yang harus dipenuhi agar transaksi memiliki kekuatan hukum dan dapat diproses sesuai peraturan yang berlaku.",
+                    "Transaksi jual beli harus dilakukan oleh pihak yang cakap secara hukum, yaitu telah dewasa menurut ketentuan hukum atau telah menikah, serta tidak berada di bawah pengampuan.",
+                    { "type": "title", "text": "Kecakapan Hukum" },
+                    "Penjual dan pembeli wajib merupakan pihak yang cakap secara hukum, yaitu telah dewasa menurut ketentuan hukum atau telah menikah, serta tidak berada di bawah pengampuan.",
+                    { "type": "title", "text": "Identitas Para Pihak" },
+                    "Dokumen identitas Para Pihak meliputi : KTP, NIK, NPWP, Bukti/Akta Nikah atau Perjanjian Pra/Postnuptial jika ada.",
+                    { "type": "title", "text": "Kepemilikan Objek" },
+                    "Dokumen kepemilikan notaris yang sah dan berisi hukum berupa Dokumen Kepemilikan Saham Resmi dari Perusahaan."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "akta-jual-beli-saham-item",
+                        "paket_harga": {
+                            "nama": "AKTA JUAL BELI SAHAM",
+                            "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
+                            "harga": "Rp 1.500.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": [
+                                "2 (dua) Salinan Akta Jual Beli Saham"
+                            ],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "Data Para Pemegang Saham",
+                                "items": [
+                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                    "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                    "Data: Nomor telepon, Alamat email"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Legalitas Perusahaan Yang Dimiliki",
+                                "items": [
+                                    "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
+                                    "Seluruh Akta Perusahaan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                    "Nomor Poko Wajib Pajak Perseroan;",
+                                    "Nomor Induk Perusahaan"
+                                ]
+                            },
+                            {
+                                "nomor": 3,
+                                "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                "items": [
+                                    "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                                ]
+                            },
+                            {
+                                "nomor": 4,
+                                "judul": "Identitas Kepala Cabang",
+                                "items": [
+                                    "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP)"
+                                ]
+                            },
+                            {
+                                "nomor": 5,
+                                "judul": "Alamat Kantor Cabang",
+                                "items": []
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            },
+            {
+                "id": "akta-pengambilalihan-akuisisi",
+                "nama": "Akta Pengambilalihan (Akuisisi)",
+                "deskripsi": "Pembuatan akta pengambilalihan perusahaan sesuai ketentuan hukum yang berlaku di Indonesia.",
+                "harga": "Rp 7.000.000",
+                "penjelasan_layanan": [
+                    "Akta akuisisi merupakan dokumen hukum yang dibuat dan disahkan oleh notaris sebagai bukti autentik atas terjadinya proses pengambilalihan suatu perusahaan oleh pihak perusahaan lain. Dokumen ini memiliki kekuatan hukum yang mengikut serta mengikat dan dalam pelaksanaan transaksi akuisisi. Di dalam akta akuisisi terdapat berbagai ketentuan penting yang mengatur proses pengalihan hak, kewajiban, kepemilikan saham maupun para pihak. Selain itu, akta tersebut juga memuat informasi mengenai perubahan struktur organisasi perseroan, termasuk pengertian direktur, komisaris, dan pihak-pihak yang memiliki kewenangan dalam pengawasan perusahaan setelah proses akuisisi selesai dilaksanakan.",
+                    "Lebih lanjut, akta akuisisi merupakan salah satu hal yang sangat penting bagi kedua belah pihak dalam menjalankan transaksi. Perjalanan ini memuat ketentuan-ketentuan kepastian hukum, melindungi kepentingan para pihak, serta menghindari potensi sengketa di kemudian hari. Oleh karena itu, keberadaan akta akuisisi menjadi elemen penting dalam memastikan bahwa proses pengambilalihan ini berjalan secara transparan, dan sesuai dengan prinsip dan persyaratan perjanjian yang berlaku.",
+                    {
+                        "type": "title",
+                        "text": "Dalam Proses Pembuatan Akta Pengambilalihan ada pihak yang wajib memenuhi persyaratan dari sisi hukum, sebagai berikut:"
+                    },
+                    { "type": "title", "text": "Penetapan RUPS" },
+                    "Melalui RUPS, para pemegang saham diberikan kesempatan untuk memilih, mempertimbangkan, dan memberikan keputusan atas rencana kegiatan yang dilakukan oleh pihak-pihak terkait, termasuk persetujuan atas aksi korporasi yang dilakukan oleh maanagement. Ketentuan mengenai pelaksanaan RUPS bertujuan untuk memastikan perusahaan setiap saat selalu beroperasi dalam tata kelola yang baik (good corporate governance), melindungi hak-hak pemegang saham, serta memastikan pengambilan keputusan korporasi dilakukan secara transparan dan sesuai dengan ketentuan peraturan yang berlaku. Dengan demikian, keputusan akuisisi yang telah memperoleh persetujuan RUPS memiliki dasar hukum yang kuat dan dapat dilaksanakan secara sah.",
+                    { "type": "title", "text": "Pemberitahuan Karyawan" },
+                    "Perusahaan harus menjamin kewajiban korporasi selalu terhadap dengan menginformasikan rencana pengambilalihan melalui media sosial atau surat resmi kepada seluruh karyawan perusahaan yang terdampak dalam jangka waktu paling lambat 30 (tiga puluh) hari sebelum dilaksanakannya keputusan RUPS yang akan membahas rencana pengambilalihan. Ketentuan ini bertujuan untuk memberikan kesempatan kepada para pemangku kepentingan: karyawan, dan pihak lain dalam jangka waktu yang ditentukan, semua termasuk waktu yang tepat untuk melihat kondisi dan perkembangan pengambilalihan, kemampuan itu bertujuan untuk memberikan kesempatan kepada para pemegang saham, karyawan, dan pihak-pihak hukum lainnya untuk membela diri terhadap kepentingan mereka."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "akta-akuisisi-item",
+                        "paket_harga": {
+                            "nama": "AKTA PENGAMBILALIHAN (AKUISISI)",
+                            "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
+                            "harga": "Rp 7.000.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": [
+                                "Salinan Akta Pernyataan Keputusan Para Pemegang Saham Tahunan.",
+                                "Surat Pengambilalihan.",
+                                "Surat Keterangan Laporan Pembeitahuan dari Kementerian Hukum RI"
+                            ],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "Data Para Pemegang Saham",
+                                "items": [
+                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                    "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                    "Data: Nomor telepon, Alamat email"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Legalitas Perusahaan Yang Dimiliki",
+                                "items": [
+                                    "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
+                                    "Seluruh Akta Perusahaan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                    "Nomor Poko Wajib Pajak Perseroan;",
+                                    "Nomor Induk Perusahaan"
+                                ]
+                            },
+                            {
+                                "nomor": 3,
+                                "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                "items": [
+                                    "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                                ]
+                            },
+                            {
+                                "nomor": 4,
+                                "judul": "Dokumen Lainnya Yang Menjadi Objek Perubahan",
+                                "items": []
+                            },
+                            {
+                                "nomor": 5,
+                                "judul": "Pengumuman Koran",
+                                "items": []
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            },
+            {
+                "id": "akta-penggabungan-merger",
+                "nama": "Akta Penggabungan (Merger)",
+                "deskripsi": "Pembuatan akta penggabungan dua perusahaan atau lebih menjadi satu entitas hukum yang baru.",
+                "harga": "Rp 750.000",
+                "penjelasan_layanan": [
+                    "Akta Penggabungan (Merger) adalah akta notaris yang dibuat untuk mendokumentasikan proses penggabungan dua atau lebih perusahaan menjadi satu entitas hukum yang baru atau yang sudah ada."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "akta-merger-item",
+                        "paket_harga": {
+                            "nama": "AKTA PENGGABUNGAN (MERGER)",
+                            "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
+                            "harga": "Rp 750.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": ["Salinan Akta Penggabungan"],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "Data Para Pemegang Saham",
+                                "items": [
+                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                    "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya.",
+                                    "Data: Nomor telepon, Alamat email"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Legalitas Perusahaan Yang Dimiliki",
+                                "items": [
+                                    "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
+                                    "Nomor Poko Wajib Pajak Perseroan;",
+                                    "Nomor Induk Perusahaan"
+                                ]
+                            },
+                            {
+                                "nomor": 3,
+                                "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham",
+                                "items": [
+                                    "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan."
+                                ]
+                            },
+                            {
+                                "nomor": 4,
+                                "judul": "Dokumen Lainnya Yang Menjadi Objek Perubahan",
+                                "items": []
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            },
+            {
+                "id": "akta-kuasa",
+                "nama": "Akta Kuasa",
+                "deskripsi": "Pembuatan surat kuasa notaril yang memberikan wewenang resmi kepada pihak lain untuk bertindak atas nama pemberi kuasa.",
+                "harga": "Rp 750.000",
+                "penjelasan_layanan": [
+                    "Akta Kuasa merupakan dokumen hukum yang dibuat untuk memberikan kewenangan dari satu pihak kepada pihak lain guna mewakili dan atas namanya dalam melakukan perbuatan hukum tertentu, sehingga pihak yang diberi kuasa memiliki kapasitas dan kewenangan yang sama untuk bertindak atas nama pemberi kuasa.",
+                    "Akta Kuasa berfungsi sebagai legalitas bagi penerima kuasa dalam menjalankan tindakan hukum atas nama pemberi kuasa dalam batasan kuasa yang diberikan yang dianggap memiliki akibat hukum yang mengikat dan membebani pemberi kuasa. Oleh karena itu, ia akta kuasa menjadi instrumen penting bagi setiap pihak, serta lebih bertanggung jawab, semua tindakan dan tujuan pemberi kuasa tersebut.",
+                    "Dengan adanya Akta Kuasa, proses pelaksanaan tindakan hukum dapat dilakukan secara lebih efektif dan memiliki kepastian hukum, terutama ketika pemberi kuasa tidak dapat hadir secara langsung untuk menyelesaikan urusannya."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "akta-kuasa-item",
+                        "paket_harga": {
+                            "nama": "AKTA KUASA",
+                            "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
+                            "harga": "Rp 750.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": ["Salinan Akta Kuasa"],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "Data Para Pihak",
+                                "items": [
+                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                    "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                    "Data: Nomor telepon, Alamat email"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Legalitas Perusahaan Yang Dimiliki",
+                                "items": [
+                                    "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
+                                    "Seluruh Akta Perusahaan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                    "Nomor Poko Wajib Pajak Perseroan;",
+                                    "Nomor Induk Perusahaan"
+                                ]
+                            },
+                            {
+                                "nomor": 3,
+                                "judul": "Formulir/Surat Yang Telah Dilengkapi Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                "items": [
+                                    "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                                ]
+                            },
+                            {
+                                "nomor": 4,
+                                "judul": "Dokumen Lainnya Yang Menjadi Objek Dikuasakan",
+                                "items": []
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            },
+            {
+                "id": "perjanjian-kawin-prenup",
+                "nama": "Perjanjian Kawin/Pisah Harta – Prenup",
+                "deskripsi": "Penyusunan perjanjian pisah harta yang dibuat sebelum perkawinan secara resmi.",
+                "harga": "Rp 2.500.000",
+                "penjelasan_layanan": [
+                    "Perjanjian Kawin merupakan perjanjian tertulis yang dibuat oleh calon suami dan istri sebelum melangsungkan perkawinan untuk mengatur berbagai aspek hukum dari harta bersama dalam rumah tangga, termasuk pengaturan harta, tanggung jawab atas utang, serta hak dan kewajiban masing-masing pihak.",
+                    "Perjanjian ini memberikan kepastian hukum terhadap kepentingan pribadi dan harta kekayaan yang dimiliki oleh masing-masing pihak sebelum ataupun yang diperoleh melalui warisan atau hibah selama perkawinan. Dalam pelaksanaannya, perjanjian ini juga berfungsi untuk menjaga kelancaran urusan bisnis yang tetap transparan setelah perkawinan selesai.",
+                    "Dengan adanya Perjanjian Kawin, pasangan dapat membangun hubungan rumah tangga yang lebih transparan sekaligus memberikan perlindungan hukum yang jelas terhadap aset dan tanggung jawab masing-masing pihak. Dengan demikian, perjanjian ini sekaligus menjadi landasan yang kuat bagi kedua belah pihak dalam menjalani kehidupan rumah tangga.",
+                    "Dalam Proses Pembuatan Akta Perjanjian Kawin/ Pisah Harta – Prenup memiliki syarat dan ketentuan dibuat sebelum perkawinan."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "prenup-item",
+                        "paket_harga": {
+                            "nama": "PERJANJIAN KAWIN/PISAH HARTA – PRENUP",
+                            "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
+                            "harga": "Rp 2.500.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": ["Salinan Akta Prenup"],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "Data Para Pihak",
+                                "items": [
+                                    "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan Kartu Keluarga (KK)"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Dokumen Pemikahan",
+                                "items": [
+                                    "scancopy bewarna Akta Kelahiran, Surat Pengantar Nikah, CN (Bagi WNA)"
+                                ]
+                            },
+                            {
+                                "nomor": 3,
+                                "judul": "Dokumen Lainnya Yang Menjadi Objek Diperjanjikan",
+                                "items": [
+                                    "scancopy bewarna Bukti Kepemilikan Aset yang ingin dicantumkan sebagai harta bawaan (Sertifikat Tanah dan Bangunan, BPKB, Buku Tabungan, Surat Berharga lainnya)"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            },
+            {
+                "id": "perjanjian-kawin-postnup",
+                "nama": "Perjanjian Kawin/Pisah Harta – Postnup",
+                "deskripsi": "Penyusunan perjanjian pisah harta yang dibuat setelah perkawinan sesuai ketentuan hukum.",
+                "harga": "Rp 3.500.000",
+                "penjelasan_layanan": [
+                    "Perjanjian postnup, atau lebih dikenal sebagai perjanjian perkawinan yang dibuat setelah perkawinan berlangsung, merupakan salah satu kesepakatan tertulis antara suami dan istri yang dibuat setelah perkawinan berlangsung untuk mengatur pemisahan harta kekayaan, tanggung jawab utang, serta hak-hak finansial masing-masing pihak.",
+                    "Manfaat dari perjanjian ini antara lain memberikan perlindungan aset pribadi dan aset bersama, mencegah potensi konflik harta di kemudian hari. Selain itu, perjanjian ini juga berfungsi untuk mempertegas kejelesan atas pembagian harta bagi kedua belah pihak apabila terjadi perpisahan, perceraian, atau kematian. Dengan demikian, perjanjian ini sekaligus menjadi landasan yang kuat bagi kedua belah pihak untuk menjaga kelancaran hubungan finansial maupun aset dan tanggung jawab masing-masing pihak dalam menjalani rumah tangga.",
+                    "Di samping itu, perjanjian ini membantu menciptakan kejelasan dalam pembagian harta bersama sehingga dapat mempertegas kejelesan atas pembagian harta bagi kedua belah pihak apabila terjadi pemisahan. Dengan demikian, perjanjian ini sekaligus menjadi landasan yang kuat bagi kedua belah pihak dalam menjalani kehidupan rumah tangga.",
+                    "Dalam proses pembuatan Akta Post Nuptial terdapat syarat dan ketentuan hukum yang harus dipenuhi oleh para pihak sebagai berikut:",
+                    { "type": "title", "text": "Kesepakatan" },
+                    "Kesepakatan antara kedua belah pihak harus dipenuhi. Dibuat secara tertulis, serta disahkan oleh Notaris.",
+                    { "type": "title", "text": "Isi Perjanjian" },
+                    "Isi perjanjian tidak bertentangan dengan hukum, norma kesusilaan, dan ketertiban umum. Selain itu, perjanjian ini disusun setelah pernikahan berlangsung."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "postnup-item",
+                        "paket_harga": {
+                            "nama": "PERJANJIAN KAWIN/PISAH HARTA – POSTNUP",
+                            "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
+                            "harga": "Rp 3.500.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": [
+                                "Salinan Akta Postnup",
+                                "Pendaftaran KUA selayaknya (dikoordinasikan)"
+                            ],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "Data Para Pihak",
+                                "items": [
+                                    "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan Kartu Keluarga (KK)"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Dokumen Pemikahan",
+                                "items": ["scancopy bewarna Buku Nikah"]
+                            },
+                            {
+                                "nomor": 3,
+                                "judul": "Dokumen Lainnya Yang Menjadi Objek Diperjanjikan",
+                                "items": [
+                                    "scancopy bewarna Bukti Kepemilikan Aset yang ingin dicantumkan sebagai harta bawaan (Sertifikat Tanah dan Bangunan, BPKB, Buku Tabungan, Surat Berharga lainnya)"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            }
+        ],
+        "dasar_hukum": [],
+        "faq": []
+    },
+    {
+        "id": 3,
+        "name": "Layanan Notaris Lainnya",
+        "tag": "Profesional",
+        "price": "250000",
+        "price_label": "Rp 250.000",
+        "duration": "Estimasi 1-3 hari kerja",
+        "image": "",
+        "excerpt": "Pengesahan dokumen melalui waarmerking, legalisir, dan legalisasi, serta pengambilan profil lengkap perseroan terbatas dari Kementerian Hukum.",
+        "detail_path": "/notaris-virtual-dan-akta/3",
+        "penjelasan_umum": [
+            "Layanan pengurusan berbagai kebutuhan notaril di luar pembuatan akta, mencakup pengesahan dokumen melalui waarmerking, legalisir, dan legalisasi, serta pengambilan profil lengkap perseroan terbatas dari Kementerian Hukum. Seluruh layanan dilakukan secara resmi dan sesuai ketentuan hukum yang berlaku."
+        ],
+        "paket": [
+            {
+                "id": "waarmerking",
+                "nama": "Waarmerking",
+                "deskripsi": "Pencatatan tanggal dan keberadaan dokumen di hadapan notaris tanpa memeriksa isi dokumen.",
+                "harga": "Rp 250.000",
+                "penjelasan_layanan": [
+                    "Waarmerking adalah proses pencatatan atau pendaftaran dokumen di bawah tangan oleh notaris ke dalam buku register khusus yang dimiliki oleh notaris. Tindakan ini dilakukan untuk memberikan kepastian mengenai tanggal keberadaan dokumen tersebut, sehingga dapat mencegah pemalsuan, serta menjadi catatan terkait dalam atau manipulasi kemudian hari.",
+                    "Fungsi utama waarmerking adalah menetapkan tanggal pasti dari suatu dokumen yang telah dibuat sebelumnya oleh para pihak. Dengan demikian, legalisasi dapat menetapkan nilai pembuktian yang terbatas yakni dokumen tersebut ada dan digunakan sejak awal apabila diperlukan dalam hubungan hukum atau administrasi di kemudian hari.",
+                    "Namun timbul sengketa atau permasalahan hukum antara pihak-pihak yang terlibat."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "waarmerking-item",
+                        "paket_harga": {
+                            "nama": "WAARMERKING",
+                            "modal_note": null,
+                            "harga": "Rp 250.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": [
+                                "Asli Dokumen yang sudah dibubuhkan Waarmerking dan Tanda Tangan Notaris"
+                            ],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "KTP/Identitas Para Pihak Yang Dibutuhkan Dalam Waarmerking",
+                                "items": [
+                                    "scancopy bewarna"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Asli Dokumen",
+                                "items": [
+                                    "Asli Dokumen yang akan di-waarmerking"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            },
+            {
+                "id": "legalisir",
+                "nama": "Legalisir",
+                "deskripsi": "Pengesahan salinan dokumen oleh notaris sebagai bukti bahwa salinan sesuai dengan aslinya.",
+                "harga": "Rp 200.000",
+                "penjelasan_layanan": [
+                    "Legalisir adalah proses pengesahan salinan atau fotokopi suatu dokumen oleh pejabat yang berwenang untuk memastikan kesesuaiannya dengan dokumen asli. Melalui proses ini, salinan dokumen memperoleh pengakuan resmi sehingga dapat digunakan untuk berbagai keperluan administratif maupun hukum.",
+                    "Legalisir umumnya dibutuhkan dalam berbagai situasi, seperti pendaftaran pada instansi tertentu, pengajuan visa, melanjutkan pendidikan, maupun pemenuhan persyaratan legalitas bisnis. Selain memberikan kepastian atas keaslian dokumen, legalisir juga berfungsi untuk mengurangi risiko pemalsuan dan penyalahgunaan dokumen penting.",
+                    "Berbagai jenis dokumen dapat dilegalisir, baik dokumen pribadi maupun dokumen yang berkaitan dengan kegiatan usaha dan hukum. Dokumen pribadi yang sering memerlukan legalisir antara lain ijazah, kartu tanda penduduk (KTP), paspor, dan akta kelahiran. Sementara itu, dokumen bisnis dan hukum yang kerap dilegalisir meliputi surat perjanjian, akta pendirian perusahaan, surat kuasa, serta dokumen korporasi lainnya.",
+                    "Dengan adanya legalisir, pihak yang menerima dokumen dapat memiliki keyakinan bahwa salinan yang digunakan sesuai dengan dokumen asli dan dapat dipertanggungjawabkan secara hukum."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "legalisir-item",
+                        "paket_harga": {
+                            "nama": "LEGALISIR",
+                            "modal_note": null,
+                            "harga": "Rp 200.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": [
+                                "Asli Dokumen yang sudah dibubuhi Legalisir dan Tanda Tangan Notaris"
+                            ],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "KTP/Identitas Para Pihak Yang Dibutuhkan Dalam Waarmerking",
+                                "items": [
+                                    "scancopy bewarna"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Asli Dokumen",
+                                "items": [
+                                    "Asli Dokumen yang akan di-legalisir"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            },
+            {
+                "id": "legalisasi",
+                "nama": "Legalisasi",
+                "deskripsi": "Pengesahan tanda tangan dan cap notaris pada dokumen oleh pejabat berwenang untuk keperluan hukum.",
+                "harga": "Rp 500.000",
+                "penjelasan_layanan": [
+                    "Legalisasi notaris adalah proses pengesahan tanda tangan pada suatu dokumen yang dilakukan di hadapan notaris. Dalam proses ini, notaris meverifikasi identitas para penandatangan, memastikan bahwa dokumen ditandatangani secara sukarela tanpa adanya tekanan atau paksaan, serta mencatat tindakan tersebut dalam buku register notaris sesuai ketentuan yang berlaku.",
+                    "Fungsi utama legalisasi adalah memberikan kepastian hukum mengenai keaslian tanda tangan dan identitas pihak yang menandatangani dokumen. Dengan demikian, legalisasi dapat memperkuat nilai pembuktian suatu dokumen apabila diperlukan dalam hubungan hukum atau administrasi di kemudian hari.",
+                    "Namun, legalisasi notaris tidak berarti bahwa notaris bertanggung jawab atas kebenaran isi, pernyataan, atau materi yang tercantum dalam dokumen tersebut. Tanggung jawab notaris dalam proses legalisasi terbatas pada pengesahan tanda tangan dan identitas para pihak yang menandatangani dokumen.",
+                    "Dengan adanya legalisasi, pihak yang menerima dokumen dapat memiliki keyakinan bahwa salinan yang digunakan sesuai dengan dokumen asli dan dapat dipertanggungjawabkan secara hukum."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "legalisasi-item",
+                        "paket_harga": {
+                            "nama": "LEGALISASI",
+                            "modal_note": null,
+                            "harga": "Rp 500.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": [
+                                "Asli Dokumen yang sudah dibubuhi Legalisasi dan Tanda Tangan Notaris"
+                            ],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "KTP/Identitas Para Pihak Yang Dibutuhkan Dalam Waarmerking",
+                                "items": [
+                                    "scancopy bewarna"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Asli Dokumen",
+                                "items": [
+                                    "Asli Dokumen yang akan di-Legalisasi"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            },
+            {
+                "id": "profil-lengkap-perseroan",
+                "nama": "Profil Lengkap Perseroan Terbatas dari Kementerian Hukum",
+                "deskripsi": "Pengambilan data profil resmi perseroan terbatas secara lengkap dan sistem Kementerian Hukum RI.",
+                "harga": "Rp 700.000",
+                "penjelasan_layanan": [
+                    "Profil Lengkap Perseroan merupakan dokumen yang berisi seluruh riwayat dan data perusahaan yang tercatat dalam sistem Administrasi Hukum Umum (AHU). Dokumen ini memuat informasi perusahaan secara menyeluruh, mulai dari akta pendirian dan seluruh perubahannya yang pernah dilakukan, hingga data pemegang saham, direksi dan komisaris yang tercatat resmi di pemerintah.",
+                    "Informasi yang tercantum dalam Profil Lengkap Perseroan meliputi nama notaris yang membuat akta, nomor dan tanggal akta, nomor Surat Keputusan (SK) pendirian atau Surat Pemberitahuan (SPP) perubahan, jenis perubahan yang dilakukan, serta data pemegang saham, direksi dan komisaris yang tercatat dalam sistem AHU.",
+                    "Keberadaan Profil Lengkap Perseroan sangat bermanfaat untuk menelusuri riwayat perubahan perusahaan dan mengetahui susunan kepemilikan yang berlaku. Dokumen ini juga dapat digunakan sebagai referensi untuk memastikan kesesuaian data perusahaan, terutama apabila dokumen internal tidak lengkap atau terdapat kendala administratif, seperti kehilangan akta, ketidaksesuaian dokumen, maupun perubahan data yang belum terdokumentasikan dengan baik."
+                ],
+                "penjelasan_layanan_items": [
+                    {
+                        "id": "profil-perseroan-item",
+                        "paket_harga": {
+                            "nama": "PROFIL LENGKAP PERSEROAN TERBATAS DARI KEMENTERIAN HUKUM",
+                            "modal_note": null,
+                            "harga": "Rp 700.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": [
+                                "Asli Dokumen Profil Lengkap Perseroan yang diterbitkan dari Sistem AHU"
+                            ],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "Nama Perseroan",
+                                "items": [
+                                    "Nama Perseroan yang akan dimohonkan"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Alamat",
+                                "items": [
+                                    "Alamat Lengkap Perseroan"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "dasar_hukum": []
+            }
+        ],
+        "dasar_hukum": [],
+        "faq": []
     }
 ]
