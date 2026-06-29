@@ -1,0 +1,375 @@
+[
+    {
+        "id": 1,
+        "name": "Pembubaran Perseroan",
+        "price": "12000000",
+        "price_label": "Rp 12.000.000",
+        "excerpt": "Pendampingan lengkap proses pembubaran Perseroan Terbatas sesuai ketentuan hukum yang berlaku.",
+        "detail_path": "/penutupan-badan-usaha/1",
+        "image": "",
+        "penjelasan_umum": [
+            "Tujuan mendirikan Perseroan Terbatas (PT) adalah untuk menjalankan usaha dalam jangka waktu tertentu. Akan tetapi, tidak selalu sebuah Perseroan dapat terus beroperasi selamanya. Ada berbagai kondisi yang dapat mendorong pemegang saham untuk mengambil keputusan membubarkan Perseroan, di antaranya:",
+            { "type": "bullets", "items": [
+                "Masa berlaku Perseroan berakhir berdasarkan ketentuan Anggaran Dasar;",
+                "Adanya keputusan RUPS untuk membubarkan Perseroan;",
+                "Perseroan dinyatakan pailit berdasarkan putusan pengadilan yang telah berkekuatan hukum tetap;",
+                "Pencabutan izin usaha Perseroan oleh instansi yang berwenang;",
+                "Adanya putusan pengadilan yang memerintahkan pembubaran Perseroan."
+            ]},
+            "Dalam Pembubaran Perseroan, ada beberapa hal yang perlu diperhatikan dan dipatuhi, antara lain:",
+            { "type": "title", "text": "Dasar Pembubaran Perseroan (RUPS)" },
+            { "type": "bullets", "items": [
+                "Anggaran Dasar Perseroan telah menetapkan jangka waktu berdirinya;",
+                "Keputusan RUPS berdasarkan ketentuan yang berlaku."
+            ]},
+            { "type": "title", "text": "Tangan – Tangan dalam Pembubaran Perseroan" },
+            { "type": "bullets", "items": [
+                "Kuorum kehadiran minimal 3/4 investor;",
+                "Tangan – di tangan dalam pembubaran perlu memenuhi syarat hukum bagi;",
+                "Keputusan untuk membubarkan Perseroan harus diambil oleh setidaknya 3/4 suara yang dikeluarkan."
+            ]},
+            { "type": "title", "text": "Penunjukan Likuidator" },
+            "Dalam proses pembubaran, Perseroan harus menunjuk likuidator yang bertugas untuk menyelesaikan urusan Perseroan. Usahakan untuk mengikuti prosedur penunjukan yang sesuai ketentuan dalam UU No. Keputusan Pembubaran (Perseroan Terbatas dan menyelesaikan urusan-urusan yang ada.",
+            "Pembubaran Perseroan tidak mengakibatkan Perseroan kehilangan status badan hukum sampai dengan selesainya proses likuidasi dan diterimanya pertanggungjawaban likuidator oleh RUPS atau pengadilan.",
+            "Pembubaran Perseroan harus mengikuti seluruh tahapan proses sesuai dengan peraturan perundang-undangan yang berlaku, dan ditujukan untuk melindungi kepentingan dan pembuat kebijakan serta pihak-pihak yang terkait."
+        ],
+        "sections": [
+            {
+                "id": "tahapan-pembubaran",
+                "type": "numbered_accordion",
+                "title": "TAHAPAN PEMBUBARAN PERSEROAN",
+                "items": [
+                    {
+                        "title": "Penyelenggaraan RUPS Pembubaran",
+                        "bullets": [
+                            "Pemanggilan RUPS sesuai ketentuan yang berlaku;",
+                            "Penyusunan agenda rapat;",
+                            "Pelaksanaan RUPS dan pengambilan keputusan pembubaran;",
+                            "Pasal 142 Ayat 1 huruf a UUPT;",
+                            "Pasal 115 Ayat 1 huruf a UUPT."
+                        ]
+                    },
+                    {
+                        "title": "Pembuatan Akta Pembubaran (Jika diperlukan)",
+                        "bullets": [
+                            "Pembuatan akta pembubaran CV;",
+                            "Nama perseroan;",
+                            "Perubahan terakhir;",
+                            "Perubahan pengurus (jika diperlukan);",
+                            "Pengiriman pemberitahuan kepada Kementerian Hukum."
+                        ]
+                    },
+                    {
+                        "title": "Penyebaran berita/pengumuman kepada Kreditur (Likuidasi)",
+                        "bullets": [
+                            "Pemberitahuan kepada kreditur;",
+                            "Pengumuman di media massa;",
+                            "Pemenuhan klaim kreditur sesuai prioritas;",
+                            "Penyelesaian seluruh kewajiban kepada pihak Kementerian Hukum."
+                        ]
+                    },
+                    {
+                        "title": "Pengumuman Pembubaran",
+                        "bullets": [
+                            "Surat Kabar Nasional",
+                            "Pasal 147 Ayat 1 dan Cb UUPT."
+                        ]
+                    },
+                    {
+                        "title": "Penyelesaian Hak/Aset",
+                        "bullets": [
+                            "Pasal 149 Ayat 1 UUPT;",
+                            "Pasal 150 Ayat 1 UUPT."
+                        ]
+                    },
+                    {
+                        "title": "Pemberitahuan kepada Kreditur dan Karyawan serta Likuidator",
+                        "bullets": [
+                            "Pemberitahuan kepada kreditur;",
+                            "Penyelesaian kewajiban kepada karyawan;",
+                            "Pemberitahuan tertulis kepada karyawan yang terdampak;",
+                            "Pembayaran pesangon, uang penghargaan masa kerja, dan uang penggantian hak sesuai ketentuan;",
+                            "Pelaporan kepada instansi ketenagakerjaan setempat;",
+                            "Pasal 146 Ayat 1 dan 3 UUPT."
+                        ]
+                    },
+                    {
+                        "title": "Pengurusan Rencana Pembagian Kekayaan Hasil Likuidasi",
+                        "bullets": [
+                            "Pasal 149 Ayat 1 UUPT;",
+                            "Pasal 150 Ayat 1 UUPT."
+                        ]
+                    },
+                    {
+                        "title": "Pembuatan NPWP Perseroan",
+                        "bullets": [
+                            "Pasal 152 Ayat 3 UUPT;",
+                            "Pasal 152 Ayat 4 UUPT."
+                        ]
+                    },
+                    {
+                        "title": "Penghapusan Izin Perseroan kepada Kementerian Hukum (di AHU)",
+                        "bullets": [
+                            "Akta Penghapusan Perseroan;",
+                            "Kode penghapusan."
+                        ]
+                    },
+                    {
+                        "title": "Penghapusan Nomor Perseroan dan Daftar Perseroan",
+                        "bullets": [
+                            "Akta Penghapusan Perseroan dari Kementerian Hukum RI (di AHU);",
+                            "Kode penghapusan."
+                        ]
+                    },
+                    {
+                        "title": "Penghapusan Nama Perseroan dari Daftar Perseroan",
+                        "desc": "Nomor Hukum mewajibkan terjadinya untuk adanya bukti buku tanda Perseroan dan menghapus nama Perseroan dan Daftar Perseroan dalam 14 (empat belas) hari setelah kondisi habis terpenuhi.",
+                        "bullets": [
+                            "Pasal 152 Ayat 6 dan 8 UUPT."
+                        ]
+                    }
+                ]
+            }
+        ],
+        "biaya_layanan_tabs": [
+            {
+                "label": "PMDN",
+                "nama": "PT. PMDN",
+                "harga": "Rp 12.000.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Akta Pernyataan Keputusan Rapat Umum Pemegang Saham (RUPS) tentang Pembubaran Perseroan dan Penunjukan Likuidator, berikut Surat Penerimaan Pemberitahuan Perubahan Data Perseroan dari Menteri Hukum Republik Indonesia.",
+                    "Pengumuman Pembubaran Perseroan dan Proses Likuidasi dalam Surat Kabar Harian yang Berperedaran Nasional sesuai ketentuan peraturan perundang-undangan.",
+                    "Penyampaian Laporan Kegiatan Penanaman Modal (LKPM) Triwulan Terakhir sampai dengan tanggal efektif pembubaran Perseroan, apabila Perseroan merupakan pelaku usaha yang wajib menyampaikan LKPM.",
+                    "Pencabutan Nomor Induk Berusaha (NIB) serta seluruh Perizinan Berusaha, Sertifikat Standar, dan/atau Izin yang diterbitkan melalui Sistem Online Single Submission Berbasis Risiko (OSS-RBA).",
+                    "Pengumuman Rencana Pembagian Sisa Kekayaan Hasil Likuidasi kepada para Pemegang Saham dalam Surat Kabar Harian sesuai dengan ketentuan Undang-Undang Perseroan Terbatas.",
+                    "Pengumuman Hasil Akhir Likuidasi Perseroan dalam Surat Kabar Harian sebagai pemberitahuan kepada para kreditur dan pihak ketiga bahwa proses pemeresan harta kekayaan Perseroan telah diselesaikan.",
+                    "Akta Laporan Pertanggungjawaban Likuidator dan Akta Penutupan Likuidasi Perseroan yang dibuat di hadapan Notaris berdasarkan persetujuan Rapat Umum Pemegang Saham (RUPS).",
+                    "Penyampaian Pemberitahuan Berakhirnya Proses Likuidasi kepada Menteri Hukum Republik Indonesia untuk pencatatan berakhirnya status badan hukum Perseroan.",
+                    "Surat Keputusan atau Surat Pencatatan Menteri Hukum Republik Indonesia mengenai Berakhirnya Status Badan Hukum Perseroan dan Penghapusan Nama Perseroan dari Daftar Perseroan."
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            {
+                "label": "PMA",
+                "nama": "PT. PMA",
+                "harga": "Rp 15.000.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Akta Pernyataan Keputusan Rapat Umum Pemegang Saham (RUPS) tentang Pembubaran Perseroan dan Penunjukan Likuidator, berikut Surat Penerimaan Pemberitahuan Perubahan Data Perseroan dari Menteri Hukum Republik Indonesia.",
+                    "Pengumuman Pembubaran Perseroan dan Proses Likuidasi dalam Surat Kabar Harian yang Berperedaran Nasional sesuai ketentuan peraturan perundang-undangan.",
+                    "Penyampaian Laporan Kegiatan Penanaman Modal (LKPM) Triwulan Terakhir sampai dengan tanggal efektif pembubaran Perseroan, apabila Perseroan merupakan pelaku usaha yang wajib menyampaikan LKPM.",
+                    "Pencabutan Nomor Induk Berusaha (NIB) serta seluruh Perizinan Berusaha, Sertifikat Standar, dan/atau Izin yang diterbitkan melalui Sistem Online Single Submission Berbasis Risiko (OSS-RBA).",
+                    "Pengumuman Rencana Pembagian Sisa Kekayaan Hasil Likuidasi kepada para Pemegang Saham dalam Surat Kabar Harian.",
+                    "Pengumuman Hasil Akhir Likuidasi Perseroan dalam Surat Kabar Harian.",
+                    "Akta Laporan Pertanggungjawaban Likuidator dan Akta Penutupan Likuidasi Perseroan.",
+                    "Penyampaian Pemberitahuan Berakhirnya Proses Likuidasi kepada Menteri Hukum Republik Indonesia.",
+                    "Surat Keputusan atau Surat Pencatatan Menteri Hukum Republik Indonesia mengenai Berakhirnya Status Badan Hukum Perseroan."
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            }
+        ],
+        "biaya_layanan_single": null,
+        "biaya_layanan_cards": null,
+        "dasar_hukum": [
+            "Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas;",
+            "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+            "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja;",
+            "Peraturan Pemerintah Nomor 8 Tahun 2021 tentang Modal Dasar Perseroan serta Pendaftaran, Pendirian, Perubahan, dan Pembubaran Perseroan yang Memenuhi Kriteria untuk Usaha Mikro dan Kecil;",
+            "Peraturan Pemerintah Nomor 43 Tahun 2011 tentang Tata Cara Pengajuan dan Pemakaian Nama Perseroan Terbatas;",
+            "Peraturan Menteri Hukum Nomor 39 Tahun 2014 tentang Tata Cara Pendirian, Perubahan dan Pembubaran Badan Hukum Perseroan;",
+            "Peraturan Menteri Hukum Nomor 1 Tahun 2023 tentang Penggunaan Sistem Informasi Elektronik Notariat;",
+            "Peraturan Direktur Jenderal Nomor: AHU-2/2016 tentang Petunjuk Pelaksanaan Administrasi Nomor Pokok, Registrasi, Daftar Perusahaan, Buku Daftar Pemilik Buku Daftar Saham dan Salinan Umum Daftar Pemegang Saham Perseroan Terbatas Komanditer dan CV Sebagaimana Saat Undang-Undang yang Mewajibkan Pelaksanaan Penanggung Perseroan."
+        ],
+        "faq": []
+    },
+    {
+        "id": 2,
+        "name": "Penutupan CV",
+        "price": "7000000",
+        "price_label": "Rp 7.000.000",
+        "excerpt": "Pendampingan lengkap proses penutupan Commanditaire Vennootschap (CV) sesuai ketentuan hukum yang berlaku.",
+        "detail_path": "/penutupan-badan-usaha/2",
+        "image": "",
+        "penjelasan_umum": [
+            "Penutupan atau pembubaran Perseroan Komanditer (CV) adalah proses penghentian kegiatan dan operasional suatu CV sebagai badan usaha yang terdiri dari Sekutu Aktif (SABLE), selanjut setelah hal ini dikerjakan akan mengakibatkan berakhirnya seluruh kewajiban untuk melaporkan perizinan, perpajakan, ihwal purna tujuan CV tersebut.",
+            "Berbeda dengan Anggaran Perseroan Terbatas (PT), CV bukan merupakan badan hukum melainkan badan usaha yang tidak berbentuk badan hukum. Oleh karena itu, proses pembubarannya dilakukan kepada Kementerian Hukum RI melalui sistem AHU, setelah hal ini selesai maka seluruh kewajiban perpajakan dan kewajiban di bidang ketenagakerjaan harus diselesaikan."
+        ],
+        "sections": [
+            {
+                "id": "tahapan-penutupan-cv",
+                "type": "numbered_list",
+                "title": "TAHAPAN PENUTUPAN CV",
+                "items": [
+                    {
+                        "title": "Rapat dan Penunjukan Para Sekutu",
+                        "bullets": [
+                            "Rapat pembubaran;",
+                            "Penunjukan sekutu untuk menyelesaikan urusan usaha dan melikuidasi CV;",
+                            "Penunjukan pembuat akta tertulis."
+                        ]
+                    },
+                    {
+                        "title": "Pembuatan Akta Pembubaran CV",
+                        "bullets": [
+                            "Nama CV;",
+                            "Tanggal pembubaran;",
+                            "Alasan pembubaran;",
+                            "Identitas pengurus (Jika diperlukan);",
+                            "Pengiriman pemberitahuan kepada Kementerian Hukum."
+                        ]
+                    },
+                    {
+                        "title": "Penyelesaian Seluruh Kewajiban (Likuidasi)",
+                        "bullets": [
+                            "Pelunasan semua utang kepada kreditur;",
+                            "Pelunasan pajak yang masih terutang;",
+                            "Penyelesaian kewajiban kepada karyawan (APU);",
+                            "Penyelesaian kontrak yang masih berjalan."
+                        ]
+                    },
+                    {
+                        "title": "Pencabutan Perizinan Berusaha",
+                        "bullets": [
+                            "Nomor Induk Berusaha (NIB);",
+                            "Perizinan berusaha lainnya yang masih aktif."
+                        ]
+                    },
+                    {
+                        "title": "Penyelesaian Kewajiban Perpajakan",
+                        "bullets": [
+                            "Pelaporan SPT Masa terakhir;",
+                            "Pelunasan kewajiban perpajakan;",
+                            "Pencabutan pengukuhan PKP (jika ada);",
+                            "Penghapusan NPWP melalui Direktorat Jenderal Pajak."
+                        ]
+                    },
+                    {
+                        "title": "Pemberitahuan Pembubaran pada SABH Kementerian Hukum",
+                        "desc": "Notaris mengajukan pemberitahuan Badan Usaha melalui Sistem Administrasi Badan Hukum (SABH) atau melalui Notaris yang bersangkutan setelah proses likuidasi selesai dan laporan keuangan akhir disiapkan (jika diperlukan)."
+                    }
+                ]
+            }
+        ],
+        "biaya_layanan_tabs": null,
+        "biaya_layanan_single": {
+            "nama": "PEMBUBARAN CV",
+            "harga": "Rp 7.000.000",
+            "gratis_konsultasi": true,
+            "mendapatkan": [
+                "Akta Pembubaran CV",
+                "Surat Keterangan Pencatatan Pembubaran CV dari Kementerian Hukum RI melalui Sistem Administrasi Badan Usaha",
+                "Pengumuman Pembubaran Perseroan dan Proses Likuidasi dalam Surat Kabar Harian yang Berperedaran Nasional sesuai ketentuan peraturan perundang-undangan.",
+                "Penyampaian Laporan Kegiatan Penanaman Modal (LKPM) Triwulan Terakhir sampai dengan tanggal efektif pembubaran Perseroan, apabila Perseroan merupakan pelaku usaha yang wajib menyampaikan LKPM.",
+                "Pencabutan Nomor Induk Berusaha (NIB) serta seluruh Perizinan Berusaha, Sertifikat Standar, dan/atau Izin yang diterbitkan melalui Sistem Online Single Submission Berbasis Risiko (OSS-RBA)."
+            ],
+            "termasuk": [
+                "Fasttrack Document Delivery Service",
+                "Fasttrack Digital Files Secure Storage",
+                "Fasttrack Kit"
+            ]
+        },
+        "biaya_layanan_cards": null,
+        "dasar_hukum": [
+            "Kitab Undang-Undang Hukum Dagang;",
+            "Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas;",
+            "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja;",
+            "Peraturan Pemerintah Nomor 36 Tahun 2023 tentang Penggunaan Sistem Informasi Elektronik Notariat;",
+            "Peraturan Menteri Hukum Nomor 36 Tahun 2023 tentang Tata Cara Penyertaan Modal Dalam Negeri Pada Perseroan Terbatas, dan Pembubaran dan Pembubaran Badan Hukum Perseroan Berbasis Risiko;",
+            "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 3 Tahun 2008 tentang Pelaksanaan Kegiatan Investasi Non Fasilitasi pada Kawasan Penanaman Modal yang Berlaku Bagi Usaha Penanaman Modal Dalam Negeri;",
+            "Peraturan Direktur Jenderal Pajak Nomor Per-17/PJ/2015 Tentang Norma Tata Cara Pendirian, Perubahan, dan Pembubaran Badan Hukum Perseroan;",
+            "Peraturan Direktur Jenderal Pajak Nomor Per-17/PJ/2015 Tentang Petunjuk Pelaksanaan Administrasi Nomor Pokok, Wajib Pajak, Objek Pajak, Daftar Pemilik Buku Daftar Saham dan Salinan Umum Daftar Pemegang Saham, Dokumen, dan Salinan Umum Daftar Pemegang Saham Perseroan Terbatas Komanditer dan Penanggung Perseroan."
+        ],
+        "faq": []
+    },
+    {
+        "id": 3,
+        "name": "Penutupan Kantor Perwakilan",
+        "price": "3000000",
+        "price_label": "Rp 3.000.000",
+        "excerpt": "Pendampingan lengkap proses penutupan Kantor Perwakilan Perusahaan Asing (KPPA) atau Kantor Perwakilan Perusahaan Perdagangan Asing (KP3A).",
+        "detail_path": "/penutupan-badan-usaha/3",
+        "image": "",
+        "penjelasan_umum": [
+            "Penutupan Kantor Perwakilan adalah proses penghentian kegiatan dan pencabutan izin operasional kantor perwakilan perusahaan asing yang diwajibkan untuk dilakukan secara resmi untuk menghapuskan kewajiban perizinan, pajak, dan ihwal tujuan fungsi penghapusan di seluruh Republik Indonesia. Bagi penutupan di seluruh Kantor Perwakilan Perdagangan Asing (KPPA) Kantor Perwakilan Perusahaan Asing (KP3A) ke dalam alas sebuah seksi.",
+            "Penutupan KPPA wajib dilakukan apabila perusahaan induk atau tujuan usaha kantor perwakilan menghendaki keberadaan kegiatan perwakilan dari Indonesia. Oleh karena itu, proses penutupannya dilakukan melalui Badan Pengelola Perdagangan (BTSP) atau Kantor Perwakilan Perdagangan Asing (KPPA), atau melalui seksi-seksi."
+        ],
+        "sections": [
+            {
+                "id": "tahapan-penutupan-kp",
+                "type": "numbered_list",
+                "title": "TAHAPAN PENUTUPAN KANTOR PERWAKILAN",
+                "items": [
+                    {
+                        "title": "Surat Kuasa Penutupan dari Kantor Pusat",
+                        "bullets": [
+                            "Penyusunan;",
+                            "Tanda tangan dan MPK (Materai);",
+                            "Penunjukan pihak yang berhak sesuai jangka mo kewenangannya di Indonesia."
+                        ]
+                    },
+                    {
+                        "title": "Pencabutan Perizinan Berusaha",
+                        "bullets": [
+                            "Pencabutan izin KPPA atau KP3A;",
+                            "Pencabutan NIB dari Kantor Perwakilan."
+                        ]
+                    },
+                    {
+                        "title": "Penyelesaian Perpajakan",
+                        "bullets": [
+                            "Pelaporan dan penyelesaian kewajiban perpajakan;",
+                            "Pencabutan NPWP melalui KPPA dari Kementerian atau Notaris;",
+                            "Penghapusan Kantor Perwakilan melalui KPPA (SABH) atau melalui Notaris atau Penerbitan setelah pencabutan CF."
+                        ]
+                    }
+                ]
+            }
+        ],
+        "biaya_layanan_tabs": null,
+        "biaya_layanan_single": null,
+        "biaya_layanan_cards": [
+            {
+                "nama": "PENCABUTAN IZIN KANTOR PERWAKILAN PERUSAHAAN ASING",
+                "harga": "Rp 3.000.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Pencabutan NIB dan Izin Kantor Perwakilan"
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            {
+                "nama": "PENCABUTAN IZIN KANTOR PERWAKILAN PERUSAHAAN PERDAGANGAN ASING",
+                "harga": "Rp 3.500.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Pencabutan NIB dan Izin Kantor Perwakilan"
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            }
+        ],
+        "dasar_hukum": [
+            "Peraturan Menteri Perdagangan Nomor 24 Tahun 2021 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+            "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 3 Tahun 2008 tentang Pelaksanaan Kegiatan Investasi Non Fasilitasi;",
+            "Peraturan Menteri Hukum Nomor 36 Tahun 2023 tentang Syarat Dan Tata Cara Pendirian, Perubahan, dan Pembubaran Badan Hukum;",
+            "Peraturan Direktur Jenderal Pajak Nomor Per-17/PJ/2015 tentang Petunjuk Pelaksanaan Administrasi Nomor Pokok Wajib Pajak, Objek Pajak, Daftar Pemilik Buku Daftar Saham dan Salinan Umum Daftar Pemegang Saham, Dokumen, dan Salinan Umum Daftar Pemegang Saham Perseroan Terbatas Komanditer dan Penanggung Perseroan Terbatas Penangggung Perseroan."
+        ],
+        "faq": []
+    }
+]
