@@ -144,286 +144,254 @@ const toggleItem = (id) => {
                         <template v-if="selectedPaket">
 
                             <!-- 3. Penjelasan Layanan -->
-                            <div v-if="selectedPaket.penjelasan_layanan?.length"
-                                class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
-                                <div class="flex items-center gap-3 mb-5">
-                                    <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan
-                                        Layanan</h2>
-                                </div>
-                                <div class="space-y-4 mb-6">
-                                    <p v-for="(p, i) in selectedPaket.penjelasan_layanan" :key="`pl-${i}`"
-                                        class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">{{ p }}</p>
-                                </div>
+<div v-if="selectedPaket.penjelasan_layanan?.length"
+    class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
+    <div class="flex items-center gap-3 mb-5">
+        <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
+        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
+            Penjelasan Layanan
+        </h2>
+    </div>
 
-                                <!-- Mode accordion (semua paket KECUALI perubahan-data-perseroan) -->
-                                <template
-                                    v-if="selectedPaket.id !== 'rapat-umum-pemegang-saham-tahunan' && selectedPaket.penjelasan_layanan_items?.length">
-                                    <div class="flex flex-col divide-y divide-[#F0F0EE]">
-                                        <div v-for="item in selectedPaket.penjelasan_layanan_items" :key="item.id">
-                                            <button @click="toggleItem(item.id)"
-                                                class="w-full flex items-center justify-between gap-3 py-4 text-left group">
-                                                <div class="flex items-center gap-3">
-                                                    <img src="/icons/ft-docs.svg" class="w-5 h-5 flex-shrink-0"
-                                                        alt="" />
-                                                    <span
-                                                        class="text-[13px] font-semibold text-[#1A1B18] uppercase tracking-wide group-hover:text-primary transition-colors">
-                                                        {{ item.label }}
-                                                    </span>
-                                                </div>
-                                                <div class="flex items-center gap-1.5 flex-shrink-0">
-                                                    <span class="text-[12px] font-medium text-primary">
-                                                        {{ openItemId === item.id ? 'Tutup' : 'Selengkapnya' }}
-                                                    </span>
-                                                    <svg class="h-4 w-4 text-primary transition-transform duration-200"
-                                                        :class="openItemId === item.id ? 'rotate-90' : ''" fill="none"
-                                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M9 5l7 7-7 7" />
-                                                    </svg>
-                                                </div>
-                                            </button>
+    <!-- Format lama: array of string -->
+    <template v-if="typeof selectedPaket.penjelasan_layanan[0] === 'string'">
+        <div class="space-y-4 mb-6">
+            <p v-for="(p, i) in selectedPaket.penjelasan_layanan" :key="`pl-${i}`"
+                class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">
+                {{ p }}
+            </p>
+        </div>
+    </template>
 
-                                            <div v-if="openItemId === item.id" class="pb-6">
-                                                <!-- Penjelasan Detail -->
-                                                <div v-if="item.penjelasan_detail?.length"
-                                                    class="rounded-xl border border-[#E8E8E6] bg-[#F7F7F5] p-5 mb-4">
-                                                    <div class="flex items-center gap-2 mb-4">
-                                                        <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
-                                                        <h3
-                                                            class="text-[13px] font-bold uppercase tracking-widest text-black">
-                                                            Penjelasan Detail</h3>
-                                                    </div>
-                                                    <div class="space-y-2">
-                                                        <p v-for="(p, i) in item.penjelasan_detail" :key="`pd-${i}`"
-                                                            class="text-[13px] leading-[1.8] text-[#3D3D3A] text-justify"
-                                                            :class="{ 'pl-4': p.match(/^\d+\./) || p.startsWith('•') }">
-                                                            {{ p }}
-                                                        </p>
-                                                    </div>
-                                                </div>
+    <!-- Format baru: array of objects { type: 'title' | 'paragraph', text } -->
+    <template v-else>
+        <div class="space-y-3 mb-6">
+            <template v-for="(block, i) in selectedPaket.penjelasan_layanan" :key="`pl-${i}`">
+                <p v-if="block.type === 'title'"
+                    class="text-[14px] font-bold text-[#1A1B18] leading-snug pt-3">
+                    {{ block.text }}
+                </p>
+                <p v-else-if="block.type === 'paragraph'"
+                    class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">
+                    {{ block.text }}
+                </p>
+            </template>
+        </div>
+    </template>
 
-                                                <!-- Paket & Harga -->
-                                                <div v-if="item.paket_harga"
-                                                    class="rounded-xl border border-[#E8E8E6] bg-[#F7F7F5] p-5 mb-4">
-                                                    <div class="flex items-center gap-2 mb-4">
-                                                        <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
-                                                        <h3
-                                                            class="text-[13px] font-bold uppercase tracking-widest text-black">
-                                                            Paket & Harga</h3>
-                                                    </div>
-                                                    <div class="rounded-xl border border-[#E8E8E6] bg-white p-4">
-                                                        <div class="flex items-start justify-between gap-2 mb-1">
-                                                            <p class="text-[13px] font-bold text-[#1A1B18]">{{
-                                                                item.paket_harga.nama }}</p>
-                                                            <span v-if="item.paket_harga.modal_note"
-                                                                class="text-[10px] text-[#686964] whitespace-nowrap flex-shrink-0">
-                                                                {{ item.paket_harga.modal_note }}
-                                                            </span>
-                                                        </div>
-                                                        <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
-                                                        <p
-                                                            class="text-[24px] font-bold text-primary leading-tight mb-2">
-                                                            {{ item.paket_harga.harga }}</p>
-                                                        <div v-if="item.paket_harga.gratis_konsultasi"
-                                                            class="flex items-center gap-1.5 mb-4">
-                                                            <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0"
-                                                                alt="" />
-                                                            <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi
-                                                                Pra dan Pasca Seleksi</span>
-                                                        </div>
-                                                        <hr class="border-[#E8E8E6] mb-4" />
-                                                        <div v-if="item.paket_harga.dokumen_legalitas?.length"
-                                                            class="mb-4">
-                                                            <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">
-                                                                Dokumen Legalitas</p>
-                                                            <ul class="space-y-2">
-                                                                <li v-for="(dok, di) in item.paket_harga.dokumen_legalitas"
-                                                                    :key="`dok-${di}`" class="flex items-start gap-2">
-                                                                    <img src="/icons/ft-done.svg"
-                                                                        class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                                                    <span
-                                                                        class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{
-                                                                        dok }}</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div v-if="item.paket_harga.termasuk?.length" class="mb-5">
-                                                            <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">
-                                                                Termasuk</p>
-                                                            <ul class="space-y-2">
-                                                                <li v-for="(tmsk, ti) in item.paket_harga.termasuk"
-                                                                    :key="`tmsk-${ti}`" class="flex items-start gap-2">
-                                                                    <img src="/icons/ft-done.svg"
-                                                                        class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                                                    <span
-                                                                        class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{
-                                                                        tmsk }}</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <a :href="buildWhatsappLink(product.name, item.paket_harga.nama)"
-                                                            target="_blank" rel="noopener noreferrer"
-                                                            class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                                                            Pesan Sekarang
-                                                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
-                                                                stroke="currentColor" stroke-width="2.5">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
+    <!-- Mode accordion (semua paket KECUALI perubahan-data-perseroan) -->
+    <template v-if="selectedPaket.id !== 'rapat-umum-pemegang-saham-tahunan' && selectedPaket.penjelasan_layanan_items?.length">
+        <div class="flex flex-col divide-y divide-[#F0F0EE]">
+            <div v-for="item in selectedPaket.penjelasan_layanan_items" :key="item.id">
+                <button @click="toggleItem(item.id)"
+                    class="w-full flex items-center justify-between gap-3 py-4 text-left group">
+                    <div class="flex items-center gap-3">
+                        <img src="/icons/ft-docs.svg" class="w-5 h-5 flex-shrink-0" alt="" />
+                        <span class="text-[13px] font-semibold text-[#1A1B18] uppercase tracking-wide group-hover:text-primary transition-colors">
+                            {{ item.label }}
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-1.5 flex-shrink-0">
+                        <span class="text-[12px] font-medium text-primary">
+                            {{ openItemId === item.id ? 'Tutup' : 'Selengkapnya' }}
+                        </span>
+                        <svg class="h-4 w-4 text-primary transition-transform duration-200"
+                            :class="openItemId === item.id ? 'rotate-90' : ''"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </button>
 
-                                                <!-- Dokumen Diperlukan -->
-                                                <div v-if="item.dokumen_diperlukan?.length"
-                                                    class="rounded-xl border border-[#E8E8E6] bg-[#F7F7F5] p-5">
-                                                    <div class="flex items-center gap-2 mb-4">
-                                                        <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
-                                                        <h3
-                                                            class="text-[13px] font-bold uppercase tracking-widest text-black">
-                                                            Dokumen dan Informasi yang Diperlukan</h3>
-                                                    </div>
-                                                    <div class="space-y-4">
-                                                        <div v-for="dok in item.dokumen_diperlukan"
-                                                            :key="`ddp-${dok.nomor}`" class="flex gap-4">
-                                                            <span
-                                                                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white text-[12px] font-bold mt-0.5">
-                                                                {{ dok.nomor }}
-                                                            </span>
-                                                            <div>
-                                                                <p
-                                                                    class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-2">
-                                                                    {{ dok.judul }}</p>
-                                                                <ul v-if="dok.items?.length" class="space-y-1.5">
-                                                                    <li v-for="(point, pi) in dok.items"
-                                                                        :key="`ddp-point-${pi}`"
-                                                                        class="flex items-start gap-2 text-[12px] leading-[1.6] text-[#3D3D3A]">
-                                                                        <span
-                                                                            class="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3D3D3A]"></span>
-                                                                        <span>{{ point }}</span>
-                                                                    </li>
-                                                                </ul>
-                                                                <p v-if="dok.desc"
-                                                                    class="text-[12px] leading-[1.7] text-[#3D3D3A] mt-1">
-                                                                    {{ dok.desc }}</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </template>
+                <div v-if="openItemId === item.id" class="pb-6">
+                    <!-- Penjelasan Detail -->
+                    <div v-if="item.penjelasan_detail?.length"
+                        class="rounded-xl border border-[#E8E8E6] bg-[#F7F7F5] p-5 mb-4">
+                        <div class="flex items-center gap-2 mb-4">
+                            <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
+                            <h3 class="text-[13px] font-bold uppercase tracking-widest text-black">Penjelasan Detail</h3>
+                        </div>
+                        <div class="space-y-2">
+                            <p v-for="(p, i) in item.penjelasan_detail" :key="`pd-${i}`"
+                                class="text-[13px] leading-[1.8] text-[#3D3D3A] text-justify"
+                                :class="{ 'pl-4': p.match(/^\d+\./) || p.startsWith('•') }">
+                                {{ p }}
+                            </p>
+                        </div>
+                    </div>
 
-                                <!-- Mode flat/non-accordion (khusus perubahan-data-perseroan) -->
-                                <template
-                                    v-else-if="selectedPaket.id === 'rapat-umum-pemegang-saham-tahunan' && selectedPaket.penjelasan_layanan_items?.length">
-                                    <div v-for="item in selectedPaket.penjelasan_layanan_items" :key="item.id"
-                                        class="mb-8 last:mb-0">
-
-                                        <!-- Paket & Harga -->
-                                        <div v-if="item.paket_harga" class="mb-5">
-                                            <div class="flex items-center gap-2 mb-4">
-                                                <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                                <h3 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                                    Paket & Harga</h3>
-                                            </div>
-                                            <div class="rounded-xl border border-[#E8E8E6] p-5">
-                                                <div class="flex items-start justify-between gap-2 mb-1">
-                                                    <p class="text-[13px] font-bold text-[#1A1B18]">{{
-                                                        item.paket_harga.nama }}</p>
-                                                    <span v-if="item.paket_harga.modal_note"
-                                                        class="text-[10px] text-[#686964] whitespace-nowrap flex-shrink-0">
-                                                        {{ item.paket_harga.modal_note }}
-                                                    </span>
-                                                </div>
-                                                <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
-                                                <p class="text-[24px] font-bold text-primary leading-tight mb-2">{{
-                                                    item.paket_harga.harga }}</p>
-                                                <div v-if="item.paket_harga.gratis_konsultasi"
-                                                    class="flex items-center gap-1.5 mb-4">
-                                                    <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0"
-                                                        alt="" />
-                                                    <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Pra dan
-                                                        Pasca Seleksi</span>
-                                                </div>
-                                                <hr class="border-[#E8E8E6] mb-4" />
-                                                <div v-if="item.paket_harga.dokumen_legalitas?.length" class="mb-4">
-                                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">Dokumen
-                                                        Legalitas</p>
-                                                    <ul class="space-y-2">
-                                                        <li v-for="(dok, di) in item.paket_harga.dokumen_legalitas"
-                                                            :key="`fdok-${di}`" class="flex items-start gap-2">
-                                                            <img src="/icons/ft-done.svg"
-                                                                class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                                            <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{
-                                                                dok }}</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div v-if="item.paket_harga.termasuk?.length" class="mb-5">
-                                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">Termasuk</p>
-                                                    <ul class="space-y-2">
-                                                        <li v-for="(tmsk, ti) in item.paket_harga.termasuk"
-                                                            :key="`ftmsk-${ti}`" class="flex items-start gap-2">
-                                                            <img src="/icons/ft-done.svg"
-                                                                class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                                            <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{
-                                                                tmsk }}</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <a :href="buildWhatsappLink(product.name, item.paket_harga.nama)"
-                                                    target="_blank" rel="noopener noreferrer"
-                                                    class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                                                    Pesan Sekarang
-                                                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
-                                                        stroke="currentColor" stroke-width="2.5">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <!-- Dokumen dan Informasi Diperlukan -->
-                                        <div v-if="item.dokumen_diperlukan?.length">
-                                            <div class="flex items-center gap-2 mb-4">
-                                                <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                                <h3 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                                    Dokumen dan Informasi yang Diperlukan</h3>
-                                            </div>
-                                            <div class="space-y-5">
-                                                <div v-for="dok in item.dokumen_diperlukan" :key="`fddp-${dok.nomor}`"
-                                                    class="flex gap-4">
-                                                    <span
-                                                        class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white text-[12px] font-bold mt-0.5">
-                                                        {{ dok.nomor }}
-                                                    </span>
-                                                    <div class="flex-1">
-                                                        <p
-                                                            class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-2">
-                                                            {{ dok.judul }}</p>
-                                                        <ul v-if="dok.items?.length" class="space-y-1.5 mb-2">
-                                                            <li v-for="(point, pi) in dok.items"
-                                                                :key="`fddp-point-${pi}`"
-                                                                class="flex items-start gap-2 text-[13px] leading-[1.6] text-[#3D3D3A]">
-                                                                <span
-                                                                    class="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3D3D3A]"></span>
-                                                                <span>{{ point }}</span>
-                                                            </li>
-                                                        </ul>
-                                                        <p v-if="dok.desc"
-                                                            class="text-[13px] leading-[1.7] text-[#3D3D3A]">{{ dok.desc
-                                                            }}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </template>
+                    <!-- Paket & Harga -->
+                    <div v-if="item.paket_harga"
+                        class="rounded-xl border border-[#E8E8E6] bg-[#F7F7F5] p-5 mb-4">
+                        <div class="flex items-center gap-2 mb-4">
+                            <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
+                            <h3 class="text-[13px] font-bold uppercase tracking-widest text-black">Paket & Harga</h3>
+                        </div>
+                        <div class="rounded-xl border border-[#E8E8E6] bg-white p-4">
+                            <div class="flex items-start justify-between gap-2 mb-1">
+                                <p class="text-[13px] font-bold text-[#1A1B18]">{{ item.paket_harga.nama }}</p>
+                                <span v-if="item.paket_harga.modal_note"
+                                    class="text-[10px] text-[#686964] whitespace-nowrap flex-shrink-0">
+                                    {{ item.paket_harga.modal_note }}
+                                </span>
                             </div>
+                            <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+                            <p class="text-[24px] font-bold text-primary leading-tight mb-2">{{ item.paket_harga.harga }}</p>
+                            <div v-if="item.paket_harga.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
+                                <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
+                                <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Pra dan Pasca Seleksi</span>
+                            </div>
+                            <hr class="border-[#E8E8E6] mb-4" />
+                            <div v-if="item.paket_harga.dokumen_legalitas?.length" class="mb-4">
+                                <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">Dokumen Legalitas</p>
+                                <ul class="space-y-2">
+                                    <li v-for="(dok, di) in item.paket_harga.dokumen_legalitas" :key="`dok-${di}`"
+                                        class="flex items-start gap-2">
+                                        <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
+                                        <span class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{ dok }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div v-if="item.paket_harga.termasuk?.length" class="mb-5">
+                                <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">Termasuk</p>
+                                <ul class="space-y-2">
+                                    <li v-for="(tmsk, ti) in item.paket_harga.termasuk" :key="`tmsk-${ti}`"
+                                        class="flex items-start gap-2">
+                                        <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
+                                        <span class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{ tmsk }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a :href="buildWhatsappLink(product.name, item.paket_harga.nama)"
+                                target="_blank" rel="noopener noreferrer"
+                                class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
+                                Pesan Sekarang
+                                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dokumen Diperlukan -->
+                    <div v-if="item.dokumen_diperlukan?.length"
+                        class="rounded-xl border border-[#E8E8E6] bg-[#F7F7F5] p-5">
+                        <div class="flex items-center gap-2 mb-4">
+                            <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
+                            <h3 class="text-[13px] font-bold uppercase tracking-widest text-black">
+                                Dokumen dan Informasi yang Diperlukan
+                            </h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div v-for="dok in item.dokumen_diperlukan" :key="`ddp-${dok.nomor}`" class="flex gap-4">
+                                <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white text-[12px] font-bold mt-0.5">
+                                    {{ dok.nomor }}
+                                </span>
+                                <div>
+                                    <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-2">{{ dok.judul }}</p>
+                                    <ul v-if="dok.items?.length" class="space-y-1.5">
+                                        <li v-for="(point, pi) in dok.items" :key="`ddp-point-${pi}`"
+                                            class="flex items-start gap-2 text-[12px] leading-[1.6] text-[#3D3D3A]">
+                                            <span class="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3D3D3A]"></span>
+                                            <span>{{ point }}</span>
+                                        </li>
+                                    </ul>
+                                    <p v-if="dok.desc" class="text-[12px] leading-[1.7] text-[#3D3D3A] mt-1">{{ dok.desc }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Mode flat/non-accordion (khusus perubahan-data-perseroan) -->
+    <template v-else-if="selectedPaket.id === 'rapat-umum-pemegang-saham-tahunan' && selectedPaket.penjelasan_layanan_items?.length">
+        <div v-for="item in selectedPaket.penjelasan_layanan_items" :key="item.id" class="mb-8 last:mb-0">
+
+            <!-- Paket & Harga -->
+            <div v-if="item.paket_harga" class="mb-5">
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
+                    <h3 class="text-[15px] font-bold uppercase tracking-widest text-black">Paket & Harga</h3>
+                </div>
+                <div class="rounded-xl border border-[#E8E8E6] p-5">
+                    <div class="flex items-start justify-between gap-2 mb-1">
+                        <p class="text-[13px] font-bold text-[#1A1B18]">{{ item.paket_harga.nama }}</p>
+                        <span v-if="item.paket_harga.modal_note"
+                            class="text-[10px] text-[#686964] whitespace-nowrap flex-shrink-0">
+                            {{ item.paket_harga.modal_note }}
+                        </span>
+                    </div>
+                    <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+                    <p class="text-[24px] font-bold text-primary leading-tight mb-2">{{ item.paket_harga.harga }}</p>
+                    <div v-if="item.paket_harga.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
+                        <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
+                        <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Pra dan Pasca Seleksi</span>
+                    </div>
+                    <hr class="border-[#E8E8E6] mb-4" />
+                    <div v-if="item.paket_harga.dokumen_legalitas?.length" class="mb-4">
+                        <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">Dokumen Legalitas</p>
+                        <ul class="space-y-2">
+                            <li v-for="(dok, di) in item.paket_harga.dokumen_legalitas" :key="`fdok-${di}`"
+                                class="flex items-start gap-2">
+                                <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
+                                <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ dok }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div v-if="item.paket_harga.termasuk?.length" class="mb-5">
+                        <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">Termasuk</p>
+                        <ul class="space-y-2">
+                            <li v-for="(tmsk, ti) in item.paket_harga.termasuk" :key="`ftmsk-${ti}`"
+                                class="flex items-start gap-2">
+                                <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
+                                <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ tmsk }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a :href="buildWhatsappLink(product.name, item.paket_harga.nama)"
+                        target="_blank" rel="noopener noreferrer"
+                        class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
+                        Pesan Sekarang
+                        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dokumen dan Informasi Diperlukan -->
+            <div v-if="item.dokumen_diperlukan?.length">
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
+                    <h3 class="text-[15px] font-bold uppercase tracking-widest text-black">
+                        Dokumen dan Informasi yang Diperlukan
+                    </h3>
+                </div>
+                <div class="space-y-5">
+                    <div v-for="dok in item.dokumen_diperlukan" :key="`fddp-${dok.nomor}`" class="flex gap-4">
+                        <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white text-[12px] font-bold mt-0.5">
+                            {{ dok.nomor }}
+                        </span>
+                        <div class="flex-1">
+                            <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-2">{{ dok.judul }}</p>
+                            <ul v-if="dok.items?.length" class="space-y-1.5 mb-2">
+                                <li v-for="(point, pi) in dok.items" :key="`fddp-point-${pi}`"
+                                    class="flex items-start gap-2 text-[13px] leading-[1.6] text-[#3D3D3A]">
+                                    <span class="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3D3D3A]"></span>
+                                    <span>{{ point }}</span>
+                                </li>
+                            </ul>
+                            <p v-if="dok.desc" class="text-[13px] leading-[1.7] text-[#3D3D3A]">{{ dok.desc }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
 
                             <!-- 4. Dasar Hukum -->
                             <div v-if="selectedPaket.dasar_hukum?.length"

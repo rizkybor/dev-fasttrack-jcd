@@ -758,69 +758,108 @@
                 "deskripsi": "Pembuatan akta RUPS Tahunan untuk pengesahan laporan keuangan dan pelaporan ke Kementerian Hukum RI.",
                 "harga": "Rp 3.000.000",
                 "penjelasan_layanan": [
-                    "Layanan pendampingan penyelenggaraan RUPS Tahunan dan penyusunan akta notaris untuk pengesahan laporan keuangan serta pelaporan ke Kementerian Hukum RI sesuai ketentuan yang berlaku."
+                    {
+                        "type": "paragraph",
+                        "text": "Rapat Umum Pemegang Saham Tahunan (RUPS Tahunan) merupakan kewajiban yang harus diselenggarakan oleh setiap Perseroan Terbatas (PT) sebagai bentuk pertanggungjawaban perusahaan kepada para pemegang saham. Pelaksanaan RUPS Tahunan dilakukan paling lambat enam bulan setelah berakhirnya tahun buku Perseroan."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Agenda utama dalam rapat ini adalah untuk membahas dan mengesahkan laporan tahunan serta laporan keuangan perusahaan. Selain itu, RUPS Tahunan juga berfungsi untuk menentukan penggunaan laba bersih perusahaan, termasuk keputusan mengenai pembagian dividen kepada para pemegang saham sesuai dengan hasil kinerja Perseroan selama satu tahun buku."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Dalam hal Rapat Umum Pemegang Saham Tahunan terdapat beberapa ketentuan yang harus dipenuhi agar dapat dilaksanakan secara sah dan sesuai dengan peraturan yang berlaku. Ketentuan ini penting untuk memastikan bahwa perseroan telah memenuhi kewajibannya dalam hal menyampaikan laporan tahunan, oleh karenanya syarat dan ketentuan diatur sebagai berikut :"
+                    },
+                    {
+                        "type": "title",
+                        "text": "Batas Waktu"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Pelaksanaan Rapat Umum Pemegang Saham Tahunan (RUPS Tahunan) saat ini mengikuti ketentuan terbaru yang lebih terstruktur dan mengikat. RUPS Tahunan wajib diselenggarakan paling lambat enam bulan setelah berakhirnya tahun buku Perseroan. Dalam praktiknya, untuk tahun buku yang berakhir pada bulan Desember, pelaksanaan RUPS biasanya dilakukan selambat-lambatnya pada bulan Juni tahun berikutnya."
+                    },
+                    {
+                        "type": "title",
+                        "text": "Dimuat dalam Akta Notaris"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Selain batas waktu pelaksanaan, hasil RUPS Tahunan juga wajib dituangkan dalam bentuk akta notaris. Ketentuan ini mengacu pada regulasi terbaru, termasuk Peraturan Menteri Hukum dan HAM, yang menegaskan bahwa hasil keputusan RUPS tidak cukup hanya berupa risalah di bawah tangan, melainkan harus dibuat dalam akta autentik oleh notaris agar memiliki kekuatan hukum yang sah dan dapat dipertanggungjawabkan."
+                    },
+                    {
+                        "type": "title",
+                        "text": "Direksi menunjuk Notaris"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Direksi memiliki kewajiban untuk melaporkan hasil RUPS Tahunan beserta laporan tahunan Perseroan kepada Kementerian Hukum dan HAM melalui Sistem Administrasi Badan Hukum (SABH). Pelaporan ini menjadi bagian penting dalam pemenuhan kewajiban administrasi dan transparansi Perseroan di hadapan otoritas yang berwenang"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Apabila Direksi lalai dalam menyelenggarakan RUPS Tahunan sesuai ketentuan yang berlaku, maka dapat dikenakan tanggung jawab pribadi secara tanggung renteng. Selain itu, Perseroan juga berpotensi mendapatkan sanksi administratif, termasuk pembatasan atau pemblokiran akses pada sistem SABH, yang dapat menghambat proses administrasi hukum perusahaan."
+                    }
                 ],
                 "penjelasan_layanan_items": [
-        {
-            "id": "perubahan-susunan-direksi",
-            "label": "PERUBAHAN SUSUNAN DIREKSI/DEWAN KOMISARIS",
-            "paket_harga": {
-                "nama": "PERUBAHAN SUSUNAN DIREKSI/DEWAN KOMISARIS",
-                "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
-                "harga": "Rp 3.000.000",
-                "gratis_konsultasi": true,
-                "dokumen_legalitas": [
-                    "Salinan Akta Pernyataan Keputusan Para Pemegang Saham",
-                    "Surat Keterangan Pengesahan Perubahan Anggaran Dasar dari Kementerian Hukum RI"
+                    {
+                        "id": "perubahan-susunan-direksi",
+                        "label": "PERUBAHAN SUSUNAN DIREKSI/DEWAN KOMISARIS",
+                        "paket_harga": {
+                            "nama": "PERUBAHAN SUSUNAN DIREKSI/DEWAN KOMISARIS",
+                            "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
+                            "harga": "Rp 3.000.000",
+                            "gratis_konsultasi": true,
+                            "dokumen_legalitas": [
+                                "Salinan Akta Pernyataan Keputusan Para Pemegang Saham",
+                                "Surat Keterangan Pengesahan Perubahan Anggaran Dasar dari Kementerian Hukum RI"
+                            ],
+                            "termasuk": [
+                                "Fasttrack Document Delivery Service",
+                                "Fasttrack Digital Files Secure Storage",
+                                "Fasttrack Kit"
+                            ]
+                        },
+                        "dokumen_diperlukan": [
+                            {
+                                "nomor": 1,
+                                "judul": "Data Para Pemegang Saham",
+                                "items": [
+                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                    "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                    "Data: Nomor telepon, Alamat email"
+                                ]
+                            },
+                            {
+                                "nomor": 2,
+                                "judul": "Legalitas Perusahaan Yang Dimiliki",
+                                "items": [
+                                    "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
+                                    "Seluruh Akta Perubahan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                    "Nomor Poko Wajib Pajak Perseroan;",
+                                    "Nomor Induk Perusahaan."
+                                ]
+                            },
+                            {
+                                "nomor": 3,
+                                "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                "items": [
+                                    "Seluruh rancangan dari isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                                ]
+                            },
+                            {
+                                "nomor": 4,
+                                "judul": "Laporan Tahunan Perseroan",
+                                "desc": "Paling sedikit: laporan mengenai kegiatan perseroan, laporan pelaksanaan tanggung jawab sosial dan lingkungan, rincian masalah yang timbul selama tahun buku yang mempengaruhi kegiatan usaha Perseroan, laporan mengenai tugas pengawasan yang telah dilaksanakan oleh Dewan Komisaris selama tahun buku yang baru lampui, nama anggota direksi dan anggota dewan komisaris, gaji dan tunjangan bagi anggota direksi dan gaji atau honorarium dan tunjangan bagi anggota dewan komisaris perseroan untuk tahun yang baru lampau) (catatan: Jika Aset Perusahaan masuk kriteria wajib audit)",
+                                "items": []
+                            },
+                            {
+                                "nomor": 5,
+                                "judul": "Laporan Keuangan",
+                                "desc": "Neraca akhir tahun buku yang baru lampau dalam perbandingan dengan tahun buku sebelumnya, laporan laba rugi dari tahun buku yang bersangkutan, laporan arus kas, dan laporan perubahan ekuitas, serta catatan atas laporan keuangan tersebut)",
+                                "items": []
+                            }
+                        ]
+                    }
                 ],
-                "termasuk": [
-                    "Fasttrack Document Delivery Service",
-                    "Fasttrack Digital Files Secure Storage",
-                    "Fasttrack Kit"
-                ]
-            },
-            "dokumen_diperlukan": [
-                {
-                    "nomor": 1,
-                    "judul": "Data Para Pemegang Saham",
-                    "items": [
-                        "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
-                        "Data: Nomor telepon, Alamat email"
-                    ]
-                },
-                {
-                    "nomor": 2,
-                    "judul": "Legalitas Perusahaan Yang Dimiliki",
-                    "items": [
-                        "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
-                        "Seluruh Akta Perubahan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
-                        "Nomor Poko Wajib Pajak Perseroan;",
-                        "Nomor Induk Perusahaan."
-                    ]
-                },
-                {
-                    "nomor": 3,
-                    "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
-                    "items": [
-                        "Seluruh rancangan dari isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
-                    ]
-                },
-                {
-                    "nomor": 4,
-                    "judul": "Laporan Tahunan Perseroan",
-                    "desc": "Paling sedikit: laporan mengenai kegiatan perseroan, laporan pelaksanaan tanggung jawab sosial dan lingkungan, rincian masalah yang timbul selama tahun buku yang mempengaruhi kegiatan usaha Perseroan, laporan mengenai tugas pengawasan yang telah dilaksanakan oleh Dewan Komisaris selama tahun buku yang baru lampui, nama anggota direksi dan anggota dewan komisaris, gaji dan tunjangan bagi anggota direksi dan gaji atau honorarium dan tunjangan bagi anggota dewan komisaris perseroan untuk tahun yang baru lampau) (catatan: Jika Aset Perusahaan masuk kriteria wajib audit)",
-                    "items": []
-                },
-                {
-                    "nomor": 5,
-                    "judul": "Laporan Keuangan",
-                    "desc": "Neraca akhir tahun buku yang baru lampau dalam perbandingan dengan tahun buku sebelumnya, laporan laba rugi dari tahun buku yang bersangkutan, laporan arus kas, dan laporan perubahan ekuitas, serta catatan atas laporan keuangan tersebut)",
-                    "items": []
-                }
-            ]
-        }
-    ],
                 "dasar_hukum": []
             }
         ],
