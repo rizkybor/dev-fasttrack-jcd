@@ -27,7 +27,6 @@ const searchQuery = ref("");
 const filterKategori = ref("Semua");
 const showDropdown = ref(false);
 
-// Daftar kategori unik (1 huruf saja)
 const kategoriOptions = computed(() => {
     const cats = [
         ...new Set(
@@ -48,7 +47,6 @@ const filteredData = computed(() => {
 
     const q = searchQuery.value.trim().toLowerCase();
     if (q) {
-        // Saat ada query: filter 5 digit dulu, baru cocokkan keyword
         data = data
             .filter((r) => /^\d{5}$/.test(r.kbl_2020?.trim() ?? ""))
             .filter(
@@ -63,7 +61,6 @@ const filteredData = computed(() => {
     return data;
 });
 
-// Reset page saat filter/search berubah
 watch([searchQuery, filterKategori], () => {
     currentPage.value = 1;
 });
@@ -86,7 +83,6 @@ const setPage = (p) => {
     if (p >= 1 && p <= totalPages.value) currentPage.value = p;
 };
 
-// Halaman yang ditampilkan di pagination
 const pageNumbers = computed(() => {
     const total = totalPages.value;
     const cur = currentPage.value;
@@ -123,7 +119,6 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
     <MainLayout>
         <!-- ── Hero ──────────────────────────────────────────────────────── -->
         <section class="relative overflow-hidden bg-[#9e1f16]">
-            <!-- Decorative arrow shape (right side, matches site pattern) -->
             <img
                 src="/icons/left-arrow.svg"
                 class="absolute right-0 -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block"
@@ -136,7 +131,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                 <div
                     class="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16"
                 >
-                    <!-- ── Left: Text content ─────────────────────────────── -->
+                    <!-- Left: Text content -->
                     <div class="relative z-10">
                         <!-- Breadcrumb -->
                         <nav class="mb-8" aria-label="Breadcrumb">
@@ -180,7 +175,6 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                             </div>
                         </nav>
 
-                        <!-- Heading -->
                         <h1
                             class="text-2xl font-extrabold leading-tight text-white sm:text-4xl lg:text-4xl"
                         >
@@ -194,7 +188,6 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                             atau pembaharuan data NIB pada sistem OSS terbaru.
                         </p>
 
-                        <!-- Download button -->
                         <div class="mt-8">
                             <a
                                 href="/files/tabel-konversi-2020-x-2025.pdf"
@@ -219,7 +212,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                         </div>
                     </div>
 
-                    <!-- ── Right: Book image ──────────────────────────────── -->
+                    <!-- Right: Book image -->
                     <div class="hidden lg:flex items-end justify-center">
                         <img
                             src="/images/ft-kbli-tabel-konversi.png"
@@ -232,25 +225,26 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
         </section>
 
         <!-- ── Main Content ──────────────────────────────────────────────── -->
-        <section class="py-[52px]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-8">
+        <section class="py-10 sm:py-[52px]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-6 sm:gap-8">
+
                 <!-- ── Card Tabel ─────────────────────────────────────────── -->
                 <div
-                    class="rounded-2xl border border-[#D9DAD8] bg-white p-6 sm:p-8 shadow-sm"
+                    class="rounded-2xl border border-[#D9DAD8] bg-white p-4 sm:p-6 lg:p-8 shadow-sm"
                 >
                     <!-- Header -->
-                    <div class="flex items-start gap-2 mb-4">
+                    <div class="flex items-start gap-2 mb-3 sm:mb-4">
                         <img
                             src="/icons/ft-docs.svg"
-                            class="w-8 h-8"
+                            class="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0"
                             alt="docs categories"
                         />
-                        <h2 class="text-[18px] font-bold text-[#1A1B18]">
+                        <h2 class="text-[16px] sm:text-[18px] font-bold text-[#1A1B18]">
                             Tabel Konversi KBLI 2020 x KBLI 2025
                         </h2>
                     </div>
 
-                    <p class="text-[13px] leading-[22px] text-[#686964] mb-6">
+                    <p class="text-[13px] leading-[22px] text-[#686964] mb-5 sm:mb-6">
                         Seiring dengan disempurnakannya KBLI 2020 menjadi KBLI
                         2025 yang telah mengacu pada struktur ISIC Revisi 5,
                         diperlukan suatu panduan yang dapat menjembatani
@@ -262,10 +256,10 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                     </p>
 
                     <!-- Divider -->
-                    <div class="h-px w-full bg-[#D9DAD8] mb-6"></div>
+                    <div class="h-px w-full bg-[#D9DAD8] mb-5 sm:mb-6"></div>
 
                     <!-- Search + Filter -->
-                    <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                    <div class="flex flex-col sm:flex-row gap-3 mb-5 sm:mb-6">
                         <!-- Search -->
                         <div class="relative flex-1">
                             <svg
@@ -284,20 +278,20 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                             <input
                                 v-model="searchQuery"
                                 type="text"
-                                placeholder="Cari berdasarkan kode 5 digit atau kata kunci uraian usaha."
+                                placeholder="Cari kode atau uraian usaha..."
                                 class="w-full pl-10 pr-4 py-2.5 text-[13px] border border-[#D9DAD8] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9e1f16]/20 focus:border-[#9e1f16] placeholder-[#9CA3AF] bg-white"
                             />
                         </div>
 
                         <!-- Filter Dropdown -->
-                        <div class="relative flex-shrink-0" ref="dropdownRef">
+                        <div class="relative" ref="dropdownRef">
                             <button
                                 @click="showDropdown = !showDropdown"
-                                class="flex items-center gap-2 px-4 py-2.5 text-[13px] font-medium border border-[#D9DAD8] rounded-lg bg-white text-[#1A1B18] hover:bg-[#F9F9F9] transition-colors min-w-[110px] justify-between"
+                                class="flex items-center gap-2 px-4 py-2.5 text-[13px] font-medium border border-[#D9DAD8] rounded-lg bg-white text-[#1A1B18] hover:bg-[#F9F9F9] transition-colors w-full sm:w-auto justify-between sm:justify-start sm:min-w-[110px]"
                             >
                                 <span>{{ filterKategori }}</span>
                                 <svg
-                                    class="h-4 w-4 text-[#686964]"
+                                    class="h-4 w-4 text-[#686964] ml-auto sm:ml-0"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -312,7 +306,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                             </button>
                             <div
                                 v-if="showDropdown"
-                                class="absolute right-0 top-full mt-1 z-20 bg-white border border-[#D9DAD8] rounded-xl shadow-lg py-1 min-w-[130px] max-h-60 overflow-y-auto"
+                                class="absolute left-0 sm:right-0 sm:left-auto top-full mt-1 z-20 bg-white border border-[#D9DAD8] rounded-xl shadow-lg py-1 w-full sm:min-w-[130px] max-h-60 overflow-y-auto"
                             >
                                 <button
                                     v-for="opt in kategoriOptions"
@@ -373,34 +367,82 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                         </p>
                     </div>
 
-                    <!-- Table -->
+                    <!-- Data -->
                     <template v-else>
-                        <div
-                            class="overflow-x-auto rounded-xl border border-[#D9DAD8]"
-                        >
-                            <table class="w-full text-[13px]">
+
+                        <!-- ── MOBILE: Card list (< sm) ─────────────────── -->
+                        <div class="flex flex-col gap-3 sm:hidden">
+                            <template v-if="pagedData.length > 0">
+                                <div
+                                    v-for="(row, i) in pagedData"
+                                    :key="i"
+                                    class="rounded-xl border border-[#E5E7EB] bg-[#FAFAFA] p-4 flex flex-col gap-3"
+                                >
+                                    <!-- KBLI 2020 -->
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-[10px] font-semibold uppercase tracking-wider text-[#9CA3AF]">KBLI 2020</span>
+                                        <div class="flex items-start gap-2">
+                                            <span class="inline-flex items-center rounded-md bg-[#9e1f16]/10 px-2 py-0.5 text-[12px] font-bold text-[#9e1f16] flex-shrink-0">
+                                                {{ row.kbl_2020?.trim() }}
+                                            </span>
+                                            <span class="text-[13px] text-[#282925] leading-[20px]">
+                                                {{ row.judul_kbl_2020?.trim() }}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Arrow divider -->
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex-1 h-px bg-[#E5E7EB]"></div>
+                                        <svg class="h-4 w-4 text-[#9CA3AF] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                        <div class="flex-1 h-px bg-[#E5E7EB]"></div>
+                                    </div>
+
+                                    <!-- KBLI 2025 -->
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-[10px] font-semibold uppercase tracking-wider text-[#9CA3AF]">KBLI 2025</span>
+                                        <div class="flex items-start gap-2">
+                                            <span class="inline-flex items-center rounded-md bg-[#1d4ed8]/10 px-2 py-0.5 text-[12px] font-bold text-[#1d4ed8] flex-shrink-0">
+                                                {{ row.kbl_2025?.trim() }}
+                                            </span>
+                                            <span class="text-[13px] text-[#282925] leading-[20px]">
+                                                {{ row.judul_kbl_2025?.trim() }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                            <div
+                                v-else
+                                class="rounded-xl border border-[#E5E7EB] py-12 text-center text-[#9CA3AF] text-[13px]"
+                            >
+                                Tidak ada data yang sesuai dengan pencarian Anda.
+                            </div>
+                        </div>
+
+                        <!-- ── DESKTOP: Table (sm ke atas) ──────────────── -->
+                        <div class="hidden sm:block overflow-x-auto rounded-xl border border-[#D9DAD8]">
+                            <table class="w-full text-[13px] table-fixed">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col />
+                                    <col style="width: 120px" />
+                                    <col />
+                                </colgroup>
                                 <thead>
-                                    <tr
-                                        class="bg-[#F3F4F6] border-b border-[#D9DAD8]"
-                                    >
-                                        <th
-                                            class="text-center px-5 py-3 font-semibold text-[#1A1B18] w-[130px]"
-                                        >
+                                    <tr class="bg-[#F3F4F6] border-b border-[#D9DAD8]">
+                                        <th class="text-center px-5 py-3 font-semibold text-[#1A1B18]">
                                             KBLI 2020
                                         </th>
-                                        <th
-                                            class="text-left px-5 py-3 font-semibold text-[#1A1B18]"
-                                        >
+                                        <th class="text-left px-5 py-3 font-semibold text-[#1A1B18]">
                                             JUDUL KBLI 2020
                                         </th>
-                                        <th
-                                            class="text-center px-5 py-3 font-semibold text-[#1A1B18] w-[130px]"
-                                        >
+                                        <th class="text-center px-5 py-3 font-semibold text-[#1A1B18]">
                                             KBLI 2025
                                         </th>
-                                        <th
-                                            class="text-left px-5 py-3 font-semibold text-[#1A1B18]"
-                                        >
+                                        <th class="text-left px-5 py-3 font-semibold text-[#1A1B18]">
                                             JUDUL KBLI 2025
                                         </th>
                                     </tr>
@@ -411,20 +453,16 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                         :key="i"
                                         class="border-b border-[#F3F4F6] last:border-b-0 hover:bg-[#FAFAFA] transition-colors"
                                     >
-                                        <td
-                                            class="text-center px-5 py-4 font-medium text-[#1A1B18]"
-                                        >
+                                        <td class="text-center px-5 py-4 font-medium text-[#1A1B18]">
                                             {{ row.kbl_2020?.trim() }}
                                         </td>
-                                        <td class="px-5 py-4 text-[#282925]">
+                                        <td class="px-5 py-4 text-[#282925] break-words">
                                             {{ row.judul_kbl_2020?.trim() }}
                                         </td>
-                                        <td
-                                            class="text-center px-5 py-4 font-medium text-[#1A1B18]"
-                                        >
+                                        <td class="text-center px-5 py-4 font-medium text-[#1A1B18]">
                                             {{ row.kbl_2025?.trim() }}
                                         </td>
-                                        <td class="px-5 py-4 text-[#282925]">
+                                        <td class="px-5 py-4 text-[#282925] break-words">
                                             {{ row.judul_kbl_2025?.trim() }}
                                         </td>
                                     </tr>
@@ -433,99 +471,50 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                             colspan="4"
                                             class="px-5 py-12 text-center text-[#9CA3AF] text-[13px]"
                                         >
-                                            Tidak ada data yang sesuai dengan
-                                            pencarian Anda.
+                                            Tidak ada data yang sesuai dengan pencarian Anda.
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <!-- Pagination -->
-                        <div
-                            class="mt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px]"
-                        >
+                        <!-- ── Pagination ───────────────────────────────── -->
+                        <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-[13px]">
+
                             <!-- Total rows -->
-                            <span class="text-[#686964]"
-                                >{{
-                                    totalRows.toLocaleString("id-ID")
-                                }}
-                                Row</span
-                            >
+                            <span class="text-[#686964] text-center sm:text-left">
+                                {{ totalRows.toLocaleString("id-ID") }} Row
+                            </span>
 
                             <!-- Page buttons -->
-                            <div class="flex items-center gap-1">
-                                <button
-                                    @click="setPage(1)"
-                                    :disabled="currentPage === 1"
-                                    class="pag-btn"
-                                >
-                                    «
-                                </button>
-                                <button
-                                    @click="setPage(currentPage - 1)"
-                                    :disabled="currentPage === 1"
-                                    class="pag-btn"
-                                >
-                                    ‹
-                                </button>
+                            <div class="flex items-center justify-center gap-1">
+                                <button @click="setPage(1)" :disabled="currentPage === 1" class="pag-btn">«</button>
+                                <button @click="setPage(currentPage - 1)" :disabled="currentPage === 1" class="pag-btn">‹</button>
                                 <button
                                     v-for="p in pageNumbers"
                                     :key="p"
                                     @click="setPage(p)"
-                                    :class="[
-                                        'pag-btn',
-                                        p === currentPage
-                                            ? 'pag-btn--active'
-                                            : '',
-                                    ]"
+                                    :class="['pag-btn', p === currentPage ? 'pag-btn--active' : '']"
                                 >
                                     {{ p }}
                                 </button>
-                                <button
-                                    @click="setPage(currentPage + 1)"
-                                    :disabled="currentPage === totalPages"
-                                    class="pag-btn"
-                                >
-                                    ›
-                                </button>
-                                <button
-                                    @click="setPage(totalPages)"
-                                    :disabled="currentPage === totalPages"
-                                    class="pag-btn"
-                                >
-                                    »
-                                </button>
+                                <button @click="setPage(currentPage + 1)" :disabled="currentPage === totalPages" class="pag-btn">›</button>
+                                <button @click="setPage(totalPages)" :disabled="currentPage === totalPages" class="pag-btn">»</button>
                             </div>
 
                             <!-- Rows per page -->
-                            <div class="flex items-center gap-2 text-[#686964]">
-                                Rows per page
-                                <div class="relative">
-                                    <select
-                                        v-model="perPage"
-                                        @change="currentPage = 1"
-                                        class="appearance-none border border-[#D9DAD8] rounded-lg px-3 py-1.5 pr-7 text-[12px] bg-white text-[#1A1B18] focus:outline-none focus:ring-2 focus:ring-[#9e1f16]/20 cursor-pointer"
-                                    >
-                                        <option :value="6">6</option>
-                                        <option :value="10">10</option>
-                                        <option :value="20">20</option>
-                                        <option :value="50">50</option>
-                                    </select>
-                                    <!-- <svg
-                                        class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 h-3 w-3 text-[#686964]"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg> -->
-                                </div>
+                            <div class="flex items-center justify-center sm:justify-end gap-2 text-[#686964]">
+                                <span>Rows per page</span>
+                                <select
+                                    v-model="perPage"
+                                    @change="currentPage = 1"
+                                    class="appearance-none border border-[#D9DAD8] rounded-lg px-3 py-1.5 text-[12px] bg-white text-[#1A1B18] focus:outline-none focus:ring-2 focus:ring-[#9e1f16]/20 cursor-pointer"
+                                >
+                                    <option :value="6">6</option>
+                                    <option :value="10">10</option>
+                                    <option :value="20">20</option>
+                                    <option :value="50">50</option>
+                                </select>
                             </div>
                         </div>
                     </template>
@@ -533,43 +522,37 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
 
                 <!-- ── Footer CTA ──────────────────────────────────────────── -->
                 <div
-                    class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-12 sm:px-10 sm:py-14"
+                    class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-10 sm:px-10 sm:py-14"
                 >
                     <img
                         src="/icons/ft-docs.svg"
                         alt=""
-                        class="absolute right-6 top-6 h-16 w-16 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24"
+                        class="absolute right-6 top-6 h-14 w-14 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24"
                     />
-                    <div
-                        class="relative flex flex-col items-center text-center"
-                    >
+                    <div class="relative flex flex-col items-center text-center">
                         <h3
-                            class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]"
+                            class="max-w-2xl text-[20px] font-bold leading-[30px] text-white sm:text-[28px] sm:leading-[38px]"
                         >
                             Tidak Menemukan KBLI yang Anda Cari?
                         </h3>
                         <p
-                            class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]"
+                            class="mt-3 sm:mt-4 max-w-lg text-[13px] leading-[21px] text-white/80 sm:text-[16px] sm:leading-[24px]"
                         >
-                            Tim kami siap membantu Anda menemukan solusi yang
-                            tepat<br class="hidden sm:block" />
+                            Tim kami siap membantu Anda menemukan solusi yang tepat
                             untuk kebutuhan legalitas bisnis Anda.
                         </p>
                         <a
                             :href="buildWhatsappLink()"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] sm:px-8 sm:py-3.5 sm:text-[15px]"
+                            class="mt-6 sm:mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] sm:px-8 sm:py-3.5 sm:text-[15px]"
                         >
                             Chat Langsung via WhatsApp
-                            <img
-                                src="/icons/ft-wa.svg"
-                                alt="WhatsApp"
-                                class="h-5 w-5"
-                            />
+                            <img src="/icons/ft-wa.svg" alt="WhatsApp" class="h-5 w-5" />
                         </a>
                     </div>
                 </div>
+
             </div>
         </section>
     </MainLayout>
