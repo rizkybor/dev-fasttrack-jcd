@@ -58,13 +58,13 @@ const serviceCategories = [
                 image: "/images/layanan-card/layanan-kantor-perwakilan.png",
             },
             {
-                title: "Badan Hukum Luar Negeri",
+                title: "Badan Usaha Luar Negeri",
                 description:
                     "Registrasi badan hukum asing yang beroperasi di wilayah Indonesia.",
                 price: "Rp 750.000",
                 packages: "2 Layanan",
-                path: "/badan-hukum-luar-negeri",
-                image: "/images/layanan-card/layanan-badan-hukum-luar-negeri.png",
+                path: "/badan-usaha-luar-negeri",
+                image: "/images/layanan-card/layanan-badan-usaha-luar-negeri.png",
             },
             {
                 title: "Online Single Submission",
@@ -135,7 +135,7 @@ const serviceCategories = [
                     "Sertifikasi Kamar Dagang dan Industri (KADIN) untuk badan usaha.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/ON-DEV",
+                path: "/sertifikasi-badan-usaha/1",
                 image: "/images/layanan-card/layanan-sertifikasi-badan-usaha.png",
             },
             {
@@ -153,7 +153,7 @@ const serviceCategories = [
                     "Penutupan PT PMDN, PT PMA, CV, dan kantor perwakilan asing.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/ON-DEV",
+                path: "/virtual-office",
                 image: "/images/layanan-card/layanan-virtual-office.png",
             },
             {
@@ -162,7 +162,7 @@ const serviceCategories = [
                     "LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/ON-DEV",
+                path: "/digital-marketing",
                 image: "/images/layanan-card/layanan-design-digmart.png",
             },
         ],
@@ -273,7 +273,7 @@ const serviceCategories = [
                     "Alih kewarganegaraan (naturalisasi) bagi WNA menjadi WNI.",
                 price: "Rp 750.000",
                 packages: "6 Layanan",
-                path: "/on-dev",
+                path: "/naturalisasi/1",
                 image: "/images/dummy-card.png",
             },
         ],
