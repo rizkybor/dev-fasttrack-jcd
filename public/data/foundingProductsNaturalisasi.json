@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Naturalisasi (Alih Kewarganegaraan)",
+        "price": "0",
+        "price_label": "Rp 2.500.000",
+        "excerpt": "Pengurusan sertifikasi kewarganegaraan dan legalitas badan usaha melalui Kamar Dagang dan Industri (KADIN) secara resmi.",
+        "detail_path": "/naturalisasi/1",
+        "image": "",
+        "sections": [
+            {
+                "id": "penjelasan-umum",
+                "type": "penjelasan",
+                "title": "PENJELASAN UMUM",
+                "content": [
+                    { "type": "title", "text": "Memahami Naturalisasi dalam Sistem Hukum Indonesia" },
+                    { "type": "paragraph", "text": "Naturalisasi atau pewarganegaraan merupakan proses hukum yang memberikan status Warga Negara Indonesia (WNI) kepada seorang warga negara asing (WNA) berdasarkan ketentuan peraturan perundang-undangan yang berlaku. Melalui proses ini, seseorang yang sebelumnya berkewarganegaraan asing dapat memperoleh pengakuan sebagai warga WNI dengan hak dan kewajiban yang setara." },
+                    { "type": "paragraph", "text": "Pewarganegaraan merupakan salah satu instrumen penting dalam sistem hukum kewarganegaraan Indonesia, yang bertujuan memberikan kepastian status hukum, melindungi integrasi sosial, serta mendukung kehidupan individu, termasuk termasuk pengajuan pembuatan." },
+                    { "type": "paragraph", "text": "Saat ini, ketentuan mengenai kewarganegaraan Indonesia diatur berdasarkan:" },
+                    { "type": "bullets", "items": [
+                        "Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia;",
+                        "Peraturan Pemerintah Nomor 2 Tahun 2007 tentang Tata Cara Memperoleh, Kehilangan, Pembatalan, dan Memperoleh Kembali Kewarganegaraan Republik Indonesia;",
+                        "Peraturan Menteri Hukum dan Hak Asasi Manusia Republik Indonesia beserta peraturan pelaksanaan lainnya yang mengatur tata cara pengajuan dan persyaratan itu untuk kewarganegaraan."
+                    ]},
+                    { "type": "paragraph", "text": "Secara umum, pewarganegaraan di Indonesia dapat diperoleh melalui Hak atau melalui Proses atau Naturalisasi (terbagi)." }
+                ]
+            },
+            {
+                "id": "naturalisasi-biasa",
+                "type": "numbered_detail",
+                "title": "NATURALISASI BIASA",
+                "intro_paragraphs": [
+                    "Naturalisasi biasa merupakan mekanisme yang paling umum digunakan oleh warga negara asing untuk memperoleh kewarganegaraan Indonesia melalui permohonan yang diajukan kepada Presiden Republik Indonesia melalui Menteri Hukum. Dasar hukum naturalisasi biasa diatur dalam Pasal 9 Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia.",
+                    "Untuk memperoleh kewarganegaraan Indonesia melalui naturalisasi biasa, pemohon wajib memenuhi persyaratan sebagai berikut:"
+                ],
+                "items": [
+                    {
+                        "title": "Berusia Minimal 18 Tahun atau Sudah Menikah",
+                        "desc": "Pemohon harus telah mencapai usia dewasa menurut hukum atau telah terikat dalam perkawinan yang sah."
+                    },
+                    {
+                        "title": "Memiliki Masa Tinggal yang Memadai di Indonesia",
+                        "desc": "Pemohon harus telah bertempat tinggal di wilayah Indonesia paling singkat:",
+                        "bullets": [
+                            "5 (lima) tahun berturut-turut; atau",
+                            "10 (sepuluh) tahun tidak berturut-turut."
+                        ],
+                        "after_bullets": "Persyaratan ini menunjukkan adanya keterikatan nyata (genuine link) antara pemohon dengan Negara Republik Indonesia."
+                    },
+                    {
+                        "title": "Sehat Jasmani dan Rohani",
+                        "desc": "Kondisi kesehatan dibuktikan melalui surat keterangan dari instansi kesehatan yang berwenang."
+                    },
+                    {
+                        "title": "Mampu Berbahasa Indonesia serta Mengakui Pancasila dan UUD 1945",
+                        "desc": "Pemohon harus memiliki kemampuan berbahasa Indonesia dan menunjukkan komitmen terhadap ideologi negara, konstitusi, serta nilai-nilai kebangsaan Indonesia."
+                    },
+                    {
+                        "title": "Tidak Pernah Dijatuhi Pidana Berat",
+                        "desc": "Pemohon tidak pernah dijatuhi pidana penjara karena melakukan tindak pidana yang diancam dengan pidana penjara 1 (satu) tahun atau lebih."
+                    },
+                    {
+                        "title": "Bersedia Melepaskan Kewarganegaraan Asing",
+                        "desc": "Indonesia menganut prinsip kewarganegaraan tunggal bagi orang dewasa. Oleh karena itu, pemohon wajib melepaskan kewarganegaraan asalnya apabila permohonan pewarganegaraan dikabulkan."
+                    },
+                    {
+                        "title": "Memiliki Pekerjaan atau Penghasilan Tetap",
+                        "desc": "Persyaratan ini bertujuan memastikan bahwa pemohon memiliki kemampuan ekonomi yang memadai untuk menjalani kehidupan di Indonesia."
+                    },
+                    {
+                        "title": "Membayar Uang Pewarganegaraan",
+                        "desc": "Pemohon wajib memenuhi kewajiban pembayaran Penerimaan Negara Bukan Pajak (PNBP) sesuai ketentuan yang berlaku."
+                    }
+                ]
+            },
+            {
+                "id": "naturalisasi-istimewa",
+                "type": "penjelasan",
+                "title": "NATURALISASI ISTIMEWA",
+                "content": [
+                    { "type": "paragraph", "text": "Selain melalui mekanisme biasa, Undang-Undang Kewarganegaraan juga memberikan kemungkinan pemberian kewarganegaraan Indonesia secara istimewa kepada warga negara asing tertentu." },
+                    { "type": "paragraph", "text": "Dasar hukum naturalisasi istimewa diatur dalam Pasal 20 Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia." },
+                    { "type": "paragraph", "text": "Ketentuan tersebut menyatakan bahwa:" },
+                    { "type": "bullets", "items": [
+                        "Orang asing yang telah berjasa kepada Negara Republik Indonesia atau karena alasan kepentingan negara dapat diberikan kewarganegaraan Republik Indonesia oleh Presiden setelah memperoleh pertimbangan Dewan Perwakilan Rakyat Republik Indonesia (DPR RI).",
+                        "Naturalisasi istimewa diberikan berdasarkan pertimbangan strategis negara dan tidak melalui mekanisme persyaratan yang sama sebagaimana naturalisasi biasa."
+                    ]},
+                    { "type": "title", "text": "Kriteria Naturalisasi Istimewa" },
+                    { "type": "paragraph", "text": "Pemberian kewarganegaraan secara istimewa umumnya diberikan kepada warga negara asing yang:" },
+                    { "type": "title", "text": "Berjasa bagi Negara Republik Indonesia" },
+                    { "type": "paragraph", "text": "Misalnya individu yang memberikan kontribusi luar biasa dalam bidang:" },
+                    { "type": "bullets", "items": [
+                        "ilmu pengetahuan dan teknologi;",
+                        "olahraga internasional;",
+                        "seni dan budaya;",
+                        "ekonomi dan investasi;",
+                        "kemanusiaan;",
+                        "pertahanan dan keamanan."
+                    ]},
+                    { "type": "title", "text": "Memiliki Kepentingan Strategis bagi Negara" },
+                    { "type": "paragraph", "text": "Pemerintah dapat memberikan kewarganegaraan kepada individu yang keberadaannya dinilai memberikan manfaat signifikan bagi kepentingan nasional Indonesia." }
+                ]
+            }
+        ],
+        "faq": []
+    }
+]

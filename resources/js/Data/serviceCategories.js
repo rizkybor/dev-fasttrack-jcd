@@ -92,7 +92,7 @@ export function useServiceCategories() {
             },
             {
                 title: "PERIZINAN BERUSAHA",
-                path: "/",
+                path: "/perizinan-berusaha",
                 items: [
                     {
                         title: "Kesesuaian Kegiatan Pemanfaatan Ruang",
@@ -100,7 +100,7 @@ export function useServiceCategories() {
                             "Perizinan dasar sebagai syarat awal operasional usaha, mencakup kesesuaian tata ruang, lingkungan, dan bangunan.",
                         price: "Hubungi Kami",
                         packages: "3 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/perizinan-berusaha/1",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -109,7 +109,7 @@ export function useServiceCategories() {
                             "Pengurusan sertifikat standar atau izin berusaha sesuai tingkat risiko kegiatan usaha melalui sistem OSS.",
                         price: "Hubungi Kami",
                         packages: "11 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/perizinan-berusaha/2",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -118,7 +118,7 @@ export function useServiceCategories() {
                             "Pengurusan izin tambahan yang dibutuhkan untuk menunjang kegiatan usaha utama sesuai regulasi yang berlaku.",
                         price: "Rp. 2.000.000",
                         packages: "3 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/perizinan-berusaha/3",
                         icon: "/icons/ic-card-4.svg",
                     },
                 ],
@@ -158,7 +158,7 @@ export function useServiceCategories() {
             },
             {
                 title: "IZIN TINGGAL ATAU KERJA WARGA NEGARA ASING",
-                path: "/foreignservice",
+                path: "/izin-tinggal-terbatas",
                 items: [
                     {
                         title: "IZIN TINGGAL TERBATAS DAN KERJA TENAGA KERJA ASING",
@@ -200,7 +200,7 @@ export function useServiceCategories() {
             },
             {
                 title: "VISA KE INDONESIA",
-                path: "/",
+                path: "/visa-indonesia",
                 items: [
                     {
                         title: "Visa Kunjungan Satu Kali Perjalanan",
@@ -208,7 +208,7 @@ export function useServiceCategories() {
                             "Visa untuk kunjungan wisata, bisnis, atau keperluan lain dengan satu kali masuk ke Indonesia.",
                         price: "Rp 3.000.000",
                         packages: "11 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/visa-indonesia/1",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -217,7 +217,7 @@ export function useServiceCategories() {
                             "Visa untuk kunjungan berulang ke Indonesia dalam periode tertentu tanpa pengajuan ulang setiap kedatangan.",
                         price: "Rp 3.500.000",
                         packages: "4 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/visa-indonesia/2",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -226,7 +226,7 @@ export function useServiceCategories() {
                             "Visa bagi tenaga kerja asing yang akan bekerja secara resmi di perusahaan atau proyek di Indonesia.",
                         price: "Rp 3.500.000",
                         packages: "18 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/visa-indonesia/3",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -235,14 +235,14 @@ export function useServiceCategories() {
                             "Visa bagi investor asing yang menanamkan modal atau mendirikan usaha di Indonesia.",
                         price: "Rp 3.000.000",
                         packages: "8 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/visa-indonesia/4",
                         icon: "/icons/ic-card-4.svg",
                     },
                 ],
             },
             {
                 title: "VISA MANCANEGARA",
-                path: "/",
+                path: "/visa-mancanegara",
                 items: [
                     {
                         title: "China",
@@ -250,7 +250,7 @@ export function useServiceCategories() {
                             "Layanan pengurusan Visa China untuk keperluan wisata maupun bisnis dengan proses yang cepat, aman, dan didampingi secara profesional sesuai persyaratan kedutaan.",
                         price: "Rp 1.000.000",
                         packages: "2 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/visa-mancanegara/1",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -259,7 +259,7 @@ export function useServiceCategories() {
                             "Layanan pengurusan Visa Amerika Serikat (B1/B2) untuk kebutuhan wisata, bisnis, maupun kunjungan, dengan pendampingan lengkap hingga proses pengajuan selesai.",
                         price: "Rp 4.200.000",
                         packages: "1 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/visa-mancanegara/2",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -268,7 +268,7 @@ export function useServiceCategories() {
                             "Layanan pengurusan Visa Uni Emirat Arab untuk perjalanan wisata atau kunjungan singkat dengan proses mudah, cepat, dan sesuai ketentuan imigrasi UEA.",
                         price: "Rp 3.000.000",
                         packages: "1 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/visa-mancanegara/3",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
@@ -277,7 +277,7 @@ export function useServiceCategories() {
                             "Layanan pengurusan Visa Australia untuk wisata, bisnis, maupun kunjungan keluarga dengan bantuan persiapan dokumen dan pendampingan selama proses pengajuan.",
                         price: "Rp 2.800.000",
                         packages: "1 Paket",
-                        path: "/ON-DEVELOPMENT",
+                        path: "/visa-mancanegara/4",
                         icon: "/icons/ic-card-4.svg",
                     },
                 ],

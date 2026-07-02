@@ -5,7 +5,7 @@ import badanUsaha from './services/badan-usaha'
 import kantorPerwakilan from './services/kantor-perwakilan'
 import izinTinggalTerbatas from './services/izin-tinggal-terbatas'
 import izinTinggalTetap from './services/izin-tinggal-tetap'
-import badanHukumLuarNegeri from './services/badan-hukum-luar-negeri'
+import badanUsahaLuarNegeri from './services/badan-usaha-luar-negeri'
 import kekayaanIntelektual from './services/kekayaan-intelektual'
 import kewajibanPelaporanUsaha from './services/kewajiban-pelaporan-perusahaan'
 import legalisasiKedutaan from './services/legalisasi-kedutaan'
@@ -16,6 +16,7 @@ import notarisVirtualDanAkta from './services/notaris-virtual-dan-akta'
 import restrukturisasiPerseroanTerbatas from './services/restrukturisasi-perseroan-terbatas'
 import penutupanBadanUsaha from './services/penutupan-badan-usaha'
 import keimigrasianWniWna from './services/keimigrasian-wni-wna'
+import visaMancanegara from './services/visa-mancanegara'
 
 export default {
     common,
@@ -26,7 +27,7 @@ export default {
         kantorPerwakilan,
         izinTinggalTerbatas,
         izinTinggalTetap,
-        badanHukumLuarNegeri,
+        badanUsahaLuarNegeri,
         kekayaanIntelektual,
         kewajibanPelaporanUsaha,
         legalisasiKedutaan,
@@ -35,6 +36,7 @@ export default {
         notarisVirtualDanAkta,
         restrukturisasiPerseroanTerbatas,
         penutupanBadanUsaha,
-        keimigrasianWniWna
+        keimigrasianWniWna,
+        visaMancanegara
     },
 }
