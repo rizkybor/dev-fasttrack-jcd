@@ -146,6 +146,7 @@ Route::get('/', function (Request $request) use ($resolveBaseUrl, $defaultImageU
 //     ]);
 // });
 
+
 Route::get('/layanan', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
     $services = Service::all();
@@ -670,7 +671,7 @@ $staticPages = [
     '/',
     // '/promo',
     '/layanan',
-    // '/artikel',
+    '/artikel',
     // '/kbli',
     // '/faq',
     // '/tentang-kami',
@@ -2761,86 +2762,103 @@ Route::get('/konversi-kbli', function (Request $request) use ($resolveBaseUrl, $
     ]);
 });
 
-// Route::get('/artikel', function (Request $request) use ($articles, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
-//     $baseUrl = $resolveBaseUrl($request);
+// ARTIKEL / BLOG
+$articles = (static function (): array {
+    $path = public_path('data/articles.json');
+    if (!file_exists($path)) {
+        return [];
+    }
+    $decoded = json_decode(file_get_contents($path), true);
+    return is_array($decoded) ? $decoded : [];
+})();
 
-//     return Inertia::render('Blog', [
-//         'articles' => $articles,
-//         'seo' => [
-//             'title' => 'Artikel & Edukasi Hukum Bisnis - FastTrack',
-//             'description' => 'Dapatkan informasi terbaru seputar legalitas, perpajakan, dan regulasi bisnis di Indonesia.',
-//             'canonical' => $baseUrl . '/artikel',
-//             'image' => $defaultImageUrl($baseUrl),
-//         ],
-//         'schemas' => [
-//             [
-//                 '@context' => 'https://schema.org',
-//                 '@type' => 'CollectionPage',
-//                 'name' => 'Artikel & Edukasi Hukum Bisnis - FastTrack',
-//                 'description' => 'Dapatkan informasi terbaru seputar legalitas, perpajakan, dan regulasi bisnis di Indonesia.',
-//                 'url' => $baseUrl . '/artikel',
-//                 'mainEntity' => [
-//                     '@type' => 'ItemList',
-//                     'itemListElement' => collect($articles)->values()->map(
-//                         static fn (array $article, int $index): array => [
-//                             '@type' => 'ListItem',
-//                             'position' => $index + 1,
-//                             'name' => $article['title'],
-//                             'url' => $baseUrl . '/artikel/' . $article['id'],
-//                         ]
-//                     )->all(),
-//                 ],
-//             ],
-//             $breadcrumbSchema([
-//                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-//                 ['name' => 'Artikel', 'item' => $baseUrl . '/artikel'],
-//             ]),
-//         ],
-//     ]);
-// });
+$articles = collect($articles)
+    ->map(static function (array $article): array {
+        $article['detail_path'] = '/artikel/' . $article['id'];
+        return $article;
+    })
+    ->all();
 
-// Route::get('/artikel/{id}', function (Request $request, int $id) use ($articles, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
-//     $baseUrl = $resolveBaseUrl($request);
-//     $article = collect($articles)->firstWhere('id', $id);
+Route::get('/artikel', function (Request $request) use ($articles, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
 
-//     abort_if($article === null, 404);
+    return Inertia::render('Articles/Index', [
+        'articles' => $articles,
+        'seo' => [
+            'title' => 'Artikel & Edukasi Hukum Bisnis - FastTrack',
+            'description' => 'Dapatkan informasi terbaru seputar legalitas, perpajakan, dan regulasi bisnis di Indonesia.',
+            'canonical' => $baseUrl . '/artikel',
+            'image' => $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Artikel & Edukasi Hukum Bisnis - FastTrack',
+                'description' => 'Dapatkan informasi terbaru seputar legalitas, perpajakan, dan regulasi bisnis di Indonesia.',
+                'url' => $baseUrl . '/artikel',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($articles)->values()->map(
+                        static fn (array $article, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $article['title'],
+                            'url' => $baseUrl . '/artikel/' . $article['id'],
+                        ]
+                    )->all(),
+                ],
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Artikel', 'item' => $baseUrl . '/artikel'],
+            ]),
+        ],
+    ]);
+});
 
-//     $relatedArticles = collect($articles)
-//         ->where('id', '!=', $id)
-//         ->take(3)
-//         ->values()
-//         ->all();
+Route::get('/artikel/{id}', function (Request $request, int $id) use ($articles, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+    $baseUrl = $resolveBaseUrl($request);
+    $article = collect($articles)->firstWhere('id', $id);
 
-//     return Inertia::render('Articles/Show', [
-//         'article' => $article,
-//         'relatedArticles' => $relatedArticles,
-//         'seo' => [
-//             'title' => $article['title'] . ' - FastTrack',
-//             'description' => $article['excerpt'],
-//             'canonical' => $baseUrl . '/artikel/' . $article['id'],
-//             'image' => $article['image'] ?: $defaultImageUrl($baseUrl),
-//         ],
-//         'schemas' => [
-//             [
-//                 '@context' => 'https://schema.org',
-//                 '@type' => 'Article',
-//                 'headline' => $article['title'],
-//                 'description' => $article['excerpt'],
-//                 'image' => $article['image'] ?: $defaultImageUrl($baseUrl),
-//                 'author' => $organizationReference($baseUrl),
-//                 'publisher' => $organizationReference($baseUrl),
-//                 'datePublished' => '2024-05-12',
-//                 'dateModified' => now()->toDateString(),
-//                 'mainEntityOfPage' => $baseUrl . '/artikel/' . $article['id'],
-//             ],
-//             $breadcrumbSchema([
-//                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-//                 ['name' => 'Artikel', 'item' => $baseUrl . '/artikel'],
-//                 ['name' => $article['title'], 'item' => $baseUrl . '/artikel/' . $article['id']],
-//             ]),
-//         ],
-//     ]);
-// });
+    abort_if($article === null, 404);
+
+    $relatedArticles = collect($articles)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    return Inertia::render('Articles/Show', [
+        'article' => $article,
+        'relatedArticles' => $relatedArticles,
+        'seo' => [
+            'title' => $article['title'] . ' - FastTrack',
+            'description' => $article['excerpt'],
+            'canonical' => $baseUrl . '/artikel/' . $article['id'],
+            'image' => $article['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Article',
+                'headline' => $article['title'],
+                'description' => $article['excerpt'],
+                'image' => $article['image'] ?: $defaultImageUrl($baseUrl),
+                'author' => $organizationReference($baseUrl),
+                'publisher' => $organizationReference($baseUrl),
+                'datePublished' => '2024-05-12',
+                'dateModified' => now()->toDateString(),
+                'mainEntityOfPage' => $baseUrl . '/artikel/' . $article['id'],
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Artikel', 'item' => $baseUrl . '/artikel'],
+                ['name' => $article['title'], 'item' => $baseUrl . '/artikel/' . $article['id']],
+            ]),
+        ],
+    ]);
+});
 
 // Route::get('/tentang-kami', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
 //     $baseUrl = $resolveBaseUrl($request);
@@ -2924,6 +2942,7 @@ Route::get('/konversi-kbli', function (Request $request) use ($resolveBaseUrl, $
 //     ]);
 // });
 
+
 Route::get('/kebijakan-cookie', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
 
@@ -2978,39 +2997,11 @@ Route::get('/kebijakan-privasi', function (Request $request) use ($resolveBaseUr
     ]);
 });
 
-// BLOG
-Route::get('/blog', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
-    $baseUrl = $resolveBaseUrl($request);
-
-    return Inertia::render('TermCondition', [
-        'seo' => [
-            'title' => 'Syarat dan Ketentuan - FastTrack',
-            'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
-            'canonical' => $baseUrl . '/blog',
-            'image' => $defaultImageUrl($baseUrl),
-            'type' => 'website',
-        ],
-        'schemas' => [
-            [
-                '@context' => 'https://schema.org',
-                '@type' => 'WebPage',
-                'name' => 'Syarat dan Ketentuan - FastTrack',
-                'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
-                'url' => $baseUrl . '/blog',
-            ],
-            $breadcrumbSchema([
-                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-                ['name' => 'Syarat dan Ketentuan', 'item' => $baseUrl . '/blog'],
-            ]),
-        ],
-    ]);
-});
-
 // KERJA SAMA
 Route::get('/kerjasama', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
 
-    return Inertia::render('TermCondition', [
+    return Inertia::render('Kerjasama', [
         'seo' => [
             'title' => 'Syarat dan Ketentuan - FastTrack',
             'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
@@ -3038,7 +3029,7 @@ Route::get('/kerjasama', function (Request $request) use ($resolveBaseUrl, $defa
 Route::get('/minta-penawaran', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
 
-    return Inertia::render('TermCondition', [
+    return Inertia::render('MintaPenawaran', [
         'seo' => [
             'title' => 'Syarat dan Ketentuan - FastTrack',
             'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',

@@ -240,7 +240,7 @@ const buildWhatsappLink = (serviceName) => {
                             <h2
                                 class="text-[16px] sm:text-[20px] font-bold leading-[28px] text-[#1A1B18]"
                             >
-                                2. Berlangganan Blog atau Hubungi Kami
+                                2. Berlangganan Artikel atau Hubungi Kami
                             </h2>
                             <p
                                 class="text-[12px] leading-[22px] text-[#4A4B47]"

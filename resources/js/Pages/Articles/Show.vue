@@ -1,106 +1,312 @@
 <script setup>
-import MainLayout from '@/Layouts/MainLayout.vue';
+import { computed } from "vue";
+import MainLayout from "@/Layouts/MainLayout.vue";
 
-defineProps({
+/**
+ * Halaman "Article Detail" — artikel FastTrack Legal
+ * Sesuai desain Figma: hero + info penulis + konten terstruktur + CTA banner
+ *
+ * Struktur `article.content` (array, urutan sesuai tampilan):
+ *   { type: 'heading',   text: '...' }
+ *   { type: 'paragraph', text: '...' }
+ *   { type: 'bullets',   items: ['...', '...'] }
+ *   { type: 'numbered',  items: ['...', '...'] }
+ */
+
+const props = defineProps({
     article: {
         type: Object,
         required: true,
+        default: () => ({
+            title: "",
+            date: "",
+            read_time: "",
+            author: {
+                name: "",
+                role: "",
+            },
+            content: [],
+        }),
     },
-    relatedArticles: {
-        type: Array,
-        default: () => [],
-    },
+});
+
+const authorInitials = computed(() => {
+    const name = props.article.author?.name ?? "";
+    return name
+        .split(" ")
+        .map((word) => word.charAt(0))
+        .join("")
+        .slice(0, 2)
+        .toUpperCase();
+});
+
+/* ------------------------------------------------------------------ */
+/* WhatsApp CTA                                                        */
+/* ------------------------------------------------------------------ */
+
+const whatsappNumber = "6282298604144";
+
+const whatsappLink = computed(() => {
+    const message =
+        "Halo FastTrack, saya ingin konsultasi mengenai kebutuhan legalitas bisnis saya.";
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 });
 </script>
 
 <template>
     <MainLayout>
-        <section class="bg-gray-50 border-b border-gray-200 py-12">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="text-sm mb-5" aria-label="Breadcrumb">
-                    <ol class="inline-flex flex-wrap items-center gap-y-2 text-gray-500">
-                        <li><a href="/" class="hover:text-primary">Beranda</a></li>
-                        <li class="mx-2 text-gray-400">/</li>
-                        <li><a href="/artikel" class="hover:text-primary">Artikel</a></li>
-                        <li class="mx-2 text-gray-400">/</li>
-                        <li class="text-gray-800">{{ article.title }}</li>
-                    </ol>
-                </nav>
-
-                <span class="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary">
-                    {{ article.category }}
-                </span>
-                <h1 class="mt-5 text-3xl font-extrabold leading-tight text-secondary md:text-5xl">
-                    {{ article.title }}
-                </h1>
-                <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-500">
-                    <span>{{ article.date }}</span>
-                    <span>&middot;</span>
-                    <span>{{ article.reading_time }}</span>
-                </div>
-                <p class="mt-6 max-w-3xl text-base leading-8 text-gray-600 md:text-lg">
-                    {{ article.excerpt }}
-                </p>
-            </div>
-        </section>
-
-        <section class="bg-white py-12">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-[#9e1f16]">
+            <div class="ml-5">
                 <img
-                    :src="article.image"
-                    :alt="article.title"
-                    class="h-64 w-full rounded-[2rem] object-cover shadow-sm sm:h-80 lg:h-[460px]"
-                >
+                    src="/icons/left-arrow.svg"
+                    class="absolute right-[0%] -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block"
+                    alt=""
+                />
+            </div>
 
-                <div class="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px]">
-                    <article class="prose prose-gray max-w-none prose-headings:text-secondary prose-a:text-primary">
-                        <p
-                            v-for="(paragraph, index) in article.content"
-                            :key="`${article.id}-${index}`"
-                            class="mb-6 text-base leading-8 text-gray-700"
+            <div
+                class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-14 lg:py-16"
+            >
+                <div class="relative z-10 max-w-3xl">
+                    <!-- Breadcrumb -->
+                    <nav class="mb-6" aria-label="Breadcrumb">
+                        <div
+                            class="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-sm px-4 py-2"
                         >
-                            {{ paragraph }}
-                        </p>
-                    </article>
+                            <a href="/" class="text-white/90 hover:text-white transition">
+                                <svg
+                                    class="h-4 w-4"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"
+                                    />
+                                </svg>
+                            </a>
+                            <svg
+                                class="h-3 w-3 text-white/60"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                            <a
+                                href="/artikel"
+                                class="text-sm font-medium text-white/90 hover:text-white transition"
+                                >Artikel</a
+                            >
+                            <svg
+                                class="h-3 w-3 text-white/60"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                            <span class="text-sm font-medium text-white">Detail</span>
+                        </div>
+                    </nav>
 
-                    <aside class="rounded-3xl border border-gray-100 bg-gray-50 p-6 lg:sticky lg:top-24">
-                        <h2 class="text-lg font-bold text-secondary">Butuh Bantuan Legalitas?</h2>
-                        <p class="mt-3 text-sm leading-7 text-gray-600">
-                            Tim FastTrack siap membantu kebutuhan legalitas bisnis Anda dengan proses yang lebih cepat dan profesional.
-                        </p>
-                        <a href="/kontak" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-bold text-white transition hover:bg-pink-600">
-                            Konsultasi Gratis
+                    <!-- Heading -->
+                    <h1
+                        class="text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl"
+                    >
+                        {{ article.title }}
+                    </h1>
+
+                    <!-- Back button -->
+                    <div class="mt-8">
+                        <a
+                            href="/artikel"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition"
+                        >
+                            <svg
+                                class="h-4 w-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                                />
+                            </svg>
+                            Kembali
                         </a>
-                    </aside>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section v-if="relatedArticles.length" class="bg-gray-50 py-14">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                    <div>
-                        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Artikel Terkait</p>
-                        <h2 class="mt-2 text-2xl font-extrabold text-secondary">Baca Juga Artikel Lainnya</h2>
-                    </div>
-                    <a href="/artikel" class="text-sm font-semibold text-primary hover:underline">Lihat Semua Artikel</a>
-                </div>
-
-                <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                    <article
-                        v-for="related in relatedArticles"
-                        :key="related.id"
-                        class="overflow-hidden rounded-[2rem] border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-                    >
-                        <img :src="related.image" :alt="related.title" class="h-48 w-full object-cover" loading="lazy">
-                        <div class="p-6">
-                            <div class="text-xs font-semibold uppercase tracking-[0.18em] text-primary">{{ related.category }}</div>
-                            <a :href="`/artikel/${related.id}`" class="mt-3 block text-xl font-bold leading-tight text-secondary transition hover:text-primary">
-                                {{ related.title }}
-                            </a>
-                            <p class="mt-3 text-sm leading-7 text-gray-600">{{ related.excerpt }}</p>
+        <!-- CONTENT SECTION -->
+        <section class="py-[52px] bg-[#F9F9F9]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <article
+                    class="rounded-xl border border-[#D9DAD8] bg-white p-6 sm:p-8"
+                >
+                    <!-- Author & Meta -->
+                    <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#F1D9D7] text-[12px] font-bold text-[#9e1f16]"
+                            >
+                                {{ authorInitials }}
+                            </span>
+                            <div>
+                                <p class="text-[12px] font-semibold text-[#1A1B18]">
+                                    {{ article.author?.name }}
+                                </p>
+                                <p class="text-[11px] text-[#7A7B78]">
+                                    {{ article.author?.role }}
+                                </p>
+                            </div>
                         </div>
-                    </article>
+
+                        <span
+                            class="inline-flex items-center gap-1.5 text-[11px] text-[#7A7B78]"
+                        >
+                            <svg
+                                class="h-3.5 w-3.5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                />
+                            </svg>
+                            {{ article.date }}
+                        </span>
+
+                        <span
+                            class="inline-flex items-center gap-1.5 text-[11px] text-[#7A7B78]"
+                        >
+                            <svg
+                                class="h-3.5 w-3.5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                />
+                            </svg>
+                            {{ article.read_time }}
+                        </span>
+                    </div>
+
+                    <div class="h-px w-full bg-[#E0E0E0] my-6"></div>
+
+                    <!-- Article Body -->
+                    <div class="flex flex-col gap-4">
+                        <template v-for="(block, index) in article.content" :key="index">
+                            <h2
+                                v-if="block.type === 'heading'"
+                                class="text-[15px] sm:text-[16px] font-bold text-[#1A1B18] mt-2"
+                            >
+                                {{ block.text }}
+                            </h2>
+
+                            <p
+                                v-else-if="block.type === 'paragraph'"
+                                class="text-[13px] leading-[24px] text-[#4A4B47] text-justify"
+                            >
+                                {{ block.text }}
+                            </p>
+
+                            <ul
+                                v-else-if="block.type === 'bullets'"
+                                class="list-disc pl-5 flex flex-col gap-1.5 marker:text-[#9e1f16]"
+                            >
+                                <li
+                                    v-for="(item, i) in block.items"
+                                    :key="i"
+                                    class="text-[13px] leading-[22px] text-[#4A4B47]"
+                                >
+                                    {{ item }}
+                                </li>
+                            </ul>
+
+                            <ol
+                                v-else-if="block.type === 'numbered'"
+                                class="list-decimal pl-5 flex flex-col gap-1.5 marker:text-[#9e1f16] marker:font-semibold"
+                            >
+                                <li
+                                    v-for="(item, i) in block.items"
+                                    :key="i"
+                                    class="text-[13px] leading-[22px] text-[#4A4B47]"
+                                >
+                                    {{ item }}
+                                </li>
+                            </ol>
+                        </template>
+                    </div>
+                </article>
+
+                <!-- CTA BANNER -->
+                <div
+                    class="relative overflow-hidden rounded-xl bg-[#9e1f16] px-6 py-12 sm:py-14 text-center mt-6"
+                >
+                    <svg
+                        class="pointer-events-none absolute right-6 top-1/2 hidden h-24 w-24 -translate-y-1/2 text-white/10 sm:block"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="1"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                    </svg>
+
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-white">
+                        Butuh Penjelasan Lebih Spesifik?
+                    </h2>
+                    <p class="mt-2 text-[13px] text-white/80 max-w-md mx-auto">
+                        Tim kami siap membantu Anda menemukan solusi yang tepat untuk
+                        kebutuhan legalitas bisnis Anda.
+                    </p>
+
+                    <a
+                        :href="whatsappLink"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 text-[13px] font-semibold text-white transition hover:bg-[#1fb955]"
+                    >
+                        Chat Langsung via Whatsapp
+                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.51 3.61 1.4 5.11L2 22l5.13-1.5a9.87 9.87 0 004.91 1.3h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2zm5.79 14.05c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.11-1.84-.12-.42-.14-.97-.31-1.66-.61-2.93-1.27-4.84-4.22-4.99-4.42-.15-.2-1.19-1.58-1.19-3.02 0-1.44.75-2.15 1.02-2.44.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2.01.89 2.16.07.15.12.32.02.51-.09.2-.14.32-.28.5-.14.17-.29.38-.42.51-.14.14-.29.29-.12.57.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.45.29.14.46.12.63-.07.17-.2.72-.84.92-1.13.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.92.29.14.48.21.55.33.07.12.07.68-.17 1.36z"
+                            />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
