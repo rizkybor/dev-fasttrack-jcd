@@ -17,6 +17,7 @@ import restrukturisasiPerseroanTerbatas from './services/restrukturisasi-persero
 import penutupanBadanUsaha from './services/penutupan-badan-usaha'
 import keimigrasianWniWna from './services/keimigrasian-wni-wna'
 import visaMancanegara from './services/visa-mancanegara'
+import perpajakanDanPembukuan from './services/perpajakan-dan-pembukuan'
 
 export default {
     common,
@@ -37,6 +38,7 @@ export default {
         restrukturisasiPerseroanTerbatas,
         penutupanBadanUsaha,
         keimigrasianWniWna,
-        visaMancanegara
+        visaMancanegara,
+        perpajakanDanPembukuan
     },
 }

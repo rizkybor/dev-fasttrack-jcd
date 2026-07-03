@@ -165,6 +165,15 @@ const serviceCategories = [
                 path: "/digital-marketing",
                 image: "/images/layanan-card/layanan-design-digmart.png",
             },
+            {
+                title: "Perpajakan dan Pembukuan",
+                description:
+                    "LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.",
+                price: "Rp 750.000",
+                packages: "3 Layanan",
+                path: "/perpajakan-dan-pembukuan",
+                image: "/images/layanan-card/layanan-design-digmart.png",
+            },
         ],
     },
     {
