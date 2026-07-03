@@ -550,7 +550,7 @@ onUnmounted(() => {
             </div>
         </section>
 
-        <!-- ===== 5. PROMO SECTION ===== -->
+     <!-- ===== 5. PROMO SECTION ===== -->
 <section class="bg-[#42443D] pt-[52px] pb-[120px]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between">
@@ -573,10 +573,8 @@ onUnmounted(() => {
                 :href="waLink(promo.service, { agent: promo.agent })" target="_blank" rel="noopener noreferrer"
                 class="group relative flex flex-col rounded-lg bg-[#FEFEFE] p-4 gap-4 hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5">
 
-                <div class="w-full aspect-[16/10] sm:aspect-[4/3] rounded-lg bg-[#F5F5F5] overflow-hidden flex items-center justify-center">
-                    <img :src="`/images/promo/${promo.image}`" :alt="promo.service"
-                        class="w-full h-full object-contain" loading="lazy" />
-                </div>
+                <img :src="`/images/promo/${promo.image}`" :alt="promo.service"
+                    class="w-full h-auto rounded-lg" loading="lazy" />
 
                 <!-- <div class="relative flex flex-col items-center justify-end h-[80px] gap-2">
                     <span
