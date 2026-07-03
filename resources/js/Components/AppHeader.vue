@@ -222,7 +222,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                 style="margin-left: -50px; padding: 7px 84px 9px 80px"
             >
             <a
-                href="/kerja-sama"
+                href="/kerjasama"
     class="inline-flex items-center gap-1 h-8 group"
 >
     <span class="text-[18px] font-bold leading-[21px] text-[#FEFEFE] transition-colors group-hover:text-[#FFB347]">
@@ -348,7 +348,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                         {{ t("common.nav.about") }}
                     </a>
 
-                    <!-- BLOG -->
+                    <!-- Artikel -->
                     <a
                         href="/artikel"
                         class="flex items-center px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
@@ -511,7 +511,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
 
                     <!-- CTA Button -->
                     <a
-                        href="/kontak"
+                        href="/minta-penawaran"
                         class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-[16px] px-4 py-2 rounded-lg transition-colors shadow-sm whitespace-nowrap"
                     >
                         {{ t("common.nav.cta") }}
@@ -800,7 +800,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
 
                     <!-- CTA Mobile -->
                     <a
-                        href="/kontak"
+                        href="/minta-penawaran"
                         class="mt-3 flex items-center justify-center gap-2 rounded-xl bg-[#9e1f16] hover:bg-[#C8353A] px-5 py-4 text-[14px] font-bold text-white transition-colors tracking-wide"
                         @click="closeAllMenus"
                     >

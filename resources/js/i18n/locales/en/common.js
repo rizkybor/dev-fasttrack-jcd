@@ -4,7 +4,7 @@ export default {
         promo: 'SPECIAL OFFERS',
         services: 'SERVICES',
         about: 'ABOUT US',
-        blog: 'BLOG',
+        blog: 'ARTICLE',
         info: 'INFORMATION',
         cta: 'Request a Quote',
         close: 'Close',
@@ -33,7 +33,7 @@ export default {
             visa: 'Visa',
             virtualOffice: 'Virtual Office',
             tools: 'Tools & Features',
-            blog: 'Blog',
+            blog: 'Article',
             info: 'Information',
         },
         legal: {

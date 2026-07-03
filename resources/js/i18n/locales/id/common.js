@@ -4,7 +4,7 @@ export default {
         promo: 'PENAWARAN KHUSUS',
         services: 'LAYANAN',
         about: 'TENTANG KAMI',
-        blog: 'BLOG',
+        blog: 'ARTIKEL',
         info: 'INFORMASI',
         cta: 'Minta Penawaran',
         close: 'Tutup',
@@ -33,7 +33,7 @@ export default {
             visa: 'Visa',
             virtualOffice: 'Virtual Office',
             tools: 'Peralatan dan Fitur',
-            blog: 'Blog',
+            blog: 'Artikel',
             info: 'Informasi',
         },
         legal: {

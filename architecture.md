@@ -97,7 +97,7 @@ Struktur utamanya:
 - `Promo.vue`
 - `About.vue`
 - `Contact.vue`
-- `Blog.vue`
+- `Articles.vue`
 - `Articles/Show.vue`
 - `Kbli.vue`
 - `Faq.vue`
@@ -331,7 +331,7 @@ resources/
       Promo.vue
       About.vue
       Contact.vue
-      Blog.vue
+      Articles.vue
       Kbli.vue
       Faq.vue
       Articles/
