@@ -1,0 +1,287 @@
+[
+    {
+        "id": 1,
+        "name": "Akuntansi & Pelaporan Pajak",
+        "price": "4000000",
+        "price_label": "Rp 4.000.000",
+        "paket_count": 4,
+        "excerpt": "Layanan akuntansi dan pembukuan profesional untuk mendukung pertumbuhan bisnis perusahaan Anda.",
+        "detail_path": "/perpajakan-dan-pembukuan/1",
+        "image": "",
+        "penjelasan_umum": [
+            { "type": "title", "text": "Solusi Administrasi Keuangan yang Akurat untuk Mendukung Pertumbuhan Bisnis" },
+            "Laporan keuangan yang tertata dengan baik merupakan fondasi penting dalam pengelolaan perusahaan. Selain berfungsi sebagai alat pengambilan keputusan, laporan keuangan juga menjadi dasar dalam perencanaan bisnis, pengajuan pembiayaan, pelaporan pajak, evaluasi kinerja usaha, hingga pemenuhan kewajiban kepada investor dan pemangku kepentingan lainnya.",
+            "Namun dalam praktiknya, banyak perusahaan yang masih menghadapi berbagai kendala dalam pengelolaan administrasi keuangan, mulai dari pencatatan transaksi yang tidak teratur, dokumen pendukung yang tidak lengkap, hingga laporan keuangan yang belum sesuai dengan standar akuntansi dan kebutuhan perpajakan.",
+            "Pembukuan merupakan proses pencatatan seluruh transaksi keuangan perusahaan secara sistematis dan berkesinambungan. Proses ini mencakup:",
+            { "type": "bullets", "items": [
+                "Pencatatan pemasukan dan pengeluaran;",
+                "Pencatatan penjualan dan pembelian;",
+                "Pencatatan aset dan kewajiban;",
+                "Rekonsiliasi rekening bank;",
+                "Pengelolaan piutang dan utang;",
+                "Penyusunan jurnal dan buku besar;",
+                "Penyusunan laporan keuangan berkala."
+            ]}
+        ],
+        "sections": [
+            {
+                "id": "mengapa-laporan-keuangan",
+                "type": "grid_check_desc",
+                "title": "MENGAPA LAPORAN KEUANGAN PENTING?",
+                "intro": "Laporan keuangan bukan hanya sekadar kumpulan angka. Dokumen ini merupakan gambaran menyeluruh mengenai kondisi keuangan perusahaan dalam suatu periode tertentu. Melalui laporan keuangan yang baik, perusahaan dapat:",
+                "items": [
+                    { "title": "Mengetahui posisi keuangan perusahaan secara aktual", "desc": null },
+                    { "title": "Menarik minat investor dan mitra bisnis", "desc": null },
+                    { "title": "Mengukur tingkat keuntungan dan efisiensi usaha", "desc": null },
+                    { "title": "Memenuhi kebutuhan audit dan kepatuhan perusahaan", "desc": null },
+                    { "title": "Menjadi dasar penyusunan dan pelaporan pajak", "desc": null },
+                    { "title": "Membantu manajemen dalam pengambilan keputusan strategis", "desc": null },
+                    { "title": "Mendukung pengajuan kredit atau pembiayaan kepada bank", "desc": null }
+                ]
+            },
+            {
+                "id": "layanan-penyusunan",
+                "type": "grid_check_desc",
+                "title": "LAYANAN PENYUSUNAN LAPORAN KEUANGAN",
+                "items": [
+                    {
+                        "title": "Laporan Posisi Keuangan (Neraca)",
+                        "desc": "Menunjukkan kondisi aset, kewajiban, dan ekuitas pada periode tertentu."
+                    },
+                    {
+                        "title": "Laporan Perubahan Ekuitas",
+                        "desc": "Menunjukkan perubahan modal dan saldo laba perusahaan."
+                    },
+                    {
+                        "title": "Laporan Laba Rugi",
+                        "desc": "Menampilkan pendapatan, biaya, dan hasil usaha perusahaan selama satu periode."
+                    },
+                    {
+                        "title": "Catatan atas Laporan Keuangan",
+                        "desc": "Memberikan penjelasan rinci atas informasi yang disajikan dalam laporan keuangan."
+                    },
+                    {
+                        "title": "Laporan Arus Kas",
+                        "desc": "Menggambarkan pergerakan kas masuk dan kas keluar perusahaan."
+                    }
+                ]
+            }
+        ],
+        "biaya_layanan_cards": [
+            {
+                "nama": "PERUSAHAAN PKP / OMSET LEBIH DARI 4,8 MILIAR PERTAHUN",
+                "harga": "Rp 4.000.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": null,
+                "termasuk": null
+            },
+            {
+                "nama": "PERUSAHAAN NON PKP / OMSET KURANG DARI 4,8 MILIAR PERTAHUN",
+                "harga": "Rp 2.500.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": null,
+                "termasuk": null
+            },
+            {
+                "nama": "PEMBUKUAN NON PKP",
+                "harga": "Rp 2.000.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": null,
+                "termasuk": null
+            },
+            {
+                "nama": "PEMBUKUAN PKP",
+                "harga": "Rp 3.500.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": null,
+                "termasuk": null
+            }
+        ],
+        "biaya_layanan_single": null,
+        "faq": []
+    },
+    {
+        "id": 2,
+        "name": "Jasa Lapor SPT Pribadi",
+        "price": "2500000",
+        "price_label": "Rp 2.500.000",
+        "paket_count": 1,
+        "excerpt": "Layanan pelaporan SPT Tahunan Orang Pribadi secara profesional dan akurat sesuai ketentuan pajak.",
+        "detail_path": "/perpajakan-dan-pembukuan/2",
+        "image": "",
+        "penjelasan_umum": [
+            "Pelaporan Surat Pemberitahuan (SPT) Tahunan Orang Pribadi merupakan kewajiban yang harus dipenuhi oleh setiap Wajib Pajak yang telah memiliki Nomor Pokok Wajib Pajak (NPWP) dan memenuhi ketentuan perpajakan yang berlaku. Meskipun proses pelaporan kini telah dilakukan secara elektronik, banyak Wajib Pajak yang masih menghadapi kendala dalam mengidentifikasi jenis formulir yang tepat, melaporkan harta dan kewajiban, maupun memastikan bahwa data yang disampaikan telah sesuai dengan ketentuan Direktorat Jenderal Pajak.",
+            "Selain menjalankan kewajiban hukum, pelaporan SPT Tahunan memiliki peran penting dalam menjaga status kepatuhan perpajakan Wajib Pajak, pelaporan yang tepat dan akurat dapat membantu:",
+            { "type": "bullets", "items": [
+                "Menghindari sanksi administrasi dan denda keterlambatan",
+                "Memastikan bahwa data perpajakan tercatat dengan benar",
+                "Mendukung kebutuhan administrasi perbankan dan investasi",
+                "Menjaga reputasi kepatuhan perpajakan pribadi",
+                "Mengurangi risiko koreksi dan pemeriksaan di kemudian hari"
+            ]}
+        ],
+        "sections": [
+            {
+                "id": "kategori-wajib-pajak",
+                "type": "grid_check_desc",
+                "title": "KATEGORI WAJIB PAJAK ORANG PRIBADI",
+                "items": [
+                    {
+                        "title": "Karyawan",
+                        "desc": "Pekerja yang memperoleh penghasilan dari satu atau lebih pemberi kerja dan yang wajib menyampaikan SPT Tahunan setiap tahun pajak."
+                    },
+                    {
+                        "title": "Investor dan Pemilik Aset",
+                        "desc": "Individu yang memiliki penghasilan dari investasi; dividen, bunga, sewa, maupun sumber penghasilan lainnya."
+                    },
+                    {
+                        "title": "Profesional dan Pekerja Independen",
+                        "desc": "Konsultan, dokter, pengacara, arsitek, desainer, content creator, influencer, freelancer, maupun profesi lainnya yang memperoleh penghasilan secara mandiri."
+                    },
+                    {
+                        "title": "Wajib Pajak dengan Penghasilan dari Berbagai Sumber",
+                        "desc": "Mereka yang menerima penghasilan dari beberapa perusahaan, usaha sampingan, investasi, atau aktivitas ekonominya."
+                    },
+                    {
+                        "title": "Pengusaha dan Wiraswasta",
+                        "desc": "Pemilik usaha yang menjalankan kegiatan bisnis secara perseorangan dan memiliki kewajiban pelaporan perpajakan pribadi."
+                    }
+                ]
+            },
+            {
+                "id": "ruang-lingkup-pribadi",
+                "type": "numbered_detail",
+                "title": "RUANG LINGKUP LAYANAN",
+                "items": [
+                    {
+                        "title": "Pemeriksaan Dokumen Pajak",
+                        "desc": "Melakukan pemeriksaan terhadap:",
+                        "bullets": [
+                            "Bukti potong penghasilan;",
+                            "Rekapitulasi penghasilan;",
+                            "Data harta dan kewajiban;",
+                            "Investasi dan aset;",
+                            "Dokumen pendukung lainnya."
+                        ]
+                    },
+                    {
+                        "title": "Analisis Kewajiban Perpajakan",
+                        "desc": "Memastikan penghasilan dan data perpajakan telah dicatat sesuai ketentuan yang berlaku."
+                    },
+                    {
+                        "title": "Penyusunan dan Pengisian SPT",
+                        "desc": "Membantu pengisian formulir SPT yang sesuai dengan profil dan sumber penghasilan Wajib Pajak."
+                    },
+                    {
+                        "title": "Pelaporan Elektronik",
+                        "desc": "Penyampaian SPT melalui sistem administrasi perpajakan yang berlaku."
+                    },
+                    {
+                        "title": "Konsultasi Perpajakan",
+                        "desc": "Memberikan penjelasan dan pendampingan terkait kewajiban perpajakan pribadi serta langkah-langkah yang perlu dilakukan untuk menjaga kepatuhan.",
+                        "bullets": [
+                            "Semua proses dilakukan secara online dan remote.",
+                            "Koordinasi via chat/telepon sesuai kebutuhan."
+                        ]
+                    }
+                ]
+            }
+        ],
+        "biaya_layanan_single": {
+            "nama": "SURAT PEMBERITAHUAN (SPT) TAHUNAN ORANG PRIBADI",
+            "harga": "Rp 2.500.000",
+            "gratis_konsultasi": true,
+            "mendapatkan": [
+                "Rekapitulasi dan Pengecekan data penghasilan & bukti potong",
+                "Rekapitulasi laporan aset & utang",
+                "Submit online & bukti pelaporan"
+            ],
+            "termasuk": [
+                "Fasttrack Document Delivery Service",
+                "Fasttrack Digital Files Secure Storage",
+                "Fasttrack Kit"
+            ]
+        },
+        "biaya_layanan_cards": null,
+        "faq": []
+    },
+    {
+        "id": 3,
+        "name": "Jasa Lapor SPT Badan",
+        "price": "4500000",
+        "price_label": "Rp 4.500.000",
+        "paket_count": 1,
+        "excerpt": "Layanan pelaporan SPT Tahunan Badan secara profesional dan akurat sesuai ketentuan pajak yang berlaku.",
+        "detail_path": "/perpajakan-dan-pembukuan/3",
+        "image": "",
+        "penjelasan_umum": [
+            "Pelaporan Surat Pemberitahuan (SPT) Tahunan Badan merupakan salah satu kewajiban perpajakan yang harus dipenuhi oleh setiap badan usaha yang telah memiliki Nomor Pokok Wajib Pajak (NPWP), baik Perseroan Terbatas (PT), CV, Yayasan, Koperasi, Firma, maupun bentuk badan usaha lainnya.",
+            "Meskipun terlihat sebagai proses administratif, penyusunan dan pelaporan SPT Tahunan Badan sesungguhnya membutuhkan pemahaman yang baik terhadap laporan keuangan, koreksi fiskal, rekonsiliasi perpajakan, serta ketentuan perpajakan yang terus berkembang. Kesalahan dalam pelaporan dapat, menimbulkan risiko berupa pajak kurang bayar, surat klarifikasi, pemeriksaan, hingga sanksi administrasi di kemudian hari.",
+            "SPT Tahunan Badan merupakan sarana bagi Wajib Pajak Badan untuk melaporkan seluruh aktivitas perpajakan dalam satu tahun pajak, termasuk:",
+            { "type": "bullets", "items": [
+                "Penghasilan perusahaan;",
+                "Biaya dan beban usaha;",
+                "Laba atau rugi fiskal;",
+                "Perhitungan Pajak Penghasilan (PPh) Badan;",
+                "Kredit pajak;",
+                "Aset dan kewajiban perusahaan;",
+                "Informasi perpajakan lainnya yang diwajibkan oleh Direktorat Jenderal Pajak."
+            ]},
+            "Pelaporan dilakukan melalui Formulir SPT Tahunan PPh Badan (Formulir 1771) beserta lampiran-lampiran yang dipersyaratkan."
+        ],
+        "sections": [
+            {
+                "id": "ruang-lingkup-badan",
+                "type": "grid_check_desc",
+                "title": "RUANG LINGKUP LAYANAN",
+                "items": [
+                    { "title": "Review laporan keuangan perusahaan", "desc": null },
+                    { "title": "Pendampingan proses pelaporan melalui sistem Coretax", "desc": null },
+                    { "title": "Analisis dan rekonsiliasi fiskal", "desc": null },
+                    { "title": "Pemeriksaan kelengkapan dokumen perpajakan", "desc": null },
+                    { "title": "Penyusunan SPT Tahunan PPh Badan (Formulir 1771)", "desc": null },
+                    { "title": "Penyampaian bukti penerimaan elektronik (BPE)", "desc": null },
+                    { "title": "Penyusunan lampiran-lampiran pendukung", "desc": null },
+                    { "title": "Konsultasi perpajakan terkait pelaporan tahunan", "desc": null },
+                    { "title": "Verifikasi kewajiban perpajakan perusahaan", "desc": null }
+                ]
+            },
+            {
+                "id": "dokumen-diperlukan-badan",
+                "type": "numbered_accordion",
+                "title": "DOKUMEN YANG UMUMNYA DIPERLUKAN",
+                "items": [
+                    {
+                        "title": "Untuk memudahkan proses pelaporan, perusahaan biasanya perlu menyiapkan:",
+                        "bullets": [
+                            "NPWP Badan;",
+                            "Akta dan legalitas perusahaan;",
+                            "Laporan Keuangan Tahunan Berjalan;",
+                            "Neraca dan Laporan Laba Rugi;",
+                            "Bukti pemotongan atau pemotongan pajak;",
+                            "Data aset dan kewajiban perusahaan;",
+                            "Dokumen pendukung perpajakan lainnya sesuai kondisi perusahaan."
+                        ]
+                    }
+                ]
+            }
+        ],
+        "biaya_layanan_single": {
+            "nama": "SURAT PEMBERITAHUAN (SPT) TAHUNAN BADAN",
+            "harga": "Rp 4.500.000",
+            "gratis_konsultasi": true,
+            "mendapatkan": [
+                "Pengisian 1771 induk & lampiran",
+                "Submit via Coretax",
+                "Submit online & bukti pelaporan"
+            ],
+            "termasuk": [
+                "Fasttrack Document Delivery Service",
+                "Fasttrack Digital Files Secure Storage",
+                "Fasttrack Kit"
+            ]
+        },
+        "biaya_layanan_cards": null,
+        "faq": []
+    }
+]
