@@ -551,60 +551,65 @@ onUnmounted(() => {
         </section>
 
         <!-- ===== 5. PROMO SECTION ===== -->
-        <section class="bg-[#42443D] pt-[52px] pb-[120px]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <div class="flex items-center justify-between">
-                    <h2 class="text-[24px] font-bold leading-[36px] text-[#F9F9F9]">
-                        {{ t("home.promo.title") }}
-                    </h2>
-                    <a href="/promo"
-                        class="hidden sm:inline-flex items-center gap-2 border border-[#F9F9F9] rounded-lg px-[11px] py-[11px] h-[44px] text-[14px] font-semibold text-[#F9F9F9] hover:bg-white/10 transition-colors">
-                        {{ t("home.promo.seeAll") }}
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
+<section class="bg-[#42443D] pt-[52px] pb-[120px]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between">
+            <h2 class="text-[24px] font-bold leading-[36px] text-[#F9F9F9]">
+                {{ t("home.promo.title") }}
+            </h2>
+            <a href="/promo"
+                class="hidden sm:inline-flex items-center gap-2 border border-[#F9F9F9] rounded-lg px-[11px] py-[11px] h-[44px] text-[14px] font-semibold text-[#F9F9F9] hover:bg-white/10 transition-colors">
+                {{ t("home.promo.seeAll") }}
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </div>
+
+        <div
+            class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 bg-white/[0.01] rounded-b-2xl backdrop-blur-[13px]">
+            <a v-for="promo in promoItems" :key="promo.image"
+                :href="waLink(promo.service, { agent: promo.agent })" target="_blank" rel="noopener noreferrer"
+                class="group relative flex flex-col rounded-lg bg-[#FEFEFE] p-4 gap-4 hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5">
+
+                <div class="w-full aspect-[16/10] sm:aspect-[4/3] rounded-lg bg-[#F5F5F5] overflow-hidden flex items-center justify-center">
+                    <img :src="`/images/promo/${promo.image}`" :alt="promo.service"
+                        class="w-full h-full object-contain" loading="lazy" />
                 </div>
+
+                <!-- <div class="relative flex flex-col items-center justify-end h-[80px] gap-2">
+                    <span
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center justify-center rounded-b-lg bg-[#FED7DA] px-3 py-1 h-[26px] text-[10px] font-semibold leading-[18px] text-[#FB3748]">
+                        {{ promo.badge }}
+                    </span>
+                    <div class="flex flex-col items-center gap-1">
+                        <h3 class="text-[16px] font-bold leading-[24px] text-[#1A1B18]">
+                            {{ promo.discount }}
+                        </h3>
+                        <p class="text-[14px] leading-[21px] text-[#1A1B18] text-center">
+                            {{ promo.desc }}
+                        </p>
+                    </div>
+                </div> -->
 
                 <div
-                    class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 bg-white/[0.01] rounded-b-2xl backdrop-blur-[13px]">
-                    <a v-for="promo in promoItems" :key="promo.image"
-                        :href="waLink(promo.service, { agent: promo.agent })" target="_blank" rel="noopener noreferrer"
-                        class="group relative flex flex-col rounded-lg bg-[#FEFEFE] p-4 gap-4 hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5">
-                        <img :src="`/images/promo/${promo.image}`" :alt="promo.service"
-                            class="w-full h-[150px] object-cover rounded-lg" />
-                        <!-- <div class="relative flex flex-col items-center justify-end h-[80px] gap-2">
-                            <span
-                                class="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center justify-center rounded-b-lg bg-[#FED7DA] px-3 py-1 h-[26px] text-[10px] font-semibold leading-[18px] text-[#FB3748]">
-                                {{ promo.badge }}
-                            </span>
-                            <div class="flex flex-col items-center gap-1">
-                                <h3 class="text-[16px] font-bold leading-[24px] text-[#1A1B18]">
-                                    {{ promo.discount }}
-                                </h3>
-                                <p class="text-[14px] leading-[21px] text-[#1A1B18] text-center">
-                                    {{ promo.desc }}
-                                </p>
-                            </div>
-                        </div> -->
-                        <div
-                            class="flex items-center justify-center rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors">
-                            {{ promo.cta }}
-                        </div>
-                    </a>
+                    class="flex items-center justify-center rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors">
+                    {{ promo.cta }}
                 </div>
+            </a>
+        </div>
 
-                <a href="/promo"
-                    class="sm:hidden mt-6 inline-flex items-center gap-2 border border-[#F9F9F9] rounded-lg px-[11px] py-[11px] h-[44px] text-[14px] font-semibold text-[#F9F9F9] hover:bg-white/10 transition-colors w-full justify-center">
-                    {{ t("home.promo.seeAll") }}
-                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
-            </div>
-        </section>
+        <a href="/promo"
+            class="sm:hidden mt-6 inline-flex items-center gap-2 border border-[#F9F9F9] rounded-lg px-[11px] py-[11px] h-[44px] text-[14px] font-semibold text-[#F9F9F9] hover:bg-white/10 transition-colors w-full justify-center">
+            {{ t("home.promo.seeAll") }}
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+    </div>
+</section>
 
         <!-- ===== 6. TENTANG KAMI ===== -->
         <section class="py-[52px] bg-[#F9F9F9]">
