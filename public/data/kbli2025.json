@@ -83,7 +83,7 @@
                             {
                                 "nomor_kbli": "0112",
                                 "nama": "PERTANIAN PADI",
-                                "description": "Subgolongan ini mencakup pertanian padi, termasuk kegiatan pembenihan tanaman padi. Budi daya ikan di sawah (mina padi) digolongkan dalam kegiatan perikanan. o",
+                                "description": "Subgolongan ini mencakup pertanian padi, termasuk kegiatan pembenihan tanaman padi. Budi daya ikan di sawah (mina padi) digolongkan dalam kegiatan perikanan. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -237,7 +237,7 @@
                     {
                         "nomor_kbli": "012",
                         "nama": "PERTANIAN TANAMAN TAHUNAN",
-                        "description": "Golongan ini mencakup penanaman tanaman yang berlangsung lebih dari dua musim tanam, baik tanaman yang setiap musim mati atau tanaman yang tumbuh terus menerus, termasuk penanaman tanaman untuk menghasilkan benih berupa biji/seed. Golongan ini juga mencakup kegiatan penanaman tanaman tahunan di area atau lokasi hutan (agroforestry), termasuk penanaman tanaman tahunan yang bertujuan untuk penyerapan dan penyimpanan karbon secara alami, serta penjualan kredit karbon atau sertifikat pengurangan emisi sebagai hasil dari kegiatan tersebut. Golongan ini tidak mencakup kegiatan pembenihan tanaman yang berupa semaian benih/seedling, lihat subgolongan 0130. o",
+                        "description": "Golongan ini mencakup penanaman tanaman yang berlangsung lebih dari dua musim tanam, baik tanaman yang setiap musim mati atau tanaman yang tumbuh terus menerus, termasuk penanaman tanaman untuk menghasilkan benih berupa biji/seed. Golongan ini juga mencakup kegiatan penanaman tanaman tahunan di area atau lokasi hutan (agroforestry), termasuk penanaman tanaman tahunan yang bertujuan untuk penyerapan dan penyimpanan karbon secara alami, serta penjualan kredit karbon atau sertifikat pengurangan emisi sebagai hasil dari kegiatan tersebut. Golongan ini tidak mencakup kegiatan pembenihan tanaman yang berupa semaian benih/seedling, lihat subgolongan 0130. ",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -526,7 +526,7 @@
                                     {
                                         "nomor_kbli": "01413",
                                         "nama": "BUDI DAYA DAN PEMBIBITAN KERBAU POTONG",
-                                        "description": "Kelompok ini mencakup kegiatan budi daya kerbau potong berupa penggemukan untuk menghasilkan kerbau siap potong dan pembibitan untuk menghasilkan bibit ternak kerbau potong, semen, dan embrio. o",
+                                        "description": "Kelompok ini mencakup kegiatan budi daya kerbau potong berupa penggemukan untuk menghasilkan kerbau siap potong dan pembibitan untuk menghasilkan bibit ternak kerbau potong, semen, dan embrio. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -642,7 +642,7 @@
                                     {
                                         "nomor_kbli": "01465",
                                         "nama": "BUDI DAYA DAN PEMBIBITAN ITIK DAN BEBEK",
-                                        "description": "Kelompok ini mencakup kegiatan budi daya itik dan bebek untuk menghasilkan itik dan bebek pedaging, itik dan bebek petelur, telur konsumsi dan lainnya, dan kegiatan pembibitan untuk menghasilkan telur tetas serta bibit itik dan bebek. o",
+                                        "description": "Kelompok ini mencakup kegiatan budi daya itik dan bebek untuk menghasilkan itik dan bebek pedaging, itik dan bebek petelur, telur konsumsi dan lainnya, dan kegiatan pembibitan untuk menghasilkan telur tetas serta bibit itik dan bebek. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -987,7 +987,7 @@
                                     {
                                         "nomor_kbli": "02401",
                                         "nama": "JASA LINGKUNGAN HUTAN",
-                                        "description": "Kelompok ini mencakup kegiatan pemanfaatan jasa/kondisi lingkungan di dalam hutan, mulai dari pemanfaatan kondisi lingkungan berupa pemanfaatan potensi ekosistem (seperti fungsi konservasi dan lindung), pemanfaatan jasa lingkungan hutan (air, udara), keadaan iklim, fenomena alam, kekhasan jenis, dan keunikan spesies. Kegiatan ini dapat dilakukan di dalam hutan alam, hutan semialami, maupun hutan tanaman. o",
+                                        "description": "Kelompok ini mencakup kegiatan pemanfaatan jasa/kondisi lingkungan di dalam hutan, mulai dari pemanfaatan kondisi lingkungan berupa pemanfaatan potensi ekosistem (seperti fungsi konservasi dan lindung), pemanfaatan jasa lingkungan hutan (air, udara), keadaan iklim, fenomena alam, kekhasan jenis, dan keunikan spesies. Kegiatan ini dapat dilakukan di dalam hutan alam, hutan semialami, maupun hutan tanaman. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -1165,7 +1165,7 @@
                             {
                                 "nomor_kbli": "0330",
                                 "nama": "JASA PENUNJANG KEGIATAN PENANGKAPAN DAN PEMBUDIDAYAAN IKAN",
-                                "description": "Lihat kelompok 03300. o",
+                                "description": "Lihat kelompok 03300. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -1478,7 +1478,7 @@
                                     {
                                         "nomor_kbli": "08106",
                                         "nama": "PENGGALIAN GIPS",
-                                        "description": "Kelompok ini mencakup kegiatan penggalian gips, termasuk kegiatan pembersihan dan penghalusannya. o",
+                                        "description": "Kelompok ini mencakup kegiatan penggalian gips, termasuk kegiatan pembersihan dan penghalusannya. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -1655,7 +1655,7 @@
                             {
                                 "nomor_kbli": "0910",
                                 "nama": "AKTIVITAS PENUNJANG PERTAMBANGAN MINYAK BUMI DAN GAS ALAM",
-                                "description": "Lihat kelompok 09100. o",
+                                "description": "Lihat kelompok 09100. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -1684,7 +1684,7 @@
                                     {
                                         "nomor_kbli": "09900",
                                         "nama": "AKTIVITAS PENUNJANG PERTAMBANGAN DAN PENGGALIAN LAINNYA",
-                                        "description": "Kelompok ini mencakup - jasa penunjang atas dasar balas jasa atau kontrak, yang dibutuhkan dalam kegiatan pertambangan golongan pokok 05, 07, dan 08: - jasa eksplorasi, misalnya dengan cara tradisional seperti mengambil contoh bijih dan membuat observasi geologi pada lokasi tambang yang memiliki potensi berprospek; - jasa pemompaan dan pengeringan hasil tambang atas dasar balas jasa atau kontrak; - uji coba penggalian dan pengeboran sumur atau ladang tambang; - jasa aglomerasi dan konsentrasi biji besi yang dilakukan oleh pihak ketiga; - pengamanan lubang tambang dan terowongan; - penghancuran struktur bangunan dan pembongkaran komponen atau peralatan pada fasilitas pertambangan bawah tanah. Kelompok ini tidak mencakup - pengoperasian tambang atau penggalian atas dasar balas jasa atau kontrak, lihat golongan pokok 05, 07, dan 08; - jasa reparasi khusus mesin pertambangan, lihat subgolongan 3312; - jasa survei geofisika atas dasar balas jasa atau kontrak, lihat subgolongan 7110. o",
+                                        "description": "Kelompok ini mencakup - jasa penunjang atas dasar balas jasa atau kontrak, yang dibutuhkan dalam kegiatan pertambangan golongan pokok 05, 07, dan 08: - jasa eksplorasi, misalnya dengan cara tradisional seperti mengambil contoh bijih dan membuat observasi geologi pada lokasi tambang yang memiliki potensi berprospek; - jasa pemompaan dan pengeringan hasil tambang atas dasar balas jasa atau kontrak; - uji coba penggalian dan pengeboran sumur atau ladang tambang; - jasa aglomerasi dan konsentrasi biji besi yang dilakukan oleh pihak ketiga; - pengamanan lubang tambang dan terowongan; - penghancuran struktur bangunan dan pembongkaran komponen atau peralatan pada fasilitas pertambangan bawah tanah. Kelompok ini tidak mencakup - pengoperasian tambang atau penggalian atas dasar balas jasa atau kontrak, lihat golongan pokok 05, 07, dan 08; - jasa reparasi khusus mesin pertambangan, lihat subgolongan 3312; - jasa survei geofisika atas dasar balas jasa atau kontrak, lihat subgolongan 7110. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -1788,7 +1788,7 @@
                                     {
                                         "nomor_kbli": "10212",
                                         "nama": "PENGOLAHAN DAN PENGAWETAN IKAN DENGAN PENGASAPAN ATAU",
-                                        "description": "PEMANGGANGAN Kelompok ini mencakup kegiatan pengolahan dan pengawetan ikan bersirip melalui proses pengasapan atau pemanggangan yang menghasilkan produk seperti ikan bandeng asap, ikan julung-julung/roa asap, ikan fufu/asar asap, ikan lele asap, dan ikan patin asap. o",
+                                        "description": "PEMANGGANGAN Kelompok ini mencakup kegiatan pengolahan dan pengawetan ikan bersirip melalui proses pengasapan atau pemanggangan yang menghasilkan produk seperti ikan bandeng asap, ikan julung-julung/roa asap, ikan fufu/asar asap, ikan lele asap, dan ikan patin asap. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -2039,7 +2039,7 @@
                                     {
                                         "nomor_kbli": "10422",
                                         "nama": "INDUSTRI MINYAK MENTAH KELAPA",
-                                        "description": "Kelompok ini mencakup kegiatan pengolahan kelapa menjadi minyak mentah (crude oil), termasuk produksi pelet kopra yang dihasilkan sebagai produk sampingan dari pembuatan minyak kelapa. o",
+                                        "description": "Kelompok ini mencakup kegiatan pengolahan kelapa menjadi minyak mentah (crude oil), termasuk produksi pelet kopra yang dihasilkan sebagai produk sampingan dari pembuatan minyak kelapa. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -2068,7 +2068,7 @@
                                     {
                                         "nomor_kbli": "10433",
                                         "nama": "INDUSTRI PEMISAHAN/FRAKSINASI MINYAK MENTAH KELAPA SAWIT",
-                                        "description": "DAN MINYAK MENTAH INTI KELAPA SAWIT Kelompok ini mencakup kegiatan pemisahan fraksi padat (stearin) dan fraksi cair (olein) dari minyak mentah kelapa sawit menjadi minyak mentah kelapa sawit olein/crude palm olein dan minyak mentah kelapa sawit stearin/crude palm stearin atau dari minyak mentah inti kelapa sawit menjadi minyak mentah inti kelapa sawit olein/crude palm kernel olein dan minyak mentah inti kelapa sawit stearin/crude palm kernel stearin yang masih perlu diolah lebih lanjut. o",
+                                        "description": "DAN MINYAK MENTAH INTI KELAPA SAWIT Kelompok ini mencakup kegiatan pemisahan fraksi padat (stearin) dan fraksi cair (olein) dari minyak mentah kelapa sawit menjadi minyak mentah kelapa sawit olein/crude palm olein dan minyak mentah kelapa sawit stearin/crude palm stearin atau dari minyak mentah inti kelapa sawit menjadi minyak mentah inti kelapa sawit olein/crude palm kernel olein dan minyak mentah inti kelapa sawit stearin/crude palm kernel stearin yang masih perlu diolah lebih lanjut. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -2256,7 +2256,7 @@
                                     {
                                         "nomor_kbli": "10633",
                                         "nama": "INDUSTRI TEPUNG BERAS DAN TEPUNG JAGUNG",
-                                        "description": "Kelompok ini mencakup kegiatan pembuatan tepung beras dan tepung jagung, termasuk corn grits. o",
+                                        "description": "Kelompok ini mencakup kegiatan pembuatan tepung beras dan tepung jagung, termasuk corn grits. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -2322,7 +2322,7 @@
                                     {
                                         "nomor_kbli": "10723",
                                         "nama": "INDUSTRI SIROP",
-                                        "description": "Kelompok ini mencakup kegiatan pengolahan gula menjadi sirop, seperti sirop gula serta sirop dan gula mapel. Kegiatan pembuatan sirop yang tergabung dengan pabrik gula dan tidak dapat dipisahkan tersendiri dimasukkan dalam kelompok 10721 atau 10722. o",
+                                        "description": "Kelompok ini mencakup kegiatan pengolahan gula menjadi sirop, seperti sirop gula serta sirop dan gula mapel. Kegiatan pembuatan sirop yang tergabung dengan pabrik gula dan tidak dapat dipisahkan tersendiri dimasukkan dalam kelompok 10721 atau 10722. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -2338,7 +2338,7 @@
                             {
                                 "nomor_kbli": "1073",
                                 "nama": "INDUSTRI PENGOLAHAN KAKAO",
-                                "description": "; INDUSTRI COKELAT DAN KEMBANG GULA Subgolongan ini mencakup\n - pembuatan bubuk kakao, mentega kakao, lemak kakao, dan minyak kakao;\n - pembuatan cokelat dan gula-gula dari cokelat;\n - pembuatan gula-gula, seperti caramel, cachous, nugat, fondan, dan cokelat putih;\n - pembuatan permen karet;\n - pengawetan buah, kacang, kulit buah, dan bagian lain dari tumbuhan dalam gula;\n - pembuatan permen obat batuk dan pastiles; - pembuatan permen tanpa menggunakan gula.",
+                                "description": " INDUSTRI COKELAT DAN KEMBANG GULA Subgolongan ini mencakup\n - pembuatan bubuk kakao, mentega kakao, lemak kakao, dan minyak kakao;\n - pembuatan cokelat dan gula-gula dari cokelat;\n - pembuatan gula-gula, seperti caramel, cachous, nugat, fondan, dan cokelat putih;\n - pembuatan permen karet;\n - pengawetan buah, kacang, kulit buah, dan bagian lain dari tumbuhan dalam gula;\n - pembuatan permen obat batuk dan pastiles; - pembuatan permen tanpa menggunakan gula.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -2558,7 +2558,7 @@
                 "children": [
                     {
                         "nomor_kbli": "110",
-                        "nama": "[110]",
+                        "nama": "INDUSTRI MINUMAN",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -2571,7 +2571,7 @@
                                     {
                                         "nomor_kbli": "11010",
                                         "nama": "INDUSTRI PENYULINGAN, PEMURNIAN, DAN PENCAMPURAN MINUMAN",
-                                        "description": "BERALKOHOL Kelompok ini mencakup - kegiatan pembuatan minuman beralkohol hasil distilasi/penyulingan siap minum, baik secara modern maupun tradisional, misalnya wiski/whisky, brendi/brandy, gin, vodka, tequila, arak, genever, soju, minuman keras/liqueurs, dan \"minuman campuran\"; - pencampuran minuman beralkohol hasil distilasi atau proses pencampuran bahan baku minuman beralkohol untuk mencapai kadar etanol yang diinginkan; - produksi minuman beralkohol netral (tanpa rasa/flavor). Kelompok ini tidak mencakup - kegiatan pembuatan alkohol tanpa distilasi/penyulingan, lihat subgolongan 1102 dan 1103; - pembuatan etil alkohol sintetis, lihat subgolongan 2011; - pembuatan etil alkohol dari bahan yang difermentasi, lihat subgolongan 2011; - pengemasan dalam botol dan pelabelan, lihat subgolongan 4633 (jika pengemasan dilakukan sebagai bagian dari kegiatan perdagangan besar) atau subgolongan 8292 (jika pengemasan dilakukan atas dasar balas jasa atau kontrak).",
+                                        "description": "BERALKOHOL Kelompok ini mencakup - kegiatan pembuatan minuman beralkohol hasil distilasi/penyulingan siap minum, baik secara modern maupun tradisional, misalnya wiski/whisky, brendi/brandy, gin, vodka, tequila, arak, genever, soju, minuman keras/liqueurs, dan \"minuman campuran\" - pencampuran minuman beralkohol hasil distilasi atau proses pencampuran bahan baku minuman beralkohol untuk mencapai kadar etanol yang diinginkan; - produksi minuman beralkohol netral (tanpa rasa/flavor). Kelompok ini tidak mencakup - kegiatan pembuatan alkohol tanpa distilasi/penyulingan, lihat subgolongan 1102 dan 1103; - pembuatan etil alkohol sintetis, lihat subgolongan 2011; - pembuatan etil alkohol dari bahan yang difermentasi, lihat subgolongan 2011; - pengemasan dalam botol dan pelabelan, lihat subgolongan 4633 (jika pengemasan dilakukan sebagai bagian dari kegiatan perdagangan besar) atau subgolongan 8292 (jika pengemasan dilakukan atas dasar balas jasa atau kontrak).",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -2609,7 +2609,7 @@
                             },
                             {
                                 "nomor_kbli": "1104",
-                                "nama": "[1104]",
+                                "nama": "INDUSTRI MALT",
                                 "description": "",
                                 "type_kbli": "Subgolongan",
                                 "children": [
@@ -2670,7 +2670,7 @@
                             {
                                 "nomor_kbli": "1200",
                                 "nama": "INDUSTRI PRODUK TEMBAKAU",
-                                "description": "Subgolongan ini mencakup - pembuatan produk tembakau dan produk pengganti tembakau, seperti rokok, tembakau iris halus/fine cut tobacco, cerutu, tembakau pipa, tembakau kunyah, dan tembakau sedot/snuff; - pembuatan tembakau yang \"dihomogenisasi\"atau \"direkonstitusi\"; - pemilahan tangkai dan pengeringan ulang tembakau. Subgolongan ini tidak mencakup - pertanian atau pemrosesan awal tembakau, lihat subgolongan 0115, 0163, dan 0164; - pembuatan cairan rokok elektronik, termasuk isi ulang tertutup, lihat subgolongan 2029; - pembuatan rokok elektronik, lihat subgolongan 3290; - pembungkusan/pengepakan/pelabelan rokok, lihat subgolongan 4633 (jika kegiatannya dilakukan sebagai bagian dari perdagangan besar) dan subgolongan 8292 (jika kegiatannya dilakukan atas dasar balas jasa atau kontrak).",
+                                "description": "Subgolongan ini mencakup - pembuatan produk tembakau dan produk pengganti tembakau, seperti rokok, tembakau iris halus/fine cut tobacco, cerutu, tembakau pipa, tembakau kunyah, dan tembakau sedot/snuff; - pembuatan tembakau yang \"dihomogenisasi\"atau \"direkonstitusi\" - pemilahan tangkai dan pengeringan ulang tembakau. Subgolongan ini tidak mencakup - pertanian atau pemrosesan awal tembakau, lihat subgolongan 0115, 0163, dan 0164; - pembuatan cairan rokok elektronik, termasuk isi ulang tertutup, lihat subgolongan 2029; - pembuatan rokok elektronik, lihat subgolongan 3290; - pembungkusan/pengepakan/pelabelan rokok, lihat subgolongan 4633 (jika kegiatannya dilakukan sebagai bagian dari perdagangan besar) dan subgolongan 8292 (jika kegiatannya dilakukan atas dasar balas jasa atau kontrak).",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -2786,7 +2786,7 @@
                                     {
                                         "nomor_kbli": "13131",
                                         "nama": "PENYEMPURNAAN BENANG",
-                                        "description": "Kelompok ini mencakup kegiatan pengelantangan, pencelupan, penyempurnaan akhir, dan penyempurnaan lainnya untuk, serat, benang, maupun benang jahit. o",
+                                        "description": "Kelompok ini mencakup kegiatan pengelantangan, pencelupan, penyempurnaan akhir, dan penyempurnaan lainnya untuk, serat, benang, maupun benang jahit. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -3339,7 +3339,7 @@
                             },
                             {
                                 "nomor_kbli": "1623",
-                                "nama": "[1623]",
+                                "nama": "INDUSTRI WADAH DARI KAYU",
                                 "description": "",
                                 "type_kbli": "Subgolongan",
                                 "children": [
@@ -3355,7 +3355,7 @@
                             {
                                 "nomor_kbli": "1629",
                                 "nama": "INDUSTRI BARANG LAINNYA DARI KAYU",
-                                "description": "; INDUSTRI BARANG DARI GABUS, JERAMI, ROTAN, BAMBU, DAN SEJENISNYA Subgolongan ini mencakup - pembautan berbagai macam barang dari kayu, seperti gagang atau badan untuk perkakas, sapu, sikat; cetakan dan penyangga sepatu (shoe lasts and trees) dari kayu; gantungan baju, rangka cermin dan pigura dari kayu; rangka kanvas dari kayu; gagang payung dari kayu, tongkat dan sejenisnya; peralatan rumah tangga dan peralatan dapur dari kayu; patung dan ornamen dari kayu; kotak kayu untuk perhiasan, alat makan dari kayu, seperti sendok, garpu dan pisau; kumparan dari kayu, gulungan benang jahit, dan barang sejenisnya dari kayu; serta kayu cetakan untuk pembuatan pipa rokok; - pengolahan gabus alami, pembuatan gabus aglomerasi; - pembuatan barang dari gabus alami atau gabus aglomerasi, termasuk penutup lantai dari gabus; - pembuatan bahan anyaman dan barang dari bahan anyaman, seperti keset kaki, tikar, kasa/tabir, dan wadah; - pembuatan keranjang dan barang anyaman; - pembuatan kayu bakar, dibuat dari kayu atau bahan substitusi seperti ampas kopi atau biji kedelai yang dipres. Subgolongan ini tidak mencakup - pembuatan keset kaki atau tikar dari bahan tekstil, lihat subgolongan 1392; - pembuatan tas koper/luggage, lihat subgolongan 1512; - pembuatan alas kaki dari kayu, lihat subgolongan 1520; - pembuatan bagian sepatu dari kayu (misalnya hak), lihat subgolongan 1520; - pembuatan korek api, lihat subgolongan 2029; - pembuatan case (badan) jam dinding, lihat subgolongan 2652; - pembuatan alat penggulung benang dari kayu yang menjadi bagian dari mesin tekstil, lihat subgolongan 2826; - pembuatan furnitur dari kayu, lihat subgolongan 3101; - pembuatan mainan dari kayu, lihat subgolongan 3240; - pembuatan pelampung gabus, lihat subgolongan 3290; - pembuatan sikat dan sapu, lihat subgolongan 3290; - pembuatan peti mati, lihat subgolongan 3290.",
+                                "description": " INDUSTRI BARANG DARI GABUS, JERAMI, ROTAN, BAMBU, DAN SEJENISNYA Subgolongan ini mencakup - pembautan berbagai macam barang dari kayu, seperti gagang atau badan untuk perkakas, sapu, sikat; cetakan dan penyangga sepatu (shoe lasts and trees) dari kayu; gantungan baju, rangka cermin dan pigura dari kayu; rangka kanvas dari kayu; gagang payung dari kayu, tongkat dan sejenisnya; peralatan rumah tangga dan peralatan dapur dari kayu; patung dan ornamen dari kayu; kotak kayu untuk perhiasan, alat makan dari kayu, seperti sendok, garpu dan pisau; kumparan dari kayu, gulungan benang jahit, dan barang sejenisnya dari kayu; serta kayu cetakan untuk pembuatan pipa rokok; - pengolahan gabus alami, pembuatan gabus aglomerasi; - pembuatan barang dari gabus alami atau gabus aglomerasi, termasuk penutup lantai dari gabus; - pembuatan bahan anyaman dan barang dari bahan anyaman, seperti keset kaki, tikar, kasa/tabir, dan wadah; - pembuatan keranjang dan barang anyaman; - pembuatan kayu bakar, dibuat dari kayu atau bahan substitusi seperti ampas kopi atau biji kedelai yang dipres. Subgolongan ini tidak mencakup - pembuatan keset kaki atau tikar dari bahan tekstil, lihat subgolongan 1392; - pembuatan tas koper/luggage, lihat subgolongan 1512; - pembuatan alas kaki dari kayu, lihat subgolongan 1520; - pembuatan bagian sepatu dari kayu (misalnya hak), lihat subgolongan 1520; - pembuatan korek api, lihat subgolongan 2029; - pembuatan case (badan) jam dinding, lihat subgolongan 2652; - pembuatan alat penggulung benang dari kayu yang menjadi bagian dari mesin tekstil, lihat subgolongan 2826; - pembuatan furnitur dari kayu, lihat subgolongan 3101; - pembuatan mainan dari kayu, lihat subgolongan 3240; - pembuatan pelampung gabus, lihat subgolongan 3290; - pembuatan sikat dan sapu, lihat subgolongan 3290; - pembuatan peti mati, lihat subgolongan 3290.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -3396,7 +3396,7 @@
                                     {
                                         "nomor_kbli": "16299",
                                         "nama": "INDUSTRI BARANG LAINNYA DARI KAYU",
-                                        "description": "; INDUSTRI BARANG DARI GABUS, JERAMI, ROTAN, BAMBU, DAN SEJENISNYA YTDL Kelompok ini mencakup kegiatan pembuatan barang-barang dari kayu, gabus, rotan, bambu lainnya yang belum tercakup sebelumnya. Barang- barang dari kayu misalnya alat tenun, cetakan sepatu dan penyangga sepatu (shoe lasts and trees), gantungan baju, tusuk gigi, pensil slate, dowel, sempoa (alat hitung), penggaris dan papan tulis, termasuk juga pembuatan alat-alat kerja dari kayu, seperti plesteran, palu, rumah serutan kayu, gagang pegangan perkakas, palet, papan cucian dan sejenisnya. Barang dari gabus misalnya gabus lembaran, sumbat, piringan, cincin, pelapis, dan pelampung.",
+                                        "description": " INDUSTRI BARANG DARI GABUS, JERAMI, ROTAN, BAMBU, DAN SEJENISNYA YTDL Kelompok ini mencakup kegiatan pembuatan barang-barang dari kayu, gabus, rotan, bambu lainnya yang belum tercakup sebelumnya. Barang- barang dari kayu misalnya alat tenun, cetakan sepatu dan penyangga sepatu (shoe lasts and trees), gantungan baju, tusuk gigi, pensil slate, dowel, sempoa (alat hitung), penggaris dan papan tulis, termasuk juga pembuatan alat-alat kerja dari kayu, seperti plesteran, palu, rumah serutan kayu, gagang pegangan perkakas, palet, papan cucian dan sejenisnya. Barang dari gabus misalnya gabus lembaran, sumbat, piringan, cincin, pelapis, dan pelampung.",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -3414,13 +3414,13 @@
                 "children": [
                     {
                         "nomor_kbli": "170",
-                        "nama": "[170]",
+                        "nama": "INDUSTRI KERTAS DAN BARANG DARI KERTAS",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "1701",
-                                "nama": "[1701]",
+                                "nama": "INDUSTRI BUBUR KERTAS, KERTAS, DAN PAPAN KERTAS",
                                 "description": "",
                                 "type_kbli": "Subgolongan",
                                 "children": [
@@ -3510,7 +3510,7 @@
                 "children": [
                     {
                         "nomor_kbli": "181",
-                        "nama": "[181]",
+                        "nama": "PENCETAKAN DAN KEGIATAN JASA TERKAIT",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -3554,7 +3554,7 @@
                     },
                     {
                         "nomor_kbli": "182",
-                        "nama": "[182]",
+                        "nama": "REPRODUKSI MEDIA REKAMAN",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -3586,13 +3586,13 @@
             },
             {
                 "nomor_kbli": "19",
-                "nama": "[19]",
+                "nama": "INDUSTRI PRODUK DARI BATU BARA DAN PENGILANGAN MINYAK BUMI",
                 "description": "",
                 "type_kbli": "Golongan Pokok",
                 "children": [
                     {
                         "nomor_kbli": "191",
-                        "nama": "[191]",
+                        "nama": "INDUSTRI PRODUK TANUR KOKAS",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
@@ -3615,14 +3615,14 @@
                     },
                     {
                         "nomor_kbli": "192",
-                        "nama": "[192]",
+                        "nama": "INDUSTRI PRODUK PENGILANGAN MINYAK BUMI; INDUSTRI PRODUK BAHAN BAKAR FOSIL",
                         "description": "",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "1920",
                                 "nama": "INDUSTRI PRODUK PENGILANGAN MINYAK BUMI",
-                                "description": "; INDUSTRI PRODUK BAHAN BAKAR FOSIL Subgolongan ini mencakup pembuatan bahan bakar gas atau cair atau produk lainnya dari minyak bumi mentah, mineral bitumen atau produk turunannya. Pengilangan minyak bumi mencakup satu atau lebih aktivitas berikut: fraksinasi; distilasi langsung minyak mentah; dan perengkahan. Subgolongan ini mencakup - produksi bahan bakar motor: bensin, minyak tanah, dan lain-lain; - produksi bahan bakar: minyak bahan bakar berkadar ringan, sedang dan berat, gas sulingan seperti etana, propana, butana, dan sebagainya; - pembuatan minyak pelumas atau gemuk yang berbahan dasar minyak, termasuk dari minyak bekas; - pembuatan produk untuk industri petrokimia dan untuk pembuatan bahan pelapis jalan; - pembuatan berbagai produk olahan minyak bumi, spiritus putih, vaselin, malam parafin, minyak ter, dan lain-lain; - pembuatan briket minyak bumi; - pencampuran biofuel, seperti pencampuran alkohol dengan minyak bumi (misalnya gasohol); - pembuatan produk dari bahan limbah minyak bumi, misalnya minyak pelumas bekas. Subgolongan ini juga mencakup - pembuatan briket gambut; - pembuatan briket batu bara keras dan lignit. Subgolongan ini tidak mencakup - pembuatan bahan bakar padat dari biomassa, lihat subgolongan 1629; - pembuatan biofuel cair, lihat subgolongan 2029; - ekstraksi dan produksi gas bumi, lihat subgolongan 0620. 19201 INDUSTRI BAHAN BAKAR DARI PEMURNIAN DAN PENGILANGAN MINYAK BUMI Kelompok ini mencakup kegiatan pemurnian dan pengilangan minyak bumi yang menghasilkan bahan bakar seperti avigas, avtur, gasolin, minyak tanah atau kerosin, minyak solar, minyak diesel, minyak bakar atau bensin, pelarut/solvent, termasuk gas minyak cair/liquid petroleum gas (LPG) dari hasil pengilangan minyak bumi.",
+                                "description": " INDUSTRI PRODUK BAHAN BAKAR FOSIL Subgolongan ini mencakup pembuatan bahan bakar gas atau cair atau produk lainnya dari minyak bumi mentah, mineral bitumen atau produk turunannya. Pengilangan minyak bumi mencakup satu atau lebih aktivitas berikut: fraksinasi; distilasi langsung minyak mentah; dan perengkahan. Subgolongan ini mencakup - produksi bahan bakar motor: bensin, minyak tanah, dan lain-lain; - produksi bahan bakar: minyak bahan bakar berkadar ringan, sedang dan berat, gas sulingan seperti etana, propana, butana, dan sebagainya; - pembuatan minyak pelumas atau gemuk yang berbahan dasar minyak, termasuk dari minyak bekas; - pembuatan produk untuk industri petrokimia dan untuk pembuatan bahan pelapis jalan; - pembuatan berbagai produk olahan minyak bumi, spiritus putih, vaselin, malam parafin, minyak ter, dan lain-lain; - pembuatan briket minyak bumi; - pencampuran biofuel, seperti pencampuran alkohol dengan minyak bumi (misalnya gasohol); - pembuatan produk dari bahan limbah minyak bumi, misalnya minyak pelumas bekas. Subgolongan ini juga mencakup - pembuatan briket gambut; - pembuatan briket batu bara keras dan lignit. Subgolongan ini tidak mencakup - pembuatan bahan bakar padat dari biomassa, lihat subgolongan 1629; - pembuatan biofuel cair, lihat subgolongan 2029; - ekstraksi dan produksi gas bumi, lihat subgolongan 0620. 19201 INDUSTRI BAHAN BAKAR DARI PEMURNIAN DAN PENGILANGAN MINYAK BUMI Kelompok ini mencakup kegiatan pemurnian dan pengilangan minyak bumi yang menghasilkan bahan bakar seperti avigas, avtur, gasolin, minyak tanah atau kerosin, minyak solar, minyak diesel, minyak bakar atau bensin, pelarut/solvent, termasuk gas minyak cair/liquid petroleum gas (LPG) dari hasil pengilangan minyak bumi.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -3674,8 +3674,8 @@
                 "children": [
                     {
                         "nomor_kbli": "201",
-                        "nama": "[201]",
-                        "description": "",
+                        "nama": "INDUSTRI KIMIA DASAR; PUPUK DAN SENYAWA NITROGEN; PLASTIK DAN KARET SINTETIS DALAM BENTUK DASAR",
+                        "description": "Golongan ini mencakup pembuatan bahan kimia dasar, pupuk dan senyawa nitrogen serta plastik dan karet sintetis dalam bentuk dasar.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -3730,14 +3730,14 @@
                                     {
                                         "nomor_kbli": "20121",
                                         "nama": "INDUSTRI SENYAWA NITROGEN",
-                                        "description": "; PUPUK NITROGEN, FOSFAT, DAN KALIUM Kelompok ini mencakup - pembuatan pupuk tunggal nitrogen, fosfat, atau kalium; urea, fosfat alami, dan garam kalium alami; pupuk ZA, TSP, DSP;",
+                                        "description": " PUPUK NITROGEN, FOSFAT, DAN KALIUM Kelompok ini mencakup - pembuatan pupuk tunggal nitrogen, fosfat, atau kalium; urea, fosfat alami, dan garam kalium alami; pupuk ZA, TSP, DSP;",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
                                     {
                                         "nomor_kbli": "20122",
                                         "nama": "INDUSTRI PUPUK HARA MAKRO PRIMER LAINNYA",
-                                        "description": "Kelompok ini mencakup - pembuatan pupuk yang mengandung minimal dua unsur hara makro primer melalui proses reaksi kimia seperti monoamonium fosfat (pupuk buatan majemuk nitrogen fosfat), kalium amonium klorida (pupuk buatan majemuk nitrogen kalium), kalium metafosfat (pupuk buatan majemuk fosfat kalium) dan amonium kalium fosfat (pupuk buatan majemuk nitrogen fosfat kalium); - pembuatan pupuk yang mengandung minimal dua unsur hara makro primer melalui pencampuran pupuk secara fisik tanpa merubah sifat kimia dan sifat pupuk aslinya; - pembuatan pupuk yang mengandung unsur hara makro sekunder jenis kalsium, magnesium, dan belerang, seperti kieserit (magnesium dan belerang) dan oksida magnio (magnesium). o",
+                                        "description": "Kelompok ini mencakup - pembuatan pupuk yang mengandung minimal dua unsur hara makro primer melalui proses reaksi kimia seperti monoamonium fosfat (pupuk buatan majemuk nitrogen fosfat), kalium amonium klorida (pupuk buatan majemuk nitrogen kalium), kalium metafosfat (pupuk buatan majemuk fosfat kalium) dan amonium kalium fosfat (pupuk buatan majemuk nitrogen fosfat kalium); - pembuatan pupuk yang mengandung minimal dua unsur hara makro primer melalui pencampuran pupuk secara fisik tanpa merubah sifat kimia dan sifat pupuk aslinya; - pembuatan pupuk yang mengandung unsur hara makro sekunder jenis kalsium, magnesium, dan belerang, seperti kieserit (magnesium dan belerang) dan oksida magnio (magnesium). ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -3766,8 +3766,8 @@
                             },
                             {
                                 "nomor_kbli": "2013",
-                                "nama": "[2013]",
-                                "description": "",
+                                "nama": "INDUSTRI PLASTIK DAN KARET BUATAN DALAM BENTUK DASAR",
+                                "description": "Subgolongan ini mencakup pembuatan damar, bahan-bahan plastik dan elastik termoplastik nonvulkanis dan pencampuran damar pada dasar yang umum seperti halnya pembuatan damar sintetis yang tidak umum. \nSubgolongan ini mencakup: \n- pembuatan plastik dalam bentuk dasar, seperti polimer yang berbahan etilena, propilena, stirena, vinil klorida, vinil asetat, dan akrilik; poliamida; damar fenolik dan epoksi serta poliuretana; damaralkyd dan poliester dan polieter; silikon dan penukar ion berbasis polimer; \n- pembuatan bubuk, butiran, atau serpihan plastik melalui pencampuran atau reformulasi resin plastik dari limbah plastik yang dipulihkan; \n- pembuatan plastik daur ulang melalui proses pencacahan dan/atau peletisasi limbah plastik yang telah diproses sebelumnya dalam pemulihan material; \n- peleburan plastik untuk menghasilkan butiran atau senyawa penyusun; \n- pembuatan karet sintetis dalam bentuk dasar, seperti karet sintetis dan faktis; \n- pembuatan campuran karet sintetis dan karet alam atau getah karet (misalnya balata); \n- pembuatan selulosa dan turunan kimianya. Subgolongan ini tidak mencakup \n- pembuatan serat buatan dan sintetis, filamen, dan benang, lihat subgolongan 2030; \n- kegiatan pengirisan atau pemotongan produk plastik, lihat subgolongan 3830.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -3783,8 +3783,8 @@
                     },
                     {
                         "nomor_kbli": "202",
-                        "nama": "[202]",
-                        "description": "",
+                        "nama": "INDUSTRI PRODUK KIMIA LAINNYA",
+                        "description": "Golongan ini mencakup pembuatan produk kimia selain bahan kimia dasar dan serat buatan. Golongan ini mencakup pembuatan berbagai barang seperti: \n- pembuatan pestisida; \n- pembuatan cat, pernis dan bahan pelapis sejenis, tinta cetak, dan damar untuk campuran semen; deterjen dan sabun, sediaan pembersih; \n- pembuatan disinfektan dan produk agrokimia lainnya; \n- pembuatan parfum dan kosmetik; \n- pembuatan peledak, petasan/mercon; \n- pembuatan sediaan untuk penggunaan fotografi (termasuk kertas film dan kertas peka cahaya); \n- pembuatan gelatin dan turunannya; \n- pembuatan sediaan diagnostik komposit; \n- pembuatan biofuel cair; \n- pembuatan cairan rokok elektrik.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -3818,8 +3818,8 @@
                             },
                             {
                                 "nomor_kbli": "2022",
-                                "nama": "[2022]",
-                                "description": "",
+                                "nama": "INDUSTRI CAT, TINTA CETAK, PERNIS DAN PELAPIS SEJENISNYA, SERTA MASTIK",
+                                "description": "Subgolongan ini mencakup \n- pembuatan cat, pernis, dan lak; \n- pembuatan sediaan pigmen dan bahan celup, pewarna dan opacifier (pembuat tidak jelas); \n- pembuatan email pengkilap dan pelapis dan preparat sejenisnya; \n- pembuatan mastik; \n- pembuatan senyawa dempul dan dempul nonrefraktori atau bahan penutup permukaan sejenis; \n- pembuatan pelarut komposit organik dan tiner; \n- pembuatan penghapus cat atau pernis; \n- pembuatan tinta cetak; \nSubgolongan ini tidak mencakup \n- pembuatan bahan celup dan pigmen, lihat subgolongan 2011; \n- pembuatan tinta tulis dan gambar, lihat subgolongan 2029.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -3848,7 +3848,7 @@
                             {
                                 "nomor_kbli": "2023",
                                 "nama": "INDUSTRI SABUN DAN DETERJEN",
-                                "description": "; SEDIAAN PEMBERSIH DAN PENGILAP; PARFUM DAN KOSMETIK Subgolongan ini mencakup - pembuatan zat aktif permukaan organik/surfaktan; - pembuatan sabun mandi; - pembuatan kertas, gumpalan kapas, laken dan sebagainya yang dilapisi dengan sabun atau deterjen seperti tisu basah; - pembuatan gliserol mentah; - pembuatan sediaan zat aktif permukaan, seperti bubuk pencuci baik padat maupun cair dan deterjen, preparat pencuci piring, dan pelembut bahan pakaian; - pembuatan produk pembersih dan pengkilap, seperti pengharum dan deodoran ruangan (penghilang bau), lilin buatan dan lilin olahan, pengilap dan krim untuk barang dari kulit, pengilap dan krim untuk kayu, pengilap kaca dan logam, pasta dan bubuk gosok, termasuk kertas, gumpalan dan lain-lain yang dilapisi dengan pasta dan bubuk penggosok; - pembuatan parfum dan kosmetik, seperti parfum, kosmetik, krim atau losion pencegah terbakar sinar matahari dan krim atau lotion agar kulit terlihat cokelat setelah berjemur, preparat menikur dan pedikur, sampo, obat pengombak dan pelurus rambut, pasta gigi dan preparat untuk menjaga higienitas, termasuk preparat pengilap gigi, preparat cukur (sebelum dan sesudah cukur), deodoran dan garam mandi, serta obat untuk menghilangkan rambut. Subgolongan ini tidak mencakup - pembuatan senyawa terpisah, senyawa yang ditentukan secara kimia, lihat subgolongan 2011; - pembuatan gliserol, sintesis dari produk bahan bakar, lihat subgolongan 2011; - ekstraksi dan pemurnian dari minyak esensial murni, lihat subgolongan 2029.",
+                                "description": " SEDIAAN PEMBERSIH DAN PENGILAP; PARFUM DAN KOSMETIK Subgolongan ini mencakup - pembuatan zat aktif permukaan organik/surfaktan; - pembuatan sabun mandi; - pembuatan kertas, gumpalan kapas, laken dan sebagainya yang dilapisi dengan sabun atau deterjen seperti tisu basah; - pembuatan gliserol mentah; - pembuatan sediaan zat aktif permukaan, seperti bubuk pencuci baik padat maupun cair dan deterjen, preparat pencuci piring, dan pelembut bahan pakaian; - pembuatan produk pembersih dan pengkilap, seperti pengharum dan deodoran ruangan (penghilang bau), lilin buatan dan lilin olahan, pengilap dan krim untuk barang dari kulit, pengilap dan krim untuk kayu, pengilap kaca dan logam, pasta dan bubuk gosok, termasuk kertas, gumpalan dan lain-lain yang dilapisi dengan pasta dan bubuk penggosok; - pembuatan parfum dan kosmetik, seperti parfum, kosmetik, krim atau losion pencegah terbakar sinar matahari dan krim atau lotion agar kulit terlihat cokelat setelah berjemur, preparat menikur dan pedikur, sampo, obat pengombak dan pelurus rambut, pasta gigi dan preparat untuk menjaga higienitas, termasuk preparat pengilap gigi, preparat cukur (sebelum dan sesudah cukur), deodoran dan garam mandi, serta obat untuk menghilangkan rambut. Subgolongan ini tidak mencakup - pembuatan senyawa terpisah, senyawa yang ditentukan secara kimia, lihat subgolongan 2011; - pembuatan gliserol, sintesis dari produk bahan bakar, lihat subgolongan 2011; - ekstraksi dan pemurnian dari minyak esensial murni, lihat subgolongan 2029.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -3949,14 +3949,14 @@
                     },
                     {
                         "nomor_kbli": "203",
-                        "nama": "[203]",
-                        "description": "",
+                        "nama": "INDUSTRI SERAT BUATAN",
+                        "description": "Lihat subgolongan 2030.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "2030",
                                 "nama": "INDUSTRI SERAT BUATAN",
-                                "description": "Subgolongan ini mencakup - pembuatan filamen sintetis atau artifisial dalam bentuk gulungan tow; - pembuatan serat stapel sintetis atau artifisial, tidak disisir, disisir atau diproses lainnya untuk pemintalan; - pembuatan filamen sintetis atau artifisial, mencakup filamen berkekuatan tinggi; - pembuatan strip atau monofilamen sintetis atau artifisial; - pembuatan serat, filamen, strip, atau monofilamen yang dibuat dari bahan daur ulang. Subgolongan ini tidak mencakup - pemintalan serat sintetis atau artifisial, lihat subgolongan 1311; - pembuatan benang yang dibuat dari bahan stapel buatan, lihat subgolongan 1311; - pembuatan serat karbon, lihat subgolongan 2399.",
+                                "description": "Subgolongan ini mencakup \n- pembuatan filamen sintetis atau artifisial dalam bentuk gulungan tow; \n- pembuatan serat stapel sintetis atau artifisial, tidak disisir, disisir atau diproses lainnya untuk pemintalan; \n- pembuatan filamen sintetis atau artifisial, mencakup filamen berkekuatan tinggi; \n- pembuatan strip atau monofilamen sintetis atau artifisial; \n- pembuatan serat, filamen, strip, atau monofilamen yang dibuat dari bahan daur ulang. Subgolongan ini tidak mencakup \n- pemintalan serat sintetis atau artifisial, lihat subgolongan 1311; \n- pembuatan benang yang dibuat dari bahan stapel buatan, lihat subgolongan 1311; \n- pembuatan serat karbon, lihat subgolongan 2399.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -3987,8 +3987,8 @@
                 "children": [
                     {
                         "nomor_kbli": "210",
-                        "nama": "[210]",
-                        "description": "",
+                        "nama": "INDUSTRI SEDIAAN FARMASI, OBAT KIMIA, DAN OBAT TRADISIONAL",
+                        "description": "Golongan ini mencakup pembuatan bahan baku farmasi, produk farmasi dasar, dan sediaan farmasi. Golongan ini mencakup antara lain preparat darah, obat-obatan jadi, sediaan diagnostik, sediaan medis, obat tradisional atau jamu, suplemen kesehatan, dan produk botanikal untuk keperluan farmasi.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -4075,14 +4075,14 @@
                 "children": [
                     {
                         "nomor_kbli": "221",
-                        "nama": "[221]",
-                        "description": "",
+                        "nama": "INDUSTRI BARANG DARI KARET",
+                        "description": "Golongan ini mencakup pembuatan barang dari karet.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "2211",
                                 "nama": "INDUSTRI BAN DAN BAN DALAM KARET",
-                                "description": "; VULKANISASI DAN PEMBENTUKAN KEMBALI BAN KARET Subgolongan ini mencakup - pembuatan ban karet untuk kendaraan, peralatan, mesin bergerak, pesawat udara, mainan, furnitur dan kegunaan lainnya, seperti ban angin dan ban padat atau ban bantalan; - pembuatan ban dalam untuk ban; - pembuatan telapak ban yang dapat diganti, pelapis ban bagian dalam, potongan/strip \"camelback\"untuk vulkanisasi ban, dan sejenisnya; - pembentukan kembali dan vulkanisasi ban. Subgolongan ini tidak mencakup - pembuatan material perbaikan ban dalam, lihat subgolongan 2219; - perbaikan, pemasangan, atau penggantian ban dan ban dalam, lihat golongan 953.",
+                                "description": " VULKANISASI DAN PEMBENTUKAN KEMBALI BAN KARET Subgolongan ini mencakup - pembuatan ban karet untuk kendaraan, peralatan, mesin bergerak, pesawat udara, mainan, furnitur dan kegunaan lainnya, seperti ban angin dan ban padat atau ban bantalan; - pembuatan ban dalam untuk ban; - pembuatan telapak ban yang dapat diganti, pelapis ban bagian dalam, potongan/strip \"camelback\"untuk vulkanisasi ban, dan sejenisnya; - pembentukan kembali dan vulkanisasi ban. Subgolongan ini tidak mencakup - pembuatan material perbaikan ban dalam, lihat subgolongan 2219; - perbaikan, pemasangan, atau penggantian ban dan ban dalam, lihat golongan 953.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -4177,8 +4177,8 @@
                     },
                     {
                         "nomor_kbli": "222",
-                        "nama": "[222]",
-                        "description": "",
+                        "nama": "INDUSTRI BARANG DARI PLASTIK",
+                        "description": "Golongan ini mencakup pengolahan dasar plastik baru atau daur ulang menjadi produk akhir atau produk antara, menggunakan berbagai proses, seperti pencetakan kompresi, pencetakan ekstrusi, pencetakan injeksi, pencetakan tiup, dan pengecoran. Proses produksi dapat membuat bermacam-macam jenis produk plastik dalam bentuk dan keperluan yang berbeda. Golongan ini tidak mencakup produksi suku cadang atau aksesori plastik yang dirancang khusus atau terutama untuk kendaraan bermotor, lihat golongan 293 dan 309.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -4250,8 +4250,8 @@
                 "children": [
                     {
                         "nomor_kbli": "231",
-                        "nama": "[231]",
-                        "description": "",
+                        "nama": "INDUSTRI KACA DAN PRODUK DARI KACA",
+                        "description": "Golongan ini mencakup di antaranya pembuatan kaca dan produk dari kaca dalam berbagai bentuk dengan berbagai proses. Golongan ini juga mencakup pembuatan alat-alat rumah tangga dari kaca, peralatan laboratorium atau kedokteran, peralatan listrik dan isolasi, serat kaca, dan perhiasan imitasi.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -4302,14 +4302,14 @@
                     },
                     {
                         "nomor_kbli": "239",
-                        "nama": "[239]",
-                        "description": "",
+                        "nama": "INDUSTRI PRODUK MINERAL NONLOGAM LAINNYA",
+                        "description": "Golongan ini mencakup pembuatan produk antara dan produk akhir dari mineral nonlogam hasil tambang atau galian, seperti pasir, kerikil, bebatuan, atau tanah liat. Produk yang dihasilkan berupa barang refraktori, bahan bangunan, produk keramik industri dan rumah tangga, semen dan produk semen, serta produk pemotongan dan pengasahan batu. \nGolongan ini juga mencakup pembuatan produk mineral nonlogam lain seperti bebatuan, serat mineral, karbon, grafit, aspal, mika, bubuk abrasif, dan produk hasil pemurnian mineral nonlogam.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "2391",
                                 "nama": "INDUSTRI PRODUK REFRAKTORI (TAHAN API)",
-                                "description": "Subgolongan ini mencakup - pembuatan produk antara dari mineral nonlogam yang ditambang atau diambil dari tambang, seperti kerikil, batu, atau tanah liat; - pembuatan mortar refraktori, semen, dan sebagainya; - pembuatan barang-barang keramik refraktori, seperti barang-barang keramik penyekat panas dari tepung fossil siliceous; ubin, balok, dan bata refraktori; serta tabung kimia atau labu distilasi, wadah tempat melebur logam, penyaring, tabung, dan pipa. Subgolongan ini juga mencakup - pembuatan produk refraktori yang mengandung magnesit, dolomit, atau kromit.",
+                                "description": "Subgolongan ini mencakup \n- pembuatan produk antara dari mineral nonlogam yang ditambang atau diambil dari tambang, seperti kerikil, batu, atau tanah liat; \n- pembuatan mortar refraktori, semen, dan sebagainya; \n- pembuatan barang-barang keramik refraktori, seperti barang-barang keramik penyekat panas dari tepung fossil siliceous; ubin, balok, dan bata refraktori; serta tabung kimia atau labu distilasi, wadah tempat melebur logam, penyaring, tabung, dan pipa. Subgolongan ini juga mencakup \n- pembuatan produk refraktori yang mengandung magnesit, dolomit, atau kromit.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -4344,7 +4344,7 @@
                                     {
                                         "nomor_kbli": "23929",
                                         "nama": "INDUSTRI BAHAN BANGUNAN LAINNYA DARI TANAH LIAT ATAU KERAMIK",
-                                        "description": "Kelompok ini mencakup kegiatan pembuatan produk dari tanah liat atau keramik untuk keperluan bahan bangunan bukan batu bata dan genteng, seperti saluran air, ubin, lubang angin, dan buis (cincin untuk sumur), termasuk tungku keramik atau ubin dinding nonrefraktori, kubus mosaik dan sebagainya, paving atau ubin keramik nonrefraktori, ubin untuk atap, cerobong asap, pipa, saluran keramik dan sebagainya, dan balok lantai dari tanah liat yang dibakar. Kelompok ini tidak mencakup kegiatan pembuatan peralatan sanitasi dari tanah liat atau porselen, lihat kelompok 23934 dan 23935. o",
+                                        "description": "Kelompok ini mencakup kegiatan pembuatan produk dari tanah liat atau keramik untuk keperluan bahan bangunan bukan batu bata dan genteng, seperti saluran air, ubin, lubang angin, dan buis (cincin untuk sumur), termasuk tungku keramik atau ubin dinding nonrefraktori, kubus mosaik dan sebagainya, paving atau ubin keramik nonrefraktori, ubin untuk atap, cerobong asap, pipa, saluran keramik dan sebagainya, dan balok lantai dari tanah liat yang dibakar. Kelompok ini tidak mencakup kegiatan pembuatan peralatan sanitasi dari tanah liat atau porselen, lihat kelompok 23934 dan 23935. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -4409,7 +4409,7 @@
                                     {
                                         "nomor_kbli": "23943",
                                         "nama": "INDUSTRI GIPS",
-                                        "description": "Kelompok ini mencakup kegiatan pembuatan gips, yang terbentuk dari gipsum kalsinasi (calcined gypsum) atau kalsium sulfat, termasuk dolomit kalsinasi (calcined dolomite). o",
+                                        "description": "Kelompok ini mencakup kegiatan pembuatan gips, yang terbentuk dari gipsum kalsinasi (calcined gypsum) atau kalsium sulfat, termasuk dolomit kalsinasi (calcined dolomite). ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -4507,8 +4507,8 @@
                 "children": [
                     {
                         "nomor_kbli": "241",
-                        "nama": "[241]",
-                        "description": "",
+                        "nama": "INDUSTRI LOGAM DASAR BESI DAN BAJA",
+                        "description": "Golongan ini mencakup kegiatan pengolahan dari bijih besi menjadi besi kasar sampai menjadi baja, dan pembuatan produk baja dan logam campuran besi dalam berbagai ukuran dan bentuk. Golongan ini juga mencakup berbagai operasi pengolahan baja.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -4544,14 +4544,14 @@
                     },
                     {
                         "nomor_kbli": "242",
-                        "nama": "[242]",
-                        "description": "",
+                        "nama": "INDUSTRI LOGAM DASAR MULIA DAN LOGAM DASAR BUKAN BESI LAINNYA",
+                        "description": "Golongan ini mencakup pembuatan logam dasar mulia dan logam bukan besi, seperti emas, perak, platina, aluminium, tembaga, timah hitam, seng, timah putih dan lain-lain, dari bijih dan berbagai sumber yang diolah ke dalam berbagai bentuk dan kegunaan. Golongan ini tidak mencakup pengecoran logam bukan besi dan pembuatan perhiasan logam mulia.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "2420",
-                                "nama": "[2420]",
-                                "description": "",
+                                "nama": "INDUSTRI LOGAM DASAR MULIA DAN LOGAM DASAR BUKAN BESI LAINNYA",
+                                "description": "Subgolongan ini mencakup \n- pembuatan logam dasar mulia, seperti produksi dan pemurnian logam mulia tempa atau belum tempa, seperti emas, perak, dan platinum dari bijih dan serpihan; \n- pembuatan aloi/paduan logam mulia; \n- pembuatan logam mulia setengah jadi; \n- pembuatan perak gulungan menjadi logam dasar; \n- pembuatan emas gulungan menjadi logam dasar atau perak; \n- pembuatan platinum gulungan dan sejenis lainnya menjadi emas, perak atau logam dasar; \n- pembuatan aluminium dari alumina; \n- pembuatan aluminium melalui proses pemurnian elektrolitik dari sisaan dan serpihan aluminium; \n- pembuatan aloi/paduan aluminium; \n- pembuatan aluminium setengah jadi; \n- pembuatan timah hitam, seng, dan timah putih dari bijih; \n- pembuatan timah hitam, seng, dan timah putih melalui proses pemurnian elektrolitik dari sisaan dan serpihan timah hitam, seng dan timah putih; \n- pembuatan aloi/paduan timah hitam, seng, dan timah putih; \n- pembuatan timah hitam, seng dan timah putih setengah jadi; \n- pembuatan tembaga dari bijih; \n- pembuatan tembaga melalui hasil proses pemurnian elektrolitik dari limbah dan scrap tembaga; \n- pembuatan aloi/paduan tembaga; \n- pembuatan kawat sekering (listrik); \n- pembuatan tembaga setengah jadi; \n- pembuatan krom, mangan, nikel, dan lain-lain dari bijih atau oksidasi; \n- pembuatan krom, mangan, nikel, dan lain-lain melalui proses pemurnian elektrolitik dan aluminotermik dari sisaan dan serpihan krom, mangan, nikel dan lain-lain; \n- pembuatan aloi/paduan krom, mangan, nikel, dan lain-lain; \n- pembuatan krom, mangan, nikel, dan lain-lain setengah jadi; \n- pembuatan (barang-barang) mattes dari nikel; \n- pembuatan bahan bakar nuklir. \nSubgolongan ini juga mencakup \n- pembuatan kawat logam; \n- pembuatan aluminium oksida (alumina); \n- pembuatan kertas pembungkus dari aluminium (wrapping foil); \n- pembuatan pelapis aluminium (timah) foil yang dibuat dari aluminium (timah) foil sebagai komponen utamanya; \n- pembuatan pelapis logam mulia. \nSubgolongan ini tidak mencakup \n- pengecoran logam bukan besi, lihat subgolongan 2432; \n- pembuatan perhiasan dari logam mulia, lihat subgolongan 3211.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -4602,16 +4602,24 @@
                     },
                     {
                         "nomor_kbli": "243",
-                        "nama": "[243]",
-                        "description": "",
+                        "nama": "PENGECORAN LOGAM",
+                        "description": "Golongan ini mencakup kegiatan pengecoran logam di pabrik pengecoran (foundry) yang menggunakan berbagai proses pengecoran untuk menghasilkan benda cor dari semua jenis logam besi dan nonbesi. Golongan ini juga mencakup kegiatan seperti pemangkasan (trimming) atau pembersihan kerak (de-scaling) pada hasil cor, selama tidak dilakukan proses lanjutan lainnya. Golongan ini juga mencakup pembuatan benda cor yang digunakan di berbagai industri. \nGolongan ini tidak mencakup : \n- pembuatan produk yang dihasilkan melalui proses selain pengecoran, seperti penempaan (forging), penekanan (pressing), penarikan (drawing), pencetakan (stamping), pembuatan cincin dari logam gulungan, atau produk dari metalurgi serbuk dan sebagainya, lihat golongan 25; \n- pembuatan produk jadi dari hasil cor dengan proses lanjutan, seperti: boiler dan radiator, lihat subgolongan 2512; \n- peralatan rumah tangga dari logam cor, lihat subgolongan 2599.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "2431",
                                 "nama": "PENGECORAN BESI DAN BAJA",
-                                "description": "Lihat kelompok 24310. 24310 PENGECORAN BESI DAN BAJA Kelompok ini mencakup kegiatan peleburan, pencampuran, dan pengecoran atau penuangan logam besi dan baja, yang menghasilkan produk-produk tuangan dalam bentuk kasar, seperti besi tuang, baja tuang dan baja tuang paduan. Kelompok ini juga mencakup - pengecoran produk besi setengah jadi; - pengecoran besi tuang abu-abu; - pengecoran besi tuang grafit sferoid; - pengecoran besi tuang yang dapat ditempa; - pengecoran produk baja setengah jadi; - pengecoran baja tuang; - pembuatan tabung, pipa dan profil berongga, serta fittings tabung dan pipa yang terbuat dari besi tuang; - pembuatan tabung dan pipa baja tanpa kelim dari proses pengecoran sentrifugal; - pembuatan tabung dan pipa fittings yang terbuat dari baja tuang.",
+                                "description": "Lihat kelompok 24310.",
                                 "type_kbli": "Subgolongan",
-                                "children": []
+                                "children": [
+                                    {
+                                        "nomor_kbli": "24310",
+                                        "nama": "PENGECORAN BESI DAN BAJA",
+                                        "description": "Kelompok ini mencakup kegiatan peleburan, pemaduan, dan pengecoran atau penuangan logam-logam bukan besi dalam bentuk dasar, seperti tuangan tembaga dan paduannya, tuangan aluminium dan paduannya, serta tuangan nikel dan paduannya. \nKelompok ini juga mencakup \n- pengecoran produk setengah jadi dari aluminium, magnesium, titanium, seng dan lain-lain; \n- pengecoran logam ringan tuang; \n- pengecoran logam berat tuang; \n- pengecoran logam mulia tuang; \n- pengecoran cetak tekan (die-casting) logam bukan besi.",
+                                        "type_kbli": "Kelompok",
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "nomor_kbli": "2432",
@@ -4640,20 +4648,27 @@
                 "children": [
                     {
                         "nomor_kbli": "251",
-                        "nama": "[251]",
-                        "description": "",
+                        "nama": "INDUSTRI PRODUK LOGAM STRUKTURAL, TANGKI, TANDON AIR, DAN GENERATOR UAP",
+                        "description": "Golongan ini mencakup pembuatan produk logam struktural (seperti kerangka atau bagian dari konstruksi), barang-barang jenis kontainer logam (seperti reservoir atau tandon air, tangki, ketel uap untuk pemanas sentral), dan generator uap.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "2511",
                                 "nama": "INDUSTRI PRODUK LOGAM STRUKTURAL",
-                                "description": "Subgolongan ini mencakup - pembuatan kerangka logam untuk konstruksi dan bagian-bagiannya (menara, tiang, tiang penopang, jembatan, dan lain-lain); - pembuatan kerangka logam untuk peralatan industri (kerangka untuk tungku pembakar, peralatan lifting dan handling, dan lain- lain); - pembuatan bangunan prepabrikasi yang utamanya dari logam, seperti pondok pekerja (rumah mandor) dari logam dan elemen- elemen pertunjukan yang modular; - pembuatan pintu, jendela dan kerangkanya, penutup jendela, dan pintu gerbang dari logam; - logam partisi ruangan untuk penghubung lantai. Subgolongan ini tidak mencakup - pembuatan suku cadang ketel kapal laut atau ketel tenaga, lihat subgolongan 2513; - pembuatan perlengkapan tetap (fixture) rel kereta api yang terpasang, lihat subgolongan 2599; - pembuatan bagian kapal laut, lihat subgolongan 3011. 25111 INDUSTRI PRODUK LOGAM STRUKTURAL BUKAN ALUMINIUM UNTUK KONSTRUKSI RINGAN Kelompok ini mencakup kegiatan pembuatan produk logam struktural bukan aluminium, seperti pagar besi, teralis, pintu, jendela, lubang angin, tangga, dan produk-produk konstruksi ringan lainnya. Kelompok ini tidak mencakup pembuatan produk logam struktural baja untuk konstruksi berat, seperti untuk jembatan, menara listrik tegangan tinggi, pintu air, dan sejenisnya, yang termasuk dalam kelompok 25113, sedangkan pembuatan ketel uap, bejana tekan, dan sejenisnya, termasuk dalam kelompok 25130.",
+                                "description": "Subgolongan ini mencakup \n- pembuatan kerangka logam untuk konstruksi dan bagian-bagiannya (menara, tiang, tiang penopang, jembatan, dan lain-lain); \n- pembuatan kerangka logam untuk peralatan industri (kerangka untuk tungku pembakar, peralatan lifting dan handling, dan lain- lain); \n- pembuatan bangunan prepabrikasi yang utamanya dari logam, seperti pondok pekerja (rumah mandor) dari logam dan elemen- elemen pertunjukan yang modular; \n- pembuatan pintu, jendela dan kerangkanya, penutup jendela, dan pintu gerbang dari logam; \n- logam partisi ruangan untuk penghubung lantai. \nSubgolongan ini tidak mencakup \n- pembuatan suku cadang ketel kapal laut atau ketel tenaga, lihat subgolongan 2513; \n- pembuatan perlengkapan tetap (fixture) rel kereta api yang terpasang, lihat subgolongan 2599; \n- pembuatan bagian kapal laut, lihat subgolongan 3011.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
+                                        "nomor_kbli": "25111",
+                                        "nama": "INDUSTRI PRODUK LOGAM STRUKTURAL BUKAN ALUMINIUM UNTUK KONSTRUKSI RINGAN",
+                                        "description": "Kelompok ini mencakup kegiatan pembuatan produk logam struktural bukan aluminium, seperti pagar besi, teralis, pintu, jendela, lubang angin, tangga, dan produk-produk konstruksi ringan lainnya. \nKelompok ini tidak mencakup pembuatan produk logam struktural baja untuk konstruksi berat, seperti untuk jembatan, menara listrik tegangan tinggi, pintu air, dan sejenisnya, yang termasuk dalam kelompok 25113, sedangkan pembuatan ketel uap, bejana tekan, dan sejenisnya, termasuk dalam kelompok 25130.",
+                                        "type_kbli": "Kelompok",
+                                        "children": []
+                                    },
+                                    {
                                         "nomor_kbli": "25112",
                                         "nama": "INDUSTRI PRODUK LOGAM STRUKTURAL ALUMINIUM UNTUK",
-                                        "description": "KONSTRUKSI RINGAN Kelompok ini mencakup kegiatan pembuatan produk logam struktural dari aluminium, seperti kusen jendela, kusen pintu, teralis aluminium, atap aluminium (awning), pintu rol (rolling door), krei aluminium, dan produk- produk konstruksi ringan lainnya. o",
+                                        "description": "KONSTRUKSI RINGAN Kelompok ini mencakup kegiatan pembuatan produk logam struktural dari aluminium, seperti kusen jendela, kusen pintu, teralis aluminium, atap aluminium (awning), pintu rol (rolling door), krei aluminium, dan produk- produk konstruksi ringan lainnya.",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -4707,8 +4722,8 @@
                     },
                     {
                         "nomor_kbli": "252",
-                        "nama": "[252]",
-                        "description": "",
+                        "nama": "INDUSTRI SENJATA DAN AMUNISI",
+                        "description": "Golongan ini mencakup pembuatan persenjataan militer, senjata api tangan, pistol udara, amunisi perang, termasuk senjata api dan amunisi untuk olahraga atau penjagaan diri, dan peralatan bahan peledak, seperti bom. ranjau dan torpedo. Golongan ini tidak mencakup pembuatan pedang, bayonet, kendaraan bersenjata untuk alat angkutan barang berharga dan uang kertas, kendaraan luar angkasa, tank, dan kendaraan perang lain.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -4730,20 +4745,20 @@
                     },
                     {
                         "nomor_kbli": "259",
-                        "nama": "[259]",
-                        "description": "",
+                        "nama": "INDUSTRI PRODUK LOGAM PABRIKASI LAINNYA DAN PENGERJAAN LOGAM",
+                        "description": "Golongan ini mencakup kegiatan umum pengolahan logam, seperti penempaan atau penekanan, penyepuhan, pelapisan, pengukiran, pemboran, penyemiran, dan pengelasan, yang umumnya dilakukan atas dasar balas jasa atau kontrak. Golongan ini juga mencakup pembuatan berbagai produk logam, seperti alat pemotong, pisau, gunting dan lain-lain; perkakas tangan dari logam dan perangkat keras lainnya; kaleng atau ember; paku, baut dan mur; barang rumah tangga dari logam; peralatan logam, baling-baling, dan jangkar kapal; peralatan jalur rel kereta api dan lain-lain, serta berbagai produk logam untuk penggunaan rumah tangga dan industr",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "2591",
                                 "nama": "PENEMPAAN, PENGEPRESAN, PENCETAKAN, DAN PEMBENTUKAN LOGAM",
-                                "description": "; METALURGI BUBUK Lihat kelompok 25910. o",
+                                "description": " METALURGI BUBUK Lihat kelompok 25910. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
                                         "nomor_kbli": "25910",
                                         "nama": "PENEMPAAN, PENGEPRESAN, PENCETAKAN, DAN PEMBENTUKAN LOGAM",
-                                        "description": "; METALURGI BUBUK Kelompok ini mencakup kegiatan - penempaan, pengepresan pencetakan, dan pembuatan logam, baik baja, besi, maupun logam bukan besi, menjadi logam dalam bentuk logam tempaan, logam pres, atau logam gulungan; - pembuatan benda logam secara langsung dari bubuk logam dengan proses pemanasan atau pengepresan, seperti metalurgi bubuk. Kelompok ini juga mencakup kegiatan - pemotongan atau pembersihan kerak pada logam setelah proses pembentukan, tanpa ada proses lanjutan lain. Kelompok ini tidak mencakup - pembuatan bubuk logam, lihat subgolongan 2410 dan 2420.",
+                                        "description": " METALURGI BUBUK Kelompok ini mencakup kegiatan - penempaan, pengepresan pencetakan, dan pembuatan logam, baik baja, besi, maupun logam bukan besi, menjadi logam dalam bentuk logam tempaan, logam pres, atau logam gulungan; - pembuatan benda logam secara langsung dari bubuk logam dengan proses pemanasan atau pengepresan, seperti metalurgi bubuk. Kelompok ini juga mencakup kegiatan - pemotongan atau pembersihan kerak pada logam setelah proses pembentukan, tanpa ada proses lanjutan lain. Kelompok ini tidak mencakup - pembuatan bubuk logam, lihat subgolongan 2410 dan 2420.",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -4892,16 +4907,24 @@
                 "children": [
                     {
                         "nomor_kbli": "261",
-                        "nama": "[261]",
-                        "description": "",
+                        "nama": "INDUSTRI KOMPONEN DAN PAPAN ELEKTRONIK",
+                        "description": "Golongan ini mencakup pembuatan sel surya, panel surya, inverter fotovoltaik, serta komponen dan papan elektronik lainnya.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "2611",
                                 "nama": "INDUSTRI SEL SURYA, PANEL SURYA, DAN INVERTER FOTOVOLTAIK",
-                                "description": "Lihat kelompok 26110. 26110 INDUSTRI SEL SURYA, PANEL SURYA, DAN INVERTER FOTOVOLTAIK Kelompok ini mencakup pembuatan sel surya, panel surya, dan inverter fotovoltaik, termasuk sel, modul, dan panel fotovoltaik. Kelompok ini tidak mencakup - pembuatan lampu tenaga surya, lihat subgolongan 2740; - pembuatan sistem pemanas tenaga surya, lihat subgolongan 2815; - pemasangan sistem pemanas tenaga surya, lihat subgolongan 4321.",
+                                "description": "Lihat kelompok 26110.",
                                 "type_kbli": "Subgolongan",
-                                "children": []
+                                "children": [
+                                    {
+                                        "nomor_kbli": "26110",
+                                        "nama": "INDUSTRI SEL SURYA, PANEL SURYA, DAN INVERTER FOTOVOLTAIK",
+                                        "description": "Kelompok ini mencakup pembuatan sel surya, panel surya, dan inverter fotovoltaik, termasuk sel, modul, dan panel fotovoltaik. Kelompok ini tidak mencakup \n- pembuatan lampu tenaga surya, lihat subgolongan 2740; \n- pembuatan sistem pemanas tenaga surya, lihat subgolongan 2815; \n- pemasangan sistem pemanas tenaga surya, lihat subgolongan 4321.",
+                                        "type_kbli": "Kelompok",
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "nomor_kbli": "2619",
@@ -4929,8 +4952,8 @@
                     },
                     {
                         "nomor_kbli": "262",
-                        "nama": "[262]",
-                        "description": "",
+                        "nama": "INDUSTRI KOMPUTER DAN PERLENGKAPANNYA",
+                        "description": "Golongan ini mencakup pembuatan dan/atau pemasangan berbagai komputer elektronik dan peralatan perlengkapan komputer, seperti peralatan penyimpanan dan peralatan masukan atau keluaran (seperti mesin cetak/printer, monitor, dan papan tik/keyboard). Komputer dapat berupa komputer analog, digital atau hibrid, dan dapat berupa PC, laptop atau komputer induk/mainframe, komputer genggam, ATM dan terminal pos (point of sale). Komponen komputer dan peralatan perlengkapan komputer mencakup berbagai drive dan alat penyimpanan lain, mesin cetak, monitor, papan tik, semua jenis aksesori trackball, terminal komputer dan server, pemindai atau scanner, dan proyektor atau viewer.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -4950,8 +4973,8 @@
                             },
                             {
                                 "nomor_kbli": "2622",
-                                "nama": "[2622]",
-                                "description": "",
+                                "nama": "INDUSTRI PERLENGKAPAN KOMPUTER",
+                                "description": "Lihat kelompok 26220.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -4967,8 +4990,8 @@
                     },
                     {
                         "nomor_kbli": "263",
-                        "nama": "[263]",
-                        "description": "",
+                        "nama": "INDUSTRI PERALATAN KOMUNIKASI",
+                        "description": "Golongan ini mencakup pembuatan peralatan komunikasi telepon dan data yang digunakan untuk mengirimkan sinyal secara elektronik melalui jaringan kabel atau nirkabel, seperti peralatan siaran radio dan televisi, serta peralatan komunikasi nirkabel.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -5020,16 +5043,24 @@
                     },
                     {
                         "nomor_kbli": "264",
-                        "nama": "[264]",
-                        "description": "",
+                        "nama": "INDUSTRI BARANG ELEKTRONIK RUMAH TANGGA",
+                        "description": "Golongan ini mencakup pembuatan peralatan audio dan video elektronik untuk hiburan rumah tangga, kendaraan bermotor, amplifier untuk instrumen musik, dan sistem alat pengeras suara untuk penyampaian informasi. Golongan ini juga mencakup di antaranya peralatan penggandaan dan perekaman lain, televisi, sistem amplifier dan stereo untuk instrumen musik, video game untuk rumah tangga, kamera video, CD, DVD player, dan sistem alat pengeras suara untuk penyampaian informasi, mikrofon, mesin karaoke, dan jukebox, headphone, dan lain-lain.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
                                 "nomor_kbli": "2641",
                                 "nama": "INDUSTRI TELEVISI, MONITOR TELEVISI, DAN DISPLAI",
-                                "description": "Lihat kelompok 26410. 26410 INDUSTRI TELEVISI, MONITOR TELEVISI, DAN DISPLAI Kelompok ini mencakup pembuatan dan perakitan televisi, seperti pesawat penerima televisi dan kombinasi, monitor televisi, dan displai seperti videotron.",
+                                "description": "Lihat kelompok 26410.",
                                 "type_kbli": "Subgolongan",
-                                "children": []
+                                "children": [
+                                    {
+                                        "nomor_kbli": "26410",
+                                        "nama": "INDUSTRI TELEVISI, MONITOR TELEVISI, DAN DISPLAI",
+                                        "description": "Kelompok ini mencakup pembuatan dan perakitan televisi, seperti pesawat penerima televisi dan kombinasi, monitor televisi, dan displai seperti videotron.",
+                                        "type_kbli": "Kelompok",
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "nomor_kbli": "2642",
@@ -5065,8 +5096,8 @@
                     },
                     {
                         "nomor_kbli": "265",
-                        "nama": "[265]",
-                        "description": "",
+                        "nama": "INDUSTRI ALAT UKUR, ALAT UJI, PERALATAN NAVIGASI DAN KONTROL, DAN ALAT UKUR WAKTU",
+                        "description": "Golongan ini mencakup pembuatan peralatan sensor, pengukur, penguji, dan navigasi untuk berbagai keperluan industri dan bukan industri, termasuk perangkat pengukur waktu seperti jam dan arloji, serta perangkat terkait lainnya.",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -5124,8 +5155,8 @@
                     },
                     {
                         "nomor_kbli": "266",
-                        "nama": "[266]",
-                        "description": "",
+                        "nama": "INDUSTRI PERALATAN IRADIASI, ELEKTROMEDIK, DAN ELEKTROTERAPI",
+                        "description": "Golongan ini mencakup pembuatan peralatan elektromedik, elektroterapi, dan peralatan iradiasi dan tabung untuk diagnostik medis, terapi medis, industri, penelitian, dan aplikasi evaluasi ilmiah",
                         "type_kbli": "Golongan",
                         "children": [
                             {
@@ -5160,7 +5191,7 @@
                                     {
                                         "nomor_kbli": "26702",
                                         "nama": "INDUSTRI PERALATAN SINEMATOGRAFI",
-                                        "description": "Kelompok ini mencakup kegiatan pembuatan berbagai macam kamera dan proyektor sinematografi, baik yang dilengkapi aparatus perekam dan reproduksi suara maupun tidak. Kelompok ini juga mencakup pembuatan aksesori sinematografi, seperti frame kamera, casing kamera, dan tempat film. o",
+                                        "description": "Kelompok ini mencakup kegiatan pembuatan berbagai macam kamera dan proyektor sinematografi, baik yang dilengkapi aparatus perekam dan reproduksi suara maupun tidak. Kelompok ini juga mencakup pembuatan aksesori sinematografi, seperti frame kamera, casing kamera, dan tempat film. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -5251,7 +5282,7 @@
                             {
                                 "nomor_kbli": "2712",
                                 "nama": "INDUSTRI PERALATAN PENGONTROL DAN PENDISTRIBUSIAN LISTRIK",
-                                "description": "Lihat kelompok 27120. o",
+                                "description": "Lihat kelompok 27120. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -5848,13 +5879,13 @@
                             {
                                 "nomor_kbli": "2920",
                                 "nama": "INDUSTRI KAROSERI KENDARAAN BERMOTOR RODA EMPAT ATAU LEBIH",
-                                "description": "; INDUSTRI TRAILER DAN SEMITRAILER Lihat kelompok 29200",
+                                "description": " INDUSTRI TRAILER DAN SEMITRAILER Lihat kelompok 29200",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
                                         "nomor_kbli": "29200",
                                         "nama": "INDUSTRI KAROSERI KENDARAAN BERMOTOR RODA EMPAT ATAU LEBIH",
-                                        "description": "; INDUSTRI TRAILER DAN SEMITRAILER Kelompok ini mencakup kegiatan pembuatan bagian-bagian mobil atau karoseri kendaraan bermotor seperti: - pembuatan bodi karoseri, termasuk tempat duduk untuk kendaraan bermotor seperti, mesin pemadam kebakaran, perpustakaan berjalan, mobil berlapis baja, dan truk pengaduk beton; - pembuatan perlengkapan semua tipe kendaraan bermotor, trailer dan semitrailer; - pembuatan trailer dan semitrailer, seperti tanker, trailer badan tertutup dan terbuka, karavan; - perbaikan dan kustomisasi sesuai pesanan motor kendaraan; - pembuatan kontainer (termasuk kontainer untuk transportasi cairan) dirancang khusus dan dilengkapi untuk pengangkut dengan satu atau lebih moda angkutan; - pembuatan sasis atau kerangka untuk trailer. Kelompok ini tidak mencakup - pembuatan trailer dan semitrailer yang khusus didesain untuk digunakan dalam pertanian, lihat subgolongan 2821; - pembuatan suku cadang dan aksesori bodi untuk kendaraan bermotor, lihat subgolongan 2930; - pembuatan kendaraan yang ditarik binatang, lihat subgolongan 3099; - pembuatan tank dan kendaraan perang militer, lihat subgolongan 3040. 293 INDUSTRI SUKU CADANG DAN AKSESORI KENDARAAN BERMOTOR RODA EMPAT ATAU LEBIH Golongan ini mencakup pembuatan suku cadang dan aksesori untuk kendaraan bermotor seperti bagian sistem kemudi, pembakaran dan gas/uap hasil pembakaran, peralatan listrik kendaraan bermotor, serta indikator kecepatan, temperatur, dan lainnya.",
+                                        "description": " INDUSTRI TRAILER DAN SEMITRAILER Kelompok ini mencakup kegiatan pembuatan bagian-bagian mobil atau karoseri kendaraan bermotor seperti: - pembuatan bodi karoseri, termasuk tempat duduk untuk kendaraan bermotor seperti, mesin pemadam kebakaran, perpustakaan berjalan, mobil berlapis baja, dan truk pengaduk beton; - pembuatan perlengkapan semua tipe kendaraan bermotor, trailer dan semitrailer; - pembuatan trailer dan semitrailer, seperti tanker, trailer badan tertutup dan terbuka, karavan; - perbaikan dan kustomisasi sesuai pesanan motor kendaraan; - pembuatan kontainer (termasuk kontainer untuk transportasi cairan) dirancang khusus dan dilengkapi untuk pengangkut dengan satu atau lebih moda angkutan; - pembuatan sasis atau kerangka untuk trailer. Kelompok ini tidak mencakup - pembuatan trailer dan semitrailer yang khusus didesain untuk digunakan dalam pertanian, lihat subgolongan 2821; - pembuatan suku cadang dan aksesori bodi untuk kendaraan bermotor, lihat subgolongan 2930; - pembuatan kendaraan yang ditarik binatang, lihat subgolongan 3099; - pembuatan tank dan kendaraan perang militer, lihat subgolongan 3040. 293 INDUSTRI SUKU CADANG DAN AKSESORI KENDARAAN BERMOTOR RODA EMPAT ATAU LEBIH Golongan ini mencakup pembuatan suku cadang dan aksesori untuk kendaraan bermotor seperti bagian sistem kemudi, pembakaran dan gas/uap hasil pembakaran, peralatan listrik kendaraan bermotor, serta indikator kecepatan, temperatur, dan lainnya.",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -5931,7 +5962,7 @@
                             {
                                 "nomor_kbli": "3012",
                                 "nama": "INDUSTRI KAPAL DAN PERAHU UNTUK TUJUAN WISATA ATAU REKREASI",
-                                "description": "DAN OLAHRAGA Lihat kelompok 30120. o",
+                                "description": "DAN OLAHRAGA Lihat kelompok 30120. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -6126,7 +6157,7 @@
                                     {
                                         "nomor_kbli": "31021",
                                         "nama": "INDUSTRI FURNITUR DARI PLASTIK",
-                                        "description": "Kelompok ini mencakup pembuatan furnitur yang bahan utamanya dari plastik, seperti meja, kursi, rak, bangku, penyekat ruangan, lemari, dan tempat tidur. o",
+                                        "description": "Kelompok ini mencakup pembuatan furnitur yang bahan utamanya dari plastik, seperti meja, kursi, rak, bangku, penyekat ruangan, lemari, dan tempat tidur. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -6244,7 +6275,7 @@
                                     {
                                         "nomor_kbli": "32202",
                                         "nama": "INDUSTRI ALAT MUSIK NONTRADISIONAL",
-                                        "description": "Kelompok ini mencakup pembuatan alat musik nontradisional yang dimainkan dengan cara dipetik, digesek, ditiup, atau dipukul, seperti gitar, bas, terompet, saksofon, klarinet, harmonika, biola, selo, kontrabas, drum, selofon, metalofon, piano, organ, pianika gamitan, akordeon, dan garpu tala. Kelompok ini juga mencakup pembuatan alat musik dengan suara yang dihasilkan atau diperkuat secara elektronik, seperti piano digital dan synthesizer. Kelompok ini tidak mencakup: - pembuatan mikrofon, loudspeaker, headphone, dan komponen yang sejenisnya, lihat kelompok 26420; - alat-alat musik untuk mainan, lihat kelompok 32402. o",
+                                        "description": "Kelompok ini mencakup pembuatan alat musik nontradisional yang dimainkan dengan cara dipetik, digesek, ditiup, atau dipukul, seperti gitar, bas, terompet, saksofon, klarinet, harmonika, biola, selo, kontrabas, drum, selofon, metalofon, piano, organ, pianika gamitan, akordeon, dan garpu tala. Kelompok ini juga mencakup pembuatan alat musik dengan suara yang dihasilkan atau diperkuat secara elektronik, seperti piano digital dan synthesizer. Kelompok ini tidak mencakup: - pembuatan mikrofon, loudspeaker, headphone, dan komponen yang sejenisnya, lihat kelompok 26420; - alat-alat musik untuk mainan, lihat kelompok 32402. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -6481,7 +6512,7 @@
                                     {
                                         "nomor_kbli": "33132",
                                         "nama": "REPARASI DAN PEMELIHARAAN PERALATAN IRADIASI, ELEKTROMEDIK,",
-                                        "description": "DAN ELEKTROTERAPI Kelompok ini mencakup reparasi dan pemeliharaan peralatan iradiasi, elektromedik, dan elektroterapi dalam golongan 267, seperti reparasi dan perawatan peralatan penggambaran resonansi magnetik/magnetic resonance imaging (MRI), peralatan kesehatan ultrasound, peralatan pembuka jalan/pacemaker, peralatan bantu pendengaran/hearing aids, peralatan elektrokardiografi, peralatan endoskopi elektromedik, peralatan iradiasi, dan sejenisnya. o",
+                                        "description": "DAN ELEKTROTERAPI Kelompok ini mencakup reparasi dan pemeliharaan peralatan iradiasi, elektromedik, dan elektroterapi dalam golongan 267, seperti reparasi dan perawatan peralatan penggambaran resonansi magnetik/magnetic resonance imaging (MRI), peralatan kesehatan ultrasound, peralatan pembuka jalan/pacemaker, peralatan bantu pendengaran/hearing aids, peralatan elektrokardiografi, peralatan endoskopi elektromedik, peralatan iradiasi, dan sejenisnya. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -6680,7 +6711,7 @@
                                     {
                                         "nomor_kbli": "35133",
                                         "nama": "PENGOPERASIAN FASILITAS ATAU STASIUN PENGISIAN DAYA UNTUK",
-                                        "description": "KENDARAAN DAN PERALATAN LISTRIK Kelompok ini mencakup - pengoperasian fasilitas atau stasiun pengisian daya untuk kendaraan listrik seperti mobil, sepeda motor, skuter, dan sepeda listrik atau stasiun pengisian kendaraan listrik umum (SPKLU) yang tidak terintegrasi dengan pembangkit; - pengoperasian fasilitas pengisian daya untuk peralatan listrik, seperti telepon genggam atau laptop. Kelompok ini tidak mencakup - pengoperasian stasiun pengisian kendaraan listrik umum (SPKLU) yang terintegrasi dengan pembangkit, lihat kelompok 35140. o",
+                                        "description": "KENDARAAN DAN PERALATAN LISTRIK Kelompok ini mencakup - pengoperasian fasilitas atau stasiun pengisian daya untuk kendaraan listrik seperti mobil, sepeda motor, skuter, dan sepeda listrik atau stasiun pengisian kendaraan listrik umum (SPKLU) yang tidak terintegrasi dengan pembangkit; - pengoperasian fasilitas pengisian daya untuk peralatan listrik, seperti telepon genggam atau laptop. Kelompok ini tidak mencakup - pengoperasian stasiun pengisian kendaraan listrik umum (SPKLU) yang terintegrasi dengan pembangkit, lihat kelompok 35140. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -6777,7 +6808,7 @@
                                     {
                                         "nomor_kbli": "35301",
                                         "nama": "PENGADAAN UAP/AIR PANAS DAN UDARA DINGIN",
-                                        "description": "Kelompok ini mencakup kegiatan memproduksi dan mendistribusikan uap dan air panas untuk pemanasan, pembangkit tenaga, dan penggunaan lainnya, seperti produksi, pengumpulan dan distribusi uap dan air panas untuk pemanas, energi, dan kegunaan lain, serta kegiatan produksi dan distribusi udara dingin. Kelompok ini juga mencakup penyimpanan energi panas bumi. o",
+                                        "description": "Kelompok ini mencakup kegiatan memproduksi dan mendistribusikan uap dan air panas untuk pemanasan, pembangkit tenaga, dan penggunaan lainnya, seperti produksi, pengumpulan dan distribusi uap dan air panas untuk pemanas, energi, dan kegunaan lain, serta kegiatan produksi dan distribusi udara dingin. Kelompok ini juga mencakup penyimpanan energi panas bumi. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -6829,7 +6860,7 @@
     {
         "kategori": "E",
         "nama": "PENYEDIAAN AIR",
-        "description": "; PENGELOLAAN AIR LIMBAH, PENANGANAN LIMBAH, 3600 PENAMPUNGAN, PENGAMBILAN, PENGOLAHAN, DAN PENYEDIAAN AIR Subgolongan ini mencakup - pengumpulan, pengambilan air permukaan (dari sungai, danau, dll), dan air tanah; - penampungan air hujan; - pengolahan air untuk penyediaan air, termasuk pengolahan air baku menjadi air minum, penyediaan air baku; - penghilangan zat garam dari air laut atau air tanah untuk memperoleh air sebagai produk utama yang diinginkan; - pendistribusian air baik dengan jaringan perpipaan maupun tidak, seperti truk atau lainnya; - pengoperasian saluran irigasi; - penyewaan dan peminjaman jaringan distribusi air. Subgolongan ini tidak mencakup - penyediaan jasa irigasi untuk keperluan pertanian, lihat subgolongan 0161; - produksi air mineral alami dan air kemasan lainnya, lihat subgolongan 1105; - penanganan air limbah untuk mencegah polusi, lihat subgolongan 3700; - pemasangan meteran air, lihat subgolongan 4322; - pengangkutan air melalui jaringan khusus bukan jaringan perpipaan umumnya, lihat subgolongan 4930; - pencatatan meteran air oleh pihak ketiga, lihat subgolongan 8299.",
+        "description": " PENGELOLAAN AIR LIMBAH, PENANGANAN LIMBAH, 3600 PENAMPUNGAN, PENGAMBILAN, PENGOLAHAN, DAN PENYEDIAAN AIR Subgolongan ini mencakup - pengumpulan, pengambilan air permukaan (dari sungai, danau, dll), dan air tanah; - penampungan air hujan; - pengolahan air untuk penyediaan air, termasuk pengolahan air baku menjadi air minum, penyediaan air baku; - penghilangan zat garam dari air laut atau air tanah untuk memperoleh air sebagai produk utama yang diinginkan; - pendistribusian air baik dengan jaringan perpipaan maupun tidak, seperti truk atau lainnya; - pengoperasian saluran irigasi; - penyewaan dan peminjaman jaringan distribusi air. Subgolongan ini tidak mencakup - penyediaan jasa irigasi untuk keperluan pertanian, lihat subgolongan 0161; - produksi air mineral alami dan air kemasan lainnya, lihat subgolongan 1105; - penanganan air limbah untuk mencegah polusi, lihat subgolongan 3700; - pemasangan meteran air, lihat subgolongan 4322; - pengangkutan air melalui jaringan khusus bukan jaringan perpipaan umumnya, lihat subgolongan 4930; - pencatatan meteran air oleh pihak ketiga, lihat subgolongan 8299.",
         "children": [
             {
                 "nomor_kbli": "36",
@@ -7039,7 +7070,7 @@
                                     {
                                         "nomor_kbli": "38302",
                                         "nama": "PEMULIHAN MATERIAL BARANG PLASTIK",
-                                        "description": "Kelompok ini mencakup pengolahan barang bekas dari plastik menjadi bahan baku sekunder. Kegiatan pada kelompok ini mencakup pemilahan plastik dan pengolahan limbah plastik menjadi granul. o",
+                                        "description": "Kelompok ini mencakup pengolahan barang bekas dari plastik menjadi bahan baku sekunder. Kegiatan pada kelompok ini mencakup pemilahan plastik dan pengolahan limbah plastik menjadi granul. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -7193,7 +7224,7 @@
                                     {
                                         "nomor_kbli": "41020",
                                         "nama": "KONSTRUKSI PRAPABRIKASI BANGUNAN GEDUNG",
-                                        "description": "Kelompok ini mencakup kegiatan konstruksi bangunan prapabrikasi (yang diproduksi oleh unit lain) di lokasi pembangunan, yaitu pemasangan bahan hasil produksi pabrik seperti beton pracetak, baja, plastik, karet, kayu, aluminium, sandwhich panel, dan hasil produksi pabrik lainnya dengan metode pabrikasi, ereksi, dan/atau perakitan untuk bangunan gedung. o",
+                                        "description": "Kelompok ini mencakup kegiatan konstruksi bangunan prapabrikasi (yang diproduksi oleh unit lain) di lokasi pembangunan, yaitu pemasangan bahan hasil produksi pabrik seperti beton pracetak, baja, plastik, karet, kayu, aluminium, sandwhich panel, dan hasil produksi pabrik lainnya dengan metode pabrikasi, ereksi, dan/atau perakitan untuk bangunan gedung. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -7347,7 +7378,7 @@
                                     {
                                         "nomor_kbli": "42913",
                                         "nama": "KONSTRUKSI BANGUNAN PELABUHAN PERIKANAN",
-                                        "description": "Kelompok ini mencakup kegiatan pembangunan, pemeliharaan, dan/atau pembangunan kembali bangunan dermaga (jetty), trestle, sarana pelabuhan, dan sejenisnya pelabuhan perikanan, termasuk konstruksi jalan air atau terusan, pelabuhan dan sarana jalur sungai, dok (pangkalan), lock (panama canal lock, hoover dam), dan lain-lain. o",
+                                        "description": "Kelompok ini mencakup kegiatan pembangunan, pemeliharaan, dan/atau pembangunan kembali bangunan dermaga (jetty), trestle, sarana pelabuhan, dan sejenisnya pelabuhan perikanan, termasuk konstruksi jalan air atau terusan, pelabuhan dan sarana jalur sungai, dok (pangkalan), lock (panama canal lock, hoover dam), dan lain-lain. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -7383,7 +7414,7 @@
                                     {
                                         "nomor_kbli": "42991",
                                         "nama": "KONSTRUKSI BANGUNAN SIPIL MINYAK DAN GAS BUMI",
-                                        "description": "Kelompok ini mencakup kegiatan pembangunan, pemeliharaan, dan/atau pembangunan kembali bangunan sipil pada kegiatan usaha hulu dan hilir minyak dan gas, baik di atas permukaan tanah, di bawah tanah, atau di dalam air, seperti pipa angkutan minyak dan gas jarak jauh dan anjungan lepas pantai. o",
+                                        "description": "Kelompok ini mencakup kegiatan pembangunan, pemeliharaan, dan/atau pembangunan kembali bangunan sipil pada kegiatan usaha hulu dan hilir minyak dan gas, baik di atas permukaan tanah, di bawah tanah, atau di dalam air, seperti pipa angkutan minyak dan gas jarak jauh dan anjungan lepas pantai. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -7930,7 +7961,7 @@
                                     {
                                         "nomor_kbli": "46331",
                                         "nama": "PERDAGANGAN BESAR GULA, COKELAT, DAN KEMBANG GULA",
-                                        "description": "Kelompok ini mencakup perdagangan besar gula, cokelat, kembang gula, dan sediaan pemanis. o",
+                                        "description": "Kelompok ini mencakup perdagangan besar gula, cokelat, kembang gula, dan sediaan pemanis. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -7988,7 +8019,7 @@
                                     {
                                         "nomor_kbli": "46413",
                                         "nama": "PERDAGANGAN BESAR ALAS KAKI",
-                                        "description": "Kelompok ini mencakup perdagangan besar alas kaki, seperti sepatu, sandal, dan selop. o",
+                                        "description": "Kelompok ini mencakup perdagangan besar alas kaki, seperti sepatu, sandal, dan selop. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -8069,7 +8100,7 @@
                                     {
                                         "nomor_kbli": "46451",
                                         "nama": "PERDAGANGAN BESAR ALAT TULIS DAN GAMBAR",
-                                        "description": "Kelompok ini mencakup perdagangan besar peralatan tulis dan gambar, seperti buku tulis, buku gambar, alat tulis, dan alat gambar. o",
+                                        "description": "Kelompok ini mencakup perdagangan besar peralatan tulis dan gambar, seperti buku tulis, buku gambar, alat tulis, dan alat gambar. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -8119,7 +8150,7 @@
                                     {
                                         "nomor_kbli": "46495",
                                         "nama": "PERDAGANGAN BESAR ALAT PERMAINAN DAN MAINAN",
-                                        "description": "Kelompok ini mencakup perdagangan besar berbagai alat permainan dan mainan, baik permainan tradisional maupun modern, seperti permainan papan, boneka, permainan kartu, model kit, permainan elektronik, dan konsol gim video. Kelompok ini tidak mencakup perdagangan besar media fisik perangkat lunak gim video, lihat subgolongan 4651. o",
+                                        "description": "Kelompok ini mencakup perdagangan besar berbagai alat permainan dan mainan, baik permainan tradisional maupun modern, seperti permainan papan, boneka, permainan kartu, model kit, permainan elektronik, dan konsol gim video. Kelompok ini tidak mencakup perdagangan besar media fisik perangkat lunak gim video, lihat subgolongan 4651. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -8178,7 +8209,7 @@
                                     {
                                         "nomor_kbli": "46521",
                                         "nama": "PERDAGANGAN BESAR SUKU CADANG ELEKTRONIK",
-                                        "description": "Kelompok ini mencakup perdagangan besar katup dan tabung elektronik, peralatan semikonduktor, mikrocip, sirkuit terpadu/IC, dan papan sirkuit cetak/PCB. o",
+                                        "description": "Kelompok ini mencakup perdagangan besar katup dan tabung elektronik, peralatan semikonduktor, mikrocip, sirkuit terpadu/IC, dan papan sirkuit cetak/PCB. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -8287,7 +8318,7 @@
                                     {
                                         "nomor_kbli": "46620",
                                         "nama": "PERDAGANGAN BESAR SUKU CADANG DAN AKSESORI MOBIL",
-                                        "description": "Kelompok ini mencakup - perdagangan besar suku cadang, komponen, peralatan, dan aksesori mobil, baik baru maupun bekas, seperti ban; - perdagangan besar baterai dan aki untuk mobil. Kelompok ini tidak mencakup - kegiatan agen yang terlibat dalam perdagangan besar suku cadang dan aksesori dari mobil dan kendaraan ringan, lihat subgolongan 4610; - perdagangan besar kapal, pesawat, kereta, termasuk suku cadang dan aksesori, lihat subgolongan 4659. o",
+                                        "description": "Kelompok ini mencakup - perdagangan besar suku cadang, komponen, peralatan, dan aksesori mobil, baik baru maupun bekas, seperti ban; - perdagangan besar baterai dan aki untuk mobil. Kelompok ini tidak mencakup - kegiatan agen yang terlibat dalam perdagangan besar suku cadang dan aksesori dari mobil dan kendaraan ringan, lihat subgolongan 4610; - perdagangan besar kapal, pesawat, kereta, termasuk suku cadang dan aksesori, lihat subgolongan 4659. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -8469,7 +8500,7 @@
                                     {
                                         "nomor_kbli": "46753",
                                         "nama": "PERDAGANGAN BESAR BAHAN BERBAHAYA (B2)",
-                                        "description": "Kelompok ini mencakup perdagangan besar bahan yang mempunyai sifat racun (toksisitas), karsinogenik, teratogenik, mutagenik, korosif, dan iritasi, atau disebut bahan berbahaya (B2). o",
+                                        "description": "Kelompok ini mencakup perdagangan besar bahan yang mempunyai sifat racun (toksisitas), karsinogenik, teratogenik, mutagenik, korosif, dan iritasi, atau disebut bahan berbahaya (B2). ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -8632,7 +8663,7 @@
                                     {
                                         "nomor_kbli": "47213",
                                         "nama": "PERDAGANGAN ECERAN SAYURAN",
-                                        "description": "Kelompok ini mencakup perdagangan eceran khusus sayuran, seperti bawang merah, bawang putih, kentang, wortel, terung, buncis, mentimun, labu siam, kacang panjang, dan kacang merah. o",
+                                        "description": "Kelompok ini mencakup perdagangan eceran khusus sayuran, seperti bawang merah, bawang putih, kentang, wortel, terung, buncis, mentimun, labu siam, kacang panjang, dan kacang merah. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -8740,7 +8771,7 @@
                                     {
                                         "nomor_kbli": "47246",
                                         "nama": "PERDAGANGAN ECERAN IKAN OLAHAN",
-                                        "description": "Kelompok ini mencakup perdagangan eceran berbagai jenis produk olahan ikan, udang, dan kerang yang diasinkan atau dikeringkan di dalam bangunan, seperti sosis, bakso, abon, serta olahan ikan teri, cucut, selar, kerapu, udang, rebon, petek, gabus, sepat, cumi-cumi, kepah, remis, dan kerang. o",
+                                        "description": "Kelompok ini mencakup perdagangan eceran berbagai jenis produk olahan ikan, udang, dan kerang yang diasinkan atau dikeringkan di dalam bangunan, seperti sosis, bakso, abon, serta olahan ikan teri, cucut, selar, kerapu, udang, rebon, petek, gabus, sepat, cumi-cumi, kepah, remis, dan kerang. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -8952,7 +8983,7 @@
                                     {
                                         "nomor_kbli": "47593",
                                         "nama": "PERDAGANGAN ECERAN BARANG PECAH BELAH",
-                                        "description": "; PERLENGKAPAN DAPUR DAN MAKAN Kelompok ini mencakup perdagangan eceran barang pecah belah dan perlengkapan dapur dan makan, seperti piring, pisin, mangkuk, cangkir, teko, sendok, garpu, rantang, stoples, botol susu bayi, panci, baki, ember, termos, jerigen, teko, kendi, periuk, cobek, tempayan, lumpang, asbak, alu, lesung, parutan kelapa, talenan, papan gilesan, centong, bakul, tampah, kukusan, kipas tangan untuk masak, tudung saji, tusukan sate, dan penggiling daging.",
+                                        "description": " PERLENGKAPAN DAPUR DAN MAKAN Kelompok ini mencakup perdagangan eceran barang pecah belah dan perlengkapan dapur dan makan, seperti piring, pisin, mangkuk, cangkir, teko, sendok, garpu, rantang, stoples, botol susu bayi, panci, baki, ember, termos, jerigen, teko, kendi, periuk, cobek, tempayan, lumpang, asbak, alu, lesung, parutan kelapa, talenan, papan gilesan, centong, bakul, tampah, kukusan, kipas tangan untuk masak, tudung saji, tusukan sate, dan penggiling daging.",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -9049,7 +9080,7 @@
                                     {
                                         "nomor_kbli": "47711",
                                         "nama": "PERDAGANGAN ECERAN PAKAIAN",
-                                        "description": "Kelompok ini mencakup perdagangan eceran pakaian, baik terbuat dari tekstil, kulit, maupun kulit buatan, seperti kemeja, celana, jas, mantel, jaket, piyama, kebaya, blus, rok, daster, singlet, kutang/bra, gaun, rok dalam, baju bayi, pakaian tari, pakaian adat, mukena, dan jubah. Kelompok ini juga mencakup perdagangan eceran pakaian olahraga umum yang tidak dirancang khusus untuk olahraga tertentu. o",
+                                        "description": "Kelompok ini mencakup perdagangan eceran pakaian, baik terbuat dari tekstil, kulit, maupun kulit buatan, seperti kemeja, celana, jas, mantel, jaket, piyama, kebaya, blus, rok, daster, singlet, kutang/bra, gaun, rok dalam, baju bayi, pakaian tari, pakaian adat, mukena, dan jubah. Kelompok ini juga mencakup perdagangan eceran pakaian olahraga umum yang tidak dirancang khusus untuk olahraga tertentu. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -9192,7 +9223,7 @@
                                     {
                                         "nomor_kbli": "47744",
                                         "nama": "PERDAGANGAN ECERAN BARANG LISTRIK DAN ELEKTRONIK BEKAS",
-                                        "description": "Kelompok ini mencakup perdagangan eceran barang listrik dan elektronik bekas, seperti radio bekas, tape recorder bekas, televisi bekas, mesin cuci bekas, setrika listrik bekas, dan pengering/pengeriting rambut bekas. o",
+                                        "description": "Kelompok ini mencakup perdagangan eceran barang listrik dan elektronik bekas, seperti radio bekas, tape recorder bekas, televisi bekas, mesin cuci bekas, setrika listrik bekas, dan pengering/pengeriting rambut bekas. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -9235,7 +9266,7 @@
                                     {
                                         "nomor_kbli": "47753",
                                         "nama": "PERDAGANGAN ECERAN IKAN DAN BIOTA AIR HIDUP LAINNYA",
-                                        "description": "Kelompok ini mencakup kegiatan perdagangan eceran ikan dan biota air hidup lainnya yang bukan untuk dikonsumsi, seperti ikan hias, kerang mutiara, bunga karang, nener (benih bandeng), benur (benih udang), benih ikan, dan benih bening lobster (BBL). Perdagangan ikan olahan dari perikanan masuk di kelompok 47245. o",
+                                        "description": "Kelompok ini mencakup kegiatan perdagangan eceran ikan dan biota air hidup lainnya yang bukan untuk dikonsumsi, seperti ikan hias, kerang mutiara, bunga karang, nener (benih bandeng), benur (benih udang), benih ikan, dan benih bening lobster (BBL). Perdagangan ikan olahan dari perikanan masuk di kelompok 47245. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -9264,7 +9295,7 @@
                                     {
                                         "nomor_kbli": "47763",
                                         "nama": "PERDAGANGAN ECERAN PUPUK DAN PEMBERANTAS HAMA",
-                                        "description": "Kelompok ini mencakup kegiatan perdagangan eceran khusus berbagai macam pupuk dan pemberantas hama, seperti pupuk buatan tunggal (urea, ZA, TSP, DSP), pupuk buatan majemuk dan campuran (mono amonium fosfat, diamonium fosfat, nitrogen fosfat kalium), pupuk alam (pupuk kompos, pupuk dolomit, pupuk kapur), insektisida, fungisida, rodentisida, herbisida, nematisida, dan akarisida. o",
+                                        "description": "Kelompok ini mencakup kegiatan perdagangan eceran khusus berbagai macam pupuk dan pemberantas hama, seperti pupuk buatan tunggal (urea, ZA, TSP, DSP), pupuk buatan majemuk dan campuran (mono amonium fosfat, diamonium fosfat, nitrogen fosfat kalium), pupuk alam (pupuk kompos, pupuk dolomit, pupuk kapur), insektisida, fungisida, rodentisida, herbisida, nematisida, dan akarisida. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -9307,7 +9338,7 @@
                                     {
                                         "nomor_kbli": "47774",
                                         "nama": "PERDAGANGAN ECERAN AROMATIK/PENYEGAR (MINYAK ASIRI)",
-                                        "description": "Kelompok ini mencakup perdagangan eceran khusus aromatik/penyegar minyak asiri, seperti minyak kenanga, minyak sereh, minyak kayu putih, minyak cendana, minyak lawang, minyak tengkawang, minyak gandapura, minyak jarak, minyak kapulaga, minyak pala, minyak delas, dan minyak akar wangi. o",
+                                        "description": "Kelompok ini mencakup perdagangan eceran khusus aromatik/penyegar minyak asiri, seperti minyak kenanga, minyak sereh, minyak kayu putih, minyak cendana, minyak lawang, minyak tengkawang, minyak gandapura, minyak jarak, minyak kapulaga, minyak pala, minyak delas, dan minyak akar wangi. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -9372,7 +9403,7 @@
                                     {
                                         "nomor_kbli": "47795",
                                         "nama": "PERDAGANGAN ECERAN PERLENGKAPAN PENGENDARA KENDARAAN",
-                                        "description": "BERMOTOR Kelompok ini mencakup perdagangan eceran perlengkapan pengendara kendaraan bermotor, seperti helm, jaket, jas hujan, sarung tangan, dan masker. o",
+                                        "description": "BERMOTOR Kelompok ini mencakup perdagangan eceran perlengkapan pengendara kendaraan bermotor, seperti helm, jaket, jas hujan, sarung tangan, dan masker. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -9469,7 +9500,7 @@
                                     {
                                         "nomor_kbli": "47901",
                                         "nama": "PLATFORM DIGITAL INTERMEDIASI PERDAGANGAN ECERAN",
-                                        "description": "Kelompok ini mencakup pengoperasian platform digital (misalnya situs web, aplikasi seluler) yang memfasilitasi perdagangan eceran antara penjual dan pembeli untuk pemesanan suatu barang berdasarkan imbalan atau komisi tanpa penyediaan atau mengambil kepemilikan barang yang diintermediasikan. Balas jasa atau komisi dapat diterima dari pihak penjual atau pembeli. 47909 JASA INTERMEDIASI PERDAGANGAN ECERAN LAINNYA Kelompok ini mencakup jasa perantaraan dalam perdagangan eceran lainnya yang belum tercakup, seperti jasa perantaraan perdagangan eceran melalui surat atau telepon; kegiatan rumah lelang barang pihak ketiga, baik barang baru maupun bekas, termasuk pelelangan melalui media daring; serta agen perdagangan eceran mobil o",
+                                        "description": "Kelompok ini mencakup pengoperasian platform digital (misalnya situs web, aplikasi seluler) yang memfasilitasi perdagangan eceran antara penjual dan pembeli untuk pemesanan suatu barang berdasarkan imbalan atau komisi tanpa penyediaan atau mengambil kepemilikan barang yang diintermediasikan. Balas jasa atau komisi dapat diterima dari pihak penjual atau pembeli. 47909 JASA INTERMEDIASI PERDAGANGAN ECERAN LAINNYA Kelompok ini mencakup jasa perantaraan dalam perdagangan eceran lainnya yang belum tercakup, seperti jasa perantaraan perdagangan eceran melalui surat atau telepon; kegiatan rumah lelang barang pihak ketiga, baik barang baru maupun bekas, termasuk pelelangan melalui media daring; serta agen perdagangan eceran mobil ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -9892,7 +9923,7 @@
                                     {
                                         "nomor_kbli": "50144",
                                         "nama": "ANGKUTAN PENYEBERANGAN PERINTIS ANTARPROVINSI UNTUK",
-                                        "description": "BARANG Kelompok ini mencakup aktivitas pengangkutan penyeberangan di laut, selat dan teluk antarprovinsi untuk barang yang menghubungkan daerah- daerah terpencil serta daerah yang potensial namun belum berkembang serta belum menguntungkan untuk dilayari secara komersial ke daerah- daerah yang telah berkembang, termasuk aktivitas penyewaan angkutan penyeberangan berikut operatornya. o",
+                                        "description": "BARANG Kelompok ini mencakup aktivitas pengangkutan penyeberangan di laut, selat dan teluk antarprovinsi untuk barang yang menghubungkan daerah- daerah terpencil serta daerah yang potensial namun belum berkembang serta belum menguntungkan untuk dilayari secara komersial ke daerah- daerah yang telah berkembang, termasuk aktivitas penyewaan angkutan penyeberangan berikut operatornya. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -9923,7 +9954,7 @@
                             {
                                 "nomor_kbli": "5021",
                                 "nama": "TRANSPORTASI PERAIRAN DARAT UNTUK PENUMPANG",
-                                "description": "Subgolongan ini mencakup - transportasi penumpang melalui sungai, terusan (kanal), danau, rawa, dan perairan darat lainnya, termasuk angkutan di dalam pelabuhan; - transportasi penumpang untuk tujuan wisata atau rekreasi. Subgolongan ini juga mencakup - penyewaan perahu wisata dengan awak kapalnya untuk transportasi di perairan darat; - pengoperasian kapal wisata, pesiar, atau tamasya di perairan darat. Kelompok ini tidak mencakup - aktivitas restoran dan bar di atas kapal yang dioperasikan oleh unit terpisah, lihat subgolongan 5610 dan 5630. - pengoperasian “kapal kasino terapung” yang tidak memindahkan penumpang, lihat subgolongan 9200. o",
+                                "description": "Subgolongan ini mencakup - transportasi penumpang melalui sungai, terusan (kanal), danau, rawa, dan perairan darat lainnya, termasuk angkutan di dalam pelabuhan; - transportasi penumpang untuk tujuan wisata atau rekreasi. Subgolongan ini juga mencakup - penyewaan perahu wisata dengan awak kapalnya untuk transportasi di perairan darat; - pengoperasian kapal wisata, pesiar, atau tamasya di perairan darat. Kelompok ini tidak mencakup - aktivitas restoran dan bar di atas kapal yang dioperasikan oleh unit terpisah, lihat subgolongan 5610 dan 5630. - pengoperasian “kapal kasino terapung” yang tidak memindahkan penumpang, lihat subgolongan 9200. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -9951,7 +9982,7 @@
                                     {
                                         "nomor_kbli": "50221",
                                         "nama": "ANGKUTAN SUNGAI DAN DANAU UNTUK BARANG UMUM",
-                                        "description": "Kelompok ini mencakup aktivitas pengangkutan barang di sungai, kanal, danau, rawa, dan perairan darat lainnya, serta barang yang diangkut bisa lebih dari satu jenis, kecuali barang berbahaya, barang khusus atau alat berat. o",
+                                        "description": "Kelompok ini mencakup aktivitas pengangkutan barang di sungai, kanal, danau, rawa, dan perairan darat lainnya, serta barang yang diangkut bisa lebih dari satu jenis, kecuali barang berbahaya, barang khusus atau alat berat. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -10228,7 +10259,7 @@
                                     {
                                         "nomor_kbli": "52227",
                                         "nama": "ANGKUTAN PERAIRAN PELABUHAN",
-                                        "description": "Kelompok ini mencakup aktivitas pengangkutan penumpang atau barang melalui laut atau pesisir pada pelabuhan-pelabuhan yang belum memiliki fasilitas lengkap, dengan menggunakan angkutan perairan pelabuhan (rede transport) sebagai penghubung dari dermaga (pelabuhan) ke kapal atau sebaliknya, dari kapal utama ke kapal lainnya di perairan pelabuhan atau sebaliknya, atau dari dermaga atau kapal ke bangunan/instalasi di perairan laut atau sebaliknya. o",
+                                        "description": "Kelompok ini mencakup aktivitas pengangkutan penumpang atau barang melalui laut atau pesisir pada pelabuhan-pelabuhan yang belum memiliki fasilitas lengkap, dengan menggunakan angkutan perairan pelabuhan (rede transport) sebagai penghubung dari dermaga (pelabuhan) ke kapal atau sebaliknya, dari kapal utama ke kapal lainnya di perairan pelabuhan atau sebaliknya, atau dari dermaga atau kapal ke bangunan/instalasi di perairan laut atau sebaliknya. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -10244,7 +10275,7 @@
                             {
                                 "nomor_kbli": "5223",
                                 "nama": "AKTIVITAS JASA TERKAIT TRANSPORTASI UDARA",
-                                "description": "Subgolongan ini mencakup - aktivitas yang berkaitan dengan transportasi udara untuk penumpang, hewan, atau barang:  pengoperasian fasilitas terminal, misalnya anjungan bandara dan sejenisnya;  aktivitas pengaturan bandara dan lalu lintas udara;  aktivitas layanan darat di lapangan udara dan sejenisnya; - pekerjaan pemeliharaan infrastruktur lapangan terbang; - penyimpanan (penampungan) pesawat udara. Subgolongan ini juga mencakup - jasa pemadam kebakaran dan pencegahan kebakaran di bandara. Subgolongan ini tidak mencakup - penanganan bongkar muat barang, lihat subgolongan 5224; - pemeriksaan bagasi dan penumpang di bandara yang dilakukan oleh pihak nonpemerintah, lihat subgolongan 8011; - pemeriksaan bagasi dan penumpang di bandara oleh otoritas publik, lihat subgolongan 8423; - pengoperasian sekolah penerbangan untuk pilot profesional, lihat subgolongan 8532; - pengoperasian sekolah penerbangan yang tidak mengeluarkan sertifikat atau izin profesional, lihat subgolongan 8553. o",
+                                "description": "Subgolongan ini mencakup - aktivitas yang berkaitan dengan transportasi udara untuk penumpang, hewan, atau barang:  pengoperasian fasilitas terminal, misalnya anjungan bandara dan sejenisnya;  aktivitas pengaturan bandara dan lalu lintas udara;  aktivitas layanan darat di lapangan udara dan sejenisnya; - pekerjaan pemeliharaan infrastruktur lapangan terbang; - penyimpanan (penampungan) pesawat udara. Subgolongan ini juga mencakup - jasa pemadam kebakaran dan pencegahan kebakaran di bandara. Subgolongan ini tidak mencakup - penanganan bongkar muat barang, lihat subgolongan 5224; - pemeriksaan bagasi dan penumpang di bandara yang dilakukan oleh pihak nonpemerintah, lihat subgolongan 8011; - pemeriksaan bagasi dan penumpang di bandara oleh otoritas publik, lihat subgolongan 8423; - pengoperasian sekolah penerbangan untuk pilot profesional, lihat subgolongan 8532; - pengoperasian sekolah penerbangan yang tidak mengeluarkan sertifikat atau izin profesional, lihat subgolongan 8553. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -10352,7 +10383,7 @@
                                     {
                                         "nomor_kbli": "52313",
                                         "nama": "AKTIVITAS PERWAKILAN OPERASIONAL TRANSPORTASI UDARA KHUSUS",
-                                        "description": "KARGO Kelompok ini mencakup aktivitas perwakilan operasional angkutan udara khusus kargo dalam menjual dan memasarkan jasa angkutan udara termasuk seluruh aspek pemasaran. Kelompok ini tidak mencakup - aktivitas perwakilan operasional transportasi udara untuk penumpang, lihat kelompok 52323; - aktivitas agen penjualan tiket pesawat udara untuk penumpang, lihat kelompok 52321; - aktivitas kantor perwakilan maskapai tanpa melakukan penjualan, lihat kelompok 70100; - aktivitas pemasaran jasa angkutan udara sebagai bagian dari periklanan, lihat kelompok 73100. o",
+                                        "description": "KARGO Kelompok ini mencakup aktivitas perwakilan operasional angkutan udara khusus kargo dalam menjual dan memasarkan jasa angkutan udara termasuk seluruh aspek pemasaran. Kelompok ini tidak mencakup - aktivitas perwakilan operasional transportasi udara untuk penumpang, lihat kelompok 52323; - aktivitas agen penjualan tiket pesawat udara untuk penumpang, lihat kelompok 52321; - aktivitas kantor perwakilan maskapai tanpa melakukan penjualan, lihat kelompok 70100; - aktivitas pemasaran jasa angkutan udara sebagai bagian dari periklanan, lihat kelompok 73100. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -10441,7 +10472,7 @@
                                     {
                                         "nomor_kbli": "53200",
                                         "nama": "AKTIVITAS KURIR",
-                                        "description": "Kelompok ini mencakup - pengumpulan/pengambilan, penyortiran/pemrosesan, pengangkutan dan pengiriman surat, dokumen, parsel, barang, dan paket baik domestik maupun internasional yang beroperasi di luar kewajiban pelayanan universal dengan menggunakan satu atau lebih moda transportasi dan kegiatannya dapat menggunakan transportasi milik sendiri (pribadi) atau transportasi umum. Kelompok ini juga mencakup - aktivitas pengiriman makanan nonsiap saji (non-prepared meals) yang telah diawetkan atau dikemas sedemikian rupa sehingga memungkinkan untuk diproses lebih lanjut dan tidak mudah rusak selama proses pengumpulan, pemrosesan, transportasi, dan distribusi yang menjadi bagian dari jenis layanan paket; - jasa pengiriman ke rumah (door-to-door), termasuk pengiriman makanan. Kelompok ini tidak mencakup; - transportasi barang, lihat subgolongan (sesuai dengan moda transportasi), lihat subgolongan 4912, 4923, 5012, 5022, dan 5120; - aktivitas pengiriman uang, lihat subgolongan 6419; - layanan logistik selain pos, lihat subgolongan 5229; - pengiriman furnitur yang dapat mencakup pembongkaran atau pemasangan, lihat subgolongan 4923; - pengantaran makanan siap saji ke rumah yang dilakukan oleh unit yang juga memasaknya, lihat golongan pokok 56. o",
+                                        "description": "Kelompok ini mencakup - pengumpulan/pengambilan, penyortiran/pemrosesan, pengangkutan dan pengiriman surat, dokumen, parsel, barang, dan paket baik domestik maupun internasional yang beroperasi di luar kewajiban pelayanan universal dengan menggunakan satu atau lebih moda transportasi dan kegiatannya dapat menggunakan transportasi milik sendiri (pribadi) atau transportasi umum. Kelompok ini juga mencakup - aktivitas pengiriman makanan nonsiap saji (non-prepared meals) yang telah diawetkan atau dikemas sedemikian rupa sehingga memungkinkan untuk diproses lebih lanjut dan tidak mudah rusak selama proses pengumpulan, pemrosesan, transportasi, dan distribusi yang menjadi bagian dari jenis layanan paket; - jasa pengiriman ke rumah (door-to-door), termasuk pengiriman makanan. Kelompok ini tidak mencakup; - transportasi barang, lihat subgolongan (sesuai dengan moda transportasi), lihat subgolongan 4912, 4923, 5012, 5022, dan 5120; - aktivitas pengiriman uang, lihat subgolongan 6419; - layanan logistik selain pos, lihat subgolongan 5229; - pengiriman furnitur yang dapat mencakup pembongkaran atau pemasangan, lihat subgolongan 4923; - pengantaran makanan siap saji ke rumah yang dilakukan oleh unit yang juga memasaknya, lihat golongan pokok 56. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -10740,7 +10771,7 @@
                                     {
                                         "nomor_kbli": "56290",
                                         "nama": "AKTIVITAS PENYEDIAAN JASA BOGA LAINNYA",
-                                        "description": "Kelompok ini mencakup kegiatan yang menyediakan jasa penyedia makanan lainnya atas dasar kontrak perjanjian dengan pelanggan, untuk periode waktu tertentu, termasuk jasa katering berdasarkan perjanjian di fasilitas olahraga dan tempat lain yang sejenis. Makanan dapat disiapkan langsung di tempat klien atau di unit pusat. Kelompok ini juga mencakup - kegiatan kontraktor jasa makanan, misalnya untuk perusahaan transportasi; - jasa katering yang melayani penyediaan makanan jangka panjang di tempat pengeboran minyak, lokasi pertambangan, rumah sakit, jasa angkutan; - jasa katering berdasarkan perjanjian di fasilitas olahraga dan fasilitas sejenis; - kegiatan kantin atau kafetaria (misalnya untuk pabrik, perkantoran, rumah sakit, atau sekolah) atas dasar konsesi; - jasa katering yang melayani rumah tangga; - jasa penyediaan makanan bergizi dan penyalurannya kepada kelompok sasaran; - jasa kontraktor penyedia makanan untuk restoran/cloud kitchen. Kelompok ini tidak mencakup - pembuatan jenis makanan yang tidak tahan lama untuk dijual kembali, lihat kelompok 10750; - perdagangan eceran jenis makanan yang tidak tahan lama, lihat golongan 472. o",
+                                        "description": "Kelompok ini mencakup kegiatan yang menyediakan jasa penyedia makanan lainnya atas dasar kontrak perjanjian dengan pelanggan, untuk periode waktu tertentu, termasuk jasa katering berdasarkan perjanjian di fasilitas olahraga dan tempat lain yang sejenis. Makanan dapat disiapkan langsung di tempat klien atau di unit pusat. Kelompok ini juga mencakup - kegiatan kontraktor jasa makanan, misalnya untuk perusahaan transportasi; - jasa katering yang melayani penyediaan makanan jangka panjang di tempat pengeboran minyak, lokasi pertambangan, rumah sakit, jasa angkutan; - jasa katering berdasarkan perjanjian di fasilitas olahraga dan fasilitas sejenis; - kegiatan kantin atau kafetaria (misalnya untuk pabrik, perkantoran, rumah sakit, atau sekolah) atas dasar konsesi; - jasa katering yang melayani rumah tangga; - jasa penyediaan makanan bergizi dan penyalurannya kepada kelompok sasaran; - jasa kontraktor penyedia makanan untuk restoran/cloud kitchen. Kelompok ini tidak mencakup - pembuatan jenis makanan yang tidak tahan lama untuk dijual kembali, lihat kelompok 10750; - perdagangan eceran jenis makanan yang tidak tahan lama, lihat golongan 472. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -10784,7 +10815,7 @@
                                     {
                                         "nomor_kbli": "56305",
                                         "nama": "AKTIVITAS RUMAH/KEDAI OBAT BAHAN ALAM",
-                                        "description": "Kelompok ini mencakup jenis kegiatan yang bertempat di sebagian atau seluruh bangunan permanen yang menjual dan menyajikan minuman jamu atau obat bahan alam untuk umum di tempat usahanya, baik dilengkapi dengan peralatan/perlengkapan untuk proses pembuatan dan penyimpanan maupun tidak. Kelompok ini juga mencakup penyediaan jasa pelayanan minum yang menyajikan minuman jamu siap dikonsumsi yang melalui proses pembuatan di tempat tetap yang dapat dipindah- pindahkan atau dibongkar pasang, biasanya dengan menggunakan tenda, seperti kedai jamu. o",
+                                        "description": "Kelompok ini mencakup jenis kegiatan yang bertempat di sebagian atau seluruh bangunan permanen yang menjual dan menyajikan minuman jamu atau obat bahan alam untuk umum di tempat usahanya, baik dilengkapi dengan peralatan/perlengkapan untuk proses pembuatan dan penyimpanan maupun tidak. Kelompok ini juga mencakup penyediaan jasa pelayanan minum yang menyajikan minuman jamu siap dikonsumsi yang melalui proses pembuatan di tempat tetap yang dapat dipindah- pindahkan atau dibongkar pasang, biasanya dengan menggunakan tenda, seperti kedai jamu. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -10920,7 +10951,7 @@
                                     {
                                         "nomor_kbli": "58211",
                                         "nama": "PENERBITAN PERANGKAT LUNAK VIDEO GIM DALAM JARINGAN (GAME",
-                                        "description": "ONLINE) Kelompok ini mencakup aktivitas penerbitan perangkat lunak video gim dalam jaringan (game online) yang siap dioperasikan untuk semua platform sistem operasi dan perangkat. Kelompok ini juga mencakup - aktivitas penyediaan video gim daring (game online) oleh penerbit, termasuk fitur pembelian dalam permainan (in-game) dan pembelian dalam aplikasi (in-app), untuk semua jenis pengguna termasuk pelanggan yang berlangganan; - aktivitas jasa intermediasi untuk penerbitan perangkat lunak video gim dalam jaringan (game online). o",
+                                        "description": "ONLINE) Kelompok ini mencakup aktivitas penerbitan perangkat lunak video gim dalam jaringan (game online) yang siap dioperasikan untuk semua platform sistem operasi dan perangkat. Kelompok ini juga mencakup - aktivitas penyediaan video gim daring (game online) oleh penerbit, termasuk fitur pembelian dalam permainan (in-game) dan pembelian dalam aplikasi (in-app), untuk semua jenis pengguna termasuk pelanggan yang berlangganan; - aktivitas jasa intermediasi untuk penerbitan perangkat lunak video gim dalam jaringan (game online). ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -11227,7 +11258,7 @@
                                     {
                                         "nomor_kbli": "61104",
                                         "nama": "AKTIVITAS JASA AKSES INTERNET (INTERNET SERVICE PROVIDER)",
-                                        "description": "Kelompok ini mencakup aktivitas penyelenggaraan jasa akses internet oleh operator (ISP) yang memiliki dan mengoperasikan infrastruktur sendiri (baik melalui kabel, nirkabel, maupun satelit) kepada pengguna akhir (end user), termasuk di dalamnya - penyediaan akses internet melalui jaringan telekomunikasi; - penyediaan akses internet dengan ketersambungan khusus (dedicated connection); - penyediaan akses internet untuk ruang publik (hotspot); - penyediaan akses internet dalam angkutan transportasi (on-board connectivity), seperti akses internet dalam penerbangan (inflight connectivity). o",
+                                        "description": "Kelompok ini mencakup aktivitas penyelenggaraan jasa akses internet oleh operator (ISP) yang memiliki dan mengoperasikan infrastruktur sendiri (baik melalui kabel, nirkabel, maupun satelit) kepada pengguna akhir (end user), termasuk di dalamnya - penyediaan akses internet melalui jaringan telekomunikasi; - penyediaan akses internet dengan ketersambungan khusus (dedicated connection); - penyediaan akses internet untuk ruang publik (hotspot); - penyediaan akses internet dalam angkutan transportasi (on-board connectivity), seperti akses internet dalam penerbangan (inflight connectivity). ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -11248,7 +11279,7 @@
                                     {
                                         "nomor_kbli": "61108",
                                         "nama": "AKTIVITAS JASA TELEPONI DASAR",
-                                        "description": "Kelompok ini mencakup aktivitas penyelenggaraan jasa telekomunikasi yang menyediakan layanan teleponi dasar kepada pelanggan akhir (end user) dengan menggunakan teknologi circuit switched atau teknologi lainnya, baik melalui jaringan tetap, jaringan bergerak, maupun satelit. Layanan ini mencakup komunikasi suara (voice) dasar yang disediakan langsung kepada pelanggan. o",
+                                        "description": "Kelompok ini mencakup aktivitas penyelenggaraan jasa telekomunikasi yang menyediakan layanan teleponi dasar kepada pelanggan akhir (end user) dengan menggunakan teknologi circuit switched atau teknologi lainnya, baik melalui jaringan tetap, jaringan bergerak, maupun satelit. Layanan ini mencakup komunikasi suara (voice) dasar yang disediakan langsung kepada pelanggan. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -11278,7 +11309,7 @@
                                     {
                                         "nomor_kbli": "61209",
                                         "nama": "AKTIVITAS PENJUALAN KEMBALI DAN JASA INTERMEDIASI UNTUK",
-                                        "description": "TELEKOMUNIKASI LAINNYA Kelompok ini mencakup aktivitas penjualan kembali dan jasa intermediasi untuk telekomunikasi lainnya, termasuk - aktivitas penjualan kembali jasa telekomunikasi kabel, nirkabel, dan satelit (misalnya membeli dan menjual kembali kapasitas jaringan), termasuk kegiatan broker telekomunikasi dan penjualan kembali kartu panggil prabayar, serta aktivitas terkait; - aktivitas jasa intermediasi untuk kegiatan telekomunikasi kabel, nirkabel, dan satelit, termasuk aktivitas agen untuk operator telekomunikasi, penjualan paket layanan telepon seluler atas dasar keagenan, aktivitas agen penjualan paket layanan telepon nirkabel yang menjual atas nama operator telekomunikasi nirkabel, serta aktivitas agen untuk operator jaringan virtual seluler (MVNO); - aktivitas penyediaan akses telepon dan internet di fasilitas yang terbuka untuk publik, seperti warung telepon (wartel) dan warung internet (warnet). 619 AKTIVITAS TELEKOMUNIKASI LAINNYA Golongan ini mencakup aktivitas penyediaan aplikasi telekomunikasi khusus, seperti pelacakan satelit, telemetri komunikasi, dan pengoperasian stasiun radar; pengoperasian stasiun terminal satelit dan fasilitas terkait yang secara operasional dihubungkan dengan satu atau lebih sistem komunikasi terestrial dan mampu mentransmisikan komunikasi kepada sistem satelit atau menerima komunikasi dari sistem satelit; penyediaan jasa telekomunikasi melalui koneksi telekom yang ada (seperti penyediaan VOIP); serta penyediaan layanan pesan teks (SMS), layanan data tingkat lanjut (seperti SMS+, MMS+), dan layanan SMS push tanpa mengoperasikan fasilitas transmisi data. Golongan ini juga mencakup aktivitas penyediaan layanan notifikasi, seperti notifikasi SMS dari bank atau pesan iklan. Golongan ini tidak mencakup aktivitas penyediaan akses internet oleh operator yang memiliki dan mengoperasikan infrastruktur telekomunikasi (lihat golongan 611), serta penjualan kembali jasa telekomunikasi dan jasa intermediasi untuk telekomunikasi (lihat golongan 612). o",
+                                        "description": "TELEKOMUNIKASI LAINNYA Kelompok ini mencakup aktivitas penjualan kembali dan jasa intermediasi untuk telekomunikasi lainnya, termasuk - aktivitas penjualan kembali jasa telekomunikasi kabel, nirkabel, dan satelit (misalnya membeli dan menjual kembali kapasitas jaringan), termasuk kegiatan broker telekomunikasi dan penjualan kembali kartu panggil prabayar, serta aktivitas terkait; - aktivitas jasa intermediasi untuk kegiatan telekomunikasi kabel, nirkabel, dan satelit, termasuk aktivitas agen untuk operator telekomunikasi, penjualan paket layanan telepon seluler atas dasar keagenan, aktivitas agen penjualan paket layanan telepon nirkabel yang menjual atas nama operator telekomunikasi nirkabel, serta aktivitas agen untuk operator jaringan virtual seluler (MVNO); - aktivitas penyediaan akses telepon dan internet di fasilitas yang terbuka untuk publik, seperti warung telepon (wartel) dan warung internet (warnet). 619 AKTIVITAS TELEKOMUNIKASI LAINNYA Golongan ini mencakup aktivitas penyediaan aplikasi telekomunikasi khusus, seperti pelacakan satelit, telemetri komunikasi, dan pengoperasian stasiun radar; pengoperasian stasiun terminal satelit dan fasilitas terkait yang secara operasional dihubungkan dengan satu atau lebih sistem komunikasi terestrial dan mampu mentransmisikan komunikasi kepada sistem satelit atau menerima komunikasi dari sistem satelit; penyediaan jasa telekomunikasi melalui koneksi telekom yang ada (seperti penyediaan VOIP); serta penyediaan layanan pesan teks (SMS), layanan data tingkat lanjut (seperti SMS+, MMS+), dan layanan SMS push tanpa mengoperasikan fasilitas transmisi data. Golongan ini juga mencakup aktivitas penyediaan layanan notifikasi, seperti notifikasi SMS dari bank atau pesan iklan. Golongan ini tidak mencakup aktivitas penyediaan akses internet oleh operator yang memiliki dan mengoperasikan infrastruktur telekomunikasi (lihat golongan 611), serta penjualan kembali jasa telekomunikasi dan jasa intermediasi untuk telekomunikasi (lihat golongan 612). ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -11801,7 +11832,7 @@
                                     {
                                         "nomor_kbli": "64952",
                                         "nama": "PEMBIAYAAN INFRASTRUKTUR SYARIAH",
-                                        "description": "Kelompok ini mencakup kegiatan pembiayaan infrastruktur yang seluruhnya diselenggarakan berdasarkan prinsip syariah meliputi pembiayaan dalam bentuk penyediaan dana pada proyek infrastruktur, yaitu pemberian pembiayaan langsung (direct lending) untuk pembiayaan infrastruktur, pembiayaan ulang (refinancing) atas infrastruktur yang telah dibiayai pihak lain, dan/atau pemberian pembiayaan subordinasi (subordinated loans) yang berkaitan dengan pembiayaan infrastruktur. o",
+                                        "description": "Kelompok ini mencakup kegiatan pembiayaan infrastruktur yang seluruhnya diselenggarakan berdasarkan prinsip syariah meliputi pembiayaan dalam bentuk penyediaan dana pada proyek infrastruktur, yaitu pemberian pembiayaan langsung (direct lending) untuk pembiayaan infrastruktur, pembiayaan ulang (refinancing) atas infrastruktur yang telah dibiayai pihak lain, dan/atau pemberian pembiayaan subordinasi (subordinated loans) yang berkaitan dengan pembiayaan infrastruktur. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -11844,7 +11875,7 @@
                                     {
                                         "nomor_kbli": "64991",
                                         "nama": "AKTIVITAS MODAL VENTURA KONVENSIONAL",
-                                        "description": "Kelompok ini mencakup aktivtias pembiayaan melalui penyertaan modal dan/atau pembiayaan untuk jangka waktu tertentu dalam rangka pengembangan usaha pasangan usaha atau debitur, pengelolaan dana ventura, dan kegiatan usaha lain yang diselenggarakan secara konvensional. o",
+                                        "description": "Kelompok ini mencakup aktivtias pembiayaan melalui penyertaan modal dan/atau pembiayaan untuk jangka waktu tertentu dalam rangka pengembangan usaha pasangan usaha atau debitur, pengelolaan dana ventura, dan kegiatan usaha lain yang diselenggarakan secara konvensional. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -11932,7 +11963,7 @@
                                     {
                                         "nomor_kbli": "65122",
                                         "nama": "ASURANSI UMUM SYARIAH",
-                                        "description": "Kelompok ini mencakup asuransi umum syariah selain asuransi jiwa yang diselenggarakan berdasarkan prinsip syariah meliputi pengelolaan risiko berdasarkan prinsip syariah guna saling menolong dan melindungi dengan memberikan penggantian kepada peserta atau pemegang polis karena kerugian, kerusakan, biaya yang timbul, kehilangan keuntungan, atau tanggung jawab hukum kepada pihak ketiga yang mungkin diderita peserta atau pemegang polis karena terjadinya suatu peristiwa yang tidak pasti. o",
+                                        "description": "Kelompok ini mencakup asuransi umum syariah selain asuransi jiwa yang diselenggarakan berdasarkan prinsip syariah meliputi pengelolaan risiko berdasarkan prinsip syariah guna saling menolong dan melindungi dengan memberikan penggantian kepada peserta atau pemegang polis karena kerugian, kerusakan, biaya yang timbul, kehilangan keuntungan, atau tanggung jawab hukum kepada pihak ketiga yang mungkin diderita peserta atau pemegang polis karena terjadinya suatu peristiwa yang tidak pasti. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -12366,7 +12397,7 @@
                                     {
                                         "nomor_kbli": "66199",
                                         "nama": "AKTIVITAS PENUNJANG JASA KEUANGAN LAINNYA YTDL, KECUALI",
-                                        "description": "ASURANSI DAN DANA PENSIUN Kelompok ini mencakup usaha kegiatan penunjang keuangan lainnya yang tidak diklasifikasikan di tempat lain, seperti - aktivitas fidusiarus atas dasar balas jasa atau kontrak, contohnya wali amanat; - aktivitas agen atau mitra dalam rangka pemasaran efek; - aktivitas agen atau mitra dalam rangka penjualan efek reksa dana; - tokenisasi aset keuangan digital termasuk security token offerings dan initial coin offerings; - validasi dan penambangan aset keuangan digital, misalnya aset kripto yang dianggap sebagai aset keuangan; - aktivitas kantor penerimaan pajak; - aktivitas laku pandai; - aktivitas yang berkaitan dengan pengumpulan dan penyaringan informasi layanan keuangan atas dasar balas jasa atau kontrak. 662 AKTIVITAS PENUNJANG ASURANSI, PENJAMINAN, DAN DANA PENSIUN Golongan ini mencakup usaha aktivitas agen (misalnya pialang) dalam menjual anuitas dan polis asuransi atau menyediakan jasa tunjangan pekerja lainnya serta jasa terkait asuransi dan dana pensiun seperti penyesuaian klaim dan administrasi pihak ketiga: - penilaian risiko dan kerugian dengan kegiatan usaha meliputi penilai risiko asuransi dan penilai kerugian asuransi; - agen, broker, atau pialang asuransi dan penjaminan dengan kegiatan usaha meliputi agen asuransi, pialang asuransi, pialang reasuransi, agen penjamin, broker penjaminan, dan broker penjaminan ulang; - penunjang lainnya untuk asuransi, penjaminan, dan dana pensiun lainnya dengan kegiatan usaha meliputi: konsultan aktuaria; pemeringkat usaha mikro, kecil, menengah dan koperasi; dan aktivitas penunjang asuransi, penjaminan dan dana pensiun lainnya. Golongan ini tidak mencakup: - penggabungan dan penanggungan risiko asuransi dengan penjaminan emisi, lihat golongan pokok 65. o",
+                                        "description": "ASURANSI DAN DANA PENSIUN Kelompok ini mencakup usaha kegiatan penunjang keuangan lainnya yang tidak diklasifikasikan di tempat lain, seperti - aktivitas fidusiarus atas dasar balas jasa atau kontrak, contohnya wali amanat; - aktivitas agen atau mitra dalam rangka pemasaran efek; - aktivitas agen atau mitra dalam rangka penjualan efek reksa dana; - tokenisasi aset keuangan digital termasuk security token offerings dan initial coin offerings; - validasi dan penambangan aset keuangan digital, misalnya aset kripto yang dianggap sebagai aset keuangan; - aktivitas kantor penerimaan pajak; - aktivitas laku pandai; - aktivitas yang berkaitan dengan pengumpulan dan penyaringan informasi layanan keuangan atas dasar balas jasa atau kontrak. 662 AKTIVITAS PENUNJANG ASURANSI, PENJAMINAN, DAN DANA PENSIUN Golongan ini mencakup usaha aktivitas agen (misalnya pialang) dalam menjual anuitas dan polis asuransi atau menyediakan jasa tunjangan pekerja lainnya serta jasa terkait asuransi dan dana pensiun seperti penyesuaian klaim dan administrasi pihak ketiga: - penilaian risiko dan kerugian dengan kegiatan usaha meliputi penilai risiko asuransi dan penilai kerugian asuransi; - agen, broker, atau pialang asuransi dan penjaminan dengan kegiatan usaha meliputi agen asuransi, pialang asuransi, pialang reasuransi, agen penjamin, broker penjaminan, dan broker penjaminan ulang; - penunjang lainnya untuk asuransi, penjaminan, dan dana pensiun lainnya dengan kegiatan usaha meliputi: konsultan aktuaria; pemeringkat usaha mikro, kecil, menengah dan koperasi; dan aktivitas penunjang asuransi, penjaminan dan dana pensiun lainnya. Golongan ini tidak mencakup: - penggabungan dan penanggungan risiko asuransi dengan penjaminan emisi, lihat golongan pokok 65. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -12552,7 +12583,7 @@
                             {
                                 "nomor_kbli": "6812",
                                 "nama": "AKTIVITAS REAL ESTAT (BANGUNAN DAN LAHAN) NONHUNIAN MILIK",
-                                "description": "SENDIRI ATAU SEWA Subgolongan ini mencakup - penyewaan dan pengoperasian real estat milik sendiri atau sewa, seperti gedung nonhunian atau nonperumahan, termasuk gedung perkantoran, ruang kerja bersama (coworking space), ruang pameran, fasilitas penyimpanan mandiri, dan pusat data; - penyewaan dan pengoperasian lahan/tanah, untuk kegiatan pertanian, kehutanan, perindustrian, pariwisata, kesehatan dan kegiatan lainnya, seperti kawasan ekonomi khusus, kawasan industri dan kawasan pariwisata; - pengembangan proyek bangunan nonhunian untuk dioperasikan sendiri, sebagai contoh untuk penyewaan ruang-ruang di gedung tersebut; - pengembangan proyek bangunan nonhunian untuk dijual. Subgolongan ini juga mencakup - penyewaan atap bangunan nonhunian, misalnya untuk instalasi panel tenaga surya; - penyewaan bangunan pabrik, baik disertai mesin dan peralatan maupun tidak. Subgolongan ini tidak mencakup - pengoperasian hotel, hotel suite, rumah liburan, rumah kos, tempat perkemahan, taman trailer, dan tempat akomodasi nonperumahan atau tempat menginap jangka pendek lainnya (termasuk akomodasi mahasiswa) yang disediakan untuk kurang dari satu tahun, lihat golongan pokok 55; - penyewaan mesin, lihat golongan 773; - kegiatan perawatan tempat tinggal untuk orang lanjut usia atau orang dengan cacat fisik, termasuk pengawasan dan bantuan dalam kehidupan sehari-hari, lihat subgolongan 8730. o",
+                                "description": "SENDIRI ATAU SEWA Subgolongan ini mencakup - penyewaan dan pengoperasian real estat milik sendiri atau sewa, seperti gedung nonhunian atau nonperumahan, termasuk gedung perkantoran, ruang kerja bersama (coworking space), ruang pameran, fasilitas penyimpanan mandiri, dan pusat data; - penyewaan dan pengoperasian lahan/tanah, untuk kegiatan pertanian, kehutanan, perindustrian, pariwisata, kesehatan dan kegiatan lainnya, seperti kawasan ekonomi khusus, kawasan industri dan kawasan pariwisata; - pengembangan proyek bangunan nonhunian untuk dioperasikan sendiri, sebagai contoh untuk penyewaan ruang-ruang di gedung tersebut; - pengembangan proyek bangunan nonhunian untuk dijual. Subgolongan ini juga mencakup - penyewaan atap bangunan nonhunian, misalnya untuk instalasi panel tenaga surya; - penyewaan bangunan pabrik, baik disertai mesin dan peralatan maupun tidak. Subgolongan ini tidak mencakup - pengoperasian hotel, hotel suite, rumah liburan, rumah kos, tempat perkemahan, taman trailer, dan tempat akomodasi nonperumahan atau tempat menginap jangka pendek lainnya (termasuk akomodasi mahasiswa) yang disediakan untuk kurang dari satu tahun, lihat golongan pokok 55; - penyewaan mesin, lihat golongan 773; - kegiatan perawatan tempat tinggal untuk orang lanjut usia atau orang dengan cacat fisik, termasuk pengawasan dan bantuan dalam kehidupan sehari-hari, lihat subgolongan 8730. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -12728,7 +12759,7 @@
                             {
                                 "nomor_kbli": "6920",
                                 "nama": "AKTIVITAS AKUNTANSI, PEMBUKUAN, DAN PEMERIKSA",
-                                "description": "; KONSULTASI PAJAK Subgolongan ini mencakup - perekaman transaksi komersial dari bisnis atau lainnya; - aktivitas pembukuan untuk akuntansi keuangan, akuntansi penggajian, dan lain-lain; - persiapan atau pengauditan laporan keuangan; - pengujian laporan dan sertifikasi keakuratannya; - penyiapan pengembalian pajak untuk individu atau perusahaan; - aktivitas advisori akuntansi dan perwakilan (selain perwakilan hukum) atas nama klien dihadapan petugas pajak atau pengadilan pajak; - aktivitas jasa penghitungan bea dan tarif pajak. Subgolongan ini juga mencakup - aktivitas layanan penagihan. Subgolongan ini tidak mencakup - penyediaan perangkat lunak akuntansi, lihat golongan 621; - aktivitas pengolahan data dan tabulasi, lihat subgolongan 6310; - konsultasi manajemen pada sistem akuntansi, prosedur pengendalian anggaran, lihat subgolongan 7020; - pemungutan tagihan, lihat subgolongan 8291.",
+                                "description": " KONSULTASI PAJAK Subgolongan ini mencakup - perekaman transaksi komersial dari bisnis atau lainnya; - aktivitas pembukuan untuk akuntansi keuangan, akuntansi penggajian, dan lain-lain; - persiapan atau pengauditan laporan keuangan; - pengujian laporan dan sertifikasi keakuratannya; - penyiapan pengembalian pajak untuk individu atau perusahaan; - aktivitas advisori akuntansi dan perwakilan (selain perwakilan hukum) atas nama klien dihadapan petugas pajak atau pengadilan pajak; - aktivitas jasa penghitungan bea dan tarif pajak. Subgolongan ini juga mencakup - aktivitas layanan penagihan. Subgolongan ini tidak mencakup - penyediaan perangkat lunak akuntansi, lihat golongan 621; - aktivitas pengolahan data dan tabulasi, lihat subgolongan 6310; - konsultasi manajemen pada sistem akuntansi, prosedur pengendalian anggaran, lihat subgolongan 7020; - pemungutan tagihan, lihat subgolongan 8291.",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -13110,7 +13141,7 @@
                             {
                                 "nomor_kbli": "7411",
                                 "nama": "AKTIVITAS DESAIN INDUSTRI",
-                                "description": "Subgolongan ini mencakup - aktivitas bidang desain industri, yang juga dapat dikerjakan melalui perangkat lunak khusus, yaitu merencanakan, menciptakan, dan mengembangkan desain, spesifikasi yang mengoptimalkan penggunaan, nilai dan tampilan produk, termasuk penentuan bahan, konstruksi, mekanisme, bentuk, warna dan penyelesaian akhir permukaan produk, pendekatan kepada kebutuhan dan karasteristik manusia, keamanan, ergonomi, pengenalan pasar dan efisien dalam produksi, distribusi, penggunaan, dan pemeliharaan. Subgolongan ini tidak mencakup - perencanaan dan pembuatan animasi komputer, lihat subgolongan 5912; - perancangan dan pemrograman halaman web, lihat subgolongan 6219; - perancangan arsitektur, lihat subgolongan 7110; - perancangan teknik dan rekayasa, yaitu penerapan konsep dan hukum fisik teknik dalam perancangan mesin, materi, instrumen, struktur, proses dan sistem, lihat subgolongan 7110; - perancangan panggung teater, lihat kelompok 90399. 74111 AKTIVITAS DESAIN ALAT TRANSPORTASI DAN PERMESINAN Kelompok ini mencakup kegiatan aktivitas desain industri untuk menghasilkan produk, alat pendukung produksi, dan komponen dalam pembuatan alat transportasi dan permesinan. Kelompok ini mencakup - desain untuk produk sepeda dan kendaraan yang ditarik binatang; - desain untuk produk kereta tangan, kereta dorong, kereta bayi, kursi roda, dan tandu; - desain untuk produk kendaraan di atas rel; - desain untuk produk pengangkat kursi dan ski; - desain untuk produk elevator dan alat angkat; - desain untuk produk kendaraan bermotor, kapal dan pesawat terbang, serta pesawat luar angkasa; - desain untuk produk ban dan rantai antislip dan komponen maupun aksesori kendaraan; - desain untuk produk mesin, pompa, dan kompresor; - desain untuk produk mesin pertanian dan konstruksi maupun mesin tekstil. Aktivitas desain kegiatan ini juga dikerjakan melalui perangkat lunak khusus. o",
+                                "description": "Subgolongan ini mencakup - aktivitas bidang desain industri, yang juga dapat dikerjakan melalui perangkat lunak khusus, yaitu merencanakan, menciptakan, dan mengembangkan desain, spesifikasi yang mengoptimalkan penggunaan, nilai dan tampilan produk, termasuk penentuan bahan, konstruksi, mekanisme, bentuk, warna dan penyelesaian akhir permukaan produk, pendekatan kepada kebutuhan dan karasteristik manusia, keamanan, ergonomi, pengenalan pasar dan efisien dalam produksi, distribusi, penggunaan, dan pemeliharaan. Subgolongan ini tidak mencakup - perencanaan dan pembuatan animasi komputer, lihat subgolongan 5912; - perancangan dan pemrograman halaman web, lihat subgolongan 6219; - perancangan arsitektur, lihat subgolongan 7110; - perancangan teknik dan rekayasa, yaitu penerapan konsep dan hukum fisik teknik dalam perancangan mesin, materi, instrumen, struktur, proses dan sistem, lihat subgolongan 7110; - perancangan panggung teater, lihat kelompok 90399. 74111 AKTIVITAS DESAIN ALAT TRANSPORTASI DAN PERMESINAN Kelompok ini mencakup kegiatan aktivitas desain industri untuk menghasilkan produk, alat pendukung produksi, dan komponen dalam pembuatan alat transportasi dan permesinan. Kelompok ini mencakup - desain untuk produk sepeda dan kendaraan yang ditarik binatang; - desain untuk produk kereta tangan, kereta dorong, kereta bayi, kursi roda, dan tandu; - desain untuk produk kendaraan di atas rel; - desain untuk produk pengangkat kursi dan ski; - desain untuk produk elevator dan alat angkat; - desain untuk produk kendaraan bermotor, kapal dan pesawat terbang, serta pesawat luar angkasa; - desain untuk produk ban dan rantai antislip dan komponen maupun aksesori kendaraan; - desain untuk produk mesin, pompa, dan kompresor; - desain untuk produk mesin pertanian dan konstruksi maupun mesin tekstil. Aktivitas desain kegiatan ini juga dikerjakan melalui perangkat lunak khusus. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -13224,7 +13255,7 @@
                                     {
                                         "nomor_kbli": "74201",
                                         "nama": "AKTIVITAS FOTOGRAFI UDARA",
-                                        "description": "Kelompok ini mencakup aktivitas fotografi dari udara, meliputi pemotretan dengan pesawat udara, pesawat tanpa awak, dan sebagainya. Kelompok ini tidak mencakup - angkutan udara untuk melihat pemandangan, lihat subgolongan 5110. o",
+                                        "description": "Kelompok ini mencakup aktivitas fotografi dari udara, meliputi pemotretan dengan pesawat udara, pesawat tanpa awak, dan sebagainya. Kelompok ini tidak mencakup - angkutan udara untuk melihat pemandangan, lihat subgolongan 5110. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -13412,7 +13443,7 @@
                                     {
                                         "nomor_kbli": "77293",
                                         "nama": "PENYEWAAN BARANG HASIL PENCETAKAN DAN PENERBITAN",
-                                        "description": "Kelompok ini mencakup kegiatan penyewaan dan sewa guna usaha tanpa hak opsi (operational leasing) barang hasil pencetakan dan penerbitan, seperti buku, majalah, komik, gim video, kaset, diska video, dan rekaman. o",
+                                        "description": "Kelompok ini mencakup kegiatan penyewaan dan sewa guna usaha tanpa hak opsi (operational leasing) barang hasil pencetakan dan penerbitan, seperti buku, majalah, komik, gim video, kaset, diska video, dan rekaman. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -13618,7 +13649,7 @@
                                     {
                                         "nomor_kbli": "78104",
                                         "nama": "AKTIVITAS PENEMPATAN AWAK KAPAL",
-                                        "description": "Kelompok ini mencakup kegiatan pendaftaran, penyeleksian, penempatan, serta perlindungan tenaga kerja untuk awak kapal, baik kapal niaga maupun kapal perikanan, di dalam dan luar negeri. o",
+                                        "description": "Kelompok ini mencakup kegiatan pendaftaran, penyeleksian, penempatan, serta perlindungan tenaga kerja untuk awak kapal, baik kapal niaga maupun kapal perikanan, di dalam dan luar negeri. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -13765,7 +13796,7 @@
             {
                 "nomor_kbli": "80",
                 "nama": "AKTIVITAS INVESTIGASI DAN KEAMANAN",
-                "description": "Golongan pokok ini mencakup layanan terkait keamanan, seperti - layanan investigasi swasta, komersial, korporat, asuransi, dan pidana untuk pelaksanaan hak di pengadilan; - layanan penjagaan dan patroli; - mengambil dan mengirimkan uang, tanda terima, atau barang berharga lainnya dengan personel dan peralatan untuk melindungi barang tersebut saat dalam perjalanan; - layanan sistem keamanan dan pengoperasian sistem alarm keamanan elektronik, seperti alarm antipencurian dan kebakaran, serta layanan sistem pemantauan jarak jauh dan pengawasan video yang kegiatannya berfokus pada pemantauan jarak jauh sistem ini, tetapi sering kali juga melibatkan layanan penjualan, pemasangan, dan perbaikan. Golongan pokok ini juga mencakup - layanan keamanan yang terkait dengan pencegahan dan keselamatan orang di acara publik dan tempat yang terbuka untuk umum; - layanan keamanan yang menyediakan layanan mobil lapis baja. Golongan pokok ini tidak mencakup aktivitas keamanan teknologi informasi, lihat golongan pokok 62. o",
+                "description": "Golongan pokok ini mencakup layanan terkait keamanan, seperti - layanan investigasi swasta, komersial, korporat, asuransi, dan pidana untuk pelaksanaan hak di pengadilan; - layanan penjagaan dan patroli; - mengambil dan mengirimkan uang, tanda terima, atau barang berharga lainnya dengan personel dan peralatan untuk melindungi barang tersebut saat dalam perjalanan; - layanan sistem keamanan dan pengoperasian sistem alarm keamanan elektronik, seperti alarm antipencurian dan kebakaran, serta layanan sistem pemantauan jarak jauh dan pengawasan video yang kegiatannya berfokus pada pemantauan jarak jauh sistem ini, tetapi sering kali juga melibatkan layanan penjualan, pemasangan, dan perbaikan. Golongan pokok ini juga mencakup - layanan keamanan yang terkait dengan pencegahan dan keselamatan orang di acara publik dan tempat yang terbuka untuk umum; - layanan keamanan yang menyediakan layanan mobil lapis baja. Golongan pokok ini tidak mencakup aktivitas keamanan teknologi informasi, lihat golongan pokok 62. ",
                 "type_kbli": "Golongan Pokok",
                 "children": [
                     {
@@ -14033,7 +14064,7 @@
                                     {
                                         "nomor_kbli": "82924",
                                         "nama": "AKTIVITAS PENGEPAKAN BAHAN DAN PRODUK KIMIA",
-                                        "description": "Kelompok ini mencakup kegiatan pengemasan atas dasar balas jasa atau kontrak, baik menggunakan suatu proses otomatis, ataupun manual untuk bahan dan produk kimia. Kelompok ini mencakup kegiatan pembotolan cairan, pengemasan benda padat (blister packaging, pembungkusan dengan foil aluminium, dll.) pengemasan yang aman untuk bahan dan produk kimia, pelabelan, pemberian cap, sterilisasi produk, dan kegiatan terkait pengepakan lainnya untuk bahan dan produk kimia. o",
+                                        "description": "Kelompok ini mencakup kegiatan pengemasan atas dasar balas jasa atau kontrak, baik menggunakan suatu proses otomatis, ataupun manual untuk bahan dan produk kimia. Kelompok ini mencakup kegiatan pembotolan cairan, pengemasan benda padat (blister packaging, pembungkusan dengan foil aluminium, dll.) pengemasan yang aman untuk bahan dan produk kimia, pelabelan, pemberian cap, sterilisasi produk, dan kegiatan terkait pengepakan lainnya untuk bahan dan produk kimia. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -14365,7 +14396,7 @@
             {
                 "nomor_kbli": "85",
                 "nama": "PENDIDIKAN",
-                "description": "Lihat kategori Q. o",
+                "description": "Lihat kategori Q. ",
                 "type_kbli": "Golongan Pokok",
                 "children": [
                     {
@@ -14427,7 +14458,7 @@
                                     {
                                         "nomor_kbli": "85202",
                                         "nama": "PENDIDIKAN DASAR UMUM SWASTA",
-                                        "description": "Kelompok ini mencakup pendidikanbagi peserta didik usia 7—12 tahun dan pendidikan kesetaraan terkait yang diselenggarakan swasta, berorientasi pada pembelajaran ilmu pengetahuan dan keterampilan umum, seperti sekolah dasar swasta, sekolah dasar hasil kerja sama dengan lembaga pendidikan asing, sekolah luar biasa tingkat dasar swasta, dan Paket A swasta. o",
+                                        "description": "Kelompok ini mencakup pendidikanbagi peserta didik usia 7—12 tahun dan pendidikan kesetaraan terkait yang diselenggarakan swasta, berorientasi pada pembelajaran ilmu pengetahuan dan keterampilan umum, seperti sekolah dasar swasta, sekolah dasar hasil kerja sama dengan lembaga pendidikan asing, sekolah luar biasa tingkat dasar swasta, dan Paket A swasta. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -14471,7 +14502,7 @@
                                     {
                                         "nomor_kbli": "85313",
                                         "nama": "PENDIDIKAN MENENGAH PERTAMA KEAGAMAAN ISLAM",
-                                        "description": "Kelompok ini mencakup pendidikan bagi peserta didik usia 13—15 tahun dan pendidikan kesetaraan terkait yang berorientasi pada ilmu-ilmu keislaman, termasuk kajian Al-Qur'an, hadis, fikih, sejarah Islam, bahasa Arab, dengan tetap mencakup pempelajaran ilmu pengetahuan dan keterampilan umum, seperti madrasah tsanawiyah (MTs), pendidikan muadalah wustha, pendidikan diniyah formal wustha, pendidikan pesantren berbentuk pengkajian kitab kuning jenjang wustha, dan pendidikan kesetaraan pada pondok pesantren salafiyah jenjang wustha. o",
+                                        "description": "Kelompok ini mencakup pendidikan bagi peserta didik usia 13—15 tahun dan pendidikan kesetaraan terkait yang berorientasi pada ilmu-ilmu keislaman, termasuk kajian Al-Qur'an, hadis, fikih, sejarah Islam, bahasa Arab, dengan tetap mencakup pempelajaran ilmu pengetahuan dan keterampilan umum, seperti madrasah tsanawiyah (MTs), pendidikan muadalah wustha, pendidikan diniyah formal wustha, pendidikan pesantren berbentuk pengkajian kitab kuning jenjang wustha, dan pendidikan kesetaraan pada pondok pesantren salafiyah jenjang wustha. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -14894,7 +14925,7 @@
                             {
                                 "nomor_kbli": "8569",
                                 "nama": "KEGIATAN PENUNJANG PENDIDIKAN LAINNYA",
-                                "description": "Kelompok ini mencakup penyediaan jasa nonpengajaran yang menunjang proses atau sistem pendidikan: - konsultasi pendidikan; - konseling vokasional dan karier; - konseling bimbingan pendidikan; - evaluasi dan pengujian pendidikan; - pengujian pendidikan; - penyelenggaraan program pertukaran pelajar; - pemeriksaan dan pengujian profesi teregulasi seperti pilot- pengembangan kurikulum; - kegiatan keahlian dan rehabilitasi yang menelaah kemampuan belajar. o",
+                                "description": "Kelompok ini mencakup penyediaan jasa nonpengajaran yang menunjang proses atau sistem pendidikan: - konsultasi pendidikan; - konseling vokasional dan karier; - konseling bimbingan pendidikan; - evaluasi dan pengujian pendidikan; - pengujian pendidikan; - penyelenggaraan program pertukaran pelajar; - pemeriksaan dan pengujian profesi teregulasi seperti pilot- pengembangan kurikulum; - kegiatan keahlian dan rehabilitasi yang menelaah kemampuan belajar. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -14959,7 +14990,7 @@
                                     {
                                         "nomor_kbli": "86102",
                                         "nama": "AKTIVITAS PUSKESMAS",
-                                        "description": "Kelompok ini merupakan aktivitas pelayanan kesehatan yang mencakup upaya kesehatan masyarakat dan upaya kesehatan perseorangan tingkat pertama dengan lebih mengutamakan upaya promotif dan preventif di wilayah kerjanya. Puskesmas nonrawat inap dapat menyelenggarakan pelayanan rawat jalan, perawatan di rumah (home care), dan pelayanan gawat darurat, serta dapat menyelenggarakan rawat inap pada pelayanan persalinan normal. Puskesmas rawat inap (dengan tempat tidur) menyelenggarakan tambahan pelayanan berupa rawat inap pada pelayanan persalinan normal dan pelayanan rawat inap pelayanan kesehatan lainnya. o",
+                                        "description": "Kelompok ini merupakan aktivitas pelayanan kesehatan yang mencakup upaya kesehatan masyarakat dan upaya kesehatan perseorangan tingkat pertama dengan lebih mengutamakan upaya promotif dan preventif di wilayah kerjanya. Puskesmas nonrawat inap dapat menyelenggarakan pelayanan rawat jalan, perawatan di rumah (home care), dan pelayanan gawat darurat, serta dapat menyelenggarakan rawat inap pada pelayanan persalinan normal. Puskesmas rawat inap (dengan tempat tidur) menyelenggarakan tambahan pelayanan berupa rawat inap pada pelayanan persalinan normal dan pelayanan rawat inap pelayanan kesehatan lainnya. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     },
@@ -15390,7 +15421,7 @@
                             {
                                 "nomor_kbli": "9012",
                                 "nama": "AKTIVITAS PENCIPTAAN KARYA SENI RUPA",
-                                "description": "Lihat kelompok 90120. o",
+                                "description": "Lihat kelompok 90120. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -15718,7 +15749,7 @@
                                     {
                                         "nomor_kbli": "92000",
                                         "nama": "AKTIVITAS PERJUDIAN DAN PERTARUHAN",
-                                        "description": "Subgolongan ini mencakup kegiatan perjudian dan pertaruhan seperti - bookmaking dan pengoperasian fasilitas pertaruhan lainnya; - off-track betting; - kegiatan operasional dari kasino, termasuk \"floating casinos\"; - penjualan tiket lotre; - kegiatan operasional mesin perjudian yang dioperasikan dengan koin; - aplikasi kuis berlangganan dengan hadiah; - pertaruhan olahraga; - pengoperasian permainan kartu sebagai aktivitas pertaruhan. Subgolongan ini tidak mencakup - kegiatan operasional klub permainan kartu, seperti klub truf/bridge, lihat subgolongan 9312.",
+                                        "description": "Subgolongan ini mencakup kegiatan perjudian dan pertaruhan seperti - bookmaking dan pengoperasian fasilitas pertaruhan lainnya; - off-track betting; - kegiatan operasional dari kasino, termasuk \"floating casinos\" - penjualan tiket lotre; - kegiatan operasional mesin perjudian yang dioperasikan dengan koin; - aplikasi kuis berlangganan dengan hadiah; - pertaruhan olahraga; - pengoperasian permainan kartu sebagai aktivitas pertaruhan. Subgolongan ini tidak mencakup - kegiatan operasional klub permainan kartu, seperti klub truf/bridge, lihat subgolongan 9312.",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -15922,7 +15953,7 @@
                             {
                                 "nomor_kbli": "9321",
                                 "nama": "AKTIVITAS TAMAN BERTEMA DAN TAMAN HIBURAN",
-                                "description": "Lihat kelompok 93210. 93210 AKTIVITAS TAMAN BERTEMA DAN TAMAN HIBURAN Kelompok ini mencakup kegiatan taman hiburan dan taman bertema yang dicirikan oleh pengoperasian berbagai atraksi secara permanen dan berbasis lokasi, seperti wahana mekanis, komidi putar, permainan, galeri tembak, pertunjukan, pameran bertema, dan tempat piknik, yang disediakan berdasarkan arahan ekonomi dan operasional dari operator pusat. Taman-taman ini biasanya terletak di area yang dibatasi secara struktural, dan pelanggan harus membayar tiket masuk. Kelompok ini juga mencakup - aktivitas taman akuatik/air. Kelompok ini tidak mencakup - pengoperasian perjudian dan permainan lotre, lihat subgolongan 9200; - pengoperasian wahana, permainan, dan pertunjukan mekanis oleh penyedia independen, misalnya di tempat pekan raya, festival rakyat, dan pasar natal, lihat 9329. o",
+                                "description": "Lihat kelompok 93210. 93210 AKTIVITAS TAMAN BERTEMA DAN TAMAN HIBURAN Kelompok ini mencakup kegiatan taman hiburan dan taman bertema yang dicirikan oleh pengoperasian berbagai atraksi secara permanen dan berbasis lokasi, seperti wahana mekanis, komidi putar, permainan, galeri tembak, pertunjukan, pameran bertema, dan tempat piknik, yang disediakan berdasarkan arahan ekonomi dan operasional dari operator pusat. Taman-taman ini biasanya terletak di area yang dibatasi secara struktural, dan pelanggan harus membayar tiket masuk. Kelompok ini juga mencakup - aktivitas taman akuatik/air. Kelompok ini tidak mencakup - pengoperasian perjudian dan permainan lotre, lihat subgolongan 9200; - pengoperasian wahana, permainan, dan pertunjukan mekanis oleh penyedia independen, misalnya di tempat pekan raya, festival rakyat, dan pasar natal, lihat 9329. ",
                                 "type_kbli": "Subgolongan",
                                 "children": []
                             },
@@ -15970,7 +16001,7 @@
                                     {
                                         "nomor_kbli": "93299",
                                         "nama": "AKTIVITAS HIBURAN DAN REKREASI LAINNYA YTDL",
-                                        "description": "Kelompok ini mencakup kegiatan hiburan dan rekreasi yang tidak tercakup dalam 93291 s.d. 93297, seperti - kegiatan operasional bukit ski, berdiri sendiri atau kombinasi dengan ski lift; - penyewaan perlengkapan rekreasi dan hiburan yang merupakan bagian yang tidak terpisahkan dari fasilitas rekreasi, kegiatan operasional pekan raya dan pertunjukan rekreasi alami, dan kegiatan hiburan dan rekreasi lainnya; - aktivitas produser atau pengusaha pertunjukan langsung hiburan dan rekreasi selain pertunjukan olahraga atau seni, dengan atau tanpa fasilitas; - kegiatan animator independen di fasilitas hiburan dan rekreasi; - pengoperasian ruang komputer untuk bermain permainan komputer; - pengoperasian peralatan hiburan swalayan/self-service seperti kursi goyang, kuda, mobil, dan kapal luar angkasa; - pengoperasian lapangan airsoft dan paintball; - permainan/pengalaman realitas virtual (VR) atau geolokasi; - pengoperasian gedung/auditorium biliard; - pengoperasian escape room; - pengoperasian gedung/auditorium boling; - pertunjukan lampu dan suara; - aktivitas pemandu wisata bawah laut; - pembuatan dan pertunjukan kembang api; - pengoperasian tempat piknik yang tidak berkaitan dengan pelestarian alam; - pengoperasian permainan laser; - pengoperasian wahana, permainan, dan pertunjukan mekanis oleh penyedia independen, misalnya di tempat pameran, festival rakyat, dan pasar natal; - perencanaan teknis, penyediaan, pengaturan dan pengoperasian peralatan audiovisual dan efek khusus/special effect yang berkaitan dengan pengelolaan pertunjukan langsung hiburan dan rekreasi; - pengelolaan wisata antariksa dan wisata astronomi. o",
+                                        "description": "Kelompok ini mencakup kegiatan hiburan dan rekreasi yang tidak tercakup dalam 93291 s.d. 93297, seperti - kegiatan operasional bukit ski, berdiri sendiri atau kombinasi dengan ski lift; - penyewaan perlengkapan rekreasi dan hiburan yang merupakan bagian yang tidak terpisahkan dari fasilitas rekreasi, kegiatan operasional pekan raya dan pertunjukan rekreasi alami, dan kegiatan hiburan dan rekreasi lainnya; - aktivitas produser atau pengusaha pertunjukan langsung hiburan dan rekreasi selain pertunjukan olahraga atau seni, dengan atau tanpa fasilitas; - kegiatan animator independen di fasilitas hiburan dan rekreasi; - pengoperasian ruang komputer untuk bermain permainan komputer; - pengoperasian peralatan hiburan swalayan/self-service seperti kursi goyang, kuda, mobil, dan kapal luar angkasa; - pengoperasian lapangan airsoft dan paintball; - permainan/pengalaman realitas virtual (VR) atau geolokasi; - pengoperasian gedung/auditorium biliard; - pengoperasian escape room; - pengoperasian gedung/auditorium boling; - pertunjukan lampu dan suara; - aktivitas pemandu wisata bawah laut; - pembuatan dan pertunjukan kembang api; - pengoperasian tempat piknik yang tidak berkaitan dengan pelestarian alam; - pengoperasian permainan laser; - pengoperasian wahana, permainan, dan pertunjukan mekanis oleh penyedia independen, misalnya di tempat pameran, festival rakyat, dan pasar natal; - perencanaan teknis, penyediaan, pengaturan dan pengoperasian peralatan audiovisual dan efek khusus/special effect yang berkaitan dengan pengelolaan pertunjukan langsung hiburan dan rekreasi; - pengelolaan wisata antariksa dan wisata astronomi. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -15990,7 +16021,7 @@
             {
                 "nomor_kbli": "94",
                 "nama": "AKTIVITAS KEANGGOTAAN ORGANISASI",
-                "description": "Golongan pokok ini mencakup kegiatan organisasi yang mewakili kepentingan kelompok khusus atau memperjuangkan ide atau gagasan organisasi kepada masyarakat umum. Organisasi ini umumnya mempunyai anggota pada suatu daerah, tetapi kegiatan dapat melibatkan atau bermanfaat bagi selain anggotanya. Pemecahan dari golongan pokok ini ditentukan oleh tujuan pelayanan organisasi, yaitu kepentingan bisnis, pengusaha dan grup profesional (golongan 941), kepentingan buruh (golongan 942) atau promosi gagasan dan aktivitas keagamaan, politik, kebudayaan, pendidikan, dan rekreasi (golongan 949). o",
+                "description": "Golongan pokok ini mencakup kegiatan organisasi yang mewakili kepentingan kelompok khusus atau memperjuangkan ide atau gagasan organisasi kepada masyarakat umum. Organisasi ini umumnya mempunyai anggota pada suatu daerah, tetapi kegiatan dapat melibatkan atau bermanfaat bagi selain anggotanya. Pemecahan dari golongan pokok ini ditentukan oleh tujuan pelayanan organisasi, yaitu kepentingan bisnis, pengusaha dan grup profesional (golongan 941), kepentingan buruh (golongan 942) atau promosi gagasan dan aktivitas keagamaan, politik, kebudayaan, pendidikan, dan rekreasi (golongan 949). ",
                 "type_kbli": "Golongan Pokok",
                 "children": [
                     {
@@ -16047,7 +16078,7 @@
                             {
                                 "nomor_kbli": "9420",
                                 "nama": "AKTIVITAS ORGANISASI BURUH",
-                                "description": "Lihat kelompok 94200. o",
+                                "description": "Lihat kelompok 94200. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -16131,7 +16162,7 @@
                             {
                                 "nomor_kbli": "9510",
                                 "nama": "REPARASI DAN PEMELIHARAAN KOMPUTER DAN PERALATAN",
-                                "description": "KOMUNIKASI Subgolongan ini mencakup jasa reparasi dan perawatan alat elektronik seperti komputer, mesin hitung, dan peralatan sejenisnya. Subgolongan ini mencakup reparasi dan perawatan: - komputer destop; - komputer laptop; - disk drive magnetik, diska lepas/flash drives; - disk drive, printer, monitor, papan tik/keyboard; - kamera web/webcam; - headset, termasuk headset nirkabel; - aksesori tetikus/mouse, joystick, dan trackball; - modem komputer internal dan eksternal; - terminal komputer khusus; - server komputer; - pemindai/scanner, termasuk pemindai kode batang/bar code; - pembaca kartu cerdas/smart card; - helm realitas virtual; - proyektor komputer; - telepon nirkabel; - ponsel pintar dan tablet; - peralatan operator telekomunikasi; - peralatan transmisi komunikasi, misalnya perute/router, jembatan/bridge, dan modem; - radio dua arah; - televisi komersial, kamera video, dan mesin faksimili. Subgolongan ini juga mencakup - reparasi dan perawatan terminal komputer seperti mesin anjungan tunai mandiri/automatic teller machine (ATM) dan terminal point of sale (POS) yang tidak dioperasikan secara mekanik; - reparasi dan perawatan komputer genggam (PDA); - pengisian ulang tinta dan toner kartrid, yang sebagian besar dibawa oleh pelanggan ke penyedia layanan ini; - renovasi diska optik/optical disk. Subgolongan ini tidak mencakup - pengisian ulang tinta dan toner oleh pengecer, lihat subgolongan 4740; - reparasi dan perawatan elektronik konsumen, lihat subgolongan 9521. o",
+                                "description": "KOMUNIKASI Subgolongan ini mencakup jasa reparasi dan perawatan alat elektronik seperti komputer, mesin hitung, dan peralatan sejenisnya. Subgolongan ini mencakup reparasi dan perawatan: - komputer destop; - komputer laptop; - disk drive magnetik, diska lepas/flash drives; - disk drive, printer, monitor, papan tik/keyboard; - kamera web/webcam; - headset, termasuk headset nirkabel; - aksesori tetikus/mouse, joystick, dan trackball; - modem komputer internal dan eksternal; - terminal komputer khusus; - server komputer; - pemindai/scanner, termasuk pemindai kode batang/bar code; - pembaca kartu cerdas/smart card; - helm realitas virtual; - proyektor komputer; - telepon nirkabel; - ponsel pintar dan tablet; - peralatan operator telekomunikasi; - peralatan transmisi komunikasi, misalnya perute/router, jembatan/bridge, dan modem; - radio dua arah; - televisi komersial, kamera video, dan mesin faksimili. Subgolongan ini juga mencakup - reparasi dan perawatan terminal komputer seperti mesin anjungan tunai mandiri/automatic teller machine (ATM) dan terminal point of sale (POS) yang tidak dioperasikan secara mekanik; - reparasi dan perawatan komputer genggam (PDA); - pengisian ulang tinta dan toner kartrid, yang sebagian besar dibawa oleh pelanggan ke penyedia layanan ini; - renovasi diska optik/optical disk. Subgolongan ini tidak mencakup - pengisian ulang tinta dan toner oleh pengecer, lihat subgolongan 4740; - reparasi dan perawatan elektronik konsumen, lihat subgolongan 9521. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
@@ -16363,7 +16394,7 @@
                                     {
                                         "nomor_kbli": "96220",
                                         "nama": "AKTIVITAS PERAWATAN KECANTIKAN DAN PERAWATAN KECANTIKAN",
-                                        "description": "LAINNYA Kelompok ini mencakup kegiatan perawatan kecantikan yang tidak dilakukan oleh dokter spesialis, misalnya oleh ahli kosmetik. Kelompok ini mencakup - layanan kecantikan yang utamanya untuk perwatan dan mempercantik kuku di nail studio/datang ke rumah, seperti nail art dan manikur-pedikur. - layanan kecantikan yang utamanya untuk perwatan dan mempercantik bulu mata di eyelash studio/datang ke rumah seperti eyelash extension, lash lift, lash pirming, dan lash tint; - layanan kecantikan yang utamanya untuk perawatan dan mempercantik alis di brow studio/datang ke rumah seperti sulam alis, brow bomber, dan brow lamination; - layanan kecantikan yang utamanya untuk penghilangan bulu di wax studio/datang ke rumah; - layanan rias wajah oleh penata rias/make-up artist (MUA); - layanan pijat wajah; - layanan penyamakan kulit. Kelompok ini tidak mencakup - kegiatan bedah plastik/operasi yang dilakukan oleh dokter spesialis, lihat subgolongan 8620. o",
+                                        "description": "LAINNYA Kelompok ini mencakup kegiatan perawatan kecantikan yang tidak dilakukan oleh dokter spesialis, misalnya oleh ahli kosmetik. Kelompok ini mencakup - layanan kecantikan yang utamanya untuk perwatan dan mempercantik kuku di nail studio/datang ke rumah, seperti nail art dan manikur-pedikur. - layanan kecantikan yang utamanya untuk perwatan dan mempercantik bulu mata di eyelash studio/datang ke rumah seperti eyelash extension, lash lift, lash pirming, dan lash tint; - layanan kecantikan yang utamanya untuk perawatan dan mempercantik alis di brow studio/datang ke rumah seperti sulam alis, brow bomber, dan brow lamination; - layanan kecantikan yang utamanya untuk penghilangan bulu di wax studio/datang ke rumah; - layanan rias wajah oleh penata rias/make-up artist (MUA); - layanan pijat wajah; - layanan penyamakan kulit. Kelompok ini tidak mencakup - kegiatan bedah plastik/operasi yang dilakukan oleh dokter spesialis, lihat subgolongan 8620. ",
                                         "type_kbli": "Kelompok",
                                         "children": []
                                     }
@@ -16510,7 +16541,7 @@
                             {
                                 "nomor_kbli": "9810",
                                 "nama": "AKTIVITAS PRODUKSI BERAGAM BARANG OLEH RUMAH TANGGA UNTUK",
-                                "description": "KEPERLUAN SENDIRI Lihat Kelompok 98100. o",
+                                "description": "KEPERLUAN SENDIRI Lihat Kelompok 98100. ",
                                 "type_kbli": "Subgolongan",
                                 "children": [
                                     {
