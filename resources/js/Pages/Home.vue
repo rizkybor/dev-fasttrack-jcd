@@ -744,7 +744,7 @@ onUnmounted(() => {
                 </div>
 
                 <div
-                    class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 bg-white/[0.01] rounded-b-2xl backdrop-blur-[13px]"
+                    class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 bg-white/[0.01] rounded-b-2xl backdrop-blur-[13px]"
                 >
                     <a
                         v-for="promo in promoItems"
@@ -760,21 +760,6 @@ onUnmounted(() => {
                             class="w-full h-auto rounded-lg"
                             loading="lazy"
                         />
-
-                        <!-- <div class="relative flex flex-col items-center justify-end h-[80px] gap-2">
-                    <span
-                        class="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center justify-center rounded-b-lg bg-[#FED7DA] px-3 py-1 h-[26px] text-[10px] font-semibold leading-[18px] text-[#FB3748]">
-                        {{ promo.badge }}
-                    </span>
-                    <div class="flex flex-col items-center gap-1">
-                        <h3 class="text-[16px] font-bold leading-[24px] text-[#1A1B18]">
-                            {{ promo.discount }}
-                        </h3>
-                        <p class="text-[14px] leading-[21px] text-[#1A1B18] text-center">
-                            {{ promo.desc }}
-                        </p>
-                    </div>
-                </div> -->
 
                         <div
                             class="flex items-center justify-center rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[14px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors"
