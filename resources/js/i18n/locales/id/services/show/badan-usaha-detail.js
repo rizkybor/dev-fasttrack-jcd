@@ -38,7 +38,5 @@ export default {
         title: 'Tidak Menemukan Layanan yang Anda Cari?',
         desc: 'Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.',
         cta: 'Chat Langsung via WhatsApp',
-        wa_subject: 'layanan yang tidak terdaftar',
-    },
-    wa_message: 'Halo FastTrack, saya ingin konsultasi mengenai',
+    }
 }
