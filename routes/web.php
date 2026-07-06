@@ -3141,7 +3141,7 @@ Route::get('/faq', function (Request $request) use ($resolveBaseUrl, $defaultIma
 Route::get('/simulasi-akta', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
 
-    return Inertia::render('TermCondition', [
+    return Inertia::render('SimulasiAkta', [
         'seo' => [
             'title' => 'Syarat dan Ketentuan - FastTrack',
             'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
