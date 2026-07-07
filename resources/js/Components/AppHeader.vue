@@ -294,7 +294,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                 >
                     <!-- PENAWARAN KHUSUS -->
                     <a
-                        href="/promo"
+                        href="/#promo"
                         class="flex items-center gap-1 px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
                     >
                         {{ t("common.nav.promo") }}
@@ -342,7 +342,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
 
                     <!-- TENTANG KAMI -->
                     <a
-                        href="/tentang-kami"
+                        href="/#tentang-kami"
                         class="flex items-center px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
                     >
                         {{ t("common.nav.about") }}

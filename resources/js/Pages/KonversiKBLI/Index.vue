@@ -510,10 +510,10 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                                     @change="currentPage = 1"
                                     class="appearance-none border border-[#D9DAD8] rounded-lg px-3 py-1.5 text-[12px] bg-white text-[#1A1B18] focus:outline-none focus:ring-2 focus:ring-[#9e1f16]/20 cursor-pointer"
                                 >
-                                    <option :value="6">6</option>
                                     <option :value="10">10</option>
                                     <option :value="20">20</option>
                                     <option :value="50">50</option>
+                                    <option :value="100">100</option>
                                 </select>
                             </div>
                         </div>
