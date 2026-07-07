@@ -109,12 +109,14 @@ const legalLinks = [
                                     clip-rule="evenodd" />
                             </svg>
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Threads FastTrack"
+                        <a href="https://www.threads.com/@fasttrack.legal" target="_blank" rel="noopener noreferrer"
+                            aria-label="Threads FastTrack"
                             class="inline-flex items-center justify-center rounded bg-white text-[#9e1f16] hover:bg-primary hover:text-white transition-colors p-2">
                             <img src="/icons/ic-threads.svg" alt="Threads" class="h-6 w-6"
                                 style="filter: invert(17%) sepia(87%) saturate(3025%) hue-rotate(345deg) brightness(85%) contrast(100%);" />
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok FastTrack"
+                        <a href="https://www.tiktok.com/@fasttracklegal" target="_blank" rel="noopener noreferrer"
+                            aria-label="TikTok FastTrack"
                             class="inline-flex items-center justify-center rounded bg-white text-[#9e1f16] hover:bg-primary hover:text-white transition-colors p-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                 fill="currentColor">
