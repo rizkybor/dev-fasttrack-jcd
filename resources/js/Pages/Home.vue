@@ -61,7 +61,7 @@ const marqueeRows = [
                 src: "/images/klien-kami/ft-kk-8-haskoning.svg",
                 alt: "Haskoning",
             },
-            { src: "/images/klien-kami/ft-kk-9-iss.svg", alt: "ISS" },
+            // { src: "/images/klien-kami/ft-kk-9-iss.svg", alt: "ISS" },
             { src: "/images/klien-kami/ft-kk-10-giift.svg", alt: "Giift" },
             { src: "/images/klien-kami/ft-kk-11-xanhsm.svg", alt: "Xan HSM" },
             // {
@@ -79,10 +79,10 @@ const marqueeRows = [
                 alt: "Whiteevenbos",
             },
             { src: "/images/klien-kami/ft-kk-17-dimo.svg", alt: "Dimo" },
-            {
-                src: "/images/klien-kami/ft-kk-18-salestock.svg",
-                alt: "Salestock",
-            },
+            // {
+            //     src: "/images/klien-kami/ft-kk-18-salestock.svg",
+            //     alt: "Salestock",
+            // },
             { src: "/images/klien-kami/ft-kk-19-spruson.svg", alt: "Spruson" },
             { src: "/images/klien-kami/ft-kk-20-BKtel.svg", alt: "BK Tel" },
             {
@@ -93,7 +93,7 @@ const marqueeRows = [
             { src: "/images/klien-kami/ft-kk-23-smec.svg", alt: "SMEC" },
             { src: "/images/klien-kami/ft-kk-24-amdocs.svg", alt: "Amdocs" },
             { src: "/images/klien-kami/ft-kk-25-kargo.svg", alt: "Kargo" },
-            { src: "/images/klien-kami/ft-kk-26-assegaf.svg", alt: "Assegaf" },
+            // { src: "/images/klien-kami/ft-kk-26-assegaf.svg", alt: "Assegaf" },
             // {
             //     src: "/images/klien-kami/ft-kk-27-asiafoundation.svg",
             //     alt: "Asia Foundation",
@@ -108,7 +108,7 @@ const marqueeRows = [
             { src: "/images/klien-kami/ft-kk-29-maka.svg", alt: "Maka" },
             { src: "/images/klien-kami/ft-kk-30-etana.svg", alt: "Etana" },
             { src: "/images/klien-kami/ft-kk-31-brankas.svg", alt: "Brankas" },
-            { src: "/images/klien-kami/ft-kk-32-umbra.svg", alt: "Umbra" },
+            // { src: "/images/klien-kami/ft-kk-32-umbra.svg", alt: "Umbra" },
             { src: "/images/klien-kami/ft-kk-33-azo.svg", alt: "Azo" },
             {
                 src: "/images/klien-kami/ft-kk-34-australianembassy.svg",
@@ -714,7 +714,7 @@ onUnmounted(() => {
         </section>
 
         <!-- ===== 5. PROMO SECTION ===== -->
-        <section class="bg-[#42443D] pt-[52px] pb-[120px]">
+        <section id="promo" class="bg-[#42443D] pt-[52px] pb-[120px]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="flex items-center justify-between">
                     <h2
@@ -792,7 +792,7 @@ onUnmounted(() => {
         </section>
 
         <!-- ===== 6. TENTANG KAMI ===== -->
-        <section class="py-[52px] bg-[#F9F9F9]">
+        <section id="tentang-kami" class="py-[52px] bg-[#F9F9F9]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                 <div class="flex flex-col gap-12">
                     <div
