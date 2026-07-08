@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed, watch } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -20,18 +23,52 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        description: pick(p.description),
+        excerpt: pick(p.excerpt),
+        content: pick(p.content) ?? [],
+        bahasa_wilayah: pick(p.bahasa_wilayah),
+        keunggulan: pick(p.keunggulan),
+        banner_cta: pick(p.banner_cta),
+        faq: pick(p.faq) ?? [],
+    };
+});
+
+const product = localizedProduct;
+
 // Bahasa & Wilayah search + pagination
 const bahasaSearch = ref("");
 const bahasaPage = ref(1);
 const bahasaRowsPerPage = ref(10);
 
-const bahasaItems = computed(() => props.product?.bahasa_wilayah?.items ?? []);
+const bahasaItems = computed(() => product.value?.bahasa_wilayah?.items ?? []);
 
 const filteredBahasa = computed(() => {
     const q = bahasaSearch.value.trim().toLowerCase();
     if (!q) return bahasaItems.value;
     return bahasaItems.value.filter((item) =>
-        item.name.toLowerCase().includes(q)
+        item.negara_title.toLowerCase().includes(q)
     );
 });
 
@@ -65,8 +102,8 @@ const bahasaMobileRows = computed(() => paginatedBahasa.value);
 // Reset page saat search berubah
 watch(bahasaSearch, () => { bahasaPage.value = 1; });
 
-const keunggulan = computed(() => props.product?.keunggulan ?? null);
-const bannerCta = computed(() => props.product?.banner_cta ?? null);
+const keunggulan = computed(() => product.value?.keunggulan ?? null);
+const bannerCta = computed(() => product.value?.banner_cta ?? null);
 </script>
 
 <template>
@@ -283,10 +320,10 @@ const bannerCta = computed(() => props.product?.banner_cta ?? null);
                                     <div v-for="(item, i) in bahasaMobileRows" :key="`bm-${i}`"
                                         class="flex items-center gap-2.5 px-3 py-2.5"
                                         :class="i < bahasaMobileRows.length - 1 ? 'border-b border-[#E8E8E6]' : ''">
-                                        <img :src="item.img_flag" :alt="item.name"
+                                        <img :src="item.img_flag" :alt="item.negara_title"
                                             class="w-5 h-[13px] object-cover rounded-[2px] flex-shrink-0 shadow-sm"
                                             loading="lazy" />
-                                        <span class="text-[12px] text-[#3D3D3A]">{{ item.name }}</span>
+                                        <span class="text-[12px] text-[#3D3D3A]">{{ item.negara_title }}</span>
                                     </div>
                                 </div>
                                 <!-- Empty state mobile -->

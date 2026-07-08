@@ -1,185 +1,1378 @@
 [
     {
         "id": 1,
-        "name": "Penerjemah Tersumpah (Sworn Translator)",
-        "tag": "",
+        "name": {
+            "id": "Penerjemah Tersumpah (Sworn Translator)",
+            "en": "Sworn Translator",
+            "zh": "宣誓翻译（Sworn Translator）"
+        },
+        "tag": {
+            "id": "",
+            "en": "",
+            "zh": ""
+        },
         "price": "50000",
         "price_label": "Rp 50.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Layanan penerjemahan dan legalisasi dokumen yang dirancang untuk memenuhi kebutuhan individu maupun perusahaan di tingkat global.",
-        "excerpt": "Layanan penerjemahan dan legalisasi dokumen yang dirancang untuk memenuhi kebutuhan individu maupun perusahaan di tingkat global.",
-        "content": [
-            "Kami menyediakan jasa terjemahan resmi dan tersumpah dalam berbagai bahasa dengan standar kualitas tinggi untuk mendukung proses visa, pendidikan, ketenagakerjaan, imigrasi, serta transaksi bisnis internasional.",
-            "Penerjemah tersumpah (sworn translator) adalah profesi yang telah memenuhi persyaratan kompetensi melalui Ujian Kualifikasi Penerjemah (UKP) yang diselenggarakan sesuai ketentuan yang berlaku. Setelah dinyatakan lulus, penerjemah tersebut wajib mengucapkan sumpah jabatan di hadapan pejabat yang berwenang sebelum memperoleh status resmi sebagai penerjemah tersumpah.",
-            "Status tersebut memberikan kewenangan kepada penerjemah untuk menerjemahkan berbagai dokumen resmi yang membutuhkan pengakuan hukum, baik untuk keperluan di dalam maupun luar negeri. Hasil terjemahan yang dibuat oleh penerjemah tersumpah umumnya diterima oleh instansi pemerintah, lembaga pendidikan, perusahaan, kedutaan besar, maupun lembaga internasional."
-        ],
-        "bahasa_wilayah": {
-            "title": "BAHASA & WILAYAH YANG DILAYANI",
-            "subtitle": "Kami melayani penerjemahan ke dan dari berbagai bahasa utama dunia. Cari bahasa atau wilayah tujuan Anda.",
-            "items": [
-                               { "negara_title": "Albania", "img_flag": "/flags/al.svg" },
-                { "negara_title": "Argentina", "img_flag": "/flags/ar.svg" },
-                { "negara_title": "Armenia", "img_flag": "/flags/am.svg" },
-                { "negara_title": "Australia", "img_flag": "/flags/au.svg" },
-                { "negara_title": "Austria", "img_flag": "/flags/at.svg" },
-                { "negara_title": "Azerbaijan", "img_flag": "/flags/az.svg" },
-                { "negara_title": "Bahama", "img_flag": "/flags/bs.svg" },
-                { "negara_title": "Barbados", "img_flag": "/flags/bb.svg" },
-                { "negara_title": "Belarus", "img_flag": "/flags/by.svg" },
-                { "negara_title": "Belgia", "img_flag": "/flags/be.svg" },
-                { "negara_title": "Belize", "img_flag": "/flags/bz.svg" },
-                { "negara_title": "Bolivia", "img_flag": "/flags/bo.svg" },
-                {
-                    "negara_title": "Bosnia dan Herzegovina",
-                    "img_flag": "/flags/ba.svg"
-                },
-                { "negara_title": "Botswana", "img_flag": "/flags/bw.svg" },
-                { "negara_title": "Brasil", "img_flag": "/flags/br.svg" },
-                { "negara_title": "Bulgaria", "img_flag": "/flags/bg.svg" },
-                { "negara_title": "Chili", "img_flag": "/flags/cl.svg" },
-                { "negara_title": "Colombia", "img_flag": "/flags/co.svg" },
-                { "negara_title": "Costa Rica", "img_flag": "/flags/cr.svg" },
-                { "negara_title": "Kroasia", "img_flag": "/flags/hr.svg" },
-                { "negara_title": "Siprus", "img_flag": "/flags/cy.svg" },
-                { "negara_title": "Ceko", "img_flag": "/flags/cz.svg" },
-                { "negara_title": "Denmark", "img_flag": "/flags/dk.svg" },
-                { "negara_title": "Ekuador", "img_flag": "/flags/ec.svg" },
-                { "negara_title": "El Salvador", "img_flag": "/flags/sv.svg" },
-                { "negara_title": "Estonia", "img_flag": "/flags/ee.svg" },
-                { "negara_title": "Fiji", "img_flag": "/flags/fj.svg" },
-                { "negara_title": "Finlandia", "img_flag": "/flags/fi.svg" },
-                { "negara_title": "Prancis", "img_flag": "/flags/fr.svg" },
-                { "negara_title": "Georgia", "img_flag": "/flags/ge.svg" },
-                { "negara_title": "Jerman", "img_flag": "/flags/de.svg" },
-                { "negara_title": "Yunani", "img_flag": "/flags/gr.svg" },
-                { "negara_title": "Guatemala", "img_flag": "/flags/gt.svg" },
-                { "negara_title": "Honduras", "img_flag": "/flags/hn.svg" },
-                { "negara_title": "Hongaria", "img_flag": "/flags/hu.svg" },
-                { "negara_title": "Islandia", "img_flag": "/flags/is.svg" },
-                { "negara_title": "India", "img_flag": "/flags/in.svg" },
-                { "negara_title": "Indonesia", "img_flag": "/flags/id.svg" },
-                { "negara_title": "Irlandia", "img_flag": "/flags/ie.svg" },
-                { "negara_title": "Israel", "img_flag": "/flags/il.svg" },
-                { "negara_title": "Italia", "img_flag": "/flags/it.svg" },
-                { "negara_title": "Jepang", "img_flag": "/flags/jp.svg" },
-                { "negara_title": "Kazakhstan", "img_flag": "/flags/kz.svg" },
-                { "negara_title": "Kenya", "img_flag": "/flags/ke.svg" },
-                {
-                    "negara_title": "Korea Selatan",
-                    "img_flag": "/flags/kr.svg"
-                },
-                { "negara_title": "Latvia", "img_flag": "/flags/lv.svg" },
-                { "negara_title": "Lesotho", "img_flag": "/flags/ls.svg" },
-                { "negara_title": "Liberia", "img_flag": "/flags/lr.svg" },
-                {
-                    "negara_title": "Liechtenstein",
-                    "img_flag": "/flags/li.svg"
-                },
-                { "negara_title": "Lithuania", "img_flag": "/flags/lt.svg" },
-                { "negara_title": "Luksemburg", "img_flag": "/flags/lu.svg" },
-                {
-                    "negara_title": "Makedonia Utara",
-                    "img_flag": "/flags/mk.svg"
-                },
-                { "negara_title": "Malawi", "img_flag": "/flags/mw.svg" },
-                { "negara_title": "Malta", "img_flag": "/flags/mt.svg" },
-                { "negara_title": "Mauritius", "img_flag": "/flags/mu.svg" },
-                { "negara_title": "Meksiko", "img_flag": "/flags/mx.svg" },
-                { "negara_title": "Moldova", "img_flag": "/flags/md.svg" },
-                { "negara_title": "Monako", "img_flag": "/flags/mc.svg" },
-                { "negara_title": "Mongolia", "img_flag": "/flags/mn.svg" },
-                { "negara_title": "Montenegro", "img_flag": "/flags/me.svg" },
-                { "negara_title": "Maroko", "img_flag": "/flags/ma.svg" },
-                { "negara_title": "Mozambik", "img_flag": "/flags/mz.svg" },
-                { "negara_title": "Namibia", "img_flag": "/flags/na.svg" },
-                { "negara_title": "Belanda", "img_flag": "/flags/nl.svg" },
-                {
-                    "negara_title": "Selandia Baru",
-                    "img_flag": "/flags/nz.svg"
-                },
-                { "negara_title": "Nikaragua", "img_flag": "/flags/ni.svg" },
-                { "negara_title": "Niue", "img_flag": "/flags/nu.svg" },
-                { "negara_title": "Norwegia", "img_flag": "/flags/no.svg" },
-                { "negara_title": "Oman", "img_flag": "/flags/om.svg" },
-                { "negara_title": "Panama", "img_flag": "/flags/pa.svg" },
-                { "negara_title": "Paraguay", "img_flag": "/flags/py.svg" },
-                { "negara_title": "Peru", "img_flag": "/flags/pe.svg" },
-                { "negara_title": "Polandia", "img_flag": "/flags/pl.svg" },
-                { "negara_title": "Portugal", "img_flag": "/flags/pt.svg" },
-                { "negara_title": "Rumania", "img_flag": "/flags/ro.svg" },
-                { "negara_title": "Rusia", "img_flag": "/flags/ru.svg" },
-                {
-                    "negara_title": "Saint Kitts dan Nevis",
-                    "img_flag": "/flags/kn.svg"
-                },
-                { "negara_title": "Saint Lucia", "img_flag": "/flags/lc.svg" },
-                {
-                    "negara_title": "Saint Vincent dan Grenadines",
-                    "img_flag": "/flags/vc.svg"
-                },
-                { "negara_title": "San Marino", "img_flag": "/flags/sm.svg" },
-                { "negara_title": "Senegal", "img_flag": "/flags/sn.svg" },
-                { "negara_title": "Serbia", "img_flag": "/flags/rs.svg" },
-                { "negara_title": "Seychelles", "img_flag": "/flags/sc.svg" },
-                { "negara_title": "Singapura", "img_flag": "/flags/sg.svg" },
-                { "negara_title": "Slovakia", "img_flag": "/flags/sk.svg" },
-                { "negara_title": "Slovenia", "img_flag": "/flags/si.svg" },
-                {
-                    "negara_title": "Afrika Selatan",
-                    "img_flag": "/flags/za.svg"
-                },
-                { "negara_title": "Spanyol", "img_flag": "/flags/es.svg" },
-                { "negara_title": "Sri Lanka", "img_flag": "/flags/lk.svg" },
-                { "negara_title": "Suriname", "img_flag": "/flags/sr.svg" },
-                { "negara_title": "Swedia", "img_flag": "/flags/se.svg" },
-                { "negara_title": "Swiss", "img_flag": "/flags/ch.svg" },
-                {
-                    "negara_title": "Tanjung Verde",
-                    "img_flag": "/flags/cv.svg"
-                },
-                { "negara_title": "Thailand", "img_flag": "/flags/th.svg" },
-                { "negara_title": "Tonga", "img_flag": "/flags/to.svg" },
-                {
-                    "negara_title": "Trinidad dan Tobago",
-                    "img_flag": "/flags/tt.svg"
-                },
-                { "negara_title": "Turki", "img_flag": "/flags/tr.svg" },
-                { "negara_title": "Ukraina", "img_flag": "/flags/ua.svg" },
-                { "negara_title": "Uruguay", "img_flag": "/flags/uy.svg" },
-                { "negara_title": "Venezuela", "img_flag": "/flags/ve.svg" },
-                { "negara_title": "Zambia", "img_flag": "/flags/zm.svg" }
+        "description": {
+            "id": "Layanan penerjemahan dan legalisasi dokumen yang dirancang untuk memenuhi kebutuhan individu maupun perusahaan di tingkat global.",
+            "en": "Document translation and legalization services designed to meet the needs of individuals and companies at a global level.",
+            "zh": "文件翻译及公证服务，旨在满足个人及企业在全球层面的需求。"
+        },
+        "excerpt": {
+            "id": "Layanan penerjemahan dan legalisasi dokumen yang dirancang untuk memenuhi kebutuhan individu maupun perusahaan di tingkat global.",
+            "en": "Document translation and legalization services designed to meet the needs of individuals and companies at a global level.",
+            "zh": "文件翻译及公证服务，旨在满足个人及企业在全球层面的需求。"
+        },
+        "content": {
+            "id": [
+                "Kami menyediakan jasa terjemahan resmi dan tersumpah dalam berbagai bahasa dengan standar kualitas tinggi untuk mendukung proses visa, pendidikan, ketenagakerjaan, imigrasi, serta transaksi bisnis internasional.",
+                "Penerjemah tersumpah (sworn translator) adalah profesi yang telah memenuhi persyaratan kompetensi melalui Ujian Kualifikasi Penerjemah (UKP) yang diselenggarakan sesuai ketentuan yang berlaku. Setelah dinyatakan lulus, penerjemah tersebut wajib mengucapkan sumpah jabatan di hadapan pejabat yang berwenang sebelum memperoleh status resmi sebagai penerjemah tersumpah.",
+                "Status tersebut memberikan kewenangan kepada penerjemah untuk menerjemahkan berbagai dokumen resmi yang membutuhkan pengakuan hukum, baik untuk keperluan di dalam maupun luar negeri. Hasil terjemahan yang dibuat oleh penerjemah tersumpah umumnya diterima oleh instansi pemerintah, lembaga pendidikan, perusahaan, kedutaan besar, maupun lembaga internasional."
+            ],
+            "en": [
+                "We provide official and sworn translation services in various languages with high quality standards to support visa, education, employment, immigration, and international business transaction processes.",
+                "A sworn translator is a profession that has fulfilled competency requirements through the Translator Qualification Examination (UKP) held in accordance with applicable provisions. After passing, the translator must take an oath of office before an authorized official before obtaining official status as a sworn translator.",
+                "This status authorizes the translator to translate various official documents that require legal recognition, both for domestic and overseas purposes. Translations made by sworn translators are generally accepted by government agencies, educational institutions, companies, embassies, and international institutions."
+            ],
+            "zh": [
+                "我们以多种语言提供高质量标准的正式及宣誓翻译服务，支持签证、教育、就业、移民及国际商业交易流程。",
+                "宣誓翻译是一种通过依据现行规定举行的翻译资格考试（UKP）满足能力要求的职业。通过考试后，该翻译人员须在有权官员面前宣誓就职，方可获得宣誓翻译的正式身份。",
+                "该身份授权翻译人员翻译需要法律承认的各类正式文件，无论用于国内或国外用途。宣誓翻译人员完成的译文通常被政府机构、教育机构、企业、大使馆及国际机构所接受。"
             ]
+        },
+        "bahasa_wilayah": {
+            "id": {
+                "title": "BAHASA & WILAYAH YANG DILAYANI",
+                "subtitle": "Kami melayani penerjemahan ke dan dari berbagai bahasa utama dunia. Cari bahasa atau wilayah tujuan Anda.",
+                "items": [
+                    {
+                        "negara_title": "Albania",
+                        "img_flag": "/flags/al.svg"
+                    },
+                    {
+                        "negara_title": "Argentina",
+                        "img_flag": "/flags/ar.svg"
+                    },
+                    {
+                        "negara_title": "Armenia",
+                        "img_flag": "/flags/am.svg"
+                    },
+                    {
+                        "negara_title": "Australia",
+                        "img_flag": "/flags/au.svg"
+                    },
+                    {
+                        "negara_title": "Austria",
+                        "img_flag": "/flags/at.svg"
+                    },
+                    {
+                        "negara_title": "Azerbaijan",
+                        "img_flag": "/flags/az.svg"
+                    },
+                    {
+                        "negara_title": "Bahama",
+                        "img_flag": "/flags/bs.svg"
+                    },
+                    {
+                        "negara_title": "Barbados",
+                        "img_flag": "/flags/bb.svg"
+                    },
+                    {
+                        "negara_title": "Belarus",
+                        "img_flag": "/flags/by.svg"
+                    },
+                    {
+                        "negara_title": "Belgia",
+                        "img_flag": "/flags/be.svg"
+                    },
+                    {
+                        "negara_title": "Belize",
+                        "img_flag": "/flags/bz.svg"
+                    },
+                    {
+                        "negara_title": "Bolivia",
+                        "img_flag": "/flags/bo.svg"
+                    },
+                    {
+                        "negara_title": "Bosnia dan Herzegovina",
+                        "img_flag": "/flags/ba.svg"
+                    },
+                    {
+                        "negara_title": "Botswana",
+                        "img_flag": "/flags/bw.svg"
+                    },
+                    {
+                        "negara_title": "Brasil",
+                        "img_flag": "/flags/br.svg"
+                    },
+                    {
+                        "negara_title": "Bulgaria",
+                        "img_flag": "/flags/bg.svg"
+                    },
+                    {
+                        "negara_title": "Chili",
+                        "img_flag": "/flags/cl.svg"
+                    },
+                    {
+                        "negara_title": "Colombia",
+                        "img_flag": "/flags/co.svg"
+                    },
+                    {
+                        "negara_title": "Costa Rica",
+                        "img_flag": "/flags/cr.svg"
+                    },
+                    {
+                        "negara_title": "Kroasia",
+                        "img_flag": "/flags/hr.svg"
+                    },
+                    {
+                        "negara_title": "Siprus",
+                        "img_flag": "/flags/cy.svg"
+                    },
+                    {
+                        "negara_title": "Ceko",
+                        "img_flag": "/flags/cz.svg"
+                    },
+                    {
+                        "negara_title": "Denmark",
+                        "img_flag": "/flags/dk.svg"
+                    },
+                    {
+                        "negara_title": "Ekuador",
+                        "img_flag": "/flags/ec.svg"
+                    },
+                    {
+                        "negara_title": "El Salvador",
+                        "img_flag": "/flags/sv.svg"
+                    },
+                    {
+                        "negara_title": "Estonia",
+                        "img_flag": "/flags/ee.svg"
+                    },
+                    {
+                        "negara_title": "Fiji",
+                        "img_flag": "/flags/fj.svg"
+                    },
+                    {
+                        "negara_title": "Finlandia",
+                        "img_flag": "/flags/fi.svg"
+                    },
+                    {
+                        "negara_title": "Prancis",
+                        "img_flag": "/flags/fr.svg"
+                    },
+                    {
+                        "negara_title": "Georgia",
+                        "img_flag": "/flags/ge.svg"
+                    },
+                    {
+                        "negara_title": "Jerman",
+                        "img_flag": "/flags/de.svg"
+                    },
+                    {
+                        "negara_title": "Yunani",
+                        "img_flag": "/flags/gr.svg"
+                    },
+                    {
+                        "negara_title": "Guatemala",
+                        "img_flag": "/flags/gt.svg"
+                    },
+                    {
+                        "negara_title": "Honduras",
+                        "img_flag": "/flags/hn.svg"
+                    },
+                    {
+                        "negara_title": "Hongaria",
+                        "img_flag": "/flags/hu.svg"
+                    },
+                    {
+                        "negara_title": "Islandia",
+                        "img_flag": "/flags/is.svg"
+                    },
+                    {
+                        "negara_title": "India",
+                        "img_flag": "/flags/in.svg"
+                    },
+                    {
+                        "negara_title": "Indonesia",
+                        "img_flag": "/flags/id.svg"
+                    },
+                    {
+                        "negara_title": "Irlandia",
+                        "img_flag": "/flags/ie.svg"
+                    },
+                    {
+                        "negara_title": "Israel",
+                        "img_flag": "/flags/il.svg"
+                    },
+                    {
+                        "negara_title": "Italia",
+                        "img_flag": "/flags/it.svg"
+                    },
+                    {
+                        "negara_title": "Jepang",
+                        "img_flag": "/flags/jp.svg"
+                    },
+                    {
+                        "negara_title": "Kazakhstan",
+                        "img_flag": "/flags/kz.svg"
+                    },
+                    {
+                        "negara_title": "Kenya",
+                        "img_flag": "/flags/ke.svg"
+                    },
+                    {
+                        "negara_title": "Korea Selatan",
+                        "img_flag": "/flags/kr.svg"
+                    },
+                    {
+                        "negara_title": "Latvia",
+                        "img_flag": "/flags/lv.svg"
+                    },
+                    {
+                        "negara_title": "Lesotho",
+                        "img_flag": "/flags/ls.svg"
+                    },
+                    {
+                        "negara_title": "Liberia",
+                        "img_flag": "/flags/lr.svg"
+                    },
+                    {
+                        "negara_title": "Liechtenstein",
+                        "img_flag": "/flags/li.svg"
+                    },
+                    {
+                        "negara_title": "Lithuania",
+                        "img_flag": "/flags/lt.svg"
+                    },
+                    {
+                        "negara_title": "Luksemburg",
+                        "img_flag": "/flags/lu.svg"
+                    },
+                    {
+                        "negara_title": "Makedonia Utara",
+                        "img_flag": "/flags/mk.svg"
+                    },
+                    {
+                        "negara_title": "Malawi",
+                        "img_flag": "/flags/mw.svg"
+                    },
+                    {
+                        "negara_title": "Malta",
+                        "img_flag": "/flags/mt.svg"
+                    },
+                    {
+                        "negara_title": "Mauritius",
+                        "img_flag": "/flags/mu.svg"
+                    },
+                    {
+                        "negara_title": "Meksiko",
+                        "img_flag": "/flags/mx.svg"
+                    },
+                    {
+                        "negara_title": "Moldova",
+                        "img_flag": "/flags/md.svg"
+                    },
+                    {
+                        "negara_title": "Monako",
+                        "img_flag": "/flags/mc.svg"
+                    },
+                    {
+                        "negara_title": "Mongolia",
+                        "img_flag": "/flags/mn.svg"
+                    },
+                    {
+                        "negara_title": "Montenegro",
+                        "img_flag": "/flags/me.svg"
+                    },
+                    {
+                        "negara_title": "Maroko",
+                        "img_flag": "/flags/ma.svg"
+                    },
+                    {
+                        "negara_title": "Mozambik",
+                        "img_flag": "/flags/mz.svg"
+                    },
+                    {
+                        "negara_title": "Namibia",
+                        "img_flag": "/flags/na.svg"
+                    },
+                    {
+                        "negara_title": "Belanda",
+                        "img_flag": "/flags/nl.svg"
+                    },
+                    {
+                        "negara_title": "Selandia Baru",
+                        "img_flag": "/flags/nz.svg"
+                    },
+                    {
+                        "negara_title": "Nikaragua",
+                        "img_flag": "/flags/ni.svg"
+                    },
+                    {
+                        "negara_title": "Niue",
+                        "img_flag": "/flags/nu.svg"
+                    },
+                    {
+                        "negara_title": "Norwegia",
+                        "img_flag": "/flags/no.svg"
+                    },
+                    {
+                        "negara_title": "Oman",
+                        "img_flag": "/flags/om.svg"
+                    },
+                    {
+                        "negara_title": "Panama",
+                        "img_flag": "/flags/pa.svg"
+                    },
+                    {
+                        "negara_title": "Paraguay",
+                        "img_flag": "/flags/py.svg"
+                    },
+                    {
+                        "negara_title": "Peru",
+                        "img_flag": "/flags/pe.svg"
+                    },
+                    {
+                        "negara_title": "Polandia",
+                        "img_flag": "/flags/pl.svg"
+                    },
+                    {
+                        "negara_title": "Portugal",
+                        "img_flag": "/flags/pt.svg"
+                    },
+                    {
+                        "negara_title": "Rumania",
+                        "img_flag": "/flags/ro.svg"
+                    },
+                    {
+                        "negara_title": "Rusia",
+                        "img_flag": "/flags/ru.svg"
+                    },
+                    {
+                        "negara_title": "Saint Kitts dan Nevis",
+                        "img_flag": "/flags/kn.svg"
+                    },
+                    {
+                        "negara_title": "Saint Lucia",
+                        "img_flag": "/flags/lc.svg"
+                    },
+                    {
+                        "negara_title": "Saint Vincent dan Grenadines",
+                        "img_flag": "/flags/vc.svg"
+                    },
+                    {
+                        "negara_title": "San Marino",
+                        "img_flag": "/flags/sm.svg"
+                    },
+                    {
+                        "negara_title": "Senegal",
+                        "img_flag": "/flags/sn.svg"
+                    },
+                    {
+                        "negara_title": "Serbia",
+                        "img_flag": "/flags/rs.svg"
+                    },
+                    {
+                        "negara_title": "Seychelles",
+                        "img_flag": "/flags/sc.svg"
+                    },
+                    {
+                        "negara_title": "Singapura",
+                        "img_flag": "/flags/sg.svg"
+                    },
+                    {
+                        "negara_title": "Slovakia",
+                        "img_flag": "/flags/sk.svg"
+                    },
+                    {
+                        "negara_title": "Slovenia",
+                        "img_flag": "/flags/si.svg"
+                    },
+                    {
+                        "negara_title": "Afrika Selatan",
+                        "img_flag": "/flags/za.svg"
+                    },
+                    {
+                        "negara_title": "Spanyol",
+                        "img_flag": "/flags/es.svg"
+                    },
+                    {
+                        "negara_title": "Sri Lanka",
+                        "img_flag": "/flags/lk.svg"
+                    },
+                    {
+                        "negara_title": "Suriname",
+                        "img_flag": "/flags/sr.svg"
+                    },
+                    {
+                        "negara_title": "Swedia",
+                        "img_flag": "/flags/se.svg"
+                    },
+                    {
+                        "negara_title": "Swiss",
+                        "img_flag": "/flags/ch.svg"
+                    },
+                    {
+                        "negara_title": "Tanjung Verde",
+                        "img_flag": "/flags/cv.svg"
+                    },
+                    {
+                        "negara_title": "Thailand",
+                        "img_flag": "/flags/th.svg"
+                    },
+                    {
+                        "negara_title": "Tonga",
+                        "img_flag": "/flags/to.svg"
+                    },
+                    {
+                        "negara_title": "Trinidad dan Tobago",
+                        "img_flag": "/flags/tt.svg"
+                    },
+                    {
+                        "negara_title": "Turki",
+                        "img_flag": "/flags/tr.svg"
+                    },
+                    {
+                        "negara_title": "Ukraina",
+                        "img_flag": "/flags/ua.svg"
+                    },
+                    {
+                        "negara_title": "Uruguay",
+                        "img_flag": "/flags/uy.svg"
+                    },
+                    {
+                        "negara_title": "Venezuela",
+                        "img_flag": "/flags/ve.svg"
+                    },
+                    {
+                        "negara_title": "Zambia",
+                        "img_flag": "/flags/zm.svg"
+                    }
+                ]
+            },
+            "en": {
+                "title": "LANGUAGES & REGIONS SERVED",
+                "subtitle": "We provide translation to and from various major world languages. Search for your target language or region.",
+                "items": [
+                    {
+                        "negara_title": "Albania",
+                        "img_flag": "/flags/al.svg"
+                    },
+                    {
+                        "negara_title": "Argentina",
+                        "img_flag": "/flags/ar.svg"
+                    },
+                    {
+                        "negara_title": "Armenia",
+                        "img_flag": "/flags/am.svg"
+                    },
+                    {
+                        "negara_title": "Australia",
+                        "img_flag": "/flags/au.svg"
+                    },
+                    {
+                        "negara_title": "Austria",
+                        "img_flag": "/flags/at.svg"
+                    },
+                    {
+                        "negara_title": "Azerbaijan",
+                        "img_flag": "/flags/az.svg"
+                    },
+                    {
+                        "negara_title": "Bahamas",
+                        "img_flag": "/flags/bs.svg"
+                    },
+                    {
+                        "negara_title": "Barbados",
+                        "img_flag": "/flags/bb.svg"
+                    },
+                    {
+                        "negara_title": "Belarus",
+                        "img_flag": "/flags/by.svg"
+                    },
+                    {
+                        "negara_title": "Belgium",
+                        "img_flag": "/flags/be.svg"
+                    },
+                    {
+                        "negara_title": "Belize",
+                        "img_flag": "/flags/bz.svg"
+                    },
+                    {
+                        "negara_title": "Bolivia",
+                        "img_flag": "/flags/bo.svg"
+                    },
+                    {
+                        "negara_title": "Bosnia and Herzegovina",
+                        "img_flag": "/flags/ba.svg"
+                    },
+                    {
+                        "negara_title": "Botswana",
+                        "img_flag": "/flags/bw.svg"
+                    },
+                    {
+                        "negara_title": "Brazil",
+                        "img_flag": "/flags/br.svg"
+                    },
+                    {
+                        "negara_title": "Bulgaria",
+                        "img_flag": "/flags/bg.svg"
+                    },
+                    {
+                        "negara_title": "Chile",
+                        "img_flag": "/flags/cl.svg"
+                    },
+                    {
+                        "negara_title": "Colombia",
+                        "img_flag": "/flags/co.svg"
+                    },
+                    {
+                        "negara_title": "Costa Rica",
+                        "img_flag": "/flags/cr.svg"
+                    },
+                    {
+                        "negara_title": "Croatia",
+                        "img_flag": "/flags/hr.svg"
+                    },
+                    {
+                        "negara_title": "Cyprus",
+                        "img_flag": "/flags/cy.svg"
+                    },
+                    {
+                        "negara_title": "Czech Republic",
+                        "img_flag": "/flags/cz.svg"
+                    },
+                    {
+                        "negara_title": "Denmark",
+                        "img_flag": "/flags/dk.svg"
+                    },
+                    {
+                        "negara_title": "Ecuador",
+                        "img_flag": "/flags/ec.svg"
+                    },
+                    {
+                        "negara_title": "El Salvador",
+                        "img_flag": "/flags/sv.svg"
+                    },
+                    {
+                        "negara_title": "Estonia",
+                        "img_flag": "/flags/ee.svg"
+                    },
+                    {
+                        "negara_title": "Fiji",
+                        "img_flag": "/flags/fj.svg"
+                    },
+                    {
+                        "negara_title": "Finland",
+                        "img_flag": "/flags/fi.svg"
+                    },
+                    {
+                        "negara_title": "France",
+                        "img_flag": "/flags/fr.svg"
+                    },
+                    {
+                        "negara_title": "Georgia",
+                        "img_flag": "/flags/ge.svg"
+                    },
+                    {
+                        "negara_title": "Germany",
+                        "img_flag": "/flags/de.svg"
+                    },
+                    {
+                        "negara_title": "Greece",
+                        "img_flag": "/flags/gr.svg"
+                    },
+                    {
+                        "negara_title": "Guatemala",
+                        "img_flag": "/flags/gt.svg"
+                    },
+                    {
+                        "negara_title": "Honduras",
+                        "img_flag": "/flags/hn.svg"
+                    },
+                    {
+                        "negara_title": "Hungary",
+                        "img_flag": "/flags/hu.svg"
+                    },
+                    {
+                        "negara_title": "Iceland",
+                        "img_flag": "/flags/is.svg"
+                    },
+                    {
+                        "negara_title": "India",
+                        "img_flag": "/flags/in.svg"
+                    },
+                    {
+                        "negara_title": "Indonesia",
+                        "img_flag": "/flags/id.svg"
+                    },
+                    {
+                        "negara_title": "Ireland",
+                        "img_flag": "/flags/ie.svg"
+                    },
+                    {
+                        "negara_title": "Israel",
+                        "img_flag": "/flags/il.svg"
+                    },
+                    {
+                        "negara_title": "Italy",
+                        "img_flag": "/flags/it.svg"
+                    },
+                    {
+                        "negara_title": "Japan",
+                        "img_flag": "/flags/jp.svg"
+                    },
+                    {
+                        "negara_title": "Kazakhstan",
+                        "img_flag": "/flags/kz.svg"
+                    },
+                    {
+                        "negara_title": "Kenya",
+                        "img_flag": "/flags/ke.svg"
+                    },
+                    {
+                        "negara_title": "South Korea",
+                        "img_flag": "/flags/kr.svg"
+                    },
+                    {
+                        "negara_title": "Latvia",
+                        "img_flag": "/flags/lv.svg"
+                    },
+                    {
+                        "negara_title": "Lesotho",
+                        "img_flag": "/flags/ls.svg"
+                    },
+                    {
+                        "negara_title": "Liberia",
+                        "img_flag": "/flags/lr.svg"
+                    },
+                    {
+                        "negara_title": "Liechtenstein",
+                        "img_flag": "/flags/li.svg"
+                    },
+                    {
+                        "negara_title": "Lithuania",
+                        "img_flag": "/flags/lt.svg"
+                    },
+                    {
+                        "negara_title": "Luxembourg",
+                        "img_flag": "/flags/lu.svg"
+                    },
+                    {
+                        "negara_title": "North Macedonia",
+                        "img_flag": "/flags/mk.svg"
+                    },
+                    {
+                        "negara_title": "Malawi",
+                        "img_flag": "/flags/mw.svg"
+                    },
+                    {
+                        "negara_title": "Malta",
+                        "img_flag": "/flags/mt.svg"
+                    },
+                    {
+                        "negara_title": "Mauritius",
+                        "img_flag": "/flags/mu.svg"
+                    },
+                    {
+                        "negara_title": "Mexico",
+                        "img_flag": "/flags/mx.svg"
+                    },
+                    {
+                        "negara_title": "Moldova",
+                        "img_flag": "/flags/md.svg"
+                    },
+                    {
+                        "negara_title": "Monaco",
+                        "img_flag": "/flags/mc.svg"
+                    },
+                    {
+                        "negara_title": "Mongolia",
+                        "img_flag": "/flags/mn.svg"
+                    },
+                    {
+                        "negara_title": "Montenegro",
+                        "img_flag": "/flags/me.svg"
+                    },
+                    {
+                        "negara_title": "Morocco",
+                        "img_flag": "/flags/ma.svg"
+                    },
+                    {
+                        "negara_title": "Mozambique",
+                        "img_flag": "/flags/mz.svg"
+                    },
+                    {
+                        "negara_title": "Namibia",
+                        "img_flag": "/flags/na.svg"
+                    },
+                    {
+                        "negara_title": "Netherlands",
+                        "img_flag": "/flags/nl.svg"
+                    },
+                    {
+                        "negara_title": "New Zealand",
+                        "img_flag": "/flags/nz.svg"
+                    },
+                    {
+                        "negara_title": "Nicaragua",
+                        "img_flag": "/flags/ni.svg"
+                    },
+                    {
+                        "negara_title": "Niue",
+                        "img_flag": "/flags/nu.svg"
+                    },
+                    {
+                        "negara_title": "Norway",
+                        "img_flag": "/flags/no.svg"
+                    },
+                    {
+                        "negara_title": "Oman",
+                        "img_flag": "/flags/om.svg"
+                    },
+                    {
+                        "negara_title": "Panama",
+                        "img_flag": "/flags/pa.svg"
+                    },
+                    {
+                        "negara_title": "Paraguay",
+                        "img_flag": "/flags/py.svg"
+                    },
+                    {
+                        "negara_title": "Peru",
+                        "img_flag": "/flags/pe.svg"
+                    },
+                    {
+                        "negara_title": "Poland",
+                        "img_flag": "/flags/pl.svg"
+                    },
+                    {
+                        "negara_title": "Portugal",
+                        "img_flag": "/flags/pt.svg"
+                    },
+                    {
+                        "negara_title": "Romania",
+                        "img_flag": "/flags/ro.svg"
+                    },
+                    {
+                        "negara_title": "Russia",
+                        "img_flag": "/flags/ru.svg"
+                    },
+                    {
+                        "negara_title": "Saint Kitts and Nevis",
+                        "img_flag": "/flags/kn.svg"
+                    },
+                    {
+                        "negara_title": "Saint Lucia",
+                        "img_flag": "/flags/lc.svg"
+                    },
+                    {
+                        "negara_title": "Saint Vincent and the Grenadines",
+                        "img_flag": "/flags/vc.svg"
+                    },
+                    {
+                        "negara_title": "San Marino",
+                        "img_flag": "/flags/sm.svg"
+                    },
+                    {
+                        "negara_title": "Senegal",
+                        "img_flag": "/flags/sn.svg"
+                    },
+                    {
+                        "negara_title": "Serbia",
+                        "img_flag": "/flags/rs.svg"
+                    },
+                    {
+                        "negara_title": "Seychelles",
+                        "img_flag": "/flags/sc.svg"
+                    },
+                    {
+                        "negara_title": "Singapore",
+                        "img_flag": "/flags/sg.svg"
+                    },
+                    {
+                        "negara_title": "Slovakia",
+                        "img_flag": "/flags/sk.svg"
+                    },
+                    {
+                        "negara_title": "Slovenia",
+                        "img_flag": "/flags/si.svg"
+                    },
+                    {
+                        "negara_title": "South Africa",
+                        "img_flag": "/flags/za.svg"
+                    },
+                    {
+                        "negara_title": "Spain",
+                        "img_flag": "/flags/es.svg"
+                    },
+                    {
+                        "negara_title": "Sri Lanka",
+                        "img_flag": "/flags/lk.svg"
+                    },
+                    {
+                        "negara_title": "Suriname",
+                        "img_flag": "/flags/sr.svg"
+                    },
+                    {
+                        "negara_title": "Sweden",
+                        "img_flag": "/flags/se.svg"
+                    },
+                    {
+                        "negara_title": "Switzerland",
+                        "img_flag": "/flags/ch.svg"
+                    },
+                    {
+                        "negara_title": "Cape Verde",
+                        "img_flag": "/flags/cv.svg"
+                    },
+                    {
+                        "negara_title": "Thailand",
+                        "img_flag": "/flags/th.svg"
+                    },
+                    {
+                        "negara_title": "Tonga",
+                        "img_flag": "/flags/to.svg"
+                    },
+                    {
+                        "negara_title": "Trinidad and Tobago",
+                        "img_flag": "/flags/tt.svg"
+                    },
+                    {
+                        "negara_title": "Turkey",
+                        "img_flag": "/flags/tr.svg"
+                    },
+                    {
+                        "negara_title": "Ukraine",
+                        "img_flag": "/flags/ua.svg"
+                    },
+                    {
+                        "negara_title": "Uruguay",
+                        "img_flag": "/flags/uy.svg"
+                    },
+                    {
+                        "negara_title": "Venezuela",
+                        "img_flag": "/flags/ve.svg"
+                    },
+                    {
+                        "negara_title": "Zambia",
+                        "img_flag": "/flags/zm.svg"
+                    }
+                ]
+            },
+            "zh": {
+                "title": "服务语言及地区",
+                "subtitle": "我们提供世界主要语言之间的互译服务。请搜索您所需的目标语言或地区。",
+                "items": [
+                    {
+                        "negara_title": "阿尔巴尼亚",
+                        "img_flag": "/flags/al.svg"
+                    },
+                    {
+                        "negara_title": "阿根廷",
+                        "img_flag": "/flags/ar.svg"
+                    },
+                    {
+                        "negara_title": "亚美尼亚",
+                        "img_flag": "/flags/am.svg"
+                    },
+                    {
+                        "negara_title": "澳大利亚",
+                        "img_flag": "/flags/au.svg"
+                    },
+                    {
+                        "negara_title": "奥地利",
+                        "img_flag": "/flags/at.svg"
+                    },
+                    {
+                        "negara_title": "阿塞拜疆",
+                        "img_flag": "/flags/az.svg"
+                    },
+                    {
+                        "negara_title": "巴哈马",
+                        "img_flag": "/flags/bs.svg"
+                    },
+                    {
+                        "negara_title": "巴巴多斯",
+                        "img_flag": "/flags/bb.svg"
+                    },
+                    {
+                        "negara_title": "白俄罗斯",
+                        "img_flag": "/flags/by.svg"
+                    },
+                    {
+                        "negara_title": "比利时",
+                        "img_flag": "/flags/be.svg"
+                    },
+                    {
+                        "negara_title": "伯利兹",
+                        "img_flag": "/flags/bz.svg"
+                    },
+                    {
+                        "negara_title": "玻利维亚",
+                        "img_flag": "/flags/bo.svg"
+                    },
+                    {
+                        "negara_title": "波斯尼亚和黑塞哥维那",
+                        "img_flag": "/flags/ba.svg"
+                    },
+                    {
+                        "negara_title": "博茨瓦纳",
+                        "img_flag": "/flags/bw.svg"
+                    },
+                    {
+                        "negara_title": "巴西",
+                        "img_flag": "/flags/br.svg"
+                    },
+                    {
+                        "negara_title": "保加利亚",
+                        "img_flag": "/flags/bg.svg"
+                    },
+                    {
+                        "negara_title": "智利",
+                        "img_flag": "/flags/cl.svg"
+                    },
+                    {
+                        "negara_title": "哥伦比亚",
+                        "img_flag": "/flags/co.svg"
+                    },
+                    {
+                        "negara_title": "哥斯达黎加",
+                        "img_flag": "/flags/cr.svg"
+                    },
+                    {
+                        "negara_title": "克罗地亚",
+                        "img_flag": "/flags/hr.svg"
+                    },
+                    {
+                        "negara_title": "塞浦路斯",
+                        "img_flag": "/flags/cy.svg"
+                    },
+                    {
+                        "negara_title": "捷克",
+                        "img_flag": "/flags/cz.svg"
+                    },
+                    {
+                        "negara_title": "丹麦",
+                        "img_flag": "/flags/dk.svg"
+                    },
+                    {
+                        "negara_title": "厄瓜多尔",
+                        "img_flag": "/flags/ec.svg"
+                    },
+                    {
+                        "negara_title": "萨尔瓦多",
+                        "img_flag": "/flags/sv.svg"
+                    },
+                    {
+                        "negara_title": "爱沙尼亚",
+                        "img_flag": "/flags/ee.svg"
+                    },
+                    {
+                        "negara_title": "斐济",
+                        "img_flag": "/flags/fj.svg"
+                    },
+                    {
+                        "negara_title": "芬兰",
+                        "img_flag": "/flags/fi.svg"
+                    },
+                    {
+                        "negara_title": "法国",
+                        "img_flag": "/flags/fr.svg"
+                    },
+                    {
+                        "negara_title": "格鲁吉亚",
+                        "img_flag": "/flags/ge.svg"
+                    },
+                    {
+                        "negara_title": "德国",
+                        "img_flag": "/flags/de.svg"
+                    },
+                    {
+                        "negara_title": "希腊",
+                        "img_flag": "/flags/gr.svg"
+                    },
+                    {
+                        "negara_title": "危地马拉",
+                        "img_flag": "/flags/gt.svg"
+                    },
+                    {
+                        "negara_title": "洪都拉斯",
+                        "img_flag": "/flags/hn.svg"
+                    },
+                    {
+                        "negara_title": "匈牙利",
+                        "img_flag": "/flags/hu.svg"
+                    },
+                    {
+                        "negara_title": "冰岛",
+                        "img_flag": "/flags/is.svg"
+                    },
+                    {
+                        "negara_title": "印度",
+                        "img_flag": "/flags/in.svg"
+                    },
+                    {
+                        "negara_title": "印度尼西亚",
+                        "img_flag": "/flags/id.svg"
+                    },
+                    {
+                        "negara_title": "爱尔兰",
+                        "img_flag": "/flags/ie.svg"
+                    },
+                    {
+                        "negara_title": "以色列",
+                        "img_flag": "/flags/il.svg"
+                    },
+                    {
+                        "negara_title": "意大利",
+                        "img_flag": "/flags/it.svg"
+                    },
+                    {
+                        "negara_title": "日本",
+                        "img_flag": "/flags/jp.svg"
+                    },
+                    {
+                        "negara_title": "哈萨克斯坦",
+                        "img_flag": "/flags/kz.svg"
+                    },
+                    {
+                        "negara_title": "肯尼亚",
+                        "img_flag": "/flags/ke.svg"
+                    },
+                    {
+                        "negara_title": "韩国",
+                        "img_flag": "/flags/kr.svg"
+                    },
+                    {
+                        "negara_title": "拉脱维亚",
+                        "img_flag": "/flags/lv.svg"
+                    },
+                    {
+                        "negara_title": "莱索托",
+                        "img_flag": "/flags/ls.svg"
+                    },
+                    {
+                        "negara_title": "利比里亚",
+                        "img_flag": "/flags/lr.svg"
+                    },
+                    {
+                        "negara_title": "列支敦士登",
+                        "img_flag": "/flags/li.svg"
+                    },
+                    {
+                        "negara_title": "立陶宛",
+                        "img_flag": "/flags/lt.svg"
+                    },
+                    {
+                        "negara_title": "卢森堡",
+                        "img_flag": "/flags/lu.svg"
+                    },
+                    {
+                        "negara_title": "北马其顿",
+                        "img_flag": "/flags/mk.svg"
+                    },
+                    {
+                        "negara_title": "马拉维",
+                        "img_flag": "/flags/mw.svg"
+                    },
+                    {
+                        "negara_title": "马耳他",
+                        "img_flag": "/flags/mt.svg"
+                    },
+                    {
+                        "negara_title": "毛里求斯",
+                        "img_flag": "/flags/mu.svg"
+                    },
+                    {
+                        "negara_title": "墨西哥",
+                        "img_flag": "/flags/mx.svg"
+                    },
+                    {
+                        "negara_title": "摩尔多瓦",
+                        "img_flag": "/flags/md.svg"
+                    },
+                    {
+                        "negara_title": "摩纳哥",
+                        "img_flag": "/flags/mc.svg"
+                    },
+                    {
+                        "negara_title": "蒙古",
+                        "img_flag": "/flags/mn.svg"
+                    },
+                    {
+                        "negara_title": "黑山",
+                        "img_flag": "/flags/me.svg"
+                    },
+                    {
+                        "negara_title": "摩洛哥",
+                        "img_flag": "/flags/ma.svg"
+                    },
+                    {
+                        "negara_title": "莫桑比克",
+                        "img_flag": "/flags/mz.svg"
+                    },
+                    {
+                        "negara_title": "纳米比亚",
+                        "img_flag": "/flags/na.svg"
+                    },
+                    {
+                        "negara_title": "荷兰",
+                        "img_flag": "/flags/nl.svg"
+                    },
+                    {
+                        "negara_title": "新西兰",
+                        "img_flag": "/flags/nz.svg"
+                    },
+                    {
+                        "negara_title": "尼加拉瓜",
+                        "img_flag": "/flags/ni.svg"
+                    },
+                    {
+                        "negara_title": "纽埃",
+                        "img_flag": "/flags/nu.svg"
+                    },
+                    {
+                        "negara_title": "挪威",
+                        "img_flag": "/flags/no.svg"
+                    },
+                    {
+                        "negara_title": "阿曼",
+                        "img_flag": "/flags/om.svg"
+                    },
+                    {
+                        "negara_title": "巴拿马",
+                        "img_flag": "/flags/pa.svg"
+                    },
+                    {
+                        "negara_title": "巴拉圭",
+                        "img_flag": "/flags/py.svg"
+                    },
+                    {
+                        "negara_title": "秘鲁",
+                        "img_flag": "/flags/pe.svg"
+                    },
+                    {
+                        "negara_title": "波兰",
+                        "img_flag": "/flags/pl.svg"
+                    },
+                    {
+                        "negara_title": "葡萄牙",
+                        "img_flag": "/flags/pt.svg"
+                    },
+                    {
+                        "negara_title": "罗马尼亚",
+                        "img_flag": "/flags/ro.svg"
+                    },
+                    {
+                        "negara_title": "俄罗斯",
+                        "img_flag": "/flags/ru.svg"
+                    },
+                    {
+                        "negara_title": "圣基茨和尼维斯",
+                        "img_flag": "/flags/kn.svg"
+                    },
+                    {
+                        "negara_title": "圣卢西亚",
+                        "img_flag": "/flags/lc.svg"
+                    },
+                    {
+                        "negara_title": "圣文森特和格林纳丁斯",
+                        "img_flag": "/flags/vc.svg"
+                    },
+                    {
+                        "negara_title": "圣马力诺",
+                        "img_flag": "/flags/sm.svg"
+                    },
+                    {
+                        "negara_title": "塞内加尔",
+                        "img_flag": "/flags/sn.svg"
+                    },
+                    {
+                        "negara_title": "塞尔维亚",
+                        "img_flag": "/flags/rs.svg"
+                    },
+                    {
+                        "negara_title": "塞舌尔",
+                        "img_flag": "/flags/sc.svg"
+                    },
+                    {
+                        "negara_title": "新加坡",
+                        "img_flag": "/flags/sg.svg"
+                    },
+                    {
+                        "negara_title": "斯洛伐克",
+                        "img_flag": "/flags/sk.svg"
+                    },
+                    {
+                        "negara_title": "斯洛文尼亚",
+                        "img_flag": "/flags/si.svg"
+                    },
+                    {
+                        "negara_title": "南非",
+                        "img_flag": "/flags/za.svg"
+                    },
+                    {
+                        "negara_title": "西班牙",
+                        "img_flag": "/flags/es.svg"
+                    },
+                    {
+                        "negara_title": "斯里兰卡",
+                        "img_flag": "/flags/lk.svg"
+                    },
+                    {
+                        "negara_title": "苏里南",
+                        "img_flag": "/flags/sr.svg"
+                    },
+                    {
+                        "negara_title": "瑞典",
+                        "img_flag": "/flags/se.svg"
+                    },
+                    {
+                        "negara_title": "瑞士",
+                        "img_flag": "/flags/ch.svg"
+                    },
+                    {
+                        "negara_title": "佛得角",
+                        "img_flag": "/flags/cv.svg"
+                    },
+                    {
+                        "negara_title": "泰国",
+                        "img_flag": "/flags/th.svg"
+                    },
+                    {
+                        "negara_title": "汤加",
+                        "img_flag": "/flags/to.svg"
+                    },
+                    {
+                        "negara_title": "特立尼达和多巴哥",
+                        "img_flag": "/flags/tt.svg"
+                    },
+                    {
+                        "negara_title": "土耳其",
+                        "img_flag": "/flags/tr.svg"
+                    },
+                    {
+                        "negara_title": "乌克兰",
+                        "img_flag": "/flags/ua.svg"
+                    },
+                    {
+                        "negara_title": "乌拉圭",
+                        "img_flag": "/flags/uy.svg"
+                    },
+                    {
+                        "negara_title": "委内瑞拉",
+                        "img_flag": "/flags/ve.svg"
+                    },
+                    {
+                        "negara_title": "赞比亚",
+                        "img_flag": "/flags/zm.svg"
+                    }
+                ]
+            }
         },
         "keunggulan": {
-            "items_left": [
-                "Penerjemah tersumpah & berpengalaman",
-                "Mengutamakan akurasi & ketepatan waktu",
-                "Mendukung proses visa, pendidikan & bisnis"
-            ],
-            "items_right": [
-                "Dokumen kementerian & perwakilan negara asing",
-                "Keabsahan dokumen terjamin",
-                "Konsultasi pra-ekspat & pasca selesai gratis"
-            ],
-            "description": [
-                "Fasttrack hadir sebagai penyedia layanan penerjemahan profesional dan berpengalaman. Seluruh penerjemah yang bekerja sama dengan Fasttrack telah memiliki kualifikasi sebagai penerjemah tersumpah dan telah terjemahannya diakui oleh berbagai kementerian, lembaga pemerintahan, serta perusahaan negara asing di Indonesia.",
-                "Kami melayani penerjemahan berbagai jenis dokumen, mulai dari dokumen pribadi, pendidikan, keimigrasian, hukum, bisnis, hingga dokumen perusahaan. Dengan mengedepankan akurasi, keahlian, dan ketepatan waktu Fasttrack siap menjadi solusi terpercaya untuk seluruh kebutuhan penerjemahan Anda.",
-                "Percayakan dokumen penting Anda kepada tenaga profesional yang berpengalaman, sehingga setiap proses berjalan lebih mudah, aman, dan sesuai ketentuan yang berlaku."
-            ]
+            "id": {
+                "items_left": [
+                    "Penerjemah tersumpah & berpengalaman",
+                    "Mengutamakan akurasi & ketepatan waktu",
+                    "Mendukung proses visa, pendidikan & bisnis"
+                ],
+                "items_right": [
+                    "Dokumen kementerian & perwakilan negara asing",
+                    "Keabsahan dokumen terjamin",
+                    "Konsultasi pra-ekspat & pasca selesai gratis"
+                ],
+                "description": [
+                    "Fasttrack hadir sebagai penyedia layanan penerjemahan profesional dan berpengalaman. Seluruh penerjemah yang bekerja sama dengan Fasttrack telah memiliki kualifikasi sebagai penerjemah tersumpah dan telah terjemahannya diakui oleh berbagai kementerian, lembaga pemerintahan, serta perusahaan negara asing di Indonesia.",
+                    "Kami melayani penerjemahan berbagai jenis dokumen, mulai dari dokumen pribadi, pendidikan, keimigrasian, hukum, bisnis, hingga dokumen perusahaan. Dengan mengedepankan akurasi, keahlian, dan ketepatan waktu Fasttrack siap menjadi solusi terpercaya untuk seluruh kebutuhan penerjemahan Anda.",
+                    "Percayakan dokumen penting Anda kepada tenaga profesional yang berpengalaman, sehingga setiap proses berjalan lebih mudah, aman, dan sesuai ketentuan yang berlaku."
+                ]
+            },
+            "en": {
+                "items_left": [
+                    "Sworn & experienced translators",
+                    "Prioritizing accuracy & timeliness",
+                    "Supporting visa, education & business processes"
+                ],
+                "items_right": [
+                    "Ministry documents & foreign country representative documents",
+                    "Document validity guaranteed",
+                    "Free pre-expat and post-completion consultation"
+                ],
+                "description": [
+                    "Fasttrack is present as a professional and experienced translation service provider. All translators working with Fasttrack are qualified as sworn translators, and their translations are recognized by various ministries, government institutions, and foreign companies in Indonesia.",
+                    "We provide translation for various types of documents, from personal, educational, immigration, legal, and business documents, to company documents. By prioritizing accuracy, expertise, and timeliness, Fasttrack is ready to be a trusted solution for all your translation needs.",
+                    "Entrust your important documents to experienced professionals, so that every process runs more smoothly, safely, and in accordance with applicable provisions."
+                ]
+            },
+            "zh": {
+                "items_left": [
+                    "宣誓且经验丰富的翻译人员",
+                    "注重准确性与及时性",
+                    "支持签证、教育及商业流程"
+                ],
+                "items_right": [
+                    "部委文件及外国代表机构文件",
+                    "文件有效性有保障",
+                    "免费的外派前及完成后咨询"
+                ],
+                "description": [
+                    "Fasttrack作为专业且经验丰富的翻译服务提供商。与Fasttrack合作的所有翻译人员均具备宣誓翻译资格，其译文获得印度尼西亚各部委、政府机构及外国公司的认可。",
+                    "我们提供各类文件的翻译服务，从个人、教育、移民、法律、商业文件到公司文件。凭借对准确性、专业性及及时性的重视，Fasttrack随时准备成为您所有翻译需求的可信赖解决方案。",
+                    "将您的重要文件交由经验丰富的专业人士处理，使每一个流程都更加顺畅、安全，并符合现行规定。"
+                ]
+            }
         },
         "banner_cta": {
-            "text": "Konsultasikan kebutuhan Uji Tuntas Hukum perusahaan Anda dan dapatkan solusi hukum yang komprehensif, independen, dan terpercaya."
-        },
-        "faq": [
-            {
-                "question": "Apa itu penerjemah tersumpah?",
-                "answer": "Penerjemah tersumpah adalah penerjemah yang telah lulus Ujian Kualifikasi Penerjemah (UKP) dan mengucapkan sumpah jabatan, sehingga hasil terjemahannya memiliki kekuatan hukum."
+            "id": {
+                "text": "Konsultasikan kebutuhan Uji Tuntas Hukum perusahaan Anda dan dapatkan solusi hukum yang komprehensif, independen, dan terpercaya."
             },
-            {
-                "question": "Dokumen apa saja yang bisa diterjemahkan?",
-                "answer": "Kami melayani penerjemahan berbagai dokumen seperti akta lahir, ijazah, paspor, kontrak bisnis, dokumen hukum, dan dokumen perusahaan."
+            "en": {
+                "text": "Consult your company's Legal Due Diligence needs and get a comprehensive, independent, and trusted legal solution."
+            },
+            "zh": {
+                "text": "咨询您公司的法律尽职调查需求，获得全面、独立且值得信赖的法律解决方案。"
             }
-        ]
+        },
+        "faq": {
+            "id": [
+                {
+                    "question": "Apa itu penerjemah tersumpah?",
+                    "answer": "Penerjemah tersumpah adalah penerjemah yang telah lulus Ujian Kualifikasi Penerjemah (UKP) dan mengucapkan sumpah jabatan, sehingga hasil terjemahannya memiliki kekuatan hukum."
+                },
+                {
+                    "question": "Dokumen apa saja yang bisa diterjemahkan?",
+                    "answer": "Kami melayani penerjemahan berbagai dokumen seperti akta lahir, ijazah, paspor, kontrak bisnis, dokumen hukum, dan dokumen perusahaan."
+                }
+            ],
+            "en": [
+                {
+                    "question": "What is a sworn translator?",
+                    "answer": "A sworn translator is a translator who has passed the Translator Qualification Examination (UKP) and taken an oath of office, so that the resulting translation has legal force."
+                },
+                {
+                    "question": "What documents can be translated?",
+                    "answer": "We provide translation for various documents such as birth certificates, diplomas, passports, business contracts, legal documents, and company documents."
+                }
+            ],
+            "zh": [
+                {
+                    "question": "什么是宣誓翻译？",
+                    "answer": "宣誓翻译是指通过翻译资格考试（UKP）并宣誓就职的翻译人员，因此其译文具有法律效力。"
+                },
+                {
+                    "question": "哪些文件可以翻译？",
+                    "answer": "我们提供出生证明、学历证书、护照、商业合同、法律文件及公司文件等各类文件的翻译服务。"
+                }
+            ]
+        }
     }
 ]

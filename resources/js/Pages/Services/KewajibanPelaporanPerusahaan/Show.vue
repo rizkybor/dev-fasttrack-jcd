@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const docsOpen = ref(false);
 const dasarHukumOpen = ref(false);
@@ -28,7 +31,49 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-const remainingPlans = computed(() => (props.product?.plans ?? []).slice(3));
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        description: pick(p.description),
+        excerpt: pick(p.excerpt),
+        audience: pick(p.audience),
+        content: pick(p.content) ?? [],
+        term_condition: pick(p.term_condition) ?? [],
+        benefits: pick(p.benefits) ?? [],
+        scope_of_service: pick(p.scope_of_service) ?? [],
+        requirements: pick(p.requirements) ?? [],
+        process: pick(p.process) ?? [],
+        faq: pick(p.faq) ?? [],
+        plans: pick(p.plans) ?? [],
+        plans_info: pick(p.plans_info),
+        plans_alert: pick(p.plans_alert) ?? [],
+        dasar_hukum: pick(p.dasar_hukum) ?? [],
+        footer_cta: pick(p.footer_cta),
+    };
+});
+
+const product = localizedProduct;
+
+const remainingPlans = computed(() => (product.value?.plans ?? []).slice(3));
 
 const remainingGridClass = computed(() => {
     const count = remainingPlans.value.length;
@@ -38,7 +83,7 @@ const remainingGridClass = computed(() => {
     return 'sm:grid-cols-3';
 });
 
-const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
+const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
 
 const expandedDocs = ref({});
 const toggleDoc = (key) => {
@@ -46,12 +91,27 @@ const toggleDoc = (key) => {
 };
 
 // Footer CTA dinamis
-const footerCta = computed(() => props.product?.footer_cta ?? {
-    title: "Butuh Konsultasi Soal Legalisasi Dokumen?",
-    subtitle: "Tim Fasttrack siap membantu Anda menyelesaikan proses legalisasi dokumen dengan cepat dan tepat.",
-    button_text: "Chat Langsung via WhatsApp",
-    wa_message: "layanan yang tidak terdaftar",
-});
+const defaultFooterCta = computed(() => pick({
+    id: {
+        title: "Butuh Konsultasi Soal Legalisasi Dokumen?",
+        subtitle: "Tim Fasttrack siap membantu Anda menyelesaikan proses legalisasi dokumen dengan cepat dan tepat.",
+        button_text: "Chat Langsung via WhatsApp",
+        wa_message: "layanan yang tidak terdaftar",
+    },
+    en: {
+        title: "Need Consultation on Document Legalization?",
+        subtitle: "The Fasttrack team is ready to help you complete the document legalization process quickly and accurately.",
+        button_text: "Chat Directly via WhatsApp",
+        wa_message: "an unlisted service",
+    },
+    zh: {
+        title: "需要文件认证方面的咨询吗？",
+        subtitle: "Fasttrack团队随时准备协助您快速且准确地完成文件认证流程。",
+        button_text: "直接通过WhatsApp聊天",
+        wa_message: "未列出的服务",
+    },
+}));
+const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.value);
 </script>
 
 <template>

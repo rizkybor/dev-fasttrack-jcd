@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const docsOpen = ref(false);
 const dasarHukumOpen = ref(false);
@@ -28,8 +31,43 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-const currentPlans = computed(() => props.product?.plans ?? []);
-const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        description: pick(p.description),
+        excerpt: pick(p.excerpt),
+        audience: pick(p.audience),
+        content: pick(p.content) ?? [],
+        faq: pick(p.faq) ?? [],
+        contract_categories: pick(p.contract_categories) ?? [],
+        regular_packages: pick(p.regular_packages),
+        corporate_secretary: pick(p.corporate_secretary),
+    };
+});
+
+const product = localizedProduct;
+
+const currentPlans = computed(() => product.value?.plans ?? []);
+const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
 
 // Toggle truncate per doc item
 const expandedDocs = ref({});
@@ -41,7 +79,7 @@ const toggleDoc = (key) => {
 const contractSearchQuery = ref("");
 
 const contractCategories = computed(
-    () => props.product?.contract_categories ?? [],
+    () => product.value?.contract_categories ?? [],
 );
 
 const filteredContractCategories = computed(() => {
@@ -60,7 +98,7 @@ const filteredContractCategories = computed(() => {
 });
 
 // Paket Regular - scale selector
-const regularPackages = computed(() => props.product?.regular_packages ?? null);
+const regularPackages = computed(() => product.value?.regular_packages ?? null);
 
 const selectedScale = ref(
     regularPackages.value?.default_scale ??
@@ -81,7 +119,7 @@ const selectScale = (key) => {
 
 // Berlangganan Corporate Secretary - PMDN/PMA toggle
 const corporateSecretary = computed(
-    () => props.product?.corporate_secretary ?? null,
+    () => product.value?.corporate_secretary ?? null,
 );
 const corporateType = ref("pmdn");
 
@@ -323,8 +361,7 @@ const currentCorporatePackages = computed(
                                                     selectedScale === scale.key
                                                         ? 'rounded-b-lg'
                                                         : '',
-                                                    row.label ===
-                                                    'Biaya Perbulan'
+                                                    ri === regularPackages.rows.length - 1
                                                         ? 'text-primary font-bold'
                                                         : selectedScale ===
                                                             scale.key
@@ -387,7 +424,7 @@ const currentCorporatePackages = computed(
                                             :key="`mcell-${scale.key}-${ri}`"
                                             class="flex items-center justify-between gap-3 py-2"
                                             :class="
-                                                row.label === 'Biaya Perbulan'
+                                                ri === regularPackages.rows.length - 1
                                                     ? 'pt-3'
                                                     : ''
                                             "
@@ -395,8 +432,7 @@ const currentCorporatePackages = computed(
                                             <span
                                                 class="text-[11px]"
                                                 :class="
-                                                    row.label ===
-                                                    'Biaya Perbulan'
+                                                    ri === regularPackages.rows.length - 1
                                                         ? 'font-semibold text-[#1A1B18] text-[12px]'
                                                         : 'text-[#686964]'
                                                 "
@@ -406,8 +442,7 @@ const currentCorporatePackages = computed(
                                             <span
                                                 class="text-right"
                                                 :class="
-                                                    row.label ===
-                                                    'Biaya Perbulan'
+                                                    ri === regularPackages.rows.length - 1
                                                         ? 'text-primary font-bold text-[14px]'
                                                         : 'text-[#3D3D3A] font-medium text-[11px]'
                                                 "

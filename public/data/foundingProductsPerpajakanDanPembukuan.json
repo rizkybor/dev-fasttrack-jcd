@@ -1,287 +1,1019 @@
 [
     {
         "id": 1,
-        "name": "Akuntansi & Pelaporan Pajak",
+        "name": {
+            "id": "Akuntansi & Pelaporan Pajak",
+            "en": "Accounting & Tax Reporting",
+            "zh": "会计与税务申报"
+        },
         "price": "4000000",
         "price_label": "Rp 4.000.000",
         "paket_count": 4,
-        "excerpt": "Layanan akuntansi dan pembukuan profesional untuk mendukung pertumbuhan bisnis perusahaan Anda.",
+        "excerpt": {
+            "id": "Layanan akuntansi dan pembukuan profesional untuk mendukung pertumbuhan bisnis perusahaan Anda.",
+            "en": "Professional accounting and bookkeeping services to support the growth of your company's business.",
+            "zh": "专业的会计及簿记服务，支持贵公司业务的增长。"
+        },
         "detail_path": "/perpajakan-dan-pembukuan/1",
         "image": "",
-        "penjelasan_umum": [
-            { "type": "title", "text": "Solusi Administrasi Keuangan yang Akurat untuk Mendukung Pertumbuhan Bisnis" },
-            "Laporan keuangan yang tertata dengan baik merupakan fondasi penting dalam pengelolaan perusahaan. Selain berfungsi sebagai alat pengambilan keputusan, laporan keuangan juga menjadi dasar dalam perencanaan bisnis, pengajuan pembiayaan, pelaporan pajak, evaluasi kinerja usaha, hingga pemenuhan kewajiban kepada investor dan pemangku kepentingan lainnya.",
-            "Namun dalam praktiknya, banyak perusahaan yang masih menghadapi berbagai kendala dalam pengelolaan administrasi keuangan, mulai dari pencatatan transaksi yang tidak teratur, dokumen pendukung yang tidak lengkap, hingga laporan keuangan yang belum sesuai dengan standar akuntansi dan kebutuhan perpajakan.",
-            "Pembukuan merupakan proses pencatatan seluruh transaksi keuangan perusahaan secara sistematis dan berkesinambungan. Proses ini mencakup:",
-            { "type": "bullets", "items": [
-                "Pencatatan pemasukan dan pengeluaran;",
-                "Pencatatan penjualan dan pembelian;",
-                "Pencatatan aset dan kewajiban;",
-                "Rekonsiliasi rekening bank;",
-                "Pengelolaan piutang dan utang;",
-                "Penyusunan jurnal dan buku besar;",
-                "Penyusunan laporan keuangan berkala."
-            ]}
-        ],
-        "sections": [
-            {
-                "id": "mengapa-laporan-keuangan",
-                "type": "grid_check_desc",
-                "title": "MENGAPA LAPORAN KEUANGAN PENTING?",
-                "intro": "Laporan keuangan bukan hanya sekadar kumpulan angka. Dokumen ini merupakan gambaran menyeluruh mengenai kondisi keuangan perusahaan dalam suatu periode tertentu. Melalui laporan keuangan yang baik, perusahaan dapat:",
-                "items": [
-                    { "title": "Mengetahui posisi keuangan perusahaan secara aktual", "desc": null },
-                    { "title": "Menarik minat investor dan mitra bisnis", "desc": null },
-                    { "title": "Mengukur tingkat keuntungan dan efisiensi usaha", "desc": null },
-                    { "title": "Memenuhi kebutuhan audit dan kepatuhan perusahaan", "desc": null },
-                    { "title": "Menjadi dasar penyusunan dan pelaporan pajak", "desc": null },
-                    { "title": "Membantu manajemen dalam pengambilan keputusan strategis", "desc": null },
-                    { "title": "Mendukung pengajuan kredit atau pembiayaan kepada bank", "desc": null }
-                ]
-            },
-            {
-                "id": "layanan-penyusunan",
-                "type": "grid_check_desc",
-                "title": "LAYANAN PENYUSUNAN LAPORAN KEUANGAN",
-                "items": [
-                    {
-                        "title": "Laporan Posisi Keuangan (Neraca)",
-                        "desc": "Menunjukkan kondisi aset, kewajiban, dan ekuitas pada periode tertentu."
-                    },
-                    {
-                        "title": "Laporan Perubahan Ekuitas",
-                        "desc": "Menunjukkan perubahan modal dan saldo laba perusahaan."
-                    },
-                    {
-                        "title": "Laporan Laba Rugi",
-                        "desc": "Menampilkan pendapatan, biaya, dan hasil usaha perusahaan selama satu periode."
-                    },
-                    {
-                        "title": "Catatan atas Laporan Keuangan",
-                        "desc": "Memberikan penjelasan rinci atas informasi yang disajikan dalam laporan keuangan."
-                    },
-                    {
-                        "title": "Laporan Arus Kas",
-                        "desc": "Menggambarkan pergerakan kas masuk dan kas keluar perusahaan."
-                    }
-                ]
-            }
-        ],
-        "biaya_layanan_cards": [
-            {
-                "nama": "PERUSAHAAN PKP / OMSET LEBIH DARI 4,8 MILIAR PERTAHUN",
-                "harga": "Rp 4.000.000",
-                "gratis_konsultasi": true,
-                "mendapatkan": null,
-                "termasuk": null
-            },
-            {
-                "nama": "PERUSAHAAN NON PKP / OMSET KURANG DARI 4,8 MILIAR PERTAHUN",
-                "harga": "Rp 2.500.000",
-                "gratis_konsultasi": true,
-                "mendapatkan": null,
-                "termasuk": null
-            },
-            {
-                "nama": "PEMBUKUAN NON PKP",
-                "harga": "Rp 2.000.000",
-                "gratis_konsultasi": true,
-                "mendapatkan": null,
-                "termasuk": null
-            },
-            {
-                "nama": "PEMBUKUAN PKP",
-                "harga": "Rp 3.500.000",
-                "gratis_konsultasi": true,
-                "mendapatkan": null,
-                "termasuk": null
-            }
-        ],
+        "penjelasan_umum": {
+            "id": [
+                {
+                    "type": "title",
+                    "text": "Solusi Administrasi Keuangan yang Akurat untuk Mendukung Pertumbuhan Bisnis"
+                },
+                "Laporan keuangan yang tertata dengan baik merupakan fondasi penting dalam pengelolaan perusahaan. Selain berfungsi sebagai alat pengambilan keputusan, laporan keuangan juga menjadi dasar dalam perencanaan bisnis, pengajuan pembiayaan, pelaporan pajak, evaluasi kinerja usaha, hingga pemenuhan kewajiban kepada investor dan pemangku kepentingan lainnya.",
+                "Namun dalam praktiknya, banyak perusahaan yang masih menghadapi berbagai kendala dalam pengelolaan administrasi keuangan, mulai dari pencatatan transaksi yang tidak teratur, dokumen pendukung yang tidak lengkap, hingga laporan keuangan yang belum sesuai dengan standar akuntansi dan kebutuhan perpajakan.",
+                "Pembukuan merupakan proses pencatatan seluruh transaksi keuangan perusahaan secara sistematis dan berkesinambungan. Proses ini mencakup:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Pencatatan pemasukan dan pengeluaran;",
+                        "Pencatatan penjualan dan pembelian;",
+                        "Pencatatan aset dan kewajiban;",
+                        "Rekonsiliasi rekening bank;",
+                        "Pengelolaan piutang dan utang;",
+                        "Penyusunan jurnal dan buku besar;",
+                        "Penyusunan laporan keuangan berkala."
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "type": "title",
+                    "text": "Accurate Financial Administration Solutions to Support Business Growth"
+                },
+                "Well-organized financial statements are an important foundation in company management. Besides serving as a decision-making tool, financial statements also serve as the basis for business planning, financing applications, tax reporting, business performance evaluation, and fulfilling obligations to investors and other stakeholders.",
+                "However, in practice, many companies still face various obstacles in managing financial administration, ranging from irregular transaction recording and incomplete supporting documents to financial statements that do not yet comply with accounting standards and tax requirements.",
+                "Bookkeeping is the process of systematically and continuously recording all of a company's financial transactions. This process includes:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Recording of income and expenses;",
+                        "Recording of sales and purchases;",
+                        "Recording of assets and liabilities;",
+                        "Bank account reconciliation;",
+                        "Management of receivables and payables;",
+                        "Preparation of journals and general ledgers;",
+                        "Preparation of periodic financial statements."
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "type": "title",
+                    "text": "精准的财务管理解决方案，助力业务增长"
+                },
+                "条理清晰的财务报表是公司管理的重要基础。除了作为决策工具外，财务报表也是业务规划、融资申请、税务申报、经营绩效评估，以及履行对投资者及其他利益相关方义务的依据。",
+                "然而在实践中，许多企业在财务管理方面仍面临各种障碍，从交易记录不规范、支持文件不完整，到财务报表尚未符合会计准则及税务要求等问题。",
+                "簿记是系统且持续记录公司全部财务交易的流程。此流程包括：",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "收入与支出的记录；",
+                        "销售与采购的记录；",
+                        "资产与负债的记录；",
+                        "银行账户对账；",
+                        "应收账款及应付账款管理；",
+                        "日记账及总账的编制；",
+                        "定期财务报表的编制。"
+                    ]
+                }
+            ]
+        },
+        "sections": {
+            "id": [
+                {
+                    "id": "mengapa-laporan-keuangan",
+                    "type": "grid_check_desc",
+                    "title": "MENGAPA LAPORAN KEUANGAN PENTING?",
+                    "intro": "Laporan keuangan bukan hanya sekadar kumpulan angka. Dokumen ini merupakan gambaran menyeluruh mengenai kondisi keuangan perusahaan dalam suatu periode tertentu. Melalui laporan keuangan yang baik, perusahaan dapat:",
+                    "items": [
+                        {
+                            "title": "Mengetahui posisi keuangan perusahaan secara aktual",
+                            "desc": null
+                        },
+                        {
+                            "title": "Menarik minat investor dan mitra bisnis",
+                            "desc": null
+                        },
+                        {
+                            "title": "Mengukur tingkat keuntungan dan efisiensi usaha",
+                            "desc": null
+                        },
+                        {
+                            "title": "Memenuhi kebutuhan audit dan kepatuhan perusahaan",
+                            "desc": null
+                        },
+                        {
+                            "title": "Menjadi dasar penyusunan dan pelaporan pajak",
+                            "desc": null
+                        },
+                        {
+                            "title": "Membantu manajemen dalam pengambilan keputusan strategis",
+                            "desc": null
+                        },
+                        {
+                            "title": "Mendukung pengajuan kredit atau pembiayaan kepada bank",
+                            "desc": null
+                        }
+                    ]
+                },
+                {
+                    "id": "layanan-penyusunan",
+                    "type": "grid_check_desc",
+                    "title": "LAYANAN PENYUSUNAN LAPORAN KEUANGAN",
+                    "items": [
+                        {
+                            "title": "Laporan Posisi Keuangan (Neraca)",
+                            "desc": "Menunjukkan kondisi aset, kewajiban, dan ekuitas pada periode tertentu."
+                        },
+                        {
+                            "title": "Laporan Perubahan Ekuitas",
+                            "desc": "Menunjukkan perubahan modal dan saldo laba perusahaan."
+                        },
+                        {
+                            "title": "Laporan Laba Rugi",
+                            "desc": "Menampilkan pendapatan, biaya, dan hasil usaha perusahaan selama satu periode."
+                        },
+                        {
+                            "title": "Catatan atas Laporan Keuangan",
+                            "desc": "Memberikan penjelasan rinci atas informasi yang disajikan dalam laporan keuangan."
+                        },
+                        {
+                            "title": "Laporan Arus Kas",
+                            "desc": "Menggambarkan pergerakan kas masuk dan kas keluar perusahaan."
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "mengapa-laporan-keuangan",
+                    "type": "grid_check_desc",
+                    "title": "WHY ARE FINANCIAL STATEMENTS IMPORTANT?",
+                    "intro": "Financial statements are not merely a collection of numbers. This document is a comprehensive picture of a company's financial condition over a certain period. Through good financial statements, a company can:",
+                    "items": [
+                        {
+                            "title": "Know the company's actual financial position",
+                            "desc": null
+                        },
+                        {
+                            "title": "Attract the interest of investors and business partners",
+                            "desc": null
+                        },
+                        {
+                            "title": "Measure the level of profitability and business efficiency",
+                            "desc": null
+                        },
+                        {
+                            "title": "Fulfill company audit and compliance needs",
+                            "desc": null
+                        },
+                        {
+                            "title": "Serve as the basis for tax preparation and reporting",
+                            "desc": null
+                        },
+                        {
+                            "title": "Help management in strategic decision-making",
+                            "desc": null
+                        },
+                        {
+                            "title": "Support credit or financing applications to banks",
+                            "desc": null
+                        }
+                    ]
+                },
+                {
+                    "id": "layanan-penyusunan",
+                    "type": "grid_check_desc",
+                    "title": "FINANCIAL STATEMENT PREPARATION SERVICES",
+                    "items": [
+                        {
+                            "title": "Statement of Financial Position (Balance Sheet)",
+                            "desc": "Shows the condition of assets, liabilities, and equity in a certain period."
+                        },
+                        {
+                            "title": "Statement of Changes in Equity",
+                            "desc": "Shows changes in the company's capital and retained earnings balance."
+                        },
+                        {
+                            "title": "Profit and Loss Statement",
+                            "desc": "Shows the company's revenue, costs, and business results over a period."
+                        },
+                        {
+                            "title": "Notes to the Financial Statements",
+                            "desc": "Provides detailed explanations of the information presented in the financial statements."
+                        },
+                        {
+                            "title": "Cash Flow Statement",
+                            "desc": "Describes the movement of the company's cash inflows and outflows."
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "mengapa-laporan-keuangan",
+                    "type": "grid_check_desc",
+                    "title": "为何财务报表如此重要？",
+                    "intro": "财务报表不仅仅是数字的集合。该文件全面反映了公司在特定期间内的财务状况。通过完善的财务报表，公司能够：",
+                    "items": [
+                        {
+                            "title": "了解公司实际的财务状况",
+                            "desc": null
+                        },
+                        {
+                            "title": "吸引投资者及商业伙伴的兴趣",
+                            "desc": null
+                        },
+                        {
+                            "title": "衡量盈利水平及经营效率",
+                            "desc": null
+                        },
+                        {
+                            "title": "满足公司审计及合规需求",
+                            "desc": null
+                        },
+                        {
+                            "title": "作为税务编制及申报的依据",
+                            "desc": null
+                        },
+                        {
+                            "title": "协助管理层作出战略决策",
+                            "desc": null
+                        },
+                        {
+                            "title": "支持向银行申请信贷或融资",
+                            "desc": null
+                        }
+                    ]
+                },
+                {
+                    "id": "layanan-penyusunan",
+                    "type": "grid_check_desc",
+                    "title": "财务报表编制服务",
+                    "items": [
+                        {
+                            "title": "财务状况表（资产负债表）",
+                            "desc": "显示特定期间内资产、负债及权益的状况。"
+                        },
+                        {
+                            "title": "权益变动表",
+                            "desc": "显示公司资本及留存收益余额的变动。"
+                        },
+                        {
+                            "title": "损益表",
+                            "desc": "显示公司在一段期间内的收入、成本及经营成果。"
+                        },
+                        {
+                            "title": "财务报表附注",
+                            "desc": "对财务报表中所呈现的信息提供详细说明。"
+                        },
+                        {
+                            "title": "现金流量表",
+                            "desc": "反映公司现金流入及流出的变动情况。"
+                        }
+                    ]
+                }
+            ]
+        },
+        "biaya_layanan_cards": {
+            "id": [
+                {
+                    "nama": "PERUSAHAAN PKP / OMSET LEBIH DARI 4,8 MILIAR PERTAHUN",
+                    "harga": "Rp 4.000.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                },
+                {
+                    "nama": "PERUSAHAAN NON PKP / OMSET KURANG DARI 4,8 MILIAR PERTAHUN",
+                    "harga": "Rp 2.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                },
+                {
+                    "nama": "PEMBUKUAN NON PKP",
+                    "harga": "Rp 2.000.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                },
+                {
+                    "nama": "PEMBUKUAN PKP",
+                    "harga": "Rp 3.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                }
+            ],
+            "en": [
+                {
+                    "nama": "PKP COMPANY / TURNOVER OVER 4.8 BILLION PER YEAR",
+                    "harga": "Rp 4.000.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                },
+                {
+                    "nama": "NON-PKP COMPANY / TURNOVER UNDER 4.8 BILLION PER YEAR",
+                    "harga": "Rp 2.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                },
+                {
+                    "nama": "NON-PKP BOOKKEEPING",
+                    "harga": "Rp 2.000.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                },
+                {
+                    "nama": "PKP BOOKKEEPING",
+                    "harga": "Rp 3.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                }
+            ],
+            "zh": [
+                {
+                    "nama": "PKP企业/年营业额超过48亿印尼盾",
+                    "harga": "Rp 4.000.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                },
+                {
+                    "nama": "非PKP企业/年营业额低于48亿印尼盾",
+                    "harga": "Rp 2.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                },
+                {
+                    "nama": "非PKP簿记",
+                    "harga": "Rp 2.000.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                },
+                {
+                    "nama": "PKP簿记",
+                    "harga": "Rp 3.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": null,
+                    "termasuk": null
+                }
+            ]
+        },
         "biaya_layanan_single": null,
-        "faq": []
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 2,
-        "name": "Jasa Lapor SPT Pribadi",
+        "name": {
+            "id": "Jasa Lapor SPT Pribadi",
+            "en": "Personal Tax Return Filing Service",
+            "zh": "个人纳税申报表（SPT）申报服务"
+        },
         "price": "2500000",
         "price_label": "Rp 2.500.000",
         "paket_count": 1,
-        "excerpt": "Layanan pelaporan SPT Tahunan Orang Pribadi secara profesional dan akurat sesuai ketentuan pajak.",
+        "excerpt": {
+            "id": "Layanan pelaporan SPT Tahunan Orang Pribadi secara profesional dan akurat sesuai ketentuan pajak.",
+            "en": "Professional and accurate Annual Individual Tax Return filing service in accordance with tax regulations.",
+            "zh": "依据税法规定，提供专业且准确的个人年度纳税申报表（SPT）申报服务。"
+        },
         "detail_path": "/perpajakan-dan-pembukuan/2",
         "image": "",
-        "penjelasan_umum": [
-            "Pelaporan Surat Pemberitahuan (SPT) Tahunan Orang Pribadi merupakan kewajiban yang harus dipenuhi oleh setiap Wajib Pajak yang telah memiliki Nomor Pokok Wajib Pajak (NPWP) dan memenuhi ketentuan perpajakan yang berlaku. Meskipun proses pelaporan kini telah dilakukan secara elektronik, banyak Wajib Pajak yang masih menghadapi kendala dalam mengidentifikasi jenis formulir yang tepat, melaporkan harta dan kewajiban, maupun memastikan bahwa data yang disampaikan telah sesuai dengan ketentuan Direktorat Jenderal Pajak.",
-            "Selain menjalankan kewajiban hukum, pelaporan SPT Tahunan memiliki peran penting dalam menjaga status kepatuhan perpajakan Wajib Pajak, pelaporan yang tepat dan akurat dapat membantu:",
-            { "type": "bullets", "items": [
-                "Menghindari sanksi administrasi dan denda keterlambatan",
-                "Memastikan bahwa data perpajakan tercatat dengan benar",
-                "Mendukung kebutuhan administrasi perbankan dan investasi",
-                "Menjaga reputasi kepatuhan perpajakan pribadi",
-                "Mengurangi risiko koreksi dan pemeriksaan di kemudian hari"
-            ]}
-        ],
-        "sections": [
-            {
-                "id": "kategori-wajib-pajak",
-                "type": "grid_check_desc",
-                "title": "KATEGORI WAJIB PAJAK ORANG PRIBADI",
-                "items": [
-                    {
-                        "title": "Karyawan",
-                        "desc": "Pekerja yang memperoleh penghasilan dari satu atau lebih pemberi kerja dan yang wajib menyampaikan SPT Tahunan setiap tahun pajak."
-                    },
-                    {
-                        "title": "Investor dan Pemilik Aset",
-                        "desc": "Individu yang memiliki penghasilan dari investasi; dividen, bunga, sewa, maupun sumber penghasilan lainnya."
-                    },
-                    {
-                        "title": "Profesional dan Pekerja Independen",
-                        "desc": "Konsultan, dokter, pengacara, arsitek, desainer, content creator, influencer, freelancer, maupun profesi lainnya yang memperoleh penghasilan secara mandiri."
-                    },
-                    {
-                        "title": "Wajib Pajak dengan Penghasilan dari Berbagai Sumber",
-                        "desc": "Mereka yang menerima penghasilan dari beberapa perusahaan, usaha sampingan, investasi, atau aktivitas ekonominya."
-                    },
-                    {
-                        "title": "Pengusaha dan Wiraswasta",
-                        "desc": "Pemilik usaha yang menjalankan kegiatan bisnis secara perseorangan dan memiliki kewajiban pelaporan perpajakan pribadi."
-                    }
-                ]
-            },
-            {
-                "id": "ruang-lingkup-pribadi",
-                "type": "numbered_detail",
-                "title": "RUANG LINGKUP LAYANAN",
-                "items": [
-                    {
-                        "title": "Pemeriksaan Dokumen Pajak",
-                        "desc": "Melakukan pemeriksaan terhadap:",
-                        "bullets": [
-                            "Bukti potong penghasilan;",
-                            "Rekapitulasi penghasilan;",
-                            "Data harta dan kewajiban;",
-                            "Investasi dan aset;",
-                            "Dokumen pendukung lainnya."
-                        ]
-                    },
-                    {
-                        "title": "Analisis Kewajiban Perpajakan",
-                        "desc": "Memastikan penghasilan dan data perpajakan telah dicatat sesuai ketentuan yang berlaku."
-                    },
-                    {
-                        "title": "Penyusunan dan Pengisian SPT",
-                        "desc": "Membantu pengisian formulir SPT yang sesuai dengan profil dan sumber penghasilan Wajib Pajak."
-                    },
-                    {
-                        "title": "Pelaporan Elektronik",
-                        "desc": "Penyampaian SPT melalui sistem administrasi perpajakan yang berlaku."
-                    },
-                    {
-                        "title": "Konsultasi Perpajakan",
-                        "desc": "Memberikan penjelasan dan pendampingan terkait kewajiban perpajakan pribadi serta langkah-langkah yang perlu dilakukan untuk menjaga kepatuhan.",
-                        "bullets": [
-                            "Semua proses dilakukan secara online dan remote.",
-                            "Koordinasi via chat/telepon sesuai kebutuhan."
-                        ]
-                    }
-                ]
-            }
-        ],
-        "biaya_layanan_single": {
-            "nama": "SURAT PEMBERITAHUAN (SPT) TAHUNAN ORANG PRIBADI",
-            "harga": "Rp 2.500.000",
-            "gratis_konsultasi": true,
-            "mendapatkan": [
-                "Rekapitulasi dan Pengecekan data penghasilan & bukti potong",
-                "Rekapitulasi laporan aset & utang",
-                "Submit online & bukti pelaporan"
+        "penjelasan_umum": {
+            "id": [
+                "Pelaporan Surat Pemberitahuan (SPT) Tahunan Orang Pribadi merupakan kewajiban yang harus dipenuhi oleh setiap Wajib Pajak yang telah memiliki Nomor Pokok Wajib Pajak (NPWP) dan memenuhi ketentuan perpajakan yang berlaku. Meskipun proses pelaporan kini telah dilakukan secara elektronik, banyak Wajib Pajak yang masih menghadapi kendala dalam mengidentifikasi jenis formulir yang tepat, melaporkan harta dan kewajiban, maupun memastikan bahwa data yang disampaikan telah sesuai dengan ketentuan Direktorat Jenderal Pajak.",
+                "Selain menjalankan kewajiban hukum, pelaporan SPT Tahunan memiliki peran penting dalam menjaga status kepatuhan perpajakan Wajib Pajak, pelaporan yang tepat dan akurat dapat membantu:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Menghindari sanksi administrasi dan denda keterlambatan",
+                        "Memastikan bahwa data perpajakan tercatat dengan benar",
+                        "Mendukung kebutuhan administrasi perbankan dan investasi",
+                        "Menjaga reputasi kepatuhan perpajakan pribadi",
+                        "Mengurangi risiko koreksi dan pemeriksaan di kemudian hari"
+                    ]
+                }
             ],
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+            "en": [
+                "Filing the Annual Individual Tax Return (SPT) is an obligation that must be fulfilled by every taxpayer who has a Tax ID (NPWP) and meets applicable tax provisions. Although the filing process is now done electronically, many taxpayers still face obstacles in identifying the correct form type, reporting assets and liabilities, and ensuring that the submitted data complies with the provisions of the Directorate General of Taxes.",
+                "In addition to fulfilling a legal obligation, filing the Annual Tax Return plays an important role in maintaining a taxpayer's tax compliance status; accurate and proper filing can help:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Avoid administrative sanctions and late-filing penalties",
+                        "Ensure that tax data is recorded correctly",
+                        "Support banking and investment administration needs",
+                        "Maintain personal tax compliance reputation",
+                        "Reduce the risk of future corrections and audits"
+                    ]
+                }
+            ],
+            "zh": [
+                "个人年度纳税申报表（SPT）的申报是每位已拥有税号（NPWP）且符合现行税法规定的纳税人须履行的义务。尽管申报流程现已实现电子化，但许多纳税人在确定正确的表格类型、申报资产及负债，以及确保所提交数据符合税务总局规定方面仍面临困难。",
+                "除履行法律义务外，年度纳税申报表的申报在维持纳税人税务合规状态方面也发挥着重要作用，准确恰当的申报能够协助：",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "避免行政处罚及逾期罚款",
+                        "确保税务数据被正确记录",
+                        "支持银行及投资相关的行政需求",
+                        "维护个人税务合规声誉",
+                        "降低日后被更正及审查的风险"
+                    ]
+                }
+            ]
+        },
+        "sections": {
+            "id": [
+                {
+                    "id": "kategori-wajib-pajak",
+                    "type": "grid_check_desc",
+                    "title": "KATEGORI WAJIB PAJAK ORANG PRIBADI",
+                    "items": [
+                        {
+                            "title": "Karyawan",
+                            "desc": "Pekerja yang memperoleh penghasilan dari satu atau lebih pemberi kerja dan yang wajib menyampaikan SPT Tahunan setiap tahun pajak."
+                        },
+                        {
+                            "title": "Investor dan Pemilik Aset",
+                            "desc": "Individu yang memiliki penghasilan dari investasi; dividen, bunga, sewa, maupun sumber penghasilan lainnya."
+                        },
+                        {
+                            "title": "Profesional dan Pekerja Independen",
+                            "desc": "Konsultan, dokter, pengacara, arsitek, desainer, content creator, influencer, freelancer, maupun profesi lainnya yang memperoleh penghasilan secara mandiri."
+                        },
+                        {
+                            "title": "Wajib Pajak dengan Penghasilan dari Berbagai Sumber",
+                            "desc": "Mereka yang menerima penghasilan dari beberapa perusahaan, usaha sampingan, investasi, atau aktivitas ekonominya."
+                        },
+                        {
+                            "title": "Pengusaha dan Wiraswasta",
+                            "desc": "Pemilik usaha yang menjalankan kegiatan bisnis secara perseorangan dan memiliki kewajiban pelaporan perpajakan pribadi."
+                        }
+                    ]
+                },
+                {
+                    "id": "ruang-lingkup-pribadi",
+                    "type": "numbered_detail",
+                    "title": "RUANG LINGKUP LAYANAN",
+                    "items": [
+                        {
+                            "title": "Pemeriksaan Dokumen Pajak",
+                            "desc": "Melakukan pemeriksaan terhadap:",
+                            "bullets": [
+                                "Bukti potong penghasilan;",
+                                "Rekapitulasi penghasilan;",
+                                "Data harta dan kewajiban;",
+                                "Investasi dan aset;",
+                                "Dokumen pendukung lainnya."
+                            ]
+                        },
+                        {
+                            "title": "Analisis Kewajiban Perpajakan",
+                            "desc": "Memastikan penghasilan dan data perpajakan telah dicatat sesuai ketentuan yang berlaku."
+                        },
+                        {
+                            "title": "Penyusunan dan Pengisian SPT",
+                            "desc": "Membantu pengisian formulir SPT yang sesuai dengan profil dan sumber penghasilan Wajib Pajak."
+                        },
+                        {
+                            "title": "Pelaporan Elektronik",
+                            "desc": "Penyampaian SPT melalui sistem administrasi perpajakan yang berlaku."
+                        },
+                        {
+                            "title": "Konsultasi Perpajakan",
+                            "desc": "Memberikan penjelasan dan pendampingan terkait kewajiban perpajakan pribadi serta langkah-langkah yang perlu dilakukan untuk menjaga kepatuhan.",
+                            "bullets": [
+                                "Semua proses dilakukan secara online dan remote.",
+                                "Koordinasi via chat/telepon sesuai kebutuhan."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "kategori-wajib-pajak",
+                    "type": "grid_check_desc",
+                    "title": "CATEGORIES OF INDIVIDUAL TAXPAYERS",
+                    "items": [
+                        {
+                            "title": "Employees",
+                            "desc": "Workers who earn income from one or more employers and are required to file an Annual Tax Return every tax year."
+                        },
+                        {
+                            "title": "Investors and Asset Owners",
+                            "desc": "Individuals who earn income from investments; dividends, interest, rent, or other sources of income."
+                        },
+                        {
+                            "title": "Professionals and Independent Workers",
+                            "desc": "Consultants, doctors, lawyers, architects, designers, content creators, influencers, freelancers, or other professionals who earn income independently."
+                        },
+                        {
+                            "title": "Taxpayers with Income from Various Sources",
+                            "desc": "Those who receive income from several companies, side businesses, investments, or other economic activities."
+                        },
+                        {
+                            "title": "Entrepreneurs and the Self-Employed",
+                            "desc": "Business owners who conduct business activities individually and have personal tax reporting obligations."
+                        }
+                    ]
+                },
+                {
+                    "id": "ruang-lingkup-pribadi",
+                    "type": "numbered_detail",
+                    "title": "SCOPE OF SERVICES",
+                    "items": [
+                        {
+                            "title": "Tax Document Review",
+                            "desc": "Conducting a review of:",
+                            "bullets": [
+                                "Income withholding slips;",
+                                "Income recapitulation;",
+                                "Asset and liability data;",
+                                "Investments and assets;",
+                                "Other supporting documents."
+                            ]
+                        },
+                        {
+                            "title": "Tax Obligation Analysis",
+                            "desc": "Ensuring income and tax data are recorded in accordance with applicable provisions."
+                        },
+                        {
+                            "title": "Preparation and Completion of the Tax Return",
+                            "desc": "Assisting in completing the tax return form in accordance with the taxpayer's profile and sources of income."
+                        },
+                        {
+                            "title": "Electronic Filing",
+                            "desc": "Submission of the tax return through the applicable tax administration system."
+                        },
+                        {
+                            "title": "Tax Consultation",
+                            "desc": "Providing explanations and assistance regarding personal tax obligations and the steps needed to maintain compliance.",
+                            "bullets": [
+                                "All processes are conducted online and remotely.",
+                                "Coordination via chat/phone as needed."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "kategori-wajib-pajak",
+                    "type": "grid_check_desc",
+                    "title": "个人纳税人类别",
+                    "items": [
+                        {
+                            "title": "员工",
+                            "desc": "从一个或多个雇主处获得收入，且每个纳税年度均须提交年度纳税申报表的劳动者。"
+                        },
+                        {
+                            "title": "投资者及资产所有者",
+                            "desc": "从投资中获得收入的个人，包括股息、利息、租金或其他收入来源。"
+                        },
+                        {
+                            "title": "专业人士及独立工作者",
+                            "desc": "顾问、医生、律师、建筑师、设计师、内容创作者、网红、自由职业者及其他独立获取收入的专业人士。"
+                        },
+                        {
+                            "title": "拥有多种收入来源的纳税人",
+                            "desc": "从多家公司、副业、投资或其他经济活动中获得收入的人员。"
+                        },
+                        {
+                            "title": "企业家及个体经营者",
+                            "desc": "以个人身份经营业务并负有个人税务申报义务的企业所有者。"
+                        }
+                    ]
+                },
+                {
+                    "id": "ruang-lingkup-pribadi",
+                    "type": "numbered_detail",
+                    "title": "服务范围",
+                    "items": [
+                        {
+                            "title": "税务文件审查",
+                            "desc": "对以下内容进行审查：",
+                            "bullets": [
+                                "所得扣缴凭证；",
+                                "收入汇总表；",
+                                "资产及负债数据；",
+                                "投资及资产；",
+                                "其他支持文件。"
+                            ]
+                        },
+                        {
+                            "title": "税务义务分析",
+                            "desc": "确保收入及税务数据依据现行规定进行记录。"
+                        },
+                        {
+                            "title": "纳税申报表的编制及填写",
+                            "desc": "依据纳税人的情况及收入来源协助填写纳税申报表。"
+                        },
+                        {
+                            "title": "电子申报",
+                            "desc": "通过现行税务行政系统提交纳税申报表。"
+                        },
+                        {
+                            "title": "税务咨询",
+                            "desc": "就个人税务义务提供说明及协助，并指导为维持合规所需采取的措施。",
+                            "bullets": [
+                                "所有流程均以线上及远程方式进行。",
+                                "根据需要通过聊天/电话进行协调。"
+                            ]
+                        }
+                    ]
+                }
             ]
         },
         "biaya_layanan_cards": null,
-        "faq": []
+        "biaya_layanan_single": {
+            "id": {
+                "nama": "SURAT PEMBERITAHUAN (SPT) TAHUNAN ORANG PRIBADI",
+                "harga": "Rp 2.500.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Rekapitulasi dan Pengecekan data penghasilan & bukti potong",
+                    "Rekapitulasi laporan aset & utang",
+                    "Submit online & bukti pelaporan"
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "ANNUAL INDIVIDUAL TAX RETURN (SPT)",
+                "harga": "Rp 2.500.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Recapitulation and Verification of Income Data & Withholding Slips",
+                    "Recapitulation of Asset & Debt Reports",
+                    "Online submission & filing proof"
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "个人年度纳税申报表（SPT）",
+                "harga": "Rp 2.500.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "收入数据及扣缴凭证的汇总与核查",
+                    "资产及负债报表汇总",
+                    "线上提交及申报凭证"
+                ],
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
+                ]
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 3,
-        "name": "Jasa Lapor SPT Badan",
+        "name": {
+            "id": "Jasa Lapor SPT Badan",
+            "en": "Corporate Tax Return Filing Service",
+            "zh": "企业纳税申报表（SPT）申报服务"
+        },
         "price": "4500000",
         "price_label": "Rp 4.500.000",
         "paket_count": 1,
-        "excerpt": "Layanan pelaporan SPT Tahunan Badan secara profesional dan akurat sesuai ketentuan pajak yang berlaku.",
+        "excerpt": {
+            "id": "Layanan pelaporan SPT Tahunan Badan secara profesional dan akurat sesuai ketentuan pajak yang berlaku.",
+            "en": "Professional and accurate Annual Corporate Tax Return filing service in accordance with applicable tax regulations.",
+            "zh": "依据现行税法规定，提供专业且准确的企业年度纳税申报表（SPT）申报服务。"
+        },
         "detail_path": "/perpajakan-dan-pembukuan/3",
         "image": "",
-        "penjelasan_umum": [
-            "Pelaporan Surat Pemberitahuan (SPT) Tahunan Badan merupakan salah satu kewajiban perpajakan yang harus dipenuhi oleh setiap badan usaha yang telah memiliki Nomor Pokok Wajib Pajak (NPWP), baik Perseroan Terbatas (PT), CV, Yayasan, Koperasi, Firma, maupun bentuk badan usaha lainnya.",
-            "Meskipun terlihat sebagai proses administratif, penyusunan dan pelaporan SPT Tahunan Badan sesungguhnya membutuhkan pemahaman yang baik terhadap laporan keuangan, koreksi fiskal, rekonsiliasi perpajakan, serta ketentuan perpajakan yang terus berkembang. Kesalahan dalam pelaporan dapat, menimbulkan risiko berupa pajak kurang bayar, surat klarifikasi, pemeriksaan, hingga sanksi administrasi di kemudian hari.",
-            "SPT Tahunan Badan merupakan sarana bagi Wajib Pajak Badan untuk melaporkan seluruh aktivitas perpajakan dalam satu tahun pajak, termasuk:",
-            { "type": "bullets", "items": [
-                "Penghasilan perusahaan;",
-                "Biaya dan beban usaha;",
-                "Laba atau rugi fiskal;",
-                "Perhitungan Pajak Penghasilan (PPh) Badan;",
-                "Kredit pajak;",
-                "Aset dan kewajiban perusahaan;",
-                "Informasi perpajakan lainnya yang diwajibkan oleh Direktorat Jenderal Pajak."
-            ]},
-            "Pelaporan dilakukan melalui Formulir SPT Tahunan PPh Badan (Formulir 1771) beserta lampiran-lampiran yang dipersyaratkan."
-        ],
-        "sections": [
-            {
-                "id": "ruang-lingkup-badan",
-                "type": "grid_check_desc",
-                "title": "RUANG LINGKUP LAYANAN",
-                "items": [
-                    { "title": "Review laporan keuangan perusahaan", "desc": null },
-                    { "title": "Pendampingan proses pelaporan melalui sistem Coretax", "desc": null },
-                    { "title": "Analisis dan rekonsiliasi fiskal", "desc": null },
-                    { "title": "Pemeriksaan kelengkapan dokumen perpajakan", "desc": null },
-                    { "title": "Penyusunan SPT Tahunan PPh Badan (Formulir 1771)", "desc": null },
-                    { "title": "Penyampaian bukti penerimaan elektronik (BPE)", "desc": null },
-                    { "title": "Penyusunan lampiran-lampiran pendukung", "desc": null },
-                    { "title": "Konsultasi perpajakan terkait pelaporan tahunan", "desc": null },
-                    { "title": "Verifikasi kewajiban perpajakan perusahaan", "desc": null }
-                ]
-            },
-            {
-                "id": "dokumen-diperlukan-badan",
-                "type": "numbered_accordion",
-                "title": "DOKUMEN YANG UMUMNYA DIPERLUKAN",
-                "items": [
-                    {
-                        "title": "Untuk memudahkan proses pelaporan, perusahaan biasanya perlu menyiapkan:",
-                        "bullets": [
-                            "NPWP Badan;",
-                            "Akta dan legalitas perusahaan;",
-                            "Laporan Keuangan Tahunan Berjalan;",
-                            "Neraca dan Laporan Laba Rugi;",
-                            "Bukti pemotongan atau pemotongan pajak;",
-                            "Data aset dan kewajiban perusahaan;",
-                            "Dokumen pendukung perpajakan lainnya sesuai kondisi perusahaan."
-                        ]
-                    }
-                ]
-            }
-        ],
-        "biaya_layanan_single": {
-            "nama": "SURAT PEMBERITAHUAN (SPT) TAHUNAN BADAN",
-            "harga": "Rp 4.500.000",
-            "gratis_konsultasi": true,
-            "mendapatkan": [
-                "Pengisian 1771 induk & lampiran",
-                "Submit via Coretax",
-                "Submit online & bukti pelaporan"
+        "penjelasan_umum": {
+            "id": [
+                "Pelaporan Surat Pemberitahuan (SPT) Tahunan Badan merupakan salah satu kewajiban perpajakan yang harus dipenuhi oleh setiap badan usaha yang telah memiliki Nomor Pokok Wajib Pajak (NPWP), baik Perseroan Terbatas (PT), CV, Yayasan, Koperasi, Firma, maupun bentuk badan usaha lainnya.",
+                "Meskipun terlihat sebagai proses administratif, penyusunan dan pelaporan SPT Tahunan Badan sesungguhnya membutuhkan pemahaman yang baik terhadap laporan keuangan, koreksi fiskal, rekonsiliasi perpajakan, serta ketentuan perpajakan yang terus berkembang. Kesalahan dalam pelaporan dapat, menimbulkan risiko berupa pajak kurang bayar, surat klarifikasi, pemeriksaan, hingga sanksi administrasi di kemudian hari.",
+                "SPT Tahunan Badan merupakan sarana bagi Wajib Pajak Badan untuk melaporkan seluruh aktivitas perpajakan dalam satu tahun pajak, termasuk:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Penghasilan perusahaan;",
+                        "Biaya dan beban usaha;",
+                        "Laba atau rugi fiskal;",
+                        "Perhitungan Pajak Penghasilan (PPh) Badan;",
+                        "Kredit pajak;",
+                        "Aset dan kewajiban perusahaan;",
+                        "Informasi perpajakan lainnya yang diwajibkan oleh Direktorat Jenderal Pajak."
+                    ]
+                },
+                "Pelaporan dilakukan melalui Formulir SPT Tahunan PPh Badan (Formulir 1771) beserta lampiran-lampiran yang dipersyaratkan."
             ],
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+            "en": [
+                "Filing the Annual Corporate Tax Return (SPT) is one of the tax obligations that must be fulfilled by every business entity that has a Tax ID (NPWP), whether a Limited Liability Company (PT), CV, Foundation, Cooperative, Firm, or other form of business entity.",
+                "Although it appears to be an administrative process, preparing and filing the Annual Corporate Tax Return actually requires a good understanding of financial statements, fiscal corrections, tax reconciliation, and continuously evolving tax provisions. Errors in filing can create risks such as tax underpayment, clarification letters, audits, and administrative sanctions in the future.",
+                "The Annual Corporate Tax Return is a means for corporate taxpayers to report all tax activities within one tax year, including:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Company income;",
+                        "Business costs and expenses;",
+                        "Fiscal profit or loss;",
+                        "Calculation of Corporate Income Tax (PPh);",
+                        "Tax credits;",
+                        "Company assets and liabilities;",
+                        "Other tax information required by the Directorate General of Taxes."
+                    ]
+                },
+                "Filing is done through the Annual Corporate Income Tax Return Form (Form 1771) along with the required attachments."
+            ],
+            "zh": [
+                "企业年度纳税申报表（SPT）的申报，是每一个已拥有税号（NPWP）的经营实体须履行的税务义务之一，无论是有限责任公司（PT）、CV、基金会、合作社、合伙企业还是其他形式的经营实体。",
+                "尽管看似只是行政流程，但企业年度纳税申报表的编制及申报实际上需要对财务报表、财务调整、税务对账以及不断变化的税法规定有良好的理解。申报错误可能带来欠税、澄清函、审查乃至日后行政处罚等风险。",
+                "企业年度纳税申报表是企业纳税人申报一个纳税年度内全部税务活动的途径，包括：",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "公司收入；",
+                        "经营成本及费用；",
+                        "财务损益；",
+                        "企业所得税（PPh）计算；",
+                        "税收抵免；",
+                        "公司资产及负债；",
+                        "税务总局要求的其他税务信息。"
+                    ]
+                },
+                "通过企业所得税年度申报表（1771表格）及所需附件进行申报。"
+            ]
+        },
+        "sections": {
+            "id": [
+                {
+                    "id": "ruang-lingkup-badan",
+                    "type": "grid_check_desc",
+                    "title": "RUANG LINGKUP LAYANAN",
+                    "items": [
+                        {
+                            "title": "Review laporan keuangan perusahaan",
+                            "desc": null
+                        },
+                        {
+                            "title": "Pendampingan proses pelaporan melalui sistem Coretax",
+                            "desc": null
+                        },
+                        {
+                            "title": "Analisis dan rekonsiliasi fiskal",
+                            "desc": null
+                        },
+                        {
+                            "title": "Pemeriksaan kelengkapan dokumen perpajakan",
+                            "desc": null
+                        },
+                        {
+                            "title": "Penyusunan SPT Tahunan PPh Badan (Formulir 1771)",
+                            "desc": null
+                        },
+                        {
+                            "title": "Penyampaian bukti penerimaan elektronik (BPE)",
+                            "desc": null
+                        },
+                        {
+                            "title": "Penyusunan lampiran-lampiran pendukung",
+                            "desc": null
+                        },
+                        {
+                            "title": "Konsultasi perpajakan terkait pelaporan tahunan",
+                            "desc": null
+                        },
+                        {
+                            "title": "Verifikasi kewajiban perpajakan perusahaan",
+                            "desc": null
+                        }
+                    ]
+                },
+                {
+                    "id": "dokumen-diperlukan-badan",
+                    "type": "numbered_accordion",
+                    "title": "DOKUMEN YANG UMUMNYA DIPERLUKAN",
+                    "items": [
+                        {
+                            "title": "Untuk memudahkan proses pelaporan, perusahaan biasanya perlu menyiapkan:",
+                            "bullets": [
+                                "NPWP Badan;",
+                                "Akta dan legalitas perusahaan;",
+                                "Laporan Keuangan Tahunan Berjalan;",
+                                "Neraca dan Laporan Laba Rugi;",
+                                "Bukti pemotongan atau pemotongan pajak;",
+                                "Data aset dan kewajiban perusahaan;",
+                                "Dokumen pendukung perpajakan lainnya sesuai kondisi perusahaan."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "ruang-lingkup-badan",
+                    "type": "grid_check_desc",
+                    "title": "SCOPE OF SERVICES",
+                    "items": [
+                        {
+                            "title": "Review of the company's financial statements",
+                            "desc": null
+                        },
+                        {
+                            "title": "Assistance with the filing process through the Coretax system",
+                            "desc": null
+                        },
+                        {
+                            "title": "Fiscal analysis and reconciliation",
+                            "desc": null
+                        },
+                        {
+                            "title": "Verification of tax document completeness",
+                            "desc": null
+                        },
+                        {
+                            "title": "Preparation of the Annual Corporate Income Tax Return (Form 1771)",
+                            "desc": null
+                        },
+                        {
+                            "title": "Submission of the Electronic Receipt Proof (BPE)",
+                            "desc": null
+                        },
+                        {
+                            "title": "Preparation of supporting attachments",
+                            "desc": null
+                        },
+                        {
+                            "title": "Tax consultation related to annual filing",
+                            "desc": null
+                        },
+                        {
+                            "title": "Verification of the company's tax obligations",
+                            "desc": null
+                        }
+                    ]
+                },
+                {
+                    "id": "dokumen-diperlukan-badan",
+                    "type": "numbered_accordion",
+                    "title": "DOCUMENTS GENERALLY REQUIRED",
+                    "items": [
+                        {
+                            "title": "To facilitate the filing process, companies usually need to prepare:",
+                            "bullets": [
+                                "Corporate Tax ID (NPWP);",
+                                "Company deed and legal documents;",
+                                "Current year's Annual Financial Statements;",
+                                "Balance Sheet and Profit and Loss Statement;",
+                                "Tax withholding slips;",
+                                "Company asset and liability data;",
+                                "Other supporting tax documents according to the company's condition."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "ruang-lingkup-badan",
+                    "type": "grid_check_desc",
+                    "title": "服务范围",
+                    "items": [
+                        {
+                            "title": "审查公司财务报表",
+                            "desc": null
+                        },
+                        {
+                            "title": "协助通过Coretax系统进行申报流程",
+                            "desc": null
+                        },
+                        {
+                            "title": "财务分析及对账",
+                            "desc": null
+                        },
+                        {
+                            "title": "税务文件完整性核查",
+                            "desc": null
+                        },
+                        {
+                            "title": "企业所得税年度申报表（1771表格）的编制",
+                            "desc": null
+                        },
+                        {
+                            "title": "提交电子受理凭证（BPE）",
+                            "desc": null
+                        },
+                        {
+                            "title": "支持性附件的编制",
+                            "desc": null
+                        },
+                        {
+                            "title": "与年度申报相关的税务咨询",
+                            "desc": null
+                        },
+                        {
+                            "title": "公司税务义务核实",
+                            "desc": null
+                        }
+                    ]
+                },
+                {
+                    "id": "dokumen-diperlukan-badan",
+                    "type": "numbered_accordion",
+                    "title": "通常所需的文件",
+                    "items": [
+                        {
+                            "title": "为便于申报流程，公司通常须准备：",
+                            "bullets": [
+                                "企业税号（NPWP）；",
+                                "公司公证书及法律文件；",
+                                "本年度财务报表；",
+                                "资产负债表及损益表；",
+                                "扣缴税款凭证；",
+                                "公司资产及负债数据；",
+                                "依据公司实际情况提供的其他税务支持文件。"
+                            ]
+                        }
+                    ]
+                }
             ]
         },
         "biaya_layanan_cards": null,
-        "faq": []
+        "biaya_layanan_single": {
+            "id": {
+                "nama": "SURAT PEMBERITAHUAN (SPT) TAHUNAN BADAN",
+                "harga": "Rp 4.500.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Pengisian 1771 induk & lampiran",
+                    "Submit via Coretax",
+                    "Submit online & bukti pelaporan"
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "ANNUAL CORPORATE TAX RETURN (SPT)",
+                "harga": "Rp 4.500.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Completion of Form 1771 main form & attachments",
+                    "Submission via Coretax",
+                    "Online submission & filing proof"
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "企业年度纳税申报表（SPT）",
+                "harga": "Rp 4.500.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "1771主表及附件的填写",
+                    "通过Coretax提交",
+                    "线上提交及申报凭证"
+                ],
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
+                ]
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]

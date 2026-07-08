@@ -1,346 +1,1853 @@
 [
     {
         "id": 1,
-        "name": "Legalisasi Kedutaan",
-        "tag": "Profesional",
+        "name": {
+            "id": "Legalisasi Kedutaan",
+            "en": "Embassy Legalization",
+            "zh": "使馆认证"
+        },
+        "tag": {
+            "id": "Profesional",
+            "en": "Professional",
+            "zh": "专业"
+        },
         "price": "4500000",
         "price_label": "Hubungi Kami",
-        "duration": "Estimasi 7-12 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-12 hari kerja",
+            "en": "Estimated 7-12 business days",
+            "zh": "预计7-12个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "excerpt": "Pengesahan dokumen Indonesia oleh Kedutaan Besar negara tujuan untuk keperluan internasional.",
+        "excerpt": {
+            "id": "Pengesahan dokumen Indonesia oleh Kedutaan Besar negara tujuan untuk keperluan internasional.",
+            "en": "Ratification of Indonesian documents by the destination country's Embassy for international purposes.",
+            "zh": "由目的地国家大使馆对印尼文件进行认证，以供国际用途使用。"
+        },
         "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan",
         "baru": {
-            "penjelasan_umum": [
-                "Legalisasi Kedutaan adalah proses pengesahan dokumen oleh Kedutaan Besar atau Perwakilan Negara Asing di Indonesia agar dokumen yang diterbitkan di Indonesia dapat diakui dan digunakan secara sah di negara tujuan.",
-                "Proses ini umumnya diperlukan untuk negara-negara yang belum menjadi anggota Konvensi Apostille atau yang masih mensyaratkan legalisasi melalui perwakilan diplomatiknya."
-            ],
-            "kapan_diperlukan": {
-                "title": "KAPAN LEGALISASI KEDUTAAN DIPERLUKAN?",
-                "subtitle": "Legalisasi Kedutaan biasanya dibutuhkan untuk berbagai keperluan internasional, seperti:",
-                "items": [
-                    "Melanjutkan pendidikan di luar negeri;",
-                    "Pembukaan cabang atau kegiatan bisnis internasional;",
-                    "Pengajuan visa dan izin tinggal;",
-                    "Investasi dan transaksi lintas negara;",
-                    "Bekerja di luar negeri;",
-                    "Pengurusan dokumen hukum dan administrasi di negara tujuan.",
-                    "Pernikahan dengan warga negara asing;"
-                ]
-            },
-            "dokumen_dapat_dilegalisasi": [
-                "Ijazah dan Transkrip Nilai;",
-                "Surat Kuasa;",
-                "Akta Kelahiran;",
-                "Dokumen Perusahaan;",
-                "Akta Perkawinan;",
-                "Dokumen Notaris;",
-                "Akta Perceraian;",
-                "Dokumen Terjemahan Tersumpah;",
-                "Kartu Keluarga;",
-                "Dokumen Hukum dan Administratif lainnya.",
-                "Surat Keterangan Catatan Kepolisian (SKCK);"
-            ],
-            "negara_kawasan_subtitle": "Negara-negara berikut belum meratifikasi Konvensi Apostille (per akhir 2025), sehingga dokumen Indonesia masih memerlukan Legalisasi Kedutaan melalui jalur konsulat agar dapat digunakan secara sah di sana.",
-            "negara_kawasan": [
-                {
-                    "label": "Kawasan Timur Tengah",
-                    "negara": [
-                        "Uni Emirat Arab (UEA)",
-                        "Arab Saudi",
-                        "Qatar",
-                        "Kuwait",
-                        "Mesir",
-                        "Lebanon",
-                        "Iran",
-                        "Irak",
-                        "Yordania",
-                        "Oman",
-                        "Yaman",
-                        "Suriah"
+            "id": {
+                "penjelasan_umum": [
+                    "Legalisasi Kedutaan adalah proses pengesahan dokumen oleh Kedutaan Besar atau Perwakilan Negara Asing di Indonesia agar dokumen yang diterbitkan di Indonesia dapat diakui dan digunakan secara sah di negara tujuan.",
+                    "Proses ini umumnya diperlukan untuk negara-negara yang belum menjadi anggota Konvensi Apostille atau yang masih mensyaratkan legalisasi melalui perwakilan diplomatiknya."
+                ],
+                "kapan_diperlukan": {
+                    "title": "KAPAN LEGALISASI KEDUTAAN DIPERLUKAN?",
+                    "subtitle": "Legalisasi Kedutaan biasanya dibutuhkan untuk berbagai keperluan internasional, seperti:",
+                    "items": [
+                        "Melanjutkan pendidikan di luar negeri;",
+                        "Pembukaan cabang atau kegiatan bisnis internasional;",
+                        "Pengajuan visa dan izin tinggal;",
+                        "Investasi dan transaksi lintas negara;",
+                        "Bekerja di luar negeri;",
+                        "Pengurusan dokumen hukum dan administrasi di negara tujuan.",
+                        "Pernikahan dengan warga negara asing;"
                     ]
                 },
-                {
-                    "label": "Kawasan Asia Tenggara (ASEAN)",
-                    "negara": [
-                        "Malaysia*",
-                        "Thailand",
-                        "Laos",
-                        "Kamboja",
-                        "Myanmar",
-                        "Timor Leste",
-                        "Vietnam**"
-                    ]
-                },
-                {
-                    "label": "Kawasan Asia Lainnya",
-                    "negara": [
-                        "Korea Utara",
-                        "Sri Lanka",
-                        "Maladewa",
-                        "Afganistan",
-                        "Bangladesh"
-                    ]
-                },
-                {
-                    "label": "Kawasan Afrika & Amerika",
-                    "negara": [
-                        "Aljazair (Algeria)***",
-                        "Sudan",
-                        "Maroko",
-                        "Tunisia",
-                        "Nigeria",
-                        "Etiopia",
-                        "Kuba"
-                    ]
+                "dokumen_dapat_dilegalisasi": [
+                    "Ijazah dan Transkrip Nilai;",
+                    "Surat Kuasa;",
+                    "Akta Kelahiran;",
+                    "Dokumen Perusahaan;",
+                    "Akta Perkawinan;",
+                    "Dokumen Notaris;",
+                    "Akta Perceraian;",
+                    "Dokumen Terjemahan Tersumpah;",
+                    "Kartu Keluarga;",
+                    "Dokumen Hukum dan Administratif lainnya.",
+                    "Surat Keterangan Catatan Kepolisian (SKCK);"
+                ],
+                "negara_kawasan_subtitle": "Negara-negara berikut belum meratifikasi Konvensi Apostille (per akhir 2025), sehingga dokumen Indonesia masih memerlukan Legalisasi Kedutaan melalui jalur konsulat agar dapat digunakan secara sah di sana.",
+                "negara_kawasan": [
+                    {
+                        "label": "Kawasan Timur Tengah",
+                        "negara": [
+                            "Uni Emirat Arab (UEA)",
+                            "Arab Saudi",
+                            "Qatar",
+                            "Kuwait",
+                            "Mesir",
+                            "Lebanon",
+                            "Iran",
+                            "Irak",
+                            "Yordania",
+                            "Oman",
+                            "Yaman",
+                            "Suriah"
+                        ]
+                    },
+                    {
+                        "label": "Kawasan Asia Tenggara (ASEAN)",
+                        "negara": [
+                            "Malaysia*",
+                            "Thailand",
+                            "Laos",
+                            "Kamboja",
+                            "Myanmar",
+                            "Timor Leste",
+                            "Vietnam**"
+                        ]
+                    },
+                    {
+                        "label": "Kawasan Asia Lainnya",
+                        "negara": [
+                            "Korea Utara",
+                            "Sri Lanka",
+                            "Maladewa",
+                            "Afganistan",
+                            "Bangladesh"
+                        ]
+                    },
+                    {
+                        "label": "Kawasan Afrika & Amerika",
+                        "negara": [
+                            "Aljazair (Algeria)***",
+                            "Sudan",
+                            "Maroko",
+                            "Tunisia",
+                            "Nigeria",
+                            "Etiopia",
+                            "Kuba"
+                        ]
+                    }
+                ],
+                "negara_catatan": [
+                    "* Malaysia: Beberapa otoritas atau negara bagian tertentu masih mewajibkan legalisasi melalui jalur konsuler tradisional.",
+                    "** Vietnam telah menandatangani Konvensi Apostille dan dijadwalkan mulai berlaku pada akhir tahun 2026.",
+                    "*** Aljazair (Algeria) dijadwalkan mulai memberlakukan Apostille pada pertengahan tahun 2026."
+                ],
+                "tahapan_title": "Tahapan Legalisasi Kedutaan",
+                "tahapan": [
+                    "Pemeriksaan dan verifikasi dokumen.",
+                    "Legalisasi oleh instansi terkait sesuai jenis dokumen.",
+                    "Pengesahan oleh Kementerian yang berwenang.",
+                    "Legalisasi oleh Kedutaan Besar negara tujuan.",
+                    "Dokumen siap digunakan secara resmi di luar negeri."
+                ],
+                "mengapa_kami": [
+                    "Proses pengurusan lebih mudah dan efisien",
+                    "Penanganan berbagai jenis dokumen pribadi maupun perusahaan",
+                    "Pendampingan dari tim yang berpengalaman",
+                    "Privasi dan rahasia terjamin",
+                    "Informasi persyaratan yang jelas dan transparan",
+                    "Membantu mempercepat proses administrasi internasional"
+                ],
+                "rincian_biaya": {
+                    "items": [],
+                    "total_label": "Hubungi untuk estimasi biaya",
+                    "total_amount": "Hubungi Kami"
                 }
-            ],
-            "negara_catatan": [
-                "* Malaysia: Beberapa otoritas atau negara bagian tertentu masih mewajibkan legalisasi melalui jalur konsuler tradisional.",
-                "** Vietnam telah menandatangani Konvensi Apostille dan dijadwalkan mulai berlaku pada akhir tahun 2026.",
-                "*** Aljazair (Algeria) dijadwalkan mulai memberlakukan Apostille pada pertengahan tahun 2026."
-            ],
-            "tahapan_title": "Tahapan Legalisasi Kedutaan",
-            "tahapan": [
-                "Pemeriksaan dan verifikasi dokumen.",
-                "Legalisasi oleh instansi terkait sesuai jenis dokumen.",
-                "Pengesahan oleh Kementerian yang berwenang.",
-                "Legalisasi oleh Kedutaan Besar negara tujuan.",
-                "Dokumen siap digunakan secara resmi di luar negeri."
-            ],
-            "mengapa_kami": [
-                "Proses pengurusan lebih mudah dan efisien",
-                "Penanganan berbagai jenis dokumen pribadi maupun perusahaan",
-                "Pendampingan dari tim yang berpengalaman",
-                "Privasi dan rahasia terjamin",
-                "Informasi persyaratan yang jelas dan transparan",
-                "Membantu mempercepat proses administrasi internasional"
-            ],
-            "rincian_biaya": {
-                "items": [],
-                "total_label": "Hubungi untuk estimasi biaya",
-                "total_amount": "Hubungi Kami"
+            },
+            "en": {
+                "penjelasan_umum": [
+                    "Embassy Legalization is the process of authenticating documents by a foreign Embassy or Representative Office in Indonesia so that documents issued in Indonesia can be recognized and legally used in the destination country.",
+                    "This process is generally required for countries that are not yet members of the Apostille Convention or that still require legalization through their diplomatic representatives."
+                ],
+                "kapan_diperlukan": {
+                    "title": "WHEN IS EMBASSY LEGALIZATION REQUIRED?",
+                    "subtitle": "Embassy Legalization is typically required for various international purposes, such as:",
+                    "items": [
+                        "Continuing education abroad;",
+                        "Opening a branch or international business activities;",
+                        "Visa and residence permit applications;",
+                        "Cross-border investment and transactions;",
+                        "Working abroad;",
+                        "Processing legal and administrative documents in the destination country.",
+                        "Marriage with a foreign citizen;"
+                    ]
+                },
+                "dokumen_dapat_dilegalisasi": [
+                    "Diplomas and Academic Transcripts;",
+                    "Power of Attorney;",
+                    "Birth Certificate;",
+                    "Company Documents;",
+                    "Marriage Certificate;",
+                    "Notarial Documents;",
+                    "Divorce Certificate;",
+                    "Sworn Translation Documents;",
+                    "Family Card;",
+                    "Other Legal and Administrative Documents.",
+                    "Police Clearance Certificate (SKCK);"
+                ],
+                "negara_kawasan_subtitle": "The following countries have not yet ratified the Apostille Convention (as of the end of 2025), so Indonesian documents still require Embassy Legalization through the consular channel to be used legally there.",
+                "negara_kawasan": [
+                    {
+                        "label": "Middle East Region",
+                        "negara": [
+                            "United Arab Emirates (UAE)",
+                            "Saudi Arabia",
+                            "Qatar",
+                            "Kuwait",
+                            "Egypt",
+                            "Lebanon",
+                            "Iran",
+                            "Iraq",
+                            "Jordan",
+                            "Oman",
+                            "Yemen",
+                            "Syria"
+                        ]
+                    },
+                    {
+                        "label": "Southeast Asia Region (ASEAN)",
+                        "negara": [
+                            "Malaysia*",
+                            "Thailand",
+                            "Laos",
+                            "Cambodia",
+                            "Myanmar",
+                            "Timor-Leste",
+                            "Vietnam**"
+                        ]
+                    },
+                    {
+                        "label": "Other Asian Regions",
+                        "negara": [
+                            "North Korea",
+                            "Sri Lanka",
+                            "Maldives",
+                            "Afghanistan",
+                            "Bangladesh"
+                        ]
+                    },
+                    {
+                        "label": "Africa & Americas Region",
+                        "negara": [
+                            "Algeria***",
+                            "Sudan",
+                            "Morocco",
+                            "Tunisia",
+                            "Nigeria",
+                            "Ethiopia",
+                            "Cuba"
+                        ]
+                    }
+                ],
+                "negara_catatan": [
+                    "* Malaysia: Certain authorities or states still require legalization through the traditional consular channel.",
+                    "** Vietnam has signed the Apostille Convention, scheduled to take effect at the end of 2026.",
+                    "*** Algeria is scheduled to begin implementing the Apostille in mid-2026."
+                ],
+                "tahapan_title": "Stages of Embassy Legalization",
+                "tahapan": [
+                    "Document examination and verification.",
+                    "Legalization by the relevant agency according to the type of document.",
+                    "Ratification by the authorized Ministry.",
+                    "Legalization by the destination country's Embassy.",
+                    "Documents are ready for official use abroad."
+                ],
+                "mengapa_kami": [
+                    "Easier and more efficient processing",
+                    "Handling of various types of personal and company documents",
+                    "Assistance from an experienced team",
+                    "Privacy and confidentiality guaranteed",
+                    "Clear and transparent requirement information",
+                    "Helps accelerate international administrative processes"
+                ],
+                "rincian_biaya": {
+                    "items": [],
+                    "total_label": "Contact us for a cost estimate",
+                    "total_amount": "Contact Us"
+                }
+            },
+            "zh": {
+                "penjelasan_umum": [
+                    "使馆认证是指由驻印尼外国大使馆或代表机构对文件进行认证的流程，使在印尼签发的文件能够在目的地国家获得承认并合法使用。",
+                    "此流程通常适用于尚未加入《海牙认证公约》或仍要求通过其外交代表机构办理认证的国家。"
+                ],
+                "kapan_diperlukan": {
+                    "title": "何时需要使馆认证？",
+                    "subtitle": "使馆认证通常适用于以下各类国际用途，例如：",
+                    "items": [
+                        "赴海外继续深造；",
+                        "开设分支机构或开展国际业务活动；",
+                        "签证及居留许可申请；",
+                        "跨境投资及交易；",
+                        "在海外工作；",
+                        "在目的地国家办理法律及行政文件。",
+                        "与外国公民结婚；"
+                    ]
+                },
+                "dokumen_dapat_dilegalisasi": [
+                    "学历证书及成绩单；",
+                    "授权书；",
+                    "出生证明；",
+                    "公司文件；",
+                    "结婚证书；",
+                    "公证文件；",
+                    "离婚证书；",
+                    "宣誓翻译文件；",
+                    "户口簿；",
+                    "其他法律及行政文件。",
+                    "警方无犯罪记录证明（SKCK）；"
+                ],
+                "negara_kawasan_subtitle": "以下国家截至2025年底尚未批准《海牙认证公约》，因此印尼文件仍须通过领事渠道办理使馆认证，方可在当地合法使用。",
+                "negara_kawasan": [
+                    {
+                        "label": "中东地区",
+                        "negara": [
+                            "阿拉伯联合酋长国（UAE）",
+                            "沙特阿拉伯",
+                            "卡塔尔",
+                            "科威特",
+                            "埃及",
+                            "黎巴嫩",
+                            "伊朗",
+                            "伊拉克",
+                            "约旦",
+                            "阿曼",
+                            "也门",
+                            "叙利亚"
+                        ]
+                    },
+                    {
+                        "label": "东南亚地区（东盟）",
+                        "negara": [
+                            "马来西亚*",
+                            "泰国",
+                            "老挝",
+                            "柬埔寨",
+                            "缅甸",
+                            "东帝汶",
+                            "越南**"
+                        ]
+                    },
+                    {
+                        "label": "其他亚洲地区",
+                        "negara": [
+                            "朝鲜",
+                            "斯里兰卡",
+                            "马尔代夫",
+                            "阿富汗",
+                            "孟加拉国"
+                        ]
+                    },
+                    {
+                        "label": "非洲及美洲地区",
+                        "negara": [
+                            "阿尔及利亚***",
+                            "苏丹",
+                            "摩洛哥",
+                            "突尼斯",
+                            "尼日利亚",
+                            "埃塞俄比亚",
+                            "古巴"
+                        ]
+                    }
+                ],
+                "negara_catatan": [
+                    "* 马来西亚：部分主管机关或州属仍要求通过传统领事渠道办理认证。",
+                    "** 越南已签署《海牙认证公约》，预计于2026年底生效。",
+                    "*** 阿尔及利亚预计将于2026年年中开始实施认证。"
+                ],
+                "tahapan_title": "使馆认证阶段",
+                "tahapan": [
+                    "文件审查及核实。",
+                    "由相关机构依据文件类型进行认证。",
+                    "由有权部委进行批准。",
+                    "由目的地国家大使馆进行认证。",
+                    "文件已可在海外正式使用。"
+                ],
+                "mengapa_kami": [
+                    "办理流程更简便、更高效",
+                    "处理各类个人及公司文件",
+                    "经验丰富团队的协助",
+                    "隐私及保密有保障",
+                    "清晰透明的要求说明",
+                    "协助加快国际行政流程"
+                ],
+                "rincian_biaya": {
+                    "items": [],
+                    "total_label": "联系我们获取费用估算",
+                    "total_amount": "联系我们"
+                }
             }
         },
-        "faq": []
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 2,
-        "name": "Apostille",
-        "tag": "Profesional",
+        "name": {
+            "id": "Apostille",
+            "en": "Apostille",
+            "zh": "海牙认证（Apostille）"
+        },
+        "tag": {
+            "id": "Profesional",
+            "en": "Professional",
+            "zh": "专业"
+        },
         "price": "Hubungi Kami",
         "price_label": "Hubungi Kami",
-        "duration": "Estimasi 7-12 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-12 hari kerja",
+            "en": "Estimated 7-12 business days",
+            "zh": "预计7-12个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "excerpt": "Apostille adalah sertifikasi resmi yang diterbitkan oleh otoritas berwenang untuk mengesahkan keaslian dokumen publik agar dapat digunakan di negara lain yang telah menjadi anggota Konvensi Apostille Den Haag 1961.",
+        "excerpt": {
+            "id": "Apostille adalah sertifikasi resmi yang diterbitkan oleh otoritas berwenang untuk mengesahkan keaslian dokumen publik agar dapat digunakan di negara lain yang telah menjadi anggota Konvensi Apostille Den Haag 1961.",
+            "en": "An Apostille is an official certification issued by an authorized authority to authenticate public documents so that they can be used in other countries that are members of the 1961 Hague Apostille Convention.",
+            "zh": "海牙认证是由主管机关颁发的官方证明，用以证明公文的真实性，以便在已加入1961年《海牙认证公约》的其他国家使用。"
+        },
         "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan",
         "baru": {
-            "penjelasan_umum": [
-                "Apostille adalah sertifikasi atau pengesahan yang diberikan pada dokumen resmi agar dokumen tersebut dapat diakui secara hukum di negara-negara anggota Konvensi Den Haag 1961. Indonesia resmi menjadi anggota Konvensi Den Haag sejak 5 Januari 2022 melalui Keputusan Presiden No. 8 Tahun 2021. Dengan adanya apostille, proses legalisasi dokumen menjadi lebih sederhana karena tidak memerlukan lagi legalisasi melalui kedutaan besar negara tujuan."
-            ],
-            "dokumen_dapat_dilegalisasi_subtitle": "Berikut adalah jenis-jenis dokumen yang dapat diberikan apostille:",
-            "dokumen_dapat_dilegalisasi": [
-                "Dokumen Pendidikan;",
-                "SKCK;",
-                "Dokumen Pernikahan;",
-                "Dokumen Kesehatan;",
-                "Dokumen Perdagangan;",
-                "Dokumen Perizinan;",
-                "Dokumen Terjemahan;",
-                "Dokumen Perceraian;",
-                "Dokumen Kependudukan;",
-                "Dokumen Hak Kekayaan Intelektual (HAKI);",
-                "Dokumen Karantina;",
-                "Dokumen Notaris;",
-                "Dan Lain-lain"
-            ],
-            "negara_anggota_title": "NEGARA ANGGOTA KONVENSI APOSTILLE",
-            "negara_anggota_subtitle": "Dokumen ber-Apostille langsung diakui di seluruh negara anggota Konvensi Apostille Den Haag 1961 tanpa legalisasi kedutaan. Cari negara tujuan Anda di bawah ini.",
-            "negara_anggota": [
-                { "negara_title": "Albania", "img_flag": "/flags/al.svg" },
-                { "negara_title": "Argentina", "img_flag": "/flags/ar.svg" },
-                { "negara_title": "Armenia", "img_flag": "/flags/am.svg" },
-                { "negara_title": "Australia", "img_flag": "/flags/au.svg" },
-                { "negara_title": "Austria", "img_flag": "/flags/at.svg" },
-                { "negara_title": "Azerbaijan", "img_flag": "/flags/az.svg" },
-                { "negara_title": "Bahama", "img_flag": "/flags/bs.svg" },
-                { "negara_title": "Barbados", "img_flag": "/flags/bb.svg" },
-                { "negara_title": "Belarus", "img_flag": "/flags/by.svg" },
-                { "negara_title": "Belgia", "img_flag": "/flags/be.svg" },
-                { "negara_title": "Belize", "img_flag": "/flags/bz.svg" },
-                { "negara_title": "Bolivia", "img_flag": "/flags/bo.svg" },
-                {
-                    "negara_title": "Bosnia dan Herzegovina",
-                    "img_flag": "/flags/ba.svg"
+            "id": {
+                "penjelasan_umum": [
+                    "Apostille adalah sertifikasi atau pengesahan yang diberikan pada dokumen resmi agar dokumen tersebut dapat diakui secara hukum di negara-negara anggota Konvensi Den Haag 1961. Indonesia resmi menjadi anggota Konvensi Den Haag sejak 5 Januari 2022 melalui Keputusan Presiden No. 8 Tahun 2021. Dengan adanya apostille, proses legalisasi dokumen menjadi lebih sederhana karena tidak memerlukan lagi legalisasi melalui kedutaan besar negara tujuan."
+                ],
+                "dokumen_dapat_dilegalisasi_subtitle": "Berikut adalah jenis-jenis dokumen yang dapat diberikan apostille:",
+                "dokumen_dapat_dilegalisasi": [
+                    "Dokumen Pendidikan;",
+                    "SKCK;",
+                    "Dokumen Pernikahan;",
+                    "Dokumen Kesehatan;",
+                    "Dokumen Perdagangan;",
+                    "Dokumen Perizinan;",
+                    "Dokumen Terjemahan;",
+                    "Dokumen Perceraian;",
+                    "Dokumen Kependudukan;",
+                    "Dokumen Hak Kekayaan Intelektual (HAKI);",
+                    "Dokumen Karantina;",
+                    "Dokumen Notaris;",
+                    "Dan Lain-lain"
+                ],
+                "negara_anggota_title": "NEGARA ANGGOTA KONVENSI APOSTILLE",
+                "negara_anggota_subtitle": "Dokumen ber-Apostille langsung diakui di seluruh negara anggota Konvensi Apostille Den Haag 1961 tanpa legalisasi kedutaan. Cari negara tujuan Anda di bawah ini.",
+                "negara_anggota": [
+                    {
+                        "negara_title": "Albania",
+                        "img_flag": "/flags/al.svg"
+                    },
+                    {
+                        "negara_title": "Argentina",
+                        "img_flag": "/flags/ar.svg"
+                    },
+                    {
+                        "negara_title": "Armenia",
+                        "img_flag": "/flags/am.svg"
+                    },
+                    {
+                        "negara_title": "Australia",
+                        "img_flag": "/flags/au.svg"
+                    },
+                    {
+                        "negara_title": "Austria",
+                        "img_flag": "/flags/at.svg"
+                    },
+                    {
+                        "negara_title": "Azerbaijan",
+                        "img_flag": "/flags/az.svg"
+                    },
+                    {
+                        "negara_title": "Bahama",
+                        "img_flag": "/flags/bs.svg"
+                    },
+                    {
+                        "negara_title": "Barbados",
+                        "img_flag": "/flags/bb.svg"
+                    },
+                    {
+                        "negara_title": "Belarus",
+                        "img_flag": "/flags/by.svg"
+                    },
+                    {
+                        "negara_title": "Belgia",
+                        "img_flag": "/flags/be.svg"
+                    },
+                    {
+                        "negara_title": "Belize",
+                        "img_flag": "/flags/bz.svg"
+                    },
+                    {
+                        "negara_title": "Bolivia",
+                        "img_flag": "/flags/bo.svg"
+                    },
+                    {
+                        "negara_title": "Bosnia dan Herzegovina",
+                        "img_flag": "/flags/ba.svg"
+                    },
+                    {
+                        "negara_title": "Botswana",
+                        "img_flag": "/flags/bw.svg"
+                    },
+                    {
+                        "negara_title": "Brasil",
+                        "img_flag": "/flags/br.svg"
+                    },
+                    {
+                        "negara_title": "Bulgaria",
+                        "img_flag": "/flags/bg.svg"
+                    },
+                    {
+                        "negara_title": "Chili",
+                        "img_flag": "/flags/cl.svg"
+                    },
+                    {
+                        "negara_title": "Colombia",
+                        "img_flag": "/flags/co.svg"
+                    },
+                    {
+                        "negara_title": "Costa Rica",
+                        "img_flag": "/flags/cr.svg"
+                    },
+                    {
+                        "negara_title": "Kroasia",
+                        "img_flag": "/flags/hr.svg"
+                    },
+                    {
+                        "negara_title": "Siprus",
+                        "img_flag": "/flags/cy.svg"
+                    },
+                    {
+                        "negara_title": "Ceko",
+                        "img_flag": "/flags/cz.svg"
+                    },
+                    {
+                        "negara_title": "Denmark",
+                        "img_flag": "/flags/dk.svg"
+                    },
+                    {
+                        "negara_title": "Ekuador",
+                        "img_flag": "/flags/ec.svg"
+                    },
+                    {
+                        "negara_title": "El Salvador",
+                        "img_flag": "/flags/sv.svg"
+                    },
+                    {
+                        "negara_title": "Estonia",
+                        "img_flag": "/flags/ee.svg"
+                    },
+                    {
+                        "negara_title": "Fiji",
+                        "img_flag": "/flags/fj.svg"
+                    },
+                    {
+                        "negara_title": "Finlandia",
+                        "img_flag": "/flags/fi.svg"
+                    },
+                    {
+                        "negara_title": "Prancis",
+                        "img_flag": "/flags/fr.svg"
+                    },
+                    {
+                        "negara_title": "Georgia",
+                        "img_flag": "/flags/ge.svg"
+                    },
+                    {
+                        "negara_title": "Jerman",
+                        "img_flag": "/flags/de.svg"
+                    },
+                    {
+                        "negara_title": "Yunani",
+                        "img_flag": "/flags/gr.svg"
+                    },
+                    {
+                        "negara_title": "Guatemala",
+                        "img_flag": "/flags/gt.svg"
+                    },
+                    {
+                        "negara_title": "Honduras",
+                        "img_flag": "/flags/hn.svg"
+                    },
+                    {
+                        "negara_title": "Hongaria",
+                        "img_flag": "/flags/hu.svg"
+                    },
+                    {
+                        "negara_title": "Islandia",
+                        "img_flag": "/flags/is.svg"
+                    },
+                    {
+                        "negara_title": "India",
+                        "img_flag": "/flags/in.svg"
+                    },
+                    {
+                        "negara_title": "Indonesia",
+                        "img_flag": "/flags/id.svg"
+                    },
+                    {
+                        "negara_title": "Irlandia",
+                        "img_flag": "/flags/ie.svg"
+                    },
+                    {
+                        "negara_title": "Israel",
+                        "img_flag": "/flags/il.svg"
+                    },
+                    {
+                        "negara_title": "Italia",
+                        "img_flag": "/flags/it.svg"
+                    },
+                    {
+                        "negara_title": "Jepang",
+                        "img_flag": "/flags/jp.svg"
+                    },
+                    {
+                        "negara_title": "Kazakhstan",
+                        "img_flag": "/flags/kz.svg"
+                    },
+                    {
+                        "negara_title": "Kenya",
+                        "img_flag": "/flags/ke.svg"
+                    },
+                    {
+                        "negara_title": "Korea Selatan",
+                        "img_flag": "/flags/kr.svg"
+                    },
+                    {
+                        "negara_title": "Latvia",
+                        "img_flag": "/flags/lv.svg"
+                    },
+                    {
+                        "negara_title": "Lesotho",
+                        "img_flag": "/flags/ls.svg"
+                    },
+                    {
+                        "negara_title": "Liberia",
+                        "img_flag": "/flags/lr.svg"
+                    },
+                    {
+                        "negara_title": "Liechtenstein",
+                        "img_flag": "/flags/li.svg"
+                    },
+                    {
+                        "negara_title": "Lithuania",
+                        "img_flag": "/flags/lt.svg"
+                    },
+                    {
+                        "negara_title": "Luksemburg",
+                        "img_flag": "/flags/lu.svg"
+                    },
+                    {
+                        "negara_title": "Makedonia Utara",
+                        "img_flag": "/flags/mk.svg"
+                    },
+                    {
+                        "negara_title": "Malawi",
+                        "img_flag": "/flags/mw.svg"
+                    },
+                    {
+                        "negara_title": "Malta",
+                        "img_flag": "/flags/mt.svg"
+                    },
+                    {
+                        "negara_title": "Mauritius",
+                        "img_flag": "/flags/mu.svg"
+                    },
+                    {
+                        "negara_title": "Meksiko",
+                        "img_flag": "/flags/mx.svg"
+                    },
+                    {
+                        "negara_title": "Moldova",
+                        "img_flag": "/flags/md.svg"
+                    },
+                    {
+                        "negara_title": "Monako",
+                        "img_flag": "/flags/mc.svg"
+                    },
+                    {
+                        "negara_title": "Mongolia",
+                        "img_flag": "/flags/mn.svg"
+                    },
+                    {
+                        "negara_title": "Montenegro",
+                        "img_flag": "/flags/me.svg"
+                    },
+                    {
+                        "negara_title": "Maroko",
+                        "img_flag": "/flags/ma.svg"
+                    },
+                    {
+                        "negara_title": "Mozambik",
+                        "img_flag": "/flags/mz.svg"
+                    },
+                    {
+                        "negara_title": "Namibia",
+                        "img_flag": "/flags/na.svg"
+                    },
+                    {
+                        "negara_title": "Belanda",
+                        "img_flag": "/flags/nl.svg"
+                    },
+                    {
+                        "negara_title": "Selandia Baru",
+                        "img_flag": "/flags/nz.svg"
+                    },
+                    {
+                        "negara_title": "Nikaragua",
+                        "img_flag": "/flags/ni.svg"
+                    },
+                    {
+                        "negara_title": "Niue",
+                        "img_flag": "/flags/nu.svg"
+                    },
+                    {
+                        "negara_title": "Norwegia",
+                        "img_flag": "/flags/no.svg"
+                    },
+                    {
+                        "negara_title": "Oman",
+                        "img_flag": "/flags/om.svg"
+                    },
+                    {
+                        "negara_title": "Panama",
+                        "img_flag": "/flags/pa.svg"
+                    },
+                    {
+                        "negara_title": "Paraguay",
+                        "img_flag": "/flags/py.svg"
+                    },
+                    {
+                        "negara_title": "Peru",
+                        "img_flag": "/flags/pe.svg"
+                    },
+                    {
+                        "negara_title": "Polandia",
+                        "img_flag": "/flags/pl.svg"
+                    },
+                    {
+                        "negara_title": "Portugal",
+                        "img_flag": "/flags/pt.svg"
+                    },
+                    {
+                        "negara_title": "Rumania",
+                        "img_flag": "/flags/ro.svg"
+                    },
+                    {
+                        "negara_title": "Rusia",
+                        "img_flag": "/flags/ru.svg"
+                    },
+                    {
+                        "negara_title": "Saint Kitts dan Nevis",
+                        "img_flag": "/flags/kn.svg"
+                    },
+                    {
+                        "negara_title": "Saint Lucia",
+                        "img_flag": "/flags/lc.svg"
+                    },
+                    {
+                        "negara_title": "Saint Vincent dan Grenadines",
+                        "img_flag": "/flags/vc.svg"
+                    },
+                    {
+                        "negara_title": "San Marino",
+                        "img_flag": "/flags/sm.svg"
+                    },
+                    {
+                        "negara_title": "Senegal",
+                        "img_flag": "/flags/sn.svg"
+                    },
+                    {
+                        "negara_title": "Serbia",
+                        "img_flag": "/flags/rs.svg"
+                    },
+                    {
+                        "negara_title": "Seychelles",
+                        "img_flag": "/flags/sc.svg"
+                    },
+                    {
+                        "negara_title": "Singapura",
+                        "img_flag": "/flags/sg.svg"
+                    },
+                    {
+                        "negara_title": "Slovakia",
+                        "img_flag": "/flags/sk.svg"
+                    },
+                    {
+                        "negara_title": "Slovenia",
+                        "img_flag": "/flags/si.svg"
+                    },
+                    {
+                        "negara_title": "Afrika Selatan",
+                        "img_flag": "/flags/za.svg"
+                    },
+                    {
+                        "negara_title": "Spanyol",
+                        "img_flag": "/flags/es.svg"
+                    },
+                    {
+                        "negara_title": "Sri Lanka",
+                        "img_flag": "/flags/lk.svg"
+                    },
+                    {
+                        "negara_title": "Suriname",
+                        "img_flag": "/flags/sr.svg"
+                    },
+                    {
+                        "negara_title": "Swedia",
+                        "img_flag": "/flags/se.svg"
+                    },
+                    {
+                        "negara_title": "Swiss",
+                        "img_flag": "/flags/ch.svg"
+                    },
+                    {
+                        "negara_title": "Tanjung Verde",
+                        "img_flag": "/flags/cv.svg"
+                    },
+                    {
+                        "negara_title": "Thailand",
+                        "img_flag": "/flags/th.svg"
+                    },
+                    {
+                        "negara_title": "Tonga",
+                        "img_flag": "/flags/to.svg"
+                    },
+                    {
+                        "negara_title": "Trinidad dan Tobago",
+                        "img_flag": "/flags/tt.svg"
+                    },
+                    {
+                        "negara_title": "Turki",
+                        "img_flag": "/flags/tr.svg"
+                    },
+                    {
+                        "negara_title": "Ukraina",
+                        "img_flag": "/flags/ua.svg"
+                    },
+                    {
+                        "negara_title": "Uruguay",
+                        "img_flag": "/flags/uy.svg"
+                    },
+                    {
+                        "negara_title": "Venezuela",
+                        "img_flag": "/flags/ve.svg"
+                    },
+                    {
+                        "negara_title": "Zambia",
+                        "img_flag": "/flags/zm.svg"
+                    }
+                ],
+                "tahapan_title": "PROSES PENGURUSAN APOSTILLE",
+                "tahapan": [
+                    "Pemeriksaan dan verifikasi dokumen",
+                    "Verifikasi keabsahan dokumen",
+                    "Pengajuan permohonan Apostille",
+                    "Penerbitan Sertifikat Apostille oleh otoritas yang berwenang",
+                    "Dokumen siap digunakan di negara tujuan"
+                ],
+                "mengapa_kami": [
+                    "Proses lebih sederhana dan efisien",
+                    "Membantu mempercepat kebutuhan administrasi internasional",
+                    "Berlaku di negara-negara anggota Konvensi Apostille",
+                    "Privasi dan rahasia terjamin",
+                    "Menghemat waktu dan biaya legalisasi dokumen",
+                    "Didukung oleh tim profesional yang berpengalaman"
+                ],
+                "rincian_biaya": {
+                    "items": [],
+                    "total_label": "Estimasi Total Biaya",
+                    "total_amount": "Hubungi Kami"
                 },
-                { "negara_title": "Botswana", "img_flag": "/flags/bw.svg" },
-                { "negara_title": "Brasil", "img_flag": "/flags/br.svg" },
-                { "negara_title": "Bulgaria", "img_flag": "/flags/bg.svg" },
-                { "negara_title": "Chili", "img_flag": "/flags/cl.svg" },
-                { "negara_title": "Colombia", "img_flag": "/flags/co.svg" },
-                { "negara_title": "Costa Rica", "img_flag": "/flags/cr.svg" },
-                { "negara_title": "Kroasia", "img_flag": "/flags/hr.svg" },
-                { "negara_title": "Siprus", "img_flag": "/flags/cy.svg" },
-                { "negara_title": "Ceko", "img_flag": "/flags/cz.svg" },
-                { "negara_title": "Denmark", "img_flag": "/flags/dk.svg" },
-                { "negara_title": "Ekuador", "img_flag": "/flags/ec.svg" },
-                { "negara_title": "El Salvador", "img_flag": "/flags/sv.svg" },
-                { "negara_title": "Estonia", "img_flag": "/flags/ee.svg" },
-                { "negara_title": "Fiji", "img_flag": "/flags/fj.svg" },
-                { "negara_title": "Finlandia", "img_flag": "/flags/fi.svg" },
-                { "negara_title": "Prancis", "img_flag": "/flags/fr.svg" },
-                { "negara_title": "Georgia", "img_flag": "/flags/ge.svg" },
-                { "negara_title": "Jerman", "img_flag": "/flags/de.svg" },
-                { "negara_title": "Yunani", "img_flag": "/flags/gr.svg" },
-                { "negara_title": "Guatemala", "img_flag": "/flags/gt.svg" },
-                { "negara_title": "Honduras", "img_flag": "/flags/hn.svg" },
-                { "negara_title": "Hongaria", "img_flag": "/flags/hu.svg" },
-                { "negara_title": "Islandia", "img_flag": "/flags/is.svg" },
-                { "negara_title": "India", "img_flag": "/flags/in.svg" },
-                { "negara_title": "Indonesia", "img_flag": "/flags/id.svg" },
-                { "negara_title": "Irlandia", "img_flag": "/flags/ie.svg" },
-                { "negara_title": "Israel", "img_flag": "/flags/il.svg" },
-                { "negara_title": "Italia", "img_flag": "/flags/it.svg" },
-                { "negara_title": "Jepang", "img_flag": "/flags/jp.svg" },
-                { "negara_title": "Kazakhstan", "img_flag": "/flags/kz.svg" },
-                { "negara_title": "Kenya", "img_flag": "/flags/ke.svg" },
-                {
-                    "negara_title": "Korea Selatan",
-                    "img_flag": "/flags/kr.svg"
+                "dokumen_didapat": [],
+                "syarat": {
+                    "sections": []
                 },
-                { "negara_title": "Latvia", "img_flag": "/flags/lv.svg" },
-                { "negara_title": "Lesotho", "img_flag": "/flags/ls.svg" },
-                { "negara_title": "Liberia", "img_flag": "/flags/lr.svg" },
-                {
-                    "negara_title": "Liechtenstein",
-                    "img_flag": "/flags/li.svg"
-                },
-                { "negara_title": "Lithuania", "img_flag": "/flags/lt.svg" },
-                { "negara_title": "Luksemburg", "img_flag": "/flags/lu.svg" },
-                {
-                    "negara_title": "Makedonia Utara",
-                    "img_flag": "/flags/mk.svg"
-                },
-                { "negara_title": "Malawi", "img_flag": "/flags/mw.svg" },
-                { "negara_title": "Malta", "img_flag": "/flags/mt.svg" },
-                { "negara_title": "Mauritius", "img_flag": "/flags/mu.svg" },
-                { "negara_title": "Meksiko", "img_flag": "/flags/mx.svg" },
-                { "negara_title": "Moldova", "img_flag": "/flags/md.svg" },
-                { "negara_title": "Monako", "img_flag": "/flags/mc.svg" },
-                { "negara_title": "Mongolia", "img_flag": "/flags/mn.svg" },
-                { "negara_title": "Montenegro", "img_flag": "/flags/me.svg" },
-                { "negara_title": "Maroko", "img_flag": "/flags/ma.svg" },
-                { "negara_title": "Mozambik", "img_flag": "/flags/mz.svg" },
-                { "negara_title": "Namibia", "img_flag": "/flags/na.svg" },
-                { "negara_title": "Belanda", "img_flag": "/flags/nl.svg" },
-                {
-                    "negara_title": "Selandia Baru",
-                    "img_flag": "/flags/nz.svg"
-                },
-                { "negara_title": "Nikaragua", "img_flag": "/flags/ni.svg" },
-                { "negara_title": "Niue", "img_flag": "/flags/nu.svg" },
-                { "negara_title": "Norwegia", "img_flag": "/flags/no.svg" },
-                { "negara_title": "Oman", "img_flag": "/flags/om.svg" },
-                { "negara_title": "Panama", "img_flag": "/flags/pa.svg" },
-                { "negara_title": "Paraguay", "img_flag": "/flags/py.svg" },
-                { "negara_title": "Peru", "img_flag": "/flags/pe.svg" },
-                { "negara_title": "Polandia", "img_flag": "/flags/pl.svg" },
-                { "negara_title": "Portugal", "img_flag": "/flags/pt.svg" },
-                { "negara_title": "Rumania", "img_flag": "/flags/ro.svg" },
-                { "negara_title": "Rusia", "img_flag": "/flags/ru.svg" },
-                {
-                    "negara_title": "Saint Kitts dan Nevis",
-                    "img_flag": "/flags/kn.svg"
-                },
-                { "negara_title": "Saint Lucia", "img_flag": "/flags/lc.svg" },
-                {
-                    "negara_title": "Saint Vincent dan Grenadines",
-                    "img_flag": "/flags/vc.svg"
-                },
-                { "negara_title": "San Marino", "img_flag": "/flags/sm.svg" },
-                { "negara_title": "Senegal", "img_flag": "/flags/sn.svg" },
-                { "negara_title": "Serbia", "img_flag": "/flags/rs.svg" },
-                { "negara_title": "Seychelles", "img_flag": "/flags/sc.svg" },
-                { "negara_title": "Singapura", "img_flag": "/flags/sg.svg" },
-                { "negara_title": "Slovakia", "img_flag": "/flags/sk.svg" },
-                { "negara_title": "Slovenia", "img_flag": "/flags/si.svg" },
-                {
-                    "negara_title": "Afrika Selatan",
-                    "img_flag": "/flags/za.svg"
-                },
-                { "negara_title": "Spanyol", "img_flag": "/flags/es.svg" },
-                { "negara_title": "Sri Lanka", "img_flag": "/flags/lk.svg" },
-                { "negara_title": "Suriname", "img_flag": "/flags/sr.svg" },
-                { "negara_title": "Swedia", "img_flag": "/flags/se.svg" },
-                { "negara_title": "Swiss", "img_flag": "/flags/ch.svg" },
-                {
-                    "negara_title": "Tanjung Verde",
-                    "img_flag": "/flags/cv.svg"
-                },
-                { "negara_title": "Thailand", "img_flag": "/flags/th.svg" },
-                { "negara_title": "Tonga", "img_flag": "/flags/to.svg" },
-                {
-                    "negara_title": "Trinidad dan Tobago",
-                    "img_flag": "/flags/tt.svg"
-                },
-                { "negara_title": "Turki", "img_flag": "/flags/tr.svg" },
-                { "negara_title": "Ukraina", "img_flag": "/flags/ua.svg" },
-                { "negara_title": "Uruguay", "img_flag": "/flags/uy.svg" },
-                { "negara_title": "Venezuela", "img_flag": "/flags/ve.svg" },
-                { "negara_title": "Zambia", "img_flag": "/flags/zm.svg" }
-            ],
-            "tahapan_title": "PROSES PENGURUSAN APOSTILLE",
-            "tahapan": [
-                "Pemeriksaan dan verifikasi dokumen",
-                "Verifikasi keabsahan dokumen",
-                "Pengajuan permohonan Apostille",
-                "Penerbitan Sertifikat Apostille oleh otoritas yang berwenang",
-                "Dokumen siap digunakan di negara tujuan"
-            ],
-            "mengapa_kami": [
-                "Proses lebih sederhana dan efisien",
-                "Membantu mempercepat kebutuhan administrasi internasional",
-                "Berlaku di negara-negara anggota Konvensi Apostille",
-                "Privasi dan rahasia terjamin",
-                "Menghemat waktu dan biaya legalisasi dokumen",
-                "Didukung oleh tim profesional yang berpengalaman"
-            ],
-            "rincian_biaya": {
-                "items": [],
-                "total_label": "Estimasi Total Biaya",
-                "total_amount": "Hubungi Kami"
+                "dasar_hukum": []
             },
-            "dokumen_didapat": [],
-            "syarat": {
-                "sections": []
+            "en": {
+                "penjelasan_umum": [
+                    "An Apostille is a certification or authentication given to official documents so that they can be legally recognized in the member countries of the 1961 Hague Convention. Indonesia officially became a member of the Hague Convention on January 5, 2022, through Presidential Decree No. 8 of 2021. With the apostille, the document legalization process becomes simpler because it no longer requires legalization through the destination country's embassy."
+                ],
+                "dokumen_dapat_dilegalisasi_subtitle": "The following are types of documents that can be given an apostille:",
+                "dokumen_dapat_dilegalisasi": [
+                    "Education Documents;",
+                    "Police Clearance Certificate (SKCK);",
+                    "Marriage Documents;",
+                    "Health Documents;",
+                    "Trade Documents;",
+                    "Licensing Documents;",
+                    "Translation Documents;",
+                    "Divorce Documents;",
+                    "Civil Registration Documents;",
+                    "Intellectual Property Rights (IPR) Documents;",
+                    "Quarantine Documents;",
+                    "Notarial Documents;",
+                    "And Others"
+                ],
+                "negara_anggota_title": "APOSTILLE CONVENTION MEMBER COUNTRIES",
+                "negara_anggota_subtitle": "Apostilled documents are directly recognized in all member countries of the 1961 Hague Apostille Convention without embassy legalization. Search for your destination country below.",
+                "negara_anggota": [
+                    {
+                        "negara_title": "Albania",
+                        "img_flag": "/flags/al.svg"
+                    },
+                    {
+                        "negara_title": "Argentina",
+                        "img_flag": "/flags/ar.svg"
+                    },
+                    {
+                        "negara_title": "Armenia",
+                        "img_flag": "/flags/am.svg"
+                    },
+                    {
+                        "negara_title": "Australia",
+                        "img_flag": "/flags/au.svg"
+                    },
+                    {
+                        "negara_title": "Austria",
+                        "img_flag": "/flags/at.svg"
+                    },
+                    {
+                        "negara_title": "Azerbaijan",
+                        "img_flag": "/flags/az.svg"
+                    },
+                    {
+                        "negara_title": "Bahamas",
+                        "img_flag": "/flags/bs.svg"
+                    },
+                    {
+                        "negara_title": "Barbados",
+                        "img_flag": "/flags/bb.svg"
+                    },
+                    {
+                        "negara_title": "Belarus",
+                        "img_flag": "/flags/by.svg"
+                    },
+                    {
+                        "negara_title": "Belgium",
+                        "img_flag": "/flags/be.svg"
+                    },
+                    {
+                        "negara_title": "Belize",
+                        "img_flag": "/flags/bz.svg"
+                    },
+                    {
+                        "negara_title": "Bolivia",
+                        "img_flag": "/flags/bo.svg"
+                    },
+                    {
+                        "negara_title": "Bosnia and Herzegovina",
+                        "img_flag": "/flags/ba.svg"
+                    },
+                    {
+                        "negara_title": "Botswana",
+                        "img_flag": "/flags/bw.svg"
+                    },
+                    {
+                        "negara_title": "Brazil",
+                        "img_flag": "/flags/br.svg"
+                    },
+                    {
+                        "negara_title": "Bulgaria",
+                        "img_flag": "/flags/bg.svg"
+                    },
+                    {
+                        "negara_title": "Chile",
+                        "img_flag": "/flags/cl.svg"
+                    },
+                    {
+                        "negara_title": "Colombia",
+                        "img_flag": "/flags/co.svg"
+                    },
+                    {
+                        "negara_title": "Costa Rica",
+                        "img_flag": "/flags/cr.svg"
+                    },
+                    {
+                        "negara_title": "Croatia",
+                        "img_flag": "/flags/hr.svg"
+                    },
+                    {
+                        "negara_title": "Cyprus",
+                        "img_flag": "/flags/cy.svg"
+                    },
+                    {
+                        "negara_title": "Czech Republic",
+                        "img_flag": "/flags/cz.svg"
+                    },
+                    {
+                        "negara_title": "Denmark",
+                        "img_flag": "/flags/dk.svg"
+                    },
+                    {
+                        "negara_title": "Ecuador",
+                        "img_flag": "/flags/ec.svg"
+                    },
+                    {
+                        "negara_title": "El Salvador",
+                        "img_flag": "/flags/sv.svg"
+                    },
+                    {
+                        "negara_title": "Estonia",
+                        "img_flag": "/flags/ee.svg"
+                    },
+                    {
+                        "negara_title": "Fiji",
+                        "img_flag": "/flags/fj.svg"
+                    },
+                    {
+                        "negara_title": "Finland",
+                        "img_flag": "/flags/fi.svg"
+                    },
+                    {
+                        "negara_title": "France",
+                        "img_flag": "/flags/fr.svg"
+                    },
+                    {
+                        "negara_title": "Georgia",
+                        "img_flag": "/flags/ge.svg"
+                    },
+                    {
+                        "negara_title": "Germany",
+                        "img_flag": "/flags/de.svg"
+                    },
+                    {
+                        "negara_title": "Greece",
+                        "img_flag": "/flags/gr.svg"
+                    },
+                    {
+                        "negara_title": "Guatemala",
+                        "img_flag": "/flags/gt.svg"
+                    },
+                    {
+                        "negara_title": "Honduras",
+                        "img_flag": "/flags/hn.svg"
+                    },
+                    {
+                        "negara_title": "Hungary",
+                        "img_flag": "/flags/hu.svg"
+                    },
+                    {
+                        "negara_title": "Iceland",
+                        "img_flag": "/flags/is.svg"
+                    },
+                    {
+                        "negara_title": "India",
+                        "img_flag": "/flags/in.svg"
+                    },
+                    {
+                        "negara_title": "Indonesia",
+                        "img_flag": "/flags/id.svg"
+                    },
+                    {
+                        "negara_title": "Ireland",
+                        "img_flag": "/flags/ie.svg"
+                    },
+                    {
+                        "negara_title": "Israel",
+                        "img_flag": "/flags/il.svg"
+                    },
+                    {
+                        "negara_title": "Italy",
+                        "img_flag": "/flags/it.svg"
+                    },
+                    {
+                        "negara_title": "Japan",
+                        "img_flag": "/flags/jp.svg"
+                    },
+                    {
+                        "negara_title": "Kazakhstan",
+                        "img_flag": "/flags/kz.svg"
+                    },
+                    {
+                        "negara_title": "Kenya",
+                        "img_flag": "/flags/ke.svg"
+                    },
+                    {
+                        "negara_title": "South Korea",
+                        "img_flag": "/flags/kr.svg"
+                    },
+                    {
+                        "negara_title": "Latvia",
+                        "img_flag": "/flags/lv.svg"
+                    },
+                    {
+                        "negara_title": "Lesotho",
+                        "img_flag": "/flags/ls.svg"
+                    },
+                    {
+                        "negara_title": "Liberia",
+                        "img_flag": "/flags/lr.svg"
+                    },
+                    {
+                        "negara_title": "Liechtenstein",
+                        "img_flag": "/flags/li.svg"
+                    },
+                    {
+                        "negara_title": "Lithuania",
+                        "img_flag": "/flags/lt.svg"
+                    },
+                    {
+                        "negara_title": "Luxembourg",
+                        "img_flag": "/flags/lu.svg"
+                    },
+                    {
+                        "negara_title": "North Macedonia",
+                        "img_flag": "/flags/mk.svg"
+                    },
+                    {
+                        "negara_title": "Malawi",
+                        "img_flag": "/flags/mw.svg"
+                    },
+                    {
+                        "negara_title": "Malta",
+                        "img_flag": "/flags/mt.svg"
+                    },
+                    {
+                        "negara_title": "Mauritius",
+                        "img_flag": "/flags/mu.svg"
+                    },
+                    {
+                        "negara_title": "Mexico",
+                        "img_flag": "/flags/mx.svg"
+                    },
+                    {
+                        "negara_title": "Moldova",
+                        "img_flag": "/flags/md.svg"
+                    },
+                    {
+                        "negara_title": "Monaco",
+                        "img_flag": "/flags/mc.svg"
+                    },
+                    {
+                        "negara_title": "Mongolia",
+                        "img_flag": "/flags/mn.svg"
+                    },
+                    {
+                        "negara_title": "Montenegro",
+                        "img_flag": "/flags/me.svg"
+                    },
+                    {
+                        "negara_title": "Morocco",
+                        "img_flag": "/flags/ma.svg"
+                    },
+                    {
+                        "negara_title": "Mozambique",
+                        "img_flag": "/flags/mz.svg"
+                    },
+                    {
+                        "negara_title": "Namibia",
+                        "img_flag": "/flags/na.svg"
+                    },
+                    {
+                        "negara_title": "Netherlands",
+                        "img_flag": "/flags/nl.svg"
+                    },
+                    {
+                        "negara_title": "New Zealand",
+                        "img_flag": "/flags/nz.svg"
+                    },
+                    {
+                        "negara_title": "Nicaragua",
+                        "img_flag": "/flags/ni.svg"
+                    },
+                    {
+                        "negara_title": "Niue",
+                        "img_flag": "/flags/nu.svg"
+                    },
+                    {
+                        "negara_title": "Norway",
+                        "img_flag": "/flags/no.svg"
+                    },
+                    {
+                        "negara_title": "Oman",
+                        "img_flag": "/flags/om.svg"
+                    },
+                    {
+                        "negara_title": "Panama",
+                        "img_flag": "/flags/pa.svg"
+                    },
+                    {
+                        "negara_title": "Paraguay",
+                        "img_flag": "/flags/py.svg"
+                    },
+                    {
+                        "negara_title": "Peru",
+                        "img_flag": "/flags/pe.svg"
+                    },
+                    {
+                        "negara_title": "Poland",
+                        "img_flag": "/flags/pl.svg"
+                    },
+                    {
+                        "negara_title": "Portugal",
+                        "img_flag": "/flags/pt.svg"
+                    },
+                    {
+                        "negara_title": "Romania",
+                        "img_flag": "/flags/ro.svg"
+                    },
+                    {
+                        "negara_title": "Russia",
+                        "img_flag": "/flags/ru.svg"
+                    },
+                    {
+                        "negara_title": "Saint Kitts and Nevis",
+                        "img_flag": "/flags/kn.svg"
+                    },
+                    {
+                        "negara_title": "Saint Lucia",
+                        "img_flag": "/flags/lc.svg"
+                    },
+                    {
+                        "negara_title": "Saint Vincent and the Grenadines",
+                        "img_flag": "/flags/vc.svg"
+                    },
+                    {
+                        "negara_title": "San Marino",
+                        "img_flag": "/flags/sm.svg"
+                    },
+                    {
+                        "negara_title": "Senegal",
+                        "img_flag": "/flags/sn.svg"
+                    },
+                    {
+                        "negara_title": "Serbia",
+                        "img_flag": "/flags/rs.svg"
+                    },
+                    {
+                        "negara_title": "Seychelles",
+                        "img_flag": "/flags/sc.svg"
+                    },
+                    {
+                        "negara_title": "Singapore",
+                        "img_flag": "/flags/sg.svg"
+                    },
+                    {
+                        "negara_title": "Slovakia",
+                        "img_flag": "/flags/sk.svg"
+                    },
+                    {
+                        "negara_title": "Slovenia",
+                        "img_flag": "/flags/si.svg"
+                    },
+                    {
+                        "negara_title": "South Africa",
+                        "img_flag": "/flags/za.svg"
+                    },
+                    {
+                        "negara_title": "Spain",
+                        "img_flag": "/flags/es.svg"
+                    },
+                    {
+                        "negara_title": "Sri Lanka",
+                        "img_flag": "/flags/lk.svg"
+                    },
+                    {
+                        "negara_title": "Suriname",
+                        "img_flag": "/flags/sr.svg"
+                    },
+                    {
+                        "negara_title": "Sweden",
+                        "img_flag": "/flags/se.svg"
+                    },
+                    {
+                        "negara_title": "Switzerland",
+                        "img_flag": "/flags/ch.svg"
+                    },
+                    {
+                        "negara_title": "Cape Verde",
+                        "img_flag": "/flags/cv.svg"
+                    },
+                    {
+                        "negara_title": "Thailand",
+                        "img_flag": "/flags/th.svg"
+                    },
+                    {
+                        "negara_title": "Tonga",
+                        "img_flag": "/flags/to.svg"
+                    },
+                    {
+                        "negara_title": "Trinidad and Tobago",
+                        "img_flag": "/flags/tt.svg"
+                    },
+                    {
+                        "negara_title": "Turkey",
+                        "img_flag": "/flags/tr.svg"
+                    },
+                    {
+                        "negara_title": "Ukraine",
+                        "img_flag": "/flags/ua.svg"
+                    },
+                    {
+                        "negara_title": "Uruguay",
+                        "img_flag": "/flags/uy.svg"
+                    },
+                    {
+                        "negara_title": "Venezuela",
+                        "img_flag": "/flags/ve.svg"
+                    },
+                    {
+                        "negara_title": "Zambia",
+                        "img_flag": "/flags/zm.svg"
+                    }
+                ],
+                "tahapan_title": "APOSTILLE PROCESSING PROCEDURE",
+                "tahapan": [
+                    "Document examination and verification",
+                    "Verification of document validity",
+                    "Submission of the Apostille application",
+                    "Issuance of the Apostille Certificate by the authorized authority",
+                    "Documents are ready for use in the destination country"
+                ],
+                "mengapa_kami": [
+                    "A simpler and more efficient process",
+                    "Helps accelerate international administrative needs",
+                    "Valid in Apostille Convention member countries",
+                    "Privacy and confidentiality guaranteed",
+                    "Saves document legalization time and cost",
+                    "Supported by an experienced professional team"
+                ],
+                "rincian_biaya": {
+                    "items": [],
+                    "total_label": "Total Estimated Cost",
+                    "total_amount": "Contact Us"
+                },
+                "dokumen_didapat": [],
+                "syarat": {
+                    "sections": []
+                },
+                "dasar_hukum": []
             },
-            "dasar_hukum": []
+            "zh": {
+                "penjelasan_umum": [
+                    "海牙认证是对官方文件给予的证明或认证，使该文件能够在1961年《海牙公约》成员国获得法律承认。印度尼西亚已于2022年1月5日通过第8/2021号总统令正式成为该公约成员国。有了海牙认证，文件认证流程变得更加简便，因为不再需要通过目的地国家大使馆办理认证。"
+                ],
+                "dokumen_dapat_dilegalisasi_subtitle": "以下是可申请海牙认证的文件类型：",
+                "dokumen_dapat_dilegalisasi": [
+                    "教育文件；",
+                    "警方无犯罪记录证明（SKCK）；",
+                    "婚姻文件；",
+                    "健康文件；",
+                    "贸易文件；",
+                    "许可文件；",
+                    "翻译文件；",
+                    "离婚文件；",
+                    "户籍文件；",
+                    "知识产权（HAKI）文件；",
+                    "检疫文件；",
+                    "公证文件；",
+                    "及其他"
+                ],
+                "negara_anggota_title": "海牙认证公约成员国",
+                "negara_anggota_subtitle": "经海牙认证的文件在1961年《海牙认证公约》所有成员国内直接获得承认，无需使馆认证。请在下方搜索您的目的地国家。",
+                "negara_anggota": [
+                    {
+                        "negara_title": "阿尔巴尼亚",
+                        "img_flag": "/flags/al.svg"
+                    },
+                    {
+                        "negara_title": "阿根廷",
+                        "img_flag": "/flags/ar.svg"
+                    },
+                    {
+                        "negara_title": "亚美尼亚",
+                        "img_flag": "/flags/am.svg"
+                    },
+                    {
+                        "negara_title": "澳大利亚",
+                        "img_flag": "/flags/au.svg"
+                    },
+                    {
+                        "negara_title": "奥地利",
+                        "img_flag": "/flags/at.svg"
+                    },
+                    {
+                        "negara_title": "阿塞拜疆",
+                        "img_flag": "/flags/az.svg"
+                    },
+                    {
+                        "negara_title": "巴哈马",
+                        "img_flag": "/flags/bs.svg"
+                    },
+                    {
+                        "negara_title": "巴巴多斯",
+                        "img_flag": "/flags/bb.svg"
+                    },
+                    {
+                        "negara_title": "白俄罗斯",
+                        "img_flag": "/flags/by.svg"
+                    },
+                    {
+                        "negara_title": "比利时",
+                        "img_flag": "/flags/be.svg"
+                    },
+                    {
+                        "negara_title": "伯利兹",
+                        "img_flag": "/flags/bz.svg"
+                    },
+                    {
+                        "negara_title": "玻利维亚",
+                        "img_flag": "/flags/bo.svg"
+                    },
+                    {
+                        "negara_title": "波斯尼亚和黑塞哥维那",
+                        "img_flag": "/flags/ba.svg"
+                    },
+                    {
+                        "negara_title": "博茨瓦纳",
+                        "img_flag": "/flags/bw.svg"
+                    },
+                    {
+                        "negara_title": "巴西",
+                        "img_flag": "/flags/br.svg"
+                    },
+                    {
+                        "negara_title": "保加利亚",
+                        "img_flag": "/flags/bg.svg"
+                    },
+                    {
+                        "negara_title": "智利",
+                        "img_flag": "/flags/cl.svg"
+                    },
+                    {
+                        "negara_title": "哥伦比亚",
+                        "img_flag": "/flags/co.svg"
+                    },
+                    {
+                        "negara_title": "哥斯达黎加",
+                        "img_flag": "/flags/cr.svg"
+                    },
+                    {
+                        "negara_title": "克罗地亚",
+                        "img_flag": "/flags/hr.svg"
+                    },
+                    {
+                        "negara_title": "塞浦路斯",
+                        "img_flag": "/flags/cy.svg"
+                    },
+                    {
+                        "negara_title": "捷克",
+                        "img_flag": "/flags/cz.svg"
+                    },
+                    {
+                        "negara_title": "丹麦",
+                        "img_flag": "/flags/dk.svg"
+                    },
+                    {
+                        "negara_title": "厄瓜多尔",
+                        "img_flag": "/flags/ec.svg"
+                    },
+                    {
+                        "negara_title": "萨尔瓦多",
+                        "img_flag": "/flags/sv.svg"
+                    },
+                    {
+                        "negara_title": "爱沙尼亚",
+                        "img_flag": "/flags/ee.svg"
+                    },
+                    {
+                        "negara_title": "斐济",
+                        "img_flag": "/flags/fj.svg"
+                    },
+                    {
+                        "negara_title": "芬兰",
+                        "img_flag": "/flags/fi.svg"
+                    },
+                    {
+                        "negara_title": "法国",
+                        "img_flag": "/flags/fr.svg"
+                    },
+                    {
+                        "negara_title": "格鲁吉亚",
+                        "img_flag": "/flags/ge.svg"
+                    },
+                    {
+                        "negara_title": "德国",
+                        "img_flag": "/flags/de.svg"
+                    },
+                    {
+                        "negara_title": "希腊",
+                        "img_flag": "/flags/gr.svg"
+                    },
+                    {
+                        "negara_title": "危地马拉",
+                        "img_flag": "/flags/gt.svg"
+                    },
+                    {
+                        "negara_title": "洪都拉斯",
+                        "img_flag": "/flags/hn.svg"
+                    },
+                    {
+                        "negara_title": "匈牙利",
+                        "img_flag": "/flags/hu.svg"
+                    },
+                    {
+                        "negara_title": "冰岛",
+                        "img_flag": "/flags/is.svg"
+                    },
+                    {
+                        "negara_title": "印度",
+                        "img_flag": "/flags/in.svg"
+                    },
+                    {
+                        "negara_title": "印度尼西亚",
+                        "img_flag": "/flags/id.svg"
+                    },
+                    {
+                        "negara_title": "爱尔兰",
+                        "img_flag": "/flags/ie.svg"
+                    },
+                    {
+                        "negara_title": "以色列",
+                        "img_flag": "/flags/il.svg"
+                    },
+                    {
+                        "negara_title": "意大利",
+                        "img_flag": "/flags/it.svg"
+                    },
+                    {
+                        "negara_title": "日本",
+                        "img_flag": "/flags/jp.svg"
+                    },
+                    {
+                        "negara_title": "哈萨克斯坦",
+                        "img_flag": "/flags/kz.svg"
+                    },
+                    {
+                        "negara_title": "肯尼亚",
+                        "img_flag": "/flags/ke.svg"
+                    },
+                    {
+                        "negara_title": "韩国",
+                        "img_flag": "/flags/kr.svg"
+                    },
+                    {
+                        "negara_title": "拉脱维亚",
+                        "img_flag": "/flags/lv.svg"
+                    },
+                    {
+                        "negara_title": "莱索托",
+                        "img_flag": "/flags/ls.svg"
+                    },
+                    {
+                        "negara_title": "利比里亚",
+                        "img_flag": "/flags/lr.svg"
+                    },
+                    {
+                        "negara_title": "列支敦士登",
+                        "img_flag": "/flags/li.svg"
+                    },
+                    {
+                        "negara_title": "立陶宛",
+                        "img_flag": "/flags/lt.svg"
+                    },
+                    {
+                        "negara_title": "卢森堡",
+                        "img_flag": "/flags/lu.svg"
+                    },
+                    {
+                        "negara_title": "北马其顿",
+                        "img_flag": "/flags/mk.svg"
+                    },
+                    {
+                        "negara_title": "马拉维",
+                        "img_flag": "/flags/mw.svg"
+                    },
+                    {
+                        "negara_title": "马耳他",
+                        "img_flag": "/flags/mt.svg"
+                    },
+                    {
+                        "negara_title": "毛里求斯",
+                        "img_flag": "/flags/mu.svg"
+                    },
+                    {
+                        "negara_title": "墨西哥",
+                        "img_flag": "/flags/mx.svg"
+                    },
+                    {
+                        "negara_title": "摩尔多瓦",
+                        "img_flag": "/flags/md.svg"
+                    },
+                    {
+                        "negara_title": "摩纳哥",
+                        "img_flag": "/flags/mc.svg"
+                    },
+                    {
+                        "negara_title": "蒙古",
+                        "img_flag": "/flags/mn.svg"
+                    },
+                    {
+                        "negara_title": "黑山",
+                        "img_flag": "/flags/me.svg"
+                    },
+                    {
+                        "negara_title": "摩洛哥",
+                        "img_flag": "/flags/ma.svg"
+                    },
+                    {
+                        "negara_title": "莫桑比克",
+                        "img_flag": "/flags/mz.svg"
+                    },
+                    {
+                        "negara_title": "纳米比亚",
+                        "img_flag": "/flags/na.svg"
+                    },
+                    {
+                        "negara_title": "荷兰",
+                        "img_flag": "/flags/nl.svg"
+                    },
+                    {
+                        "negara_title": "新西兰",
+                        "img_flag": "/flags/nz.svg"
+                    },
+                    {
+                        "negara_title": "尼加拉瓜",
+                        "img_flag": "/flags/ni.svg"
+                    },
+                    {
+                        "negara_title": "纽埃",
+                        "img_flag": "/flags/nu.svg"
+                    },
+                    {
+                        "negara_title": "挪威",
+                        "img_flag": "/flags/no.svg"
+                    },
+                    {
+                        "negara_title": "阿曼",
+                        "img_flag": "/flags/om.svg"
+                    },
+                    {
+                        "negara_title": "巴拿马",
+                        "img_flag": "/flags/pa.svg"
+                    },
+                    {
+                        "negara_title": "巴拉圭",
+                        "img_flag": "/flags/py.svg"
+                    },
+                    {
+                        "negara_title": "秘鲁",
+                        "img_flag": "/flags/pe.svg"
+                    },
+                    {
+                        "negara_title": "波兰",
+                        "img_flag": "/flags/pl.svg"
+                    },
+                    {
+                        "negara_title": "葡萄牙",
+                        "img_flag": "/flags/pt.svg"
+                    },
+                    {
+                        "negara_title": "罗马尼亚",
+                        "img_flag": "/flags/ro.svg"
+                    },
+                    {
+                        "negara_title": "俄罗斯",
+                        "img_flag": "/flags/ru.svg"
+                    },
+                    {
+                        "negara_title": "圣基茨和尼维斯",
+                        "img_flag": "/flags/kn.svg"
+                    },
+                    {
+                        "negara_title": "圣卢西亚",
+                        "img_flag": "/flags/lc.svg"
+                    },
+                    {
+                        "negara_title": "圣文森特和格林纳丁斯",
+                        "img_flag": "/flags/vc.svg"
+                    },
+                    {
+                        "negara_title": "圣马力诺",
+                        "img_flag": "/flags/sm.svg"
+                    },
+                    {
+                        "negara_title": "塞内加尔",
+                        "img_flag": "/flags/sn.svg"
+                    },
+                    {
+                        "negara_title": "塞尔维亚",
+                        "img_flag": "/flags/rs.svg"
+                    },
+                    {
+                        "negara_title": "塞舌尔",
+                        "img_flag": "/flags/sc.svg"
+                    },
+                    {
+                        "negara_title": "新加坡",
+                        "img_flag": "/flags/sg.svg"
+                    },
+                    {
+                        "negara_title": "斯洛伐克",
+                        "img_flag": "/flags/sk.svg"
+                    },
+                    {
+                        "negara_title": "斯洛文尼亚",
+                        "img_flag": "/flags/si.svg"
+                    },
+                    {
+                        "negara_title": "南非",
+                        "img_flag": "/flags/za.svg"
+                    },
+                    {
+                        "negara_title": "西班牙",
+                        "img_flag": "/flags/es.svg"
+                    },
+                    {
+                        "negara_title": "斯里兰卡",
+                        "img_flag": "/flags/lk.svg"
+                    },
+                    {
+                        "negara_title": "苏里南",
+                        "img_flag": "/flags/sr.svg"
+                    },
+                    {
+                        "negara_title": "瑞典",
+                        "img_flag": "/flags/se.svg"
+                    },
+                    {
+                        "negara_title": "瑞士",
+                        "img_flag": "/flags/ch.svg"
+                    },
+                    {
+                        "negara_title": "佛得角",
+                        "img_flag": "/flags/cv.svg"
+                    },
+                    {
+                        "negara_title": "泰国",
+                        "img_flag": "/flags/th.svg"
+                    },
+                    {
+                        "negara_title": "汤加",
+                        "img_flag": "/flags/to.svg"
+                    },
+                    {
+                        "negara_title": "特立尼达和多巴哥",
+                        "img_flag": "/flags/tt.svg"
+                    },
+                    {
+                        "negara_title": "土耳其",
+                        "img_flag": "/flags/tr.svg"
+                    },
+                    {
+                        "negara_title": "乌克兰",
+                        "img_flag": "/flags/ua.svg"
+                    },
+                    {
+                        "negara_title": "乌拉圭",
+                        "img_flag": "/flags/uy.svg"
+                    },
+                    {
+                        "negara_title": "委内瑞拉",
+                        "img_flag": "/flags/ve.svg"
+                    },
+                    {
+                        "negara_title": "赞比亚",
+                        "img_flag": "/flags/zm.svg"
+                    }
+                ],
+                "tahapan_title": "海牙认证办理流程",
+                "tahapan": [
+                    "文件审查及核实",
+                    "文件有效性核实",
+                    "提交海牙认证申请",
+                    "由主管机关签发海牙认证证书",
+                    "文件已可在目的地国家使用"
+                ],
+                "mengapa_kami": [
+                    "流程更简便、更高效",
+                    "协助加快国际行政需求",
+                    "适用于海牙认证公约成员国",
+                    "隐私及保密有保障",
+                    "节省文件认证的时间及费用",
+                    "由经验丰富的专业团队提供支持"
+                ],
+                "rincian_biaya": {
+                    "items": [],
+                    "total_label": "总费用估算",
+                    "total_amount": "联系我们"
+                },
+                "dokumen_didapat": [],
+                "syarat": {
+                    "sections": []
+                },
+                "dasar_hukum": []
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
         },
         "footer_cta": {
-            "title": "Butuh Apostille untuk Dokumen Anda?",
-            "subtitle": "Tim Fasttrack siap membantu mengurus apostille dokumen Anda dengan cepat dan sesuai prosedur.",
-            "button_text": "Chat Langsung via WhatsApp",
-            "wa_message": "layanan yang tidak terdaftar"
-        },
-        "relatedProducts": [
-            {
-                "name": "Legalisasi Dokumen di Kedutaan China",
-                "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-china",
-                "excerpt": "Layanan legalisasi dokumen di Kedutaan China untuk keperluan bisnis, pendidikan, dan personal.",
-                "price_label": "Rp 2.500.000"
+            "id": {
+                "title": "Butuh Apostille untuk Dokumen Anda?",
+                "subtitle": "Tim Fasttrack siap membantu mengurus apostille dokumen Anda dengan cepat dan sesuai prosedur.",
+                "button_text": "Chat Langsung via WhatsApp",
+                "wa_message": "layanan yang tidak terdaftar"
             },
-            {
-                "name": "Legalisasi Dokumen di Kedutaan Arab Saudi",
-                "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-arab-saudi",
-                "excerpt": "Layanan legalisasi dokumen di Kedutaan Arab Saudi untuk keperluan bisnis, pendidikan, dan personal.",
-                "price_label": "Rp 2.800.000"
+            "en": {
+                "title": "Need an Apostille for Your Documents?",
+                "subtitle": "The Fasttrack team is ready to help process the apostille for your documents quickly and in accordance with procedures.",
+                "button_text": "Chat Directly via WhatsApp",
+                "wa_message": "an unlisted service"
             },
-            {
-                "name": "Legalisasi Dokumen di Kedutaan UAE",
-                "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-uae",
-                "excerpt": "Proses legalisasi dokumen untuk penggunaan di Uni Emirat Arab.",
-                "price_label": "Rp 3.000.000"
+            "zh": {
+                "title": "您的文件需要海牙认证吗？",
+                "subtitle": "Fasttrack团队随时准备协助您快速且依规办理文件海牙认证。",
+                "button_text": "直接通过WhatsApp聊天",
+                "wa_message": "未列出的服务"
             }
-        ],
-        "faq": []
+        },
+        "relatedProducts": {
+            "id": [
+                {
+                    "name": "Legalisasi Dokumen di Kedutaan China",
+                    "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-china",
+                    "excerpt": "Layanan legalisasi dokumen di Kedutaan China untuk keperluan bisnis, pendidikan, dan personal.",
+                    "price_label": "Rp 2.500.000"
+                },
+                {
+                    "name": "Legalisasi Dokumen di Kedutaan Arab Saudi",
+                    "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-arab-saudi",
+                    "excerpt": "Layanan legalisasi dokumen di Kedutaan Arab Saudi untuk keperluan bisnis, pendidikan, dan personal.",
+                    "price_label": "Rp 2.800.000"
+                },
+                {
+                    "name": "Legalisasi Dokumen di Kedutaan UAE",
+                    "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-uae",
+                    "excerpt": "Proses legalisasi dokumen untuk penggunaan di Uni Emirat Arab.",
+                    "price_label": "Rp 3.000.000"
+                }
+            ],
+            "en": [
+                {
+                    "name": "Document Legalization at the Chinese Embassy",
+                    "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-china",
+                    "excerpt": "Document legalization service at the Chinese Embassy for business, education, and personal purposes.",
+                    "price_label": "Rp 2.500.000"
+                },
+                {
+                    "name": "Document Legalization at the Saudi Arabian Embassy",
+                    "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-arab-saudi",
+                    "excerpt": "Document legalization service at the Saudi Arabian Embassy for business, education, and personal purposes.",
+                    "price_label": "Rp 2.800.000"
+                },
+                {
+                    "name": "Document Legalization at the UAE Embassy",
+                    "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-uae",
+                    "excerpt": "Document legalization process for use in the United Arab Emirates.",
+                    "price_label": "Rp 3.000.000"
+                }
+            ],
+            "zh": [
+                {
+                    "name": "在中国大使馆进行文件认证",
+                    "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-china",
+                    "excerpt": "在中国大使馆办理文件认证服务，适用于商业、教育及个人用途。",
+                    "price_label": "Rp 2.500.000"
+                },
+                {
+                    "name": "在沙特阿拉伯大使馆进行文件认证",
+                    "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-arab-saudi",
+                    "excerpt": "在沙特阿拉伯大使馆办理文件认证服务，适用于商业、教育及个人用途。",
+                    "price_label": "Rp 2.800.000"
+                },
+                {
+                    "name": "在阿联酋大使馆进行文件认证",
+                    "detail_path": "/legalisasi-kedutaan/legalisasi-kedutaan-uae",
+                    "excerpt": "为在阿拉伯联合酋长国使用而办理的文件认证流程。",
+                    "price_label": "Rp 3.000.000"
+                }
+            ]
+        }
     }
 ]

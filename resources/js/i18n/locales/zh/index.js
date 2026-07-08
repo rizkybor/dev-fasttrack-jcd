@@ -11,6 +11,11 @@ import oneSingleSubmission from './services/one-single-submission'
 import perizinanLainnya from './services/perizinan-lainnya'
 import notarisVirtualDanAkta from './services/notaris-virtual-dan-akta'
 import restrukturisasiPerseroanTerbatas from './services/restrukturisasi-perseroan-terbatas'
+import penutupanBadanUsaha from './services/penutupan-badan-usaha'
+import kekayaanIntelektual from './services/kekayaan-intelektual'
+import perpajakanDanPembukuan from './services/perpajakan-dan-pembukuan'
+import legalisasiKedutaan from './services/legalisasi-kedutaan'
+import kewajibanPelaporanUsaha from './services/kewajiban-pelaporan-perusahaan'
 
 export default {
     common,
@@ -25,6 +30,11 @@ export default {
         oneSingleSubmission,
         perizinanLainnya,
         notarisVirtualDanAkta,
-        restrukturisasiPerseroanTerbatas
+        restrukturisasiPerseroanTerbatas,
+        penutupanBadanUsaha,
+        kekayaanIntelektual,
+        perpajakanDanPembukuan,
+        legalisasiKedutaan,
+        kewajibanPelaporanUsaha
     },
 }

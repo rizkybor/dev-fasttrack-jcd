@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed, watch } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -21,9 +24,41 @@ const buildWhatsappLink = (productName, jenis) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        excerpt: pick(p.excerpt),
+        baru: pick(p.baru),
+        perpanjangan: pick(p.perpanjangan),
+        faq: pick(p.faq) ?? [],
+        footer_cta: pick(p.footer_cta),
+    };
+});
+
+const product = localizedProduct;
+
 const jenisPengajuan = ref("baru");
-const hasToggle = computed(() => !!props.product?.perpanjangan);
-const currentData = computed(() => props.product?.[jenisPengajuan.value] ?? {});
+const hasToggle = computed(() => !!product.value?.perpanjangan);
+const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
 
 // Deteksi format negara: grouped (object) vs flat (string)
 const isNegaraGrouped = computed(() => {
@@ -33,16 +68,35 @@ const isNegaraGrouped = computed(() => {
 });
 
 // Breadcrumb dinamis
-const categoryPath = computed(() => props.product?.category_path ?? "/legalisasi-kedutaan");
-const categoryName = computed(() => props.product?.category_name ?? "Legalisasi Kedutaan");
+const categoryPath = computed(() => product.value?.category_path ?? "/legalisasi-kedutaan");
+const categoryName = computed(() => product.value?.category_name ?? pick({
+    id: "Legalisasi Kedutaan",
+    en: "Embassy Legalization",
+    zh: "使馆认证",
+}));
 
 // Footer CTA dinamis
-const footerCta = computed(() => props.product?.footer_cta ?? {
-    title: "Butuh Konsultasi Soal Legalisasi Dokumen?",
-    subtitle: "Tim Fasttrack siap membantu Anda menyelesaikan proses legalisasi dokumen dengan cepat dan tepat.",
-    button_text: "Chat Langsung via WhatsApp",
-    wa_message: "layanan yang tidak terdaftar",
-});
+const defaultFooterCta = computed(() => pick({
+    id: {
+        title: "Butuh Konsultasi Soal Legalisasi Dokumen?",
+        subtitle: "Tim Fasttrack siap membantu Anda menyelesaikan proses legalisasi dokumen dengan cepat dan tepat.",
+        button_text: "Chat Langsung via WhatsApp",
+        wa_message: "layanan yang tidak terdaftar",
+    },
+    en: {
+        title: "Need Consultation on Document Legalization?",
+        subtitle: "The Fasttrack team is ready to help you complete the document legalization process quickly and accurately.",
+        button_text: "Chat Directly via WhatsApp",
+        wa_message: "an unlisted service",
+    },
+    zh: {
+        title: "需要文件认证方面的咨询吗？",
+        subtitle: "Fasttrack团队随时准备协助您快速且准确地完成文件认证流程。",
+        button_text: "直接通过WhatsApp聊天",
+        wa_message: "未列出的服务",
+    },
+}));
+const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.value);
 
 // ===== NEGARA ANGGOTA: Pagination & Search =====
 const negaraSearch = ref("");
