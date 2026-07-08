@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
-import { ref } from "vue";
+import { computed, ref } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -13,6 +16,34 @@ const buildWhatsappLink = (productName) => {
     const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
+
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        excerpt: pick(p.excerpt),
+        penjelasan_umum: pick(p.penjelasan_umum) ?? [],
+        sections: pick(p.sections) ?? [],
+        dasar_hukum: pick(p.dasar_hukum) ?? [],
+        faq: pick(p.faq) ?? [],
+    };
+});
 
 const openSectionId = ref(null);
 const toggleSection = (id) => {
@@ -48,7 +79,7 @@ const toggleSection = (id) => {
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{ product.name }}</span>
+                        <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
                 <div class="flex items-center gap-5">
@@ -56,7 +87,7 @@ const toggleSection = (id) => {
                         <img src="/icons/ft-persons.svg" class="w-9 h-9" alt="" />
                     </div>
                     <h1 class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
-                        {{ product.name }}
+                        {{ localizedProduct.name }}
                     </h1>
                 </div>
                 <div>
@@ -80,14 +111,14 @@ const toggleSection = (id) => {
                     <div class="flex flex-col gap-5">
 
                         <!-- 1. Penjelasan Umum -->
-                        <div v-if="product.penjelasan_umum?.length"
+                        <div v-if="localizedProduct.penjelasan_umum?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan Umum</h2>
                             </div>
                             <div class="space-y-4">
-                                <template v-for="(block, i) in product.penjelasan_umum" :key="`pu-${i}`">
+                                <template v-for="(block, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`">
                                     <template v-if="typeof block === 'object'">
                                         <p v-if="block.type === 'title'"
                                             class="text-[14px] font-bold text-[#1A1B18] leading-snug pt-2">
@@ -107,7 +138,7 @@ const toggleSection = (id) => {
                         </div>
 
                         <!-- 2. Sections dinamis -->
-                        <template v-for="section in product.sections" :key="section.id">
+                        <template v-for="section in localizedProduct.sections" :key="section.id">
 
                             <!-- Type: list_check (grid 2 col dengan icon centang) -->
                             <div v-if="section.type === 'list_check'"
@@ -250,10 +281,10 @@ const toggleSection = (id) => {
                                     </div>
                                     <div class="flex-1 min-w-0">
                                         <div class="text-[14px] font-semibold text-white leading-tight truncate">
-                                            {{ product.name }}
+                                            {{ localizedProduct.name }}
                                         </div>
                                     </div>
-                                    <a :href="buildWhatsappLink(product.name)"
+                                    <a :href="buildWhatsappLink(localizedProduct.name)"
                                         target="_blank" rel="noopener noreferrer"
                                         class="flex items-center gap-2 rounded-lg border border-white px-5 py-2.5 text-[13px] font-semibold text-white whitespace-nowrap hover:bg-white/10 transition-colors flex-shrink-0">
                                         Hubungi Kami
@@ -266,7 +297,7 @@ const toggleSection = (id) => {
                         </div>
 
                         <!-- 4. Dasar Hukum (accordion) -->
-                        <div v-if="product.dasar_hukum?.length"
+                        <div v-if="localizedProduct.dasar_hukum?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <button @click="toggleSection('dasar-hukum')"
                                 class="w-full flex items-center justify-between gap-3 text-left group">
@@ -282,7 +313,7 @@ const toggleSection = (id) => {
                             </button>
 
                             <ul v-if="openSectionId === 'dasar-hukum'" class="mt-5 space-y-4">
-                                <li v-for="(hukum, i) in product.dasar_hukum" :key="`hukum-${i}`"
+                                <li v-for="(hukum, i) in localizedProduct.dasar_hukum" :key="`hukum-${i}`"
                                     class="flex items-start gap-4">
                                     <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#ddffe3]">
                                         <img src="/icons/ft-save.svg" class="w-4 h-4" alt="" />
@@ -309,7 +340,7 @@ const toggleSection = (id) => {
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
                                 Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
                             </p>
-                            <a :href="buildWhatsappLink(product.name)"
+                            <a :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
@@ -326,10 +357,10 @@ const toggleSection = (id) => {
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1 mt-2">Start From</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
-                                {{ product.price_label }}
+                                {{ localizedProduct.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">*Harga final dikonfirmasi setelah konsultasi</div>
-                            <a :href="buildWhatsappLink(product.name)"
+                            <a :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors mb-2">
                                 Pesan Sekarang
@@ -337,7 +368,7 @@ const toggleSection = (id) => {
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
                             </a>
-                            <a :href="buildWhatsappLink(product.name)"
+                            <a :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
@@ -390,7 +421,7 @@ const toggleSection = (id) => {
                             Tim kami siap membantu Anda menemukan solusi yang tepat<br class="hidden sm:block" />
                             untuk kebutuhan restrukturisasi bisnis Anda.
                         </p>
-                        <a :href="buildWhatsappLink(product.name)"
+                        <a :href="buildWhatsappLink(localizedProduct.name)"
                             target="_blank" rel="noopener noreferrer"
                             class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]">
                             Chat Langsung via WhatsApp

@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -15,11 +18,51 @@ const buildWhatsappLink = (productName, paketNama = "") => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+// Setiap elemen paket.penjelasan_layanan_items[lang] sudah sepenuhnya
+// diterjemahkan (label, penjelasan_detail, paket_harga, dokumen_diperlukan)
+// oleh data JSON, jadi cukup pick() di level atas tiap field paket.
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        excerpt: pick(p.excerpt),
+        penjelasan_umum: pick(p.penjelasan_umum) ?? [],
+        dasar_hukum: pick(p.dasar_hukum) ?? [],
+        faq: pick(p.faq) ?? [],
+        paket: (p.paket ?? []).map((paket) => ({
+            ...paket,
+            nama: pick(paket.nama),
+            deskripsi: pick(paket.deskripsi),
+            penjelasan_layanan: pick(paket.penjelasan_layanan) ?? [],
+            penjelasan_layanan_items: pick(paket.penjelasan_layanan_items) ?? [],
+            dasar_hukum: pick(paket.dasar_hukum) ?? [],
+        })),
+    };
+});
+
 const selectedPaketId = ref(props.product?.paket?.[0]?.id ?? null);
 const selectedPaket = computed(
-    () => props.product?.paket?.find((p) => p.id === selectedPaketId.value) ?? props.product?.paket?.[0] ?? null
+    () => localizedProduct.value?.paket?.find((p) => p.id === selectedPaketId.value) ?? localizedProduct.value?.paket?.[0] ?? null
 );
-const hasPaket = computed(() => !!props.product?.paket?.length);
+const hasPaket = computed(() => !!localizedProduct.value?.paket?.length);
 
 // Accordion untuk penjelasan_layanan_items (hanya product id 1)
 const openItemId = ref(null);
@@ -62,7 +105,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{ product.name }}</span>
+                        <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
                 <div class="flex items-center gap-5">
@@ -72,7 +115,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                     </div>
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
-                        {{ product.name }}
+                        {{ localizedProduct.name }}
                     </h1>
                 </div>
                 <div>
@@ -92,14 +135,14 @@ const isAccordionMode = computed(() => props.product?.id === 1);
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
                 <!-- 1. Penjelasan Umum (full width) -->
-                <div v-if="product.penjelasan_umum?.length"
+                <div v-if="localizedProduct.penjelasan_umum?.length"
                     class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                         <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan Umum</h2>
                     </div>
                     <div class="space-y-4">
-                        <p v-for="(p, i) in product.penjelasan_umum" :key="`pu-${i}`"
+                        <p v-for="(p, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`"
                             class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">{{ p }}</p>
                     </div>
                 </div>
@@ -111,7 +154,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                         <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Pilih Jenis Layanan</h2>
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-                        <button v-for="paket in product.paket" :key="paket.id"
+                        <button v-for="paket in localizedProduct.paket" :key="paket.id"
                             @click="() => { selectedPaketId = paket.id; openItemId = null; }"
                             class="flex flex-col items-start rounded-xl border p-4 text-left transition-all"
                             :class="selectedPaketId === paket.id
@@ -266,7 +309,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <a :href="buildWhatsappLink(product.name, item.paket_harga.nama)"
+                                                        <a :href="buildWhatsappLink(localizedProduct.name, item.paket_harga.nama)"
                                                             target="_blank" rel="noopener noreferrer"
                                                             class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
                                                             Pesan Sekarang
@@ -370,7 +413,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <a :href="buildWhatsappLink(product.name, item.paket_harga.nama)"
+                                                <a :href="buildWhatsappLink(localizedProduct.name, item.paket_harga.nama)"
                                                     target="_blank" rel="noopener noreferrer"
                                                     class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
                                                     Pesan Sekarang
@@ -450,15 +493,15 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                             <div class="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFF0EF] px-3 py-1">
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
                                 <span class="text-[11px] font-semibold text-primary truncate max-w-[160px]">
-                                    {{ selectedPaket?.nama ?? product.name }}
+                                    {{ selectedPaket?.nama ?? localizedProduct.name }}
                                 </span>
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1 mt-2">Start From</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
-                                {{ selectedPaket?.harga ?? product.price_label }}
+                                {{ selectedPaket?.harga ?? localizedProduct.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">*Harga final dikonfirmasi setelah konsultasi</div>
-                            <a :href="buildWhatsappLink(product.name, selectedPaket?.nama ?? '')"
+                            <a :href="buildWhatsappLink(localizedProduct.name, selectedPaket?.nama ?? '')"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors mb-2">
                                 Pesan Sekarang
@@ -466,7 +509,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
                             </a>
-                            <a :href="buildWhatsappLink(product.name, selectedPaket?.nama ?? '')"
+                            <a :href="buildWhatsappLink(localizedProduct.name, selectedPaket?.nama ?? '')"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
@@ -505,7 +548,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
                                 Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
                             </p>
-                            <a :href="buildWhatsappLink(product.name, selectedPaket?.nama ?? '')"
+                            <a :href="buildWhatsappLink(localizedProduct.name, selectedPaket?.nama ?? '')"
                                 target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
@@ -515,11 +558,11 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                         </div>
 
                         <!-- Layanan Akta Notaris Lainnya -->
-                        <div v-if="product.paket?.length > 1" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
+                        <div v-if="localizedProduct.paket?.length > 1" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Akta Notaris Lainnya</h3>
                             <div class="flex flex-col gap-2">
                                 <button
-                                    v-for="paket in product.paket.filter(p => p.id !== selectedPaketId)"
+                                    v-for="paket in localizedProduct.paket.filter(p => p.id !== selectedPaketId)"
                                     :key="`other-${paket.id}`"
                                     @click="() => { selectedPaketId = paket.id; openItemId = null; }"
                                     class="group flex items-center justify-between rounded-xl border border-[#E8E8E6] bg-white px-4 py-3 text-left hover:border-primary/30 hover:shadow-sm transition-all">

@@ -1,302 +1,977 @@
 [
     {
         "id": 1,
-        "name": "Pengambilalihan Perseroan (Akuisisi)",
+        "name": {
+            "id": "Pengambilalihan Perseroan (Akuisisi)",
+            "en": "Company Acquisition (Takeover)",
+            "zh": "公司收购（并购接管）"
+        },
         "price": "9000000",
         "price_label": "Rp 9.000.000",
-        "excerpt": "Pendampingan lengkap proses akuisisi perseroan terbatas sesuai ketentuan hukum yang berlaku.",
+        "excerpt": {
+            "id": "Pendampingan lengkap proses akuisisi perseroan terbatas sesuai ketentuan hukum yang berlaku.",
+            "en": "Complete assistance for the limited liability company acquisition process in accordance with applicable legal provisions.",
+            "zh": "依据现行法律规定，为有限责任公司收购流程提供全面协助。"
+        },
         "detail_path": "/restrukturisasi-perseroan-terbatas/1",
         "image": "",
-        "penjelasan_umum": [
-            "Dalam dunia usaha yang semakin kompetitif dan pergerakan ekonomi yang sangat cepat untuk di kejar, pertumbuhan perusahaan tidak selalu dilakukan melalui pendirian entitas baru. Salah satu strategi yang banyak dipilih investor dan pelaku usaha adalah akuisisi perusahaan, yaitu pengambilalihan kepemilikan dan pengendalian suatu Perseroan Terbatas (PT) yang telah beroperasi.",
-            "Melalui akuisisi, perusahaan dapat mempercepat ekspansi bisnis tanpa harus memulai seluruh proses dari awal. Namun demikian, transaksi akuisisi tidak hanya merupakan transaksi komersial, melainkan juga merupakan tindakan hukum korporasi yang wajib memenuhi berbagai ketentuan peraturan perundang-undangan.",
-            "Secara hukum, akuisisi atau pengambilalihan merupakan tindakan hukum yang dilakukan oleh perseorangan atau badan hukum untuk memperoleh saham suatu Perseroan sehingga mengakibatkan terjadinya perubahan pengendalian terhadap Perseroan tersebut baik atas saham yang telah dikeluarkan oleh perseroan, maupun saham baru yang akan diterbitkan oleh perseroan.",
-            "Dalam praktik bisnis, pengambilalihan dapat dilakukan terhadap sebagian atau seluruh saham perusahaan, sepanjang transaksi tersebut memberikan kemampuan kepada pihak pengakuisisi untuk menentukan arah kebijakan dan pengelolaan perusahaan.",
-            "Nilai yang menjadi bahan pertimbangan investor atau pelaku usaha memutuskan untuk melakukan pengambilalihan suatu perseroan:",
-            { "type": "bullets", "items": [
-                "Memperoleh perusahaan yang telah memiliki izin usaha dan operasional;",
-                "Mengakses jaringan pelanggan dan pasar yang telah terbentuk;",
-                "Memperoleh aset, sumber daya manusia, dan teknologi yang telah berjalan;",
-                "Mempercepat ekspansi bisnis dan investasi;",
-                "Memperkuat posisi perusahaan dalam persaingan pasar;",
-                "Melakukan restrukturisasi atau konsolidasi grup usaha."
-            ]},
-            "Secara hukum, pengambilalihan dapat dilakukan melalui:",
-            { "type": "title", "text": "A. Pengambilalihan Melalui Direksi Perseroan" },
-            "Proses ini diatur dalam Pasal 125 ayat (4) sampai dengan ayat (6) UU Perseroan Terbatas. Direksi Perseroan yang akan mengambil alih dan Perseroan yang akan diambil alih menyusun rancangan pengambilalihan yang kemudian memperoleh persetujuan organ perusahaan terkait.",
-            { "type": "title", "text": "B. Pengambilalihan Langsung dari Pemegang Saham" },
-            "Pengambilalihan dilakukan langsung melalui transaksi pemindahan hak atas saham antara pemegang saham lama dan pihak pengakuisisi dengan tetap memperhatikan Anggaran Dasar Perseroan. Mekanisme ini diatur dalam Pasal 125 ayat (7) UU Perseroan Terbatas.",
-            "Bentuk Akuisisi Perseroan yang dimaksud dalam layanan kami, dibatasi untuk jenis akuisisi sebagai berikut:",
-            { "type": "title", "text": "Akuisisi Saham (Share Acquisition)" },
-            "Pengambilalihan dilakukan melalui pembelian saham milik pemegang saham lama sehingga kepemilikan dan pengendalian perusahaan beralih kepada investor baru.",
-            { "type": "title", "text": "Akuisisi Pengendalian (Control Acquisition)" },
-            "Transaksi dilakukan untuk memperoleh hak pengendalian perusahaan, baik melalui kepemilikan mayoritas saham maupun hak suara yang memberikan kontrol efektif terhadap Perseroan.",
-            { "type": "title", "text": "Tahapan Akuisisi Perseroan" },
-            "Setiap transaksi akuisisi memerlukan perencanaan yang matang untuk memastikan bahwa transaksi yang dilakukan tidak menimbulkan risiko hukum di kemudian hari."
-        ],
-        "sections": [
-            {
-                "id": "tahapan-akuisisi",
-                "type": "numbered_accordion",
-                "title": "TAHAPAN AKUISISI PERSEROAN",
-                "items": [
-                    {
-                        "title": "Pemeriksaan Hukum (Legal Due Diligence)",
-                        "desc": "Tahap awal yang sangat penting adalah melakukan pemeriksaan terhadap kondisi hukum perusahaan target."
-                    },
-                    {
-                        "title": "Penyusunan Struktur Transaksi",
-                        "desc": "Setelah proses due diligence selesai, para pihak menentukan struktur transaksi yang akan digunakan, antara lain:",
-                        "bullets": [
-                            "Pengambilalihan sebagian saham;",
-                            "Pengambilalihan seluruh saham;",
-                            "Akuisisi bertahap;",
-                            "Akuisisi melalui perusahaan afiliasi;",
-                            "Akuisisi dalam rangka restrukturisasi grup usaha."
-                        ]
-                    },
-                    {
-                        "title": "Persetujuan Organ Perseroan",
-                        "desc": "Dalam kondisi tertentu, transaksi akuisisi memerlukan persetujuan organ perusahaan sesuai dengan ketentuan Anggaran Dasar dan Undang-Undang Perseroan Terbatas."
-                    },
-                    {
-                        "title": "Pembuatan Dokumen Legalitas Pengambilalihan",
-                        "bullets": [
-                            "Akta Jual Beli Saham;",
-                            "Akta Pengalihan Saham;",
-                            "Akta Pernyataan Keputusan Pemegang Saham;",
-                            "Akta Perubahan Anggaran Dasar (jika diperlukan)."
-                        ]
-                    },
-                    {
-                        "title": "Penyesuaian Dokumen Administrasi Perusahaan",
-                        "bullets": [
-                            "Daftar Pemegang Saham;",
-                            "Direksi dan Komisaris;",
-                            "Beneficial Ownership;",
-                            "Nomor Induk Berusaha (NIB);",
-                            "Sistem OSS;",
-                            "Perizinan sektoral;",
-                            "Data perpajakan perusahaan."
-                        ]
-                    }
-                ]
-            }
-        ],
-        "dasar_hukum": [
-            "Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal;",
-            "Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas;",
-            "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja;",
-            "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;"
-        ],
-        "faq": []
+        "penjelasan_umum": {
+            "id": [
+                "Dalam dunia usaha yang semakin kompetitif dan pergerakan ekonomi yang sangat cepat untuk di kejar, pertumbuhan perusahaan tidak selalu dilakukan melalui pendirian entitas baru. Salah satu strategi yang banyak dipilih investor dan pelaku usaha adalah akuisisi perusahaan, yaitu pengambilalihan kepemilikan dan pengendalian suatu Perseroan Terbatas (PT) yang telah beroperasi.",
+                "Melalui akuisisi, perusahaan dapat mempercepat ekspansi bisnis tanpa harus memulai seluruh proses dari awal. Namun demikian, transaksi akuisisi tidak hanya merupakan transaksi komersial, melainkan juga merupakan tindakan hukum korporasi yang wajib memenuhi berbagai ketentuan peraturan perundang-undangan.",
+                "Secara hukum, akuisisi atau pengambilalihan merupakan tindakan hukum yang dilakukan oleh perseorangan atau badan hukum untuk memperoleh saham suatu Perseroan sehingga mengakibatkan terjadinya perubahan pengendalian terhadap Perseroan tersebut baik atas saham yang telah dikeluarkan oleh perseroan, maupun saham baru yang akan diterbitkan oleh perseroan.",
+                "Dalam praktik bisnis, pengambilalihan dapat dilakukan terhadap sebagian atau seluruh saham perusahaan, sepanjang transaksi tersebut memberikan kemampuan kepada pihak pengakuisisi untuk menentukan arah kebijakan dan pengelolaan perusahaan.",
+                "Nilai yang menjadi bahan pertimbangan investor atau pelaku usaha memutuskan untuk melakukan pengambilalihan suatu perseroan:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Memperoleh perusahaan yang telah memiliki izin usaha dan operasional;",
+                        "Mengakses jaringan pelanggan dan pasar yang telah terbentuk;",
+                        "Memperoleh aset, sumber daya manusia, dan teknologi yang telah berjalan;",
+                        "Mempercepat ekspansi bisnis dan investasi;",
+                        "Memperkuat posisi perusahaan dalam persaingan pasar;",
+                        "Melakukan restrukturisasi atau konsolidasi grup usaha."
+                    ]
+                },
+                "Secara hukum, pengambilalihan dapat dilakukan melalui:",
+                {
+                    "type": "title",
+                    "text": "A. Pengambilalihan Melalui Direksi Perseroan"
+                },
+                "Proses ini diatur dalam Pasal 125 ayat (4) sampai dengan ayat (6) UU Perseroan Terbatas. Direksi Perseroan yang akan mengambil alih dan Perseroan yang akan diambil alih menyusun rancangan pengambilalihan yang kemudian memperoleh persetujuan organ perusahaan terkait.",
+                {
+                    "type": "title",
+                    "text": "B. Pengambilalihan Langsung dari Pemegang Saham"
+                },
+                "Pengambilalihan dilakukan langsung melalui transaksi pemindahan hak atas saham antara pemegang saham lama dan pihak pengakuisisi dengan tetap memperhatikan Anggaran Dasar Perseroan. Mekanisme ini diatur dalam Pasal 125 ayat (7) UU Perseroan Terbatas.",
+                "Bentuk Akuisisi Perseroan yang dimaksud dalam layanan kami, dibatasi untuk jenis akuisisi sebagai berikut:",
+                {
+                    "type": "title",
+                    "text": "Akuisisi Saham (Share Acquisition)"
+                },
+                "Pengambilalihan dilakukan melalui pembelian saham milik pemegang saham lama sehingga kepemilikan dan pengendalian perusahaan beralih kepada investor baru.",
+                {
+                    "type": "title",
+                    "text": "Akuisisi Pengendalian (Control Acquisition)"
+                },
+                "Transaksi dilakukan untuk memperoleh hak pengendalian perusahaan, baik melalui kepemilikan mayoritas saham maupun hak suara yang memberikan kontrol efektif terhadap Perseroan.",
+                {
+                    "type": "title",
+                    "text": "Tahapan Akuisisi Perseroan"
+                },
+                "Setiap transaksi akuisisi memerlukan perencanaan yang matang untuk memastikan bahwa transaksi yang dilakukan tidak menimbulkan risiko hukum di kemudian hari."
+            ],
+            "en": [
+                "In an increasingly competitive business world with rapid economic movement to keep pace with, company growth is not always achieved through the establishment of a new entity. One strategy widely chosen by investors and business actors is company acquisition, namely the takeover of ownership and control of an already-operating Limited Liability Company (PT).",
+                "Through acquisition, a company can accelerate its business expansion without having to start the entire process from scratch. Nevertheless, an acquisition transaction is not merely a commercial transaction, but also a corporate legal action that must fulfill various statutory provisions.",
+                "Legally, an acquisition or takeover is a legal act carried out by an individual or legal entity to obtain shares in a Company, resulting in a change of control over the Company, whether over shares already issued by the company or new shares to be issued by the company.",
+                "In business practice, a takeover may be carried out over part or all of a company's shares, as long as the transaction gives the acquiring party the ability to determine the direction of the company's policy and management.",
+                "Values that investors or business actors consider when deciding to take over a company:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Acquiring a company that already has business and operational licenses;",
+                        "Accessing an established customer and market network;",
+                        "Acquiring existing assets, human resources, and technology already in operation;",
+                        "Accelerating business expansion and investment;",
+                        "Strengthening the company's position in market competition;",
+                        "Carrying out restructuring or consolidation of the business group."
+                    ]
+                },
+                "Legally, a takeover may be carried out through:",
+                {
+                    "type": "title",
+                    "text": "A. Takeover Through the Company's Board of Directors"
+                },
+                "This process is regulated in Article 125 paragraphs (4) to (6) of the Limited Liability Company Law. The Board of Directors of the acquiring Company and the Company to be acquired prepare a takeover plan which is then approved by the relevant company organs.",
+                {
+                    "type": "title",
+                    "text": "B. Direct Takeover from Shareholders"
+                },
+                "The takeover is carried out directly through a transaction transferring share rights between the existing shareholder and the acquiring party, while still taking into account the Company's Articles of Association. This mechanism is regulated in Article 125 paragraph (7) of the Limited Liability Company Law.",
+                "The forms of company acquisition covered by our service are limited to the following types of acquisition:",
+                {
+                    "type": "title",
+                    "text": "Share Acquisition"
+                },
+                "The takeover is carried out by purchasing shares owned by the existing shareholder, so that ownership and control of the company transfer to the new investor.",
+                {
+                    "type": "title",
+                    "text": "Control Acquisition"
+                },
+                "The transaction is carried out to obtain control rights over the company, whether through majority share ownership or voting rights that provide effective control over the Company.",
+                {
+                    "type": "title",
+                    "text": "Stages of Company Acquisition"
+                },
+                "Every acquisition transaction requires careful planning to ensure that the transaction carried out does not create legal risks in the future."
+            ],
+            "zh": [
+                "在竞争日益激烈、经济发展步伐飞快的商业世界中，企业增长并不总是通过设立新实体实现。投资者和企业经营者广泛采用的一种策略是公司收购，即接管已运营的有限责任公司（PT）的所有权及控制权。",
+                "通过收购，企业可以加速业务扩张，而无需从头开始整个流程。然而，收购交易不仅是商业交易，也是须满足各项法律法规规定的公司法律行为。",
+                "从法律角度而言，收购或接管是个人或法人为获取公司股份而采取的法律行为，从而导致对该公司控制权的变更，无论是就公司已发行的股份，还是即将发行的新股。",
+                "在商业实践中，接管可以针对公司部分或全部股份进行，只要该交易能够使收购方有能力决定公司的政策方向及管理。",
+                "投资者或经营者在决定收购某公司时所考虑的价值：",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "获得已拥有营业及运营许可的公司；",
+                        "接触已建立的客户及市场网络；",
+                        "获取已运作的资产、人力资源及技术；",
+                        "加速业务扩张及投资；",
+                        "加强公司在市场竞争中的地位；",
+                        "对企业集团进行重组或整合。"
+                    ]
+                },
+                "从法律角度而言，接管可通过以下方式进行：",
+                {
+                    "type": "title",
+                    "text": "甲、通过公司董事会进行接管"
+                },
+                "此流程规定于《有限责任公司法》第125条第（4）款至第（6）款。收购方公司及被收购公司的董事会须拟定接管方案，随后获得相关公司机构的批准。",
+                {
+                    "type": "title",
+                    "text": "乙、直接从股东处进行接管"
+                },
+                "接管通过原股东与收购方之间的股权转让交易直接进行，同时须遵守公司章程。此机制规定于《有限责任公司法》第125条第（7）款。",
+                "我方服务所涵盖的公司收购形式，仅限于以下几种收购类型：",
+                {
+                    "type": "title",
+                    "text": "股份收购（Share Acquisition）"
+                },
+                "通过购买原股东所持股份进行接管，从而将公司的所有权及控制权转移给新投资者。",
+                {
+                    "type": "title",
+                    "text": "控制权收购（Control Acquisition）"
+                },
+                "该交易旨在获得公司的控制权，无论是通过多数股权持有，还是能够对公司产生有效控制的表决权。",
+                {
+                    "type": "title",
+                    "text": "公司收购阶段"
+                },
+                "每一项收购交易均须经过周密规划，以确保所进行的交易不会在日后产生法律风险。"
+            ]
+        },
+        "sections": {
+            "id": [
+                {
+                    "id": "tahapan-akuisisi",
+                    "type": "numbered_accordion",
+                    "title": "TAHAPAN AKUISISI PERSEROAN",
+                    "items": [
+                        {
+                            "title": "Pemeriksaan Hukum (Legal Due Diligence)",
+                            "desc": "Tahap awal yang sangat penting adalah melakukan pemeriksaan terhadap kondisi hukum perusahaan target."
+                        },
+                        {
+                            "title": "Penyusunan Struktur Transaksi",
+                            "desc": "Setelah proses due diligence selesai, para pihak menentukan struktur transaksi yang akan digunakan, antara lain:",
+                            "bullets": [
+                                "Pengambilalihan sebagian saham;",
+                                "Pengambilalihan seluruh saham;",
+                                "Akuisisi bertahap;",
+                                "Akuisisi melalui perusahaan afiliasi;",
+                                "Akuisisi dalam rangka restrukturisasi grup usaha."
+                            ]
+                        },
+                        {
+                            "title": "Persetujuan Organ Perseroan",
+                            "desc": "Dalam kondisi tertentu, transaksi akuisisi memerlukan persetujuan organ perusahaan sesuai dengan ketentuan Anggaran Dasar dan Undang-Undang Perseroan Terbatas."
+                        },
+                        {
+                            "title": "Pembuatan Dokumen Legalitas Pengambilalihan",
+                            "bullets": [
+                                "Akta Jual Beli Saham;",
+                                "Akta Pengalihan Saham;",
+                                "Akta Pernyataan Keputusan Pemegang Saham;",
+                                "Akta Perubahan Anggaran Dasar (jika diperlukan)."
+                            ]
+                        },
+                        {
+                            "title": "Penyesuaian Dokumen Administrasi Perusahaan",
+                            "bullets": [
+                                "Daftar Pemegang Saham;",
+                                "Direksi dan Komisaris;",
+                                "Beneficial Ownership;",
+                                "Nomor Induk Berusaha (NIB);",
+                                "Sistem OSS;",
+                                "Perizinan sektoral;",
+                                "Data perpajakan perusahaan."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "tahapan-akuisisi",
+                    "type": "numbered_accordion",
+                    "title": "STAGES OF COMPANY ACQUISITION",
+                    "items": [
+                        {
+                            "title": "Legal Due Diligence",
+                            "desc": "A very important initial stage is examining the legal condition of the target company."
+                        },
+                        {
+                            "title": "Preparation of Transaction Structure",
+                            "desc": "After the due diligence process is complete, the parties determine the transaction structure to be used, including:",
+                            "bullets": [
+                                "Takeover of part of the shares;",
+                                "Takeover of all shares;",
+                                "Phased acquisition;",
+                                "Acquisition through an affiliated company;",
+                                "Acquisition for the purpose of business group restructuring."
+                            ]
+                        },
+                        {
+                            "title": "Approval of Company Organs",
+                            "desc": "In certain conditions, an acquisition transaction requires the approval of company organs in accordance with the provisions of the Articles of Association and the Limited Liability Company Law."
+                        },
+                        {
+                            "title": "Preparation of Takeover Legal Documents",
+                            "bullets": [
+                                "Share Sale and Purchase Deed;",
+                                "Share Transfer Deed;",
+                                "Deed of Shareholders' Resolution Statement;",
+                                "Deed of Amendment to the Articles of Association (if required)."
+                            ]
+                        },
+                        {
+                            "title": "Adjustment of Company Administrative Documents",
+                            "bullets": [
+                                "Shareholder Register;",
+                                "Directors and Commissioners;",
+                                "Beneficial Ownership;",
+                                "Business Identification Number (NIB);",
+                                "OSS System;",
+                                "Sectoral licenses;",
+                                "Company tax data."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "tahapan-akuisisi",
+                    "type": "numbered_accordion",
+                    "title": "公司收购阶段",
+                    "items": [
+                        {
+                            "title": "法律尽职调查（Legal Due Diligence）",
+                            "desc": "一个非常重要的初始阶段是审查目标公司的法律状况。"
+                        },
+                        {
+                            "title": "交易结构制定",
+                            "desc": "尽职调查流程完成后，各方须确定拟采用的交易结构，包括：",
+                            "bullets": [
+                                "部分股份接管；",
+                                "全部股份接管；",
+                                "分阶段收购；",
+                                "通过关联公司进行的收购；",
+                                "为企业集团重组目的进行的收购。"
+                            ]
+                        },
+                        {
+                            "title": "公司机构批准",
+                            "desc": "在某些情况下，收购交易须依据公司章程及《有限责任公司法》的规定获得公司机构的批准。"
+                        },
+                        {
+                            "title": "接管合法性文件制作",
+                            "bullets": [
+                                "股份买卖公证书；",
+                                "股份转让公证书；",
+                                "股东决议声明公证书；",
+                                "章程变更公证书（如有需要）。"
+                            ]
+                        },
+                        {
+                            "title": "公司行政文件调整",
+                            "bullets": [
+                                "股东名册；",
+                                "董事及监事；",
+                                "受益所有权（Beneficial Ownership）；",
+                                "营业执照号码（NIB）；",
+                                "OSS系统；",
+                                "行业许可；",
+                                "公司税务数据。"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal;",
+                "Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas;",
+                "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja;",
+                "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;"
+            ],
+            "en": [
+                "Law Number 25 of 2007 concerning Investment;",
+                "Law Number 40 of 2007 concerning Limited Liability Companies;",
+                "Law Number 6 of 2023 concerning Job Creation;",
+                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;"
+            ],
+            "zh": [
+                "2007年第25号法律关于投资；",
+                "2007年第40号法律关于有限责任公司；",
+                "2023年第6号法律关于创造就业；",
+                "2025年第28号政府法规，关于基于风险的营业许可实施；"
+            ]
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 2,
-        "name": "Penggabungan Perseroan (Merger)",
+        "name": {
+            "id": "Penggabungan Perseroan (Merger)",
+            "en": "Company Merger",
+            "zh": "公司合并（Merger）"
+        },
         "price": "9000000",
         "price_label": "Rp 9.000.000",
-        "excerpt": "Pendampingan lengkap proses merger perseroan terbatas sesuai ketentuan hukum yang berlaku.",
+        "excerpt": {
+            "id": "Pendampingan lengkap proses merger perseroan terbatas sesuai ketentuan hukum yang berlaku.",
+            "en": "Complete assistance for the limited liability company merger process in accordance with applicable legal provisions.",
+            "zh": "依据现行法律规定，为有限责任公司合并流程提供全面协助。"
+        },
         "detail_path": "/restrukturisasi-perseroan-terbatas/2",
         "image": "",
-        "penjelasan_umum": [
-            "Dalam perkembangan dunia usaha yang semakin dinamis, perusahaan sering kali menghadapi kebutuhan untuk memperluas kapasitas usaha, meningkatkan efisiensi operasional, memperkuat struktur permodalan, maupun mengonsolidasikan kegiatan usaha dalam satu entitas yang lebih efektif. Salah satu langkah strategis yang banyak ditempuh untuk mencapai tujuan tersebut adalah melalui Penggabungan Perseroan Terbatas (Merger).",
-            "Merger merupakan tindakan korporasi yang menggabungkan dua atau lebih Perseroan menjadi satu entitas perusahaan, dimana satu atau lebih Perseroan menyerahkan seluruh aktiva dan pasivanya kepada Perseroan lain yang telah ada, sehingga seluruh aktiva, pasiva, hak, kewajiban, perizinan, kontrak, dan hubungan hukum Perseroan yang menggabungkan diri beralih secara hukum kepada Perseroan yang menerima penggabungan.",
-            "Berdasarkan Pasal 1 angka 9 Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas, Penggabungan adalah perbuatan hukum yang dilakukan oleh satu Perseroan atau lebih untuk menggabungkan diri dengan Perseroan lain yang telah ada, sehingga aktiva dan pasiva Perseroan yang menggabungkan diri beralih hukum kepada Perseroan yang menerima penggabungan dan selanjutnya status badan hukum Perseroan yang menggabungkan diri berakhir karena hukum.",
-            { "type": "title", "text": "Akibat Hukum" },
-            "Akibat hukum terhadap aktiva dan pasiva:",
-            { "type": "bullets", "items": [
-                "Aktiva dan pasiva perseroan yang menggabungkan diri beralih sepenuhnya kepada perseroan yang menerima penggabungan.",
-                "Pemegang saham perseroan yang menggabungkan diri, menjadi Pemegang saham pada perseroan yang menerima penggabungan."
-            ]},
-            "Akibat hukum terhadap perseroan yang menggabungkan diri:",
-            { "type": "bullets", "items": [
-                "Perseroan yang menggabungkan diri berakhir statusnya sebagai badan hukum;",
-                "Berakhirnya tertitung sejak tanggal penggabungan mulai berlaku."
-            ]},
-            "Dalam praktiknya, merger tidak hanya berkaitan dengan pengalihan aset dan kewajiban perusahaan, tetapi juga mencakup restrukturisasi pemegang saham, pengurus, perizinan usaha, hubungan kerja karyawan, hingga integrasi operasional perusahaan."
-        ],
-        "sections": [
-            {
-                "id": "jenis-penggabungan",
-                "type": "list_check",
-                "title": "JENIS PENGGABUNGAN",
-                "items": [
-                    {
-                        "title": "Merger Horizontal",
-                        "desc": "Penggabungan antara perusahaan yang bergerak dalam bidang usaha yang sama atau sejenis."
-                    },
-                    {
-                        "title": "Merger Konglomerasi",
-                        "desc": "Penggabungan antara perusahaan yang bergerak dalam sektor usaha yang berbeda."
-                    },
-                    {
-                        "title": "Merger Vertikal",
-                        "desc": "Penggabungan antara perusahaan yang memiliki hubungan dalam rantai pasokan atau proses bisnis."
-                    },
-                    {
-                        "title": "Merger Intra Group",
-                        "desc": "Penggabungan antar perusahaan yang berada dalam satu kelompok usaha atau memiliki pemegang saham yang sama."
-                    }
-                ]
-            },
-            {
-                "id": "mekanisme-penggabungan",
-                "type": "numbered_accordion",
-                "title": "MEKANISME PENGGABUNGAN",
-                "items": [
-                    {
-                        "title": "Tahap Perencanaan",
-                        "desc": "Perseroan yang akan melakukan merger menyusun konsep dan struktur penggabungan."
-                    },
-                    {
-                        "title": "Tahap Pemeriksaan dan Kajian",
-                        "desc": "Dilakukan kajian hukum, keuangan, perpajakan, ketenagakerjaan, dan perizinan terhadap masing-masing perusahaan yang akan bergabung."
-                    },
-                    {
-                        "title": "Tahap Persetujuan Internal",
-                        "desc": "Memperoleh persetujuan Direksi, Komisaris, dan RUPS sesuai ketentuan hukum dan Anggaran Dasar Perseroan."
-                    },
-                    {
-                        "title": "Tahap Pelaksanaan",
-                        "desc": "Penandatanganan Akta Penggabungan dan penyelesaian seluruh aspek administratif perusahaan."
-                    },
-                    {
-                        "title": "Tahap Pasca-Merger",
-                        "desc": "Penyesuaian data perusahaan, perizinan, perpajakan, OSS, dan administrasi korporasi lainnya."
-                    }
-                ]
-            },
-            {
-                "id": "prosedur-penggabungan",
-                "type": "numbered_list",
-                "title": "PROSEDUR PENGGABUNGAN",
-                "items": [
-                    {
-                        "title": "Penyusunan Rancangan – Pasal 123 UU Perseroan Terbatas.",
-                        "desc": "Direksi masing-masing perseroan wajib menyusun Rancangan Penggabungan yang sekurang-kurangnya memuat:",
-                        "bullets": [
-                            "Nama dan identitas Perseroan;",
-                            "Alasan dan tujuan penggabungan;",
-                            "Tata cara konversi saham;",
-                            "Neraca dan laporan keuangan;",
-                            "Struktur permodalan;",
-                            "Rencana perubahan Anggaran Dasar;",
-                            "Dampak terhadap karyawan;",
-                            "Dampak terhadap kreditur;",
-                            "Penyelesaian hak dan kewajiban perusahaan."
-                        ]
-                    },
-                    {
-                        "title": "Persetujuan Dewan Komisaris",
-                        "desc": "Rancangan penggabungan wajib memperoleh persetujuan Dewan Komisaris masing-masing Perseroan sebelum diajukan kepada pemegang saham."
-                    },
-                    {
-                        "title": "Pengumuman kepada Kreditur dan Karyawan – Pasal 127 UU Perseroan Terbatas.",
-                        "bullets": [
-                            "Kreditur Perseroan;",
-                            "Karyawan Perseroan.",
-                            "Pengumuman dilakukan paling lambat 30 hari sebelum pemanggilan RUPS."
-                        ]
-                    },
-                    {
-                        "title": "Persetujuan RUPS – Pasal 89 dan Pasal 127 UU Perseroan Terbatas.",
-                        "bullets": [
-                            "Penggabungan wajib memperoleh persetujuan RUPS masing-masing Perseroan.",
-                            "Keputusan merger harus memenuhi kuorum dan persyaratan pengambilan keputusan sebagaimana diatur dalam Undang-Undang Perseroan Terbatas dan Anggaran Dasar Perseroan."
-                        ]
-                    },
-                    {
-                        "title": "Penandatanganan Akta Penggabungan – Pasal 128 UU Perseroan Terbatas",
-                        "desc": "Setelah memperoleh persetujuan RUPS, para pihak menandatangani Akta Penggabungan di hadapan Notaris. Akta ini menjadi dasar hukum pelaksanaan merger dan perubahan data perusahaan."
-                    },
-                    {
-                        "title": "Persetujuan Menteri Hukum – Pasal 21 dan Pasal 131 UU Perseroan Terbatas",
-                        "desc": "Perubahan Anggaran Dasar yang timbul akibat merger wajib memperoleh persetujuan Menteri Hukum Republik Indonesia melalui Sistem Administrasi Badan Hukum (SABH)."
-                    },
-                    {
-                        "title": "Penyesuaian Data OSS dan Perizinan",
-                        "bullets": [
-                            "Nomor Induk Berusaha (NIB);",
-                            "Data OSS;",
-                            "Perizinan Berusaha;",
-                            "Perizinan sektoral;",
-                            "Data Beneficial Ownership;",
-                            "Data perpajakan;",
-                            "Perizinan khusus lainnya sesuai bidang usaha.",
-                            "Penyesuaian ini menjadi penting mengingat berlakunya sistem Perizinan Berusaha Berbasis Risiko."
-                        ]
-                    }
-                ]
-            }
-        ],
-        "dasar_hukum": [],
-        "faq": []
+        "penjelasan_umum": {
+            "id": [
+                "Dalam perkembangan dunia usaha yang semakin dinamis, perusahaan sering kali menghadapi kebutuhan untuk memperluas kapasitas usaha, meningkatkan efisiensi operasional, memperkuat struktur permodalan, maupun mengonsolidasikan kegiatan usaha dalam satu entitas yang lebih efektif. Salah satu langkah strategis yang banyak ditempuh untuk mencapai tujuan tersebut adalah melalui Penggabungan Perseroan Terbatas (Merger).",
+                "Merger merupakan tindakan korporasi yang menggabungkan dua atau lebih Perseroan menjadi satu entitas perusahaan, dimana satu atau lebih Perseroan menyerahkan seluruh aktiva dan pasivanya kepada Perseroan lain yang telah ada, sehingga seluruh aktiva, pasiva, hak, kewajiban, perizinan, kontrak, dan hubungan hukum Perseroan yang menggabungkan diri beralih secara hukum kepada Perseroan yang menerima penggabungan.",
+                "Berdasarkan Pasal 1 angka 9 Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas, Penggabungan adalah perbuatan hukum yang dilakukan oleh satu Perseroan atau lebih untuk menggabungkan diri dengan Perseroan lain yang telah ada, sehingga aktiva dan pasiva Perseroan yang menggabungkan diri beralih hukum kepada Perseroan yang menerima penggabungan dan selanjutnya status badan hukum Perseroan yang menggabungkan diri berakhir karena hukum.",
+                {
+                    "type": "title",
+                    "text": "Akibat Hukum"
+                },
+                "Akibat hukum terhadap aktiva dan pasiva:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Aktiva dan pasiva perseroan yang menggabungkan diri beralih sepenuhnya kepada perseroan yang menerima penggabungan.",
+                        "Pemegang saham perseroan yang menggabungkan diri, menjadi Pemegang saham pada perseroan yang menerima penggabungan."
+                    ]
+                },
+                "Akibat hukum terhadap perseroan yang menggabungkan diri:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "Perseroan yang menggabungkan diri berakhir statusnya sebagai badan hukum;",
+                        "Berakhirnya tertitung sejak tanggal penggabungan mulai berlaku."
+                    ]
+                },
+                "Dalam praktiknya, merger tidak hanya berkaitan dengan pengalihan aset dan kewajiban perusahaan, tetapi juga mencakup restrukturisasi pemegang saham, pengurus, perizinan usaha, hubungan kerja karyawan, hingga integrasi operasional perusahaan."
+            ],
+            "en": [
+                "In the increasingly dynamic development of the business world, companies often face the need to expand business capacity, improve operational efficiency, strengthen capital structure, or consolidate business activities into a single, more effective entity. One strategic step widely taken to achieve this goal is through the Merger of Limited Liability Companies.",
+                "A merger is a corporate action that combines two or more Companies into a single company entity, in which one or more Companies transfer all their assets and liabilities to another existing Company, so that all assets, liabilities, rights, obligations, licenses, contracts, and legal relationships of the merging Company are legally transferred to the receiving Company.",
+                "Under Article 1 number 9 of Law Number 40 of 2007 concerning Limited Liability Companies, a Merger is a legal act carried out by one or more Companies to merge with another existing Company, so that the assets and liabilities of the merging Company are legally transferred to the receiving Company, after which the legal entity status of the merging Company ends by operation of law.",
+                {
+                    "type": "title",
+                    "text": "Legal Consequences"
+                },
+                "Legal consequences for assets and liabilities:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "The assets and liabilities of the merging company are fully transferred to the receiving company.",
+                        "Shareholders of the merging company become shareholders of the receiving company."
+                    ]
+                },
+                "Legal consequences for the merging company:",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "The merging company's status as a legal entity ends;",
+                        "The termination is counted from the date the merger takes effect."
+                    ]
+                },
+                "In practice, a merger is not only related to the transfer of company assets and liabilities, but also covers the restructuring of shareholders, management, business licenses, employee working relationships, and company operational integration."
+            ],
+            "zh": [
+                "在日益活跃的商业发展中，企业常常面临扩大业务规模、提高运营效率、加强资本结构，或将经营活动整合为更高效单一实体的需求。为实现此目标而广泛采用的战略举措之一，便是有限责任公司合并（Merger）。",
+                "合并是一种公司行为，将两家或以上公司合并为一个公司实体，其中一家或多家公司将其全部资产及负债转让给另一家既有公司，从而使合并方公司的全部资产、负债、权利、义务、许可、合同及法律关系依法转移至受让方公司。",
+                "根据2007年第40号《有限责任公司法》第1条第9款，合并是指一家或多家公司与另一家既有公司合并的法律行为，使合并方公司的资产及负债依法转移至受让方公司，随后合并方公司的法人地位依法终止。",
+                {
+                    "type": "title",
+                    "text": "法律后果"
+                },
+                "对资产及负债的法律后果：",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "合并方公司的资产及负债完全转移至受让方公司。",
+                        "合并方公司的股东成为受让方公司的股东。"
+                    ]
+                },
+                "对合并方公司的法律后果：",
+                {
+                    "type": "bullets",
+                    "items": [
+                        "合并方公司的法人地位终止；",
+                        "终止自合并生效之日起计算。"
+                    ]
+                },
+                "在实践中，合并不仅涉及公司资产及负债的转移，还涵盖股东、管理层、营业许可、员工劳动关系的重组，以及公司运营的整合。"
+            ]
+        },
+        "sections": {
+            "id": [
+                {
+                    "id": "jenis-penggabungan",
+                    "type": "list_check",
+                    "title": "JENIS PENGGABUNGAN",
+                    "items": [
+                        {
+                            "title": "Merger Horizontal",
+                            "desc": "Penggabungan antara perusahaan yang bergerak dalam bidang usaha yang sama atau sejenis."
+                        },
+                        {
+                            "title": "Merger Konglomerasi",
+                            "desc": "Penggabungan antara perusahaan yang bergerak dalam sektor usaha yang berbeda."
+                        },
+                        {
+                            "title": "Merger Vertikal",
+                            "desc": "Penggabungan antara perusahaan yang memiliki hubungan dalam rantai pasokan atau proses bisnis."
+                        },
+                        {
+                            "title": "Merger Intra Group",
+                            "desc": "Penggabungan antar perusahaan yang berada dalam satu kelompok usaha atau memiliki pemegang saham yang sama."
+                        }
+                    ]
+                },
+                {
+                    "id": "mekanisme-penggabungan",
+                    "type": "numbered_accordion",
+                    "title": "MEKANISME PENGGABUNGAN",
+                    "items": [
+                        {
+                            "title": "Tahap Perencanaan",
+                            "desc": "Perseroan yang akan melakukan merger menyusun konsep dan struktur penggabungan."
+                        },
+                        {
+                            "title": "Tahap Pemeriksaan dan Kajian",
+                            "desc": "Dilakukan kajian hukum, keuangan, perpajakan, ketenagakerjaan, dan perizinan terhadap masing-masing perusahaan yang akan bergabung."
+                        },
+                        {
+                            "title": "Tahap Persetujuan Internal",
+                            "desc": "Memperoleh persetujuan Direksi, Komisaris, dan RUPS sesuai ketentuan hukum dan Anggaran Dasar Perseroan."
+                        },
+                        {
+                            "title": "Tahap Pelaksanaan",
+                            "desc": "Penandatanganan Akta Penggabungan dan penyelesaian seluruh aspek administratif perusahaan."
+                        },
+                        {
+                            "title": "Tahap Pasca-Merger",
+                            "desc": "Penyesuaian data perusahaan, perizinan, perpajakan, OSS, dan administrasi korporasi lainnya."
+                        }
+                    ]
+                },
+                {
+                    "id": "prosedur-penggabungan",
+                    "type": "numbered_list",
+                    "title": "PROSEDUR PENGGABUNGAN",
+                    "items": [
+                        {
+                            "title": "Penyusunan Rancangan – Pasal 123 UU Perseroan Terbatas.",
+                            "desc": "Direksi masing-masing perseroan wajib menyusun Rancangan Penggabungan yang sekurang-kurangnya memuat:",
+                            "bullets": [
+                                "Nama dan identitas Perseroan;",
+                                "Alasan dan tujuan penggabungan;",
+                                "Tata cara konversi saham;",
+                                "Neraca dan laporan keuangan;",
+                                "Struktur permodalan;",
+                                "Rencana perubahan Anggaran Dasar;",
+                                "Dampak terhadap karyawan;",
+                                "Dampak terhadap kreditur;",
+                                "Penyelesaian hak dan kewajiban perusahaan."
+                            ]
+                        },
+                        {
+                            "title": "Persetujuan Dewan Komisaris",
+                            "desc": "Rancangan penggabungan wajib memperoleh persetujuan Dewan Komisaris masing-masing Perseroan sebelum diajukan kepada pemegang saham."
+                        },
+                        {
+                            "title": "Pengumuman kepada Kreditur dan Karyawan – Pasal 127 UU Perseroan Terbatas.",
+                            "bullets": [
+                                "Kreditur Perseroan;",
+                                "Karyawan Perseroan.",
+                                "Pengumuman dilakukan paling lambat 30 hari sebelum pemanggilan RUPS."
+                            ]
+                        },
+                        {
+                            "title": "Persetujuan RUPS – Pasal 89 dan Pasal 127 UU Perseroan Terbatas.",
+                            "bullets": [
+                                "Penggabungan wajib memperoleh persetujuan RUPS masing-masing Perseroan.",
+                                "Keputusan merger harus memenuhi kuorum dan persyaratan pengambilan keputusan sebagaimana diatur dalam Undang-Undang Perseroan Terbatas dan Anggaran Dasar Perseroan."
+                            ]
+                        },
+                        {
+                            "title": "Penandatanganan Akta Penggabungan – Pasal 128 UU Perseroan Terbatas",
+                            "desc": "Setelah memperoleh persetujuan RUPS, para pihak menandatangani Akta Penggabungan di hadapan Notaris. Akta ini menjadi dasar hukum pelaksanaan merger dan perubahan data perusahaan."
+                        },
+                        {
+                            "title": "Persetujuan Menteri Hukum – Pasal 21 dan Pasal 131 UU Perseroan Terbatas",
+                            "desc": "Perubahan Anggaran Dasar yang timbul akibat merger wajib memperoleh persetujuan Menteri Hukum Republik Indonesia melalui Sistem Administrasi Badan Hukum (SABH)."
+                        },
+                        {
+                            "title": "Penyesuaian Data OSS dan Perizinan",
+                            "bullets": [
+                                "Nomor Induk Berusaha (NIB);",
+                                "Data OSS;",
+                                "Perizinan Berusaha;",
+                                "Perizinan sektoral;",
+                                "Data Beneficial Ownership;",
+                                "Data perpajakan;",
+                                "Perizinan khusus lainnya sesuai bidang usaha.",
+                                "Penyesuaian ini menjadi penting mengingat berlakunya sistem Perizinan Berusaha Berbasis Risiko."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "jenis-penggabungan",
+                    "type": "list_check",
+                    "title": "TYPES OF MERGER",
+                    "items": [
+                        {
+                            "title": "Horizontal Merger",
+                            "desc": "A merger between companies operating in the same or similar business field."
+                        },
+                        {
+                            "title": "Conglomerate Merger",
+                            "desc": "A merger between companies operating in different business sectors."
+                        },
+                        {
+                            "title": "Vertical Merger",
+                            "desc": "A merger between companies with a relationship in the supply chain or business process."
+                        },
+                        {
+                            "title": "Intra-Group Merger",
+                            "desc": "A merger between companies within the same business group or having the same shareholders."
+                        }
+                    ]
+                },
+                {
+                    "id": "mekanisme-penggabungan",
+                    "type": "numbered_accordion",
+                    "title": "MERGER MECHANISM",
+                    "items": [
+                        {
+                            "title": "Planning Stage",
+                            "desc": "The companies to be merged prepare the merger concept and structure."
+                        },
+                        {
+                            "title": "Examination and Review Stage",
+                            "desc": "Legal, financial, tax, employment, and licensing reviews are conducted on each of the companies to be merged."
+                        },
+                        {
+                            "title": "Internal Approval Stage",
+                            "desc": "Obtaining approval from the Board of Directors, Board of Commissioners, and RUPS in accordance with legal provisions and the Company's Articles of Association."
+                        },
+                        {
+                            "title": "Implementation Stage",
+                            "desc": "Signing of the Merger Deed and completion of all company administrative aspects."
+                        },
+                        {
+                            "title": "Post-Merger Stage",
+                            "desc": "Adjustment of company data, licensing, taxation, OSS, and other corporate administration."
+                        }
+                    ]
+                },
+                {
+                    "id": "prosedur-penggabungan",
+                    "type": "numbered_list",
+                    "title": "MERGER PROCEDURE",
+                    "items": [
+                        {
+                            "title": "Preparation of the Merger Plan – Article 123 of the Limited Liability Company Law.",
+                            "desc": "The Board of Directors of each company must prepare a Merger Plan that contains at least:",
+                            "bullets": [
+                                "Name and identity of the Company;",
+                                "Reasons and objectives of the merger;",
+                                "Share conversion procedures;",
+                                "Balance sheet and financial statements;",
+                                "Capital structure;",
+                                "Plan for amendment of the Articles of Association;",
+                                "Impact on employees;",
+                                "Impact on creditors;",
+                                "Settlement of the company's rights and obligations."
+                            ]
+                        },
+                        {
+                            "title": "Board of Commissioners' Approval",
+                            "desc": "The merger plan must obtain the approval of the Board of Commissioners of each Company before being submitted to shareholders."
+                        },
+                        {
+                            "title": "Announcement to Creditors and Employees – Article 127 of the Limited Liability Company Law.",
+                            "bullets": [
+                                "Company Creditors;",
+                                "Company Employees.",
+                                "The announcement is made no later than 30 days before the RUPS is convened."
+                            ]
+                        },
+                        {
+                            "title": "RUPS Approval – Articles 89 and 127 of the Limited Liability Company Law.",
+                            "bullets": [
+                                "The merger must obtain the approval of the RUPS of each Company.",
+                                "The merger decision must fulfill the quorum and decision-making requirements as regulated in the Limited Liability Company Law and the Company's Articles of Association."
+                            ]
+                        },
+                        {
+                            "title": "Signing of the Merger Deed – Article 128 of the Limited Liability Company Law",
+                            "desc": "After obtaining RUPS approval, the parties sign the Merger Deed before a Notary. This deed becomes the legal basis for implementing the merger and changing company data."
+                        },
+                        {
+                            "title": "Approval of the Minister of Law – Articles 21 and 131 of the Limited Liability Company Law",
+                            "desc": "Amendments to the Articles of Association arising from the merger must obtain the approval of the Minister of Law of the Republic of Indonesia through the Legal Entity Administration System (SABH)."
+                        },
+                        {
+                            "title": "Adjustment of OSS Data and Licensing",
+                            "bullets": [
+                                "Business Identification Number (NIB);",
+                                "OSS Data;",
+                                "Business Licensing;",
+                                "Sectoral licenses;",
+                                "Beneficial Ownership Data;",
+                                "Tax data;",
+                                "Other special licenses according to the business field.",
+                                "This adjustment is important given the implementation of the Risk-Based Business Licensing system."
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "jenis-penggabungan",
+                    "type": "list_check",
+                    "title": "合并类型",
+                    "items": [
+                        {
+                            "title": "横向合并",
+                            "desc": "从事相同或类似业务领域的公司之间的合并。"
+                        },
+                        {
+                            "title": "混合合并",
+                            "desc": "从事不同业务领域的公司之间的合并。"
+                        },
+                        {
+                            "title": "纵向合并",
+                            "desc": "在供应链或业务流程中具有关联关系的公司之间的合并。"
+                        },
+                        {
+                            "title": "集团内部合并",
+                            "desc": "同属一个企业集团或拥有相同股东的公司之间的合并。"
+                        }
+                    ]
+                },
+                {
+                    "id": "mekanisme-penggabungan",
+                    "type": "numbered_accordion",
+                    "title": "合并机制",
+                    "items": [
+                        {
+                            "title": "规划阶段",
+                            "desc": "拟合并的公司须制定合并方案及结构。"
+                        },
+                        {
+                            "title": "审查与评估阶段",
+                            "desc": "对拟合并的各公司进行法律、财务、税务、劳动及许可方面的评估。"
+                        },
+                        {
+                            "title": "内部批准阶段",
+                            "desc": "依据法律规定及公司章程，获得董事会、监事会及股东大会（RUPS）的批准。"
+                        },
+                        {
+                            "title": "实施阶段",
+                            "desc": "签署合并公证书并完成公司所有行政事务。"
+                        },
+                        {
+                            "title": "合并后阶段",
+                            "desc": "调整公司数据、许可、税务、OSS及其他公司行政事务。"
+                        }
+                    ]
+                },
+                {
+                    "id": "prosedur-penggabungan",
+                    "type": "numbered_list",
+                    "title": "合并程序",
+                    "items": [
+                        {
+                            "title": "方案制定——《有限责任公司法》第123条。",
+                            "desc": "各公司董事会须制定至少包含以下内容的合并方案：",
+                            "bullets": [
+                                "公司名称及身份；",
+                                "合并的原因及目的；",
+                                "股份转换程序；",
+                                "资产负债表及财务报表；",
+                                "资本结构；",
+                                "章程变更计划；",
+                                "对员工的影响；",
+                                "对债权人的影响；",
+                                "公司权利及义务的解决。"
+                            ]
+                        },
+                        {
+                            "title": "监事会批准",
+                            "desc": "合并方案须先获得各公司监事会的批准，方可提交股东。"
+                        },
+                        {
+                            "title": "向债权人及员工公告——《有限责任公司法》第127条。",
+                            "bullets": [
+                                "公司债权人；",
+                                "公司员工。",
+                                "公告须在召开股东大会前至少30天进行。"
+                            ]
+                        },
+                        {
+                            "title": "股东大会批准——《有限责任公司法》第89条及第127条。",
+                            "bullets": [
+                                "合并须获得各公司股东大会的批准。",
+                                "合并决议须满足《有限责任公司法》及公司章程规定的法定人数及决策要求。"
+                            ]
+                        },
+                        {
+                            "title": "签署合并公证书——《有限责任公司法》第128条",
+                            "desc": "获得股东大会批准后，各方须在公证人面前签署合并公证书。该公证书是实施合并及变更公司数据的法律依据。"
+                        },
+                        {
+                            "title": "法务部长批准——《有限责任公司法》第21条及第131条",
+                            "desc": "因合并而产生的章程变更须通过法人行政系统（SABH）获得印度尼西亚共和国法务部长的批准。"
+                        },
+                        {
+                            "title": "OSS数据及许可调整",
+                            "bullets": [
+                                "营业执照号码（NIB）；",
+                                "OSS数据；",
+                                "营业许可；",
+                                "行业许可；",
+                                "受益所有权数据；",
+                                "税务数据；",
+                                "根据业务领域所需的其他特殊许可。",
+                                "鉴于基于风险的营业许可制度的实施，此项调整十分重要。"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 3,
-        "name": "Alih Status Perseroan",
+        "name": {
+            "id": "Alih Status Perseroan",
+            "en": "Company Status Conversion",
+            "zh": "公司地位转换"
+        },
         "price": "9000000",
         "price_label": "Rp 9.000.000",
-        "excerpt": "Pendampingan lengkap proses alih status perseroan terbatas sesuai ketentuan hukum yang berlaku.",
+        "excerpt": {
+            "id": "Pendampingan lengkap proses alih status perseroan terbatas sesuai ketentuan hukum yang berlaku.",
+            "en": "Complete assistance for the limited liability company status conversion process in accordance with applicable legal provisions.",
+            "zh": "依据现行法律规定，为有限责任公司地位转换流程提供全面协助。"
+        },
         "detail_path": "/restrukturisasi-perseroan-terbatas/3",
         "image": "",
-        "penjelasan_umum": [
-            "Alih status Perseroan merupakan proses perubahan status hukum, status investasi, atau karakteristik Perseroan yang mengakibatkan adanya penyesuaian terhadap struktur kepemilikan, permodalan, kegiatan usaha, maupun aspek perizinan perusahaan. Proses ini harus dilakukan sesuai dengan ketentuan hukum yang berlaku agar tetap memberikan kepastian hukum bagi pemegang saham, investor, kreditur, dan para pemangku kepentingan lainnya."
-        ],
-        "sections": [
-            {
-                "id": "bentuk-alih-status",
-                "type": "numbered_bold",
-                "title": "BENTUK-BENTUK ALIH STATUS PERSEROAN",
-                "items": [
-                    {
-                        "title": "Perubahan PT Lokal Menjadi PT Penanaman Modal Asing (PT PMA)",
-                        "desc": "Alih status ini terjadi ketika terdapat penyertaan modal asing dalam Perseroan yang sebelumnya seluruh sahamnya dimiliki oleh Warga Negara Indonesia atau badan hukum Indonesia. Perubahan status ini mengakibatkan perusahaan menjadi Perseroan Penanaman Modal Asing (PMA) yang tunduk pada ketentuan investasi dan perizinan yang berlaku bagi penanaman modal asing."
-                    },
-                    {
-                        "title": "Perubahan PT PMA Menjadi PT Dalam Negeri",
-                        "desc": "Alih status ini terjadi ketika seluruh saham dalam Perseroan telah dialihkan kepada pihak Indonesia sehingga tidak lagi terdapat unsur penanaman modal asing dalam struktur kepemilikan perusahaan."
-                    },
-                    {
-                        "title": "Perubahan PT Usaha Mikro dan Kecil Menjadi Perseroan Persekutuan Modal",
-                        "desc": "Alih status dapat dilakukan ketika perusahaan berkembang dan memerlukan struktur kepemilikan yang lebih kompleks, tambahan investor, atau peningkatan skala usaha."
-                    },
-                    {
-                        "title": "Perubahan PT Perorangan Menjadi Perseroan Persekutuan Modal",
-                        "desc": "Perubahan ini wajib dilakukan apabila:",
-                        "bullets": [
-                            "Pemegang saham bertambah menjadi lebih dari satu orang; atau",
-                            "Perseroan tidak lagi memenuhi kriteria usaha mikro dan kecil."
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "aspek-penting",
-                "type": "grid_check",
-                "title": "ASPEK PENTING DALAM ALIH STATUS PT LOKAL MENJADI PT PMA",
-                "items": [
-                    {
-                        "title": "Kesesuaian Bidang Usaha",
-                        "desc": "Perlu dilakukan analisis terhadap ketentuan investasi yang berlaku."
-                    },
-                    {
-                        "title": "Nilai Investasi",
-                        "desc": "PT PMA wajib memenuhi ketentuan investasi sesuai regulasi investasi yang berlaku."
-                    },
-                    {
-                        "title": "Struktur Kepemilikan Saham",
-                        "desc": "Komposisi kepemilikan asing harus sesuai dengan ketentuan sektor usaha yang dijalankan."
-                    },
-                    {
-                        "title": "Perizinan dan Pelaporan",
-                        "desc": "Perusahaan wajib memenuhi kewajiban pelaporan penanaman modal dan kepatuhan investasi lainnya."
-                    }
-                ]
-            }
-        ],
-        "dasar_hukum": [],
-        "faq": []
+        "penjelasan_umum": {
+            "id": [
+                "Alih status Perseroan merupakan proses perubahan status hukum, status investasi, atau karakteristik Perseroan yang mengakibatkan adanya penyesuaian terhadap struktur kepemilikan, permodalan, kegiatan usaha, maupun aspek perizinan perusahaan. Proses ini harus dilakukan sesuai dengan ketentuan hukum yang berlaku agar tetap memberikan kepastian hukum bagi pemegang saham, investor, kreditur, dan para pemangku kepentingan lainnya."
+            ],
+            "en": [
+                "Company status conversion is the process of changing the legal status, investment status, or characteristics of a Company that results in adjustments to the ownership structure, capital, business activities, or licensing aspects of the company. This process must be carried out in accordance with applicable legal provisions to continue providing legal certainty for shareholders, investors, creditors, and other stakeholders."
+            ],
+            "zh": [
+                "公司地位转换是指公司法律地位、投资地位或特征发生变化的过程，从而导致公司在持股结构、资本、经营活动或许可方面的调整。此流程须依据现行法律规定进行，以持续为股东、投资者、债权人及其他利益相关方提供法律确定性。"
+            ]
+        },
+        "sections": {
+            "id": [
+                {
+                    "id": "bentuk-alih-status",
+                    "type": "numbered_bold",
+                    "title": "BENTUK-BENTUK ALIH STATUS PERSEROAN",
+                    "items": [
+                        {
+                            "title": "Perubahan PT Lokal Menjadi PT Penanaman Modal Asing (PT PMA)",
+                            "desc": "Alih status ini terjadi ketika terdapat penyertaan modal asing dalam Perseroan yang sebelumnya seluruh sahamnya dimiliki oleh Warga Negara Indonesia atau badan hukum Indonesia. Perubahan status ini mengakibatkan perusahaan menjadi Perseroan Penanaman Modal Asing (PMA) yang tunduk pada ketentuan investasi dan perizinan yang berlaku bagi penanaman modal asing."
+                        },
+                        {
+                            "title": "Perubahan PT PMA Menjadi PT Dalam Negeri",
+                            "desc": "Alih status ini terjadi ketika seluruh saham dalam Perseroan telah dialihkan kepada pihak Indonesia sehingga tidak lagi terdapat unsur penanaman modal asing dalam struktur kepemilikan perusahaan."
+                        },
+                        {
+                            "title": "Perubahan PT Usaha Mikro dan Kecil Menjadi Perseroan Persekutuan Modal",
+                            "desc": "Alih status dapat dilakukan ketika perusahaan berkembang dan memerlukan struktur kepemilikan yang lebih kompleks, tambahan investor, atau peningkatan skala usaha."
+                        },
+                        {
+                            "title": "Perubahan PT Perorangan Menjadi Perseroan Persekutuan Modal",
+                            "desc": "Perubahan ini wajib dilakukan apabila:",
+                            "bullets": [
+                                "Pemegang saham bertambah menjadi lebih dari satu orang; atau",
+                                "Perseroan tidak lagi memenuhi kriteria usaha mikro dan kecil."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "aspek-penting",
+                    "type": "grid_check",
+                    "title": "ASPEK PENTING DALAM ALIH STATUS PT LOKAL MENJADI PT PMA",
+                    "items": [
+                        {
+                            "title": "Kesesuaian Bidang Usaha",
+                            "desc": "Perlu dilakukan analisis terhadap ketentuan investasi yang berlaku."
+                        },
+                        {
+                            "title": "Nilai Investasi",
+                            "desc": "PT PMA wajib memenuhi ketentuan investasi sesuai regulasi investasi yang berlaku."
+                        },
+                        {
+                            "title": "Struktur Kepemilikan Saham",
+                            "desc": "Komposisi kepemilikan asing harus sesuai dengan ketentuan sektor usaha yang dijalankan."
+                        },
+                        {
+                            "title": "Perizinan dan Pelaporan",
+                            "desc": "Perusahaan wajib memenuhi kewajiban pelaporan penanaman modal dan kepatuhan investasi lainnya."
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "bentuk-alih-status",
+                    "type": "numbered_bold",
+                    "title": "FORMS OF COMPANY STATUS CONVERSION",
+                    "items": [
+                        {
+                            "title": "Conversion of a Local PT into a Foreign Investment PT (PT PMA)",
+                            "desc": "This status conversion occurs when there is foreign capital participation in a Company whose shares were previously entirely owned by Indonesian citizens or Indonesian legal entities. This status change results in the company becoming a Foreign Investment Company (PMA) subject to the investment and licensing provisions applicable to foreign investment."
+                        },
+                        {
+                            "title": "Conversion of a PT PMA into a Domestic PT",
+                            "desc": "This status conversion occurs when all shares in the Company have been transferred to Indonesian parties, so that there is no longer any foreign investment element in the company's ownership structure."
+                        },
+                        {
+                            "title": "Conversion of a Micro and Small Business PT into a Capital Partnership Company",
+                            "desc": "Status conversion may be carried out when the company grows and requires a more complex ownership structure, additional investors, or an increase in business scale."
+                        },
+                        {
+                            "title": "Conversion of a PT Perorangan into a Capital Partnership Company",
+                            "desc": "This conversion must be carried out if:",
+                            "bullets": [
+                                "The number of shareholders increases to more than one person; or",
+                                "The Company no longer meets the criteria for micro and small enterprises."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "aspek-penting",
+                    "type": "grid_check",
+                    "title": "IMPORTANT ASPECTS IN THE CONVERSION OF A LOCAL PT INTO A PT PMA",
+                    "items": [
+                        {
+                            "title": "Business Field Compatibility",
+                            "desc": "An analysis of the applicable investment provisions is required."
+                        },
+                        {
+                            "title": "Investment Value",
+                            "desc": "A PT PMA must fulfill investment provisions in accordance with applicable investment regulations."
+                        },
+                        {
+                            "title": "Shareholding Structure",
+                            "desc": "The foreign ownership composition must comply with the provisions applicable to the business sector conducted."
+                        },
+                        {
+                            "title": "Licensing and Reporting",
+                            "desc": "The company must fulfill investment reporting obligations and other investment compliance requirements."
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "bentuk-alih-status",
+                    "type": "numbered_bold",
+                    "title": "公司地位转换形式",
+                    "items": [
+                        {
+                            "title": "本地PT转换为外商投资PT（PT PMA）",
+                            "desc": "此地位转换发生于原全部股份由印尼公民或印尼法人持有的公司引入外资参股时。该地位变更使公司成为受外商投资相关投资及许可规定约束的外商投资公司（PMA）。"
+                        },
+                        {
+                            "title": "PT PMA转换为国内PT",
+                            "desc": "当公司全部股份已转让给印尼方，使公司持股结构中不再含有外商投资成分时，即发生此地位转换。"
+                        },
+                        {
+                            "title": "微型及小型企业PT转换为资本合伙公司",
+                            "desc": "当公司发展并需要更复杂的持股结构、追加投资者或扩大经营规模时，可进行地位转换。"
+                        },
+                        {
+                            "title": "个人独资PT（PT Perorangan）转换为资本合伙公司",
+                            "desc": "在以下情况下须进行此项转换：",
+                            "bullets": [
+                                "股东人数增加至一人以上；或",
+                                "公司不再符合微型及小型企业标准。"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "aspek-penting",
+                    "type": "grid_check",
+                    "title": "本地PT转换为PT PMA的重要方面",
+                    "items": [
+                        {
+                            "title": "业务领域适配性",
+                            "desc": "须对现行投资规定进行分析。"
+                        },
+                        {
+                            "title": "投资价值",
+                            "desc": "PT PMA须依据现行投资法规满足投资规定。"
+                        },
+                        {
+                            "title": "股权结构",
+                            "desc": "外资持股比例须符合所从事业务领域的相关规定。"
+                        },
+                        {
+                            "title": "许可与报告",
+                            "desc": "公司须履行投资报告义务及其他投资合规要求。"
+                        }
+                    ]
+                }
+            ]
+        },
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]

@@ -9,6 +9,8 @@ import layanan from './services/layanan'
 import badanUsahaLuarNegeri from './services/badan-usaha-luar-negeri'
 import oneSingleSubmission from './services/one-single-submission'
 import perizinanLainnya from './services/perizinan-lainnya'
+import notarisVirtualDanAkta from './services/notaris-virtual-dan-akta'
+import restrukturisasiPerseroanTerbatas from './services/restrukturisasi-perseroan-terbatas'
 
 export default {
     common,
@@ -21,6 +23,8 @@ export default {
         izinTinggalTerbatas,
         badanUsahaLuarNegeri,
         oneSingleSubmission,
-        perizinanLainnya
+        perizinanLainnya,
+        notarisVirtualDanAkta,
+        restrukturisasiPerseroanTerbatas
     },
 }

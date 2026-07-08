@@ -13,6 +13,8 @@ export const PHONES = {
     digital:        "6282298604144",
 };
 
+// 6282318855198
+
 const MESSAGES = {
     default: (service) =>
         `Halo FASTRACK LEGAL,\nSaya berminat berkonsultasi layanan:\n${service}\nMohon dibantu informasi mengenai persyaratan dan penawaran biaya. Jika memungkinkan, saya juga ingin dijadwalkan untuk konsultasi dengan tim FASTRACK LEGAL.\n\nTerima kasih.`,
