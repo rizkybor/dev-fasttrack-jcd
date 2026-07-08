@@ -1,107 +1,464 @@
 [
     {
         "id": 1,
-        "name": "Naturalisasi (Alih Kewarganegaraan)",
+        "name": {
+            "id": "Naturalisasi (Alih Kewarganegaraan)",
+            "en": "Naturalization (Citizenship Transfer)",
+            "zh": "入籍（国籍变更）"
+        },
         "price": "0",
         "price_label": "Rp 2.500.000",
-        "excerpt": "Pengurusan sertifikasi kewarganegaraan dan legalitas badan usaha melalui Kamar Dagang dan Industri (KADIN) secara resmi.",
+        "excerpt": {
+            "id": "Pengurusan sertifikasi kewarganegaraan dan legalitas badan usaha melalui Kamar Dagang dan Industri (KADIN) secara resmi.",
+            "en": "Official processing of citizenship certification and business entity legality through the Chamber of Commerce and Industry (KADIN).",
+            "zh": "通过商会（KADIN）正式办理国籍证明及企业合法性手续。"
+        },
         "detail_path": "/naturalisasi/1",
         "image": "",
-        "sections": [
-            {
-                "id": "penjelasan-umum",
-                "type": "penjelasan",
-                "title": "PENJELASAN UMUM",
-                "content": [
-                    { "type": "title", "text": "Memahami Naturalisasi dalam Sistem Hukum Indonesia" },
-                    { "type": "paragraph", "text": "Naturalisasi atau pewarganegaraan merupakan proses hukum yang memberikan status Warga Negara Indonesia (WNI) kepada seorang warga negara asing (WNA) berdasarkan ketentuan peraturan perundang-undangan yang berlaku. Melalui proses ini, seseorang yang sebelumnya berkewarganegaraan asing dapat memperoleh pengakuan sebagai warga WNI dengan hak dan kewajiban yang setara." },
-                    { "type": "paragraph", "text": "Pewarganegaraan merupakan salah satu instrumen penting dalam sistem hukum kewarganegaraan Indonesia, yang bertujuan memberikan kepastian status hukum, melindungi integrasi sosial, serta mendukung kehidupan individu, termasuk termasuk pengajuan pembuatan." },
-                    { "type": "paragraph", "text": "Saat ini, ketentuan mengenai kewarganegaraan Indonesia diatur berdasarkan:" },
-                    { "type": "bullets", "items": [
-                        "Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia;",
-                        "Peraturan Pemerintah Nomor 2 Tahun 2007 tentang Tata Cara Memperoleh, Kehilangan, Pembatalan, dan Memperoleh Kembali Kewarganegaraan Republik Indonesia;",
-                        "Peraturan Menteri Hukum dan Hak Asasi Manusia Republik Indonesia beserta peraturan pelaksanaan lainnya yang mengatur tata cara pengajuan dan persyaratan itu untuk kewarganegaraan."
-                    ]},
-                    { "type": "paragraph", "text": "Secara umum, pewarganegaraan di Indonesia dapat diperoleh melalui Hak atau melalui Proses atau Naturalisasi (terbagi)." }
-                ]
-            },
-            {
-                "id": "naturalisasi-biasa",
-                "type": "numbered_detail",
-                "title": "NATURALISASI BIASA",
-                "intro_paragraphs": [
-                    "Naturalisasi biasa merupakan mekanisme yang paling umum digunakan oleh warga negara asing untuk memperoleh kewarganegaraan Indonesia melalui permohonan yang diajukan kepada Presiden Republik Indonesia melalui Menteri Hukum. Dasar hukum naturalisasi biasa diatur dalam Pasal 9 Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia.",
-                    "Untuk memperoleh kewarganegaraan Indonesia melalui naturalisasi biasa, pemohon wajib memenuhi persyaratan sebagai berikut:"
-                ],
-                "items": [
-                    {
-                        "title": "Berusia Minimal 18 Tahun atau Sudah Menikah",
-                        "desc": "Pemohon harus telah mencapai usia dewasa menurut hukum atau telah terikat dalam perkawinan yang sah."
-                    },
-                    {
-                        "title": "Memiliki Masa Tinggal yang Memadai di Indonesia",
-                        "desc": "Pemohon harus telah bertempat tinggal di wilayah Indonesia paling singkat:",
-                        "bullets": [
-                            "5 (lima) tahun berturut-turut; atau",
-                            "10 (sepuluh) tahun tidak berturut-turut."
-                        ],
-                        "after_bullets": "Persyaratan ini menunjukkan adanya keterikatan nyata (genuine link) antara pemohon dengan Negara Republik Indonesia."
-                    },
-                    {
-                        "title": "Sehat Jasmani dan Rohani",
-                        "desc": "Kondisi kesehatan dibuktikan melalui surat keterangan dari instansi kesehatan yang berwenang."
-                    },
-                    {
-                        "title": "Mampu Berbahasa Indonesia serta Mengakui Pancasila dan UUD 1945",
-                        "desc": "Pemohon harus memiliki kemampuan berbahasa Indonesia dan menunjukkan komitmen terhadap ideologi negara, konstitusi, serta nilai-nilai kebangsaan Indonesia."
-                    },
-                    {
-                        "title": "Tidak Pernah Dijatuhi Pidana Berat",
-                        "desc": "Pemohon tidak pernah dijatuhi pidana penjara karena melakukan tindak pidana yang diancam dengan pidana penjara 1 (satu) tahun atau lebih."
-                    },
-                    {
-                        "title": "Bersedia Melepaskan Kewarganegaraan Asing",
-                        "desc": "Indonesia menganut prinsip kewarganegaraan tunggal bagi orang dewasa. Oleh karena itu, pemohon wajib melepaskan kewarganegaraan asalnya apabila permohonan pewarganegaraan dikabulkan."
-                    },
-                    {
-                        "title": "Memiliki Pekerjaan atau Penghasilan Tetap",
-                        "desc": "Persyaratan ini bertujuan memastikan bahwa pemohon memiliki kemampuan ekonomi yang memadai untuk menjalani kehidupan di Indonesia."
-                    },
-                    {
-                        "title": "Membayar Uang Pewarganegaraan",
-                        "desc": "Pemohon wajib memenuhi kewajiban pembayaran Penerimaan Negara Bukan Pajak (PNBP) sesuai ketentuan yang berlaku."
-                    }
-                ]
-            },
-            {
-                "id": "naturalisasi-istimewa",
-                "type": "penjelasan",
-                "title": "NATURALISASI ISTIMEWA",
-                "content": [
-                    { "type": "paragraph", "text": "Selain melalui mekanisme biasa, Undang-Undang Kewarganegaraan juga memberikan kemungkinan pemberian kewarganegaraan Indonesia secara istimewa kepada warga negara asing tertentu." },
-                    { "type": "paragraph", "text": "Dasar hukum naturalisasi istimewa diatur dalam Pasal 20 Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia." },
-                    { "type": "paragraph", "text": "Ketentuan tersebut menyatakan bahwa:" },
-                    { "type": "bullets", "items": [
-                        "Orang asing yang telah berjasa kepada Negara Republik Indonesia atau karena alasan kepentingan negara dapat diberikan kewarganegaraan Republik Indonesia oleh Presiden setelah memperoleh pertimbangan Dewan Perwakilan Rakyat Republik Indonesia (DPR RI).",
-                        "Naturalisasi istimewa diberikan berdasarkan pertimbangan strategis negara dan tidak melalui mekanisme persyaratan yang sama sebagaimana naturalisasi biasa."
-                    ]},
-                    { "type": "title", "text": "Kriteria Naturalisasi Istimewa" },
-                    { "type": "paragraph", "text": "Pemberian kewarganegaraan secara istimewa umumnya diberikan kepada warga negara asing yang:" },
-                    { "type": "title", "text": "Berjasa bagi Negara Republik Indonesia" },
-                    { "type": "paragraph", "text": "Misalnya individu yang memberikan kontribusi luar biasa dalam bidang:" },
-                    { "type": "bullets", "items": [
-                        "ilmu pengetahuan dan teknologi;",
-                        "olahraga internasional;",
-                        "seni dan budaya;",
-                        "ekonomi dan investasi;",
-                        "kemanusiaan;",
-                        "pertahanan dan keamanan."
-                    ]},
-                    { "type": "title", "text": "Memiliki Kepentingan Strategis bagi Negara" },
-                    { "type": "paragraph", "text": "Pemerintah dapat memberikan kewarganegaraan kepada individu yang keberadaannya dinilai memberikan manfaat signifikan bagi kepentingan nasional Indonesia." }
-                ]
-            }
-        ],
-        "faq": []
+        "sections": {
+            "id": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "PENJELASAN UMUM",
+                    "content": [
+                        {
+                            "type": "title",
+                            "text": "Memahami Naturalisasi dalam Sistem Hukum Indonesia"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Naturalisasi atau pewarganegaraan merupakan proses hukum yang memberikan status Warga Negara Indonesia (WNI) kepada seorang warga negara asing (WNA) berdasarkan ketentuan peraturan perundang-undangan yang berlaku. Melalui proses ini, seseorang yang sebelumnya berkewarganegaraan asing dapat memperoleh pengakuan sebagai warga WNI dengan hak dan kewajiban yang setara."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Pewarganegaraan merupakan salah satu instrumen penting dalam sistem hukum kewarganegaraan Indonesia, yang bertujuan memberikan kepastian status hukum, melindungi integrasi sosial, serta mendukung kehidupan individu, termasuk termasuk pengajuan pembuatan."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Saat ini, ketentuan mengenai kewarganegaraan Indonesia diatur berdasarkan:"
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia;",
+                                "Peraturan Pemerintah Nomor 2 Tahun 2007 tentang Tata Cara Memperoleh, Kehilangan, Pembatalan, dan Memperoleh Kembali Kewarganegaraan Republik Indonesia;",
+                                "Peraturan Menteri Hukum dan Hak Asasi Manusia Republik Indonesia beserta peraturan pelaksanaan lainnya yang mengatur tata cara pengajuan dan persyaratan itu untuk kewarganegaraan."
+                            ]
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Secara umum, pewarganegaraan di Indonesia dapat diperoleh melalui Hak atau melalui Proses atau Naturalisasi (terbagi)."
+                        }
+                    ]
+                },
+                {
+                    "id": "naturalisasi-biasa",
+                    "type": "numbered_detail",
+                    "title": "NATURALISASI BIASA",
+                    "intro_paragraphs": [
+                        "Naturalisasi biasa merupakan mekanisme yang paling umum digunakan oleh warga negara asing untuk memperoleh kewarganegaraan Indonesia melalui permohonan yang diajukan kepada Presiden Republik Indonesia melalui Menteri Hukum. Dasar hukum naturalisasi biasa diatur dalam Pasal 9 Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia.",
+                        "Untuk memperoleh kewarganegaraan Indonesia melalui naturalisasi biasa, pemohon wajib memenuhi persyaratan sebagai berikut:"
+                    ],
+                    "items": [
+                        {
+                            "title": "Berusia Minimal 18 Tahun atau Sudah Menikah",
+                            "desc": "Pemohon harus telah mencapai usia dewasa menurut hukum atau telah terikat dalam perkawinan yang sah."
+                        },
+                        {
+                            "title": "Memiliki Masa Tinggal yang Memadai di Indonesia",
+                            "desc": "Pemohon harus telah bertempat tinggal di wilayah Indonesia paling singkat:",
+                            "bullets": [
+                                "5 (lima) tahun berturut-turut; atau",
+                                "10 (sepuluh) tahun tidak berturut-turut."
+                            ],
+                            "after_bullets": "Persyaratan ini menunjukkan adanya keterikatan nyata (genuine link) antara pemohon dengan Negara Republik Indonesia."
+                        },
+                        {
+                            "title": "Sehat Jasmani dan Rohani",
+                            "desc": "Kondisi kesehatan dibuktikan melalui surat keterangan dari instansi kesehatan yang berwenang."
+                        },
+                        {
+                            "title": "Mampu Berbahasa Indonesia serta Mengakui Pancasila dan UUD 1945",
+                            "desc": "Pemohon harus memiliki kemampuan berbahasa Indonesia dan menunjukkan komitmen terhadap ideologi negara, konstitusi, serta nilai-nilai kebangsaan Indonesia."
+                        },
+                        {
+                            "title": "Tidak Pernah Dijatuhi Pidana Berat",
+                            "desc": "Pemohon tidak pernah dijatuhi pidana penjara karena melakukan tindak pidana yang diancam dengan pidana penjara 1 (satu) tahun atau lebih."
+                        },
+                        {
+                            "title": "Bersedia Melepaskan Kewarganegaraan Asing",
+                            "desc": "Indonesia menganut prinsip kewarganegaraan tunggal bagi orang dewasa. Oleh karena itu, pemohon wajib melepaskan kewarganegaraan asalnya apabila permohonan pewarganegaraan dikabulkan."
+                        },
+                        {
+                            "title": "Memiliki Pekerjaan atau Penghasilan Tetap",
+                            "desc": "Persyaratan ini bertujuan memastikan bahwa pemohon memiliki kemampuan ekonomi yang memadai untuk menjalani kehidupan di Indonesia."
+                        },
+                        {
+                            "title": "Membayar Uang Pewarganegaraan",
+                            "desc": "Pemohon wajib memenuhi kewajiban pembayaran Penerimaan Negara Bukan Pajak (PNBP) sesuai ketentuan yang berlaku."
+                        }
+                    ]
+                },
+                {
+                    "id": "naturalisasi-istimewa",
+                    "type": "penjelasan",
+                    "title": "NATURALISASI ISTIMEWA",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Selain melalui mekanisme biasa, Undang-Undang Kewarganegaraan juga memberikan kemungkinan pemberian kewarganegaraan Indonesia secara istimewa kepada warga negara asing tertentu."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Dasar hukum naturalisasi istimewa diatur dalam Pasal 20 Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Ketentuan tersebut menyatakan bahwa:"
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "Orang asing yang telah berjasa kepada Negara Republik Indonesia atau karena alasan kepentingan negara dapat diberikan kewarganegaraan Republik Indonesia oleh Presiden setelah memperoleh pertimbangan Dewan Perwakilan Rakyat Republik Indonesia (DPR RI).",
+                                "Naturalisasi istimewa diberikan berdasarkan pertimbangan strategis negara dan tidak melalui mekanisme persyaratan yang sama sebagaimana naturalisasi biasa."
+                            ]
+                        },
+                        {
+                            "type": "title",
+                            "text": "Kriteria Naturalisasi Istimewa"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Pemberian kewarganegaraan secara istimewa umumnya diberikan kepada warga negara asing yang:"
+                        },
+                        {
+                            "type": "title",
+                            "text": "Berjasa bagi Negara Republik Indonesia"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Misalnya individu yang memberikan kontribusi luar biasa dalam bidang:"
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "ilmu pengetahuan dan teknologi;",
+                                "olahraga internasional;",
+                                "seni dan budaya;",
+                                "ekonomi dan investasi;",
+                                "kemanusiaan;",
+                                "pertahanan dan keamanan."
+                            ]
+                        },
+                        {
+                            "type": "title",
+                            "text": "Memiliki Kepentingan Strategis bagi Negara"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Pemerintah dapat memberikan kewarganegaraan kepada individu yang keberadaannya dinilai memberikan manfaat signifikan bagi kepentingan nasional Indonesia."
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "GENERAL EXPLANATION",
+                    "content": [
+                        {
+                            "type": "title",
+                            "text": "Understanding Naturalization in the Indonesian Legal System"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Naturalization is a legal process that grants Indonesian Citizen (WNI) status to a foreign citizen (WNA) in accordance with applicable statutory provisions. Through this process, a person who previously held foreign citizenship can obtain recognition as an Indonesian citizen with equal rights and obligations."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Citizenship acquisition is one of the important instruments in the Indonesian citizenship legal system, aimed at providing legal status certainty, protecting social integration, and supporting individual life, including facilitating related applications."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Currently, provisions regarding Indonesian citizenship are regulated based on:"
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "Law Number 12 of 2006 concerning Citizenship of the Republic of Indonesia;",
+                                "Government Regulation Number 2 of 2007 concerning Procedures for Acquiring, Losing, Cancelling, and Reacquiring Citizenship of the Republic of Indonesia;",
+                                "Regulations of the Minister of Law and Human Rights of the Republic of Indonesia along with other implementing regulations governing the procedures and requirements for citizenship applications."
+                            ]
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "In general, citizenship in Indonesia can be obtained through Right or through a Process or Naturalization (divided into categories)."
+                        }
+                    ]
+                },
+                {
+                    "id": "naturalisasi-biasa",
+                    "type": "numbered_detail",
+                    "title": "ORDINARY NATURALIZATION",
+                    "intro_paragraphs": [
+                        "Ordinary naturalization is the mechanism most commonly used by foreign citizens to acquire Indonesian citizenship through an application submitted to the President of the Republic of Indonesia via the Minister of Law. The legal basis for ordinary naturalization is regulated in Article 9 of Law Number 12 of 2006 concerning Citizenship of the Republic of Indonesia.",
+                        "To acquire Indonesian citizenship through ordinary naturalization, applicants must fulfill the following requirements:"
+                    ],
+                    "items": [
+                        {
+                            "title": "At Least 18 Years Old or Already Married",
+                            "desc": "The applicant must have reached the age of legal majority or be bound in a valid marriage."
+                        },
+                        {
+                            "title": "Having an Adequate Period of Residence in Indonesia",
+                            "desc": "The applicant must have resided within the territory of Indonesia for at least:",
+                            "bullets": [
+                                "5 (five) consecutive years; or",
+                                "10 (ten) non-consecutive years."
+                            ],
+                            "after_bullets": "This requirement demonstrates a genuine link between the applicant and the Republic of Indonesia."
+                        },
+                        {
+                            "title": "Physically and Mentally Healthy",
+                            "desc": "Health condition is proven through a certificate from an authorized health institution."
+                        },
+                        {
+                            "title": "Able to Speak Indonesian and Acknowledge Pancasila and the 1945 Constitution",
+                            "desc": "The applicant must have the ability to speak Indonesian and demonstrate commitment to the state ideology, constitution, and Indonesian national values."
+                        },
+                        {
+                            "title": "Never Sentenced to a Severe Criminal Penalty",
+                            "desc": "The applicant has never been sentenced to imprisonment for a criminal act punishable by imprisonment of 1 (one) year or more."
+                        },
+                        {
+                            "title": "Willing to Renounce Foreign Citizenship",
+                            "desc": "Indonesia adheres to the principle of single citizenship for adults. Therefore, the applicant must renounce their original citizenship if the citizenship application is granted."
+                        },
+                        {
+                            "title": "Having a Job or Fixed Income",
+                            "desc": "This requirement aims to ensure that the applicant has adequate economic capacity to live in Indonesia."
+                        },
+                        {
+                            "title": "Paying the Naturalization Fee",
+                            "desc": "The applicant must fulfill the payment obligation for Non-Tax State Revenue (PNBP) in accordance with applicable provisions."
+                        }
+                    ]
+                },
+                {
+                    "id": "naturalisasi-istimewa",
+                    "type": "penjelasan",
+                    "title": "SPECIAL NATURALIZATION",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "In addition to the ordinary mechanism, the Citizenship Law also provides the possibility of granting Indonesian citizenship specially to certain foreign citizens."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "The legal basis for special naturalization is regulated in Article 20 of Law Number 12 of 2006 concerning Citizenship of the Republic of Indonesia."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "This provision states that:"
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "Foreigners who have rendered meritorious service to the Republic of Indonesia or for reasons of state interest may be granted citizenship of the Republic of Indonesia by the President after obtaining consideration from the People's Representative Council of the Republic of Indonesia (DPR RI).",
+                                "Special naturalization is granted based on strategic state considerations and does not go through the same requirement mechanism as ordinary naturalization."
+                            ]
+                        },
+                        {
+                            "type": "title",
+                            "text": "Special Naturalization Criteria"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Special citizenship is generally granted to foreign citizens who:"
+                        },
+                        {
+                            "type": "title",
+                            "text": "Rendered Meritorious Service to the Republic of Indonesia"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "For example, individuals who make outstanding contributions in the fields of:"
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "science and technology;",
+                                "international sports;",
+                                "arts and culture;",
+                                "economy and investment;",
+                                "humanitarianism;",
+                                "defense and security."
+                            ]
+                        },
+                        {
+                            "type": "title",
+                            "text": "Having Strategic Importance for the State"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "The government may grant citizenship to individuals whose presence is considered to provide significant benefits to Indonesia's national interests."
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "总体说明",
+                    "content": [
+                        {
+                            "type": "title",
+                            "text": "了解印度尼西亚法律体系中的入籍制度"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "入籍是依据现行法律法规规定，赋予外国公民（WNA）印度尼西亚公民（WNI）身份的法律程序。通过此流程，原持有外国国籍的人可获得作为印尼公民的承认，并享有平等的权利及义务。"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "入籍是印度尼西亚国籍法律体系中的重要工具之一，旨在提供法律地位的确定性、保护社会融合，并支持个人生活，包括相关申请的办理。"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "目前，有关印度尼西亚国籍的规定依据以下法规："
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "2006年第12号法律关于印度尼西亚共和国国籍；",
+                                "2007年第2号政府法规，关于取得、丧失、撤销及重新取得印度尼西亚共和国国籍的程序；",
+                                "印度尼西亚共和国法律与人权部长条例，以及其他规定国籍申请程序及要求的实施细则。"
+                            ]
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "总体而言，印度尼西亚国籍可通过权利取得，或通过程序或入籍（分类）取得。"
+                        }
+                    ]
+                },
+                {
+                    "id": "naturalisasi-biasa",
+                    "type": "numbered_detail",
+                    "title": "普通入籍",
+                    "intro_paragraphs": [
+                        "普通入籍是外国公民最常用于取得印度尼西亚国籍的机制，须通过法务部长向印度尼西亚共和国总统提交申请。普通入籍的法律依据规定于2006年第12号《印度尼西亚共和国国籍法》第9条。",
+                        "为通过普通入籍取得印度尼西亚国籍，申请人须满足以下要求："
+                    ],
+                    "items": [
+                        {
+                            "title": "年满18岁或已婚",
+                            "desc": "申请人须已达到法定成年年龄，或已缔结合法婚姻。"
+                        },
+                        {
+                            "title": "在印度尼西亚拥有充分的居住期限",
+                            "desc": "申请人须在印度尼西亚境内居住至少：",
+                            "bullets": [
+                                "连续5（五）年；或",
+                                "非连续10（十）年。"
+                            ],
+                            "after_bullets": "此要求体现申请人与印度尼西亚共和国之间存在真实联系（genuine link）。"
+                        },
+                        {
+                            "title": "身心健康",
+                            "desc": "健康状况须通过有权卫生机构出具的证明文件证实。"
+                        },
+                        {
+                            "title": "能够使用印尼语，并承认潘查希拉及1945年宪法",
+                            "desc": "申请人须具备印尼语能力，并对国家意识形态、宪法及印尼民族价值观表现出承诺。"
+                        },
+                        {
+                            "title": "从未被判处重罪",
+                            "desc": "申请人从未因犯有可处1（一）年以上监禁的刑事罪行而被判处监禁。"
+                        },
+                        {
+                            "title": "愿意放弃外国国籍",
+                            "desc": "印度尼西亚对成年人实行单一国籍原则。因此，若入籍申请获批，申请人须放弃其原有国籍。"
+                        },
+                        {
+                            "title": "拥有工作或固定收入",
+                            "desc": "此要求旨在确保申请人具备在印度尼西亚生活所需的充分经济能力。"
+                        },
+                        {
+                            "title": "缴纳入籍费用",
+                            "desc": "申请人须依据现行规定履行非税国家收入（PNBP）的缴纳义务。"
+                        }
+                    ]
+                },
+                {
+                    "id": "naturalisasi-istimewa",
+                    "type": "penjelasan",
+                    "title": "特殊入籍",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "除普通机制外，《国籍法》还提供了向特定外国公民特殊授予印度尼西亚国籍的可能性。"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "特殊入籍的法律依据规定于2006年第12号《印度尼西亚共和国国籍法》第20条。"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "该规定说明："
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "对印度尼西亚共和国有功，或出于国家利益考虑的外国人，在获得印度尼西亚共和国人民代表会议（DPR RI）的意见后，可由总统授予印度尼西亚共和国国籍。",
+                                "特殊入籍基于国家战略考量授予，无需经过与普通入籍相同的条件机制。"
+                            ]
+                        },
+                        {
+                            "type": "title",
+                            "text": "特殊入籍标准"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "特殊国籍通常授予符合以下条件的外国公民："
+                        },
+                        {
+                            "type": "title",
+                            "text": "对印度尼西亚共和国有功"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "例如在以下领域作出杰出贡献的个人："
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "科学技术；",
+                                "国际体育；",
+                                "艺术与文化；",
+                                "经济与投资；",
+                                "人道主义；",
+                                "国防与安全。"
+                            ]
+                        },
+                        {
+                            "type": "title",
+                            "text": "对国家具有战略意义"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "政府可向被认为其存在能为印度尼西亚国家利益带来重大益处的个人授予国籍。"
+                        }
+                    ]
+                }
+            ]
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]

@@ -16,6 +16,9 @@ import kekayaanIntelektual from './services/kekayaan-intelektual'
 import perpajakanDanPembukuan from './services/perpajakan-dan-pembukuan'
 import legalisasiKedutaan from './services/legalisasi-kedutaan'
 import kewajibanPelaporanUsaha from './services/kewajiban-pelaporan-perusahaan'
+import izinTinggalTetap from './services/izin-tinggal-tetap'
+import keimigrasianWniWna from './services/keimigrasian-wni-wna'
+import visaMancanegara from './services/visa-mancanegara'
 
 export default {
     common,
@@ -35,6 +38,9 @@ export default {
         kekayaanIntelektual,
         perpajakanDanPembukuan,
         legalisasiKedutaan,
-        kewajibanPelaporanUsaha
+        kewajibanPelaporanUsaha,
+        izinTinggalTetap,
+        keimigrasianWniWna,
+        visaMancanegara
     },
 }

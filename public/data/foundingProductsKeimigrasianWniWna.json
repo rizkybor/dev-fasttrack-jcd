@@ -1,432 +1,1252 @@
 [
     {
         "id": 1,
-        "name": "E-Paspor Republik Indonesia",
+        "name": {
+            "id": "E-Paspor Republik Indonesia",
+            "en": "Republic of Indonesia E-Passport",
+            "zh": "印度尼西亚共和国电子护照"
+        },
         "price": "3150000",
         "price_label": "Rp 3.150.000",
         "paket_count": null,
-        "excerpt": "Pengurusan e-paspor resmi untuk WNI dengan pendampingan profesional sesuai regulasi terkini.",
+        "excerpt": {
+            "id": "Pengurusan e-paspor resmi untuk WNI dengan pendampingan profesional sesuai regulasi terkini.",
+            "en": "Official e-passport processing for Indonesian citizens with professional assistance in accordance with the latest regulations.",
+            "zh": "为印尼公民办理正式电子护照，依据最新法规提供专业协助。"
+        },
         "detail_path": "/keimigrasian-wni-wna/1",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana untuk membuat elektronik paspor 5 tahun atau 10 tahun, memastikan proses pengurusan e-paspor dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang sangat penting. Melalui layanan pengurusan e-paspor, kami menyediakan pendampingan profesional guna mendukung proses pengajuan e-paspor secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-            "E-Paspor merupakan dokumen perjalanan resmi yang dilengkapi dengan chip berisi data biometrik (wajah dan sidik jari) yang diterbitkan oleh Direktorat Jenderal Imigrasi sebagai dokumen perjalanan resmi sebagai identitas dan bukti kewarganegaraan, serta digunakan Warga Negara Indonesia (WNI) untuk melakukan perjalanan antarnegara"
-        ],
-        "dokumen_persyaratan": [
-            {
-                "label": "Asli Paspor lama (Jika perpanjangan)",
-                "items": null
-            },
-            {
-                "label": "Asli Kartu Tanda Penduduk (KTP)",
-                "items": null
-            },
-            {
-                "label": "Scancopy Kartu Keluarga (KK)",
-                "items": null
-            },
-            {
-                "label": "Scancopy Surat Nikah (Jika sudah menikah)",
-                "items": null
-            },
-            {
-                "label": "Scancopy Ijazah (Pada Ijazah tertera tanggal lahir)",
-                "items": null
-            },
-            {
-                "label": "Surat Keterangan Kerja",
-                "items": null
-            }
-        ],
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana untuk membuat elektronik paspor 5 tahun atau 10 tahun, memastikan proses pengurusan e-paspor dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang sangat penting. Melalui layanan pengurusan e-paspor, kami menyediakan pendampingan profesional guna mendukung proses pengajuan e-paspor secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                "E-Paspor merupakan dokumen perjalanan resmi yang dilengkapi dengan chip berisi data biometrik (wajah dan sidik jari) yang diterbitkan oleh Direktorat Jenderal Imigrasi sebagai dokumen perjalanan resmi sebagai identitas dan bukti kewarganegaraan, serta digunakan Warga Negara Indonesia (WNI) untuk melakukan perjalanan antarnegara"
+            ],
+            "en": [
+                "If you plan to obtain a 5-year or 10-year e-passport, ensuring that the e-passport processing is carried out in accordance with applicable immigration provisions is very important. Through our e-passport processing service, we provide professional assistance to support the e-passport application process accurately, efficiently, and in accordance with the latest regulations.",
+                "An E-Passport is an official travel document equipped with a chip containing biometric data (face and fingerprints) issued by the Directorate General of Immigration as an official travel document serving as identity and proof of citizenship, used by Indonesian citizens (WNI) for international travel"
+            ],
+            "zh": [
+                "若您计划办理5年或10年期的电子护照，确保电子护照办理流程符合现行移民规定至关重要。通过我们的电子护照办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持电子护照申请流程。",
+                "电子护照是配备含生物识别数据（面部及指纹）芯片的官方旅行证件，由移民总局签发，作为身份及国籍证明的官方旅行证件，供印尼公民（WNI）用于国际旅行"
+            ]
+        },
+        "dokumen_persyaratan": {
+            "id": [
+                {
+                    "label": "Asli Paspor lama (Jika perpanjangan)",
+                    "items": null
+                },
+                {
+                    "label": "Asli Kartu Tanda Penduduk (KTP)",
+                    "items": null
+                },
+                {
+                    "label": "Scancopy Kartu Keluarga (KK)",
+                    "items": null
+                },
+                {
+                    "label": "Scancopy Surat Nikah (Jika sudah menikah)",
+                    "items": null
+                },
+                {
+                    "label": "Scancopy Ijazah (Pada Ijazah tertera tanggal lahir)",
+                    "items": null
+                },
+                {
+                    "label": "Surat Keterangan Kerja",
+                    "items": null
+                }
+            ],
+            "en": [
+                {
+                    "label": "Original old Passport (if renewal)",
+                    "items": null
+                },
+                {
+                    "label": "Original ID Card (KTP)",
+                    "items": null
+                },
+                {
+                    "label": "Scan copy of Family Card (KK)",
+                    "items": null
+                },
+                {
+                    "label": "Scan copy of Marriage Certificate (if married)",
+                    "items": null
+                },
+                {
+                    "label": "Scan copy of Diploma (showing date of birth)",
+                    "items": null
+                },
+                {
+                    "label": "Employment Certificate",
+                    "items": null
+                }
+            ],
+            "zh": [
+                {
+                    "label": "旧护照原件（如为续签）",
+                    "items": null
+                },
+                {
+                    "label": "身份证（KTP）原件",
+                    "items": null
+                },
+                {
+                    "label": "户口簿（KK）扫描件",
+                    "items": null
+                },
+                {
+                    "label": "结婚证扫描件（如已婚）",
+                    "items": null
+                },
+                {
+                    "label": "学历证书扫描件（须显示出生日期）",
+                    "items": null
+                },
+                {
+                    "label": "工作证明",
+                    "items": null
+                }
+            ]
+        },
         "biaya_layanan": null,
-        "biaya_layanan_tabs": [
-            {
-                "label": "5 TAHUN",
-                "nama": "E-PASPOR REPUBLIK INDONESIA – 5 TAHUN",
-                "harga_note": "*Harga termasuk PNBP",
-                "harga": "Rp 3.150.000",
-                "gratis_konsultasi": true,
-                "mendapatkan": ["E-Paspor"],
-                "termasuk": [
-                    "Fasttrack Document Delivery Service",
-                    "Fasttrack Digital Files Secure Storage",
-                    "Fasttrack Kit"
-                ],
-                "sidebar_label": "E-PASPOR REPUBLIK INDONESIA",
-                "sidebar_harga": "Rp 3.150.000"
-            },
-            {
-                "label": "10 TAHUN",
-                "nama": "E-PASPOR REPUBLIK INDONESIA – 10 TAHUN",
-                "harga_note": "*Harga termasuk PNBP",
-                "harga": "Rp 4.150.000",
-                "gratis_konsultasi": true,
-                "mendapatkan": ["E-Paspor"],
-                "termasuk": [
-                    "Fasttrack Document Delivery Service",
-                    "Fasttrack Digital Files Secure Storage",
-                    "Fasttrack Kit"
-                ],
-                "sidebar_label": "E-PASPOR REPUBLIK INDONESIA",
-                "sidebar_harga": "Rp 4.150.000"
-            }
-        ],
-        "faq": []
+        "biaya_layanan_tabs": {
+            "id": [
+                {
+                    "label": "5 TAHUN",
+                    "nama": "E-PASPOR REPUBLIK INDONESIA – 5 TAHUN",
+                    "harga_note": "*Harga termasuk PNBP",
+                    "harga": "Rp 3.150.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "E-Paspor"
+                    ],
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ],
+                    "sidebar_label": "E-PASPOR REPUBLIK INDONESIA",
+                    "sidebar_harga": "Rp 3.150.000"
+                },
+                {
+                    "label": "10 TAHUN",
+                    "nama": "E-PASPOR REPUBLIK INDONESIA – 10 TAHUN",
+                    "harga_note": "*Harga termasuk PNBP",
+                    "harga": "Rp 4.150.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "E-Paspor"
+                    ],
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ],
+                    "sidebar_label": "E-PASPOR REPUBLIK INDONESIA",
+                    "sidebar_harga": "Rp 4.150.000"
+                }
+            ],
+            "en": [
+                {
+                    "label": "5 YEARS",
+                    "nama": "REPUBLIC OF INDONESIA E-PASSPORT – 5 YEARS",
+                    "harga_note": "*Price includes PNBP",
+                    "harga": "Rp 3.150.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "E-Passport"
+                    ],
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ],
+                    "sidebar_label": "REPUBLIC OF INDONESIA E-PASSPORT",
+                    "sidebar_harga": "Rp 3.150.000"
+                },
+                {
+                    "label": "10 YEARS",
+                    "nama": "REPUBLIC OF INDONESIA E-PASSPORT – 10 YEARS",
+                    "harga_note": "*Price includes PNBP",
+                    "harga": "Rp 4.150.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "E-Passport"
+                    ],
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ],
+                    "sidebar_label": "REPUBLIC OF INDONESIA E-PASSPORT",
+                    "sidebar_harga": "Rp 4.150.000"
+                }
+            ],
+            "zh": [
+                {
+                    "label": "5年",
+                    "nama": "印度尼西亚共和国电子护照-5年",
+                    "harga_note": "*价格已含非税国家收入（PNBP）",
+                    "harga": "Rp 3.150.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "电子护照"
+                    ],
+                    "termasuk": [
+                        "Fasttrack文件递送服务",
+                        "Fasttrack数字文件安全存储",
+                        "Fasttrack套件"
+                    ],
+                    "sidebar_label": "印度尼西亚共和国电子护照",
+                    "sidebar_harga": "Rp 3.150.000"
+                },
+                {
+                    "label": "10年",
+                    "nama": "印度尼西亚共和国电子护照-10年",
+                    "harga_note": "*价格已含非税国家收入（PNBP）",
+                    "harga": "Rp 4.150.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "电子护照"
+                    ],
+                    "termasuk": [
+                        "Fasttrack文件递送服务",
+                        "Fasttrack数字文件安全存储",
+                        "Fasttrack套件"
+                    ],
+                    "sidebar_label": "印度尼西亚共和国电子护照",
+                    "sidebar_harga": "Rp 4.150.000"
+                }
+            ]
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 2,
-        "name": "Mutasi Alamat",
+        "name": {
+            "id": "Mutasi Alamat",
+            "en": "Address Change",
+            "zh": "地址变更"
+        },
         "price": "1750000",
         "price_label": "Rp 1.750.000",
         "paket_count": null,
-        "excerpt": "Pengurusan mutasi alamat untuk Tenaga Kerja Asing dan keluarganya sesuai ketentuan keimigrasian.",
+        "excerpt": {
+            "id": "Pengurusan mutasi alamat untuk Tenaga Kerja Asing dan keluarganya sesuai ketentuan keimigrasian.",
+            "en": "Processing of address changes for Foreign Workers and their families in accordance with immigration provisions.",
+            "zh": "依据移民规定，为外籍劳工及其家属办理地址变更。"
+        },
         "detail_path": "/keimigrasian-wni-wna/2",
         "image": "",
-        "tabs": [
-            {
-                "label": "DALAM SATU KANIM",
-                "penjelasan_umum": [
-                    "Apabila Anda berencana untuk melakukan perpindahan alamat tinggal satu domisili, memastikan proses pengurusan mutasi alamat dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Mutasi Alamat (Satu Kanim), kami menyediakan pendampingan profesional guna mendukung proses pengajuan mutasi alamat secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-                    "Mutasi Alamat (Satu Kanim) merupakan dokumen yang digunakan Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing yang memiliki Izin Tinggal Terbatas / Tetap dan berencana untuk melakukan perpindahan alamat ke domisili yang sama dengan alamat sebelumnya. Mutasi Alamat (Satu Kanim) wajib di laporkan sebagai data Imigrasi mengenai lokasi tempat tinggal Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing"
-                ],
-                "dokumen_persyaratan": [
-                    {
-                        "label": "Dokumen Perusahaan",
-                        "sub_groups": null,
-                        "items": [
-                            "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
-                            "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
-                            "Scancopy NIB berbasis Risiko",
-                            "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
+        "tabs": {
+            "id": [
+                {
+                    "label": "DALAM SATU KANIM",
+                    "penjelasan_umum": [
+                        "Apabila Anda berencana untuk melakukan perpindahan alamat tinggal satu domisili, memastikan proses pengurusan mutasi alamat dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Mutasi Alamat (Satu Kanim), kami menyediakan pendampingan profesional guna mendukung proses pengajuan mutasi alamat secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                        "Mutasi Alamat (Satu Kanim) merupakan dokumen yang digunakan Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing yang memiliki Izin Tinggal Terbatas / Tetap dan berencana untuk melakukan perpindahan alamat ke domisili yang sama dengan alamat sebelumnya. Mutasi Alamat (Satu Kanim) wajib di laporkan sebagai data Imigrasi mengenai lokasi tempat tinggal Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing"
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Dokumen Perusahaan",
+                            "sub_groups": null,
+                            "items": [
+                                "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
+                                "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                                "Scancopy NIB berbasis Risiko",
+                                "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
+                            ]
+                        },
+                        {
+                            "label": "A.   Dokumen Individu Warga Negara Asing",
+                            "sub_groups": null,
+                            "items": [
+                                "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
+                                "Scancopy surat domisili alamat baru [ menyebutkan alamat lengkap sampai dengan kode pos]",
+                                "Scancopy Akta Nikah / Akta Lahir [untuk keluarga]",
+                                "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "PAKET MUTASI ALAMAT [ITAS, SKTT & TTKOA]",
+                        "harga_note": null,
+                        "harga": "Rp 1.750.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "Mutasi Alamat pada Izin Tinggal Terbatas",
+                            "Mutasi Alamat pada Surat Keterangan Tempat Tinggal",
+                            "Mutasi Alamat pada Tanda Terima Keterangan Orang Asing"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
                         ]
                     },
-                    {
-                        "label": "A.   Dokumen Individu Warga Negara Asing",
-                        "sub_groups": null,
-                        "items": [
-                            "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
-                            "Scancopy surat domisili alamat baru [ menyebutkan alamat lengkap sampai dengan kode pos]",
-                            "Scancopy Akta Nikah / Akta Lahir [untuk keluarga]",
-                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                        ]
-                    }
-                ],
-                "biaya_layanan": {
-                    "nama": "PAKET MUTASI ALAMAT [ITAS, SKTT & TTKOA]",
-                    "harga_note": null,
-                    "harga": "Rp 1.750.000",
-                    "gratis_konsultasi": true,
-                    "mendapatkan": [
-                        "Mutasi Alamat pada Izin Tinggal Terbatas",
-                        "Mutasi Alamat pada Surat Keterangan Tempat Tinggal",
-                        "Mutasi Alamat pada Tanda Terima Keterangan Orang Asing"
-                    ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
+                    "sidebar_label": "MUTASI ALAMAT (DALAM SATU KANIM)",
+                    "sidebar_harga": "Rp 1.750.000"
                 },
-                "sidebar_label": "MUTASI ALAMAT (DALAM SATU KANIM)",
-                "sidebar_harga": "Rp 1.750.000"
-            },
-            {
-                "label": "BEDA KANIM",
-                "penjelasan_umum": [
-                    "Apabila Anda berencana untuk melakukan perpindahan alamat tinggal luar domisili, memastikan proses pengurusan mutasi alamat dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan mutasi alamat, kami menyediakan pendampingan profesional guna mendukung proses pengajuan mutasi alamat secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-                    "Mutasi Alamat (Luar Kanim) merupakan dokumen yang digunakan Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing yang memiliki Izin Tinggal Terbatas / Tetap dan berencana untuk melakukan perpindahan alamat ke domisili yang sama dengan alamat sebelumnya. Mutasi Alamat wajib di laporkan sebagai data Imigrasi mengenai lokasi tempat tinggal Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing."
-                ],
-                "dokumen_persyaratan": [
-                    {
-                        "label": "Dokumen Perusahaan",
-                        "sub_groups": null,
-                        "items": [
-                            "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
-                            "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
-                            "Scancopy NIB berbasis Risiko",
-                            "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
+                {
+                    "label": "BEDA KANIM",
+                    "penjelasan_umum": [
+                        "Apabila Anda berencana untuk melakukan perpindahan alamat tinggal luar domisili, memastikan proses pengurusan mutasi alamat dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan mutasi alamat, kami menyediakan pendampingan profesional guna mendukung proses pengajuan mutasi alamat secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                        "Mutasi Alamat (Luar Kanim) merupakan dokumen yang digunakan Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing yang memiliki Izin Tinggal Terbatas / Tetap dan berencana untuk melakukan perpindahan alamat ke domisili yang sama dengan alamat sebelumnya. Mutasi Alamat wajib di laporkan sebagai data Imigrasi mengenai lokasi tempat tinggal Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing."
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Dokumen Perusahaan",
+                            "sub_groups": null,
+                            "items": [
+                                "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
+                                "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                                "Scancopy NIB berbasis Risiko",
+                                "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
+                            ]
+                        },
+                        {
+                            "label": "A.   Dokumen Individu Warga Negara Asing",
+                            "sub_groups": null,
+                            "items": [
+                                "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
+                                "Scancopy surat domisili alamat baru [ menyebutkan alamat lengkap sampai dengan kode pos]",
+                                "Scancopy Akta Nikah / Akta Lahir [untuk keluarga]",
+                                "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "PAKET MUTASI ALAMAT LUAR KANIM [ITAS, SKTT & TTKOA]",
+                        "harga_note": null,
+                        "harga": "Rp 4.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "Mutasi Alamat pada Izin Tinggal Terbatas",
+                            "Mutasi Alamat pada Surat Keterangan Tempat Tinggal",
+                            "Mutasi Alamat pada Tanda Terima Keterangan Orang Asing"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
                         ]
                     },
-                    {
-                        "label": "A.   Dokumen Individu Warga Negara Asing",
-                        "sub_groups": null,
-                        "items": [
-                            "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
-                            "Scancopy surat domisili alamat baru [ menyebutkan alamat lengkap sampai dengan kode pos]",
-                            "Scancopy Akta Nikah / Akta Lahir [untuk keluarga]",
-                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                        ]
-                    }
-                ],
-                "biaya_layanan": {
-                    "nama": "PAKET MUTASI ALAMAT LUAR KANIM [ITAS, SKTT & TTKOA]",
-                    "harga_note": null,
-                    "harga": "Rp 4.000.000",
-                    "gratis_konsultasi": true,
-                    "mendapatkan": [
-                        "Mutasi Alamat pada Izin Tinggal Terbatas",
-                        "Mutasi Alamat pada Surat Keterangan Tempat Tinggal",
-                        "Mutasi Alamat pada Tanda Terima Keterangan Orang Asing"
+                    "sidebar_label": "MUTASI ALAMAT (BEDA KANIM)",
+                    "sidebar_harga": "Rp 4.000.000"
+                }
+            ],
+            "en": [
+                {
+                    "label": "WITHIN ONE IMMIGRATION OFFICE",
+                    "penjelasan_umum": [
+                        "If you plan to change your residential address within the same domicile, ensuring that the address change processing is carried out in accordance with applicable immigration provisions is important. Through our Address Change (Same Immigration Office) service, we provide professional assistance to support the address change application process accurately, efficiently, and in accordance with the latest regulations.",
+                        "Address Change (Same Immigration Office) is a document used by Foreign Workers / Foreign Worker Families who hold a Limited/Permanent Stay Permit and plan to change their address to the same domicile as their previous address. This must be reported as Immigration data regarding the residential location of the Foreign Worker / Foreign Worker Family"
                     ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Company Documents",
+                            "sub_groups": null,
+                            "items": [
+                                "Scan copy of the Deed of Establishment and Ministry of Law Decree [listing the Board of Directors]",
+                                "Scan copy of the Company's Tax ID (NPWP)",
+                                "Scan copy of Risk-Based NIB",
+                                "Scan copy of the ID Card (KTP), Employee Card, and Family Card of the application signatory"
+                            ]
+                        },
+                        {
+                            "label": "A. Foreign Citizen Individual Documents",
+                            "sub_groups": null,
+                            "items": [
+                                "Scan copy of Passport with a validity period of at least 20 (twenty) months",
+                                "Scan copy of the new domicile letter [stating the complete address including postal code]",
+                                "Scan copy of Marriage Certificate / Birth Certificate [for family]",
+                                "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "ADDRESS CHANGE PACKAGE [ITAS, SKTT & TTKOA]",
+                        "harga_note": null,
+                        "harga": "Rp 1.750.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "Address Change on the Limited Stay Permit",
+                            "Address Change on the Domicile Certificate",
+                            "Address Change on the Foreigner Registration Receipt"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "sidebar_label": "ADDRESS CHANGE (WITHIN ONE IMMIGRATION OFFICE)",
+                    "sidebar_harga": "Rp 1.750.000"
                 },
-                "sidebar_label": "MUTASI ALAMAT (BEDA KANIM)",
-                "sidebar_harga": "Rp 4.000.000"
-            }
-        ],
+                {
+                    "label": "DIFFERENT IMMIGRATION OFFICE",
+                    "penjelasan_umum": [
+                        "If you plan to change your residential address to a different domicile, ensuring that the address change processing is carried out in accordance with applicable immigration provisions is important. Through our address change processing service, we provide professional assistance to support the address change application process accurately, efficiently, and in accordance with the latest regulations.",
+                        "Address Change (Different Immigration Office) is a document used by Foreign Workers / Foreign Worker Families who hold a Limited/Permanent Stay Permit and plan to change their address to the same domicile as their previous address. The Address Change must be reported as Immigration data regarding the residential location of the Foreign Worker / Foreign Worker Family."
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Company Documents",
+                            "sub_groups": null,
+                            "items": [
+                                "Scan copy of the Deed of Establishment and Ministry of Law Decree [listing the Board of Directors]",
+                                "Scan copy of the Company's Tax ID (NPWP)",
+                                "Scan copy of Risk-Based NIB",
+                                "Scan copy of the ID Card (KTP), Employee Card, and Family Card of the application signatory"
+                            ]
+                        },
+                        {
+                            "label": "A. Foreign Citizen Individual Documents",
+                            "sub_groups": null,
+                            "items": [
+                                "Scan copy of Passport with a validity period of at least 20 (twenty) months",
+                                "Scan copy of the new domicile letter [stating the complete address including postal code]",
+                                "Scan copy of Marriage Certificate / Birth Certificate [for family]",
+                                "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "OUT-OF-OFFICE ADDRESS CHANGE PACKAGE [ITAS, SKTT & TTKOA]",
+                        "harga_note": null,
+                        "harga": "Rp 4.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "Address Change on the Limited Stay Permit",
+                            "Address Change on the Domicile Certificate",
+                            "Address Change on the Foreigner Registration Receipt"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "sidebar_label": "ADDRESS CHANGE (DIFFERENT IMMIGRATION OFFICE)",
+                    "sidebar_harga": "Rp 4.000.000"
+                }
+            ],
+            "zh": [
+                {
+                    "label": "同一移民局管辖范围内",
+                    "penjelasan_umum": [
+                        "若您计划在同一辖区内变更居住地址，确保地址变更办理流程符合现行移民规定十分重要。通过我们的地址变更（同一移民局）服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持地址变更申请流程。",
+                        "同一移民局地址变更是持有临时/永久居留许可的外籍劳工/外籍劳工家属计划迁往与原地址相同辖区的新地址时所使用的文件。此变更须作为有关外籍劳工/外籍劳工家属居住地点的移民数据予以申报"
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "公司文件",
+                            "sub_groups": null,
+                            "items": [
+                                "设立公证书及法务部决定书扫描件[列明董事会成员]",
+                                "公司税号（NPWP）扫描件",
+                                "基于风险的营业执照号码（NIB）扫描件",
+                                "申请签署人的身份证（KTP）、员工卡、户口簿扫描件"
+                            ]
+                        },
+                        {
+                            "label": "甲、外国公民个人文件",
+                            "sub_groups": null,
+                            "items": [
+                                "有效期至少20（二十）个月的护照扫描件",
+                                "新住址居住证明扫描件[须列明完整地址及邮政编码]",
+                                "结婚证/出生证明扫描件[适用于家属]",
+                                "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "地址变更套餐[ITAS、SKTT及TTKOA]",
+                        "harga_note": null,
+                        "harga": "Rp 1.750.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "临时居留许可上的地址变更",
+                            "居住证明上的地址变更",
+                            "外国人登记回执上的地址变更"
+                        ],
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "sidebar_label": "地址变更（同一移民局）",
+                    "sidebar_harga": "Rp 1.750.000"
+                },
+                {
+                    "label": "不同移民局管辖范围",
+                    "penjelasan_umum": [
+                        "若您计划变更居住地址至不同辖区，确保地址变更办理流程符合现行移民规定十分重要。通过我们的地址变更服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持地址变更申请流程。",
+                        "不同移民局地址变更是持有临时/永久居留许可的外籍劳工/外籍劳工家属计划迁往与原地址相同辖区的新地址时所使用的文件。此地址变更须作为有关外籍劳工/外籍劳工家属居住地点的移民数据予以申报。"
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "公司文件",
+                            "sub_groups": null,
+                            "items": [
+                                "设立公证书及法务部决定书扫描件[列明董事会成员]",
+                                "公司税号（NPWP）扫描件",
+                                "基于风险的营业执照号码（NIB）扫描件",
+                                "申请签署人的身份证（KTP）、员工卡、户口簿扫描件"
+                            ]
+                        },
+                        {
+                            "label": "甲、外国公民个人文件",
+                            "sub_groups": null,
+                            "items": [
+                                "有效期至少20（二十）个月的护照扫描件",
+                                "新住址居住证明扫描件[须列明完整地址及邮政编码]",
+                                "结婚证/出生证明扫描件[适用于家属]",
+                                "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "跨移民局地址变更套餐[ITAS、SKTT及TTKOA]",
+                        "harga_note": null,
+                        "harga": "Rp 4.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "临时居留许可上的地址变更",
+                            "居住证明上的地址变更",
+                            "外国人登记回执上的地址变更"
+                        ],
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "sidebar_label": "地址变更（不同移民局）",
+                    "sidebar_harga": "Rp 4.000.000"
+                }
+            ]
+        },
         "penjelasan_umum": null,
         "dokumen_persyaratan": null,
         "biaya_layanan": null,
-        "faq": []
+        "biaya_layanan_tabs": null,
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 3,
-        "name": "Mutasi Paspor Pemegang Itas",
+        "name": {
+            "id": "Mutasi Paspor Pemegang Itas",
+            "en": "Passport Change for ITAS Holders",
+            "zh": "ITAS持有人护照变更"
+        },
         "price": "1750000",
         "price_label": "Rp 1.750.000",
         "paket_count": null,
-        "excerpt": "Pengurusan mutasi paspor baru untuk pemegang Izin Tinggal Terbatas sesuai ketentuan keimigrasian.",
+        "excerpt": {
+            "id": "Pengurusan mutasi paspor baru untuk pemegang Izin Tinggal Terbatas sesuai ketentuan keimigrasian.",
+            "en": "Processing of new passport data changes for Limited Stay Permit holders in accordance with immigration provisions.",
+            "zh": "依据移民规定，为临时居留许可持有人办理新护照数据变更。"
+        },
         "detail_path": "/keimigrasian-wni-wna/3",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing memiliki paspor baru dan akan melakukan mutasi paspor, memastikan proses pengurusan mutasi paspor dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan mutasi paspor, kami menyediakan pendampingan profesional guna mendukung proses pengajuan mutasi paspor secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-            "Mutasi Paspor merupakan dokumen yang digunakan Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing yang memiliki Izin Tinggal Terbatas / Tetap dan berencana untuk melakukan pelaporan paspor baru. Mutasi Paspor wajib di laporkan sebagai data Imigrasi mengenai nomor paspor Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing."
-        ],
-        "dokumen_persyaratan": [
-            {
-                "label": "Dokumen Perusahaan",
-                "items": [
-                    "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
-                    "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
-                    "Scancopy NIB berbasis Risiko",
-                    "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
-                ]
-            },
-            {
-                "label": "A.   Dokumen Individu Warga Negara Asing",
-                "items": [
-                    "Scancopy Paspor baru",
-                    "Scancopy Akta Nikah / Akta Lahir [untuk keluarga]",
-                    "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                ]
-            }
-        ],
-        "biaya_layanan": {
-            "nama": "MUTASI PASPOR PEMEGANG ITAS",
-            "harga_note": "*Harga termasuk PNBP",
-            "harga": "Rp 1.750.000",
-            "gratis_konsultasi": true,
-            "mendapatkan": [
-                "Mutasi Paspor pada Izin Tinggal Terbatas"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing memiliki paspor baru dan akan melakukan mutasi paspor, memastikan proses pengurusan mutasi paspor dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan mutasi paspor, kami menyediakan pendampingan profesional guna mendukung proses pengajuan mutasi paspor secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                "Mutasi Paspor merupakan dokumen yang digunakan Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing yang memiliki Izin Tinggal Terbatas / Tetap dan berencana untuk melakukan pelaporan paspor baru. Mutasi Paspor wajib di laporkan sebagai data Imigrasi mengenai nomor paspor Tenaga Kerja Asing / Keluarga Tenaga Kerja Asing."
             ],
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+            "en": [
+                "If a Foreign Worker / Foreign Worker Family has a new passport and will carry out a passport data change, ensuring that the passport change processing is carried out in accordance with applicable immigration provisions is important. Through our passport change processing service, we provide professional assistance to support the passport change application process accurately, efficiently, and in accordance with the latest regulations.",
+                "Passport Change is a document used by Foreign Workers / Foreign Worker Families who hold a Limited/Permanent Stay Permit and plan to report a new passport. The Passport Change must be reported as Immigration data regarding the passport number of the Foreign Worker / Foreign Worker Family."
+            ],
+            "zh": [
+                "若外籍劳工/外籍劳工家属持有新护照并将办理护照数据变更，确保护照变更办理流程符合现行移民规定十分重要。通过我们的护照变更服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持护照变更申请流程。",
+                "护照变更是持有临时/永久居留许可的外籍劳工/外籍劳工家属计划申报新护照时所使用的文件。此护照变更须作为有关外籍劳工/外籍劳工家属护照号码的移民数据予以申报。"
             ]
         },
-        "faq": []
+        "dokumen_persyaratan": {
+            "id": [
+                {
+                    "label": "Dokumen Perusahaan",
+                    "items": [
+                        "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
+                        "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                        "Scancopy NIB berbasis Risiko",
+                        "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
+                    ]
+                },
+                {
+                    "label": "A.   Dokumen Individu Warga Negara Asing",
+                    "items": [
+                        "Scancopy Paspor baru",
+                        "Scancopy Akta Nikah / Akta Lahir [untuk keluarga]",
+                        "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "label": "Company Documents",
+                    "items": [
+                        "Scan copy of the Deed of Establishment and Ministry of Law Decree [listing the Board of Directors]",
+                        "Scan copy of the Company's Tax ID (NPWP)",
+                        "Scan copy of Risk-Based NIB",
+                        "Scan copy of the ID Card (KTP), Employee Card, and Family Card of the application signatory"
+                    ]
+                },
+                {
+                    "label": "A. Foreign Citizen Individual Documents",
+                    "items": [
+                        "Scan copy of the new Passport",
+                        "Scan copy of Marriage Certificate / Birth Certificate [for family]",
+                        "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "公司文件",
+                    "items": [
+                        "设立公证书及法务部决定书扫描件[列明董事会成员]",
+                        "公司税号（NPWP）扫描件",
+                        "基于风险的营业执照号码（NIB）扫描件",
+                        "申请签署人的身份证（KTP）、员工卡、户口簿扫描件"
+                    ]
+                },
+                {
+                    "label": "甲、外国公民个人文件",
+                    "items": [
+                        "新护照扫描件",
+                        "结婚证/出生证明扫描件[适用于家属]",
+                        "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                    ]
+                }
+            ]
+        },
+        "biaya_layanan": {
+            "id": {
+                "nama": "MUTASI PASPOR PEMEGANG ITAS",
+                "harga_note": "*Harga termasuk PNBP",
+                "harga": "Rp 1.750.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Mutasi Paspor pada Izin Tinggal Terbatas"
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "PASSPORT CHANGE FOR ITAS HOLDERS",
+                "harga_note": "*Price includes PNBP",
+                "harga": "Rp 1.750.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "Passport Change on the Limited Stay Permit"
+                ],
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "ITAS持有人护照变更",
+                "harga_note": "*价格已含非税国家收入（PNBP）",
+                "harga": "Rp 1.750.000",
+                "gratis_konsultasi": true,
+                "mendapatkan": [
+                    "临时居留许可上的护照变更"
+                ],
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
+                ]
+            }
+        },
+        "biaya_layanan_tabs": null,
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 4,
-        "name": "Exit Permit Only (EPO)",
+        "name": {
+            "id": "Exit Permit Only (EPO)",
+            "en": "Exit Permit Only (EPO)",
+            "zh": "单次出境许可（EPO）"
+        },
         "price": "4000000",
         "price_label": "Rp 4.000.000",
         "paket_count": null,
-        "excerpt": "Pengurusan Exit Permit Only (EPO) untuk Tenaga Kerja Asing dan keluarganya yang akan meninggalkan Indonesia.",
+        "excerpt": {
+            "id": "Pengurusan Exit Permit Only (EPO) untuk Tenaga Kerja Asing dan keluarganya yang akan meninggalkan Indonesia.",
+            "en": "Processing of Exit Permit Only (EPO) for Foreign Workers and their families who will be leaving Indonesia.",
+            "zh": "为即将离开印度尼西亚的外籍劳工及其家属办理单次出境许可（EPO）。"
+        },
         "detail_path": "/keimigrasian-wni-wna/4",
         "image": "",
-        "tabs": [
-            {
-                "label": "EXPATRIATE/TKA",
-                "penjelasan_umum": [
-                    "Apabila Tenaga Kerja Asing berencana untuk mengakhiri izin tinggal di Indonesia dan posisi Tenaga Kerja Asing berada di dalam Indonesia, memastikan proses pengurusan EPO dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan EPO, kami menyediakan pendampingan profesional guna mendukung proses pengajuan EPO secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-                    "Exit Permit Only (EPO) merupakan dokumen yang digunakan Tenaga Kerja Asing jika berencana untuk mengakhiri izin tinggal dan Izin Kerja di Indonesia sebelum Tenaga Kerja Asing meninggalkan Indonesia."
-                ],
-                "dokumen_persyaratan": [
-                    {
-                        "label": "Dokumen Perusahaan",
-                        "items": [
-                            "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
-                            "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
-                            "Scancopy NIB berbasis Risiko",
-                            "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
+        "tabs": {
+            "id": [
+                {
+                    "label": "EXPATRIATE/TKA",
+                    "penjelasan_umum": [
+                        "Apabila Tenaga Kerja Asing berencana untuk mengakhiri izin tinggal di Indonesia dan posisi Tenaga Kerja Asing berada di dalam Indonesia, memastikan proses pengurusan EPO dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan EPO, kami menyediakan pendampingan profesional guna mendukung proses pengajuan EPO secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                        "Exit Permit Only (EPO) merupakan dokumen yang digunakan Tenaga Kerja Asing jika berencana untuk mengakhiri izin tinggal dan Izin Kerja di Indonesia sebelum Tenaga Kerja Asing meninggalkan Indonesia."
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Dokumen Perusahaan",
+                            "items": [
+                                "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
+                                "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                                "Scancopy NIB berbasis Risiko",
+                                "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
+                            ]
+                        },
+                        {
+                            "label": "A.   Dokumen Individu Tenaga Kerja Asing",
+                            "items": [
+                                "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
+                                "Scancopy Rancangan Penggunaan Tenaga Kerja Asing (RPTKA)",
+                                "Scancopy Izin Menggunakan Tenaga Kerja Asing (IMTA)",
+                                "Scancopy Notifikasi Pembayaran DKPTKA",
+                                "Scancopy Dana Pengembangan Keahlian dan Keterampilan (DPKK)",
+                                "Scancopy Tiket keluar Indonesia",
+                                "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "PAKET EXIT PERMIT ONLY EXPATRIATE/TKA",
+                        "harga_note": "+ Rp. 100.000 Penerimaan Negara Bukan Pajak (PNBP) EPO",
+                        "harga": "Rp 4.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "EPO Izin Menggunakan Tenaga Kerja Asing (IMTA)",
+                            "EPO Izin Tinggal Terbatas (ITAS)",
+                            "EPO Surat Keterangan Tempat Tinggal (SKTT)"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
                         ]
                     },
-                    {
-                        "label": "A.   Dokumen Individu Tenaga Kerja Asing",
-                        "items": [
-                            "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
-                            "Scancopy Rancangan Penggunaan Tenaga Kerja Asing (RPTKA)",
-                            "Scancopy Izin Menggunakan Tenaga Kerja Asing (IMTA)",
-                            "Scancopy Notifikasi Pembayaran DKPTKA",
-                            "Scancopy Dana Pengembangan Keahlian dan Keterampilan (DPKK)",
-                            "Scancopy Tiket keluar Indonesia",
-                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                        ]
-                    }
-                ],
-                "biaya_layanan": {
-                    "nama": "PAKET EXIT PERMIT ONLY EXPATRIATE/TKA",
-                    "harga_note": "+ Rp. 100.000 Penerimaan Negara Bukan Pajak (PNBP) EPO",
-                    "harga": "Rp 4.000.000",
-                    "gratis_konsultasi": true,
-                    "mendapatkan": [
-                        "EPO Izin Menggunakan Tenaga Kerja Asing (IMTA)",
-                        "EPO Izin Tinggal Terbatas (ITAS)",
-                        "EPO Surat Keterangan Tempat Tinggal (SKTT)"
-                    ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
+                    "sidebar_label": "EXIT PERMIT ONLY (EPO) EXPATRIATE/TKA",
+                    "sidebar_harga": "Rp 4.000.000"
                 },
-                "sidebar_label": "EXIT PERMIT ONLY (EPO) EXPATRIATE/TKA",
-                "sidebar_harga": "Rp 4.000.000"
-            },
-            {
-                "label": "FAMILY",
-                "penjelasan_umum": [
-                    "Apabila Keluarga Tenaga Kerja Asing berencana untuk mengakhiri izin tinggal di Indonesia dan posisi Keluarga Tenaga Kerja Asing berada di dalam Indonesia, memastikan proses pengurusan EPO dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan EPO, kami menyediakan pendampingan profesional guna mendukung proses pengajuan EPO secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-                    "Exit Permit Only (EPO) merupakan dokumen yang digunakan Keluarga Tenaga Kerja Asing jika berencana untuk mengakhiri izin tinggal di Indonesia sebelum Keluarga Tenaga Kerja Asing meninggalkan Indonesia."
-                ],
-                "dokumen_persyaratan": [
-                    {
-                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
-                        "items": [
-                            "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
-                            "Scancopy Tiket Keluar Indonesia",
-                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                        ]
-                    }
-                ],
-                "biaya_layanan": {
-                    "nama": "PAKET EXIT PERMIT ONLY FAMILY",
-                    "harga_note": "+ Rp. 100.000 Penerimaan Negara Bukan Pajak (PNBP) EPO",
-                    "harga": "Rp 3.000.000",
-                    "gratis_konsultasi": true,
-                    "mendapatkan": [
-                        "EPO Izin Tinggal Terbatas (ITAS)",
-                        "EPO Surat Keterangan Tempat Tinggal (SKTT)"
+                {
+                    "label": "FAMILY",
+                    "penjelasan_umum": [
+                        "Apabila Keluarga Tenaga Kerja Asing berencana untuk mengakhiri izin tinggal di Indonesia dan posisi Keluarga Tenaga Kerja Asing berada di dalam Indonesia, memastikan proses pengurusan EPO dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan EPO, kami menyediakan pendampingan profesional guna mendukung proses pengajuan EPO secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                        "Exit Permit Only (EPO) merupakan dokumen yang digunakan Keluarga Tenaga Kerja Asing jika berencana untuk mengakhiri izin tinggal di Indonesia sebelum Keluarga Tenaga Kerja Asing meninggalkan Indonesia."
                     ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                            "items": [
+                                "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
+                                "Scancopy Tiket Keluar Indonesia",
+                                "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "PAKET EXIT PERMIT ONLY FAMILY",
+                        "harga_note": "+ Rp. 100.000 Penerimaan Negara Bukan Pajak (PNBP) EPO",
+                        "harga": "Rp 3.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "EPO Izin Tinggal Terbatas (ITAS)",
+                            "EPO Surat Keterangan Tempat Tinggal (SKTT)"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "sidebar_label": "EXIT PERMIT ONLY (EPO) FAMILY",
+                    "sidebar_harga": "Rp 3.000.000"
+                }
+            ],
+            "en": [
+                {
+                    "label": "EXPATRIATE/FOREIGN WORKER",
+                    "penjelasan_umum": [
+                        "If a Foreign Worker plans to terminate their stay permit in Indonesia while still located within Indonesia, ensuring that the EPO processing is carried out in accordance with applicable immigration provisions is important. Through our EPO processing service, we provide professional assistance to support the EPO application process accurately, efficiently, and in accordance with the latest regulations.",
+                        "Exit Permit Only (EPO) is a document used by Foreign Workers who plan to terminate their stay and work permit in Indonesia before leaving Indonesia."
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Company Documents",
+                            "items": [
+                                "Scan copy of the Deed of Establishment and Ministry of Law Decree [listing the Board of Directors]",
+                                "Scan copy of the Company's Tax ID (NPWP)",
+                                "Scan copy of Risk-Based NIB",
+                                "Scan copy of the ID Card (KTP), Employee Card, and Family Card of the application signatory"
+                            ]
+                        },
+                        {
+                            "label": "A. Foreign Worker Individual Documents",
+                            "items": [
+                                "Scan copy of Passport with a validity period of at least 20 (twenty) months",
+                                "Scan copy of the Foreign Manpower Utilization Plan (RPTKA)",
+                                "Scan copy of the Foreign Manpower Utilization Permit (IMTA)",
+                                "Scan copy of the DKPTKA Payment Notification",
+                                "Scan copy of the Skills and Competency Development Fund (DPKK)",
+                                "Scan copy of the Exit Ticket from Indonesia",
+                                "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "EXIT PERMIT ONLY EXPATRIATE/FOREIGN WORKER PACKAGE",
+                        "harga_note": "+ Rp 100,000 Non-Tax State Revenue (PNBP) for EPO",
+                        "harga": "Rp 4.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "EPO for the Foreign Manpower Utilization Permit (IMTA)",
+                            "EPO for the Limited Stay Permit (ITAS)",
+                            "EPO for the Domicile Certificate (SKTT)"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "sidebar_label": "EXIT PERMIT ONLY (EPO) EXPATRIATE/FOREIGN WORKER",
+                    "sidebar_harga": "Rp 4.000.000"
                 },
-                "sidebar_label": "EXIT PERMIT ONLY (EPO) FAMILY",
-                "sidebar_harga": "Rp 3.000.000"
-            }
-        ],
+                {
+                    "label": "FAMILY",
+                    "penjelasan_umum": [
+                        "If a Foreign Worker's Family plans to terminate their stay permit in Indonesia while still located within Indonesia, ensuring that the EPO processing is carried out in accordance with applicable immigration provisions is important. Through our EPO processing service, we provide professional assistance to support the EPO application process accurately, efficiently, and in accordance with the latest regulations.",
+                        "Exit Permit Only (EPO) is a document used by Foreign Worker Families who plan to terminate their stay permit in Indonesia before leaving Indonesia."
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Foreign Worker Family Individual Documents",
+                            "items": [
+                                "Scan copy of Passport with a validity period of at least 20 (twenty) months",
+                                "Scan copy of the Exit Ticket from Indonesia",
+                                "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "EXIT PERMIT ONLY FAMILY PACKAGE",
+                        "harga_note": "+ Rp 100,000 Non-Tax State Revenue (PNBP) for EPO",
+                        "harga": "Rp 3.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "EPO for the Limited Stay Permit (ITAS)",
+                            "EPO for the Domicile Certificate (SKTT)"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "sidebar_label": "EXIT PERMIT ONLY (EPO) FAMILY",
+                    "sidebar_harga": "Rp 3.000.000"
+                }
+            ],
+            "zh": [
+                {
+                    "label": "外派人员/外籍劳工",
+                    "penjelasan_umum": [
+                        "若外籍劳工计划终止在印度尼西亚的居留许可，且外籍劳工仍在印度尼西亚境内，确保EPO办理流程符合现行移民规定十分重要。通过我们的EPO服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持EPO申请流程。",
+                        "单次出境许可（EPO）是外籍劳工在离开印度尼西亚之前，计划终止在印度尼西亚的居留及工作许可时所使用的文件。"
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "公司文件",
+                            "items": [
+                                "设立公证书及法务部决定书扫描件[列明董事会成员]",
+                                "公司税号（NPWP）扫描件",
+                                "基于风险的营业执照号码（NIB）扫描件",
+                                "申请签署人的身份证（KTP）、员工卡、户口簿扫描件"
+                            ]
+                        },
+                        {
+                            "label": "甲、外籍劳工个人文件",
+                            "items": [
+                                "有效期至少20（二十）个月的护照扫描件",
+                                "外籍劳工使用计划（RPTKA）扫描件",
+                                "外籍劳工使用许可（IMTA）扫描件",
+                                "DKPTKA付款通知扫描件",
+                                "技能发展基金（DPKK）扫描件",
+                                "离境印度尼西亚机票扫描件",
+                                "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "外派人员/外籍劳工单次出境许可套餐",
+                        "harga_note": "+10万印尼盾EPO非税国家收入（PNBP）",
+                        "harga": "Rp 4.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "外籍劳工使用许可（IMTA）EPO",
+                            "临时居留许可（ITAS）EPO",
+                            "居住证明（SKTT）EPO"
+                        ],
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "sidebar_label": "单次出境许可（EPO）外派人员/外籍劳工",
+                    "sidebar_harga": "Rp 4.000.000"
+                },
+                {
+                    "label": "家属",
+                    "penjelasan_umum": [
+                        "若外籍劳工家属计划终止在印度尼西亚的居留许可，且外籍劳工家属仍在印度尼西亚境内，确保EPO办理流程符合现行移民规定十分重要。通过我们的EPO服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持EPO申请流程。",
+                        "单次出境许可（EPO）是外籍劳工家属在离开印度尼西亚之前，计划终止在印度尼西亚的居留许可时所使用的文件。"
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "外籍劳工家属个人文件",
+                            "items": [
+                                "有效期至少20（二十）个月的护照扫描件",
+                                "离境印度尼西亚机票扫描件",
+                                "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "家属单次出境许可套餐",
+                        "harga_note": "+10万印尼盾EPO非税国家收入（PNBP）",
+                        "harga": "Rp 3.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "临时居留许可（ITAS）EPO",
+                            "居住证明（SKTT）EPO"
+                        ],
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "sidebar_label": "单次出境许可（EPO）家属",
+                    "sidebar_harga": "Rp 3.000.000"
+                }
+            ]
+        },
         "penjelasan_umum": null,
         "dokumen_persyaratan": null,
         "biaya_layanan": null,
-        "faq": []
+        "biaya_layanan_tabs": null,
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 5,
-        "name": "Exit Termination Of Stay Permit (TSP)",
+        "name": {
+            "id": "Exit Termination Of Stay Permit (TSP)",
+            "en": "Exit Termination of Stay Permit (TSP)",
+            "zh": "出境居留许可终止（TSP）"
+        },
         "price": "3750000",
         "price_label": "Rp 3.750.000",
         "paket_count": null,
-        "excerpt": "Pengurusan Exit Termination of Stay Permit (TSP) untuk TKA dan keluarganya yang sudah berada di luar Indonesia.",
+        "excerpt": {
+            "id": "Pengurusan Exit Termination of Stay Permit (TSP) untuk TKA dan keluarganya yang sudah berada di luar Indonesia.",
+            "en": "Processing of Exit Termination of Stay Permit (TSP) for Foreign Workers and their families who are already outside Indonesia.",
+            "zh": "为已在印度尼西亚境外的外籍劳工及其家属办理出境居留许可终止（TSP）。"
+        },
         "detail_path": "/keimigrasian-wni-wna/5",
         "image": "",
-        "tabs": [
-            {
-                "label": "EXPATRIATE/TKA",
-                "penjelasan_umum": [
-                    "Apabila Tenaga Kerja Asing berencana untuk mengakhiri izin tinggal di Indonesia dan posisi Tenaga Kerja Asing berada di luar Indonesia, memastikan proses pengurusan TSP dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan TSP, kami menyediakan pendampingan profesional guna mendukung proses pengajuan TSP secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-                    "Termination Of Stay Permit (TSP) merupakan dokumen yang digunakan Tenaga Kerja Asing jika berencana untuk mengakhiri izin tinggal dan Izin Kerja di Indonesia namun sudah berada di luar Indonesia."
-                ],
-                "dokumen_persyaratan": [
-                    {
-                        "label": "Dokumen Perusahaan",
-                        "items": [
-                            "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
-                            "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
-                            "Scancopy NIB berbasis Risiko",
-                            "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
+        "tabs": {
+            "id": [
+                {
+                    "label": "EXPATRIATE/TKA",
+                    "penjelasan_umum": [
+                        "Apabila Tenaga Kerja Asing berencana untuk mengakhiri izin tinggal di Indonesia dan posisi Tenaga Kerja Asing berada di luar Indonesia, memastikan proses pengurusan TSP dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan TSP, kami menyediakan pendampingan profesional guna mendukung proses pengajuan TSP secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                        "Termination Of Stay Permit (TSP) merupakan dokumen yang digunakan Tenaga Kerja Asing jika berencana untuk mengakhiri izin tinggal dan Izin Kerja di Indonesia namun sudah berada di luar Indonesia."
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Dokumen Perusahaan",
+                            "items": [
+                                "Scancopy Akta Pendirian dan SK Kemenkumham [menyebutkan jajaran direksi]",
+                                "Scancopy Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                                "Scancopy NIB berbasis Risiko",
+                                "Scancopy Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan"
+                            ]
+                        },
+                        {
+                            "label": "A.   Dokumen Individu Warga Negara Asing",
+                            "items": [
+                                "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
+                                "Scancopy Rancangan Penggunaan Tenaga Kerja Asing (RPTKA)",
+                                "Scancopy Izin Menggunakan Tenaga Kerja Asing (IMTA)",
+                                "Scancopy Notifikasi Pembayaran DKPTKA",
+                                "Scancopy Dana Pengembangan Keahlian dan Keterampilan (DPKK)",
+                                "Scancopy Tiket keluar Indonesia / Scancopy Cap keluar Indonesia",
+                                "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "EXIT TERMINATION OF STAY PERMIT (TSP) EXPATRIATE",
+                        "harga_note": "+ Rp. 100.000 Penerimaan Negara Bukan Pajak (PNBP) ERP",
+                        "harga": "Rp 3.750.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "EPO Izin Menggunakan Tenaga Kerja Asing (IMTA)",
+                            "Termination Of Stay Permit (TSP)",
+                            "EPO Surat Keterangan Tempat Tinggal (SKTT)"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
                         ]
                     },
-                    {
-                        "label": "A.   Dokumen Individu Warga Negara Asing",
-                        "items": [
-                            "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
-                            "Scancopy Rancangan Penggunaan Tenaga Kerja Asing (RPTKA)",
-                            "Scancopy Izin Menggunakan Tenaga Kerja Asing (IMTA)",
-                            "Scancopy Notifikasi Pembayaran DKPTKA",
-                            "Scancopy Dana Pengembangan Keahlian dan Keterampilan (DPKK)",
-                            "Scancopy Tiket keluar Indonesia / Scancopy Cap keluar Indonesia",
-                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                        ]
-                    }
-                ],
-                "biaya_layanan": {
-                    "nama": "EXIT TERMINATION OF STAY PERMIT (TSP) EXPATRIATE",
-                    "harga_note": "+ Rp. 100.000 Penerimaan Negara Bukan Pajak (PNBP) ERP",
-                    "harga": "Rp 3.750.000",
-                    "gratis_konsultasi": true,
-                    "mendapatkan": [
-                        "EPO Izin Menggunakan Tenaga Kerja Asing (IMTA)",
-                        "Termination Of Stay Permit (TSP)",
-                        "EPO Surat Keterangan Tempat Tinggal (SKTT)"
-                    ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
+                    "sidebar_label": "EXIT TERMINATION OF STAY PERMIT (TSP) EXPATRIATE",
+                    "sidebar_harga": "Rp 3.750.000"
                 },
-                "sidebar_label": "EXIT TERMINATION OF STAY PERMIT (TSP) EXPATRIATE",
-                "sidebar_harga": "Rp 3.750.000"
-            },
-            {
-                "label": "FAMILY",
-                "penjelasan_umum": [
-                    "Apabila keluarga Tenaga Kerja Asing berencana untuk mengakhiri izin tinggal di Indonesia dan posisi keluarga Tenaga Kerja Asing berada di luar Indonesia, memastikan proses pengurusan TSP dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan TSP, kami menyediakan pendampingan profesional guna mendukung proses pengajuan TSP secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-                    "Termination Of Stay Permit (TSP) merupakan dokumen yang digunakan keluarga Tenaga Kerja Asing jika berencana untuk mengakhiri izin tinggal di Indonesia namun sudah berada di luar Indonesia."
-                ],
-                "dokumen_persyaratan": [
-                    {
-                        "label": "Dokumen Individu Warga Negara Asing",
-                        "items": [
-                            "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
-                            "Scancopy Tiket keluar Indonesia / Scancopy Cap keluar Indonesia",
-                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                        ]
-                    }
-                ],
-                "biaya_layanan": {
-                    "nama": "EXIT TERMINATION OF STAY PERMIT (TSP) FAMILY",
-                    "harga_note": "+ Rp. 100.000 Penerimaan Negara Bukan Pajak (PNBP) TSP",
-                    "harga": "Rp 3.000.000",
-                    "gratis_konsultasi": true,
-                    "mendapatkan": [
-                        "Termination Of Stay Permit (TSP)",
-                        "EPO Surat Keterangan Tempat Tinggal (SKTT)"
+                {
+                    "label": "FAMILY",
+                    "penjelasan_umum": [
+                        "Apabila keluarga Tenaga Kerja Asing berencana untuk mengakhiri izin tinggal di Indonesia dan posisi keluarga Tenaga Kerja Asing berada di luar Indonesia, memastikan proses pengurusan TSP dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan TSP, kami menyediakan pendampingan profesional guna mendukung proses pengajuan TSP secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                        "Termination Of Stay Permit (TSP) merupakan dokumen yang digunakan keluarga Tenaga Kerja Asing jika berencana untuk mengakhiri izin tinggal di Indonesia namun sudah berada di luar Indonesia."
                     ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Dokumen Individu Warga Negara Asing",
+                            "items": [
+                                "Scancopy Paspor dengan masa berlaku minimal 20 (Duapuluh) bulan",
+                                "Scancopy Tiket keluar Indonesia / Scancopy Cap keluar Indonesia",
+                                "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "EXIT TERMINATION OF STAY PERMIT (TSP) FAMILY",
+                        "harga_note": "+ Rp. 100.000 Penerimaan Negara Bukan Pajak (PNBP) TSP",
+                        "harga": "Rp 3.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "Termination Of Stay Permit (TSP)",
+                            "EPO Surat Keterangan Tempat Tinggal (SKTT)"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "sidebar_label": "EXIT TERMINATION OF STAY PERMIT (TSP) FAMILY",
+                    "sidebar_harga": "Rp 3.000.000"
+                }
+            ],
+            "en": [
+                {
+                    "label": "EXPATRIATE/FOREIGN WORKER",
+                    "penjelasan_umum": [
+                        "If a Foreign Worker plans to terminate their stay permit in Indonesia while located outside Indonesia, ensuring that the TSP processing is carried out in accordance with applicable immigration provisions is important. Through our TSP processing service, we provide professional assistance to support the TSP application process accurately, efficiently, and in accordance with the latest regulations.",
+                        "Termination of Stay Permit (TSP) is a document used by Foreign Workers who plan to terminate their stay and work permit in Indonesia but are already outside Indonesia."
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Company Documents",
+                            "items": [
+                                "Scan copy of the Deed of Establishment and Ministry of Law Decree [listing the Board of Directors]",
+                                "Scan copy of the Company's Tax ID (NPWP)",
+                                "Scan copy of Risk-Based NIB",
+                                "Scan copy of the ID Card (KTP), Employee Card, and Family Card of the application signatory"
+                            ]
+                        },
+                        {
+                            "label": "A. Foreign Citizen Individual Documents",
+                            "items": [
+                                "Scan copy of Passport with a validity period of at least 20 (twenty) months",
+                                "Scan copy of the Foreign Manpower Utilization Plan (RPTKA)",
+                                "Scan copy of the Foreign Manpower Utilization Permit (IMTA)",
+                                "Scan copy of the DKPTKA Payment Notification",
+                                "Scan copy of the Skills and Competency Development Fund (DPKK)",
+                                "Scan copy of the Exit Ticket from Indonesia / Scan copy of the Indonesia Exit Stamp",
+                                "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "EXIT TERMINATION OF STAY PERMIT (TSP) EXPATRIATE",
+                        "harga_note": "+ Rp 100,000 Non-Tax State Revenue (PNBP) for ERP",
+                        "harga": "Rp 3.750.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "EPO for the Foreign Manpower Utilization Permit (IMTA)",
+                            "Termination of Stay Permit (TSP)",
+                            "EPO for the Domicile Certificate (SKTT)"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "sidebar_label": "EXIT TERMINATION OF STAY PERMIT (TSP) EXPATRIATE",
+                    "sidebar_harga": "Rp 3.750.000"
                 },
-                "sidebar_label": "EXIT TERMINATION OF STAY PERMIT (TSP) FAMILY",
-                "sidebar_harga": "Rp 3.000.000"
-            }
-        ],
+                {
+                    "label": "FAMILY",
+                    "penjelasan_umum": [
+                        "If a Foreign Worker's family plans to terminate their stay permit in Indonesia while located outside Indonesia, ensuring that the TSP processing is carried out in accordance with applicable immigration provisions is important. Through our TSP processing service, we provide professional assistance to support the TSP application process accurately, efficiently, and in accordance with the latest regulations.",
+                        "Termination of Stay Permit (TSP) is a document used by Foreign Worker families who plan to terminate their stay permit in Indonesia but are already outside Indonesia."
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "Foreign Citizen Individual Documents",
+                            "items": [
+                                "Scan copy of Passport with a validity period of at least 20 (twenty) months",
+                                "Scan copy of the Exit Ticket from Indonesia / Scan copy of the Indonesia Exit Stamp",
+                                "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "EXIT TERMINATION OF STAY PERMIT (TSP) FAMILY",
+                        "harga_note": "+ Rp 100,000 Non-Tax State Revenue (PNBP) for TSP",
+                        "harga": "Rp 3.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "Termination of Stay Permit (TSP)",
+                            "EPO for the Domicile Certificate (SKTT)"
+                        ],
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "sidebar_label": "EXIT TERMINATION OF STAY PERMIT (TSP) FAMILY",
+                    "sidebar_harga": "Rp 3.000.000"
+                }
+            ],
+            "zh": [
+                {
+                    "label": "外派人员/外籍劳工",
+                    "penjelasan_umum": [
+                        "若外籍劳工计划终止在印度尼西亚的居留许可，且外籍劳工身处印度尼西亚境外，确保TSP办理流程符合现行移民规定十分重要。通过我们的TSP服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持TSP申请流程。",
+                        "居留许可终止（TSP）是外籍劳工计划终止在印度尼西亚的居留及工作许可，但已身处印度尼西亚境外时所使用的文件。"
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "公司文件",
+                            "items": [
+                                "设立公证书及法务部决定书扫描件[列明董事会成员]",
+                                "公司税号（NPWP）扫描件",
+                                "基于风险的营业执照号码（NIB）扫描件",
+                                "申请签署人的身份证（KTP）、员工卡、户口簿扫描件"
+                            ]
+                        },
+                        {
+                            "label": "甲、外国公民个人文件",
+                            "items": [
+                                "有效期至少20（二十）个月的护照扫描件",
+                                "外籍劳工使用计划（RPTKA）扫描件",
+                                "外籍劳工使用许可（IMTA）扫描件",
+                                "DKPTKA付款通知扫描件",
+                                "技能发展基金（DPKK）扫描件",
+                                "离境印度尼西亚机票扫描件/离境印度尼西亚印章扫描件",
+                                "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "出境居留许可终止（TSP）外派人员",
+                        "harga_note": "+10万印尼盾ERP非税国家收入（PNBP）",
+                        "harga": "Rp 3.750.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "外籍劳工使用许可（IMTA）EPO",
+                            "居留许可终止（TSP）",
+                            "居住证明（SKTT）EPO"
+                        ],
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "sidebar_label": "出境居留许可终止（TSP）外派人员",
+                    "sidebar_harga": "Rp 3.750.000"
+                },
+                {
+                    "label": "家属",
+                    "penjelasan_umum": [
+                        "若外籍劳工家属计划终止在印度尼西亚的居留许可，且外籍劳工家属身处印度尼西亚境外，确保TSP办理流程符合现行移民规定十分重要。通过我们的TSP服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持TSP申请流程。",
+                        "居留许可终止（TSP）是外籍劳工家属计划终止在印度尼西亚的居留许可，但已身处印度尼西亚境外时所使用的文件。"
+                    ],
+                    "dokumen_persyaratan": [
+                        {
+                            "label": "外国公民个人文件",
+                            "items": [
+                                "有效期至少20（二十）个月的护照扫描件",
+                                "离境印度尼西亚机票扫描件/离境印度尼西亚印章扫描件",
+                                "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                            ]
+                        }
+                    ],
+                    "biaya_layanan": {
+                        "nama": "出境居留许可终止（TSP）家属",
+                        "harga_note": "+10万印尼盾TSP非税国家收入（PNBP）",
+                        "harga": "Rp 3.000.000",
+                        "gratis_konsultasi": true,
+                        "mendapatkan": [
+                            "居留许可终止（TSP）",
+                            "居住证明（SKTT）EPO"
+                        ],
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "sidebar_label": "出境居留许可终止（TSP）家属",
+                    "sidebar_harga": "Rp 3.000.000"
+                }
+            ]
+        },
         "penjelasan_umum": null,
         "dokumen_persyaratan": null,
         "biaya_layanan": null,
-        "faq": []
+        "biaya_layanan_tabs": null,
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]
