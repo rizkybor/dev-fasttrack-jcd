@@ -28,6 +28,7 @@ const daftarKota = [
 // ===== 3. Bidang Usaha =====
 const searchKBLI = ref("");
 const selectedKBLI = ref([]);
+const MAX_KBLI = 20;
 const daftarKBLI = ref([]);
 const isLoadingKBLI = ref(true);
 
@@ -102,7 +103,7 @@ const isKBLISelected = (kode) => selectedKBLI.value.some((k) => k.kode === kode)
 const toggleKBLI = (item) => {
     if (isKBLISelected(item.kode)) {
         selectedKBLI.value = selectedKBLI.value.filter((k) => k.kode !== item.kode);
-    } else {
+    } else if (selectedKBLI.value.length < MAX_KBLI) {
         selectedKBLI.value.push(item);
     }
 };
@@ -120,10 +121,12 @@ const formatRupiah = (val) => {
 };
 
 // ===== 5. Pemegang Saham =====
+const MAX_PEMEGANG_SAHAM = 10;
 const pemegangSaham = ref([
     { id: 1, nama: "", kepemilikan: "", domisili: "WNI", direksi: false, komisaris: false }
 ]);
 const tambahPemegangSaham = () => {
+    if (pemegangSaham.value.length >= MAX_PEMEGANG_SAHAM) return;
     pemegangSaham.value.push({
         id: Date.now(), nama: "", kepemilikan: "", domisili: "WNI", direksi: false, komisaris: false
     });
@@ -193,6 +196,7 @@ const validate = () => {
 
     // 3. Bidang Usaha
     if (!selectedKBLI.value.length) e.selectedKBLI = "Pilih minimal 1 bidang usaha.";
+    else if (selectedKBLI.value.length > MAX_KBLI) e.selectedKBLI = `Maksimal ${MAX_KBLI} bidang usaha.`;
 
     // 4. Modal
     const mD = parseNum(modalDasar.value);
@@ -300,11 +304,14 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                 <nav class="mb-3">
                     <div class="inline-flex items-center gap-2 rounded-md bg-white px-3 py-1.5">
                         <a href="/" class="text-[#9e1f16]">
-                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
+                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
                             </svg>
                         </a>
-                        <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                         <span class="text-[12px] font-medium text-[#9e1f16]">Simulasi Akta Pendirian</span>
@@ -326,7 +333,8 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                     <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         :class="errors.namaPerseroan ? 'border-red-200' : ''">
                         <div class="flex items-center gap-3 mb-1">
-                            <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
+                            <span
+                                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.namaPerseroan ? 'bg-red-400' : 'bg-primary'">1</span>
                             <h2 class="text-[15px] font-bold text-black">Nama Perseroan</h2>
                             <span class="text-red-500 text-[13px]">*</span>
@@ -336,8 +344,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
                                 Nama Perseroan <span class="text-red-500">*</span>
                             </label>
-                            <input v-model="namaPerseroan" type="text"
-                                placeholder="Contoh: Fasttrack Bisnis Indonesia"
+                            <input v-model="namaPerseroan" type="text" placeholder="Contoh: Fasttrack Bisnis Indonesia"
                                 class="w-full rounded-lg border px-3.5 py-2.5 text-[13px] text-[#1A1B18] placeholder-[#B0B0AE] focus:outline-none focus:ring-1 transition"
                                 :class="errors.namaPerseroan
                                     ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
@@ -359,12 +366,14 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                     <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         :class="errors.kotaKedudukan || errors.provinsi ? 'border-red-200' : ''">
                         <div class="flex items-center gap-3 mb-1">
-                            <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
+                            <span
+                                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.kotaKedudukan || errors.provinsi ? 'bg-red-400' : 'bg-primary'">2</span>
                             <h2 class="text-[15px] font-bold text-black">Tempat & Kedudukan</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Masukan kota/kabupaten tempat usaha didirikan</p>
+                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Masukan kota/kabupaten tempat usaha didirikan
+                        </p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
@@ -416,20 +425,27 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                     <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         :class="errors.selectedKBLI ? 'border-red-200' : ''">
                         <div class="flex items-center gap-3 mb-1">
-                            <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
+                            <span
+                                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.selectedKBLI ? 'bg-red-400' : 'bg-primary'">3</span>
                             <h2 class="text-[15px] font-bold text-black">Bidang Usaha</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-4 pl-10">Pilih bidang usaha yang akan dijalankan perseroan</p>
+                        <p class="text-[12px] text-[#686964] mb-4 pl-10">Pilih bidang usaha yang akan dijalankan
+                            perseroan</p>
 
                         <!-- Selected tags -->
-                        <div v-if="selectedKBLI.length" class="flex flex-wrap gap-2 mb-4">
+                        <div v-if="selectedKBLI.length" class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="text-[12px] font-bold"
+                                :class="selectedKBLI.length >= MAX_KBLI ? 'text-amber-600' : 'text-[#686964]'">
+                                {{ selectedKBLI.length }}/{{ MAX_KBLI }}
+                            </span>
                             <span v-for="k in selectedKBLI" :key="k.kode"
                                 class="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-[12px] font-semibold text-primary">
                                 {{ k.kode }} – {{ k.kegiatan }}
                                 <button @click="toggleKBLI(k)" class="hover:text-primary/60 transition-colors">
-                                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
                                 </button>
@@ -447,8 +463,10 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                         <!-- Search -->
                         <div class="relative mb-3">
-                            <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#B0B0AE]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#B0B0AE]" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                             <input v-model="searchKBLI" type="text"
                                 placeholder="Cari kode atau nama bidang usaha KBLI..."
@@ -462,16 +480,20 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 {{ filteredKBLI.length.toLocaleString("id-ID") }} hasil untuk "{{ searchKBLI }}"
                             </template>
                             <template v-else>
-                                {{ daftarKBLI.length.toLocaleString("id-ID") }} kode KBLI 5 digit tersedia. Ketik untuk mencari.
+                                {{ daftarKBLI.length.toLocaleString("id-ID") }} kode KBLI 5 digit tersedia. Ketik untuk
+                                mencari.
                             </template>
                         </p>
 
                         <!-- Table -->
                         <div class="rounded-xl border border-[#E8E8E6] overflow-hidden">
                             <div v-if="isLoadingKBLI" class="py-10 text-center text-[13px] text-[#686964]">
-                                <svg class="mx-auto mb-2 h-6 w-6 animate-spin text-primary" fill="none" viewBox="0 0 24 24">
-                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                                <svg class="mx-auto mb-2 h-6 w-6 animate-spin text-primary" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                        stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                                 </svg>
                                 Memuat data KBLI 2025...
                             </div>
@@ -487,14 +509,17 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 <tbody class="divide-y divide-[#F0F0EE]">
                                     <tr v-for="item in paginatedKBLI" :key="item.kode"
                                         class="hover:bg-[#FAFAFA] transition-colors">
-                                        <td class="px-4 py-3 font-bold text-primary whitespace-nowrap">{{ item.kode }}</td>
-                                        <td class="px-4 py-3 font-semibold text-[#1A1B18] leading-snug">{{ item.kegiatan }}</td>
+                                        <td class="px-4 py-3 font-bold text-primary whitespace-nowrap">{{ item.kode }}
+                                        </td>
+                                        <td class="px-4 py-3 font-semibold text-[#1A1B18] leading-snug">{{ item.kegiatan
+                                            }}</td>
                                         <td class="px-4 py-3 text-[#686964] leading-relaxed">
                                             <span class="line-clamp-2">{{ item.deskripsi || "-" }}</span>
                                         </td>
                                         <td class="px-4 py-3 text-center">
                                             <button @click="toggleKBLI(item)"
-                                                class="rounded-lg px-3 py-1.5 text-[11px] font-bold transition-colors whitespace-nowrap"
+                                                :disabled="!isKBLISelected(item.kode) && selectedKBLI.length >= MAX_KBLI"
+                                                class="rounded-lg px-3 py-1.5 text-[11px] font-bold transition-colors whitespace-nowrap disabled:opacity-30 disabled:cursor-not-allowed"
                                                 :class="isKBLISelected(item.kode)
                                                     ? 'bg-primary/10 text-primary'
                                                     : 'bg-[#F7F7F5] text-[#686964] hover:bg-primary/10 hover:text-primary'">
@@ -504,8 +529,10 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     </tr>
                                     <tr v-if="!paginatedKBLI.length">
                                         <td colspan="4" class="px-4 py-8 text-center text-[#686964]">
-                                            <svg class="mx-auto mb-2 h-8 w-8 text-[#D9DAD8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                            <svg class="mx-auto mb-2 h-8 w-8 text-[#D9DAD8]" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                             </svg>
                                             Tidak ada hasil untuk "<strong>{{ searchKBLI }}</strong>"
                                         </td>
@@ -520,13 +547,16 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <p class="text-[11px] text-[#686964] whitespace-nowrap">
                                 Hal. {{ currentPage }} / {{ totalPages.toLocaleString("id-ID") }}
                                 &nbsp;·&nbsp;
-                                {{ ((currentPage - 1) * perPage + 1).toLocaleString("id-ID") }}–{{ Math.min(currentPage * perPage, filteredKBLI.length).toLocaleString("id-ID") }}
+                                {{ ((currentPage - 1) * perPage + 1).toLocaleString("id-ID") }}–{{ Math.min(currentPage
+                                    * perPage,
+                                    filteredKBLI.length).toLocaleString("id-ID") }}
                                 dari {{ filteredKBLI.length.toLocaleString("id-ID") }}
                             </p>
                             <div class="flex items-center gap-1">
                                 <button @click="currentPage--" :disabled="currentPage === 1"
                                     class="flex h-8 w-8 items-center justify-center rounded-lg border border-[#E8E8E6] text-[#686964] transition-colors disabled:opacity-30 disabled:cursor-not-allowed hover:border-primary hover:text-primary">
-                                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
                                     </svg>
                                 </button>
@@ -543,7 +573,8 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 </template>
                                 <button @click="currentPage++" :disabled="currentPage === totalPages"
                                     class="flex h-8 w-8 items-center justify-center rounded-lg border border-[#E8E8E6] text-[#686964] transition-colors disabled:opacity-30 disabled:cursor-not-allowed hover:border-primary hover:text-primary">
-                                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                                     </svg>
                                 </button>
@@ -555,12 +586,14 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                     <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         :class="errors.modalDasar || errors.modalDitempatkan || errors.modalDisetor ? 'border-red-200' : ''">
                         <div class="flex items-center gap-3 mb-1">
-                            <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
+                            <span
+                                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.modalDasar || errors.modalDitempatkan || errors.modalDisetor ? 'bg-red-400' : 'bg-primary'">4</span>
                             <h2 class="text-[15px] font-bold text-black">Struktur Permodalan</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Tentukan modal dasar, ditempatkan dan disetor</p>
+                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Tentukan modal dasar, ditempatkan dan disetor
+                        </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
                             <!-- Modal Dasar -->
@@ -569,9 +602,9 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     Modal Dasar <span class="text-red-500">*</span>
                                 </label>
                                 <div class="relative">
-                                    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-[13px] text-[#686964]">Rp</span>
-                                    <input v-model="modalDasar" type="text"
-                                        placeholder="50.000.000"
+                                    <span
+                                        class="absolute left-3 top-1/2 -translate-y-1/2 text-[13px] text-[#686964]">Rp</span>
+                                    <input v-model="modalDasar" type="text" placeholder="50.000.000"
                                         class="w-full rounded-lg border pl-8 pr-3.5 py-2.5 text-[13px] focus:outline-none focus:ring-1 transition"
                                         :class="errors.modalDasar
                                             ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
@@ -592,9 +625,9 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     Modal Ditempatkan <span class="text-red-500">*</span>
                                 </label>
                                 <div class="relative">
-                                    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-[13px] text-[#686964]">Rp</span>
-                                    <input v-model="modalDitempatkan" type="text"
-                                        placeholder="12.500.000"
+                                    <span
+                                        class="absolute left-3 top-1/2 -translate-y-1/2 text-[13px] text-[#686964]">Rp</span>
+                                    <input v-model="modalDitempatkan" type="text" placeholder="12.500.000"
                                         class="w-full rounded-lg border pl-8 pr-3.5 py-2.5 text-[13px] focus:outline-none focus:ring-1 transition"
                                         :class="errors.modalDitempatkan
                                             ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
@@ -615,9 +648,9 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     Modal Disetor <span class="text-red-500">*</span>
                                 </label>
                                 <div class="relative">
-                                    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-[13px] text-[#686964]">Rp</span>
-                                    <input v-model="modalDisetor" type="text"
-                                        placeholder="12.500.000"
+                                    <span
+                                        class="absolute left-3 top-1/2 -translate-y-1/2 text-[13px] text-[#686964]">Rp</span>
+                                    <input v-model="modalDisetor" type="text" placeholder="12.500.000"
                                         class="w-full rounded-lg border pl-8 pr-3.5 py-2.5 text-[13px] focus:outline-none focus:ring-1 transition"
                                         :class="errors.modalDisetor
                                             ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
@@ -635,11 +668,13 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-[13px] font-semibold text-[#1A1B18] mb-2">Saham per Pendiri</label>
+                                <label class="block text-[13px] font-semibold text-[#1A1B18] mb-2">Saham per
+                                    Pendiri</label>
                                 <div class="flex gap-4">
                                     <label v-for="opt in ['WNI', 'WNA', 'Campuran']" :key="opt"
                                         class="flex items-center gap-2 cursor-pointer">
-                                        <input type="radio" v-model="sahamPerPendiri" :value="opt" class="accent-primary" />
+                                        <input type="radio" v-model="sahamPerPendiri" :value="opt"
+                                            class="accent-primary" />
                                         <span class="text-[13px] text-[#1A1B18]">{{ opt }}</span>
                                     </label>
                                 </div>
@@ -647,8 +682,8 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <div>
                                 <label class="block text-[13px] font-semibold text-[#1A1B18] mb-2">Jenis Saham</label>
                                 <div class="flex flex-col gap-2">
-                                    <label v-for="opt in ['Ya - Hanya Saham Biasa', 'Ya - Ada Saham Preferen']" :key="opt"
-                                        class="flex items-center gap-2 cursor-pointer">
+                                    <label v-for="opt in ['Ya - Hanya Saham Biasa', 'Ya - Ada Saham Preferen']"
+                                        :key="opt" class="flex items-center gap-2 cursor-pointer">
                                         <input type="radio" v-model="sahamBiasa" :value="opt" class="accent-primary" />
                                         <span class="text-[13px] text-[#1A1B18]">{{ opt }}</span>
                                     </label>
@@ -661,10 +696,12 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             class="mt-4 rounded-lg bg-blue-50 border border-blue-200 px-4 py-3">
                             <p class="text-[12px] text-blue-700">
                                 Modal ditempatkan:
-                                <strong>{{ ((parseNum(modalDitempatkan) / parseNum(modalDasar)) * 100).toFixed(1) }}%</strong>
+                                <strong>{{ ((parseNum(modalDitempatkan) / parseNum(modalDasar)) * 100).toFixed(1)
+                                    }}%</strong>
                                 dari modal dasar
                                 <span v-if="parseNum(modalDitempatkan) / parseNum(modalDasar) >= 0.25"
-                                    class="text-green-600 font-semibold"> ✓ Memenuhi syarat</span>
+                                    class="text-green-600 font-semibold">
+                                    ✓ Memenuhi syarat</span>
                                 <span v-else class="text-red-500 font-semibold"> ✗ Minimal 25%</span>
                             </p>
                         </div>
@@ -674,7 +711,8 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                     <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         :class="errors.pemegangSaham || errors.totalPct ? 'border-red-200' : ''">
                         <div class="flex items-center gap-3 mb-1">
-                            <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
+                            <span
+                                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.pemegangSaham || errors.totalPct ? 'bg-red-400' : 'bg-primary'">5</span>
                             <h2 class="text-[15px] font-bold text-black">Pemegang Saham</h2>
                             <span class="text-red-500 text-[13px]">*</span>
@@ -692,12 +730,12 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                         <div class="flex flex-col gap-4">
                             <div v-for="(ps, idx) in pemegangSaham" :key="ps.id"
-                                class="rounded-xl border p-4 transition-colors"
-                                :class="errors.pemegangSaham?.[idx] && Object.keys(errors.pemegangSaham[idx]).length
+                                class="rounded-xl border p-4 transition-colors" :class="errors.pemegangSaham?.[idx] && Object.keys(errors.pemegangSaham[idx]).length
                                     ? 'border-red-200 bg-red-50/30'
                                     : 'border-[#E8E8E6]'">
                                 <div class="flex items-center justify-between mb-3">
-                                    <span class="text-[13px] font-bold text-[#1A1B18]">Pemegang Saham {{ idx + 1 }}</span>
+                                    <span class="text-[13px] font-bold text-[#1A1B18]">Pemegang Saham {{ idx + 1
+                                        }}</span>
                                     <button v-if="pemegangSaham.length > 1" @click="hapusPemegangSaham(ps.id)"
                                         class="text-[12px] font-semibold text-red-400 hover:text-red-500 transition">Hapus</button>
                                 </div>
@@ -724,12 +762,14 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                             Kepemilikan <span class="text-red-500">*</span>
                                         </label>
                                         <div class="relative">
-                                            <input v-model="ps.kepemilikan" type="number" min="0" max="100" placeholder="0"
+                                            <input v-model="ps.kepemilikan" type="number" min="0" max="100"
+                                                placeholder="0"
                                                 class="w-full rounded-lg border px-3 py-2 pr-8 text-[13px] focus:outline-none focus:ring-1 transition"
                                                 :class="errors.pemegangSaham?.[idx]?.kepemilikan
                                                     ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
                                                     : 'border-[#D9DAD8] focus:border-primary focus:ring-primary bg-white'" />
-                                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[13px] text-[#686964]">%</span>
+                                            <span
+                                                class="absolute right-3 top-1/2 -translate-y-1/2 text-[13px] text-[#686964]">%</span>
                                         </div>
                                         <p v-if="errors.pemegangSaham?.[idx]?.kepemilikan"
                                             class="field-error mt-1 flex items-center gap-1 text-[11px] text-red-500">
@@ -742,24 +782,29 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 </div>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     <div>
-                                        <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">Domisili</label>
+                                        <label
+                                            class="block text-[12px] font-semibold text-[#1A1B18] mb-1">Domisili</label>
                                         <div class="flex gap-4">
                                             <label v-for="opt in ['WNI', 'WNA']" :key="opt"
                                                 class="flex items-center gap-1.5 cursor-pointer">
-                                                <input type="radio" v-model="ps.domisili" :value="opt" class="accent-primary" />
+                                                <input type="radio" v-model="ps.domisili" :value="opt"
+                                                    class="accent-primary" />
                                                 <span class="text-[12px] text-[#1A1B18]">{{ opt }}</span>
                                             </label>
                                         </div>
                                     </div>
                                     <div>
-                                        <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">Juga Menjabat Sebagai</label>
+                                        <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">Juga Menjabat
+                                            Sebagai</label>
                                         <div class="flex gap-4">
                                             <label class="flex items-center gap-1.5 cursor-pointer">
-                                                <input type="checkbox" v-model="ps.direksi" class="accent-primary rounded" />
+                                                <input type="checkbox" v-model="ps.direksi"
+                                                    class="accent-primary rounded" />
                                                 <span class="text-[12px] text-[#1A1B18]">Direksi</span>
                                             </label>
                                             <label class="flex items-center gap-1.5 cursor-pointer">
-                                                <input type="checkbox" v-model="ps.komisaris" class="accent-primary rounded" />
+                                                <input type="checkbox" v-model="ps.komisaris"
+                                                    class="accent-primary rounded" />
                                                 <span class="text-[12px] text-[#1A1B18]">Komisaris</span>
                                             </label>
                                         </div>
@@ -768,20 +813,32 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             </div>
                         </div>
 
-                        <!-- Total persentase indicator -->
+                        <!-- Counter pemegang saham -->
                         <div class="mt-3 flex items-center justify-between text-[12px]">
-                            <span class="text-[#686964]">Total kepemilikan:</span>
+                            <span class="text-[#686964]">Jumlah pemegang saham:</span>
                             <span class="font-bold"
-                                :class="Math.round(pemegangSaham.reduce((s, p) => s + (parseFloat(p.kepemilikan) || 0), 0)) === 100
-                                    ? 'text-green-600' : 'text-red-500'">
-                                {{ pemegangSaham.reduce((s, p) => s + (parseFloat(p.kepemilikan) || 0), 0).toFixed(1) }}%
-                                {{ Math.round(pemegangSaham.reduce((s, p) => s + (parseFloat(p.kepemilikan) || 0), 0)) === 100 ? "✓" : "(harus 100%)" }}
+                                :class="pemegangSaham.length >= MAX_PEMEGANG_SAHAM ? 'text-amber-600' : 'text-[#686964]'">
+                                {{ pemegangSaham.length }}/{{ MAX_PEMEGANG_SAHAM }}
                             </span>
                         </div>
 
-                        <button @click="tambahPemegangSaham"
+                        <!-- Total persentase indicator -->
+                        <div class="mt-3 flex items-center justify-between text-[12px]">
+                            <span class="text-[#686964]">Total kepemilikan:</span>
+                            <span class="font-bold" :class="Math.round(pemegangSaham.reduce((s, p) => s + (parseFloat(p.kepemilikan) || 0), 0)) === 100
+                                ? 'text-green-600' : 'text-red-500'">
+                                {{pemegangSaham.reduce((s, p) => s + (parseFloat(p.kepemilikan) || 0), 0).toFixed(1)
+                                }}%
+                                {{Math.round(pemegangSaham.reduce((s, p) => s + (parseFloat(p.kepemilikan) || 0), 0))
+                                    === 100 ? "✓" :
+                                    "(harus 100%)"}}
+                            </span>
+                        </div>
+
+                        <button @click="tambahPemegangSaham" :disabled="pemegangSaham.length >= MAX_PEMEGANG_SAHAM"
                             class="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-primary py-3 text-[13px] font-semibold text-primary hover:bg-primary/5 transition-colors">
-                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
                             </svg>
                             Tambah Pemegang Saham
@@ -792,7 +849,8 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                     <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         :class="errors.direksi ? 'border-red-200' : ''">
                         <div class="flex items-center gap-3 mb-1">
-                            <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
+                            <span
+                                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.direksi ? 'bg-red-400' : 'bg-primary'">6</span>
                             <h2 class="text-[15px] font-bold text-black">Direksi/Direktur</h2>
                             <span class="text-red-500 text-[13px]">*</span>
@@ -800,8 +858,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                         <p class="text-[12px] text-[#686964] mb-5 pl-10">Tentukan susunan direksi perusahaan</p>
 
                         <div class="flex flex-col gap-3">
-                            <div v-for="(d, idx) in direksi" :key="d.id"
-                                class="rounded-xl border p-4 transition-colors"
+                            <div v-for="(d, idx) in direksi" :key="d.id" class="rounded-xl border p-4 transition-colors"
                                 :class="errors.direksi?.[idx] && Object.keys(errors.direksi[idx]).length
                                     ? 'border-red-200 bg-red-50/30'
                                     : 'border-[#E8E8E6]'">
@@ -855,7 +912,8 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                         <button @click="tambahDireksi"
                             class="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-primary py-3 text-[13px] font-semibold text-primary hover:bg-primary/5 transition-colors">
-                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
                             </svg>
                             Tambah Direksi
@@ -866,7 +924,8 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                     <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         :class="errors.komisaris ? 'border-red-200' : ''">
                         <div class="flex items-center gap-3 mb-1">
-                            <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
+                            <span
+                                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.komisaris ? 'bg-red-400' : 'bg-primary'">7</span>
                             <h2 class="text-[15px] font-bold text-black">Dewan Komisaris</h2>
                             <span class="text-red-500 text-[13px]">*</span>
@@ -875,8 +934,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                         <div class="flex flex-col gap-3">
                             <div v-for="(k, idx) in komisaris" :key="k.id"
-                                class="rounded-xl border p-4 transition-colors"
-                                :class="errors.komisaris?.[idx] && Object.keys(errors.komisaris[idx]).length
+                                class="rounded-xl border p-4 transition-colors" :class="errors.komisaris?.[idx] && Object.keys(errors.komisaris[idx]).length
                                     ? 'border-red-200 bg-red-50/30'
                                     : 'border-[#E8E8E6]'">
                                 <div class="flex items-center justify-between mb-3">
@@ -929,7 +987,8 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                         <button @click="tambahKomisaris"
                             class="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-dashed border-primary py-3 text-[13px] font-semibold text-primary hover:bg-primary/5 transition-colors">
-                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
                             </svg>
                             Tambah Komisaris
@@ -941,23 +1000,38 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                         <!-- Summary error -->
                         <div v-if="Object.keys(errors).length"
                             class="mb-4 flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3">
-                            <svg class="h-5 w-5 flex-shrink-0 text-red-500 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="h-5 w-5 flex-shrink-0 text-red-500 mt-0.5" fill="currentColor"
+                                viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" :d="errorIconPath" clip-rule="evenodd" />
                             </svg>
                             <div>
-                                <p class="text-[13px] font-bold text-red-600 mb-1">Terdapat {{ Object.keys(errors).length }} kesalahan yang perlu diperbaiki:</p>
+                                <p class="text-[13px] font-bold text-red-600 mb-1">Terdapat {{
+                                    Object.keys(errors).length }} kesalahan yang
+                                    perlu diperbaiki:</p>
                                 <ul class="space-y-0.5">
-                                    <li v-if="errors.namaPerseroan" class="text-[12px] text-red-500">• {{ errors.namaPerseroan }}</li>
-                                    <li v-if="errors.kotaKedudukan" class="text-[12px] text-red-500">• {{ errors.kotaKedudukan }}</li>
-                                    <li v-if="errors.provinsi" class="text-[12px] text-red-500">• {{ errors.provinsi }}</li>
-                                    <li v-if="errors.selectedKBLI" class="text-[12px] text-red-500">• {{ errors.selectedKBLI }}</li>
-                                    <li v-if="errors.modalDasar" class="text-[12px] text-red-500">• {{ errors.modalDasar }}</li>
-                                    <li v-if="errors.modalDitempatkan" class="text-[12px] text-red-500">• {{ errors.modalDitempatkan }}</li>
-                                    <li v-if="errors.modalDisetor" class="text-[12px] text-red-500">• {{ errors.modalDisetor }}</li>
-                                    <li v-if="errors.totalPct" class="text-[12px] text-red-500">• {{ errors.totalPct }}</li>
-                                    <li v-if="errors.pemegangSaham" class="text-[12px] text-red-500">• Data pemegang saham belum lengkap.</li>
-                                    <li v-if="errors.direksi" class="text-[12px] text-red-500">• Data direksi belum lengkap.</li>
-                                    <li v-if="errors.komisaris" class="text-[12px] text-red-500">• Data komisaris belum lengkap.</li>
+                                    <li v-if="errors.namaPerseroan" class="text-[12px] text-red-500">• {{
+                                        errors.namaPerseroan }}</li>
+                                    <li v-if="errors.kotaKedudukan" class="text-[12px] text-red-500">• {{
+                                        errors.kotaKedudukan }}</li>
+                                    <li v-if="errors.provinsi" class="text-[12px] text-red-500">• {{ errors.provinsi }}
+                                    </li>
+                                    <li v-if="errors.selectedKBLI" class="text-[12px] text-red-500">• {{
+                                        errors.selectedKBLI }}</li>
+                                    <li v-if="errors.modalDasar" class="text-[12px] text-red-500">• {{ errors.modalDasar
+                                        }}</li>
+                                    <li v-if="errors.modalDitempatkan" class="text-[12px] text-red-500">• {{
+                                        errors.modalDitempatkan }}</li>
+                                    <li v-if="errors.modalDisetor" class="text-[12px] text-red-500">• {{
+                                        errors.modalDisetor }}</li>
+                                    <li v-if="errors.totalPct" class="text-[12px] text-red-500">• {{ errors.totalPct }}
+                                    </li>
+                                    <li v-if="errors.pemegangSaham" class="text-[12px] text-red-500">• Data pemegang
+                                        saham belum lengkap.
+                                    </li>
+                                    <li v-if="errors.direksi" class="text-[12px] text-red-500">• Data direksi belum
+                                        lengkap.</li>
+                                    <li v-if="errors.komisaris" class="text-[12px] text-red-500">• Data komisaris belum
+                                        lengkap.</li>
                                 </ul>
                             </div>
                         </div>
@@ -1002,14 +1076,15 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
         <!-- ===== Modal PDF Preview ===== -->
         <Teleport to="body">
-            <div v-if="showPdfPreview"
-                class="fixed inset-0 z-50 flex flex-col bg-black/70 backdrop-blur-sm">
+            <div v-if="showPdfPreview" class="fixed inset-0 z-50 flex flex-col bg-black/70 backdrop-blur-sm">
 
                 <!-- Header -->
                 <div class="flex items-center justify-between bg-white px-5 py-3 shadow-md flex-shrink-0">
                     <div class="flex items-center gap-3">
-                        <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
                         <div>
                             <p class="text-[14px] font-bold text-[#1A1B18]">Simulasi Akta Pendirian</p>
@@ -1017,16 +1092,19 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                         </div>
                     </div>
                     <div class="flex items-center gap-2">
-                        <button @click="downloadPdf"
+                        <!-- <button @click="downloadPdf"
                             class="flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                             Unduh PDF
-                        </button>
+                        </button> -->
                         <button @click="closePdfPreview"
                             class="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E8E8E6] text-[#686964] hover:bg-[#F7F7F5] transition-colors">
-                            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
@@ -1035,16 +1113,13 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                 <!-- PDF Viewer -->
                 <div class="flex-1 overflow-hidden p-4">
-                    <iframe
-                        :src="pdfBlobUrl"
-                        class="w-full h-full rounded-xl bg-white shadow-2xl"
-                        type="application/pdf"
-                        :title="pdfFilename"
-                    />
+                    <iframe :src="pdfBlobUrl" class="w-full h-full rounded-xl bg-white shadow-2xl"
+                        type="application/pdf" :title="pdfFilename" />
                 </div>
 
                 <!-- Footer modal -->
-                <div class="flex items-center justify-center gap-4 bg-white px-5 py-3 shadow-[0_-1px_0_0_#E8E8E6] flex-shrink-0">
+                <div
+                    class="flex items-center justify-center gap-4 bg-white px-5 py-3 shadow-[0_-1px_0_0_#E8E8E6] flex-shrink-0">
                     <p class="text-[12px] text-[#686964]">
                         Dokumen ini adalah simulasi dan bukan merupakan akta notaris yang sah.
                     </p>
