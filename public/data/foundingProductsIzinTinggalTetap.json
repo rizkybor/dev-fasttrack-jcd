@@ -1,163 +1,483 @@
 [
     {
         "id": 1,
-        "name": "Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap Sponsor Perusahaan",
-        "tag": "Profesional",
+        "name": {
+            "id": "Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap Sponsor Perusahaan",
+            "en": "Conversion of Limited Stay Permit to Permanent Stay Permit with Company Sponsorship",
+            "zh": "由公司担保的临时居留许可转永久居留许可地位转换"
+        },
+        "tag": {
+            "id": "Profesional",
+            "en": "Professional",
+            "zh": "专业"
+        },
         "price": "4500000",
         "price_label": "Rp 4.500.000",
-        "duration": "Estimasi 7-12 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-12 hari kerja",
+            "en": "Estimated 7-12 business days",
+            "zh": "预计7-12个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "excerpt": "Izin Tinggal Terbatas bagi investor asing dengan kepemilikan saham pada perusahaan di Indonesia.",
+        "excerpt": {
+            "id": "Izin Tinggal Terbatas bagi investor asing dengan kepemilikan saham pada perusahaan di Indonesia.",
+            "en": "Limited Stay Permit for foreign investors holding shares in a company in Indonesia.",
+            "zh": "为在印度尼西亚公司持股的外国投资者提供的临时居留许可。"
+        },
         "detail_path": "/izin-tinggal-tka/izin-tinggal-investor",
         "baru": {
-            "penjelasan_umum": [
-                "Jika Anda sudah menetap di Indonesia selama 5 tahun dan ingin mengalihkan Izin Tinggal Terbatas anda ke Izin Tinggal Tetap di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap dengan sponsor Perusahaan, kami siap memberikan pendampingan mulai dari penyusunan Rencana Penggunaan Tenaga Kerja Asing (RPTKA) hingga pengurusan Izin Tinggal Tetap (ITAP).",
-                "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait Alih Status izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
-                "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan Alih Status izin TKA melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, Penjadualan data biometrik dan pengambilan foto di Kantor Imigrasi, hingga penerbintan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa tenaga kerja asing dapat bekerja dan menetap di Indoensia secara resmi tanpa hambatan.",
-                "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap dengan Sponsor Perusahaan."
-            ],
-            "dokumen_didapat": [
-                "Perpanjangan Rencana Penggunaan Tenaga Kerja Asing",
-                "Notifikasi Pembayaran Dkptka",
-                "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Alih Status Izin Tinggal Terbatas Ke Izin Tinggal Tetap, Dan Izin Masuk Kembali (Imk)",
-                "Jadwal Pengambilan Data Biometric Dan Foto Di Kantor Imigrasi",
-                "Izin Tinggal Tetap 5 Tahun + Multiple Exit Re-Entry Permit 5 Tahun.",
-                "Kartu Keluarga (Kk) 5 Tahun",
-                "Kartu Tanda Penduduk (Ktp) 5 Tahun",
-                "Tanda Terima Keterangan Orang Asing 2 Tahun"
-            ],
-            "syarat": {
-                "sections": [
-                    {
-                        "label": "A. Dokumen Perusahaan/Sponsor",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Akta Pendirian dan seluruh Perubahannya beserta Pengesahan/Persetujuan/Pemberitahuan dari Kementerian Hukum RI (Menyebutkan TKA menjabat pada jajaran Direksi];",
-                                    "Nomor Pokok Wajib Pajak & Surat Keterangan Terdaftar;",
-                                    "Nomor Induk Berusaha Berbasis Resiko;",
-                                    "Konfirmasi/Persetujuan Kesesuaian Kegiatan Pemanfaatan Ruang (K/PKKPR);",
-                                    "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP);",
-                                    "Struktur Organisasi (Kop Surat Perusahaan, Nama dan Jabatan diuraikan)",
-                                    "Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan",
-                                    "Dokumen Tenaga Kerja Indonesia (TKI) Pendamping yang akan mendampingi Tenaga Kerja Asing (kecuali jabatan Direksi/Komisaris), antara lain :",
-                                    "KTP TKI Pendamping",
-                                    "Foto TKI Pendamping",
-                                    "Nama TKI Pendamping harus tercantum didalam WLKP.",
-                                    "Perjanjian Kerja Tenaga Kerja Asing (apabila bukan Direksi/Dewan Komisaris);",
-                                    "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "label": "B. Dokumen Individu Investor",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
-                                    "Daftar Riwayat Hidup/Curriculum Vitae (CV) (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan );",
-                                    "Ijazah/Sertifikat Pendidikan (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan);",
-                                    "Surat Referensi Kerja selama 5 tahun terakhir dari Perusahaan dimana TKA bekerja sebelumnya;",
-                                    "Softcopy Surat Domisili;",
-                                    "Softcopy Pas Photo dengan background bebas;",
-                                    "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Kesehatan;",
-                                    "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Ketenagakerjaan."
-                                ]
-                            }
-                        ]
-                    }
+            "id": {
+                "penjelasan_umum": [
+                    "Jika Anda sudah menetap di Indonesia selama 5 tahun dan ingin mengalihkan Izin Tinggal Terbatas anda ke Izin Tinggal Tetap di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap dengan sponsor Perusahaan, kami siap memberikan pendampingan mulai dari penyusunan Rencana Penggunaan Tenaga Kerja Asing (RPTKA) hingga pengurusan Izin Tinggal Tetap (ITAP).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait Alih Status izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
+                    "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan Alih Status izin TKA melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, Penjadualan data biometrik dan pengambilan foto di Kantor Imigrasi, hingga penerbintan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa tenaga kerja asing dapat bekerja dan menetap di Indoensia secara resmi tanpa hambatan.",
+                    "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap dengan Sponsor Perusahaan."
+                ],
+                "dokumen_didapat": [
+                    "Perpanjangan Rencana Penggunaan Tenaga Kerja Asing",
+                    "Notifikasi Pembayaran Dkptka",
+                    "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Alih Status Izin Tinggal Terbatas Ke Izin Tinggal Tetap, Dan Izin Masuk Kembali (Imk)",
+                    "Jadwal Pengambilan Data Biometric Dan Foto Di Kantor Imigrasi",
+                    "Izin Tinggal Tetap 5 Tahun + Multiple Exit Re-Entry Permit 5 Tahun.",
+                    "Kartu Keluarga (Kk) 5 Tahun",
+                    "Kartu Tanda Penduduk (Ktp) 5 Tahun",
+                    "Tanda Terima Keterangan Orang Asing 2 Tahun"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Dokumen Perusahaan/Sponsor",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Akta Pendirian dan seluruh Perubahannya beserta Pengesahan/Persetujuan/Pemberitahuan dari Kementerian Hukum RI (Menyebutkan TKA menjabat pada jajaran Direksi];",
+                                        "Nomor Pokok Wajib Pajak & Surat Keterangan Terdaftar;",
+                                        "Nomor Induk Berusaha Berbasis Resiko;",
+                                        "Konfirmasi/Persetujuan Kesesuaian Kegiatan Pemanfaatan Ruang (K/PKKPR);",
+                                        "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP);",
+                                        "Struktur Organisasi (Kop Surat Perusahaan, Nama dan Jabatan diuraikan)",
+                                        "Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan",
+                                        "Dokumen Tenaga Kerja Indonesia (TKI) Pendamping yang akan mendampingi Tenaga Kerja Asing (kecuali jabatan Direksi/Komisaris), antara lain :",
+                                        "KTP TKI Pendamping",
+                                        "Foto TKI Pendamping",
+                                        "Nama TKI Pendamping harus tercantum didalam WLKP.",
+                                        "Perjanjian Kerja Tenaga Kerja Asing (apabila bukan Direksi/Dewan Komisaris);",
+                                        "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "B. Dokumen Individu Investor",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
+                                        "Daftar Riwayat Hidup/Curriculum Vitae (CV) (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan );",
+                                        "Ijazah/Sertifikat Pendidikan (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan);",
+                                        "Surat Referensi Kerja selama 5 tahun terakhir dari Perusahaan dimana TKA bekerja sebelumnya;",
+                                        "Softcopy Surat Domisili;",
+                                        "Softcopy Pas Photo dengan background bebas;",
+                                        "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Kesehatan;",
+                                        "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Ketenagakerjaan."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Dana Kompensasi Penggunaan Tenaga Kerja Asing",
+                            "amount": "US$ 1.200"
+                        },
+                        {
+                            "label": "Penerimaan Negara Bukan Pajak Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap",
+                            "amount": "Rp 10.500.000"
+                        }
+                    ],
+                    "total_label": "Biaya Penanganan",
+                    "total_amount": "Rp 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Hukum dan HAM RI Nomor M.HH-02.GR.01.04 Tahun 2023 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
                 ]
             },
-            "rincian_biaya": {
-                "items": [
-                    {
-                        "label": "Dana Kompensasi Penggunaan Tenaga Kerja Asing",
-                        "amount": "US$ 1.200"
-                    },
-                    {
-                        "label": "Penerimaan Negara Bukan Pajak Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap",
-                        "amount": "Rp 10.500.000"
-                    }
+            "en": {
+                "penjelasan_umum": [
+                    "If you have resided in Indonesia for 5 years and wish to convert your Limited Stay Permit to a Permanent Stay Permit in Indonesia, ensuring that all licensing proceeds in accordance with the provisions is crucial. Through our Company-Sponsored Limited-to-Permanent Stay Permit Conversion service, we are ready to provide assistance starting from the preparation of the Foreign Manpower Utilization Plan (RPTKA) through to processing the Permanent Stay Permit (ITAP).",
+                    "This permit application process requires experts who understand the latest regulations and policies regarding the conversion of Limited Stay Permits to Permanent Stay Permits in Indonesia. With the support of an experienced professional team, every stage from document preparation to permit issuance can be completed legally, safely, and in accordance with applicable regulations. This ensures that all administration related to the status conversion of foreign worker permits runs more efficiently and precisely.",
+                    "As a service provider that emphasizes legality and legal compliance, we understand that processing the status conversion of foreign worker permits involves several important stages: document preparation, verification process, government agency approval, scheduling of biometric data and photo capture at the Immigration Office, through to the issuance of the final permit. By entrusting this process to us, you can avoid administrative obstacles and ensure that foreign workers can work and reside in Indonesia officially without hindrance.",
+                    "Our service is designed to provide a complete, professional, and trusted solution for companies and individuals requiring assistance in processing the Company-Sponsored Limited-to-Permanent Stay Permit Conversion."
                 ],
-                "total_label": "Biaya Penanganan",
-                "total_amount": "Rp 12.750.000"
+                "dokumen_didapat": [
+                    "Extension of the Foreign Manpower Utilization Plan",
+                    "DKPTKA Payment Notification",
+                    "Billing Code for Non-Tax State Revenue Payment for Limited-to-Permanent Stay Permit Conversion, and Re-Entry Permit (IMK)",
+                    "Schedule for Biometric Data Collection and Photo Capture at the Immigration Office",
+                    "5-Year Permanent Stay Permit + 5-Year Multiple Exit Re-Entry Permit.",
+                    "Family Card (KK) 5 Years",
+                    "Identity Card (KTP) 5 Years",
+                    "2-Year Foreigner Registration Receipt"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Company/Sponsor Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Deed of Establishment and all its Amendments along with Ratification/Approval/Notification from the Ministry of Law of the Republic of Indonesia (stating the foreign worker holds a position on the Board of Directors);",
+                                        "Tax ID (NPWP) & Registration Certificate;",
+                                        "Risk-Based Business Identification Number;",
+                                        "Confirmation/Approval of Spatial Utilization Activity Conformity (K/PKKPR);",
+                                        "Mandatory Company Employment Report (WLKP);",
+                                        "Organizational Structure (Company Letterhead, Names and Positions listed)",
+                                        "ID Card (KTP), Employee Card, Family Card of the application signatory",
+                                        "Documents of the Indonesian Worker (TKI) Counterpart who will accompany the Foreign Worker (except for Director/Commissioner positions), including:",
+                                        "ID Card (KTP) of the Indonesian Counterpart Worker",
+                                        "Photo of the Indonesian Counterpart Worker",
+                                        "The name of the Indonesian Counterpart Worker must be listed in the WLKP.",
+                                        "Foreign Worker Employment Agreement (if not a Director/Board of Commissioners member);",
+                                        "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "B. Investor Individual Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scan copy of all Passport pages with a validity period of at least 20 (twenty) months;",
+                                        "Curriculum Vitae (CV) (signed on Rp 10,000 stamp duty with company stamp);",
+                                        "Diploma/Education Certificate (signed on Rp 10,000 stamp duty with company stamp);",
+                                        "Work Reference Letter for the last 5 years from the Company where the foreign worker previously worked;",
+                                        "Soft copy of Domicile Letter;",
+                                        "Soft copy of Passport Photo with free background;",
+                                        "Soft copy of Health Social Security Agency (BPJS Kesehatan);",
+                                        "Soft copy of Employment Social Security Agency (BPJS Ketenagakerjaan)."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Foreign Manpower Utilization Compensation Fund",
+                            "amount": "US$ 1.200"
+                        },
+                        {
+                            "label": "Non-Tax State Revenue for Limited-to-Permanent Stay Permit Conversion",
+                            "amount": "Rp 10.500.000"
+                        }
+                    ],
+                    "total_label": "Handling Fee",
+                    "total_amount": "Rp 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Minister of Law and Human Rights Regulation Number 22 of 2023 concerning Visas and Stay Permits",
+                    "Minister of Law and Human Rights Decree Number M.HH-02.GR.01.04 of 2023 concerning Visa Classification",
+                    "Minister of Finance Regulation Number 9/PMK.02/2022 concerning Types and Rates of Urgent-Need PNBP for Immigration Services at the Ministry of Law and Human Rights",
+                    "Minister of Finance Regulation Number 82 of 2023 concerning Types and Rates of Urgent-Need PNBP for Golden Visa Services at the Ministry of Law and Human Rights"
+                ]
             },
-            "dasar_hukum": [
-                "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
-                "Keputusan Menteri Hukum dan HAM RI Nomor M.HH-02.GR.01.04 Tahun 2023 tentang Klasifikasi Visa",
-                "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
-                "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
-            ]
+            "zh": {
+                "penjelasan_umum": [
+                    "若您已在印度尼西亚居住5年，并希望将您的临时居留许可转换为在印度尼西亚的永久居留许可，确保所有许可依规办理至关重要。通过我们由公司担保的临时转永久居留许可地位转换服务，我们随时准备从外籍劳工使用计划（RPTKA）的编制到永久居留许可（ITAP）的办理提供全程协助。",
+                    "此许可申请流程需要了解印度尼西亚临时居留许可转永久居留许可最新法规及政策的专业人员。在经验丰富的专业团队支持下，从文件准备到许可签发的每个阶段都能够合法、安全且依规完成。这确保了与外籍劳工许可地位转换相关的所有行政事务运作得更加高效精准。",
+                    "作为强调合法性及法律合规的服务提供商，我们深知外籍劳工许可地位转换的办理涉及多个重要阶段：文件制作、核实流程、政府机构批准、在移民局安排生物识别数据及拍照，直至最终许可的签发。将此流程托付给我们，您可避免行政障碍，并确保外籍劳工能够正式在印度尼西亚工作及居住，畅通无阻。",
+                    "我们的服务旨在为需要办理由公司担保的临时转永久居留许可地位转换协助的企业及个人，提供全面、专业且值得信赖的解决方案。"
+                ],
+                "dokumen_didapat": [
+                    "外籍劳工使用计划延期",
+                    "DKPTKA付款通知",
+                    "临时转永久居留许可地位转换及再入境许可（IMK）非税国家收入付款账单代码",
+                    "移民局生物识别数据采集及拍照日程安排",
+                    "5年永久居留许可+5年多次出入境再入境许可。",
+                    "5年户口簿（KK）",
+                    "5年身份证（KTP）",
+                    "2年外国人登记回执"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "甲、公司/担保方文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "设立公证书及其全部变更，连同印度尼西亚共和国法务部的批准/认可/通知（说明外籍劳工在董事会任职）；",
+                                        "税号（NPWP）及注册证明；",
+                                        "基于风险的营业执照号码；",
+                                        "空间利用活动合规确认/批准（K/PKKPR）；",
+                                        "企业强制劳动报告（WLKP）；",
+                                        "组织架构（公司信头，列明姓名及职位）",
+                                        "申请签署人的身份证（KTP）、员工卡、户口簿",
+                                        "陪同外籍劳工的印尼籍员工（TKI）对接人文件（董事/监事职位除外），包括：",
+                                        "对接印尼籍员工的身份证（KTP）",
+                                        "对接印尼籍员工的照片",
+                                        "对接印尼籍员工的姓名须列入WLKP。",
+                                        "外籍劳工劳动合同（若非董事/监事会成员）；",
+                                        "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "乙、投资者个人文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "护照所有页面的扫描件，有效期至少20（二十）个月；",
+                                        "简历（CV）（须在10,000印尼盾印花税票上签名并加盖公司印章）；",
+                                        "学历证书/教育证书（须在10,000印尼盾印花税票上签名并加盖公司印章）；",
+                                        "外籍劳工先前任职公司出具的近5年工作推荐信；",
+                                        "居住证明电子版；",
+                                        "背景不限的证件照电子版；",
+                                        "健康社会保障机构（BPJS Kesehatan）电子版；",
+                                        "劳动社会保障机构（BPJS Ketenagakerjaan）电子版。"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "外籍劳工使用补偿基金",
+                            "amount": "US$ 1.200"
+                        },
+                        {
+                            "label": "临时转永久居留许可地位转换的非税国家收入",
+                            "amount": "Rp 10.500.000"
+                        }
+                    ],
+                    "total_label": "办理费用",
+                    "total_amount": "Rp 12.750.000"
+                },
+                "dasar_hukum": [
+                    "2023年第22号法律与人权部长条例，关于签证及居留许可",
+                    "第M.HH-02.GR.01.04号（2023年）法律与人权部长决定，关于签证分类",
+                    "第9/PMK.02/2022号财政部长条例，关于法务与人权部紧急移民服务非税国家收入（PNBP）的种类及费率",
+                    "2023年第82号财政部长条例，关于法务与人权部紧急黄金签证服务非税国家收入（PNBP）的种类及费率"
+                ]
+            }
         },
-        "faq": []
+        "perpanjangan": null,
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 2,
-        "name": "Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap Sponsor Suami/Istri WNI",
-        "tag": "Kolaboratif",
+        "name": {
+            "id": "Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap Sponsor Suami/Istri WNI",
+            "en": "Conversion of Limited Stay Permit to Permanent Stay Permit Sponsored by an Indonesian Spouse",
+            "zh": "由印尼籍配偶担保的临时居留许可转永久居留许可地位转换"
+        },
+        "tag": {
+            "id": "Kolaboratif",
+            "en": "Collaborative",
+            "zh": "协作"
+        },
         "price": "3500000",
         "price_label": "Rp 3.500.000",
-        "duration": "Estimasi 5-10 hari kerja",
+        "duration": {
+            "id": "Estimasi 5-10 hari kerja",
+            "en": "Estimated 5-10 business days",
+            "zh": "预计5-10个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "excerpt": "Izin Tinggal Terbatas bagi warga negara asing lanjut usia (lansia) yang bermaksud menetap di Indonesia.",
+        "excerpt": {
+            "id": "Izin Tinggal Terbatas bagi warga negara asing lanjut usia (lansia) yang bermaksud menetap di Indonesia.",
+            "en": "Limited Stay Permit for elderly foreign citizens intending to reside in Indonesia.",
+            "zh": "为有意在印度尼西亚定居的外国老年公民提供的临时居留许可。"
+        },
         "detail_path": "/izin-tinggal-tka/izin-tinggal-lansia",
         "baru": {
-            "penjelasan_umum": [
-                "Jika Anda sudah menetap di Indonesia selama 5 tahun dan ingin mengalihkan Izin Tinggal Terbatas anda ke Izin Tinggal Tetap di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap dengan sponsor Suami atau Istri Warna Negara Indonesia, kami siap memberikan pendampingan mulai dari Pengurusan Alih Status Izin Tinggal Terbatas sampai dengan terbit Izin Tinggal Tetap (ITAP).",
-                "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan—mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait Alih Status izin Warga Negara Asing berjalan lebih efisien dan tepat sasaran.",
-                "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan Alih Status izin WNA melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, Penjadualan data biometrik dan pengambilan foto di Kantor Imigrasi, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa warga negara asing dapat menetap di Indonesia secara resmi tanpa hambatan.",
-                "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap dengan sponsor Suami atau Istri Warna Negara Indonesia."
-            ],
-            "dokumen_didapat": [
-                "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Alih Status Izin Tinggal Terbatas Ke Izin Tinggal Tetap, Dan Izin Masuk Kembali (Imk)",
-                "Jadwal Pengambilan Data Biometric Dan Foto Di Kantor Imigrasi",
-                "Izin Tinggal Tetap 5 Tahun + Multiple Exit Re-Entry Permit 5 Tahun.",
-                "Kartu Keluarga (Kk) 5 Tahun",
-                "Kartu Tanda Penduduk (Ktp) 5 Tahun",
-                "Tanda Terima Keterangan Orang Asing 2 Tahun"
-            ],
-            "syarat": {
-                "sections": [
-                    {
-                        "label": "A. Dokumen Individu Tenaga Kerja Asing",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
-                                    "Scancopy Akta Nikah;",
-                                    "Scancopy Lapor Nikah Kedutaan;",
-                                    "Scancopy Lapor Nikah dari Kependudukan dan Pencatatan Sipil / DUKCAPIL (Jika menikah di luar negeri);",
-                                    "Scancopy Kartu Keluarga sponsor WNI;",
-                                    "Scancopy Kartu Tanda Penduduk sponsor WNI;",
-                                    "Softcopy Pas Photo sponsor WNI dengan background bebas;",
-                                    "Scancopy Paspor sponsor WNI;",
-                                    "Scancopy Akta Lahir sponsor WNI;",
-                                    "Scancopy Izin Tinggal Warga Negara Asing",
-                                    "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor WNI dan Materai Rp 10.000,-"
-                                ]
-                            }
-                        ]
-                    }
+            "id": {
+                "penjelasan_umum": [
+                    "Jika Anda sudah menetap di Indonesia selama 5 tahun dan ingin mengalihkan Izin Tinggal Terbatas anda ke Izin Tinggal Tetap di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap dengan sponsor Suami atau Istri Warna Negara Indonesia, kami siap memberikan pendampingan mulai dari Pengurusan Alih Status Izin Tinggal Terbatas sampai dengan terbit Izin Tinggal Tetap (ITAP).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan—mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait Alih Status izin Warga Negara Asing berjalan lebih efisien dan tepat sasaran.",
+                    "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan Alih Status izin WNA melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, Penjadualan data biometrik dan pengambilan foto di Kantor Imigrasi, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa warga negara asing dapat menetap di Indonesia secara resmi tanpa hambatan.",
+                    "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap dengan sponsor Suami atau Istri Warna Negara Indonesia."
+                ],
+                "dokumen_didapat": [
+                    "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Alih Status Izin Tinggal Terbatas Ke Izin Tinggal Tetap, Dan Izin Masuk Kembali (Imk)",
+                    "Jadwal Pengambilan Data Biometric Dan Foto Di Kantor Imigrasi",
+                    "Izin Tinggal Tetap 5 Tahun + Multiple Exit Re-Entry Permit 5 Tahun.",
+                    "Kartu Keluarga (Kk) 5 Tahun",
+                    "Kartu Tanda Penduduk (Ktp) 5 Tahun",
+                    "Tanda Terima Keterangan Orang Asing 2 Tahun"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Dokumen Individu Tenaga Kerja Asing",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
+                                        "Scancopy Akta Nikah;",
+                                        "Scancopy Lapor Nikah Kedutaan;",
+                                        "Scancopy Lapor Nikah dari Kependudukan dan Pencatatan Sipil / DUKCAPIL (Jika menikah di luar negeri);",
+                                        "Scancopy Kartu Keluarga sponsor WNI;",
+                                        "Scancopy Kartu Tanda Penduduk sponsor WNI;",
+                                        "Softcopy Pas Photo sponsor WNI dengan background bebas;",
+                                        "Scancopy Paspor sponsor WNI;",
+                                        "Scancopy Akta Lahir sponsor WNI;",
+                                        "Scancopy Izin Tinggal Warga Negara Asing",
+                                        "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor WNI dan Materai Rp 10.000,-"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Penerimaan Negara Bukan Pajak Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap",
+                            "amount": "Rp 10.500.000"
+                        }
+                    ],
+                    "total_label": "Biaya Penanganan",
+                    "total_amount": "Rp 29.200.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Hukum dan HAM RI Nomor M.HH-02.GR.01.04 Tahun 2023 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
                 ]
             },
-            "rincian_biaya": {
-                "items": [
-                    {
-                        "label": "Penerimaan Negara Bukan Pajak Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap",
-                        "amount": "Rp 10.500.000"
-                    }
+            "en": {
+                "penjelasan_umum": [
+                    "If you have resided in Indonesia for 5 years and wish to convert your Limited Stay Permit to a Permanent Stay Permit in Indonesia, ensuring that all licensing proceeds in accordance with the provisions is crucial. Through our Limited-to-Permanent Stay Permit Conversion service sponsored by an Indonesian husband or wife, we are ready to provide assistance from processing the Limited Stay Permit status conversion through to the issuance of the Permanent Stay Permit (ITAP).",
+                    "This permit application process requires experts who understand the latest regulations and policies regarding the conversion of Limited Stay Permits to Permanent Stay Permits in Indonesia. With the support of an experienced professional team, every stage—from document preparation to permit issuance—can be completed legally, safely, and in accordance with applicable regulations. This ensures that all administration related to the status conversion of foreign citizen permits runs more efficiently and precisely.",
+                    "As a service provider that emphasizes legality and legal compliance, we understand that processing the status conversion of foreign citizen permits involves several important stages: document preparation, verification process, government agency approval, scheduling of biometric data and photo capture at the Immigration Office, through to the issuance of the final permit. By entrusting this process to us, you can avoid administrative obstacles and ensure that foreign citizens can reside in Indonesia officially without hindrance.",
+                    "Our service is designed to provide a complete, professional, and trusted solution for companies and individuals requiring assistance in processing the Limited-to-Permanent Stay Permit Conversion sponsored by an Indonesian husband or wife."
                 ],
-                "total_label": "Biaya Penanganan",
-                "total_amount": "Rp 29.200.000"
+                "dokumen_didapat": [
+                    "Billing Code for Non-Tax State Revenue Payment for Limited-to-Permanent Stay Permit Conversion, and Re-Entry Permit (IMK)",
+                    "Schedule for Biometric Data Collection and Photo Capture at the Immigration Office",
+                    "5-Year Permanent Stay Permit + 5-Year Multiple Exit Re-Entry Permit.",
+                    "Family Card (KK) 5 Years",
+                    "Identity Card (KTP) 5 Years",
+                    "2-Year Foreigner Registration Receipt"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Foreign Worker Individual Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scan copy of all Passport pages with a validity period of at least 20 (twenty) months;",
+                                        "Scan copy of Marriage Certificate;",
+                                        "Scan copy of Embassy Marriage Report;",
+                                        "Scan copy of Marriage Report from Civil Registration Office / DUKCAPIL (if married abroad);",
+                                        "Scan copy of the Indonesian sponsor's Family Card;",
+                                        "Scan copy of the Indonesian sponsor's ID Card;",
+                                        "Soft copy of the Indonesian sponsor's Passport Photo with free background;",
+                                        "Scan copy of the Indonesian sponsor's Passport;",
+                                        "Scan copy of the Indonesian sponsor's Birth Certificate;",
+                                        "Scan copy of the Foreign Citizen's Stay Permit",
+                                        "Application Letter/Form completed with the Indonesian sponsor's Signature and Rp 10,000 Stamp Duty."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Non-Tax State Revenue for Limited-to-Permanent Stay Permit Conversion",
+                            "amount": "Rp 10.500.000"
+                        }
+                    ],
+                    "total_label": "Handling Fee",
+                    "total_amount": "Rp 29.200.000"
+                },
+                "dasar_hukum": [
+                    "Minister of Law and Human Rights Regulation Number 22 of 2023 concerning Visas and Stay Permits",
+                    "Minister of Law and Human Rights Decree Number M.HH-02.GR.01.04 of 2023 concerning Visa Classification",
+                    "Minister of Finance Regulation Number 9/PMK.02/2022 concerning Types and Rates of Urgent-Need PNBP for Immigration Services at the Ministry of Law and Human Rights",
+                    "Minister of Finance Regulation Number 82 of 2023 concerning Types and Rates of Urgent-Need PNBP for Golden Visa Services at the Ministry of Law and Human Rights"
+                ]
             },
-            "dasar_hukum": [
-                "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
-                "Keputusan Menteri Hukum dan HAM RI Nomor M.HH-02.GR.01.04 Tahun 2023 tentang Klasifikasi Visa",
-                "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
-                "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
-            ]
+            "zh": {
+                "penjelasan_umum": [
+                    "若您已在印度尼西亚居住5年，并希望将您的临时居留许可转换为在印度尼西亚的永久居留许可，确保所有许可依规办理至关重要。通过我们由印尼籍配偶担保的临时转永久居留许可地位转换服务，我们随时准备从临时居留许可地位转换的办理到永久居留许可（ITAP）的签发提供全程协助。",
+                    "此许可申请流程需要了解印度尼西亚临时居留许可转永久居留许可最新法规及政策的专业人员。在经验丰富的专业团队支持下，从文件准备到许可签发的每个阶段都能够合法、安全且依规完成。这确保了与外国公民许可地位转换相关的所有行政事务运作得更加高效精准。",
+                    "作为强调合法性及法律合规的服务提供商，我们深知外国公民许可地位转换的办理涉及多个重要阶段：文件制作、核实流程、政府机构批准、在移民局安排生物识别数据及拍照，直至最终许可的签发。将此流程托付给我们，您可避免行政障碍，并确保外国公民能够正式在印度尼西亚居住，畅通无阻。",
+                    "我们的服务旨在为需要办理由印尼籍配偶担保的临时转永久居留许可地位转换协助的企业及个人，提供全面、专业且值得信赖的解决方案。"
+                ],
+                "dokumen_didapat": [
+                    "临时转永久居留许可地位转换及再入境许可（IMK）非税国家收入付款账单代码",
+                    "移民局生物识别数据采集及拍照日程安排",
+                    "5年永久居留许可+5年多次出入境再入境许可。",
+                    "5年户口簿（KK）",
+                    "5年身份证（KTP）",
+                    "2年外国人登记回执"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "甲、外籍劳工个人文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "护照所有页面的扫描件，有效期至少20（二十）个月；",
+                                        "结婚证书扫描件；",
+                                        "使馆婚姻报告扫描件；",
+                                        "户籍与民事登记局（DUKCAPIL）出具的婚姻报告扫描件（如在国外结婚）；",
+                                        "印尼籍担保人户口簿扫描件；",
+                                        "印尼籍担保人身份证扫描件；",
+                                        "印尼籍担保人证件照电子版（背景不限）；",
+                                        "印尼籍担保人护照扫描件；",
+                                        "印尼籍担保人出生证明扫描件；",
+                                        "外国公民居留许可扫描件",
+                                        "已填妥印尼籍担保人签名及10,000印尼盾印花税票的申请信/表格。"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "临时转永久居留许可地位转换的非税国家收入",
+                            "amount": "Rp 10.500.000"
+                        }
+                    ],
+                    "total_label": "办理费用",
+                    "total_amount": "Rp 29.200.000"
+                },
+                "dasar_hukum": [
+                    "2023年第22号法律与人权部长条例，关于签证及居留许可",
+                    "第M.HH-02.GR.01.04号（2023年）法律与人权部长决定，关于签证分类",
+                    "第9/PMK.02/2022号财政部长条例，关于法务与人权部紧急移民服务非税国家收入（PNBP）的种类及费率",
+                    "2023年第82号财政部长条例，关于法务与人权部紧急黄金签证服务非税国家收入（PNBP）的种类及费率"
+                ]
+            }
         },
-        "faq": []
+        "perpanjangan": null,
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]

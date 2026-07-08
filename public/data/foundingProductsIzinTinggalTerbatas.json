@@ -1,437 +1,1293 @@
 [
     {
         "id": 1,
-        "name": "Izin Tinggal & Kerja Tenaga Kerja Asing",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Izin Tinggal & Kerja Tenaga Kerja Asing",
+            "en": "Foreign Worker Stay & Work Permit",
+            "zh": "外籍劳工居留及工作许可"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "9050000",
         "price_label": "Rp 9.050.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "excerpt": "Pendampingan lengkap pengurusan izin kerja dan tinggal Tenaga Kerja Asing (TKA) di Indonesia, mulai dari RPTKA hingga ITAS.",
+        "excerpt": {
+            "id": "Pendampingan lengkap pengurusan izin kerja dan tinggal Tenaga Kerja Asing (TKA) di Indonesia, mulai dari RPTKA hingga ITAS.",
+            "en": "Complete assistance for processing work and stay permits for Foreign Workers (TKA) in Indonesia, from RPTKA to ITAS.",
+            "zh": "为印度尼西亚外籍劳工（TKA）提供从RPTKA到ITAS的工作及居留许可办理全程协助。"
+        },
         "detail_path": "/izin-tinggal-tka/izin-tinggal-kerja-tka",
-
         "baru": {
-            "penjelasan_umum": [
-                "Jika Anda berencana merekrut Tenaga Kerja Asing (TKA) di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Rencana Penggunaan Tenaga Kerja Asing (RPTKA) hingga pengurusan Izin Tinggal Terbatas (ITAS).",
-                "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai penggunaan TKA di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan—mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
-                "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan izin TKA melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa tenaga kerja asing dapat bekerja secara resmi tanpa hambatan.",
-                "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Izin Tenaga Kerja Asing Baru."
-            ],
-            "dokumen_didapat": [
-                "Rencana Penggunaan Tenaga Kerja Asing",
-                "VISA Tinggal Terbatas - Elektronik",
-                "Notifikasi Pembayaran DKPTKA",
-                "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
-                "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
-                "Surat Keterangan Tempat Tinggal (SKTT)",
-                "Tanda Terima Keterangan Orang Asing"
-            ],
-            "syarat": {
-                "sections": [
-                    {
-                        "label": "A. Dokumen Perusahaan/Sponsor",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Akta Pendirian dan seluruh Perubahannya beserta Pengesahan/Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
-                                    "Nomor Pokok Wajib Pajak (NPWP) dan Surat Keterangan Terdaftar;",
-                                    "Nomor Induk Berusaha;",
-                                    "Konfirmasi/Persetujuan Kesesuaian Kegiatan Pemanfaatan Ruang (K/PKKPR);",
-                                    "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP);",
-                                    "Struktur Organisasi (Kop Surat Perusahaan, Nama dan Jabatan diurutkan);",
-                                    "Identitas KTP, Kartu Keluarga, Kartu Keluarga perandatangan permohonan;",
-                                    "Dokumen Tenaga Kerja Indonesia (TKI) Pendamping yang akan mendampingi Tenaga Kerja Asing (kecuali jabatan Direksi/Komisaris), antara lain:",
-                                    "KTP TKI Pendamping",
-                                    "Foto TKI Pendamping",
-                                    "Nama TKI Pendamping harus tercantum didalam WLKP.",
-                                    "Perjanjian Kerja Tenaga Kerja Asing (apabila bukan Direksi/Dewan Komisaris);",
-                                    "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "label": "B. Dokumen Individu Tenaga Kerja Asing",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
-                                    "Daftar Riwayat Hidup/Curriculum Vitae (CV) (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan );",
-                                    "Ijazah/Sertifikat Pendidikan (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan);",
-                                    "Surat Referensi Kerja selama 5 tahun terkahir dari Perusahaan dimana TKA bekerja sebelumnya;",
-                                    "Softcopy Pas Photo dengan background merah;",
-                                    "Asuransi Kesehatan yang masih berlaku dan aktif."
-                                ]
-                            }
-                        ]
-                    }
+            "id": {
+                "penjelasan_umum": [
+                    "Jika Anda berencana merekrut Tenaga Kerja Asing (TKA) di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Rencana Penggunaan Tenaga Kerja Asing (RPTKA) hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai penggunaan TKA di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan—mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
+                    "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan izin TKA melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa tenaga kerja asing dapat bekerja secara resmi tanpa hambatan.",
+                    "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Izin Tenaga Kerja Asing Baru."
+                ],
+                "dokumen_didapat": [
+                    "Rencana Penggunaan Tenaga Kerja Asing",
+                    "VISA Tinggal Terbatas - Elektronik",
+                    "Notifikasi Pembayaran DKPTKA",
+                    "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                    "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
+                    "Surat Keterangan Tempat Tinggal (SKTT)",
+                    "Tanda Terima Keterangan Orang Asing"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Dokumen Perusahaan/Sponsor",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Akta Pendirian dan seluruh Perubahannya beserta Pengesahan/Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                        "Nomor Pokok Wajib Pajak (NPWP) dan Surat Keterangan Terdaftar;",
+                                        "Nomor Induk Berusaha;",
+                                        "Konfirmasi/Persetujuan Kesesuaian Kegiatan Pemanfaatan Ruang (K/PKKPR);",
+                                        "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP);",
+                                        "Struktur Organisasi (Kop Surat Perusahaan, Nama dan Jabatan diurutkan);",
+                                        "Identitas KTP, Kartu Keluarga, Kartu Keluarga perandatangan permohonan;",
+                                        "Dokumen Tenaga Kerja Indonesia (TKI) Pendamping yang akan mendampingi Tenaga Kerja Asing (kecuali jabatan Direksi/Komisaris), antara lain:",
+                                        "KTP TKI Pendamping",
+                                        "Foto TKI Pendamping",
+                                        "Nama TKI Pendamping harus tercantum didalam WLKP.",
+                                        "Perjanjian Kerja Tenaga Kerja Asing (apabila bukan Direksi/Dewan Komisaris);",
+                                        "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "B. Dokumen Individu Tenaga Kerja Asing",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
+                                        "Daftar Riwayat Hidup/Curriculum Vitae (CV) (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan );",
+                                        "Ijazah/Sertifikat Pendidikan (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan);",
+                                        "Surat Referensi Kerja selama 5 tahun terkahir dari Perusahaan dimana TKA bekerja sebelumnya;",
+                                        "Softcopy Pas Photo dengan background merah;",
+                                        "Asuransi Kesehatan yang masih berlaku dan aktif."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Dana Kompensasi Penggunaan Tenaga Kerja Asing (DKPTKA)",
+                            "amount": "US$1.200"
+                        },
+                        {
+                            "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
+                            "amount": "Rp 7.000.000"
+                        }
+                    ],
+                    "total_label": "Biaya Penanganan",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "PPeraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
                 ]
             },
-            "rincian_biaya": {
-                "items": [
-                    {
-                        "label": "Dana Kompensasi Penggunaan Tenaga Kerja Asing (DKPTKA)",
-                        "amount": "US$1.200"
-                    },
-                    {
-                        "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
-                        "amount": "Rp 7.000.000"
-                    }
+            "en": {
+                "penjelasan_umum": [
+                    "If you plan to recruit Foreign Workers (TKA) in Indonesia, ensuring that all licensing proceeds in accordance with the provisions is crucial. Through our New Foreign Worker Licensing service, we are ready to provide assistance from the preparation of the Foreign Manpower Utilization Plan (RPTKA) through to processing the Limited Stay Permit (ITAS).",
+                    "This permit application process requires experts who understand the latest regulations and policies regarding the employment of foreign workers in Indonesia. With the support of an experienced professional team, every stage—from document preparation to permit issuance—can be completed legally, safely, and in accordance with applicable regulations. This ensures that all administration related to foreign worker permits runs more efficiently and precisely.",
+                    "As a service provider that emphasizes legality and legal compliance, we understand that processing foreign worker permits involves several important stages: document preparation, verification process, government agency approval, through to the issuance of the final permit. By entrusting this process to us, you can avoid administrative obstacles and ensure that foreign workers can work officially without hindrance.",
+                    "Our service is designed to provide a complete, professional, and trusted solution for companies and individuals requiring assistance in processing a New Foreign Worker Permit."
                 ],
-                "total_label": "Biaya Penanganan",
-                "total_amount": "Rp 9.050.000"
+                "dokumen_didapat": [
+                    "Foreign Manpower Utilization Plan",
+                    "Electronic Limited Stay Visa",
+                    "DKPTKA Payment Notification",
+                    "Limited Stay Permit + Multiple Exit Re-Entry Permit",
+                    "PNBP Payment Billing Code for VITAS, ITAS, and Multiple Exit Re-Entry Permit",
+                    "Domicile Certificate (SKTT)",
+                    "Foreigner Registration Receipt"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Company/Sponsor Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Deed of Establishment and all its Amendments along with Ratification/Approval/Notification from the Ministry of Law of the Republic of Indonesia;",
+                                        "Tax ID (NPWP) and Registration Certificate;",
+                                        "Business Identification Number (NIB);",
+                                        "Confirmation/Approval of Spatial Utilization Activity Conformity (K/PKKPR);",
+                                        "Mandatory Company Employment Report (WLKP);",
+                                        "Organizational Structure (Company Letterhead, Names and Positions listed);",
+                                        "ID Card (KTP), Family Card of the application signatory;",
+                                        "Documents of the Indonesian Worker (TKI) Counterpart who will accompany the Foreign Worker (except for Director/Commissioner positions), including:",
+                                        "ID Card (KTP) of the Indonesian Counterpart Worker",
+                                        "Photo of the Indonesian Counterpart Worker",
+                                        "The name of the Indonesian Counterpart Worker must be listed in the WLKP.",
+                                        "Foreign Worker Employment Agreement (if not a Director/Board of Commissioners member);",
+                                        "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "B. Foreign Worker Individual Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scan copy of all Passport pages with a validity period of at least 20 (twenty) months;",
+                                        "Curriculum Vitae (CV) (signed on Rp 10,000 stamp duty with company stamp);",
+                                        "Diploma/Education Certificate (signed on Rp 10,000 stamp duty with company stamp);",
+                                        "Work Reference Letter for the last 5 years from the Company where the foreign worker previously worked;",
+                                        "Soft copy of Passport Photo with red background;",
+                                        "Valid and active Health Insurance."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Foreign Manpower Utilization Compensation Fund (DKPTKA)",
+                            "amount": "US$1.200"
+                        },
+                        {
+                            "label": "Non-Tax State Revenue (VITAS, ITAS, and MERP)",
+                            "amount": "Rp 7.000.000"
+                        }
+                    ],
+                    "total_label": "Handling Fee",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Government Regulation Number 45 of 2024 concerning PNBP Rates within the Ministry of Law and Human Rights of the Republic of Indonesia",
+                    "Minister of Law and Human Rights Regulation Number 22 of 2023 concerning Visas and Stay Permits",
+                    "Minister of Law and Human Rights Regulation Number 11 of 2024 concerning Visas and Stay Permits",
+                    "Minister of Immigration and Correctional Services Decree Number M.IP-08.GR.01.01 of 2025 concerning Visa Classification",
+                    "Minister of Finance Regulation Number 9/PMK.02/2022 concerning Types and Rates of Urgent-Need PNBP for Immigration Services at the Ministry of Law and Human Rights",
+                    "Minister of Finance Regulation Number 82 of 2023 concerning Types and Rates of Urgent-Need PNBP for Golden Visa Services at the Ministry of Law and Human Rights"
+                ]
             },
-            "dasar_hukum": [
-                "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
-                "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
-                "PPeraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
-                "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
-            ]
+            "zh": {
+                "penjelasan_umum": [
+                    "若您计划在印度尼西亚招聘外籍劳工（TKA），确保所有许可依规办理至关重要。通过我们的新外籍劳工许可服务，我们随时准备从外籍劳工使用计划（RPTKA）的编制到临时居留许可（ITAS）的办理提供全程协助。",
+                    "此许可申请流程需要了解印度尼西亚外籍劳工雇佣最新法规及政策的专业人员。在经验丰富的专业团队支持下，从文件准备到许可签发的每个阶段都能够合法、安全且依规完成。这确保了与外籍劳工许可相关的所有行政事务运作得更加高效精准。",
+                    "作为强调合法性及法律合规的服务提供商，我们深知外籍劳工许可的办理涉及多个重要阶段：文件制作、核实流程、政府机构批准，直至最终许可的签发。将此流程托付给我们，您可避免行政障碍，并确保外籍劳工能够正式工作，畅通无阻。",
+                    "我们的服务旨在为需要办理新外籍劳工许可协助的企业及个人，提供全面、专业且值得信赖的解决方案。"
+                ],
+                "dokumen_didapat": [
+                    "外籍劳工使用计划",
+                    "电子临时居留签证",
+                    "DKPTKA付款通知",
+                    "临时居留许可+多次出入境再入境许可",
+                    "VITAS、ITAS及多次出入境再入境许可的非税国家收入付款账单代码",
+                    "居住证明（SKTT）",
+                    "外国人登记回执"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "甲、公司/担保方文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "设立公证书及其全部变更，连同印度尼西亚共和国法务部的批准/认可/通知；",
+                                        "税号（NPWP）及注册证明；",
+                                        "营业执照号码（NIB）；",
+                                        "空间利用活动合规确认/批准（K/PKKPR）；",
+                                        "企业强制劳动报告（WLKP）；",
+                                        "组织架构（公司信头，列明姓名及职位）；",
+                                        "申请签署人的身份证（KTP）、户口簿；",
+                                        "陪同外籍劳工的印尼籍员工（TKI）对接人文件（董事/监事职位除外），包括：",
+                                        "对接印尼籍员工的身份证（KTP）",
+                                        "对接印尼籍员工的照片",
+                                        "对接印尼籍员工的姓名须列入WLKP。",
+                                        "外籍劳工劳动合同（若非董事/监事会成员）；",
+                                        "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "乙、外籍劳工个人文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "护照所有页面的扫描件，有效期至少20（二十）个月；",
+                                        "简历（CV）（须在10,000印尼盾印花税票上签名并加盖公司印章）；",
+                                        "学历证书/教育证书（须在10,000印尼盾印花税票上签名并加盖公司印章）；",
+                                        "外籍劳工先前任职公司出具的近5年工作推荐信；",
+                                        "红色背景证件照电子版；",
+                                        "有效且生效中的健康保险。"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "外籍劳工使用补偿基金（DKPTKA）",
+                            "amount": "US$1.200"
+                        },
+                        {
+                            "label": "非税国家收入（VITAS、ITAS及MERP）",
+                            "amount": "Rp 7.000.000"
+                        }
+                    ],
+                    "total_label": "办理费用",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "2024年第45号政府法规，关于印度尼西亚共和国法务与人权部非税国家收入费率",
+                    "2023年第22号法律与人权部长条例，关于签证及居留许可",
+                    "2024年第11号法律与人权部长条例，关于签证及居留许可",
+                    "第M.IP-08.GR.01.01号（2025年）移民与教养部长决定，关于签证分类",
+                    "第9/PMK.02/2022号财政部长条例，关于法务与人权部紧急移民服务非税国家收入（PNBP）的种类及费率",
+                    "2023年第82号财政部长条例，关于法务与人权部紧急黄金签证服务非税国家收入（PNBP）的种类及费率"
+                ]
+            }
         },
-
         "perpanjangan": {
-            "penjelasan_umum": [
-                "Jika Anda berencana memperpanjang Perizinan Tenaga Kerja Asing (TKA) di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perpanjangan Perizinan Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Perpanjangan Rencana Penggunaan Tenaga Kerja Asing (RPTKA) hingga pengurusan Perpanjangan Izin Tinggal Terbatas (ITAS).",
-                "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai Perpanjangan penggunaan TKA di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan—mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
-                "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan perpanjangan  izin TKA melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, pengambilan data biometric dan foto di kantor Imigrasi, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa tenaga kerja asing dapat bekerja secara resmi tanpa hambatan.",
-                "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Perpanjangan Izin Tenaga Kerja Asing."
-            ],
-            "dokumen_didapat": [
-                "Perpanjangan Rencana Penggunaan Tenaga Kerja Asing",
-                "Notifikasi Pembayaran DKPTKA",
-                "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
-                "Jadwal Pengambilan Foto dan Biometric di Kantor Imigrasi",
-                "Perpanjangan Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
-                "Perpanjangan Surat Keterangan Tempat Tinggal (SKTT)",
-                "Perpanjangan Tanda Terima Keterangan Orang Asing"
-            ],
-            "syarat": {
-                "sections": [
-                    {
-                        "label": "A. Dokumen Perusahaan/Sponsor",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Scancopy Rekening Koran perusahaan dengan minimal saldo sebesar USD 2,500;",
-                                    "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP) (Terbaru);",
-                                    "Dokumen Tenaga Kerja Indonesia (TKI) Pendamping yang akan mendampingi Tenaga Kerja Asing (kecuali jabatan Direksi/Komisaris), antara lain:",
-                                    "KTP TKI Pendamping",
-                                    "Foto TKI Pendamping",
-                                    "Nama TKI Pendamping harus tercantum didalam WLKP.",
-                                    "Perjanjian Kerja Tenaga Kerja Asing (apabila bukan Direksi/Dewan Komisaris);",
-                                    "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000,- Cap stample perusahaan"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "label": "B. Dokumen Individu Tenaga Kerja Asing",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
-                                    "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Ketenagakerjaan;",
-                                    "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Kesehatan;",
-                                    "Softcopy Pokok Wajib Pajak & Surat Keterangan Terdaftar;",
-                                    "Softcopy Surat Keterangan Tempat Tinggal (SKTT) tahun sebelumnya yang sudah ditanda tangani."
-                                ]
-                            }
-                        ]
-                    }
+            "id": {
+                "penjelasan_umum": [
+                    "Jika Anda berencana memperpanjang Perizinan Tenaga Kerja Asing (TKA) di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perpanjangan Perizinan Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Perpanjangan Rencana Penggunaan Tenaga Kerja Asing (RPTKA) hingga pengurusan Perpanjangan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai Perpanjangan penggunaan TKA di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan—mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
+                    "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan perpanjangan  izin TKA melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, pengambilan data biometric dan foto di kantor Imigrasi, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa tenaga kerja asing dapat bekerja secara resmi tanpa hambatan.",
+                    "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Perpanjangan Izin Tenaga Kerja Asing."
+                ],
+                "dokumen_didapat": [
+                    "Perpanjangan Rencana Penggunaan Tenaga Kerja Asing",
+                    "Notifikasi Pembayaran DKPTKA",
+                    "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
+                    "Jadwal Pengambilan Foto dan Biometric di Kantor Imigrasi",
+                    "Perpanjangan Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                    "Perpanjangan Surat Keterangan Tempat Tinggal (SKTT)",
+                    "Perpanjangan Tanda Terima Keterangan Orang Asing"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Dokumen Perusahaan/Sponsor",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scancopy Rekening Koran perusahaan dengan minimal saldo sebesar USD 2,500;",
+                                        "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP) (Terbaru);",
+                                        "Dokumen Tenaga Kerja Indonesia (TKI) Pendamping yang akan mendampingi Tenaga Kerja Asing (kecuali jabatan Direksi/Komisaris), antara lain:",
+                                        "KTP TKI Pendamping",
+                                        "Foto TKI Pendamping",
+                                        "Nama TKI Pendamping harus tercantum didalam WLKP.",
+                                        "Perjanjian Kerja Tenaga Kerja Asing (apabila bukan Direksi/Dewan Komisaris);",
+                                        "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000,- Cap stample perusahaan"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "B. Dokumen Individu Tenaga Kerja Asing",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
+                                        "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Ketenagakerjaan;",
+                                        "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Kesehatan;",
+                                        "Softcopy Pokok Wajib Pajak & Surat Keterangan Terdaftar;",
+                                        "Softcopy Surat Keterangan Tempat Tinggal (SKTT) tahun sebelumnya yang sudah ditanda tangani."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Dana Kompensasi Penggunaan Tenaga Kerja Asing (DKPTKA)",
+                            "amount": "US$1.200"
+                        },
+                        {
+                            "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
+                            "amount": "Rp 4.500.000"
+                        }
+                    ],
+                    "total_label": "Biaya Penanganan",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
                 ]
             },
-            "rincian_biaya": {
-                "items": [
-                    {
-                        "label": "Dana Kompensasi Penggunaan Tenaga Kerja Asing (DKPTKA)",
-                        "amount": "US$1.200"
-                    },
-                    {
-                        "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
-                        "amount": "Rp 4.500.000"
-                    }
+            "en": {
+                "penjelasan_umum": [
+                    "If you plan to extend a Foreign Worker (TKA) Permit in Indonesia, ensuring that all licensing proceeds in accordance with the provisions is crucial. Through our New Foreign Worker Permit Extension service, we are ready to provide assistance from preparing the Extension of the Foreign Manpower Utilization Plan (RPTKA) through to processing the Limited Stay Permit (ITAS) extension.",
+                    "This permit application process requires experts who understand the latest regulations and policies regarding the extension of foreign worker employment in Indonesia. With the support of an experienced professional team, every stage—from document preparation to permit issuance—can be completed legally, safely, and in accordance with applicable regulations. This ensures that all administration related to foreign worker permits runs more efficiently and precisely.",
+                    "As a service provider that emphasizes legality and legal compliance, we understand that processing the extension of foreign worker permits involves several important stages: document preparation, verification process, government agency approval, biometric data and photo capture at the Immigration Office, through to the issuance of the final permit. By entrusting this process to us, you can avoid administrative obstacles and ensure that foreign workers can work officially without hindrance.",
+                    "Our service is designed to provide a complete, professional, and trusted solution for companies and individuals requiring assistance in processing a Foreign Worker Permit Extension."
                 ],
-                "total_label": "Biaya Penanganan",
-                "total_amount": "Rp 9.050.000"
+                "dokumen_didapat": [
+                    "Extension of the Foreign Manpower Utilization Plan",
+                    "DKPTKA Payment Notification",
+                    "PNBP Payment Billing Code for VITAS, ITAS, and Multiple Exit Re-Entry Permit",
+                    "Schedule for Photo and Biometric Data Collection at the Immigration Office",
+                    "Limited Stay Permit Extension + Multiple Exit Re-Entry Permit",
+                    "Domicile Certificate (SKTT) Extension",
+                    "Foreigner Registration Receipt Extension"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Company/Sponsor Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scan copy of company Bank Statement with a minimum balance of USD 2,500;",
+                                        "Mandatory Company Employment Report (WLKP) (Latest);",
+                                        "Documents of the Indonesian Worker (TKI) Counterpart who will accompany the Foreign Worker (except for Director/Commissioner positions), including:",
+                                        "ID Card (KTP) of the Indonesian Counterpart Worker",
+                                        "Photo of the Indonesian Counterpart Worker",
+                                        "The name of the Indonesian Counterpart Worker must be listed in the WLKP.",
+                                        "Foreign Worker Employment Agreement (if not a Director/Board of Commissioners member);",
+                                        "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "B. Foreign Worker Individual Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scan copy of all Passport pages with a validity period of at least 20 (twenty) months;",
+                                        "Soft copy of Employment Social Security Agency (BPJS Ketenagakerjaan);",
+                                        "Soft copy of Health Social Security Agency (BPJS Kesehatan);",
+                                        "Soft copy of Tax ID (NPWP) & Registration Certificate;",
+                                        "Soft copy of the previous year's signed Domicile Certificate (SKTT)."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Foreign Manpower Utilization Compensation Fund (DKPTKA)",
+                            "amount": "US$1.200"
+                        },
+                        {
+                            "label": "Non-Tax State Revenue (VITAS, ITAS, and MERP)",
+                            "amount": "Rp 4.500.000"
+                        }
+                    ],
+                    "total_label": "Handling Fee",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Government Regulation Number 45 of 2024 concerning PNBP Rates within the Ministry of Law and Human Rights of the Republic of Indonesia",
+                    "Minister of Law and Human Rights Regulation Number 22 of 2023 concerning Visas and Stay Permits",
+                    "Minister of Law and Human Rights Regulation Number 11 of 2024 concerning Visas and Stay Permits",
+                    "Minister of Immigration and Correctional Services Decree Number M.IP-08.GR.01.01 of 2025 concerning Visa Classification",
+                    "Minister of Finance Regulation Number 9/PMK.02/2022 concerning Types and Rates of Urgent-Need PNBP for Immigration Services at the Ministry of Law and Human Rights",
+                    "Minister of Finance Regulation Number 82 of 2023 concerning Types and Rates of Urgent-Need PNBP for Golden Visa Services at the Ministry of Law and Human Rights"
+                ]
             },
-            "dasar_hukum": [
-                "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
-                "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
-                "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
-                "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
-            ]
+            "zh": {
+                "penjelasan_umum": [
+                    "若您计划在印度尼西亚延期外籍劳工（TKA）许可，确保所有许可依规办理至关重要。通过我们的新外籍劳工许可延期服务，我们随时准备从外籍劳工使用计划（RPTKA）延期的编制到临时居留许可（ITAS）延期的办理提供全程协助。",
+                    "此许可申请流程需要了解印度尼西亚外籍劳工雇佣延期最新法规及政策的专业人员。在经验丰富的专业团队支持下，从文件准备到许可签发的每个阶段都能够合法、安全且依规完成。这确保了与外籍劳工许可相关的所有行政事务运作得更加高效精准。",
+                    "作为强调合法性及法律合规的服务提供商，我们深知外籍劳工许可延期的办理涉及多个重要阶段：文件制作、核实流程、政府机构批准、在移民局采集生物识别数据及拍照，直至最终许可的签发。将此流程托付给我们，您可避免行政障碍，并确保外籍劳工能够正式工作，畅通无阻。",
+                    "我们的服务旨在为需要办理外籍劳工许可延期协助的企业及个人，提供全面、专业且值得信赖的解决方案。"
+                ],
+                "dokumen_didapat": [
+                    "外籍劳工使用计划延期",
+                    "DKPTKA付款通知",
+                    "VITAS、ITAS及多次出入境再入境许可的非税国家收入付款账单代码",
+                    "移民局拍照及生物识别数据采集日程安排",
+                    "临时居留许可延期+多次出入境再入境许可",
+                    "居住证明（SKTT）延期",
+                    "外国人登记回执延期"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "甲、公司/担保方文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "公司银行对账单扫描件，余额至少2,500美元；",
+                                        "最新企业强制劳动报告（WLKP）；",
+                                        "陪同外籍劳工的印尼籍员工（TKI）对接人文件（董事/监事职位除外），包括：",
+                                        "对接印尼籍员工的身份证（KTP）",
+                                        "对接印尼籍员工的照片",
+                                        "对接印尼籍员工的姓名须列入WLKP。",
+                                        "外籍劳工劳动合同（若非董事/监事会成员）；",
+                                        "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "乙、外籍劳工个人文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "护照所有页面的扫描件，有效期至少20（二十）个月；",
+                                        "劳动社会保障机构（BPJS Ketenagakerjaan）电子版；",
+                                        "健康社会保障机构（BPJS Kesehatan）电子版；",
+                                        "税号（NPWP）及注册证明电子版；",
+                                        "上一年度已签署的居住证明（SKTT）电子版。"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "外籍劳工使用补偿基金（DKPTKA）",
+                            "amount": "US$1.200"
+                        },
+                        {
+                            "label": "非税国家收入（VITAS、ITAS及MERP）",
+                            "amount": "Rp 4.500.000"
+                        }
+                    ],
+                    "total_label": "办理费用",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "2024年第45号政府法规，关于印度尼西亚共和国法务与人权部非税国家收入费率",
+                    "2023年第22号法律与人权部长条例，关于签证及居留许可",
+                    "2024年第11号法律与人权部长条例，关于签证及居留许可",
+                    "第M.IP-08.GR.01.01号（2025年）移民与教养部长决定，关于签证分类",
+                    "第9/PMK.02/2022号财政部长条例，关于法务与人权部紧急移民服务非税国家收入（PNBP）的种类及费率",
+                    "2023年第82号财政部长条例，关于法务与人权部紧急黄金签证服务非税国家收入（PNBP）的种类及费率"
+                ]
+            }
         },
-        "faq": []
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 2,
-        "name": "Izin Tinggal Keluarga Tenaga Kerja Asing",
-        "tag": "UMKM Favorit",
+        "name": {
+            "id": "Izin Tinggal Keluarga Tenaga Kerja Asing",
+            "en": "Foreign Worker Family Stay Permit",
+            "zh": "外籍劳工家属居留许可"
+        },
+        "tag": {
+            "id": "UMKM Favorit",
+            "en": "MSME Favorite",
+            "zh": "中小微企业最爱"
+        },
         "price": "9050000",
         "price_label": "Rp 9.050.000",
-        "duration": "Estimasi 5-10 hari kerja",
+        "duration": {
+            "id": "Estimasi 5-10 hari kerja",
+            "en": "Estimated 5-10 business days",
+            "zh": "预计5-10个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "excerpt": "Pengurusan izin tinggal terbatas bagi anggota keluarga (pasangan dan anak) dari pemegang Izin Tinggal Terbatas TKA.",
+        "excerpt": {
+            "id": "Pengurusan izin tinggal terbatas bagi anggota keluarga (pasangan dan anak) dari pemegang Izin Tinggal Terbatas TKA.",
+            "en": "Processing of the Limited Stay Permit for family members (spouse and children) of a Foreign Worker Limited Stay Permit holder.",
+            "zh": "为外籍劳工临时居留许可持有人的家庭成员（配偶及子女）办理临时居留许可。"
+        },
         "detail_path": "/izin-tinggal-tka/izin-tinggal-keluarga-tka",
-
         "baru": {
-            "penjelasan_umum": [
-                "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
-                "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke  Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
-                "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan Izin Tinggal Keluarga Tenaga Kerja Asing, melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa keluarga tenaga kerja asing dapat tinggal di Indonesia  secara resmi tanpa hambatan.",
-                "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Izin Tinggal Keluarga Tenaga Kerja Asing Baru."
-            ],
-            "dokumen_didapat": [
-                "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
-                "VISA Tinggal Terbatas - Elektronik",
-                "Izin Tinggal Terbatas Keluarga + Multiple Exit Re-Entry Permit",
-                "Surat Keterangan Tempat Tinggal (SKTT)",
-                "Tanda Terima Keterangan Orang Asing"
-            ],
-            "syarat": {
-                "sections": [
-                    {
-                        "label": "A. Dokumen Individu Keluarga Tenaga Kerja Asing",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
-                                    "Softcopy Pas Photo dengan background bebas;",
-                                    "Akta Perkawinan (dalam bahasa Inggris);",
-                                    "Akta Lahir Anak (dalam bahasa Inggris);",
-                                    "Asuransi Kesehatan yang masih berlaku dan aktif.",
-                                    "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                                ]
-                            }
-                        ]
-                    }
+            "id": {
+                "penjelasan_umum": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke  Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
+                    "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan Izin Tinggal Keluarga Tenaga Kerja Asing, melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa keluarga tenaga kerja asing dapat tinggal di Indonesia  secara resmi tanpa hambatan.",
+                    "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Izin Tinggal Keluarga Tenaga Kerja Asing Baru."
+                ],
+                "dokumen_didapat": [
+                    "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
+                    "VISA Tinggal Terbatas - Elektronik",
+                    "Izin Tinggal Terbatas Keluarga + Multiple Exit Re-Entry Permit",
+                    "Surat Keterangan Tempat Tinggal (SKTT)",
+                    "Tanda Terima Keterangan Orang Asing"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Dokumen Individu Keluarga Tenaga Kerja Asing",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
+                                        "Softcopy Pas Photo dengan background bebas;",
+                                        "Akta Perkawinan (dalam bahasa Inggris);",
+                                        "Akta Lahir Anak (dalam bahasa Inggris);",
+                                        "Asuransi Kesehatan yang masih berlaku dan aktif.",
+                                        "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
+                            "amount": "Rp 6.000.000"
+                        }
+                    ],
+                    "total_label": "Biaya Penanganan",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI  tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal ",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal ",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 tahun 2025  tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
                 ]
             },
-            "rincian_biaya": {
-                "items": [
-                    {
-                        "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
-                        "amount": "Rp 6.000.000"
-                    }
+            "en": {
+                "penjelasan_umum": [
+                    "If a Foreign Worker (TKA) plans to bring family to Indonesia, ensuring that all licensing proceeds in accordance with the provisions is crucial. Through our New Foreign Worker Family Stay Permit Licensing service, we are ready to provide assistance from preparing the Limited Stay Visa through to processing the Limited Stay Permit (ITAS).",
+                    "This permit application process requires experts who understand the latest regulations and policies regarding foreign workers planning to bring family to Indonesia. With the support of an experienced professional team, every stage from document preparation to permit issuance can be completed legally, safely, and in accordance with applicable regulations. This ensures that all administration related to foreign worker permits runs more efficiently and precisely.",
+                    "As a service provider that emphasizes legality and legal compliance, we understand that processing the Foreign Worker Family Stay Permit involves several important stages: document preparation, verification process, government agency approval, through to the issuance of the final permit. By entrusting this process to us, you can avoid administrative obstacles and ensure that the foreign worker's family can reside in Indonesia officially without hindrance.",
+                    "Our service is designed to provide a complete, professional, and trusted solution for companies and individuals requiring assistance in processing a New Foreign Worker Family Stay Permit."
                 ],
-                "total_label": "Biaya Penanganan",
-                "total_amount": "Rp 9.050.000"
+                "dokumen_didapat": [
+                    "PNBP Payment Billing Code for VITAS, ITAS, and Multiple Exit Re-Entry Permit",
+                    "Electronic Limited Stay Visa",
+                    "Family Limited Stay Permit + Multiple Exit Re-Entry Permit",
+                    "Domicile Certificate (SKTT)",
+                    "Foreigner Registration Receipt"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Foreign Worker Family Individual Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scan copy of all Passport pages with a validity period of at least 20 (twenty) months;",
+                                        "Soft copy of Passport Photo with free background;",
+                                        "Marriage Certificate (in English);",
+                                        "Child's Birth Certificate (in English);",
+                                        "Valid and active Health Insurance.",
+                                        "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Non-Tax State Revenue (VITAS, ITAS, and MERP)",
+                            "amount": "Rp 6.000.000"
+                        }
+                    ],
+                    "total_label": "Handling Fee",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Government Regulation Number 45 of 2024 concerning PNBP Rates within the Ministry of Law and Human Rights of the Republic of Indonesia",
+                    "Minister of Law and Human Rights Regulation Number 22 of 2023 concerning Visas and Stay Permits",
+                    "Minister of Law and Human Rights Regulation Number 11 of 2024 concerning Visas and Stay Permits",
+                    "Minister of Immigration and Correctional Services Decree Number M.IP-08.GR.01.01 of 2025 concerning Visa Classification",
+                    "Minister of Finance Regulation Number 9/PMK.02/2022 concerning Types and Rates of Urgent-Need PNBP for Immigration Services at the Ministry of Law and Human Rights",
+                    "Minister of Finance Regulation Number 82 of 2023 concerning Types and Rates of Urgent-Need PNBP for Golden Visa Services at the Ministry of Law and Human Rights"
+                ]
             },
-            "dasar_hukum": [
-                "Peraturan Pemerintah Nomor 45 tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI  tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal ",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal ",
-                "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 tahun 2025  tentang Klasifikasi Visa",
-                "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
-                "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
-            ]
+            "zh": {
+                "penjelasan_umum": [
+                    "若外籍劳工（TKA）计划携带家属前往印度尼西亚，确保所有许可依规办理至关重要。通过我们的新外籍劳工家属居留许可服务，我们随时准备从临时居留签证的编制到临时居留许可（ITAS）的办理提供全程协助。",
+                    "此许可申请流程需要了解计划携带家属前往印度尼西亚的外籍劳工最新法规及政策的专业人员。在经验丰富的专业团队支持下，从文件准备到许可签发的每个阶段都能够合法、安全且依规完成。这确保了与外籍劳工许可相关的所有行政事务运作得更加高效精准。",
+                    "作为强调合法性及法律合规的服务提供商，我们深知外籍劳工家属居留许可的办理涉及多个重要阶段：文件制作、核实流程、政府机构批准，直至最终许可的签发。将此流程托付给我们，您可避免行政障碍，并确保外籍劳工家属能够正式在印度尼西亚居住，畅通无阻。",
+                    "我们的服务旨在为需要办理新外籍劳工家属居留许可协助的企业及个人，提供全面、专业且值得信赖的解决方案。"
+                ],
+                "dokumen_didapat": [
+                    "VITAS、ITAS及多次出入境再入境许可的非税国家收入付款账单代码",
+                    "电子临时居留签证",
+                    "家属临时居留许可+多次出入境再入境许可",
+                    "居住证明（SKTT）",
+                    "外国人登记回执"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "甲、外籍劳工家属个人文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "护照所有页面的扫描件，有效期至少20（二十）个月；",
+                                        "背景不限的证件照电子版；",
+                                        "结婚证书（英文）；",
+                                        "子女出生证明（英文）；",
+                                        "有效且生效中的健康保险。",
+                                        "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "非税国家收入（VITAS、ITAS及MERP）",
+                            "amount": "Rp 6.000.000"
+                        }
+                    ],
+                    "total_label": "办理费用",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "2024年第45号政府法规，关于法务与人权部非税国家收入费率",
+                    "2023年第22号法律与人权部长条例，关于签证及居留许可",
+                    "2024年第11号法律与人权部长条例，关于签证及居留许可",
+                    "第M.IP-08.GR.01.01号（2025年）移民与教养部长决定，关于签证分类",
+                    "第9/PMK.02/2022号财政部长条例，关于法务与人权部紧急移民服务非税国家收入（PNBP）的种类及费率",
+                    "2023年第82号财政部长条例，关于法务与人权部紧急黄金签证服务非税国家收入（PNBP）的种类及费率"
+                ]
+            }
         },
-
         "perpanjangan": {
-            "penjelasan_umum": [
-                "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk memperpanjang Perizinan Tinggal keluarga di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perpanjangan  Izin Tinggal Keluarga Tenaga Kerja Asing , kami siap memberikan pendampingan  pengurusan Izin Tinggal Terbatas (ITAS) untuk keluarga Tenaga Kerja Asing (TKA).",
-                "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk memperpanjang perizinan tinggal keluarga di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
-                "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan Izin Tinggal Keluarga melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, pendampingan saat pengambilan data biometric dan foto di kantor Imigrasi, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa keluarga tenaga kerja asing dapat memperpanjang izin tinggal di Indonesia  secara resmi tanpa hambatan.",
-                "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Perpanjangan Izin Tinggal Keluarga Tenaga Kerja Asing Baru."
-            ],
-            "dokumen_didapat": [
-                "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
-                "Jadwal Pengambilan Foto dan Biometric di Kantor Imigrasi",
-                "Perpanjangan Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
-                "Perpanjangan Surat Keterangan Tempat Tinggal (SKTT)",
-                "Perpanjangan Tanda Terima Keterangan Orang Asing"
-            ],
-            "syarat": {
-                "sections": [
-                    {
-                        "label": "A. Dokumen Individu Keluarga Tenaga Kerja Asing",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
-                                    "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS)  Kesehatan;",
-                                    "Softcopy Surat Keterangan Tempat Tinggal (SKTT) tahun sebelumnya, yang sudah di tandatangani.",
-                                    "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                                ]
-                            }
-                        ]
-                    }
+            "id": {
+                "penjelasan_umum": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk memperpanjang Perizinan Tinggal keluarga di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perpanjangan  Izin Tinggal Keluarga Tenaga Kerja Asing , kami siap memberikan pendampingan  pengurusan Izin Tinggal Terbatas (ITAS) untuk keluarga Tenaga Kerja Asing (TKA).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk memperpanjang perizinan tinggal keluarga di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
+                    "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan Izin Tinggal Keluarga melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, pendampingan saat pengambilan data biometric dan foto di kantor Imigrasi, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa keluarga tenaga kerja asing dapat memperpanjang izin tinggal di Indonesia  secara resmi tanpa hambatan.",
+                    "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Perpanjangan Izin Tinggal Keluarga Tenaga Kerja Asing Baru."
+                ],
+                "dokumen_didapat": [
+                    "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
+                    "Jadwal Pengambilan Foto dan Biometric di Kantor Imigrasi",
+                    "Perpanjangan Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                    "Perpanjangan Surat Keterangan Tempat Tinggal (SKTT)",
+                    "Perpanjangan Tanda Terima Keterangan Orang Asing"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Dokumen Individu Keluarga Tenaga Kerja Asing",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
+                                        "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS)  Kesehatan;",
+                                        "Softcopy Surat Keterangan Tempat Tinggal (SKTT) tahun sebelumnya, yang sudah di tandatangani.",
+                                        "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
+                            "amount": "Rp 4.500.000"
+                        }
+                    ],
+                    "total_label": "Biaya Penanganan",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI  tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 tahun 2025  tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
                 ]
             },
-            "rincian_biaya": {
-                "items": [
-                    {
-                        "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
-                        "amount": "Rp 4.500.000"
-                    }
+            "en": {
+                "penjelasan_umum": [
+                    "If a Foreign Worker (TKA) plans to extend the family stay permit in Indonesia, ensuring that all licensing proceeds in accordance with the provisions is crucial. Through our Foreign Worker Family Stay Permit Extension service, we are ready to provide assistance in processing the Limited Stay Permit (ITAS) for the Foreign Worker's (TKA) family.",
+                    "This permit application process requires experts who understand the latest regulations and policies regarding foreign workers planning to extend their family's stay permit in Indonesia. With the support of an experienced professional team, every stage from document preparation to permit issuance can be completed legally, safely, and in accordance with applicable regulations. This ensures that all administration related to foreign worker permits runs more efficiently and precisely.",
+                    "As a service provider that emphasizes legality and legal compliance, we understand that processing the Family Stay Permit involves several important stages: document preparation, verification process, government agency approval, assistance during biometric data and photo capture at the Immigration Office, through to the issuance of the final permit. By entrusting this process to us, you can avoid administrative obstacles and ensure that the foreign worker's family can extend their stay permit in Indonesia officially without hindrance.",
+                    "Our service is designed to provide a complete, professional, and trusted solution for companies and individuals requiring assistance in processing a Foreign Worker Family Stay Permit Extension."
                 ],
-                "total_label": "Biaya Penanganan",
-                "total_amount": "Rp 9.050.000"
+                "dokumen_didapat": [
+                    "PNBP Payment Billing Code for VITAS, ITAS, and Multiple Exit Re-Entry Permit",
+                    "Schedule for Photo and Biometric Data Collection at the Immigration Office",
+                    "Limited Stay Permit Extension + Multiple Exit Re-Entry Permit",
+                    "Domicile Certificate (SKTT) Extension",
+                    "Foreigner Registration Receipt Extension"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Foreign Worker Family Individual Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scan copy of all Passport pages with a validity period of at least 20 (twenty) months;",
+                                        "Soft copy of Health Social Security Agency (BPJS Kesehatan);",
+                                        "Soft copy of the previous year's signed Domicile Certificate (SKTT).",
+                                        "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Non-Tax State Revenue (VITAS, ITAS, and MERP)",
+                            "amount": "Rp 4.500.000"
+                        }
+                    ],
+                    "total_label": "Handling Fee",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Government Regulation Number 45 of 2024 concerning PNBP Rates within the Ministry of Law and Human Rights of the Republic of Indonesia",
+                    "Minister of Law and Human Rights Regulation Number 22 of 2023 concerning Visas and Stay Permits",
+                    "Minister of Law and Human Rights Regulation Number 11 of 2024 concerning Visas and Stay Permits",
+                    "Minister of Immigration and Correctional Services Decree Number M.IP-08.GR.01.01 of 2025 concerning Visa Classification",
+                    "Minister of Finance Regulation Number 9/PMK.02/2022 concerning Types and Rates of Urgent-Need PNBP for Immigration Services at the Ministry of Law and Human Rights",
+                    "Minister of Finance Regulation Number 82 of 2023 concerning Types and Rates of Urgent-Need PNBP for Golden Visa Services at the Ministry of Law and Human Rights"
+                ]
             },
-            "dasar_hukum": [
-                "Peraturan Pemerintah Nomor 45 tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI  tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
-                "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 tahun 2025  tentang Klasifikasi Visa",
-                "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
-                "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
-            ]
+            "zh": {
+                "penjelasan_umum": [
+                    "若外籍劳工（TKA）计划在印度尼西亚延期家属居留许可，确保所有许可依规办理至关重要。通过我们的外籍劳工家属居留许可延期服务，我们随时准备为外籍劳工（TKA）家属办理临时居留许可（ITAS）提供协助。",
+                    "此许可申请流程需要了解计划延期在印度尼西亚家属居留许可的外籍劳工最新法规及政策的专业人员。在经验丰富的专业团队支持下，从文件准备到许可签发的每个阶段都能够合法、安全且依规完成。这确保了与外籍劳工许可相关的所有行政事务运作得更加高效精准。",
+                    "作为强调合法性及法律合规的服务提供商，我们深知家属居留许可的办理涉及多个重要阶段：文件制作、核实流程、政府机构批准、协助在移民局采集生物识别数据及拍照，直至最终许可的签发。将此流程托付给我们，您可避免行政障碍，并确保外籍劳工家属能够正式在印度尼西亚延期居留许可，畅通无阻。",
+                    "我们的服务旨在为需要办理外籍劳工家属居留许可延期协助的企业及个人，提供全面、专业且值得信赖的解决方案。"
+                ],
+                "dokumen_didapat": [
+                    "VITAS、ITAS及多次出入境再入境许可的非税国家收入付款账单代码",
+                    "移民局拍照及生物识别数据采集日程安排",
+                    "临时居留许可延期+多次出入境再入境许可",
+                    "居住证明（SKTT）延期",
+                    "外国人登记回执延期"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "甲、外籍劳工家属个人文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "护照所有页面的扫描件，有效期至少20（二十）个月；",
+                                        "健康社会保障机构（BPJS Kesehatan）电子版；",
+                                        "上一年度已签署的居住证明（SKTT）电子版。",
+                                        "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "非税国家收入（VITAS、ITAS及MERP）",
+                            "amount": "Rp 4.500.000"
+                        }
+                    ],
+                    "total_label": "办理费用",
+                    "total_amount": "Rp 9.050.000"
+                },
+                "dasar_hukum": [
+                    "2024年第45号政府法规，关于法务与人权部非税国家收入费率",
+                    "2023年第22号法律与人权部长条例，关于签证及居留许可",
+                    "2024年第11号法律与人权部长条例，关于签证及居留许可",
+                    "第M.IP-08.GR.01.01号（2025年）移民与教养部长决定，关于签证分类",
+                    "第9/PMK.02/2022号财政部长条例，关于法务与人权部紧急移民服务非税国家收入（PNBP）的种类及费率",
+                    "2023年第82号财政部长条例，关于法务与人权部紧急黄金签证服务非税国家收入（PNBP）的种类及费率"
+                ]
+            }
         },
-        "faq": []
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 3,
-        "name": "Izin Tinggal Terbatas Investor",
-        "tag": "Profesional",
+        "name": {
+            "id": "Izin Tinggal Terbatas Investor",
+            "en": "Investor Limited Stay Permit",
+            "zh": "投资者临时居留许可"
+        },
+        "tag": {
+            "id": "Profesional",
+            "en": "Professional",
+            "zh": "专业"
+        },
         "price": "4500000",
         "price_label": "Rp 4.500.000",
-        "duration": "Estimasi 7-12 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-12 hari kerja",
+            "en": "Estimated 7-12 business days",
+            "zh": "预计7-12个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "excerpt": "Izin Tinggal Terbatas bagi investor asing dengan kepemilikan saham pada perusahaan di Indonesia.",
+        "excerpt": {
+            "id": "Izin Tinggal Terbatas bagi investor asing dengan kepemilikan saham pada perusahaan di Indonesia.",
+            "en": "Limited Stay Permit for foreign investors holding shares in a company in Indonesia.",
+            "zh": "为在印度尼西亚公司持股的外国投资者提供的临时居留许可。"
+        },
         "detail_path": "/izin-tinggal-tka/izin-tinggal-investor",
         "baru": {
-            "penjelasan_umum": [
-                "Jika Anda berencana berinvestasi, melakukan aktivitas yang berhubungan dengan bisnis, investasi dan pendirian perusahaan serta beraktivitas sebagai anggota direksi atau anggota dewan komisaris pada perusahaan tempat orang asing menanamkan modalnya. memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Tinggal Terbatas untuk Investor , kami siap memberikan pendampingan pelayanan untuk Izin Tinggal Terbatas Investor.",
-                "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai Investor yang akan berinvestasi di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan—mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tinggal investor berjalan lebih efisien dan tepat sasaran.",
-                "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan izin tinggal investor melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa investor dapat berinvestasi secara resmi tanpa hambatan.",
-                "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Izin Tinggal Terbatas Investor"
-            ],
-            "dokumen_didapat": [
-                "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
-                "VISA Tinggal Terbatas - Elektronik",
-                "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
-                "Surat Keterangan Tempat Tinggal (SKTT) 2 Tahun",
-                "Tanda Terima Keterangan Orang Asing 2 Tahun"
-            ],
-            "syarat": {
-                "sections": [
-                    {
-                        "label": "A. Dokumen Perusahaan/Sponsor",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Akta Pendirian dan seluruh Perubahannya beserta Pengesahan/Persetujuan/Pemberitahuan dari Kementerian Hukum RI [ menyebutkan TKA sebagai Investor dengan minimal saham sebesar",
-                                    "Rp 10.000.000.000",
-                                    "Nomor Pokok Wajib Pajak & Surat Keterangan Terdaftar;",
-                                    "Nomor Induk Berusaha",
-                                    "Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan",
-                                    "Softcopy Rekening koran pribadi atau perusahaan dengan minimal saldo USD 2.500",
-                                    "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "label": "B. Dokumen Individu Investor",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
-                                    "Daftar Riwayat Hidup/Curriculum Vitae (CV) (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan );",
-                                    "Softcopy Pas Photo dengan background bebas;",
-                                    "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS)  Kesehatan;",
-                                    "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Ketenagakerjaan;"
-                                ]
-                            }
-                        ]
-                    }
+            "id": {
+                "penjelasan_umum": [
+                    "Jika Anda berencana berinvestasi, melakukan aktivitas yang berhubungan dengan bisnis, investasi dan pendirian perusahaan serta beraktivitas sebagai anggota direksi atau anggota dewan komisaris pada perusahaan tempat orang asing menanamkan modalnya. memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Tinggal Terbatas untuk Investor , kami siap memberikan pendampingan pelayanan untuk Izin Tinggal Terbatas Investor.",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai Investor yang akan berinvestasi di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan—mulai dari persiapan dokumen hingga penerbitan izin—dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tinggal investor berjalan lebih efisien dan tepat sasaran.",
+                    "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan izin tinggal investor melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa investor dapat berinvestasi secara resmi tanpa hambatan.",
+                    "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Izin Tinggal Terbatas Investor"
+                ],
+                "dokumen_didapat": [
+                    "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
+                    "VISA Tinggal Terbatas - Elektronik",
+                    "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                    "Surat Keterangan Tempat Tinggal (SKTT) 2 Tahun",
+                    "Tanda Terima Keterangan Orang Asing 2 Tahun"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Dokumen Perusahaan/Sponsor",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Akta Pendirian dan seluruh Perubahannya beserta Pengesahan/Persetujuan/Pemberitahuan dari Kementerian Hukum RI [ menyebutkan TKA sebagai Investor dengan minimal saham sebesar",
+                                        "Rp 10.000.000.000",
+                                        "Nomor Pokok Wajib Pajak & Surat Keterangan Terdaftar;",
+                                        "Nomor Induk Berusaha",
+                                        "Identitas KTP, Kartu Karyawan, Kartu Keluarga penandatangan permohonan",
+                                        "Softcopy Rekening koran pribadi atau perusahaan dengan minimal saldo USD 2.500",
+                                        "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "B. Dokumen Individu Investor",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan;",
+                                        "Daftar Riwayat Hidup/Curriculum Vitae (CV) (ditanda tangani ditas materai Rp. 10.000,- dan cap perusahaan );",
+                                        "Softcopy Pas Photo dengan background bebas;",
+                                        "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS)  Kesehatan;",
+                                        "Softcopy Badan Penyelenggara Jaminan Sosial (BPJS) Ketenagakerjaan;"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP) 2 Tahun",
+                            "amount": "Rp 9.500.000"
+                        }
+                    ],
+                    "total_label": "Biaya Penganan",
+                    "total_amount": "Rp 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M.IP-08.GR.01.01 tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
                 ]
             },
-            "rincian_biaya": {
-                "items": [
-                    {
-                        "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP) 2 Tahun",
-                        "amount": "Rp 9.500.000"
-                    }
+            "en": {
+                "penjelasan_umum": [
+                    "If you plan to invest, engage in activities related to business, investment, and company establishment, and act as a member of the Board of Directors or Board of Commissioners at the company in which the foreigner invests, ensuring that all licensing proceeds in accordance with the provisions is crucial. Through our Investor Limited Stay Licensing service, we are ready to provide assistance for the Investor Limited Stay Permit.",
+                    "This permit application process requires experts who understand the latest regulations and policies regarding investors investing in Indonesia. With the support of an experienced professional team, every stage—from document preparation to permit issuance—can be completed legally, safely, and in accordance with applicable regulations. This ensures that all administration related to investor stay permits runs more efficiently and precisely.",
+                    "As a service provider that emphasizes legality and legal compliance, we understand that processing investor stay permits involves several important stages: document preparation, verification process, government agency approval, through to the issuance of the final permit. By entrusting this process to us, you can avoid administrative obstacles and ensure that investors can invest officially without hindrance.",
+                    "Our service is designed to provide a complete, professional, and trusted solution for companies and individuals requiring assistance in processing the Investor Limited Stay Permit."
                 ],
-                "total_label": "Biaya Penganan",
-                "total_amount": "Rp 12.750.000"
+                "dokumen_didapat": [
+                    "PNBP Payment Billing Code for VITAS, ITAS, and Multiple Exit Re-Entry Permit",
+                    "Electronic Limited Stay Visa",
+                    "Limited Stay Permit + Multiple Exit Re-Entry Permit",
+                    "2-Year Domicile Certificate (SKTT)",
+                    "2-Year Foreigner Registration Receipt"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Company/Sponsor Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Deed of Establishment and all its Amendments along with Ratification/Approval/Notification from the Ministry of Law of the Republic of Indonesia [stating the foreign worker as an Investor with a minimum shareholding of",
+                                        "Rp 10,000,000,000",
+                                        "Tax ID (NPWP) & Registration Certificate;",
+                                        "Business Identification Number (NIB)",
+                                        "ID Card (KTP), Employee Card, Family Card of the application signatory",
+                                        "Soft copy of personal or company Bank Statement with a minimum balance of USD 2,500",
+                                        "Application Letter/Form completed with Signature, Rp 10,000 Stamp Duty, and Company Stamp."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "B. Investor Individual Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scan copy of all Passport pages with a validity period of at least 20 (twenty) months;",
+                                        "Curriculum Vitae (CV) (signed on Rp 10,000 stamp duty with company stamp);",
+                                        "Soft copy of Passport Photo with free background;",
+                                        "Soft copy of Health Social Security Agency (BPJS Kesehatan);",
+                                        "Soft copy of Employment Social Security Agency (BPJS Ketenagakerjaan);"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "2-Year Non-Tax State Revenue (VITAS, ITAS, and MERP)",
+                            "amount": "Rp 9.500.000"
+                        }
+                    ],
+                    "total_label": "Handling Fee",
+                    "total_amount": "Rp 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Law Number 6 of 2011 concerning Immigration",
+                    "Government Regulation Number 31 of 2013",
+                    "Government Regulation Number 45 of 2024 concerning PNBP Rates within the Ministry of Law and Human Rights of the Republic of Indonesia",
+                    "Minister of Law and Human Rights Regulation Number 11 of 2024 concerning Visas and Stay Permits",
+                    "Minister of Law and Human Rights Regulation Number 22 of 2023 concerning Visas and Stay Permits",
+                    "Minister of Immigration and Correctional Services Decree Number M.IP-08.GR.01.01 of 2025 concerning Visa Classification",
+                    "Minister of Finance Regulation Number 9/PMK.02/2022 concerning Types and Rates of Urgent-Need PNBP for Immigration Services at the Ministry of Law and Human Rights",
+                    "Minister of Finance Regulation Number 82 of 2023 concerning Types and Rates of Urgent-Need PNBP for Golden Visa Services at the Ministry of Law and Human Rights"
+                ]
             },
-            "dasar_hukum": [
-                "Undang-undang Nomor 6 tahun 2011 tentang Keimigrasian",
-                "Peraturan Pemerintah Nomor 31 tahun 2013",
-                "Peraturan Pemerintah Nomor 45 tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 22 tahun 2023 tentang Visa dan Izin Tinggal",
-                "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M.IP-08.GR.01.01 tahun 2025 tentang Klasifikasi Visa",
-                "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
-                "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
-            ]
+            "zh": {
+                "penjelasan_umum": [
+                    "若您计划投资、从事与业务、投资及公司设立相关的活动，并在外国人投资的公司担任董事会或监事会成员，确保所有许可依规办理至关重要。通过我们的投资者临时居留许可服务，我们随时准备为投资者临时居留许可提供协助。",
+                    "此许可申请流程需要了解在印度尼西亚投资的投资者最新法规及政策的专业人员。在经验丰富的专业团队支持下，从文件准备到许可签发的每个阶段都能够合法、安全且依规完成。这确保了与投资者居留许可相关的所有行政事务运作得更加高效精准。",
+                    "作为强调合法性及法律合规的服务提供商，我们深知投资者居留许可的办理涉及多个重要阶段：文件制作、核实流程、政府机构批准，直至最终许可的签发。将此流程托付给我们，您可避免行政障碍，并确保投资者能够正式投资，畅通无阻。",
+                    "我们的服务旨在为需要办理投资者临时居留许可协助的企业及个人，提供全面、专业且值得信赖的解决方案。"
+                ],
+                "dokumen_didapat": [
+                    "VITAS、ITAS及多次出入境再入境许可的非税国家收入付款账单代码",
+                    "电子临时居留签证",
+                    "临时居留许可+多次出入境再入境许可",
+                    "2年居住证明（SKTT）",
+                    "2年外国人登记回执"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "甲、公司/担保方文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "设立公证书及其全部变更，连同印度尼西亚共和国法务部的批准/认可/通知[说明外籍劳工作为投资者，持股金额至少为",
+                                        "100亿印尼盾",
+                                        "税号（NPWP）及注册证明；",
+                                        "营业执照号码（NIB）",
+                                        "申请签署人的身份证（KTP）、员工卡、户口簿",
+                                        "个人或公司银行对账单电子版，余额至少2,500美元",
+                                        "已填妥签名、10,000印尼盾印花税票及公司盖章的申请信/表格。"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "乙、投资者个人文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "护照所有页面的扫描件，有效期至少20（二十）个月；",
+                                        "简历（CV）（须在10,000印尼盾印花税票上签名并加盖公司印章）；",
+                                        "背景不限的证件照电子版；",
+                                        "健康社会保障机构（BPJS Kesehatan）电子版；",
+                                        "劳动社会保障机构（BPJS Ketenagakerjaan）电子版；"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "2年非税国家收入（VITAS、ITAS及MERP）",
+                            "amount": "Rp 9.500.000"
+                        }
+                    ],
+                    "total_label": "办理费用",
+                    "total_amount": "Rp 12.750.000"
+                },
+                "dasar_hukum": [
+                    "2011年第6号法律关于移民",
+                    "2013年第31号政府法规",
+                    "2024年第45号政府法规，关于法务与人权部非税国家收入费率",
+                    "2024年第11号法律与人权部长条例，关于签证及居留许可",
+                    "2023年第22号法律与人权部长条例，关于签证及居留许可",
+                    "第M.IP-08.GR.01.01号（2025年）移民与教养部长决定，关于签证分类",
+                    "第9/PMK.02/2022号财政部长条例，关于法务与人权部紧急移民服务非税国家收入（PNBP）的种类及费率",
+                    "2023年第82号财政部长条例，关于法务与人权部紧急黄金签证服务非税国家收入（PNBP）的种类及费率"
+                ]
+            }
         },
-        "faq": []
+        "perpanjangan": null,
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 4,
-        "name": "Izin Tinggal Terbatas Lansia",
-        "tag": "Kolaboratif",
+        "name": {
+            "id": "Izin Tinggal Terbatas Lansia",
+            "en": "Elderly Limited Stay Permit",
+            "zh": "老年人临时居留许可"
+        },
+        "tag": {
+            "id": "Kolaboratif",
+            "en": "Collaborative",
+            "zh": "协作"
+        },
         "price": "3500000",
         "price_label": "Rp 3.500.000",
-        "duration": "Estimasi 5-10 hari kerja",
+        "duration": {
+            "id": "Estimasi 5-10 hari kerja",
+            "en": "Estimated 5-10 business days",
+            "zh": "预计5-10个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "excerpt": "Izin Tinggal Terbatas bagi warga negara asing lanjut usia (lansia) yang bermaksud menetap di Indonesia.",
+        "excerpt": {
+            "id": "Izin Tinggal Terbatas bagi warga negara asing lanjut usia (lansia) yang bermaksud menetap di Indonesia.",
+            "en": "Limited Stay Permit for elderly foreign citizens intending to reside in Indonesia.",
+            "zh": "为有意在印度尼西亚定居的外国老年公民提供的临时居留许可。"
+        },
         "detail_path": "/izin-tinggal-tka/izin-tinggal-lansia",
         "baru": {
-            "penjelasan_umum": [
-                "Jika Anda berusia 55 tahun atau lebih dan berencana untuk tinggal dan menetap di Indonesia. Melalui layanan Perizinan Tinggal Terbatas untuk Lansia, kami siap memberikan pendampingan pelayanan untuk Izin Tinggal Terbatas Lansia.",
-                "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai orang asing yang berusia lansia dan berencana untuk tinggal dan menetap di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tinggal lansia berjalan lebih efisien dan tepat sasaran.",
-                "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan izin tinggal lansia melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, hingga penerbitan izin akhir. Dengan mempercayayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa warga negara asing lansia dapat tinggal di Indonesia secara resmi tanpa hambatan.",
-                "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Izin Tinggal Terbatas Lansia"
-            ],
-            "dokumen_didapat": [
-                "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
-                "VISA Tinggal Terbatas - Elektronik",
-                "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
-                "Surat Keterangan Tempat Tinggal (SKTT)",
-                "Tanda Terima Keterangan Orang Asing"
-            ],
-            "syarat": {
-                "sections": [
-                    {
-                        "label": "A. Dokumen Sponsor/Penjamin",
-                        "groups": [
-                            {
-                                "notes": [
-                                    "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan (usia diatas 55 tahun);",
-                                    "Softcopy Pas Photo dengan background bebas;",
-                                    "Asuransi Kesehatan yang masih berlaku dan aktif;",
-                                    "Rekening Koran dengan minimal saldo USD 5.000;",
-                                    "Softcopy Kartu Tanda Penduduk 2 pembantu dari Indonesia;",
-                                    "Softcopy kontrak sewa rumah (jika menyewa) dan copy Kartu Tanda Penduduk pemilik sewa (Jika ada);",
-                                    "Daftar Riwayat Hidup/Curriculum Vitae (CV);",
-                                    "Softcopy Dana Pensiun (Jika ada) ;",
-                                    "Surat keterangan tidak bekerja;",
-                                    "Surat pernyataan menggunakan 2 pembantu Indonesia;",
-                                    "Surat Domisili;",
-                                    "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan dan Materai Rp 10.000."
-                                ]
-                            }
-                        ]
-                    }
+            "id": {
+                "penjelasan_umum": [
+                    "Jika Anda berusia 55 tahun atau lebih dan berencana untuk tinggal dan menetap di Indonesia. Melalui layanan Perizinan Tinggal Terbatas untuk Lansia, kami siap memberikan pendampingan pelayanan untuk Izin Tinggal Terbatas Lansia.",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai orang asing yang berusia lansia dan berencana untuk tinggal dan menetap di Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tinggal lansia berjalan lebih efisien dan tepat sasaran.",
+                    "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan izin tinggal lansia melibatkan berbagai tahap penting: pembuatan dokumen, proses verifikasi, persetujuan instansi pemerintah, hingga penerbitan izin akhir. Dengan mempercayayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa warga negara asing lansia dapat tinggal di Indonesia secara resmi tanpa hambatan.",
+                    "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Izin Tinggal Terbatas Lansia"
+                ],
+                "dokumen_didapat": [
+                    "Kode Billing Pembayaran PNBP Untuk VITAS, ITAS dan Multiple Exit Re-Entry Permit",
+                    "VISA Tinggal Terbatas - Elektronik",
+                    "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                    "Surat Keterangan Tempat Tinggal (SKTT)",
+                    "Tanda Terima Keterangan Orang Asing"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Dokumen Sponsor/Penjamin",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan (usia diatas 55 tahun);",
+                                        "Softcopy Pas Photo dengan background bebas;",
+                                        "Asuransi Kesehatan yang masih berlaku dan aktif;",
+                                        "Rekening Koran dengan minimal saldo USD 5.000;",
+                                        "Softcopy Kartu Tanda Penduduk 2 pembantu dari Indonesia;",
+                                        "Softcopy kontrak sewa rumah (jika menyewa) dan copy Kartu Tanda Penduduk pemilik sewa (Jika ada);",
+                                        "Daftar Riwayat Hidup/Curriculum Vitae (CV);",
+                                        "Softcopy Dana Pensiun (Jika ada) ;",
+                                        "Surat keterangan tidak bekerja;",
+                                        "Surat pernyataan menggunakan 2 pembantu Indonesia;",
+                                        "Surat Domisili;",
+                                        "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan dan Materai Rp 10.000."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
+                            "amount": "Rp 10.750.000"
+                        }
+                    ],
+                    "total_label": "Biaya Pengurusan",
+                    "total_amount": "Rp 7.000.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
                 ]
             },
-            "rincian_biaya": {
-                "items": [
-                    {
-                        "label": "Penerimaan Negara Bukan Pajak (VITAS, ITAS dan MERP)",
-                        "amount": "Rp 10.750.000"
-                    }
+            "en": {
+                "penjelasan_umum": [
+                    "If you are 55 years of age or older and plan to reside and settle in Indonesia, through our Elderly Limited Stay Licensing service, we are ready to provide assistance for the Elderly Limited Stay Permit.",
+                    "This permit application process requires experts who understand the latest regulations and policies regarding elderly foreigners planning to reside and settle in Indonesia. With the support of an experienced professional team, every stage from document preparation to permit issuance can be completed legally, safely, and in accordance with applicable regulations. This ensures that all administration related to elderly stay permits runs more efficiently and precisely.",
+                    "As a service provider that emphasizes legality and legal compliance, we understand that processing elderly stay permits involves several important stages: document preparation, verification process, government agency approval, through to the issuance of the final permit. By entrusting this process to us, you can avoid administrative obstacles and ensure that elderly foreign citizens can reside in Indonesia officially without hindrance.",
+                    "Our service is designed to provide a complete, professional, and trusted solution for companies and individuals requiring assistance in processing the Elderly Limited Stay Permit."
                 ],
-                "total_label": "Biaya Pengurusan",
-                "total_amount": "Rp 7.000.000"
+                "dokumen_didapat": [
+                    "PNBP Payment Billing Code for VITAS, ITAS, and Multiple Exit Re-Entry Permit",
+                    "Electronic Limited Stay Visa",
+                    "Limited Stay Permit + Multiple Exit Re-Entry Permit",
+                    "Domicile Certificate (SKTT)",
+                    "Foreigner Registration Receipt"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "A. Sponsor/Guarantor Documents",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "Scan copy of all Passport pages with a validity period of at least 20 (twenty) months (age above 55 years);",
+                                        "Soft copy of Passport Photo with free background;",
+                                        "Valid and active Health Insurance;",
+                                        "Bank Statement with a minimum balance of USD 5,000;",
+                                        "Soft copy of ID Cards of 2 Indonesian domestic helpers;",
+                                        "Soft copy of the house rental agreement (if renting) and a copy of the landlord's ID Card (if any);",
+                                        "Curriculum Vitae (CV);",
+                                        "Soft copy of Pension Fund documentation (if any);",
+                                        "Certificate of Non-Employment;",
+                                        "Statement Letter regarding the employment of 2 Indonesian domestic helpers;",
+                                        "Domicile Letter;",
+                                        "Application Letter/Form completed with Signature and Rp 10,000 Stamp Duty."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "Non-Tax State Revenue (VITAS, ITAS, and MERP)",
+                            "amount": "Rp 10.750.000"
+                        }
+                    ],
+                    "total_label": "Processing Fee",
+                    "total_amount": "Rp 7.000.000"
+                },
+                "dasar_hukum": [
+                    "Government Regulation Number 45 of 2024 concerning PNBP Rates within the Ministry of Law and Human Rights of the Republic of Indonesia",
+                    "Minister of Law and Human Rights Regulation Number 22 of 2023 concerning Visas and Stay Permits",
+                    "Minister of Law and Human Rights Regulation Number 11 of 2024 concerning Visas and Stay Permits",
+                    "Minister of Immigration and Correctional Services Decree Number M.IP-08.GR.01.01 of 2025 concerning Visa Classification",
+                    "Minister of Finance Regulation Number 9/PMK.02/2022 concerning Types and Rates of Urgent-Need PNBP for Immigration Services at the Ministry of Law and Human Rights",
+                    "Minister of Finance Regulation Number 82 of 2023 concerning Types and Rates of Urgent-Need PNBP for Golden Visa Services at the Ministry of Law and Human Rights"
+                ]
             },
-            "dasar_hukum": [
-                "Peraturan Pemerintah Nomor 45 tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
-                "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
-                "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 tahun 2025 tentang Klasifikasi Visa",
-                "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kemenkumham RI",
-                "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kemenkumham RI"
-            ]
+            "zh": {
+                "penjelasan_umum": [
+                    "若您年满55岁并计划在印度尼西亚居住定居，通过我们的老年人临时居留许可服务，我们随时准备为老年人临时居留许可提供协助。",
+                    "此许可申请流程需要了解计划在印度尼西亚居住定居的外国老年人最新法规及政策的专业人员。在经验丰富的专业团队支持下，从文件准备到许可签发的每个阶段都能够合法、安全且依规完成。这确保了与老年人居留许可相关的所有行政事务运作得更加高效精准。",
+                    "作为强调合法性及法律合规的服务提供商，我们深知老年人居留许可的办理涉及多个重要阶段：文件制作、核实流程、政府机构批准，直至最终许可的签发。将此流程托付给我们，您可避免行政障碍，并确保外国老年公民能够正式在印度尼西亚居住，畅通无阻。",
+                    "我们的服务旨在为需要办理老年人临时居留许可协助的企业及个人，提供全面、专业且值得信赖的解决方案。"
+                ],
+                "dokumen_didapat": [
+                    "VITAS、ITAS及多次出入境再入境许可的非税国家收入付款账单代码",
+                    "电子临时居留签证",
+                    "临时居留许可+多次出入境再入境许可",
+                    "居住证明（SKTT）",
+                    "外国人登记回执"
+                ],
+                "syarat": {
+                    "sections": [
+                        {
+                            "label": "甲、担保人文件",
+                            "groups": [
+                                {
+                                    "notes": [
+                                        "护照所有页面的扫描件，有效期至少20（二十）个月（55岁以上）；",
+                                        "背景不限的证件照电子版；",
+                                        "有效且生效中的健康保险；",
+                                        "银行对账单，余额至少5,000美元；",
+                                        "2名印尼籍佣人的身份证电子版；",
+                                        "房屋租赁合同电子版（如为租赁）及房东身份证复印件（如有）；",
+                                        "简历（CV）；",
+                                        "退休基金文件电子版（如有）；",
+                                        "无业证明；",
+                                        "雇佣2名印尼籍佣人声明书；",
+                                        "居住证明；",
+                                        "已填妥签名及10,000印尼盾印花税票的申请信/表格。"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "rincian_biaya": {
+                    "items": [
+                        {
+                            "label": "非税国家收入（VITAS、ITAS及MERP）",
+                            "amount": "Rp 10.750.000"
+                        }
+                    ],
+                    "total_label": "办理费用",
+                    "total_amount": "Rp 7.000.000"
+                },
+                "dasar_hukum": [
+                    "2024年第45号政府法规，关于法务与人权部非税国家收入费率",
+                    "2023年第22号法律与人权部长条例，关于签证及居留许可",
+                    "2024年第11号法律与人权部长条例，关于签证及居留许可",
+                    "第M.IP-08.GR.01.01号（2025年）移民与教养部长决定，关于签证分类",
+                    "第9/PMK.02/2022号财政部长条例，关于法务与人权部紧急移民服务非税国家收入（PNBP）的种类及费率",
+                    "2023年第82号财政部长条例，关于法务与人权部紧急黄金签证服务非税国家收入（PNBP）的种类及费率"
+                ]
+            }
         },
-        "faq": []
+        "perpanjangan": null,
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]

@@ -1,848 +1,2496 @@
 [
     {
         "id": 1,
-        "name": "Visa China",
+        "name": {
+            "id": "Visa China",
+            "en": "China Visa",
+            "zh": "中国签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 2,
-        "excerpt": "Pengurusan visa China untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan yang berlaku.",
+        "excerpt": {
+            "id": "Pengurusan visa China untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan yang berlaku.",
+            "en": "Processing of China visas for tourism and business purposes in accordance with applicable embassy provisions.",
+            "zh": "依据现行使馆规定，办理用于旅游及商务目的的中国签证。"
+        },
         "detail_path": "/visa-mancanegara/1",
         "image": "",
-        "tabs": [
-            {
-                "label": "VISA TURIS (L)",
-                "penjelasan_umum": [
-                    "Apabila Anda berencana melakukan kunjungan ke China untuk keperluan seperti berwisata, pengembangan pribadi, atau mempelajari keunikan daya tarik wisata, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa L, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-                    "Visa L merupakan Visa Wisata ke negara China dengan izin tinggal awal paling lama 30 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut tidak dapat diperpanjang sesuai dengan ketentuan yang berlaku."
-                ],
-                "dokumen_didapat": {
-                    "nama": "VISA L CHINA",
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
-                },
-                "persyaratan_dokumen": [
-                    {
-                        "label": "Persyaratan Visa Turis (L)",
-                        "items": [
-                            "Scancopy Paspor dengan masa berlaku minimal 6 (Enam) bulan",
-                            "Asli Paspor lama 5 tahun terakhir (Jika ada)",
-                            "Asli Photo terbaru latar belakang putih ukuran 33mm x 48mm sebanyak 2 Lembar",
-                            "Untuk WNA : Copy KITAS",
-                            {
-                                "text": "Untuk usia dibawah 18 Tahun :",
-                                "sub_items": [
-                                    "Copy Akta Kelahiran",
-                                    "Copy Paspor/KTP Kedua orangtua",
-                                    "Asli surat pernyataan/persetujuan dari orang tua yang tidak ikut serta yang mengizinkan perjalanan (harus tertera tanggal perjalanan dan informasi kontak orangtua)"
-                                ]
-                            },
-                            "Reservasi tiket pesawat (pulang-pergi)",
-                            "Reservasi hotel"
+        "tabs": {
+            "id": [
+                {
+                    "label": "VISA TURIS (L)",
+                    "penjelasan_umum": [
+                        "Apabila Anda berencana melakukan kunjungan ke China untuk keperluan seperti berwisata, pengembangan pribadi, atau mempelajari keunikan daya tarik wisata, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa L, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                        "Visa L merupakan Visa Wisata ke negara China dengan izin tinggal awal paling lama 30 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut tidak dapat diperpanjang sesuai dengan ketentuan yang berlaku."
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "VISA L CHINA",
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
                         ]
-                    }
-                ],
-                "rincian_biaya": {
-                    "items": [
+                    },
+                    "persyaratan_dokumen": [
                         {
-                            "label": "Retribusi – Single Entry Visa L (Normal)",
-                            "amount": "Rp. 1.000.000"
+                            "label": "Persyaratan Visa Turis (L)",
+                            "items": [
+                                "Scancopy Paspor dengan masa berlaku minimal 6 (Enam) bulan",
+                                "Asli Paspor lama 5 tahun terakhir (Jika ada)",
+                                "Asli Photo terbaru latar belakang putih ukuran 33mm x 48mm sebanyak 2 Lembar",
+                                "Untuk WNA : Copy KITAS",
+                                {
+                                    "text": "Untuk usia dibawah 18 Tahun :",
+                                    "sub_items": [
+                                        "Copy Akta Kelahiran",
+                                        "Copy Paspor/KTP Kedua orangtua",
+                                        "Asli surat pernyataan/persetujuan dari orang tua yang tidak ikut serta yang mengizinkan perjalanan (harus tertera tanggal perjalanan dan informasi kontak orangtua)"
+                                    ]
+                                },
+                                "Reservasi tiket pesawat (pulang-pergi)",
+                                "Reservasi hotel"
+                            ]
                         }
                     ],
-                    "biaya_penanganan": "Rp. 1.000.000"
-                },
-                "sidebar_label": "CHINA VISA TURIS (L)",
-                "sidebar_harga": "Rp 1.000.000"
-            },
-            {
-                "label": "VISA BISNIS (M)",
-                "penjelasan_umum": [
-                    "Apabila Anda berencana melakukan kunjungan ke China untuk keperluan seperti: Perdagangan, Partisipasi dalam Kompetisi, Aktivitas komersial lainnya. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa M, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-                    "Visa M merupakan Visa Bisnis ke negara China dengan izin tinggal awal paling lama 30 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut tidak dapat diperpanjang sesuai dengan ketentuan yang berlaku."
-                ],
-                "dokumen_didapat": {
-                    "nama": "VISA M CHINA",
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
-                },
-                "persyaratan_dokumen": [
-                    {
-                        "label": "Persyaratan Visa Bisnis (M)",
+                    "rincian_biaya": {
                         "items": [
-                            "Scancopy Paspor dengan masa berlaku minimal 6 (Enam) bulan",
-                            "Asli Paspor lama 5 tahun terakhir (Jika ada)",
-                            "Asli Photo terbaru latar belakang putih ukuran 33mm x 48mm sebanyak 2 Lembar",
-                            "Untuk WNA : Copy KITAS",
                             {
-                                "text": "Untuk usia dibawah 18 Tahun :",
-                                "sub_items": [
-                                    "Copy Akta Kelahiran",
-                                    "Copy Paspor/KTP Kedua orangtua",
-                                    "Asli surat pernyataan/persetujuan dari orang tua yang tidak ikut serta yang mengizinkan perjalanan (harus tertera tanggal perjalanan dan informasi kontak orangtua)"
-                                ]
-                            },
-                            {
-                                "text": "Dokumen terkait kegiatan komersial yang dikeluarkan oleh mitra dagang di Tiongkok, atau undangan pameran dagang, dll. Surat undangan harus memuat:",
-                                "sub_items": [
-                                    "Informasi pemohon (termasuk nama lengkap, jenis kelamin, tanggal lahir, dll.);",
-                                    "Rincian kunjungan yang direncanakan (termasuk tujuan kunjungan, tanggal kedatangan dan keberangkatan, tempat yang akan dikunjungi, hubungan antara pemohon dan pihak pengundang, rincian dukungan keuangan yang akan diberikan selama tinggal di Tiongkok);",
-                                    "Informasi pihak pengundang (termasuk nama, nomor telepon kontak, alamat, stempel resmi, tanda tangan perwakilan hukum atau individu)."
-                                ]
+                                "label": "Retribusi – Single Entry Visa L (Normal)",
+                                "amount": "Rp. 1.000.000"
                             }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "CHINA VISA TURIS (L)",
+                    "sidebar_harga": "Rp 1.000.000"
+                },
+                {
+                    "label": "VISA BISNIS (M)",
+                    "penjelasan_umum": [
+                        "Apabila Anda berencana melakukan kunjungan ke China untuk keperluan seperti: Perdagangan, Partisipasi dalam Kompetisi, Aktivitas komersial lainnya. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa M, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                        "Visa M merupakan Visa Bisnis ke negara China dengan izin tinggal awal paling lama 30 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut tidak dapat diperpanjang sesuai dengan ketentuan yang berlaku."
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "VISA M CHINA",
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
                         ]
-                    }
-                ],
-                "rincian_biaya": {
-                    "items": [
+                    },
+                    "persyaratan_dokumen": [
                         {
-                            "label": "Retribusi – Single Entry Visa M (Normal)",
-                            "amount": "Rp. 1.000.000"
+                            "label": "Persyaratan Visa Bisnis (M)",
+                            "items": [
+                                "Scancopy Paspor dengan masa berlaku minimal 6 (Enam) bulan",
+                                "Asli Paspor lama 5 tahun terakhir (Jika ada)",
+                                "Asli Photo terbaru latar belakang putih ukuran 33mm x 48mm sebanyak 2 Lembar",
+                                "Untuk WNA : Copy KITAS",
+                                {
+                                    "text": "Untuk usia dibawah 18 Tahun :",
+                                    "sub_items": [
+                                        "Copy Akta Kelahiran",
+                                        "Copy Paspor/KTP Kedua orangtua",
+                                        "Asli surat pernyataan/persetujuan dari orang tua yang tidak ikut serta yang mengizinkan perjalanan (harus tertera tanggal perjalanan dan informasi kontak orangtua)"
+                                    ]
+                                },
+                                {
+                                    "text": "Dokumen terkait kegiatan komersial yang dikeluarkan oleh mitra dagang di Tiongkok, atau undangan pameran dagang, dll. Surat undangan harus memuat:",
+                                    "sub_items": [
+                                        "Informasi pemohon (termasuk nama lengkap, jenis kelamin, tanggal lahir, dll.);",
+                                        "Rincian kunjungan yang direncanakan (termasuk tujuan kunjungan, tanggal kedatangan dan keberangkatan, tempat yang akan dikunjungi, hubungan antara pemohon dan pihak pengundang, rincian dukungan keuangan yang akan diberikan selama tinggal di Tiongkok);",
+                                        "Informasi pihak pengundang (termasuk nama, nomor telepon kontak, alamat, stempel resmi, tanda tangan perwakilan hukum atau individu)."
+                                    ]
+                                }
+                            ]
                         }
                     ],
-                    "biaya_penanganan": "Rp. 1.000.000"
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "Retribusi – Single Entry Visa M (Normal)",
+                                "amount": "Rp. 1.000.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "CHINA VISA BISNIS (M)",
+                    "sidebar_harga": "Rp 1.000.000"
+                }
+            ],
+            "en": [
+                {
+                    "label": "TOURIST VISA (L)",
+                    "penjelasan_umum": [
+                        "If you plan to visit China for purposes such as tourism, personal development, or exploring unique tourist attractions, ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our L Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations.",
+                        "The L Visa is a Tourist Visa to China with an initial stay permit of a maximum of 30 days, counted from the date of arrival. This stay permit cannot be extended in accordance with applicable provisions."
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "CHINA VISA L",
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "persyaratan_dokumen": [
+                        {
+                            "label": "Tourist Visa (L) Requirements",
+                            "items": [
+                                "Scan copy of Passport with a validity period of at least 6 (six) months",
+                                "Original old Passport from the last 5 years (if any)",
+                                "2 original recent photos with white background, size 33mm x 48mm",
+                                "For Foreign Citizens: Copy of KITAS",
+                                {
+                                    "text": "For those under 18 years of age:",
+                                    "sub_items": [
+                                        "Copy of Birth Certificate",
+                                        "Copy of both parents' Passport/ID Card",
+                                        "Original statement/consent letter from the non-accompanying parent permitting travel (must include the travel date and parent's contact information)"
+                                    ]
+                                },
+                                "Round-trip flight ticket reservation",
+                                "Hotel reservation"
+                            ]
+                        }
+                    ],
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "Fee – Single Entry Visa L (Normal)",
+                                "amount": "Rp. 1.000.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "CHINA TOURIST VISA (L)",
+                    "sidebar_harga": "Rp 1.000.000"
                 },
-                "sidebar_label": "CHINA VISA BISNIS (M)",
-                "sidebar_harga": "Rp 1.000.000"
-            }
-        ],
+                {
+                    "label": "BUSINESS VISA (M)",
+                    "penjelasan_umum": [
+                        "If you plan to visit China for purposes such as: Trade, Participation in Competitions, or Other commercial activities, ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our M Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations.",
+                        "The M Visa is a Business Visa to China with an initial stay permit of a maximum of 30 days, counted from the date of arrival. This stay permit cannot be extended in accordance with applicable provisions."
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "CHINA VISA M",
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "persyaratan_dokumen": [
+                        {
+                            "label": "Business Visa (M) Requirements",
+                            "items": [
+                                "Scan copy of Passport with a validity period of at least 6 (six) months",
+                                "Original old Passport from the last 5 years (if any)",
+                                "2 original recent photos with white background, size 33mm x 48mm",
+                                "For Foreign Citizens: Copy of KITAS",
+                                {
+                                    "text": "For those under 18 years of age:",
+                                    "sub_items": [
+                                        "Copy of Birth Certificate",
+                                        "Copy of both parents' Passport/ID Card",
+                                        "Original statement/consent letter from the non-accompanying parent permitting travel (must include the travel date and parent's contact information)"
+                                    ]
+                                },
+                                {
+                                    "text": "Documents related to commercial activities issued by a trading partner in China, or trade fair invitation, etc. The invitation letter must include:",
+                                    "sub_items": [
+                                        "Applicant information (including full name, gender, date of birth, etc.);",
+                                        "Details of the planned visit (including the purpose of the visit, arrival and departure dates, places to be visited, the relationship between the applicant and the inviting party, and details of the financial support to be provided during the stay in China);",
+                                        "Information of the inviting party (including name, contact phone number, address, official stamp, signature of the legal representative or individual)."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "Fee – Single Entry Visa M (Normal)",
+                                "amount": "Rp. 1.000.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "CHINA BUSINESS VISA (M)",
+                    "sidebar_harga": "Rp 1.000.000"
+                }
+            ],
+            "zh": [
+                {
+                    "label": "旅游签证（L）",
+                    "penjelasan_umum": [
+                        "若您计划前往中国旅游、进行个人发展或体验独特旅游景点，确保签证办理流程符合现行使馆规定十分重要。通过我们的L签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。",
+                        "L签证是前往中国的旅游签证，初始停留许可最长为30天，自抵达之日起计算。依据现行规定，该停留许可不可延期。"
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "中国L签证",
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "persyaratan_dokumen": [
+                        {
+                            "label": "旅游签证（L）要求",
+                            "items": [
+                                "有效期至少6（六）个月的护照扫描件",
+                                "近5年旧护照原件（如有）",
+                                "2张33毫米x48毫米白底近期照片原件",
+                                "外国公民：KITAS复印件",
+                                {
+                                    "text": "18岁以下人士：",
+                                    "sub_items": [
+                                        "出生证明复印件",
+                                        "父母双方护照/身份证复印件",
+                                        "未随行父母出具的同意出行声明书原件（须注明出行日期及父母联系方式）"
+                                    ]
+                                },
+                                "往返机票预订",
+                                "酒店预订"
+                            ]
+                        }
+                    ],
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "费用-单次入境L签证（普通）",
+                                "amount": "Rp. 1.000.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "中国旅游签证（L）",
+                    "sidebar_harga": "Rp 1.000.000"
+                },
+                {
+                    "label": "商务签证（M）",
+                    "penjelasan_umum": [
+                        "若您计划因贸易、参加比赛或其他商业活动前往中国，确保签证办理流程符合现行使馆规定十分重要。通过我们的M签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。",
+                        "M签证是前往中国的商务签证，初始停留许可最长为30天，自抵达之日起计算。依据现行规定，该停留许可不可延期。"
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "中国M签证",
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "persyaratan_dokumen": [
+                        {
+                            "label": "商务签证（M）要求",
+                            "items": [
+                                "有效期至少6（六）个月的护照扫描件",
+                                "近5年旧护照原件（如有）",
+                                "2张33毫米x48毫米白底近期照片原件",
+                                "外国公民：KITAS复印件",
+                                {
+                                    "text": "18岁以下人士：",
+                                    "sub_items": [
+                                        "出生证明复印件",
+                                        "父母双方护照/身份证复印件",
+                                        "未随行父母出具的同意出行声明书原件（须注明出行日期及父母联系方式）"
+                                    ]
+                                },
+                                {
+                                    "text": "由中国贸易伙伴出具的商业活动相关文件，或贸易展会邀请函等。邀请函须包含以下内容：",
+                                    "sub_items": [
+                                        "申请人信息（包括全名、性别、出生日期等）；",
+                                        "计划访问的详情（包括访问目的、抵达及离境日期、拟访问地点、申请人与邀请方的关系，以及在中国停留期间提供的经济支持详情）；",
+                                        "邀请方信息（包括名称、联系电话、地址、官方印章、法定代表人或个人签名）。"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "费用-单次入境M签证（普通）",
+                                "amount": "Rp. 1.000.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "中国商务签证（M）",
+                    "sidebar_harga": "Rp 1.000.000"
+                }
+            ]
+        },
         "penjelasan_umum": null,
         "dokumen_didapat": null,
         "persyaratan_dokumen": null,
         "rincian_biaya": null,
-        "faq": []
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 2,
-        "name": "Visa United State Of America",
+        "name": {
+            "id": "Visa United State Of America",
+            "en": "United States of America Visa",
+            "zh": "美利坚合众国签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Amerika Serikat B1/B2 untuk keperluan bisnis dan wisata sesuai ketentuan kedutaan.",
+        "excerpt": {
+            "id": "Pengurusan visa Amerika Serikat B1/B2 untuk keperluan bisnis dan wisata sesuai ketentuan kedutaan.",
+            "en": "Processing of United States B1/B2 visas for business and tourism purposes in accordance with embassy provisions.",
+            "zh": "依据使馆规定，办理用于商务及旅游目的的美国B1/B2签证。"
+        },
         "detail_path": "/visa-mancanegara/2",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Amerika Serikat untuk keperluan seperti kunjungan sementara (bisnis/wisata, kerja, pelajar, pertukaran pelajar, transit/awak kapal). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa M, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-            "Visa kunjungan B-1/B-2 diperuntukkan bagi orang yang bepergian ke Amerika Serikat sementara untuk urusan bisnis (B-1) atau untuk rekreasi atau perawatan medis (B-2). Umumnya, visa B-1 diperuntukkan bagi pelancong yang berkonsultasi dengan rekan bisnis, menghadiri konvensi/konferensi ilmiah, pendidikan, profesional, atau bisnis, mengurus warisan, atau menegosiasikan kontrak. Visa B-2 diperuntukkan bagi perjalanan yang bersifat rekreasi, termasuk pariwisata, kunjungan ke teman atau kerabat, perawatan medis, dan kegiatan yang bersifat persaudaraan, sosial, atau pelayanan. Seringkali, visa B-1 dan B-2 digabungkan dan diterbitkan sebagai satu visa: B-1/B-2. Umumnya masa berlaku visa B1/B2 adalah 5 Tahun."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA B1/B2 AMERIKA SERIKAT",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Amerika Serikat untuk keperluan seperti kunjungan sementara (bisnis/wisata, kerja, pelajar, pertukaran pelajar, transit/awak kapal). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa M, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                "Visa kunjungan B-1/B-2 diperuntukkan bagi orang yang bepergian ke Amerika Serikat sementara untuk urusan bisnis (B-1) atau untuk rekreasi atau perawatan medis (B-2). Umumnya, visa B-1 diperuntukkan bagi pelancong yang berkonsultasi dengan rekan bisnis, menghadiri konvensi/konferensi ilmiah, pendidikan, profesional, atau bisnis, mengurus warisan, atau menegosiasikan kontrak. Visa B-2 diperuntukkan bagi perjalanan yang bersifat rekreasi, termasuk pariwisata, kunjungan ke teman atau kerabat, perawatan medis, dan kegiatan yang bersifat persaudaraan, sosial, atau pelayanan. Seringkali, visa B-1 dan B-2 digabungkan dan diterbitkan sebagai satu visa: B-1/B-2. Umumnya masa berlaku visa B1/B2 adalah 5 Tahun."
+            ],
+            "en": [
+                "If you plan to visit the United States for purposes such as a temporary visit (business/tourism, work, student, student exchange, transit/crew). Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations.",
+                "The B-1/B-2 visit visa is intended for people traveling to the United States temporarily for business (B-1) or for recreation or medical treatment (B-2). Generally, the B-1 visa is intended for travelers consulting with business associates, attending scientific, educational, professional, or business conventions/conferences, settling an estate, or negotiating a contract. The B-2 visa is intended for recreational travel, including tourism, visiting friends or relatives, medical treatment, and activities of a fraternal, social, or service nature. B-1 and B-2 visas are often combined and issued as a single visa: B-1/B-2. The B1/B2 visa is generally valid for 5 years."
+            ],
+            "zh": [
+                "若您计划因临时访问（商务/旅游、工作、留学、交换生、过境/船员）前往美国，确保签证办理流程符合现行使馆规定十分重要。通过我们的签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。",
+                "B-1/B-2访问签证适用于因商务（B-1）或休闲及医疗（B-2）目的临时前往美国的人员。通常，B-1签证适用于与商业伙伴洽谈、出席科学/教育/专业/商务会议、处理遗产事务或协商合同的旅客。B-2签证适用于休闲性质的旅行，包括旅游、探亲访友、医疗及联谊、社交或服务性质的活动。B-1及B-2签证通常合并签发为一份签证：B-1/B-2。B1/B2签证的有效期通常为5年。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa B1/B2",
-                "items": [
-                    "Scancopy Paspor dengan masa berlaku minimal 6 (Enam) bulan",
-                    "Asli Paspor lama 5 tahun terakhir (Jika ada)",
-                    "Visa USA sebelumnya (Jika ada)",
-                    "Asli Photo terbaru latar belakang putih ukuran 5cm x 5cm sebanyak 2 Lembar",
-                    "Untuk WNA : Copy KITAS",
-                    {
-                        "text": "Untuk usia dibawah 18 Tahun :",
-                        "sub_items": [
-                            "Copy Akta Kelahiran",
-                            "Copy Paspor/KTP Kedua orangtua",
-                            "Asli surat pernyataan/persetujuan dari orang tua yang tidak ikut serta yang mengizinkan perjalanan (harus tertera tanggal perjalanan dan informasi kontak orangtua)"
-                        ],
-                        "numbered_items": [
-                            "Copy KTP, Kartu Keluarga",
-                            "Untuk Keperluan Bisnis : Undangan dari perusahaan di USA"
-                        ]
-                    }
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA B1/B2 AMERIKA SERIKAT",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "UNITED STATES B1/B2 VISA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "美国B1/B2签证",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
+        },
+        "persyaratan_dokumen": {
+            "id": [
                 {
-                    "label": "Retribusi Multiple Entry Visa B1/B2 [Normal]",
-                    "amount": "Rp. 4.200.000"
+                    "label": "Persyaratan Visa B1/B2",
+                    "items": [
+                        "Scancopy Paspor dengan masa berlaku minimal 6 (Enam) bulan",
+                        "Asli Paspor lama 5 tahun terakhir (Jika ada)",
+                        "Visa USA sebelumnya (Jika ada)",
+                        "Asli Photo terbaru latar belakang putih ukuran 5cm x 5cm sebanyak 2 Lembar",
+                        "Untuk WNA : Copy KITAS",
+                        {
+                            "text": "Untuk usia dibawah 18 Tahun :",
+                            "sub_items": [
+                                "Copy Akta Kelahiran",
+                                "Copy Paspor/KTP Kedua orangtua",
+                                "Asli surat pernyataan/persetujuan dari orang tua yang tidak ikut serta yang mengizinkan perjalanan (harus tertera tanggal perjalanan dan informasi kontak orangtua)"
+                            ],
+                            "numbered_items": [
+                                "Copy KTP, Kartu Keluarga",
+                                "Untuk Keperluan Bisnis : Undangan dari perusahaan di USA"
+                            ]
+                        }
+                    ]
                 }
             ],
-            "biaya_penanganan": "Rp. 1.000.000"
+            "en": [
+                {
+                    "label": "B1/B2 Visa Requirements",
+                    "items": [
+                        "Scan copy of Passport with a validity period of at least 6 (six) months",
+                        "Original old Passport from the last 5 years (if any)",
+                        "Previous USA Visa (if any)",
+                        "2 original recent photos with white background, size 5cm x 5cm",
+                        "For Foreign Citizens: Copy of KITAS",
+                        {
+                            "text": "For those under 18 years of age:",
+                            "sub_items": [
+                                "Copy of Birth Certificate",
+                                "Copy of both parents' Passport/ID Card",
+                                "Original statement/consent letter from the non-accompanying parent permitting travel (must include the travel date and parent's contact information)"
+                            ],
+                            "numbered_items": [
+                                "Copy of ID Card and Family Card",
+                                "For Business Purposes: Invitation from a company in the USA"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "B1/B2签证要求",
+                    "items": [
+                        "有效期至少6（六）个月的护照扫描件",
+                        "近5年旧护照原件（如有）",
+                        "此前的美国签证（如有）",
+                        "2张5厘米x5厘米白底近期照片原件",
+                        "外国公民：KITAS复印件",
+                        {
+                            "text": "18岁以下人士：",
+                            "sub_items": [
+                                "出生证明复印件",
+                                "父母双方护照/身份证复印件",
+                                "未随行父母出具的同意出行声明书原件（须注明出行日期及父母联系方式）"
+                            ],
+                            "numbered_items": [
+                                "身份证及户口簿复印件",
+                                "商务用途：来自美国公司的邀请函"
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
-        "faq": []
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Multiple Entry Visa B1/B2 [Normal]",
+                        "amount": "Rp. 4.200.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "Fee for Multiple Entry Visa B1/B2 [Normal]",
+                        "amount": "Rp. 4.200.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "多次入境B1/B2签证费用[普通]",
+                        "amount": "Rp. 4.200.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 3,
-        "name": "Visa Uni Emirat Arab",
+        "name": {
+            "id": "Visa Uni Emirat Arab",
+            "en": "United Arab Emirates Visa",
+            "zh": "阿拉伯联合酋长国签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Uni Emirat Arab untuk keperluan wisata sesuai ketentuan kedutaan yang berlaku.",
+        "excerpt": {
+            "id": "Pengurusan visa Uni Emirat Arab untuk keperluan wisata sesuai ketentuan kedutaan yang berlaku.",
+            "en": "Processing of United Arab Emirates visas for tourism purposes in accordance with applicable embassy provisions.",
+            "zh": "依据现行使馆规定，办理用于旅游目的的阿联酋签证。"
+        },
         "detail_path": "/visa-mancanegara/3",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Amerika Serikat untuk keperluan seperti kunjungan sementara (bisnis/wisata, kerja, pelajar, pertukaran pelajar, transit/awak kapal). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa M, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-            "Visa kunjungan B-1/B-2 diperuntukkan bagi orang yang bepergian ke Amerika Serikat sementara untuk urusan bisnis (B-1) atau untuk rekreasi atau perawatan medis (B-2). Umumnya, visa B-1 diperuntukkan bagi pelancong yang berkonsultasi dengan rekan bisnis, menghadiri konvensi/konferensi ilmiah, pendidikan, profesional, atau bisnis, mengurus warisan, atau menegosiasikan kontrak. Visa B-2 diperuntukkan bagi perjalanan yang bersifat rekreasi, termasuk pariwisata, kunjungan ke teman atau kerabat, perawatan medis, dan kegiatan yang bersifat persaudaraan, sosial, atau pelayanan. Seringkali, visa B-1 dan B-2 digabungkan dan diterbitkan sebagai satu visa: B-1/B-2. Umumnya masa berlaku visa B1/B2 adalah 5 Tahun."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA UNI EMIRAT ARAB",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Amerika Serikat untuk keperluan seperti kunjungan sementara (bisnis/wisata, kerja, pelajar, pertukaran pelajar, transit/awak kapal). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa M, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                "Visa kunjungan B-1/B-2 diperuntukkan bagi orang yang bepergian ke Amerika Serikat sementara untuk urusan bisnis (B-1) atau untuk rekreasi atau perawatan medis (B-2). Umumnya, visa B-1 diperuntukkan bagi pelancong yang berkonsultasi dengan rekan bisnis, menghadiri konvensi/konferensi ilmiah, pendidikan, profesional, atau bisnis, mengurus warisan, atau menegosiasikan kontrak. Visa B-2 diperuntukkan bagi perjalanan yang bersifat rekreasi, termasuk pariwisata, kunjungan ke teman atau kerabat, perawatan medis, dan kegiatan yang bersifat persaudaraan, sosial, atau pelayanan. Seringkali, visa B-1 dan B-2 digabungkan dan diterbitkan sebagai satu visa: B-1/B-2. Umumnya masa berlaku visa B1/B2 adalah 5 Tahun."
+            ],
+            "en": [
+                "If you plan to visit the United States for purposes such as a temporary visit (business/tourism, work, student, student exchange, transit/crew). Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations.",
+                "The B-1/B-2 visit visa is intended for people traveling to the United States temporarily for business (B-1) or for recreation or medical treatment (B-2). Generally, the B-1 visa is intended for travelers consulting with business associates, attending scientific, educational, professional, or business conventions/conferences, settling an estate, or negotiating a contract. The B-2 visa is intended for recreational travel, including tourism, visiting friends or relatives, medical treatment, and activities of a fraternal, social, or service nature. B-1 and B-2 visas are often combined and issued as a single visa: B-1/B-2. The B1/B2 visa is generally valid for 5 years."
+            ],
+            "zh": [
+                "若您计划因临时访问（商务/旅游、工作、留学、交换生、过境/船员）前往美国，确保签证办理流程符合现行使馆规定十分重要。通过我们的签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。",
+                "B-1/B-2访问签证适用于因商务（B-1）或休闲及医疗（B-2）目的临时前往美国的人员。通常，B-1签证适用于与商业伙伴洽谈、出席科学/教育/专业/商务会议、处理遗产事务或协商合同的旅客。B-2签证适用于休闲性质的旅行，包括旅游、探亲访友、医疗及联谊、社交或服务性质的活动。B-1及B-2签证通常合并签发为一份签证：B-1/B-2。B1/B2签证的有效期通常为5年。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa Uni Emirat Arab",
-                "items": [
-                    "Scancopy Paspor semua halaman, sudah ditandatangani dikolom tanda tangan pada halaman terakhir paspor",
-                    "Pas photo ukuran paspor",
-                    "Scancopy Kartu Tanda Penduduk",
-                    "Scancopy Reservasi Tiket Pesawat dan Hotel"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA UNI EMIRAT ARAB",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "UNITED ARAB EMIRATES VISA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "阿拉伯联合酋长国签证",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
+        },
+        "persyaratan_dokumen": {
+            "id": [
                 {
-                    "label": "Retribusi Visa Uni Emirat Arab (30 hari)",
-                    "amount": "Rp. 3.000.000"
+                    "label": "Persyaratan Visa Uni Emirat Arab",
+                    "items": [
+                        "Scancopy Paspor semua halaman, sudah ditandatangani dikolom tanda tangan pada halaman terakhir paspor",
+                        "Pas photo ukuran paspor",
+                        "Scancopy Kartu Tanda Penduduk",
+                        "Scancopy Reservasi Tiket Pesawat dan Hotel"
+                    ]
                 }
             ],
-            "biaya_penanganan": "Rp. 1.000.000"
+            "en": [
+                {
+                    "label": "United Arab Emirates Visa Requirements",
+                    "items": [
+                        "Scan copy of all Passport pages, signed in the signature column on the last page of the passport",
+                        "Passport-sized photo",
+                        "Scan copy of ID Card",
+                        "Scan copy of Flight Ticket and Hotel Reservation"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "阿联酋签证要求",
+                    "items": [
+                        "护照所有页面扫描件，须在护照最后一页签名栏签名",
+                        "护照尺寸证件照",
+                        "身份证扫描件",
+                        "机票及酒店预订扫描件"
+                    ]
+                }
+            ]
         },
-        "faq": []
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa Uni Emirat Arab (30 hari)",
+                        "amount": "Rp. 3.000.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "United Arab Emirates Visa Fee (30 days)",
+                        "amount": "Rp. 3.000.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "阿联酋签证费用（30天）",
+                        "amount": "Rp. 3.000.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 4,
-        "name": "Visa Australia",
+        "name": {
+            "id": "Visa Australia",
+            "en": "Australia Visa",
+            "zh": "澳大利亚签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Australia untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan yang berlaku.",
+        "excerpt": {
+            "id": "Pengurusan visa Australia untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan yang berlaku.",
+            "en": "Processing of Australia visas for tourism and business purposes in accordance with applicable embassy provisions.",
+            "zh": "依据现行使馆规定，办理用于旅游及商务目的的澳大利亚签证。"
+        },
         "detail_path": "/visa-mancanegara/4",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Australia untuk keperluan seperti kunjungan sementara (bisnis/wisata). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Australia, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA AUSTRALIA",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Australia untuk keperluan seperti kunjungan sementara (bisnis/wisata). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Australia, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+            ],
+            "en": [
+                "If you plan to visit Australia for purposes such as a temporary visit (business/tourism). Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our Australia Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+            ],
+            "zh": [
+                "若您计划因临时访问（商务/旅游）前往澳大利亚，确保签证办理流程符合现行使馆规定十分重要。通过我们的澳大利亚签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa Australia",
-                "items": [
-                    "Mengisi form manual Australia secara lengkap [terlampir]",
-                    "Seluruh halaman paspor baru dan lama, termasuk hal aman yang ada entry/exit stamp",
-                    "KTP dan Kartu Keluarga",
-                    "Akta lahir atau akta nikah",
-                    "Surat keterangan kerja",
-                    "Surat sponsor di Indonesia yang merinci alasan kunjungan, rencana masa tinggal, penanggung",
-                    "jawab seluruh biaya selama di Australia dan perincian kontak bisnis Australia",
-                    "Surat undangan yang merinci tujuan kunjungan (termasuk detail kontak pengundang dan paspor/id card pengundang.",
-                    "Rekening koran pribadi minimal saldo 40jt / slip gaji 3 bulan terakhir (disarankan tidak ada saldo dadakan masuk ke rekening pada akhir saldo bulan ke 3)",
-                    "Mohon informasunya jika pernah punya Visa Australia atau pernah ditolak Visa Australia"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA AUSTRALIA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "AUSTRALIA VISA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "澳大利亚签证",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
+        },
+        "persyaratan_dokumen": {
+            "id": [
                 {
-                    "label": "Retribusi Visa Australia",
-                    "amount": "Rp. 2.800.000"
+                    "label": "Persyaratan Visa Australia",
+                    "items": [
+                        "Mengisi form manual Australia secara lengkap [terlampir]",
+                        "Seluruh halaman paspor baru dan lama, termasuk hal aman yang ada entry/exit stamp",
+                        "KTP dan Kartu Keluarga",
+                        "Akta lahir atau akta nikah",
+                        "Surat keterangan kerja",
+                        "Surat sponsor di Indonesia yang merinci alasan kunjungan, rencana masa tinggal, penanggung",
+                        "jawab seluruh biaya selama di Australia dan perincian kontak bisnis Australia",
+                        "Surat undangan yang merinci tujuan kunjungan (termasuk detail kontak pengundang dan paspor/id card pengundang.",
+                        "Rekening koran pribadi minimal saldo 40jt / slip gaji 3 bulan terakhir (disarankan tidak ada saldo dadakan masuk ke rekening pada akhir saldo bulan ke 3)",
+                        "Mohon informasunya jika pernah punya Visa Australia atau pernah ditolak Visa Australia"
+                    ]
                 }
             ],
-            "biaya_penanganan": "Rp. 1.000.000"
+            "en": [
+                {
+                    "label": "Australia Visa Requirements",
+                    "items": [
+                        "Complete the Australia manual form [attached]",
+                        "All pages of new and old passports, including pages with entry/exit stamps",
+                        "ID Card and Family Card",
+                        "Birth Certificate or Marriage Certificate",
+                        "Employment Certificate",
+                        "Sponsor letter in Indonesia detailing the reason for the visit, planned length of stay, and the party responsible for",
+                        "all costs during the stay in Australia and details of Australian business contacts",
+                        "Invitation letter detailing the purpose of the visit (including the inviter's contact details and the inviter's passport/ID card.",
+                        "Personal bank statement with a minimum balance of IDR 40 million / last 3 months' salary slips (it is recommended that there is no sudden balance increase at the end of the 3rd month)",
+                        "Please provide information if you have previously held an Australian Visa or have been refused an Australian Visa"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "澳大利亚签证要求",
+                    "items": [
+                        "完整填写澳大利亚纸质表格[附件]",
+                        "新旧护照所有页面，包括含有出入境印章的页面",
+                        "身份证及户口簿",
+                        "出生证明或结婚证书",
+                        "工作证明",
+                        "印度尼西亚担保人函，详细说明访问原因、拟停留期限及负责人",
+                        "在澳大利亚期间的全部费用及澳大利亚商业联系人详情",
+                        "详细说明访问目的的邀请函（包括邀请人联系方式及邀请人护照/身份证）。",
+                        "个人银行对账单，余额至少4000万印尼盾/近3个月工资单（建议第3个月末余额不出现异常增加）",
+                        "如曾持有澳大利亚签证或曾被拒签，请提供相关信息"
+                    ]
+                }
+            ]
         },
-        "faq": []
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa Australia",
+                        "amount": "Rp. 2.800.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "Australia Visa Fee",
+                        "amount": "Rp. 2.800.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "澳大利亚签证费用",
+                        "amount": "Rp. 2.800.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 5,
-        "name": "Visa Taiwan",
+        "name": {
+            "id": "Visa Taiwan",
+            "en": "Taiwan Visa",
+            "zh": "台湾签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 2,
-        "excerpt": "Pengurusan visa Taiwan untuk keperluan wisata dan waiver sesuai ketentuan kedutaan yang berlaku.",
+        "excerpt": {
+            "id": "Pengurusan visa Taiwan untuk keperluan wisata dan waiver sesuai ketentuan kedutaan yang berlaku.",
+            "en": "Processing of Taiwan visas and visa waivers for tourism purposes in accordance with applicable embassy provisions.",
+            "zh": "依据现行使馆规定，办理用于旅游目的的台湾签证及免签证。"
+        },
         "detail_path": "/visa-mancanegara/5",
         "image": "",
-        "tabs": [
-            {
-                "label": "VISA WAIVER",
-                "penjelasan_umum": [
-                    "Apabila Anda berencana melakukan kunjungan ke Taiwan untuk keperluan seperti kunjungan sementara (bisnis/wisata) Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Waiver Taiwan, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-                ],
-                "dokumen_didapat": {
-                    "nama": "VISA WAIVER TAIWAN",
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
-                },
-                "persyaratan_dokumen": [
-                    {
-                        "label": "Persyaratan Visa Waiver",
-                        "items": [
-                            "Scan paspor, visa japan dan sticker masuk japan",
-                            "Scancopy Kartu Tanda Penduduk dan Kartu Keluarga",
-                            "Nomor Handphone dan alamat e-mail",
-                            "Naik pesawat apa (lampiran tiket jika sudah beli)",
-                            "Tanggal berangkat dan pulang",
-                            "Nama orangtua, alamat tinggal, no.tip (jika masih hidup)"
+        "tabs": {
+            "id": [
+                {
+                    "label": "VISA WAIVER",
+                    "penjelasan_umum": [
+                        "Apabila Anda berencana melakukan kunjungan ke Taiwan untuk keperluan seperti kunjungan sementara (bisnis/wisata) Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Waiver Taiwan, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "VISA WAIVER TAIWAN",
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
                         ]
-                    }
-                ],
-                "rincian_biaya": {
-                    "items": [
+                    },
+                    "persyaratan_dokumen": [
                         {
-                            "label": "Retribusi Visa Taiwan [Waiver]",
-                            "amount": "Rp. 1.000.000"
+                            "label": "Persyaratan Visa Waiver",
+                            "items": [
+                                "Scan paspor, visa japan dan sticker masuk japan",
+                                "Scancopy Kartu Tanda Penduduk dan Kartu Keluarga",
+                                "Nomor Handphone dan alamat e-mail",
+                                "Naik pesawat apa (lampiran tiket jika sudah beli)",
+                                "Tanggal berangkat dan pulang",
+                                "Nama orangtua, alamat tinggal, no.tip (jika masih hidup)"
+                            ]
                         }
                     ],
-                    "biaya_penanganan": "Rp. 1.000.000"
-                },
-                "sidebar_label": "VISA WAIVER TAIWAN",
-                "sidebar_harga": "Rp 1.000.000"
-            },
-            {
-                "label": "VISA TURIS",
-                "penjelasan_umum": [
-                    "Apabila Anda berencana melakukan kunjungan ke Taiwan untuk keperluan seperti kunjungan sementara wisata Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Taiwan, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-                ],
-                "dokumen_didapat": {
-                    "nama": "VISA TURIS TAIWAN",
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
-                    ]
-                },
-                "persyaratan_dokumen": [
-                    {
-                        "label": "Persyaratan Visa Turis",
+                    "rincian_biaya": {
                         "items": [
-                            "Asli Paspor dan scan halaman paspor yang terdapat entry/exit stamp dengan masa berlaku minimal 6 bulan, jika ada asli paspor lama mohon di scan semua halaman yang terdapat entry/exit stamp.",
-                            "Pas photo 4x6 background putih (dilarang memakai baju putih dan kacamata)",
-                            "KTP, Kartu Keluarga, Akta lahir atau akta nikah/cerai",
-                            "Surat keterangan kerja (jika bekerja), surat keterangan bersekolah atau kuliah (jika pelajar)",
-                            "Surat Referensi Bank, Rekening koran 3 bulan terakhir yang menunjukkan riwayat tabungan dan/atau pendapatan tetap yang konsisten dari waktu ke waktu",
-                            "Reservasi tiket dan hotel",
-                            "Itinerary Perjalanan (Tanggal, tempat yang akan dikunjungi, tempat menginap)"
+                            {
+                                "label": "Retribusi Visa Taiwan [Waiver]",
+                                "amount": "Rp. 1.000.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "VISA WAIVER TAIWAN",
+                    "sidebar_harga": "Rp 1.000.000"
+                },
+                {
+                    "label": "VISA TURIS",
+                    "penjelasan_umum": [
+                        "Apabila Anda berencana melakukan kunjungan ke Taiwan untuk keperluan seperti kunjungan sementara wisata Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Taiwan, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "VISA TURIS TAIWAN",
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
                         ]
-                    }
-                ],
-                "rincian_biaya": {
-                    "items": [
+                    },
+                    "persyaratan_dokumen": [
                         {
-                            "label": "Retribusi Visa Taiwan [Turis]",
-                            "amount": "Rp. 1.800.000"
+                            "label": "Persyaratan Visa Turis",
+                            "items": [
+                                "Asli Paspor dan scan halaman paspor yang terdapat entry/exit stamp dengan masa berlaku minimal 6 bulan, jika ada asli paspor lama mohon di scan semua halaman yang terdapat entry/exit stamp.",
+                                "Pas photo 4x6 background putih (dilarang memakai baju putih dan kacamata)",
+                                "KTP, Kartu Keluarga, Akta lahir atau akta nikah/cerai",
+                                "Surat keterangan kerja (jika bekerja), surat keterangan bersekolah atau kuliah (jika pelajar)",
+                                "Surat Referensi Bank, Rekening koran 3 bulan terakhir yang menunjukkan riwayat tabungan dan/atau pendapatan tetap yang konsisten dari waktu ke waktu",
+                                "Reservasi tiket dan hotel",
+                                "Itinerary Perjalanan (Tanggal, tempat yang akan dikunjungi, tempat menginap)"
+                            ]
                         }
                     ],
-                    "biaya_penanganan": "Rp. 1.000.000"
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "Retribusi Visa Taiwan [Turis]",
+                                "amount": "Rp. 1.800.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "VISA TURIS TAIWAN",
+                    "sidebar_harga": "Rp 1.000.000"
+                }
+            ],
+            "en": [
+                {
+                    "label": "VISA WAIVER",
+                    "penjelasan_umum": [
+                        "If you plan to visit Taiwan for purposes such as a temporary visit (business/tourism), ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our Taiwan Visa Waiver processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "TAIWAN VISA WAIVER",
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "persyaratan_dokumen": [
+                        {
+                            "label": "Visa Waiver Requirements",
+                            "items": [
+                                "Scan of passport, Japan visa, and Japan entry sticker",
+                                "Scan copy of ID Card and Family Card",
+                                "Mobile phone number and email address",
+                                "Which airline (attach ticket if already purchased)",
+                                "Departure and return dates",
+                                "Parents' names, residential address, phone number (if living)"
+                            ]
+                        }
+                    ],
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "Taiwan Visa Fee [Waiver]",
+                                "amount": "Rp. 1.000.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "TAIWAN VISA WAIVER",
+                    "sidebar_harga": "Rp 1.000.000"
                 },
-                "sidebar_label": "VISA TURIS TAIWAN",
-                "sidebar_harga": "Rp 1.000.000"
-            }
-        ],
+                {
+                    "label": "TOURIST VISA",
+                    "penjelasan_umum": [
+                        "If you plan to visit Taiwan for purposes such as a temporary tourist visit, ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our Taiwan Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "TAIWAN TOURIST VISA",
+                        "termasuk": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    },
+                    "persyaratan_dokumen": [
+                        {
+                            "label": "Tourist Visa Requirements",
+                            "items": [
+                                "Original Passport and scan of passport pages with entry/exit stamps, with a validity period of at least 6 months; if there is an old passport, please scan all pages with entry/exit stamps.",
+                                "4x6 photo with white background (white clothing and glasses are not allowed)",
+                                "ID Card, Family Card, Birth Certificate or Marriage/Divorce Certificate",
+                                "Employment certificate (if working), school or university enrollment certificate (if a student)",
+                                "Bank Reference Letter, Bank statement for the last 3 months showing savings history and/or consistent regular income over time",
+                                "Ticket and hotel reservation",
+                                "Travel Itinerary (Dates, places to be visited, accommodation)"
+                            ]
+                        }
+                    ],
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "Taiwan Visa Fee [Tourist]",
+                                "amount": "Rp. 1.800.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "TAIWAN TOURIST VISA",
+                    "sidebar_harga": "Rp 1.000.000"
+                }
+            ],
+            "zh": [
+                {
+                    "label": "免签证",
+                    "penjelasan_umum": [
+                        "若您计划因临时访问（商务/旅游）前往台湾，确保签证办理流程符合现行使馆规定十分重要。通过我们的台湾免签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "台湾免签证",
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "persyaratan_dokumen": [
+                        {
+                            "label": "免签证要求",
+                            "items": [
+                                "护照、日本签证及日本入境贴纸扫描件",
+                                "身份证及户口簿扫描件",
+                                "手机号码及电子邮箱地址",
+                                "乘坐航班信息（若已购票请附机票）",
+                                "出发及返回日期",
+                                "父母姓名、居住地址、电话号码（若健在）"
+                            ]
+                        }
+                    ],
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "台湾签证费用[免签证]",
+                                "amount": "Rp. 1.000.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "台湾免签证",
+                    "sidebar_harga": "Rp 1.000.000"
+                },
+                {
+                    "label": "旅游签证",
+                    "penjelasan_umum": [
+                        "若您计划因临时旅游访问前往台湾，确保签证办理流程符合现行使馆规定十分重要。通过我们的台湾签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
+                    ],
+                    "dokumen_didapat": {
+                        "nama": "台湾旅游签证",
+                        "termasuk": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack套件"
+                        ]
+                    },
+                    "persyaratan_dokumen": [
+                        {
+                            "label": "旅游签证要求",
+                            "items": [
+                                "护照原件及有效期至少6个月且带出入境印章页面的护照扫描件；如有旧护照，请将所有带出入境印章的页面扫描。",
+                                "4x6白底证件照（禁止穿白色衣服及佩戴眼镜）",
+                                "身份证、户口簿、出生证明或结婚/离婚证书",
+                                "工作证明（如在职）、在校证明（如为学生）",
+                                "银行推荐信、近3个月银行对账单，显示储蓄记录及/或持续稳定的定期收入",
+                                "机票及酒店预订",
+                                "旅行行程（日期、拟访问地点、住宿地点）"
+                            ]
+                        }
+                    ],
+                    "rincian_biaya": {
+                        "items": [
+                            {
+                                "label": "台湾签证费用[旅游]",
+                                "amount": "Rp. 1.800.000"
+                            }
+                        ],
+                        "biaya_penanganan": "Rp. 1.000.000"
+                    },
+                    "sidebar_label": "台湾旅游签证",
+                    "sidebar_harga": "Rp 1.000.000"
+                }
+            ]
+        },
         "penjelasan_umum": null,
         "dokumen_didapat": null,
         "persyaratan_dokumen": null,
         "rincian_biaya": null,
-        "faq": []
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 6,
-        "name": "Visa Korea Selatan",
+        "name": {
+            "id": "Visa Korea Selatan",
+            "en": "South Korea Visa",
+            "zh": "韩国签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Korea Selatan untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+        "excerpt": {
+            "id": "Pengurusan visa Korea Selatan untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+            "en": "Processing of South Korea visas for tourism and business purposes in accordance with embassy provisions.",
+            "zh": "依据使馆规定，办理用于旅游及商务目的的韩国签证。"
+        },
         "detail_path": "/visa-mancanegara/6",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Korea Selatan untuk keperluan seperti kunjungan sementara (bisnis/wisata). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Korea Selatan;"
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA KOREA SELATAN",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Korea Selatan untuk keperluan seperti kunjungan sementara (bisnis/wisata). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Korea Selatan;"
+            ],
+            "en": [
+                "If you plan to visit South Korea for purposes such as a temporary visit (business/tourism). Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our South Korea Visa processing service;"
+            ],
+            "zh": [
+                "若您计划因临时访问（商务/旅游）前往韩国，确保签证办理流程符合现行使馆规定十分重要。通过我们的韩国签证办理服务；"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa Korea Selatan",
-                "items": [
-                    "Passport yang telah ditandatangani, minimal masa berlaku 7 bulan sebelum keberangkatan (all pages)",
-                    "Passport lama harus dilampirkan (jika ada)",
-                    "KTP, Kartu Keluarga, akte kelahiran, akte nikah (translite dalam b.inggris tersumpah)",
-                    "Rekening bank pribadi selama 3 bulan terakhir (tidak boleh ada dana dadakan masuk, ada income masuk rutin), bisa melampirkan lebih dari 1 bank",
-                    "Rekening bank sponsor selama 3 bulan terakhir",
-                    "Untuk pegawai : Surat sponsor/surat keterangan kerja dalam Bahasa Inggris (diatas kop surat perusahaan)",
-                    "Untuk pengusaha : Statement letter mengenai usahanya, SIUP, NIB/Ijin Usaha",
-                    "Reservasi hotel selama di UK",
-                    "Reservasi tiket jika sudah ada (optional)",
-                    "Mohon di isi lengkap Form Aplikasi UK terlampir",
-                    "Surat undangan resmi dari UK beserta ID Card/Passport pengundang (jika bisnis)",
-                    "Surat undangan resmi dari UK beserta ID Card/Passport pengundang (jika bisnis)"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA KOREA SELATAN",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "SOUTH KOREA VISA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "韩国签证",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
+        },
+        "persyaratan_dokumen": {
+            "id": [
                 {
-                    "label": "Retribusi Visa Korea Single 3 Bulan (Reguler)",
-                    "amount": "Rp. 1.350.000"
+                    "label": "Persyaratan Visa Korea Selatan",
+                    "items": [
+                        "Passport yang telah ditandatangani, minimal masa berlaku 7 bulan sebelum keberangkatan (all pages)",
+                        "Passport lama harus dilampirkan (jika ada)",
+                        "KTP, Kartu Keluarga, akte kelahiran, akte nikah (translite dalam b.inggris tersumpah)",
+                        "Rekening bank pribadi selama 3 bulan terakhir (tidak boleh ada dana dadakan masuk, ada income masuk rutin), bisa melampirkan lebih dari 1 bank",
+                        "Rekening bank sponsor selama 3 bulan terakhir",
+                        "Untuk pegawai : Surat sponsor/surat keterangan kerja dalam Bahasa Inggris (diatas kop surat perusahaan)",
+                        "Untuk pengusaha : Statement letter mengenai usahanya, SIUP, NIB/Ijin Usaha",
+                        "Reservasi hotel selama di UK",
+                        "Reservasi tiket jika sudah ada (optional)",
+                        "Mohon di isi lengkap Form Aplikasi UK terlampir",
+                        "Surat undangan resmi dari UK beserta ID Card/Passport pengundang (jika bisnis)",
+                        "Surat undangan resmi dari UK beserta ID Card/Passport pengundang (jika bisnis)"
+                    ]
                 }
             ],
-            "biaya_penanganan": "Rp. 1.000.000"
+            "en": [
+                {
+                    "label": "South Korea Visa Requirements",
+                    "items": [
+                        "Signed passport, valid for at least 7 months before departure (all pages)",
+                        "Old passport must be attached (if any)",
+                        "ID Card, Family Card, birth certificate, marriage certificate (sworn translation into English)",
+                        "Personal bank statement for the last 3 months (no sudden incoming funds allowed, must show regular incoming income), more than 1 bank account may be attached",
+                        "Sponsor's bank statement for the last 3 months",
+                        "For employees: Sponsor letter/employment certificate in English (on company letterhead)",
+                        "For business owners: Statement letter regarding the business, SIUP, NIB/Business License",
+                        "Hotel reservation during stay in the UK",
+                        "Ticket reservation if already available (optional)",
+                        "Please complete the attached UK Application Form",
+                        "Official invitation letter from the UK along with the inviter's ID Card/Passport (if for business)",
+                        "Official invitation letter from the UK along with the inviter's ID Card/Passport (if for business)"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "韩国签证要求",
+                    "items": [
+                        "已签名的护照，出发前有效期至少7个月（所有页面）",
+                        "须附上旧护照（如有）",
+                        "身份证、户口簿、出生证明、结婚证书（须经宣誓翻译为英文）",
+                        "近3个月个人银行对账单（不得有异常入账，须有定期收入），可附上1个以上银行账户",
+                        "担保人近3个月银行对账单",
+                        "员工：英文担保函/工作证明（须使用公司信头）",
+                        "企业主：业务声明书、SIUP、NIB/营业执照",
+                        "在英国期间的酒店预订",
+                        "机票预订（如已购买，可选）",
+                        "请完整填写附件中的英国申请表",
+                        "英国官方邀请函及邀请人身份证/护照（如为商务用途）",
+                        "英国官方邀请函及邀请人身份证/护照（如为商务用途）"
+                    ]
+                }
+            ]
         },
-        "faq": []
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa Korea Single 3 Bulan (Reguler)",
+                        "amount": "Rp. 1.350.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "South Korea Single Entry Visa Fee, 3 Months (Regular)",
+                        "amount": "Rp. 1.350.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "韩国单次入境签证费用，3个月（普通）",
+                        "amount": "Rp. 1.350.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 7,
-        "name": "Visa India",
+        "name": {
+            "id": "Visa India",
+            "en": "India Visa",
+            "zh": "印度签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa India untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan yang berlaku.",
+        "excerpt": {
+            "id": "Pengurusan visa India untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan yang berlaku.",
+            "en": "Processing of India visas for tourism and business purposes in accordance with applicable embassy provisions.",
+            "zh": "依据现行使馆规定，办理用于旅游及商务目的的印度签证。"
+        },
         "detail_path": "/visa-mancanegara/7",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke India untuk keperluan seperti kunjungan sementara (bisnis/wisata). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa India, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA INDIA",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke India untuk keperluan seperti kunjungan sementara (bisnis/wisata). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa India, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+            ],
+            "en": [
+                "If you plan to visit India for purposes such as a temporary visit (business/tourism). Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our India Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+            ],
+            "zh": [
+                "若您计划因临时访问（商务/旅游）前往印度，确保签证办理流程符合现行使馆规定十分重要。通过我们的印度签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa India",
-                "items": [
-                    "Scan warna seluruh halaman paspor yang berlaku lebih dari 6 bulan",
-                    "Photo terbaru latar belakang putih 2 x 2 inch/ukuran paspor",
-                    "Konfirmasi tiket pulang-pergi",
-                    "Konfirmasi/pemesanan Hotel",
-                    "Referensi bank dari rekening bank pribadi 3 bulan terakhir; harus dilegalisir oleh bank",
-                    "Untuk Bisnis : Surat undangan/sponsor dari India dengan salinan paspor dan ID Card pengundang. Dalam kasus orang asing yang mengundang untuk tinggal di India, salinan visa India yang berlaku juga harus dilampirkan. Kartu nama perusahaan di India",
-                    "Sertifikat TDP perusahaan India",
-                    "Scan warna KTP, KK dan Akte Lahir",
-                    "Name tag/kartu nama WNI",
-                    "E-KITAS / KITAP untuk WNA"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA INDIA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "INDIA VISA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "印度签证",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
-                { "label": "Visa India [Business]", "amount": "Rp. 2.500.000" },
-                { "label": "Visa India [Tourist]", "amount": "Rp. 1.800.000" }
-            ],
-            "biaya_penanganan": "Rp. 1.000.000"
         },
-        "faq": []
+        "persyaratan_dokumen": {
+            "id": [
+                {
+                    "label": "Persyaratan Visa India",
+                    "items": [
+                        "Scan warna seluruh halaman paspor yang berlaku lebih dari 6 bulan",
+                        "Photo terbaru latar belakang putih 2 x 2 inch/ukuran paspor",
+                        "Konfirmasi tiket pulang-pergi",
+                        "Konfirmasi/pemesanan Hotel",
+                        "Referensi bank dari rekening bank pribadi 3 bulan terakhir; harus dilegalisir oleh bank",
+                        "Untuk Bisnis : Surat undangan/sponsor dari India dengan salinan paspor dan ID Card pengundang. Dalam kasus orang asing yang mengundang untuk tinggal di India, salinan visa India yang berlaku juga harus dilampirkan. Kartu nama perusahaan di India",
+                        "Sertifikat TDP perusahaan India",
+                        "Scan warna KTP, KK dan Akte Lahir",
+                        "Name tag/kartu nama WNI",
+                        "E-KITAS / KITAP untuk WNA"
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "label": "India Visa Requirements",
+                    "items": [
+                        "Color scan of all passport pages, valid for more than 6 months",
+                        "Recent photo with white background, 2 x 2 inch/passport size",
+                        "Round-trip ticket confirmation",
+                        "Hotel confirmation/reservation",
+                        "Bank reference from personal bank account for the last 3 months; must be legalized by the bank",
+                        "For Business: Invitation/sponsorship letter from India with a copy of the inviter's passport and ID Card. In the case of a foreigner inviting a stay in India, a copy of a valid India visa must also be attached. Business card of the company in India",
+                        "India company TDP Certificate",
+                        "Color scan of ID Card, Family Card, and Birth Certificate",
+                        "Indonesian citizen's name tag/business card",
+                        "E-KITAS / KITAP for Foreign Citizens"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "印度签证要求",
+                    "items": [
+                        "有效期超过6个月的护照所有页面彩色扫描件",
+                        "2x2英寸/护照尺寸白底近期照片",
+                        "往返机票确认单",
+                        "酒店确认/预订单",
+                        "近3个月个人银行账户推荐信；须经银行公证",
+                        "商务用途：来自印度的邀请/担保函，附邀请人护照及身份证复印件。若邀请人为在印度停留的外国人，还须附上有效印度签证复印件。印度公司名片",
+                        "印度公司TDP证书",
+                        "身份证、户口簿及出生证明彩色扫描件",
+                        "印尼公民姓名牌/名片",
+                        "外国公民的电子KITAS/KITAP"
+                    ]
+                }
+            ]
+        },
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Visa India [Business]",
+                        "amount": "Rp. 2.500.000"
+                    },
+                    {
+                        "label": "Visa India [Tourist]",
+                        "amount": "Rp. 1.800.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "India Visa [Business]",
+                        "amount": "Rp. 2.500.000"
+                    },
+                    {
+                        "label": "India Visa [Tourist]",
+                        "amount": "Rp. 1.800.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "印度签证[商务]",
+                        "amount": "Rp. 2.500.000"
+                    },
+                    {
+                        "label": "印度签证[旅游]",
+                        "amount": "Rp. 1.800.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 8,
-        "name": "Visa United Kingdom (Inggris)",
+        "name": {
+            "id": "Visa United Kingdom (Inggris)",
+            "en": "United Kingdom (UK) Visa",
+            "zh": "英国签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa United Kingdom untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+        "excerpt": {
+            "id": "Pengurusan visa United Kingdom untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+            "en": "Processing of United Kingdom visas for tourism and business purposes in accordance with embassy provisions.",
+            "zh": "依据使馆规定，办理用于旅游及商务目的的英国签证。"
+        },
         "detail_path": "/visa-mancanegara/8",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Inggris / United Kingdom untuk keperluan seperti kunjungan sementara (bisnis/wisata, kerja, pelajar, pertukaran pelajar, transit/awak kapal). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa UK, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA UNITED KINGDOM (INGGRIS)",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Inggris / United Kingdom untuk keperluan seperti kunjungan sementara (bisnis/wisata, kerja, pelajar, pertukaran pelajar, transit/awak kapal). Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa UK, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+            ],
+            "en": [
+                "If you plan to visit England/the United Kingdom for purposes such as a temporary visit (business/tourism, work, student, student exchange, transit/crew). Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our UK Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+            ],
+            "zh": [
+                "若您计划因临时访问（商务/旅游、工作、留学、交换生、过境/船员）前往英国，确保签证办理流程符合现行使馆规定十分重要。通过我们的英国签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa United Kingdom (Inggris)",
-                "items": [
-                    "Paspor yang telah ditandatangani, minimal masa berlaku 7 bulan sebelum keberangkatan (all pages)",
-                    "Paspor lama harus dilampirkan (jika ada)",
-                    "KTP, Kartu Keluarga, akte kelahiran, akte nikah (translite dalam b.inggris tersumpah)",
-                    "Rekening bank pribadi selama 3 bulan terakhir (tidak boleh ada dana dadakan masuk, ada income masuk rutin), bisa melampirkan lebih dari 1 bank",
-                    "Rekening bank sponsor selama 3 bulan terakhir",
-                    "Untuk pegawai : Surat sponsor/surat keterangan kerja dalam Bahasa Inggris (diatas kop surat perusahaan)",
-                    "Untuk pengusaha : Statement letter mengenai usahanya, SIUP, NIB/Ijin Usaha",
-                    "Reservasi hotel selama di UK",
-                    "Reservasi tiket jika sudah ada (optional)",
-                    "Mohon di isi lengkap Form Aplikasi UK terlampir",
-                    "Surat undangan resmi dari UK beserta ID Card/Passport pengundang (jika bisnis)"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA UNITED KINGDOM (INGGRIS)",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "UNITED KINGDOM (UK) VISA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "英国签证",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
-                { "label": "Retribusi Visa UK", "amount": "Rp. 3.700.000" }
-            ],
-            "biaya_penanganan": "Rp. 1.000.000"
         },
-        "faq": []
+        "persyaratan_dokumen": {
+            "id": [
+                {
+                    "label": "Persyaratan Visa United Kingdom (Inggris)",
+                    "items": [
+                        "Paspor yang telah ditandatangani, minimal masa berlaku 7 bulan sebelum keberangkatan (all pages)",
+                        "Paspor lama harus dilampirkan (jika ada)",
+                        "KTP, Kartu Keluarga, akte kelahiran, akte nikah (translite dalam b.inggris tersumpah)",
+                        "Rekening bank pribadi selama 3 bulan terakhir (tidak boleh ada dana dadakan masuk, ada income masuk rutin), bisa melampirkan lebih dari 1 bank",
+                        "Rekening bank sponsor selama 3 bulan terakhir",
+                        "Untuk pegawai : Surat sponsor/surat keterangan kerja dalam Bahasa Inggris (diatas kop surat perusahaan)",
+                        "Untuk pengusaha : Statement letter mengenai usahanya, SIUP, NIB/Ijin Usaha",
+                        "Reservasi hotel selama di UK",
+                        "Reservasi tiket jika sudah ada (optional)",
+                        "Mohon di isi lengkap Form Aplikasi UK terlampir",
+                        "Surat undangan resmi dari UK beserta ID Card/Passport pengundang (jika bisnis)"
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "label": "United Kingdom (UK) Visa Requirements",
+                    "items": [
+                        "Signed passport, valid for at least 7 months before departure (all pages)",
+                        "Old passport must be attached (if any)",
+                        "ID Card, Family Card, birth certificate, marriage certificate (sworn translation into English)",
+                        "Personal bank statement for the last 3 months (no sudden incoming funds allowed, must show regular incoming income), more than 1 bank account may be attached",
+                        "Sponsor's bank statement for the last 3 months",
+                        "For employees: Sponsor letter/employment certificate in English (on company letterhead)",
+                        "For business owners: Statement letter regarding the business, SIUP, NIB/Business License",
+                        "Hotel reservation during stay in the UK",
+                        "Ticket reservation if already available (optional)",
+                        "Please complete the attached UK Application Form",
+                        "Official invitation letter from the UK along with the inviter's ID Card/Passport (if for business)"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "英国签证要求",
+                    "items": [
+                        "已签名的护照，出发前有效期至少7个月（所有页面）",
+                        "须附上旧护照（如有）",
+                        "身份证、户口簿、出生证明、结婚证书（须经宣誓翻译为英文）",
+                        "近3个月个人银行对账单（不得有异常入账，须有定期收入），可附上1个以上银行账户",
+                        "担保人近3个月银行对账单",
+                        "员工：英文担保函/工作证明（须使用公司信头）",
+                        "企业主：业务声明书、SIUP、NIB/营业执照",
+                        "在英国期间的酒店预订",
+                        "机票预订（如已购买，可选）",
+                        "请完整填写附件中的英国申请表",
+                        "英国官方邀请函及邀请人身份证/护照（如为商务用途）"
+                    ]
+                }
+            ]
+        },
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa UK",
+                        "amount": "Rp. 3.700.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "UK Visa Fee",
+                        "amount": "Rp. 3.700.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "英国签证费用",
+                        "amount": "Rp. 3.700.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 9,
-        "name": "Visa Afrika Selatan",
+        "name": {
+            "id": "Visa Afrika Selatan",
+            "en": "South Africa Visa",
+            "zh": "南非签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Afrika Selatan untuk keperluan bisnis sesuai ketentuan kedutaan yang berlaku.",
+        "excerpt": {
+            "id": "Pengurusan visa Afrika Selatan untuk keperluan bisnis sesuai ketentuan kedutaan yang berlaku.",
+            "en": "Processing of South Africa visas for business purposes in accordance with applicable embassy provisions.",
+            "zh": "依据现行使馆规定，办理用于商务目的的南非签证。"
+        },
         "detail_path": "/visa-mancanegara/9",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Afrika Selatan untuk keperluan seperti kunjungan sementara Bisnis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Afrika Selatan, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA BISNIS AFRIKA SELATAN",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Afrika Selatan untuk keperluan seperti kunjungan sementara Bisnis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Afrika Selatan, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+            ],
+            "en": [
+                "If you plan to visit South Africa for purposes such as a temporary Business visit. Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our South Africa Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+            ],
+            "zh": [
+                "若您计划因临时商务访问前往南非，确保签证办理流程符合现行使馆规定十分重要。通过我们的南非签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa Bisnis Afrika Selatan",
-                "items": [
-                    "Scancopy Application Form (BI-84) dan sudah di tanda tangani",
-                    "Asli Paspor (tidak berlaku kurang dari 30 hari setelah berakhirnya kunjungan yang dihujukan) dan lampirkan copy semua halaman dari halaman paspor",
-                    "Pas photo terbaru (latar putih, ukuran 3.5 x 4.5 cm)",
-                    "Scancopy Tiket Pesawat dan Rencana perjalanan",
-                    "Scancopy Bukti akomodasi/hotel di Afrika Selatan",
-                    "Asli Rekening Koran Individu 3 bulan terakhir (sudah dilegalisir dengan cap basah bank)",
-                    "Asli Rekening Koran Sponsor 3 bulan terakhir (sudah dilegalisir dengan cap basah bank)",
-                    "Surat keterangan karyawan (menyebutkan bahwa individu tersebut sudah mendapatkan izin untuk kunjungan bisnis atau wisata lengkap dengan tanggal keberangkatan sampai pulang.",
-                    "Sertifikat Yellow Fever (jika perjalanan dimulai)",
-                    "Surat undangan dari SA",
-                    {
-                        "text": "Jika mengunjungi teman atau keluarga, dokumen-dokumen berikut harus ditunjukkan ke kantor Polisi Afrika Selatan untuk tujuan verifikasi:",
-                        "sub_items": [
-                            "a. Surat Pernyataan BI-1355 (GP) untuk tujuan visa harus diselesaikan (DHA) b. Surat undangan dari tuan rumah disertai bukti statusnya – IDe atau izin tinggal yang sah"
-                        ]
-                    },
-                    "Anak-anak di bawah usia harus melampirkan salinan resmi dari sertifikat kelahiran, akta nikah orang tua dan surat dari orang tua.",
-                    "Khusus WNA : melampirkan izin kerja / izin tinggal [KITAS] Asli yang masih berlaku di Indonesia."
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA BISNIS AFRIKA SELATAN",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "SOUTH AFRICA BUSINESS VISA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "南非商务签证",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
+        },
+        "persyaratan_dokumen": {
+            "id": [
                 {
-                    "label": "Retribusi Visa Bisnis Afrika Selatan",
-                    "amount": "Rp. 1.500.000"
+                    "label": "Persyaratan Visa Bisnis Afrika Selatan",
+                    "items": [
+                        "Scancopy Application Form (BI-84) dan sudah di tanda tangani",
+                        "Asli Paspor (tidak berlaku kurang dari 30 hari setelah berakhirnya kunjungan yang dihujukan) dan lampirkan copy semua halaman dari halaman paspor",
+                        "Pas photo terbaru (latar putih, ukuran 3.5 x 4.5 cm)",
+                        "Scancopy Tiket Pesawat dan Rencana perjalanan",
+                        "Scancopy Bukti akomodasi/hotel di Afrika Selatan",
+                        "Asli Rekening Koran Individu 3 bulan terakhir (sudah dilegalisir dengan cap basah bank)",
+                        "Asli Rekening Koran Sponsor 3 bulan terakhir (sudah dilegalisir dengan cap basah bank)",
+                        "Surat keterangan karyawan (menyebutkan bahwa individu tersebut sudah mendapatkan izin untuk kunjungan bisnis atau wisata lengkap dengan tanggal keberangkatan sampai pulang.",
+                        "Sertifikat Yellow Fever (jika perjalanan dimulai)",
+                        "Surat undangan dari SA",
+                        {
+                            "text": "Jika mengunjungi teman atau keluarga, dokumen-dokumen berikut harus ditunjukkan ke kantor Polisi Afrika Selatan untuk tujuan verifikasi:",
+                            "sub_items": [
+                                "a. Surat Pernyataan BI-1355 (GP) untuk tujuan visa harus diselesaikan (DHA) b. Surat undangan dari tuan rumah disertai bukti statusnya – IDe atau izin tinggal yang sah"
+                            ]
+                        },
+                        "Anak-anak di bawah usia harus melampirkan salinan resmi dari sertifikat kelahiran, akta nikah orang tua dan surat dari orang tua.",
+                        "Khusus WNA : melampirkan izin kerja / izin tinggal [KITAS] Asli yang masih berlaku di Indonesia."
+                    ]
                 }
             ],
-            "biaya_penanganan": "Rp. 1.000.000"
+            "en": [
+                {
+                    "label": "South Africa Business Visa Requirements",
+                    "items": [
+                        "Scan copy of the signed Application Form (BI-84)",
+                        "Original Passport (valid for no less than 30 days after the intended visit ends) with a copy of all passport pages attached",
+                        "Recent photo (white background, size 3.5 x 4.5 cm)",
+                        "Scan copy of Flight Ticket and Travel Itinerary",
+                        "Scan copy of accommodation/hotel proof in South Africa",
+                        "Original personal Bank Statement for the last 3 months (legalized with the bank's wet stamp)",
+                        "Original Sponsor's Bank Statement for the last 3 months (legalized with the bank's wet stamp)",
+                        "Employee certificate (stating that the individual has been granted permission for a business or tourist visit, complete with departure and return dates.",
+                        "Yellow Fever Certificate (if the trip originates from a relevant area)",
+                        "Invitation letter from South Africa",
+                        {
+                            "text": "If visiting friends or family, the following documents must be shown to the South African Police for verification purposes:",
+                            "sub_items": [
+                                "a. Statement Form BI-1355 (GP) for visa purposes must be completed (DHA) b. Invitation letter from the host along with proof of their status – valid ID or residence permit"
+                            ]
+                        },
+                        "Minor children must attach an official copy of the birth certificate, parents' marriage certificate, and a letter from the parents.",
+                        "For Foreign Citizens only: attach a valid original work permit/stay permit [KITAS] in Indonesia."
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "南非商务签证要求",
+                    "items": [
+                        "已签署的申请表（BI-84）扫描件",
+                        "护照原件（有效期须在预定访问结束后不少于30天）并附上所有护照页面复印件",
+                        "近期照片（白底，尺寸3.5x4.5厘米）",
+                        "机票及旅行计划扫描件",
+                        "南非住宿/酒店证明扫描件",
+                        "近3个月个人银行对账单原件（须经银行盖章公证）",
+                        "近3个月担保人银行对账单原件（须经银行盖章公证）",
+                        "员工证明（说明该个人已获准进行商务或旅游访问，须注明出发及返回日期）。",
+                        "黄热病证书（如行程起点相关）",
+                        "来自南非的邀请函",
+                        {
+                            "text": "若探访亲友，须向南非警方出示以下文件以供核实：",
+                            "sub_items": [
+                                "甲、须填写用于签证目的的BI-1355（GP）声明表（DHA）乙、东道主出具的邀请函，附有效身份证或居留许可证明其身份"
+                            ]
+                        },
+                        "未成年儿童须附上出生证明官方副本、父母结婚证书及父母出具的信函。",
+                        "仅限外国公民：附上在印度尼西亚仍然有效的工作许可/居留许可[KITAS]原件。"
+                    ]
+                }
+            ]
         },
-        "faq": []
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa Bisnis Afrika Selatan",
+                        "amount": "Rp. 1.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "South Africa Business Visa Fee",
+                        "amount": "Rp. 1.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "南非商务签证费用",
+                        "amount": "Rp. 1.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 10,
-        "name": "Visa Schengen – Germany",
+        "name": {
+            "id": "Visa Schengen – Germany",
+            "en": "Schengen Visa – Germany",
+            "zh": "申根签证-德国"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Schengen Germany untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+        "excerpt": {
+            "id": "Pengurusan visa Schengen Germany untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+            "en": "Processing of Schengen Germany visas for tourism and business purposes in accordance with embassy provisions.",
+            "zh": "依据使馆规定，办理用于旅游及商务目的的申根德国签证。"
+        },
         "detail_path": "/visa-mancanegara/10",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Germany untuk keperluan seperti kunjungan sementara Turis/Bisnis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Germany, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA SCHENGEN – GERMANY",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Germany untuk keperluan seperti kunjungan sementara Turis/Bisnis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Germany, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+            ],
+            "en": [
+                "If you plan to visit Germany for purposes such as a temporary Tourist/Business visit. Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our Germany Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+            ],
+            "zh": [
+                "若您计划因临时旅游/商务访问前往德国，确保签证办理流程符合现行使馆规定十分重要。通过我们的德国签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa Schengen – Germany",
-                "items": [
-                    "Asli Formulir Aplikasi yang ditandatangani; (https://videx.diplo.de/videx/visum-erfassung/de/videx-kurzfristiger-aufenthalt)",
-                    "Asli Paspor dan salinan minimal tiga bulan dari tanggal kadaluarsa visa",
-                    "Foto terbaru dengan latar belakang putih abu-abu muda, ukuran 3.5 x 4.5 cm, 2 lembar. Wajah harus menutupi setidaknya 80% dari gambar. Tidak lebih dari 6 bulan.",
-                    {
-                        "text": "Asli Surat pengantar (dalam bahasa Inggris/Jerman atau beserta terjemahan bahasa Inggris/Jerman):",
-                        "sub_items": [
-                            "Menjelaskan tujuan perjalanan secara detail dan;",
-                            "Menggambarkan rencana perjalanan (misalnya kereta antar kota dan jarak jauh, bus antar kota.",
-                            "Penerbangan domestik antar penerbangan di dalam area schengen yang direncanakan untuk seluruh durasi kunjungan beserta bukti yang diperlukan (jika ada)"
-                        ]
-                    },
-                    {
-                        "text": "Asuransi kesehatan dan Perjalanan:",
-                        "sub_items": [
-                            "Berlaku untuk seluruh durasi visa yang diminta dan untuk semua negara schengen",
-                            "Cakupan minimum 30.000 €, termasuk evakuasi dan repatriasi"
-                        ]
-                    },
-                    "Reservasi penerbangan dan pemesanan hotel dengan alamat lengkap (nama, jalan, kota, kode pos, informasi kontak, referensi pemesanan);",
-                    {
-                        "text": "Surat undangan dari kop surat perusahaan dari mitra bisnis yang mengkonfirmasi nama dan perusahaan/perusahaan pemohon, data perjalanan dan tujuan kunjungan serta siapa yang akan menanggung biaya perjalanan",
-                        "sub_items": [
-                            "Menyerotikejikan apa yang direncanakan",
-                            "Apa hubungan bisnis antara perusahaan pengundang dan pengirim? (grup yang sama, perusahaan pengundang adalah pemasok atau perusahaan pengirim adalah pemasok, apa sebenarnya yang diperdagangkan perusahaan satu sama lain (mesin, peralatan, barang dagangan)",
-                            "Jadwal rinci pertemuan bisnis Anda (HANYA untuk masa tinggal lebih dari 30 hari)",
-                            "Jika pemohon bermaksud bertemu beberapa mitra bisnis di Area Schengen, harapilampirkan rencana perjalanan dan semua surat undangan dari tiap perusahaan, sebutkan tujuan perjalanan serta data pribadi pemohon."
-                        ]
-                    },
-                    "Untuk karyawan : Slip gaji tiga bulan terakhir, kontrak kerja dan surat dari perusahaan tempat pemohon bekerja",
-                    "Asli rekening koran pribadi tiga bulan terakhir yang di cap basah oleh bank",
-                    "Asli rekening koran sponsor tiga bulan terakhir yang di cap basah oleh bank Original keluarga asli (diterjemahkan ke dalam bahasa inggris / Jerman)"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA SCHENGEN – GERMANY",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "SCHENGEN VISA – GERMANY",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "申根签证-德国",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
+        },
+        "persyaratan_dokumen": {
+            "id": [
                 {
-                    "label": "Retribusi Visa Schengen – Germany",
-                    "amount": "Rp. 3.500.000"
+                    "label": "Persyaratan Visa Schengen – Germany",
+                    "items": [
+                        "Asli Formulir Aplikasi yang ditandatangani; (https://videx.diplo.de/videx/visum-erfassung/de/videx-kurzfristiger-aufenthalt)",
+                        "Asli Paspor dan salinan minimal tiga bulan dari tanggal kadaluarsa visa",
+                        "Foto terbaru dengan latar belakang putih abu-abu muda, ukuran 3.5 x 4.5 cm, 2 lembar. Wajah harus menutupi setidaknya 80% dari gambar. Tidak lebih dari 6 bulan.",
+                        {
+                            "text": "Asli Surat pengantar (dalam bahasa Inggris/Jerman atau beserta terjemahan bahasa Inggris/Jerman):",
+                            "sub_items": [
+                                "Menjelaskan tujuan perjalanan secara detail dan;",
+                                "Menggambarkan rencana perjalanan (misalnya kereta antar kota dan jarak jauh, bus antar kota.",
+                                "Penerbangan domestik antar penerbangan di dalam area schengen yang direncanakan untuk seluruh durasi kunjungan beserta bukti yang diperlukan (jika ada)"
+                            ]
+                        },
+                        {
+                            "text": "Asuransi kesehatan dan Perjalanan:",
+                            "sub_items": [
+                                "Berlaku untuk seluruh durasi visa yang diminta dan untuk semua negara schengen",
+                                "Cakupan minimum 30.000 €, termasuk evakuasi dan repatriasi"
+                            ]
+                        },
+                        "Reservasi penerbangan dan pemesanan hotel dengan alamat lengkap (nama, jalan, kota, kode pos, informasi kontak, referensi pemesanan);",
+                        {
+                            "text": "Surat undangan dari kop surat perusahaan dari mitra bisnis yang mengkonfirmasi nama dan perusahaan/perusahaan pemohon, data perjalanan dan tujuan kunjungan serta siapa yang akan menanggung biaya perjalanan",
+                            "sub_items": [
+                                "Menyerotikejikan apa yang direncanakan",
+                                "Apa hubungan bisnis antara perusahaan pengundang dan pengirim? (grup yang sama, perusahaan pengundang adalah pemasok atau perusahaan pengirim adalah pemasok, apa sebenarnya yang diperdagangkan perusahaan satu sama lain (mesin, peralatan, barang dagangan)",
+                                "Jadwal rinci pertemuan bisnis Anda (HANYA untuk masa tinggal lebih dari 30 hari)",
+                                "Jika pemohon bermaksud bertemu beberapa mitra bisnis di Area Schengen, harapilampirkan rencana perjalanan dan semua surat undangan dari tiap perusahaan, sebutkan tujuan perjalanan serta data pribadi pemohon."
+                            ]
+                        },
+                        "Untuk karyawan : Slip gaji tiga bulan terakhir, kontrak kerja dan surat dari perusahaan tempat pemohon bekerja",
+                        "Asli rekening koran pribadi tiga bulan terakhir yang di cap basah oleh bank",
+                        "Asli rekening koran sponsor tiga bulan terakhir yang di cap basah oleh bank Original keluarga asli (diterjemahkan ke dalam bahasa inggris / Jerman)"
+                    ]
                 }
             ],
-            "biaya_penanganan": "Rp. 1.000.000"
+            "en": [
+                {
+                    "label": "Schengen Visa – Germany Requirements",
+                    "items": [
+                        "Original signed Application Form; (https://videx.diplo.de/videx/visum-erfassung/de/videx-kurzfristiger-aufenthalt)",
+                        "Original Passport and a copy, valid for at least three months from the visa expiry date",
+                        "2 recent photos with a light gray-white background, size 3.5 x 4.5 cm. The face must cover at least 80% of the image. Not older than 6 months.",
+                        {
+                            "text": "Original Cover Letter (in English/German or with an English/German translation):",
+                            "sub_items": [
+                                "Explaining the purpose of the trip in detail; and",
+                                "Describing the travel plan (e.g., intercity and long-distance trains, intercity buses.",
+                                "Domestic flights within the Schengen area planned for the entire duration of the visit along with required proof (if any)"
+                            ]
+                        },
+                        {
+                            "text": "Health and Travel Insurance:",
+                            "sub_items": [
+                                "Valid for the entire duration of the requested visa and for all Schengen countries",
+                                "Minimum coverage of €30,000, including evacuation and repatriation"
+                            ]
+                        },
+                        "Flight reservation and hotel booking with complete address (name, street, city, postal code, contact information, booking reference);",
+                        {
+                            "text": "Invitation letter on company letterhead from the business partner confirming the applicant's name and company, travel details and purpose of the visit, and who will bear the travel costs",
+                            "sub_items": [
+                                "Stating what is planned",
+                                "What is the business relationship between the inviting and sending companies? (same group, inviting company is a supplier or sending company is a supplier, what exactly the companies trade with each other (machinery, equipment, merchandise)",
+                                "Detailed schedule of your business meetings (ONLY for stays longer than 30 days)",
+                                "If the applicant intends to meet several business partners in the Schengen Area, please attach the travel plan and all invitation letters from each company, stating the purpose of the trip and the applicant's personal data."
+                            ]
+                        },
+                        "For employees: Last three months' salary slips, employment contract, and a letter from the company where the applicant works",
+                        "Original personal bank statement for the last three months, wet-stamped by the bank",
+                        "Original sponsor's bank statement for the last three months, wet-stamped by the bank, along with original family documents (translated into English/German)"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "申根签证-德国要求",
+                    "items": [
+                        "已签署的申请表原件；（https://videx.diplo.de/videx/visum-erfassung/de/videx-kurzfristiger-aufenthalt）",
+                        "护照原件及复印件，有效期须比签证到期日多至少三个月",
+                        "2张浅灰白底近期照片，尺寸3.5x4.5厘米。面部须占照片至少80%。照片须为6个月内拍摄。",
+                        {
+                            "text": "介绍信原件（英文/德文或附英文/德文译本）：",
+                            "sub_items": [
+                                "详细说明出行目的；及",
+                                "描述出行计划（例如城际及长途火车、城际巴士）。",
+                                "计划在申根区域内全程访问期间乘坐的境内航班及所需证明（如有）"
+                            ]
+                        },
+                        {
+                            "text": "健康及旅行保险：",
+                            "sub_items": [
+                                "适用于所申请签证的整个有效期及所有申根国家",
+                                "最低保额3万欧元，含撤离及遣返"
+                            ]
+                        },
+                        "航班预订及酒店预订，附完整地址（姓名、街道、城市、邮政编码、联系方式、预订编号）；",
+                        {
+                            "text": "商业伙伴出具的邀请函（使用公司信头），确认申请人姓名及公司、行程数据及访问目的，以及行程费用承担方",
+                            "sub_items": [
+                                "说明计划内容",
+                                "邀请方公司与派遣方公司之间的商业关系为何？（同一集团、邀请方为供应商或派遣方为供应商、双方公司实际交易的内容（机械、设备、商品）",
+                                "详细商务会议日程（仅适用于停留超过30天的情况）",
+                                "若申请人计划在申根区域会见多家商业伙伴，请附上行程计划及各公司出具的所有邀请函，并说明出行目的及申请人个人数据。"
+                            ]
+                        },
+                        "员工：近三个月工资单、劳动合同及申请人所在公司出具的信函",
+                        "近三个月个人银行对账单原件，须经银行盖章",
+                        "近三个月担保人银行对账单原件，须经银行盖章，连同家庭文件原件（译为英文/德文）"
+                    ]
+                }
+            ]
         },
-        "faq": []
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa Schengen – Germany",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "Schengen Visa Fee – Germany",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "申根签证费用-德国",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 11,
-        "name": "Visa Schengen – Italy",
+        "name": {
+            "id": "Visa Schengen – Italy",
+            "en": "Schengen Visa – Italy",
+            "zh": "申根签证-意大利"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Schengen Italy untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+        "excerpt": {
+            "id": "Pengurusan visa Schengen Italy untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+            "en": "Processing of Schengen Italy visas for tourism and business purposes in accordance with embassy provisions.",
+            "zh": "依据使馆规定，办理用于旅游及商务目的的申根意大利签证。"
+        },
         "detail_path": "/visa-mancanegara/11",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Italy untuk keperluan seperti kunjungan sementara Turis/Bisnis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Germany, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA SCHENGEN – ITALY",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Italy untuk keperluan seperti kunjungan sementara Turis/Bisnis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Germany, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+            ],
+            "en": [
+                "If you plan to visit Italy for purposes such as a temporary Tourist/Business visit. Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our Germany Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+            ],
+            "zh": [
+                "若您计划因临时旅游/商务访问前往意大利，确保签证办理流程符合现行使馆规定十分重要。通过我们的德国签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa Schengen – ITALY",
-                "items": [
-                    "Asli Formulir Aplikasi yang ditandatangani; (https://videx.diplo.de/videx/visum-erfassung/de/videx-kurzfristiger-aufenthalt)",
-                    "Asli Paspor dan salinan minimal tiga bulan dari tanggal kadaluarsa visa",
-                    "Foto terbaru dengan latar belakang putih abu-abu muda, ukuran 3.5 x 4.5 cm, 2 lembar. Wajah harus menutupi setidaknya 80% dari gambar. Tidak lebih dari 6 bulan.",
-                    {
-                        "text": "Asli Surat pengantar (dalam bahasa Inggris/Italy atau beserta terjemahan bahasa Inggris/Italy):",
-                        "sub_items": [
-                            "Menjelaskan tujuan perjalanan secara detail dan;",
-                            "Menggambarkan rencana perjalanan (misalnya kereta antar kota dan jarak jauh, bus antar kota.",
-                            "Penerbangan domestik antar penerbangan di dalam area schengen yang direncanakan untuk seluruh durasi kunjungan beserta bukti yang diperlukan (jika ada)"
-                        ]
-                    },
-                    {
-                        "text": "Asuransi kesehatan dan Perjalanan:",
-                        "sub_items": [
-                            "Berlaku untuk seluruh durasi visa yang diminta dan untuk semua negara schengen",
-                            "Cakupan minimum 30.000 €, termasuk evakuasi dan repatriasi"
-                        ]
-                    },
-                    "Reservasi penerbangan dan pemesanan hotel dengan alamat lengkap (nama, jalan, kota, kode pos, informasi kontak, referensi pemesanan);",
-                    {
-                        "text": "Surat undangan dari kop surat perusahaan dari mitra bisnis yang mengkonfirmasi nama dan perusahaan/perusahaan pemohon, data perjalanan dan tujuan kunjungan serta siapa yang akan menanggung biaya perjalanan",
-                        "sub_items": [
-                            "Menyerotikejikan apa yang direncanakan",
-                            "Apa hubungan bisnis antara perusahaan pengundang dan pengirim? (grup yang sama, perusahaan pengundang adalah pemasok atau perusahaan pengirim adalah pemasok, apa sebenarnya yang diperdagangkan perusahaan satu sama lain (mesin, peralatan, barang dagangan)",
-                            "Jadwal rinci pertemuan bisnis Anda (HANYA untuk masa tinggal lebih dari 30 hari)",
-                            "Jika pemohon bermaksud bertemu beberapa mitra bisnis di Area Schengen, harapilampirkan rencana perjalanan dan semua surat undangan dari tiap perusahaan, sebutkan tujuan perjalanan serta data pribadi pemohon."
-                        ]
-                    },
-                    "Untuk karyawan : Slip gaji tiga bulan terakhir, kontrak kerja dan surat dari perusahaan tempat pemohon bekerja",
-                    "Asli rekening koran pribadi tiga bulan terakhir yang di cap basah oleh bank",
-                    "Asli rekening koran sponsor tiga bulan terakhir yang di cap basah oleh bank Original keluarga asli (diterjemahkan ke dalam bahasa inggris / Jerman)"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA SCHENGEN – ITALY",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "SCHENGEN VISA – ITALY",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "申根签证-意大利",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
+        },
+        "persyaratan_dokumen": {
+            "id": [
                 {
-                    "label": "Retribusi Visa Schengen – Italy",
-                    "amount": "Rp. 3.500.000"
+                    "label": "Persyaratan Visa Schengen – ITALY",
+                    "items": [
+                        "Asli Formulir Aplikasi yang ditandatangani; (https://videx.diplo.de/videx/visum-erfassung/de/videx-kurzfristiger-aufenthalt)",
+                        "Asli Paspor dan salinan minimal tiga bulan dari tanggal kadaluarsa visa",
+                        "Foto terbaru dengan latar belakang putih abu-abu muda, ukuran 3.5 x 4.5 cm, 2 lembar. Wajah harus menutupi setidaknya 80% dari gambar. Tidak lebih dari 6 bulan.",
+                        {
+                            "text": "Asli Surat pengantar (dalam bahasa Inggris/Italy atau beserta terjemahan bahasa Inggris/Italy):",
+                            "sub_items": [
+                                "Menjelaskan tujuan perjalanan secara detail dan;",
+                                "Menggambarkan rencana perjalanan (misalnya kereta antar kota dan jarak jauh, bus antar kota.",
+                                "Penerbangan domestik antar penerbangan di dalam area schengen yang direncanakan untuk seluruh durasi kunjungan beserta bukti yang diperlukan (jika ada)"
+                            ]
+                        },
+                        {
+                            "text": "Asuransi kesehatan dan Perjalanan:",
+                            "sub_items": [
+                                "Berlaku untuk seluruh durasi visa yang diminta dan untuk semua negara schengen",
+                                "Cakupan minimum 30.000 €, termasuk evakuasi dan repatriasi"
+                            ]
+                        },
+                        "Reservasi penerbangan dan pemesanan hotel dengan alamat lengkap (nama, jalan, kota, kode pos, informasi kontak, referensi pemesanan);",
+                        {
+                            "text": "Surat undangan dari kop surat perusahaan dari mitra bisnis yang mengkonfirmasi nama dan perusahaan/perusahaan pemohon, data perjalanan dan tujuan kunjungan serta siapa yang akan menanggung biaya perjalanan",
+                            "sub_items": [
+                                "Menyerotikejikan apa yang direncanakan",
+                                "Apa hubungan bisnis antara perusahaan pengundang dan pengirim? (grup yang sama, perusahaan pengundang adalah pemasok atau perusahaan pengirim adalah pemasok, apa sebenarnya yang diperdagangkan perusahaan satu sama lain (mesin, peralatan, barang dagangan)",
+                                "Jadwal rinci pertemuan bisnis Anda (HANYA untuk masa tinggal lebih dari 30 hari)",
+                                "Jika pemohon bermaksud bertemu beberapa mitra bisnis di Area Schengen, harapilampirkan rencana perjalanan dan semua surat undangan dari tiap perusahaan, sebutkan tujuan perjalanan serta data pribadi pemohon."
+                            ]
+                        },
+                        "Untuk karyawan : Slip gaji tiga bulan terakhir, kontrak kerja dan surat dari perusahaan tempat pemohon bekerja",
+                        "Asli rekening koran pribadi tiga bulan terakhir yang di cap basah oleh bank",
+                        "Asli rekening koran sponsor tiga bulan terakhir yang di cap basah oleh bank Original keluarga asli (diterjemahkan ke dalam bahasa inggris / Jerman)"
+                    ]
                 }
             ],
-            "biaya_penanganan": "Rp. 1.000.000"
+            "en": [
+                {
+                    "label": "Schengen Visa – Italy Requirements",
+                    "items": [
+                        "Original signed Application Form; (https://videx.diplo.de/videx/visum-erfassung/de/videx-kurzfristiger-aufenthalt)",
+                        "Original Passport and a copy, valid for at least three months from the visa expiry date",
+                        "2 recent photos with a light gray-white background, size 3.5 x 4.5 cm. The face must cover at least 80% of the image. Not older than 6 months.",
+                        {
+                            "text": "Original Cover Letter (in English/Italian or with an English/Italian translation):",
+                            "sub_items": [
+                                "Explaining the purpose of the trip in detail; and",
+                                "Describing the travel plan (e.g., intercity and long-distance trains, intercity buses.",
+                                "Domestic flights within the Schengen area planned for the entire duration of the visit along with required proof (if any)"
+                            ]
+                        },
+                        {
+                            "text": "Health and Travel Insurance:",
+                            "sub_items": [
+                                "Valid for the entire duration of the requested visa and for all Schengen countries",
+                                "Minimum coverage of €30,000, including evacuation and repatriation"
+                            ]
+                        },
+                        "Flight reservation and hotel booking with complete address (name, street, city, postal code, contact information, booking reference);",
+                        {
+                            "text": "Invitation letter on company letterhead from the business partner confirming the applicant's name and company, travel details and purpose of the visit, and who will bear the travel costs",
+                            "sub_items": [
+                                "Stating what is planned",
+                                "What is the business relationship between the inviting and sending companies? (same group, inviting company is a supplier or sending company is a supplier, what exactly the companies trade with each other (machinery, equipment, merchandise)",
+                                "Detailed schedule of your business meetings (ONLY for stays longer than 30 days)",
+                                "If the applicant intends to meet several business partners in the Schengen Area, please attach the travel plan and all invitation letters from each company, stating the purpose of the trip and the applicant's personal data."
+                            ]
+                        },
+                        "For employees: Last three months' salary slips, employment contract, and a letter from the company where the applicant works",
+                        "Original personal bank statement for the last three months, wet-stamped by the bank",
+                        "Original sponsor's bank statement for the last three months, wet-stamped by the bank, along with original family documents (translated into English/German)"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "申根签证-意大利要求",
+                    "items": [
+                        "已签署的申请表原件；（https://videx.diplo.de/videx/visum-erfassung/de/videx-kurzfristiger-aufenthalt）",
+                        "护照原件及复印件，有效期须比签证到期日多至少三个月",
+                        "2张浅灰白底近期照片，尺寸3.5x4.5厘米。面部须占照片至少80%。照片须为6个月内拍摄。",
+                        {
+                            "text": "介绍信原件（英文/意大利文或附英文/意大利文译本）：",
+                            "sub_items": [
+                                "详细说明出行目的；及",
+                                "描述出行计划（例如城际及长途火车、城际巴士）。",
+                                "计划在申根区域内全程访问期间乘坐的境内航班及所需证明（如有）"
+                            ]
+                        },
+                        {
+                            "text": "健康及旅行保险：",
+                            "sub_items": [
+                                "适用于所申请签证的整个有效期及所有申根国家",
+                                "最低保额3万欧元，含撤离及遣返"
+                            ]
+                        },
+                        "航班预订及酒店预订，附完整地址（姓名、街道、城市、邮政编码、联系方式、预订编号）；",
+                        {
+                            "text": "商业伙伴出具的邀请函（使用公司信头），确认申请人姓名及公司、行程数据及访问目的，以及行程费用承担方",
+                            "sub_items": [
+                                "说明计划内容",
+                                "邀请方公司与派遣方公司之间的商业关系为何？（同一集团、邀请方为供应商或派遣方为供应商、双方公司实际交易的内容（机械、设备、商品）",
+                                "详细商务会议日程（仅适用于停留超过30天的情况）",
+                                "若申请人计划在申根区域会见多家商业伙伴，请附上行程计划及各公司出具的所有邀请函，并说明出行目的及申请人个人数据。"
+                            ]
+                        },
+                        "员工：近三个月工资单、劳动合同及申请人所在公司出具的信函",
+                        "近三个月个人银行对账单原件，须经银行盖章",
+                        "近三个月担保人银行对账单原件，须经银行盖章，连同家庭文件原件（译为英文/德文）"
+                    ]
+                }
+            ]
         },
-        "faq": []
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa Schengen – Italy",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "Schengen Visa Fee – Italy",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "申根签证费用-意大利",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 12,
-        "name": "Visa Schengen – New Zealand",
+        "name": {
+            "id": "Visa Schengen – New Zealand",
+            "en": "Schengen Visa – New Zealand",
+            "zh": "申根签证-新西兰"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Schengen New Zealand untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+        "excerpt": {
+            "id": "Pengurusan visa Schengen New Zealand untuk keperluan wisata dan bisnis sesuai ketentuan kedutaan.",
+            "en": "Processing of Schengen New Zealand visas for tourism and business purposes in accordance with embassy provisions.",
+            "zh": "依据使馆规定，办理用于旅游及商务目的的申根新西兰签证。"
+        },
         "detail_path": "/visa-mancanegara/11",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke New Zealand untuk keperluan seperti kunjungan sementara Turis/Bisnis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA SCHENGEN – NEW ZEALAND",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke New Zealand untuk keperluan seperti kunjungan sementara Turis/Bisnis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+            ],
+            "en": [
+                "If you plan to visit New Zealand for purposes such as a temporary Tourist/Business visit. Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our accurate, efficient visa processing service in accordance with the latest regulations."
+            ],
+            "zh": [
+                "若您计划因临时旅游/商务访问前往新西兰，确保签证办理流程符合现行使馆规定十分重要。通过我们准确、高效且符合最新法规的签证办理服务。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa Schengen – New Zealand",
-                "items": [
-                    "Seluruh halaman passport dengan masa berlaku minimal 3 bulan lebih dari tanggal rencana meninggalkan New Zealand",
-                    "Visa New Zealand dan visa Australia (jika ada)",
-                    "Photo terbaru background putih 3.5 cm x 4.5 cm (size passport)",
-                    "Surat undangan bisnis dari pengundang di New Zealand",
-                    "Surat sponsor dari perusahaan/sekolah di Indonesia",
-                    "Asli bank reference dari rekening koran pribadi 3 bulan terakhir dari plan pengajuan; harus dilegalisir/cap oleh bank",
-                    "Asli bank reference dari rekening koran sponsor 3 bulan terakhir dari plan pengajuan; harus dilegalisir/cap oleh bank",
-                    "Reservasi tiket pulang-pergi; harus diterbitkan oleh Maskapai dengan logo maskapai di headline",
-                    "Reservasi hotel (harus disebutkan alamat hotel dan semua nama tamu)",
-                    "Medical Check Up Visa",
-                    "SKCK dari Polda/Mabes",
-                    "Asuransi Perjalanan",
-                    "KTP dan Kartu Keluarga; harus diterjemahkan dalam bahasa inggris tersertifikasi",
-                    "Akte nikah/akte kelahiran; harus diterjemahkan dalam bahasa inggris tersertifikasi"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA SCHENGEN – NEW ZEALAND",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "SCHENGEN VISA – NEW ZEALAND",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "申根签证-新西兰",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
+        },
+        "persyaratan_dokumen": {
+            "id": [
                 {
-                    "label": "Retribusi Visa Schengen – New Zealand",
-                    "amount": "Rp. 3.500.000"
+                    "label": "Persyaratan Visa Schengen – New Zealand",
+                    "items": [
+                        "Seluruh halaman passport dengan masa berlaku minimal 3 bulan lebih dari tanggal rencana meninggalkan New Zealand",
+                        "Visa New Zealand dan visa Australia (jika ada)",
+                        "Photo terbaru background putih 3.5 cm x 4.5 cm (size passport)",
+                        "Surat undangan bisnis dari pengundang di New Zealand",
+                        "Surat sponsor dari perusahaan/sekolah di Indonesia",
+                        "Asli bank reference dari rekening koran pribadi 3 bulan terakhir dari plan pengajuan; harus dilegalisir/cap oleh bank",
+                        "Asli bank reference dari rekening koran sponsor 3 bulan terakhir dari plan pengajuan; harus dilegalisir/cap oleh bank",
+                        "Reservasi tiket pulang-pergi; harus diterbitkan oleh Maskapai dengan logo maskapai di headline",
+                        "Reservasi hotel (harus disebutkan alamat hotel dan semua nama tamu)",
+                        "Medical Check Up Visa",
+                        "SKCK dari Polda/Mabes",
+                        "Asuransi Perjalanan",
+                        "KTP dan Kartu Keluarga; harus diterjemahkan dalam bahasa inggris tersertifikasi",
+                        "Akte nikah/akte kelahiran; harus diterjemahkan dalam bahasa inggris tersertifikasi"
+                    ]
                 }
             ],
-            "biaya_penanganan": "Rp. 1.000.000"
+            "en": [
+                {
+                    "label": "Schengen Visa – New Zealand Requirements",
+                    "items": [
+                        "All passport pages, valid for at least 3 months beyond the planned departure date from New Zealand",
+                        "New Zealand visa and Australia visa (if any)",
+                        "Recent photo with white background, 3.5 cm x 4.5 cm (passport size)",
+                        "Business invitation letter from the inviter in New Zealand",
+                        "Sponsor letter from a company/school in Indonesia",
+                        "Original bank reference from personal bank statement for the last 3 months from the application date; must be legalized/stamped by the bank",
+                        "Original bank reference from sponsor's bank statement for the last 3 months from the application date; must be legalized/stamped by the bank",
+                        "Round-trip ticket reservation; must be issued by the Airline with the airline logo in the header",
+                        "Hotel reservation (must state the hotel address and all guest names)",
+                        "Visa Medical Check-Up",
+                        "Police Clearance Certificate (SKCK) from Regional/National Police Headquarters",
+                        "Travel Insurance",
+                        "ID Card and Family Card; must be translated into certified English",
+                        "Marriage/birth certificate; must be translated into certified English"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "申根签证-新西兰要求",
+                    "items": [
+                        "护照所有页面，有效期须比计划离开新西兰的日期多至少3个月",
+                        "新西兰签证及澳大利亚签证（如有）",
+                        "白底近期照片，3.5厘米x4.5厘米（护照尺寸）",
+                        "新西兰邀请人出具的商务邀请函",
+                        "印度尼西亚公司/学校出具的担保函",
+                        "自申请日起近3个月个人银行对账单推荐信原件；须经银行公证/盖章",
+                        "自申请日起近3个月担保人银行对账单推荐信原件；须经银行公证/盖章",
+                        "往返机票预订；须由航空公司出具，标题处附航空公司标志",
+                        "酒店预订（须注明酒店地址及所有客人姓名）",
+                        "签证体检",
+                        "省警局/警察总部出具的警方无犯罪记录证明（SKCK）",
+                        "旅行保险",
+                        "身份证及户口簿；须译为经认证的英文版本",
+                        "结婚证书/出生证明；须译为经认证的英文版本"
+                    ]
+                }
+            ]
         },
-        "faq": []
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa Schengen – New Zealand",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "Schengen Visa Fee – New Zealand",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "申根签证费用-新西兰",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 13,
-        "name": "Visa Schengen – Sweden",
+        "name": {
+            "id": "Visa Schengen – Sweden",
+            "en": "Schengen Visa – Sweden",
+            "zh": "申根签证-瑞典"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Schengen Sweden untuk keperluan wisata sesuai ketentuan kedutaan yang berlaku.",
+        "excerpt": {
+            "id": "Pengurusan visa Schengen Sweden untuk keperluan wisata sesuai ketentuan kedutaan yang berlaku.",
+            "en": "Processing of Schengen Sweden visas for tourism purposes in accordance with applicable embassy provisions.",
+            "zh": "依据现行使馆规定，办理用于旅游目的的申根瑞典签证。"
+        },
         "detail_path": "/visa-mancanegara/12",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Sweden untuk keperluan seperti kunjungan sementara Turis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Sweden, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA SCHENGEN – SWEDEN",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Sweden untuk keperluan seperti kunjungan sementara Turis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Sweden, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+            ],
+            "en": [
+                "If you plan to visit Sweden for purposes such as a temporary Tourist visit. Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our Sweden Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+            ],
+            "zh": [
+                "若您计划因临时旅游访问前往瑞典，确保签证办理流程符合现行使馆规定十分重要。通过我们的瑞典签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa Schengen – Sweden",
-                "items": [
-                    "Asli form aplikasi visa Schengen yang telah diisi lengkap dan di tandatangani",
-                    "Asli dan copy paspor dengan masa berlaku 6 bulan; (wajib ada tandatangan dikolok TTD paspor)",
-                    "Asli dan copy paspor lama (jika ada)",
-                    "Pas Photo terbaru tidak lebih dari 6 bulan, 2 lembar (zoom 80% white background, size 45mm x 35mm or 2 inches (width x height), harus kualitas foto studio *dilarang memakai baju putih, contact lens, perhiasan, kacamata",
-                    "Travel Medical Insurance (pertanggungan min. Euro 30.000), berlaku di semua negara wilayah Schengen selama seluruh durasi kunjungan",
-                    "Asli bank reference dan rekening koran pribadi 3 bulan terakhir dari plan pengajuan; harus dilegalisir/cap oleh bank",
-                    "Kontrak kerja dan surat keterangan kerja yang menyatakan jabatan, gaji, dan lama bekerja",
-                    "Copy KTP, Kartu Keluarga, akte lahir, akte nikah (tidak boleh dari hasil foto), Asli dokumen dibawa saat Biometrik",
-                    "Booking tiket PP dan booking hotel semua negara tujuan di Eropa"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA SCHENGEN – SWEDEN",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "SCHENGEN VISA – SWEDEN",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "申根签证-瑞典",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
+        },
+        "persyaratan_dokumen": {
+            "id": [
                 {
-                    "label": "Retribusi Visa Schengen – Sweden",
-                    "amount": "Rp. 3.500.000"
+                    "label": "Persyaratan Visa Schengen – Sweden",
+                    "items": [
+                        "Asli form aplikasi visa Schengen yang telah diisi lengkap dan di tandatangani",
+                        "Asli dan copy paspor dengan masa berlaku 6 bulan; (wajib ada tandatangan dikolok TTD paspor)",
+                        "Asli dan copy paspor lama (jika ada)",
+                        "Pas Photo terbaru tidak lebih dari 6 bulan, 2 lembar (zoom 80% white background, size 45mm x 35mm or 2 inches (width x height), harus kualitas foto studio *dilarang memakai baju putih, contact lens, perhiasan, kacamata",
+                        "Travel Medical Insurance (pertanggungan min. Euro 30.000), berlaku di semua negara wilayah Schengen selama seluruh durasi kunjungan",
+                        "Asli bank reference dan rekening koran pribadi 3 bulan terakhir dari plan pengajuan; harus dilegalisir/cap oleh bank",
+                        "Kontrak kerja dan surat keterangan kerja yang menyatakan jabatan, gaji, dan lama bekerja",
+                        "Copy KTP, Kartu Keluarga, akte lahir, akte nikah (tidak boleh dari hasil foto), Asli dokumen dibawa saat Biometrik",
+                        "Booking tiket PP dan booking hotel semua negara tujuan di Eropa"
+                    ]
                 }
             ],
-            "biaya_penanganan": "Rp. 1.000.000"
+            "en": [
+                {
+                    "label": "Schengen Visa – Sweden Requirements",
+                    "items": [
+                        "Original Schengen visa application form, fully completed and signed",
+                        "Original and copy of passport valid for 6 months; (signature required in the passport's signature column)",
+                        "Original and copy of old passport (if any)",
+                        "2 recent photos, not older than 6 months (80% zoom, white background, size 45mm x 35mm or 2 inches (width x height)), must be studio photo quality *white clothing, contact lenses, jewelry, and glasses are not allowed",
+                        "Travel Medical Insurance (minimum coverage of Euro 30,000), valid in all Schengen area countries for the entire duration of the visit",
+                        "Original bank reference and personal bank statement for the last 3 months from the application date; must be legalized/stamped by the bank",
+                        "Employment contract and employment certificate stating the position, salary, and length of employment",
+                        "Copy of ID Card, Family Card, birth certificate, marriage certificate (must not be photographed copies); original documents must be brought during Biometric appointment",
+                        "Round-trip ticket booking and hotel booking for all destination countries in Europe"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "申根签证-瑞典要求",
+                    "items": [
+                        "已完整填写并签署的申根签证申请表原件",
+                        "有效期6个月的护照原件及复印件；（须在护照签名栏签名）",
+                        "旧护照原件及复印件（如有）",
+                        "2张6个月内近期照片（80%缩放白底，尺寸45毫米x35毫米或2英寸（宽x高）），须为影楼级照片质量*禁止穿白色衣服、佩戴隐形眼镜、首饰、眼镜",
+                        "旅行医疗保险（最低保额3万欧元），适用于整个访问期间的所有申根区域国家",
+                        "自申请日起近3个月个人银行对账单及推荐信原件；须经银行公证/盖章",
+                        "劳动合同及工作证明，注明职位、薪资及工作年限",
+                        "身份证、户口簿、出生证明、结婚证书复印件（不得为翻拍照片）；办理生物识别时须携带文件原件",
+                        "欧洲所有目的地国家的往返机票及酒店预订"
+                    ]
+                }
+            ]
         },
-        "faq": []
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa Schengen – Sweden",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "Schengen Visa Fee – Sweden",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "申根签证费用-瑞典",
+                        "amount": "Rp. 3.500.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 14,
-        "name": "Visa Jepang",
+        "name": {
+            "id": "Visa Jepang",
+            "en": "Japan Visa",
+            "zh": "日本签证"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "paket_count": 1,
-        "excerpt": "Pengurusan visa Jepang untuk keperluan wisata sesuai ketentuan kedutaan yang berlaku.",
+        "excerpt": {
+            "id": "Pengurusan visa Jepang untuk keperluan wisata sesuai ketentuan kedutaan yang berlaku.",
+            "en": "Processing of Japan visas for tourism purposes in accordance with applicable embassy provisions.",
+            "zh": "依据现行使馆规定，办理用于旅游目的的日本签证。"
+        },
         "detail_path": "/visa-mancanegara/13",
         "image": "",
         "tabs": null,
-        "penjelasan_umum": [
-            "Apabila Anda berencana melakukan kunjungan ke Jepang untuk pemegang paspor biasa dengan keperluan kunjungan sementara Turis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Jepang, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
-        ],
-        "dokumen_didapat": {
-            "nama": "VISA JEPANG",
-            "termasuk": [
-                "Fasttrack Document Delivery Service",
-                "Fasttrack Digital Files Secure Storage",
-                "Fasttrack Kit"
+        "penjelasan_umum": {
+            "id": [
+                "Apabila Anda berencana melakukan kunjungan ke Jepang untuk pemegang paspor biasa dengan keperluan kunjungan sementara Turis. Memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan kedutaan yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Jepang, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini."
+            ],
+            "en": [
+                "If you, as an ordinary passport holder, plan to visit Japan for a temporary Tourist visit. Ensuring that the visa processing is carried out in accordance with applicable embassy provisions is important. Through our Japan Visa processing service, we provide professional assistance to support the visa application process accurately, efficiently, and in accordance with the latest regulations."
+            ],
+            "zh": [
+                "若您作为普通护照持有人计划因临时旅游访问前往日本，确保签证办理流程符合现行使馆规定十分重要。通过我们的日本签证办理服务，我们提供专业协助，以准确、高效且符合最新法规的方式支持签证申请流程。"
             ]
         },
-        "persyaratan_dokumen": [
-            {
-                "label": "Persyaratan Visa Jepang",
-                "items": [
-                    "Asli form aplikasi dan itinerary yang di isi lengkap dan ditandatangani",
-                    "Asli Paspor yang ada tandatangan di halaman belakang. Asli paspor lama jika ada",
-                    "Reservasi tiket pulang-pergi",
-                    "Foto 3.5 x 4.5 (zoom 70%) terbaru latar putih dengan kualitas foto studio",
-                    "Scan KTP, KK, Akta Lahir, Akta Nikah/Surat Cerai",
-                    "Rekening koran 3 bulan terakhir harus ada nama dan cap bank asli (boleh lebih dari 1 bank)"
+        "dokumen_didapat": {
+            "id": {
+                "nama": "VISA JEPANG",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "en": {
+                "nama": "JAPAN VISA",
+                "termasuk": [
+                    "Fasttrack Document Delivery Service",
+                    "Fasttrack Digital Files Secure Storage",
+                    "Fasttrack Kit"
+                ]
+            },
+            "zh": {
+                "nama": "日本签证",
+                "termasuk": [
+                    "Fasttrack文件递送服务",
+                    "Fasttrack数字文件安全存储",
+                    "Fasttrack套件"
                 ]
             }
-        ],
-        "rincian_biaya": {
-            "items": [
-                { "label": "Retribusi Visa Jepang", "amount": "Rp. 1.000.000" }
-            ],
-            "biaya_penanganan": "Rp. 1.000.000"
         },
-        "faq": []
+        "persyaratan_dokumen": {
+            "id": [
+                {
+                    "label": "Persyaratan Visa Jepang",
+                    "items": [
+                        "Asli form aplikasi dan itinerary yang di isi lengkap dan ditandatangani",
+                        "Asli Paspor yang ada tandatangan di halaman belakang. Asli paspor lama jika ada",
+                        "Reservasi tiket pulang-pergi",
+                        "Foto 3.5 x 4.5 (zoom 70%) terbaru latar putih dengan kualitas foto studio",
+                        "Scan KTP, KK, Akta Lahir, Akta Nikah/Surat Cerai",
+                        "Rekening koran 3 bulan terakhir harus ada nama dan cap bank asli (boleh lebih dari 1 bank)"
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "label": "Japan Visa Requirements",
+                    "items": [
+                        "Original application form and itinerary, fully completed and signed",
+                        "Original Passport signed on the back page. Original old passport if any",
+                        "Round-trip ticket reservation",
+                        "Recent 3.5 x 4.5 photo (70% zoom) with white background, studio photo quality",
+                        "Scan of ID Card, Family Card, Birth Certificate, Marriage/Divorce Certificate",
+                        "Bank statement for the last 3 months must have a name and original bank stamp (more than 1 bank account may be provided)"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "label": "日本签证要求",
+                    "items": [
+                        "已完整填写并签署的申请表及行程表原件",
+                        "在末页签名的护照原件。旧护照原件（如有）",
+                        "往返机票预订",
+                        "近期3.5x4.5照片（70%缩放）白底，影楼级照片质量",
+                        "身份证、户口簿、出生证明、结婚/离婚证书扫描件",
+                        "近3个月银行对账单须显示姓名及银行原始印章（可提供1个以上银行账户）"
+                    ]
+                }
+            ]
+        },
+        "rincian_biaya": {
+            "id": {
+                "items": [
+                    {
+                        "label": "Retribusi Visa Jepang",
+                        "amount": "Rp. 1.000.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "en": {
+                "items": [
+                    {
+                        "label": "Japan Visa Fee",
+                        "amount": "Rp. 1.000.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            },
+            "zh": {
+                "items": [
+                    {
+                        "label": "日本签证费用",
+                        "amount": "Rp. 1.000.000"
+                    }
+                ],
+                "biaya_penanganan": "Rp. 1.000.000"
+            }
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]

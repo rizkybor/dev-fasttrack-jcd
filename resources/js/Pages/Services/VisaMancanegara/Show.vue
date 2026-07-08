@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -14,28 +17,60 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        excerpt: pick(p.excerpt),
+        tabs: pick(p.tabs),
+        penjelasan_umum: pick(p.penjelasan_umum),
+        dokumen_didapat: pick(p.dokumen_didapat),
+        persyaratan_dokumen: pick(p.persyaratan_dokumen),
+        rincian_biaya: pick(p.rincian_biaya),
+        faq: pick(p.faq) ?? [],
+    };
+});
+
+const product = localizedProduct;
+
 const activeTab = ref(0);
-const hasTabs = computed(() => !!props.product?.tabs?.length);
+const hasTabs = computed(() => !!product.value?.tabs?.length);
 const currentTab = computed(() =>
-    hasTabs.value ? props.product.tabs[activeTab.value] : null
+    hasTabs.value ? product.value.tabs[activeTab.value] : null
 );
 
 const currentPenjelasan = computed(() =>
-    currentTab.value ? currentTab.value.penjelasan_umum : props.product.penjelasan_umum
+    currentTab.value ? currentTab.value.penjelasan_umum : product.value.penjelasan_umum
 );
 const currentDokumenDidapat = computed(() =>
-    currentTab.value ? currentTab.value.dokumen_didapat : props.product.dokumen_didapat
+    currentTab.value ? currentTab.value.dokumen_didapat : product.value.dokumen_didapat
 );
 const currentPersyaratan = computed(() =>
-    currentTab.value ? currentTab.value.persyaratan_dokumen : props.product.persyaratan_dokumen
+    currentTab.value ? currentTab.value.persyaratan_dokumen : product.value.persyaratan_dokumen
 );
 const currentRincianBiaya = computed(() =>
-    currentTab.value ? currentTab.value.rincian_biaya : props.product.rincian_biaya
+    currentTab.value ? currentTab.value.rincian_biaya : product.value.rincian_biaya
 );
 const currentSidebar = computed(() =>
     currentTab.value
         ? { label: currentTab.value.sidebar_label, harga: currentTab.value.sidebar_harga }
-        : { label: props.product.name, harga: props.product.price_label }
+        : { label: product.value.name, harga: product.value.price_label }
 );
 </script>
 

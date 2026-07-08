@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -21,13 +24,44 @@ const buildWhatsappLink = (productName, jenis) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        excerpt: pick(p.excerpt),
+        baru: pick(p.baru),
+        perpanjangan: pick(p.perpanjangan),
+        faq: pick(p.faq) ?? [],
+    };
+});
+
+const product = localizedProduct;
+
 // ===== Toggle Jenis Pengajuan: 'baru' | 'perpanjangan' =====
 const jenisPengajuan = ref("baru");
 
 // Toggle hanya tampil jika produk punya data 'perpanjangan'
-const hasToggle = computed(() => !!props.product?.perpanjangan);
+const hasToggle = computed(() => !!product.value?.perpanjangan);
 
-const currentData = computed(() => props.product?.[jenisPengajuan.value] ?? {});
+const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
 </script>
 
 <template>
