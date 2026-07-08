@@ -155,7 +155,6 @@ const serviceTools = [
 ];
 
 const informasiLinks = [
-    { key: "artikel", path: "/artikel" },
     { key: "kbli", path: "/kbli" },
     { key: "faq", path: "/faq" },
 ];

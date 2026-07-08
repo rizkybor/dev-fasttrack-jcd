@@ -10,7 +10,6 @@ export default {
         close: 'Close',
         menu: 'Menu',
         informasi: {
-            artikel: 'Articles',
             kbli: 'KBLI',
             faq: 'FAQ',
         },
