@@ -1,228 +1,841 @@
 [
     {
         "id": 1,
-        "name": "Penyusunan & Peninjauan Perjanjian / Kontrak",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Penyusunan & Peninjauan Perjanjian / Kontrak",
+            "en": "Drafting & Review of Agreements / Contracts",
+            "zh": "合同/协议的起草与审查"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "500000",
         "price_label": "Rp 500.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
-        "excerpt": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Dalam dunia bisnis, perjanjian tertulis memiliki peranan yang sangat penting sebagai dasar hukum dalam setiap bentuk kerja sama, transaksi, maupun hubungan profesional antar pihak. Perjanjian yang dibuat secara jelas, detail, dan sesuai ketentuan hukum dapat memberikan kepastian, perlindungan, serta meminimalisir risiko terjadinya perselisihan di kemudian hari.",
-            "Tanpa adanya perjanjian yang tepat, hak dan kewajiban para pihak sering kali menjadi tidak jelas sehingga berpotensi menimbulkan kerugian, kesalahpahaman, bahkan sengketa hukum. Oleh karena itu, setiap pelaku usaha maupun individu yang menjalin kerja sama profesional perlu memastikan bahwa seluruh kesepakatan dituangkan dalam dokumen hukum yang sah dan mengikat."
-        ],
-        "term_condition": [
-            {
-                "title": "Kegiatan bersifat limitatif antara lain :",
-                "description": "",
-                "notes": [
-                    "Sebagai pengawas, penghubung, koordinator, dan mengurus kepentingan perusahaan atau perusahaan-perusahaan afiliasinya;",
-                    "Mempersiapkan pendirian dan Pengembangan Usaha perusahaan PMA di Indonesia;",
-                    "Berlokasi di gedung perkantoran di ibu kota provinsi;",
-                    "Tidak mencari sesuatu penghasilan dari sumber di Indonesia termasuk tidak dibenarkan melaksanakan kegiatan atau melakukan sesuatu perikatan/ transaksi penjualan dan pembelian barang atau jasa komersial antara perusahaan induk dengan perusahaan atau perseorangan di dalam negeri; dan",
-                    "Tidak ikut serta dalam bentuk apapun dalam pengelolaan sesuatu perusahaan, anak perusahaan atau cabang perusahaan yang ada di Indonesia."
-                ]
-            },
-            {
-                "title": "Kepala perwakilan perusahaan asing harus memenuhi ketentuan sebagai berikut ketentuan:",
-                "description": "",
-                "notes": [
-                    "Wajib bertempat tinggal di Indonesia;",
-                    "Wajib bertanggung jawab penuh atas kelancaran jalannya kantor;",
-                    "Tidak dibenarkan melakukan kegiatan di luar kegiatan KPPA sebagaimana dimaksud pada ayat (3); dan",
-                    "Tidak dibenarkan merangkap jabatan sebagai direksi perusahaan dan/atau kepala perwakilan di KPPA lainnya."
-                ],
-                "notes_extra": {
-                    "label": "Dalam hal kepala KPPA yang ditunjuk adalah warga negara asing dan/atau mempekerjakan tenaga kerja asing, KPPA harus mempekerjakan tenaga kerja Indonesia sesuai dengan ketentuan peraturan perundang-undangan.",
-                    "items": []
+        "description": {
+            "id": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
+            "en": "Establishment of an official representative office for foreign companies wishing to have a legal presence in Indonesia.",
+            "zh": "为希望在印度尼西亚建立合法业务据点的外国公司设立官方代表处。"
+        },
+        "excerpt": {
+            "id": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
+            "en": "A PT establishment package for businesses that need a separate legal entity, liability protection, and expansion readiness.",
+            "zh": "适用于需要独立法人实体、责任保护及扩张准备的企业的PT设立套餐。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适用于初创企业、代理商、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Dalam dunia bisnis, perjanjian tertulis memiliki peranan yang sangat penting sebagai dasar hukum dalam setiap bentuk kerja sama, transaksi, maupun hubungan profesional antar pihak. Perjanjian yang dibuat secara jelas, detail, dan sesuai ketentuan hukum dapat memberikan kepastian, perlindungan, serta meminimalisir risiko terjadinya perselisihan di kemudian hari.",
+                "Tanpa adanya perjanjian yang tepat, hak dan kewajiban para pihak sering kali menjadi tidak jelas sehingga berpotensi menimbulkan kerugian, kesalahpahaman, bahkan sengketa hukum. Oleh karena itu, setiap pelaku usaha maupun individu yang menjalin kerja sama profesional perlu memastikan bahwa seluruh kesepakatan dituangkan dalam dokumen hukum yang sah dan mengikat."
+            ],
+            "en": [
+                "In the business world, written agreements play a very important role as the legal basis for every form of cooperation, transaction, or professional relationship between parties. Agreements drafted clearly, in detail, and in accordance with legal provisions can provide certainty, protection, and minimize the risk of future disputes.",
+                "Without a proper agreement, the rights and obligations of the parties often become unclear, potentially causing losses, misunderstandings, or even legal disputes. Therefore, every business actor or individual entering into a professional partnership needs to ensure that all agreements are set out in a valid and binding legal document."
+            ],
+            "zh": [
+                "在商业世界中，书面协议作为各方合作、交易或专业关系的法律依据，具有极其重要的作用。清晰、详细且符合法律规定的协议能够提供确定性和保护，并将日后发生纠纷的风险降至最低。",
+                "若无适当的协议，各方的权利与义务往往变得不明确，可能导致损失、误解甚至法律纠纷。因此，建立专业合作关系的每一位经营者或个人都须确保所有约定均以合法且具有约束力的法律文件形式记录。"
+            ]
+        },
+        "term_condition": {
+            "id": [
+                {
+                    "title": "Kegiatan bersifat limitatif antara lain :",
+                    "description": "",
+                    "notes": [
+                        "Sebagai pengawas, penghubung, koordinator, dan mengurus kepentingan perusahaan atau perusahaan-perusahaan afiliasinya;",
+                        "Mempersiapkan pendirian dan Pengembangan Usaha perusahaan PMA di Indonesia;",
+                        "Berlokasi di gedung perkantoran di ibu kota provinsi;",
+                        "Tidak mencari sesuatu penghasilan dari sumber di Indonesia termasuk tidak dibenarkan melaksanakan kegiatan atau melakukan sesuatu perikatan/ transaksi penjualan dan pembelian barang atau jasa komersial antara perusahaan induk dengan perusahaan atau perseorangan di dalam negeri; dan",
+                        "Tidak ikut serta dalam bentuk apapun dalam pengelolaan sesuatu perusahaan, anak perusahaan atau cabang perusahaan yang ada di Indonesia."
+                    ]
+                },
+                {
+                    "title": "Kepala perwakilan perusahaan asing harus memenuhi ketentuan sebagai berikut ketentuan:",
+                    "description": "",
+                    "notes": [
+                        "Wajib bertempat tinggal di Indonesia;",
+                        "Wajib bertanggung jawab penuh atas kelancaran jalannya kantor;",
+                        "Tidak dibenarkan melakukan kegiatan di luar kegiatan KPPA sebagaimana dimaksud pada ayat (3); dan",
+                        "Tidak dibenarkan merangkap jabatan sebagai direksi perusahaan dan/atau kepala perwakilan di KPPA lainnya."
+                    ],
+                    "notes_extra": {
+                        "label": "Dalam hal kepala KPPA yang ditunjuk adalah warga negara asing dan/atau mempekerjakan tenaga kerja asing, KPPA harus mempekerjakan tenaga kerja Indonesia sesuai dengan ketentuan peraturan perundang-undangan.",
+                        "items": []
+                    }
                 }
-            }
-        ],
-        "benefits": [],
-        "requirements": [
-            {
-                "title": "Data Kepala Perwakilan",
-                "sections": [
-                    {
-                        "label": "",
-                        "groups": [
-                            {
-                                "label": "Document:",
-                                "notes": [
-                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                    "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-                                ]
-                            },
-                            {
-                                "label": "Data:",
-                                "notes": ["Nomor telepon", "Alamat email"]
-                            }
-                        ]
+            ],
+            "en": [
+                {
+                    "title": "The activities are limited to, among others:",
+                    "description": "",
+                    "notes": [
+                        "As a supervisor, liaison, coordinator, and managing the interests of the company or its affiliated companies;",
+                        "Preparing for the establishment and business development of a PMA company in Indonesia;",
+                        "Located in an office building in a provincial capital;",
+                        "Not seeking any income from sources in Indonesia, including not being permitted to carry out activities or enter into any agreement/transaction for the sale and purchase of goods or commercial services between the parent company and a domestic company or individual; and",
+                        "Not participating in any form in the management of any company, subsidiary, or branch office existing in Indonesia."
+                    ]
+                },
+                {
+                    "title": "The head of a foreign company representative office must fulfill the following provisions:",
+                    "description": "",
+                    "notes": [
+                        "Must reside in Indonesia;",
+                        "Must be fully responsible for the smooth operation of the office;",
+                        "Not permitted to conduct activities outside the KPPA activities referred to in paragraph (3); and",
+                        "Not permitted to concurrently hold a position as a company director and/or head of representative at another KPPA."
+                    ],
+                    "notes_extra": {
+                        "label": "In the event that the appointed head of the KPPA is a foreign citizen and/or employs foreign workers, the KPPA must employ Indonesian workers in accordance with statutory provisions.",
+                        "items": []
                     }
-                ]
-            },
-            {
-                "title": "Bukti Kepemilikan/Perjanjian Sewa Lokasi Usaha",
-                "notes": [
-                    "Scan copy bewarna.",
-                    "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office."
-                ]
-            },
-            {
-                "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
-                "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab."
-            },
-            {
-                "title": "Letter of Appointment",
-                "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat"
-            },
-            {
-                "title": "Letter of Intent",
-                "description": "Surat Permohonan (Letter of Intent) yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat"
-            },
-            {
-                "title": "Letter of Statement",
-                "description": "Surat Pernyataan (Letter of Statement) dari Kepala Kantor Perwakilan yang menyatakan kesediaan untuk tinggal dan hanya bekerja sebagai Kepala Kantor Perwakilan, tanpa melakukan kegiatan bisnis lainnya di Indonesia yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat (jika chief rep nya WNI maka cukup ttd diatas materai 10.000)"
-            },
-            {
-                "title": "Letter of Reference",
-                "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
-            },
-            {
-                "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
-                "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-            },
-            {
-                "title": "Alamat Kantor/Usaha",
-                "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Nomor Telepon Lokasi Usaha",
-                "description": "Tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Alamat Email Usaha",
-                "description": "Alamat email aktif perusahaan"
-            },
-            {
-                "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
-                "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
-            }
-        ],
-        "process": [
-            {
-                "title": "Konsultasi & Persiapan",
-                "description": "Dokumen dikumpulkan"
-            },
-            {
-                "title": "Pengecekan Nama",
-                "description": "Drafting akta notaris"
-            },
-            {
-                "title": "Proses Kemenkumham",
-                "description": "Pengesahan resmi"
-            },
-            {
-                "title": "Selesai & Dikirim",
-                "description": "Dokumen Anda siap"
-            }
-        ],
-        "faq": [
-            {
-                "question": "Kapan sebaiknya memilih PT?",
-                "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
-            },
-            {
-                "question": "Apakah FastTrack membantu memilih KBLI?",
-                "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
-            }
-        ],
-        "contract_categories": [
-            {
-                "name": "Ketenagakerjaan",
-                "items": [
-                    { "name": "Perjanjian Kerja Waktu Tertentu (PKWT)" },
-                    { "name": "Perjanjian Kerja Waktu Tidak Tertentu (PKWTT)" },
-                    { "name": "Perjanjian Kerja Freelance" },
-                    { "name": "Peraturan Perusahaan" },
-                    {
-                        "name": "Perjanjian Kepemilikan Saham Karyawan (Employee Stock Ownership Plan)"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "活动范围限于以下几项：",
+                    "description": "",
+                    "notes": [
+                        "作为监督者、联络人、协调人，处理公司或其关联公司的相关事务；",
+                        "为在印度尼西亚设立及发展外商投资公司（PMA）做准备；",
+                        "位于省会城市的办公楼内；",
+                        "不得从印度尼西亚境内来源获取任何收入，包括不得从事母公司与国内公司或个人之间的商品或商业服务买卖协议/交易活动；及",
+                        "不得以任何形式参与印度尼西亚境内任何公司、子公司或分公司的管理。"
+                    ]
+                },
+                {
+                    "title": "外国公司代表处负责人须满足以下规定：",
+                    "description": "",
+                    "notes": [
+                        "须居住在印度尼西亚；",
+                        "须对办公室的顺利运营承担全部责任；",
+                        "不得从事第（3）款所述KPPA活动以外的活动；及",
+                        "不得同时担任公司董事及/或其他KPPA的代表处负责人职务。"
+                    ],
+                    "notes_extra": {
+                        "label": "若被指定的KPPA负责人为外国公民及/或雇佣外籍员工，KPPA须依据法律法规规定雇佣印尼籍员工。",
+                        "items": []
                     }
-                ]
-            },
-            {
-                "name": "Korporasi & Investasi",
-                "items": [
-                    { "name": "Perjanjian Pendiri (Founder Agreement)" },
-                    {
-                        "name": "Perjanjian Pemegang Saham (Shareholder Agreement)"
-                    },
-                    {
-                        "name": "Perjanjian Hutang Pemegang Saham (Shareholder Loan Agreement)"
-                    },
-                    { "name": "Perjanjian Investasi" }
-                ]
-            },
-            {
-                "name": "Kerjasama Bisnis",
-                "items": [
-                    { "name": "Perjanjian Kerjasama" },
-                    {
-                        "name": "Perjanjian Kerjasama Bagi Hasil (Profit Sharing Agreement)"
-                    },
-                    { "name": "Perjanjian Joint Venture" },
-                    {
-                        "name": "Perjanjian Distributor (Distributor Agreement)"
-                    },
-                    {
-                        "name": "Perjanjian Pemasok Barang (Supplier Agreement)"
-                    },
-                    { "name": "Perjanjian Penyedia Jasa" },
-                    { "name": "Perjanjian Sponsor" }
-                ]
-            },
-            {
-                "name": "Komersial & Transaksi",
-                "items": [
-                    { "name": "Perjanjian Jual Beli" },
-                    { "name": "Perjanjian Hutang Piutang" },
-                    { "name": "Perjanjian Sewa" },
-                    { "name": "Perjanjian Pinjam Pakai" },
-                    { "name": "Perjanjian Pengalihan Hak" }
-                ]
-            },
-            {
-                "name": "HKI & Lisensi",
-                "items": [
-                    { "name": "Perjanjian Lisensi" },
-                    { "name": "Perjanjian Pengalihan HKI" },
-                    { "name": "Perjanjian Waralaba" }
-                ]
-            },
-            {
-                "name": "Kerahasiaan & Platform Digital",
-                "items": [
-                    {
-                        "name": "Perjanjian Kerahasiaan (Non-Disclosure Agreement)"
-                    },
-                    { "name": "Terms & Conditions" },
-                    { "name": "Syarat & Ketentuan Penggunaan Platform" },
-                    {
-                        "name": "Kebijakan Privasi Penyelenggaraan Platform Digital (Privacy Policy)"
-                    }
-                ]
-            },
-            {
-                "name": "Surat & Dokumen Lainnya",
-                "items": [
-                    { "name": "Surat Kuasa" },
-                    { "name": "Surat Pernyataan" },
-                    { "name": "Surat Jawaban" }
-                ]
-            }
-        ]
+                }
+            ]
+        },
+        "benefits": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [
+                {
+                    "title": "Data Kepala Perwakilan",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Document:",
+                                    "notes": [
+                                        "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                        "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Nomor telepon",
+                                        "Alamat email"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Bukti Kepemilikan/Perjanjian Sewa Lokasi Usaha",
+                    "notes": [
+                        "Scan copy bewarna.",
+                        "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office."
+                    ]
+                },
+                {
+                    "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
+                    "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab."
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat"
+                },
+                {
+                    "title": "Letter of Intent",
+                    "description": "Surat Permohonan (Letter of Intent) yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat"
+                },
+                {
+                    "title": "Letter of Statement",
+                    "description": "Surat Pernyataan (Letter of Statement) dari Kepala Kantor Perwakilan yang menyatakan kesediaan untuk tinggal dan hanya bekerja sebagai Kepala Kantor Perwakilan, tanpa melakukan kegiatan bisnis lainnya di Indonesia yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat (jika chief rep nya WNI maka cukup ttd diatas materai 10.000)"
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
+                },
+                {
+                    "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
+                    "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                },
+                {
+                    "title": "Alamat Kantor/Usaha",
+                    "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Nomor Telepon Lokasi Usaha",
+                    "description": "Tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Alamat Email Usaha",
+                    "description": "Alamat email aktif perusahaan"
+                },
+                {
+                    "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
+                    "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Representative Head Data",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Document:",
+                                    "notes": [
+                                        "For Indonesian individuals, please attach a valid color scan copy of the Identity Card (e-KTP) and Tax ID (NPWP) record, and/or;",
+                                        "Foreign individuals: A copy of the passport clearly showing the name, signature of the passport holder, and passport validity period."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Phone number",
+                                        "Email address"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Proof of Ownership/Lease Agreement for Business Location",
+                    "notes": [
+                        "Color scan copy.",
+                        "If an office/business location is already owned or Virtual Office services are not used."
+                    ]
+                },
+                {
+                    "title": "Articles of Association/Articles of Incorporation of the Principal/Head Office",
+                    "description": "A color scan copy of the articles of association in English or its Indonesian translation by a sworn translator or legalized by an Indonesian representative office abroad, and a copy of the passport of the person in charge."
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "A Letter of Appointment notarized and acknowledged by the local Indonesian Embassy/IIPC"
+                },
+                {
+                    "title": "Letter of Intent",
+                    "description": "A Letter of Intent notarized and acknowledged by the local Indonesian Embassy/IIPC"
+                },
+                {
+                    "title": "Letter of Statement",
+                    "description": "A Letter of Statement from the Head of the Representative Office stating willingness to reside and work solely as Head of the Representative Office, without conducting other business activities in Indonesia, notarized and acknowledged by the local Indonesian Embassy/IIPC (if the chief representative is an Indonesian citizen, a signature on a Rp10,000 stamp duty is sufficient)"
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "A Letter of Reference from the local Indonesian Embassy/IIPC"
+                },
+                {
+                    "title": "Identity of the Person in Charge / Director of the Principal / Head Office",
+                    "description": "A passport scan copy clearly showing the name, signature of the passport holder, and passport validity period."
+                },
+                {
+                    "title": "Office/Business Address",
+                    "description": "If an office/business location is already owned or Virtual Office services are not used"
+                },
+                {
+                    "title": "Business Location Phone Number",
+                    "description": "Not using Virtual Office services"
+                },
+                {
+                    "title": "Business Email Address",
+                    "description": "An active company email address"
+                },
+                {
+                    "title": "Forms/Letters Completed and Signed by All Parties",
+                    "description": "All drafts and content will be prepared by us after the order is placed and all document requirements are received"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "代表处负责人资料",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "文件：",
+                                    "notes": [
+                                        "印尼籍个人须附上有效的电子身份证（e-KTP）彩色扫描件及税号（NPWP）记录，及/或；",
+                                        "外籍个人：清晰显示护照持有人姓名、签名及护照有效期的护照复印件。"
+                                    ]
+                                },
+                                {
+                                    "label": "数据：",
+                                    "notes": [
+                                        "电话号码",
+                                        "电子邮箱地址"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "经营地点所有权证明/租赁协议",
+                    "notes": [
+                        "彩色扫描件。",
+                        "若已拥有办公室/经营场所，或未使用虚拟办公室服务。"
+                    ]
+                },
+                {
+                    "title": "总公司/总部的章程（Article of Association/Article of Incorporation）",
+                    "description": "章程的英文彩色扫描件或经宣誓翻译人员翻译的印尼文译本，或经印尼驻外代表机构公证，以及负责人的护照复印件。"
+                },
+                {
+                    "title": "委任函（Letter of Appointment）",
+                    "description": "经当地印尼大使馆/IIPC公证及认可的委任函（Letter of Appointment）"
+                },
+                {
+                    "title": "意向书（Letter of Intent）",
+                    "description": "经当地印尼大使馆/IIPC公证及认可的意向书（Letter of Intent）"
+                },
+                {
+                    "title": "声明书（Letter of Statement）",
+                    "description": "代表处负责人出具的声明书，声明愿意居住并仅以代表处负责人身份工作，不在印度尼西亚从事其他商业活动，经当地印尼大使馆/IIPC公证及认可（若首席代表为印尼籍公民，仅需在10,000印花税票上签名即可）"
+                },
+                {
+                    "title": "推荐函（Letter of Reference）",
+                    "description": "由当地印尼大使馆/IIPC出具的推荐函（Letter of Reference）"
+                },
+                {
+                    "title": "总公司/总部负责人/董事的身份证明",
+                    "description": "清晰显示护照持有人姓名、签名及护照有效期的护照扫描件。"
+                },
+                {
+                    "title": "办公室/经营地址",
+                    "description": "若已拥有办公室/经营场所，或未使用虚拟办公室服务"
+                },
+                {
+                    "title": "经营场所电话号码",
+                    "description": "未使用虚拟办公室服务"
+                },
+                {
+                    "title": "企业电子邮箱地址",
+                    "description": "有效的企业电子邮箱地址"
+                },
+                {
+                    "title": "由各方填妥并签署的表格/信函",
+                    "description": "在下单并收到全部所需文件后，我们将准备全部草案及内容"
+                }
+            ]
+        },
+        "process": {
+            "id": [
+                {
+                    "title": "Konsultasi & Persiapan",
+                    "description": "Dokumen dikumpulkan"
+                },
+                {
+                    "title": "Pengecekan Nama",
+                    "description": "Drafting akta notaris"
+                },
+                {
+                    "title": "Proses Kemenkumham",
+                    "description": "Pengesahan resmi"
+                },
+                {
+                    "title": "Selesai & Dikirim",
+                    "description": "Dokumen Anda siap"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Consultation & Preparation",
+                    "description": "Documents are collected"
+                },
+                {
+                    "title": "Name Verification",
+                    "description": "Drafting the notarial deed"
+                },
+                {
+                    "title": "Ministry of Law Processing",
+                    "description": "Official ratification"
+                },
+                {
+                    "title": "Completed & Delivered",
+                    "description": "Your documents are ready"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "咨询与准备",
+                    "description": "收集文件"
+                },
+                {
+                    "title": "名称核实",
+                    "description": "起草公证书"
+                },
+                {
+                    "title": "法务部办理流程",
+                    "description": "正式批准"
+                },
+                {
+                    "title": "完成并送达",
+                    "description": "您的文件已准备就绪"
+                }
+            ]
+        },
+        "faq": {
+            "id": [
+                {
+                    "question": "Kapan sebaiknya memilih PT?",
+                    "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
+                },
+                {
+                    "question": "Apakah FastTrack membantu memilih KBLI?",
+                    "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
+                }
+            ],
+            "en": [
+                {
+                    "question": "When should you choose a PT?",
+                    "answer": "A PT is suitable when a business needs a separate legal entity, a more professional structure, and readiness for broader cooperation."
+                },
+                {
+                    "question": "Does FastTrack help choose the KBLI?",
+                    "answer": "Yes, the FastTrack team helps match business activities with the most relevant KBLI so that the legal process is safer and more efficient."
+                }
+            ],
+            "zh": [
+                {
+                    "question": "何时应选择PT？",
+                    "answer": "当企业需要独立法人实体、更专业的结构以及为更广泛合作做好准备时，PT是合适的选择。"
+                },
+                {
+                    "question": "FastTrack是否协助选择KBLI？",
+                    "answer": "是的，FastTrack团队协助将经营活动与最相关的KBLI进行匹配，以使法律流程更安全、更高效。"
+                }
+            ]
+        },
+        "contract_categories": {
+            "id": [
+                {
+                    "name": "Ketenagakerjaan",
+                    "items": [
+                        {
+                            "name": "Perjanjian Kerja Waktu Tertentu (PKWT)"
+                        },
+                        {
+                            "name": "Perjanjian Kerja Waktu Tidak Tertentu (PKWTT)"
+                        },
+                        {
+                            "name": "Perjanjian Kerja Freelance"
+                        },
+                        {
+                            "name": "Peraturan Perusahaan"
+                        },
+                        {
+                            "name": "Perjanjian Kepemilikan Saham Karyawan (Employee Stock Ownership Plan)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Korporasi & Investasi",
+                    "items": [
+                        {
+                            "name": "Perjanjian Pendiri (Founder Agreement)"
+                        },
+                        {
+                            "name": "Perjanjian Pemegang Saham (Shareholder Agreement)"
+                        },
+                        {
+                            "name": "Perjanjian Hutang Pemegang Saham (Shareholder Loan Agreement)"
+                        },
+                        {
+                            "name": "Perjanjian Investasi"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kerjasama Bisnis",
+                    "items": [
+                        {
+                            "name": "Perjanjian Kerjasama"
+                        },
+                        {
+                            "name": "Perjanjian Kerjasama Bagi Hasil (Profit Sharing Agreement)"
+                        },
+                        {
+                            "name": "Perjanjian Joint Venture"
+                        },
+                        {
+                            "name": "Perjanjian Distributor (Distributor Agreement)"
+                        },
+                        {
+                            "name": "Perjanjian Pemasok Barang (Supplier Agreement)"
+                        },
+                        {
+                            "name": "Perjanjian Penyedia Jasa"
+                        },
+                        {
+                            "name": "Perjanjian Sponsor"
+                        }
+                    ]
+                },
+                {
+                    "name": "Komersial & Transaksi",
+                    "items": [
+                        {
+                            "name": "Perjanjian Jual Beli"
+                        },
+                        {
+                            "name": "Perjanjian Hutang Piutang"
+                        },
+                        {
+                            "name": "Perjanjian Sewa"
+                        },
+                        {
+                            "name": "Perjanjian Pinjam Pakai"
+                        },
+                        {
+                            "name": "Perjanjian Pengalihan Hak"
+                        }
+                    ]
+                },
+                {
+                    "name": "HKI & Lisensi",
+                    "items": [
+                        {
+                            "name": "Perjanjian Lisensi"
+                        },
+                        {
+                            "name": "Perjanjian Pengalihan HKI"
+                        },
+                        {
+                            "name": "Perjanjian Waralaba"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kerahasiaan & Platform Digital",
+                    "items": [
+                        {
+                            "name": "Perjanjian Kerahasiaan (Non-Disclosure Agreement)"
+                        },
+                        {
+                            "name": "Terms & Conditions"
+                        },
+                        {
+                            "name": "Syarat & Ketentuan Penggunaan Platform"
+                        },
+                        {
+                            "name": "Kebijakan Privasi Penyelenggaraan Platform Digital (Privacy Policy)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Surat & Dokumen Lainnya",
+                    "items": [
+                        {
+                            "name": "Surat Kuasa"
+                        },
+                        {
+                            "name": "Surat Pernyataan"
+                        },
+                        {
+                            "name": "Surat Jawaban"
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "name": "Employment",
+                    "items": [
+                        {
+                            "name": "Fixed-Term Employment Agreement (PKWT)"
+                        },
+                        {
+                            "name": "Indefinite-Term Employment Agreement (PKWTT)"
+                        },
+                        {
+                            "name": "Freelance Work Agreement"
+                        },
+                        {
+                            "name": "Company Regulations"
+                        },
+                        {
+                            "name": "Employee Stock Ownership Plan Agreement"
+                        }
+                    ]
+                },
+                {
+                    "name": "Corporate & Investment",
+                    "items": [
+                        {
+                            "name": "Founder Agreement"
+                        },
+                        {
+                            "name": "Shareholder Agreement"
+                        },
+                        {
+                            "name": "Shareholder Loan Agreement"
+                        },
+                        {
+                            "name": "Investment Agreement"
+                        }
+                    ]
+                },
+                {
+                    "name": "Business Cooperation",
+                    "items": [
+                        {
+                            "name": "Cooperation Agreement"
+                        },
+                        {
+                            "name": "Profit Sharing Agreement"
+                        },
+                        {
+                            "name": "Joint Venture Agreement"
+                        },
+                        {
+                            "name": "Distributor Agreement"
+                        },
+                        {
+                            "name": "Supplier Agreement"
+                        },
+                        {
+                            "name": "Service Provider Agreement"
+                        },
+                        {
+                            "name": "Sponsorship Agreement"
+                        }
+                    ]
+                },
+                {
+                    "name": "Commercial & Transactions",
+                    "items": [
+                        {
+                            "name": "Sale and Purchase Agreement"
+                        },
+                        {
+                            "name": "Debt Agreement"
+                        },
+                        {
+                            "name": "Lease Agreement"
+                        },
+                        {
+                            "name": "Loan-for-Use Agreement"
+                        },
+                        {
+                            "name": "Rights Transfer Agreement"
+                        }
+                    ]
+                },
+                {
+                    "name": "IP & Licensing",
+                    "items": [
+                        {
+                            "name": "License Agreement"
+                        },
+                        {
+                            "name": "IP Transfer Agreement"
+                        },
+                        {
+                            "name": "Franchise Agreement"
+                        }
+                    ]
+                },
+                {
+                    "name": "Confidentiality & Digital Platform",
+                    "items": [
+                        {
+                            "name": "Non-Disclosure Agreement"
+                        },
+                        {
+                            "name": "Terms & Conditions"
+                        },
+                        {
+                            "name": "Platform Terms of Use"
+                        },
+                        {
+                            "name": "Digital Platform Privacy Policy"
+                        }
+                    ]
+                },
+                {
+                    "name": "Letters & Other Documents",
+                    "items": [
+                        {
+                            "name": "Power of Attorney"
+                        },
+                        {
+                            "name": "Statement Letter"
+                        },
+                        {
+                            "name": "Reply Letter"
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "name": "劳动关系",
+                    "items": [
+                        {
+                            "name": "定期劳动合同（PKWT）"
+                        },
+                        {
+                            "name": "不定期劳动合同（PKWTT）"
+                        },
+                        {
+                            "name": "自由职业合同"
+                        },
+                        {
+                            "name": "公司规章"
+                        },
+                        {
+                            "name": "员工持股计划协议（Employee Stock Ownership Plan）"
+                        }
+                    ]
+                },
+                {
+                    "name": "公司与投资",
+                    "items": [
+                        {
+                            "name": "创始人协议（Founder Agreement）"
+                        },
+                        {
+                            "name": "股东协议（Shareholder Agreement）"
+                        },
+                        {
+                            "name": "股东借款协议（Shareholder Loan Agreement）"
+                        },
+                        {
+                            "name": "投资协议"
+                        }
+                    ]
+                },
+                {
+                    "name": "商业合作",
+                    "items": [
+                        {
+                            "name": "合作协议"
+                        },
+                        {
+                            "name": "利润分成协议（Profit Sharing Agreement）"
+                        },
+                        {
+                            "name": "合资协议（Joint Venture）"
+                        },
+                        {
+                            "name": "经销商协议（Distributor Agreement）"
+                        },
+                        {
+                            "name": "供应商协议（Supplier Agreement）"
+                        },
+                        {
+                            "name": "服务提供商协议"
+                        },
+                        {
+                            "name": "赞助协议"
+                        }
+                    ]
+                },
+                {
+                    "name": "商业与交易",
+                    "items": [
+                        {
+                            "name": "买卖协议"
+                        },
+                        {
+                            "name": "债权债务协议"
+                        },
+                        {
+                            "name": "租赁协议"
+                        },
+                        {
+                            "name": "借用协议"
+                        },
+                        {
+                            "name": "权利转让协议"
+                        }
+                    ]
+                },
+                {
+                    "name": "知识产权与许可",
+                    "items": [
+                        {
+                            "name": "许可协议"
+                        },
+                        {
+                            "name": "知识产权转让协议"
+                        },
+                        {
+                            "name": "特许经营协议"
+                        }
+                    ]
+                },
+                {
+                    "name": "保密与数字平台",
+                    "items": [
+                        {
+                            "name": "保密协议（Non-Disclosure Agreement）"
+                        },
+                        {
+                            "name": "条款与条件"
+                        },
+                        {
+                            "name": "平台使用条款"
+                        },
+                        {
+                            "name": "数字平台隐私政策（Privacy Policy）"
+                        }
+                    ]
+                },
+                {
+                    "name": "信函及其他文件",
+                    "items": [
+                        {
+                            "name": "授权书"
+                        },
+                        {
+                            "name": "声明书"
+                        },
+                        {
+                            "name": "答复函"
+                        }
+                    ]
+                }
+            ]
+        }
     }
 ]

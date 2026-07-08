@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -20,11 +23,47 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-const mengapaPenting = computed(() => props.product?.mengapa_penting ?? null);
-const ruangLingkup = computed(() => props.product?.ruang_lingkup ?? null);
-const direkomendasikan = computed(() => props.product?.direkomendasikan_bagi ?? null);
-const keunggulan = computed(() => props.product?.keunggulan ?? null);
-const bannerCta = computed(() => props.product?.banner_cta ?? null);
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        description: pick(p.description),
+        excerpt: pick(p.excerpt),
+        content: pick(p.content) ?? [],
+        mengapa_penting: pick(p.mengapa_penting),
+        ruang_lingkup: pick(p.ruang_lingkup),
+        direkomendasikan_bagi: pick(p.direkomendasikan_bagi),
+        keunggulan: pick(p.keunggulan),
+        banner_cta: pick(p.banner_cta),
+        faq: pick(p.faq) ?? [],
+    };
+});
+
+const product = localizedProduct;
+
+const mengapaPenting = computed(() => product.value?.mengapa_penting ?? null);
+const ruangLingkup = computed(() => product.value?.ruang_lingkup ?? null);
+const direkomendasikan = computed(() => product.value?.direkomendasikan_bagi ?? null);
+const keunggulan = computed(() => product.value?.keunggulan ?? null);
+const bannerCta = computed(() => product.value?.banner_cta ?? null);
 </script>
 
 <template>

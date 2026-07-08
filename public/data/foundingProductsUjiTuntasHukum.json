@@ -1,169 +1,515 @@
 [
     {
         "id": 1,
-        "name": "Uji Tuntas Hukum",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Uji Tuntas Hukum",
+            "en": "Legal Due Diligence",
+            "zh": "法律尽职调查"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "",
         "price_label": "Hubungi Kami",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Mengidentifikasi Risiko, Memastikan Kepatuhan, dan Melindungi Investasi Anda dalam setiap transaksi bisnis, investasi, akuisisi, kerja sama strategis, maupun restrukturisasi perusahaan, memahami kondisi hukum suatu Perseroan Terbatas merupakan langkah yang sangat penting.",
-        "excerpt": "Mengidentifikasi Risiko, Memastikan Kepatuhan, dan Melindungi Investasi Anda dalam setiap transaksi bisnis, investasi, akuisisi, kerja sama strategis, maupun restrukturisasi perusahaan.",
-        "content": [
-            "Mengidentifikasi Risiko, Memastikan Kepatuhan, dan Melindungi Investasi Anda dalam setiap transaksi bisnis, investasi, akuisisi, kerja sama strategis, maupun restrukturisasi perusahaan, memahami kondisi hukum suatu Perseroan Terbatas merupakan langkah yang sangat penting. Kesalahan dalam menilai aspek legal perusahaan dapat menimbulkan risiko finansial, sengketa hukum, hingga kerugian bisnis yang signifikan.",
-            "Melalui layanan Uji Tuntas Hukum (Legal Due Diligence), kami membantu Anda memperoleh gambaran menyeluruh mengenai kondisi hukum perusahaan sehingga setiap keputusan bisnis dapat diambil secara tepat, aman, dan terukur.",
-            "Uji Tuntas Hukum (Legal Due Diligence) adalah proses pemeriksaan, penelaahan, dan analisis secara menyeluruh terhadap aspek hukum suatu perusahaan untuk mengidentifikasi status hukum, tingkat kepatuhan, potensi risiko, serta permasalahan hukum yang dapat memengaruhi nilai maupun keberlangsungan usaha.",
-            "Hasil pemeriksaan dituangkan dalam laporan profesional yang memberikan informasi objektif mengenai kondisi hukum perusahaan beserta rekomendasi mitigasi risiko yang diperlukan."
-        ],
-        "mengapa_penting": {
-            "title": "MENGAPA UJI TUNTAS HUKUM PENTING?",
-            "intro": "Sebelum melakukan investasi, pembelian saham, merger, akuisisi, joint venture, maupun kerja sama bisnis, Anda perlu memastikan bahwa perusahaan yang menjadi objek transaksi:",
-            "items": [
-                "Memiliki legalitas yang sah dan lengkap",
-                "Memenuhi ketentuan peraturan perundang-undangan yang berlaku",
-                "Tidak sedang menghadapi sengketa hukum yang berisiko tinggi",
-                "Memiliki struktur kepemilikan yang jelas",
-                "Tidak memiliki kewajiban tersembunyi yang dapat merugikan investor atau mitra usaha",
-                "Memiliki aset yang sah dan dapat dipertanggungjawabkan secara hukum"
+        "description": {
+            "id": "Mengidentifikasi Risiko, Memastikan Kepatuhan, dan Melindungi Investasi Anda dalam setiap transaksi bisnis, investasi, akuisisi, kerja sama strategis, maupun restrukturisasi perusahaan, memahami kondisi hukum suatu Perseroan Terbatas merupakan langkah yang sangat penting.",
+            "en": "Identifying Risks, Ensuring Compliance, and Protecting Your Investment — in every business transaction, investment, acquisition, strategic partnership, or corporate restructuring, understanding the legal condition of a Limited Liability Company is a very important step.",
+            "zh": "识别风险、确保合规、保护您的投资——在每一项商业交易、投资、收购、战略合作或企业重组中，了解有限责任公司的法律状况都是至关重要的一步。"
+        },
+        "excerpt": {
+            "id": "Mengidentifikasi Risiko, Memastikan Kepatuhan, dan Melindungi Investasi Anda dalam setiap transaksi bisnis, investasi, akuisisi, kerja sama strategis, maupun restrukturisasi perusahaan.",
+            "en": "Identifying Risks, Ensuring Compliance, and Protecting Your Investment in every business transaction, investment, acquisition, strategic partnership, or corporate restructuring.",
+            "zh": "在每一项商业交易、投资、收购、战略合作或企业重组中，识别风险、确保合规并保护您的投资。"
+        },
+        "content": {
+            "id": [
+                "Mengidentifikasi Risiko, Memastikan Kepatuhan, dan Melindungi Investasi Anda dalam setiap transaksi bisnis, investasi, akuisisi, kerja sama strategis, maupun restrukturisasi perusahaan, memahami kondisi hukum suatu Perseroan Terbatas merupakan langkah yang sangat penting. Kesalahan dalam menilai aspek legal perusahaan dapat menimbulkan risiko finansial, sengketa hukum, hingga kerugian bisnis yang signifikan.",
+                "Melalui layanan Uji Tuntas Hukum (Legal Due Diligence), kami membantu Anda memperoleh gambaran menyeluruh mengenai kondisi hukum perusahaan sehingga setiap keputusan bisnis dapat diambil secara tepat, aman, dan terukur.",
+                "Uji Tuntas Hukum (Legal Due Diligence) adalah proses pemeriksaan, penelaahan, dan analisis secara menyeluruh terhadap aspek hukum suatu perusahaan untuk mengidentifikasi status hukum, tingkat kepatuhan, potensi risiko, serta permasalahan hukum yang dapat memengaruhi nilai maupun keberlangsungan usaha.",
+                "Hasil pemeriksaan dituangkan dalam laporan profesional yang memberikan informasi objektif mengenai kondisi hukum perusahaan beserta rekomendasi mitigasi risiko yang diperlukan."
             ],
-            "closing": "Uji Tuntas Hukum memberikan perlindungan preventif sebelum risiko tersebut berkembang menjadi permasalahan yang lebih besar."
+            "en": [
+                "Identifying Risks, Ensuring Compliance, and Protecting Your Investment — in every business transaction, investment, acquisition, strategic partnership, or corporate restructuring, understanding the legal condition of a Limited Liability Company is a very important step. Errors in assessing a company's legal aspects can create financial risks, legal disputes, and even significant business losses.",
+                "Through our Legal Due Diligence service, we help you obtain a comprehensive overview of a company's legal condition so that every business decision can be made accurately, safely, and in a measured way.",
+                "Legal Due Diligence is a comprehensive process of examination, review, and analysis of a company's legal aspects to identify its legal status, level of compliance, potential risks, and legal issues that could affect the company's value or business continuity.",
+                "The examination results are presented in a professional report that provides objective information on the company's legal condition along with the necessary risk mitigation recommendations."
+            ],
+            "zh": [
+                "识别风险、确保合规、保护您的投资——在每一项商业交易、投资、收购、战略合作或企业重组中，了解有限责任公司的法律状况都是至关重要的一步。若对公司法律层面的评估出现错误，可能导致财务风险、法律纠纷，甚至重大的商业损失。",
+                "通过我们的法律尽职调查服务，我们协助您全面了解公司的法律状况，从而使每一项商业决策都能够准确、安全且经过审慎评估地作出。",
+                "法律尽职调查是对公司法律层面进行全面检查、审查及分析的过程，旨在识别其法律地位、合规程度、潜在风险以及可能影响公司价值或业务持续性的法律问题。",
+                "检查结果将以专业报告形式呈现，客观说明公司的法律状况，并提供所需的风险缓解建议。"
+            ]
+        },
+        "mengapa_penting": {
+            "id": {
+                "title": "MENGAPA UJI TUNTAS HUKUM PENTING?",
+                "intro": "Sebelum melakukan investasi, pembelian saham, merger, akuisisi, joint venture, maupun kerja sama bisnis, Anda perlu memastikan bahwa perusahaan yang menjadi objek transaksi:",
+                "items": [
+                    "Memiliki legalitas yang sah dan lengkap",
+                    "Memenuhi ketentuan peraturan perundang-undangan yang berlaku",
+                    "Tidak sedang menghadapi sengketa hukum yang berisiko tinggi",
+                    "Memiliki struktur kepemilikan yang jelas",
+                    "Tidak memiliki kewajiban tersembunyi yang dapat merugikan investor atau mitra usaha",
+                    "Memiliki aset yang sah dan dapat dipertanggungjawabkan secara hukum"
+                ],
+                "closing": "Uji Tuntas Hukum memberikan perlindungan preventif sebelum risiko tersebut berkembang menjadi permasalahan yang lebih besar."
+            },
+            "en": {
+                "title": "WHY IS LEGAL DUE DILIGENCE IMPORTANT?",
+                "intro": "Before making an investment, purchasing shares, or entering into a merger, acquisition, joint venture, or business partnership, you need to ensure that the company being transacted with:",
+                "items": [
+                    "Has valid and complete legality",
+                    "Complies with applicable laws and regulations",
+                    "Is not facing any high-risk legal disputes",
+                    "Has a clear ownership structure",
+                    "Has no hidden liabilities that could harm investors or business partners",
+                    "Has legally valid and legally accountable assets"
+                ],
+                "closing": "Legal Due Diligence provides preventive protection before these risks develop into larger problems."
+            },
+            "zh": {
+                "title": "为何法律尽职调查如此重要？",
+                "intro": "在进行投资、购买股份、合并、收购、合资或商业合作之前，您须确保作为交易对象的公司：",
+                "items": [
+                    "拥有合法且完整的法律地位",
+                    "符合现行法律法规的规定",
+                    "未面临高风险的法律纠纷",
+                    "拥有清晰的持股结构",
+                    "不存在可能损害投资者或商业伙伴利益的隐性义务",
+                    "拥有合法且能够承担法律责任的资产"
+                ],
+                "closing": "法律尽职调查在这些风险演变为更大问题之前，提供预防性保护。"
+            }
         },
         "ruang_lingkup": {
-            "title": "RUANG LINGKUP",
-            "categories": [
-                {
-                    "name": "Legalitas dan Status Badan Hukum",
-                    "items": [
-                        "Akta Pendirian dan Perubahan Anggaran Dasar",
-                        "Pengesahan dan Persetujuan Kementerian Hukum RI",
-                        "Struktur kepemilikan saham",
-                        "Data Direksi dan Dewan Komisaris"
-                    ]
-                },
-                {
-                    "name": "Ketenagakerjaan",
-                    "items": [
-                        "Kepatuhan terhadap ketentuan ketenagakerjaan",
-                        "Perjanjian kerja",
-                        "Hubungan industrial",
-                        "Potensi sengketa ketenagakerjaan"
-                    ]
-                },
-                {
-                    "name": "Perizinan dan Kepatuhan Usaha",
-                    "items": [
-                        "Nomor Induk Berusaha (NIB)",
-                        "Perizinan berusaha berbasis risiko",
-                        "Perizinan sektoral",
-                        "Sertifikasi dan izin operasional"
-                    ]
-                },
-                {
-                    "name": "Aset dan Kekayaan Perusahaan",
-                    "items": [
-                        "Kepemilikan tanah dan bangunan",
-                        "Hak kekayaan intelektual",
-                        "Kendaraan dan aset bergerak",
-                        "Perjanjian terkait aset perusahaan"
-                    ]
-                },
-                {
-                    "name": "Kontrak dan Perjanjian",
-                    "items": [
-                        "Perjanjian kerja sama",
-                        "Perjanjian pembiayaan",
-                        "Perjanjian dengan pelanggan dan pemasok",
-                        "Perjanjian yang berpotensi menimbulkan kewajiban hukum"
-                    ]
-                },
-                {
-                    "name": "Litigasi dan Sengketa",
-                    "items": [
-                        "Perkara perdata",
-                        "Perkara pidana yang berkaitan dengan perusahaan",
-                        "Sengketa hubungan industrial",
-                        "Sengketa administrasi dan tata usaha negara",
-                        "Potensi klaim hukum dari pihak ketiga"
-                    ]
-                },
-                {
-                    "name": "Kepatuhan Korporasi",
-                    "items": [
-                        "Pelaksanaan RUPS",
-                        "Kepatuhan terhadap ketentuan korporasi",
-                        "Dokumentasi perusahaan",
-                        "Pelaporan dan kewajiban administratif"
-                    ]
-                }
-            ]
+            "id": {
+                "title": "RUANG LINGKUP",
+                "categories": [
+                    {
+                        "name": "Legalitas dan Status Badan Hukum",
+                        "items": [
+                            "Akta Pendirian dan Perubahan Anggaran Dasar",
+                            "Pengesahan dan Persetujuan Kementerian Hukum RI",
+                            "Struktur kepemilikan saham",
+                            "Data Direksi dan Dewan Komisaris"
+                        ]
+                    },
+                    {
+                        "name": "Ketenagakerjaan",
+                        "items": [
+                            "Kepatuhan terhadap ketentuan ketenagakerjaan",
+                            "Perjanjian kerja",
+                            "Hubungan industrial",
+                            "Potensi sengketa ketenagakerjaan"
+                        ]
+                    },
+                    {
+                        "name": "Perizinan dan Kepatuhan Usaha",
+                        "items": [
+                            "Nomor Induk Berusaha (NIB)",
+                            "Perizinan berusaha berbasis risiko",
+                            "Perizinan sektoral",
+                            "Sertifikasi dan izin operasional"
+                        ]
+                    },
+                    {
+                        "name": "Aset dan Kekayaan Perusahaan",
+                        "items": [
+                            "Kepemilikan tanah dan bangunan",
+                            "Hak kekayaan intelektual",
+                            "Kendaraan dan aset bergerak",
+                            "Perjanjian terkait aset perusahaan"
+                        ]
+                    },
+                    {
+                        "name": "Kontrak dan Perjanjian",
+                        "items": [
+                            "Perjanjian kerja sama",
+                            "Perjanjian pembiayaan",
+                            "Perjanjian dengan pelanggan dan pemasok",
+                            "Perjanjian yang berpotensi menimbulkan kewajiban hukum"
+                        ]
+                    },
+                    {
+                        "name": "Litigasi dan Sengketa",
+                        "items": [
+                            "Perkara perdata",
+                            "Perkara pidana yang berkaitan dengan perusahaan",
+                            "Sengketa hubungan industrial",
+                            "Sengketa administrasi dan tata usaha negara",
+                            "Potensi klaim hukum dari pihak ketiga"
+                        ]
+                    },
+                    {
+                        "name": "Kepatuhan Korporasi",
+                        "items": [
+                            "Pelaksanaan RUPS",
+                            "Kepatuhan terhadap ketentuan korporasi",
+                            "Dokumentasi perusahaan",
+                            "Pelaporan dan kewajiban administratif"
+                        ]
+                    }
+                ]
+            },
+            "en": {
+                "title": "SCOPE",
+                "categories": [
+                    {
+                        "name": "Legality and Legal Entity Status",
+                        "items": [
+                            "Deed of Establishment and Amendments to the Articles of Association",
+                            "Ratification and Approval from the Ministry of Law of the Republic of Indonesia",
+                            "Share ownership structure",
+                            "Data of the Board of Directors and Board of Commissioners"
+                        ]
+                    },
+                    {
+                        "name": "Employment",
+                        "items": [
+                            "Compliance with employment provisions",
+                            "Employment agreements",
+                            "Industrial relations",
+                            "Potential employment disputes"
+                        ]
+                    },
+                    {
+                        "name": "Licensing and Business Compliance",
+                        "items": [
+                            "Business Identification Number (NIB)",
+                            "Risk-based business licenses",
+                            "Sectoral licenses",
+                            "Certifications and operational permits"
+                        ]
+                    },
+                    {
+                        "name": "Company Assets and Property",
+                        "items": [
+                            "Land and building ownership",
+                            "Intellectual property rights",
+                            "Vehicles and movable assets",
+                            "Agreements related to company assets"
+                        ]
+                    },
+                    {
+                        "name": "Contracts and Agreements",
+                        "items": [
+                            "Cooperation agreements",
+                            "Financing agreements",
+                            "Agreements with customers and suppliers",
+                            "Agreements that could potentially create legal obligations"
+                        ]
+                    },
+                    {
+                        "name": "Litigation and Disputes",
+                        "items": [
+                            "Civil cases",
+                            "Criminal cases related to the company",
+                            "Industrial relations disputes",
+                            "Administrative and state administration disputes",
+                            "Potential legal claims from third parties"
+                        ]
+                    },
+                    {
+                        "name": "Corporate Compliance",
+                        "items": [
+                            "Holding of the General Meeting of Shareholders (RUPS)",
+                            "Compliance with corporate provisions",
+                            "Company documentation",
+                            "Reporting and administrative obligations"
+                        ]
+                    }
+                ]
+            },
+            "zh": {
+                "title": "服务范围",
+                "categories": [
+                    {
+                        "name": "合法性与法人地位",
+                        "items": [
+                            "设立公证书及章程变更",
+                            "印度尼西亚共和国法务部的批准及认可",
+                            "股权结构",
+                            "董事会及监事会数据"
+                        ]
+                    },
+                    {
+                        "name": "劳动事务",
+                        "items": [
+                            "对劳动法规的合规情况",
+                            "劳动合同",
+                            "劳资关系",
+                            "潜在的劳动纠纷"
+                        ]
+                    },
+                    {
+                        "name": "许可与业务合规",
+                        "items": [
+                            "营业执照号码（NIB）",
+                            "基于风险的营业许可",
+                            "行业许可",
+                            "认证及运营许可"
+                        ]
+                    },
+                    {
+                        "name": "公司资产与财产",
+                        "items": [
+                            "土地及建筑物所有权",
+                            "知识产权",
+                            "车辆及动产",
+                            "与公司资产相关的协议"
+                        ]
+                    },
+                    {
+                        "name": "合同与协议",
+                        "items": [
+                            "合作协议",
+                            "融资协议",
+                            "与客户及供应商的协议",
+                            "可能产生法律义务的协议"
+                        ]
+                    },
+                    {
+                        "name": "诉讼与纠纷",
+                        "items": [
+                            "民事案件",
+                            "与公司相关的刑事案件",
+                            "劳资关系纠纷",
+                            "行政及国家行政纠纷",
+                            "第三方潜在的法律索赔"
+                        ]
+                    },
+                    {
+                        "name": "公司合规",
+                        "items": [
+                            "股东大会（RUPS）的召开",
+                            "对公司相关规定的合规情况",
+                            "公司文件管理",
+                            "报告及行政义务"
+                        ]
+                    }
+                ]
+            }
         },
         "direkomendasikan_bagi": {
-            "title": "LAYANAN UJI TUNTAS HUKUM SANGAT DIREKOMENDASIKAN BAGI",
-            "items": [
-                {
-                    "number": "1",
-                    "title": "Investor",
-                    "description": "Memastikan perusahaan target investasi berada dalam kondisi hukum yang sehat dan aman."
-                },
-                {
-                    "number": "2",
-                    "title": "Calon Pembeli Saham",
-                    "description": "Mengetahui secara menyeluruh risiko hukum sebelum melakukan akuisisi atau pembelian saham."
-                },
-                {
-                    "number": "3",
-                    "title": "Perusahaan yang Akan Melakukan Akuisisi atau Merger",
-                    "description": "Meminimalkan risiko pasca transaksi dan meningkatkan kepatuhan hukum."
-                },
-                {
-                    "number": "4",
-                    "title": "Lembaga Pembiayaan dan Perbankan",
-                    "description": "Sebagai bagian dari proses analisis kelayakan dan mitigasi risiko pembiayaan."
-                },
-                {
-                    "number": "5",
-                    "title": "Pemilik Usaha",
-                    "description": "Mengetahui tingkat kepatuhan hukum perusahaan sebelum ekspansi bisnis atau pencarian investor."
-                }
-            ]
+            "id": {
+                "title": "LAYANAN UJI TUNTAS HUKUM SANGAT DIREKOMENDASIKAN BAGI",
+                "items": [
+                    {
+                        "number": "1",
+                        "title": "Investor",
+                        "description": "Memastikan perusahaan target investasi berada dalam kondisi hukum yang sehat dan aman."
+                    },
+                    {
+                        "number": "2",
+                        "title": "Calon Pembeli Saham",
+                        "description": "Mengetahui secara menyeluruh risiko hukum sebelum melakukan akuisisi atau pembelian saham."
+                    },
+                    {
+                        "number": "3",
+                        "title": "Perusahaan yang Akan Melakukan Akuisisi atau Merger",
+                        "description": "Meminimalkan risiko pasca transaksi dan meningkatkan kepatuhan hukum."
+                    },
+                    {
+                        "number": "4",
+                        "title": "Lembaga Pembiayaan dan Perbankan",
+                        "description": "Sebagai bagian dari proses analisis kelayakan dan mitigasi risiko pembiayaan."
+                    },
+                    {
+                        "number": "5",
+                        "title": "Pemilik Usaha",
+                        "description": "Mengetahui tingkat kepatuhan hukum perusahaan sebelum ekspansi bisnis atau pencarian investor."
+                    }
+                ]
+            },
+            "en": {
+                "title": "LEGAL DUE DILIGENCE SERVICES ARE HIGHLY RECOMMENDED FOR",
+                "items": [
+                    {
+                        "number": "1",
+                        "title": "Investors",
+                        "description": "Ensuring that the target investment company is in a sound and safe legal condition."
+                    },
+                    {
+                        "number": "2",
+                        "title": "Prospective Share Buyers",
+                        "description": "Gaining a thorough understanding of legal risks before carrying out an acquisition or share purchase."
+                    },
+                    {
+                        "number": "3",
+                        "title": "Companies Planning an Acquisition or Merger",
+                        "description": "Minimizing post-transaction risks and improving legal compliance."
+                    },
+                    {
+                        "number": "4",
+                        "title": "Financing Institutions and Banks",
+                        "description": "As part of the feasibility analysis and financing risk mitigation process."
+                    },
+                    {
+                        "number": "5",
+                        "title": "Business Owners",
+                        "description": "Knowing the company's level of legal compliance before business expansion or seeking investors."
+                    }
+                ]
+            },
+            "zh": {
+                "title": "法律尽职调查服务强烈推荐适用于",
+                "items": [
+                    {
+                        "number": "1",
+                        "title": "投资者",
+                        "description": "确保投资目标公司处于健全且安全的法律状况。"
+                    },
+                    {
+                        "number": "2",
+                        "title": "潜在股份购买者",
+                        "description": "在进行收购或购买股份之前，全面了解法律风险。"
+                    },
+                    {
+                        "number": "3",
+                        "title": "计划进行收购或合并的公司",
+                        "description": "降低交易后风险并提升法律合规性。"
+                    },
+                    {
+                        "number": "4",
+                        "title": "融资机构及银行",
+                        "description": "作为可行性分析及融资风险缓解流程的一部分。"
+                    },
+                    {
+                        "number": "5",
+                        "title": "企业所有者",
+                        "description": "在业务扩张或寻求投资者之前，了解公司的法律合规水平。"
+                    }
+                ]
+            }
         },
         "keunggulan": {
-            "title": "MENGAPA MENGGUNAKAN LAYANAN KAMI?",
-            "items": [
-                {
-                    "title": "Pendekatan Berbasis Risiko",
-                    "description": "Kami tidak hanya memeriksa dokumen, tetapi juga mengidentifikasi risiko hukum yang dapat memengaruhi operasional dan nilai perusahaan."
-                },
-                {
-                    "title": "Laporan yang Mudah Dipahami",
-                    "description": "Hasil pemeriksaan disajikan secara sistematis dengan klasifikasi risiko dan rekomendasi tindakan yang dapat segera ditindaklanjuti."
-                },
-                {
-                    "title": "Tim Profesional dan Berpengalaman",
-                    "description": "Didukung oleh praktisi hukum korporasi yang berpengalaman dalam menangani berbagai transaksi bisnis dan kegiatan due diligence."
-                },
-                {
-                    "title": "Kerahasiaan Terjamin",
-                    "description": "Seluruh informasi dan dokumen yang kami terima diperlakukan secara rahasia sesuai standar profesional dan etika hukum."
-                },
-                {
-                    "title": "Analisis Komprehensif",
-                    "description": "Pemeriksaan dilakukan secara menyeluruh terhadap aspek legal, korporasi, perizinan, kontraktual, dan kepatuhan perusahaan."
-                }
-            ]
+            "id": {
+                "title": "MENGAPA MENGGUNAKAN LAYANAN KAMI?",
+                "items": [
+                    {
+                        "title": "Pendekatan Berbasis Risiko",
+                        "description": "Kami tidak hanya memeriksa dokumen, tetapi juga mengidentifikasi risiko hukum yang dapat memengaruhi operasional dan nilai perusahaan."
+                    },
+                    {
+                        "title": "Laporan yang Mudah Dipahami",
+                        "description": "Hasil pemeriksaan disajikan secara sistematis dengan klasifikasi risiko dan rekomendasi tindakan yang dapat segera ditindaklanjuti."
+                    },
+                    {
+                        "title": "Tim Profesional dan Berpengalaman",
+                        "description": "Didukung oleh praktisi hukum korporasi yang berpengalaman dalam menangani berbagai transaksi bisnis dan kegiatan due diligence."
+                    },
+                    {
+                        "title": "Kerahasiaan Terjamin",
+                        "description": "Seluruh informasi dan dokumen yang kami terima diperlakukan secara rahasia sesuai standar profesional dan etika hukum."
+                    },
+                    {
+                        "title": "Analisis Komprehensif",
+                        "description": "Pemeriksaan dilakukan secara menyeluruh terhadap aspek legal, korporasi, perizinan, kontraktual, dan kepatuhan perusahaan."
+                    }
+                ]
+            },
+            "en": {
+                "title": "WHY USE OUR SERVICE?",
+                "items": [
+                    {
+                        "title": "Risk-Based Approach",
+                        "description": "We do not merely review documents, but also identify legal risks that could affect the company's operations and value."
+                    },
+                    {
+                        "title": "Easy-to-Understand Report",
+                        "description": "Examination results are presented systematically with risk classification and actionable recommendations that can be immediately followed up."
+                    },
+                    {
+                        "title": "Professional and Experienced Team",
+                        "description": "Supported by corporate legal practitioners experienced in handling various business transactions and due diligence activities."
+                    },
+                    {
+                        "title": "Confidentiality Guaranteed",
+                        "description": "All information and documents we receive are treated confidentially in accordance with professional standards and legal ethics."
+                    },
+                    {
+                        "title": "Comprehensive Analysis",
+                        "description": "Examinations are conducted comprehensively covering legal, corporate, licensing, contractual, and company compliance aspects."
+                    }
+                ]
+            },
+            "zh": {
+                "title": "为何选择我们的服务？",
+                "items": [
+                    {
+                        "title": "基于风险的方法",
+                        "description": "我们不仅审查文件，还识别可能影响公司运营及价值的法律风险。"
+                    },
+                    {
+                        "title": "易于理解的报告",
+                        "description": "检查结果以系统化方式呈现，附有风险分类及可立即落实的行动建议。"
+                    },
+                    {
+                        "title": "专业且经验丰富的团队",
+                        "description": "由在处理各类商业交易及尽职调查工作方面经验丰富的公司法律从业人员提供支持。"
+                    },
+                    {
+                        "title": "保密有保障",
+                        "description": "我们所收到的全部信息及文件均依据专业标准及法律道德予以保密处理。"
+                    },
+                    {
+                        "title": "全面分析",
+                        "description": "全面审查公司的法律、公司治理、许可、合同及合规方面。"
+                    }
+                ]
+            }
         },
         "banner_cta": {
-            "text": "Konsultasikan kebutuhan Uji Tuntas Hukum perusahaan Anda dan dapatkan solusi hukum yang komprehensif, independen, dan terpercaya."
-        },
-        "faq": [
-            {
-                "question": "Berapa lama proses Uji Tuntas Hukum?",
-                "answer": "Proses Uji Tuntas Hukum biasanya memakan waktu 7-14 hari kerja tergantung kompleksitas dan kelengkapan dokumen perusahaan."
+            "id": {
+                "text": "Konsultasikan kebutuhan Uji Tuntas Hukum perusahaan Anda dan dapatkan solusi hukum yang komprehensif, independen, dan terpercaya."
             },
-            {
-                "question": "Dokumen apa saja yang dibutuhkan?",
-                "answer": "Dokumen yang dibutuhkan meliputi akta pendirian, perizinan usaha, perjanjian-perjanjian utama, data aset, dan dokumen ketenagakerjaan."
+            "en": {
+                "text": "Consult your company's Legal Due Diligence needs and get a comprehensive, independent, and trusted legal solution."
+            },
+            "zh": {
+                "text": "咨询您公司的法律尽职调查需求，获得全面、独立且值得信赖的法律解决方案。"
             }
-        ]
+        },
+        "faq": {
+            "id": [
+                {
+                    "question": "Berapa lama proses Uji Tuntas Hukum?",
+                    "answer": "Proses Uji Tuntas Hukum biasanya memakan waktu 7-14 hari kerja tergantung kompleksitas dan kelengkapan dokumen perusahaan."
+                },
+                {
+                    "question": "Dokumen apa saja yang dibutuhkan?",
+                    "answer": "Dokumen yang dibutuhkan meliputi akta pendirian, perizinan usaha, perjanjian-perjanjian utama, data aset, dan dokumen ketenagakerjaan."
+                }
+            ],
+            "en": [
+                {
+                    "question": "How long does the Legal Due Diligence process take?",
+                    "answer": "The Legal Due Diligence process usually takes 7-14 business days depending on the complexity and completeness of the company's documents."
+                },
+                {
+                    "question": "What documents are required?",
+                    "answer": "Required documents include the deed of establishment, business licenses, key agreements, asset data, and employment documents."
+                }
+            ],
+            "zh": [
+                {
+                    "question": "法律尽职调查流程需要多长时间？",
+                    "answer": "法律尽职调查流程通常需要7-14个工作日，具体取决于公司文件的复杂程度及完整性。"
+                },
+                {
+                    "question": "需要哪些文件？",
+                    "answer": "所需文件包括设立公证书、营业许可、主要协议、资产数据及劳动相关文件。"
+                }
+            ]
+        }
     }
 ]

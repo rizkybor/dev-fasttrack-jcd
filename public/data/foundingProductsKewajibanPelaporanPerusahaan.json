@@ -1,457 +1,1553 @@
 [
     {
         "id": 1,
-        "name": "Laporan Kegiatan Penanaman Modal (LKPM)",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Laporan Kegiatan Penanaman Modal (LKPM)",
+            "en": "Investment Activity Report (LKPM)",
+            "zh": "投资活动报告（LKPM）"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Setiap pelaku usaha yang telah memperoleh perizinan berusaha melalui sistem OSS memiliki kewajiban untuk menyampaikan Laporan Kegiatan Penanaman Modal (LKPM) secara berkala kepada pemerintah.",
-        "excerpt": "Setiap pelaku usaha yang telah memperoleh perizinan berusaha melalui sistem OSS memiliki kewajiban untuk menyampaikan Laporan Kegiatan Penanaman Modal (LKPM) secara berkala kepada pemerintah.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Setiap pelaku usaha yang telah memperoleh perizinan berusaha melalui sistem OSS memiliki kewajiban untuk menyampaikan Laporan Kegiatan Penanaman Modal (LKPM) secara berkala kepada pemerintah. Kepatuhan terhadap kewajiban ini merupakan bagian penting dalam menjaga legalitas usaha, menghindari sanksi administratif, serta memastikan data investasi perusahaan tercatat dengan baik.",
-            "Laporan Kegiatan Penanaman Modal (LKPM) adalah laporan yang memuat perkembangan realisasi investasi dan pelaksanaan kegiatan usaha yang wajib disampaikan oleh pelaku usaha kepada pemerintah melalui sistem Online Single Submission (OSS).",
-            "LKPM berfungsi sebagai instrumen pengawasan dan evaluasi pemerintah terhadap perkembangan investasi serta pelaksanaan kegiatan usaha di Indonesia.",
-            {
-                "label": "Kewajiban penyampaian LKPM berlaku bagi pelaku usaha yang telah memiliki:",
-                "items": [
-                    "Nomor Induk Berusaha (NIB) baik Tahap Konstruksi maupun Tahap Produksi;",
-                    "Perizinan Berusaha Berbasis Risiko;",
-                    "Kegiatan usaha yang termasuk kategori wajib pelaporan sesuai ketentuan peraturan perundang-undangan;",
-                    "Penanam Modal Dalam Negeri (PMDN) maupun Penanam Modal Asing (PMA)."
-                ]
-            },
-            {
-                "label": "Informasi yang Dilaporkan dalam LKPM",
-                "items": [
-                    "Identitas dan profil perusahaan;",
-                    "Perkembangan realisasi investasi;",
-                    "Penggunaan tenaga kerja;",
-                    "Pelaksanaan kegiatan usaha;",
-                    "Permasalahan atau hambatan yang dihadapi perusahaan;",
-                    "Rencana pengembangan usaha;",
-                    "Data pendukung lainnya sesuai ketentuan OSS."
-                ]
-            }
-        ],
-        "term_condition": [],
-        "benefits": [
-            {
-                "title": "Menjaga Kepatuhan Perusahaan",
-                "description": "Memastikan perusahaan memenuhi kewajiban pelaporan sesuai regulasi investasi yang berlaku."
-            },
-            {
-                "title": "Menghindari Sanksi Administratif",
-                "description": "Keterlambatan atau kelalaian dalam penyampaian LKPM dapat mengakibatkan teguran, pembatasan kegiatan usaha, hingga pencabutan perizinan."
-            },
-            {
-                "title": "Mendukung Pengembangan Usaha",
-                "description": "Data investasi yang tercatat dengan baik dapat menjadi dasar dalam proses pengembangan usaha dan pengajuan fasilitas investasi."
-            },
-            {
-                "title": "Meningkatkan Kredibilitas Perusahaan",
-                "description": "Perusahaan yang patuh terhadap kewajiban pelaporan menunjukkan tata kelola usaha yang baik dan profesional."
-            }
-        ],
-        "scope_of_service": [
-            {
-                "title": "Konsultasi Kewajiban LKPM",
-                "description": "Analisis status perusahaan dan identifikasi kewajiban pelaporan sesuai sektor usaha."
-            },
-            {
-                "title": "Penyusunan Data LKPM",
-                "description": "Pendampingan pengumpulan dan verifikasi data investasi serta kegiatan usaha perusahaan."
-            },
-            {
-                "title": "Penginputan dan Pelaporan OSS",
-                "description": "Proses pengisian dan penyampaian LKPM melalui sistem OSS sesuai periode pelaporan yang berlaku."
-            },
-            {
-                "title": "Pendampingan Klarifikasi",
-                "description": "Bantuan dalam menindaklanjuti permintaan klarifikasi atau verifikasi dari instansi terkait."
-            },
-            {
-                "title": "Monitoring Kepatuhan",
-                "description": "Pengingat jadwal pelaporan dan evaluasi kepatuhan perusahaan terhadap kewajiban LKPM."
-            }
-        ],
-        "requirements": [],
-        "process": [],
-        "faq": [],
-        "plans": [
-            {
-                "name": "LKPM KATEGORI UMK*",
-                "popular": false,
-                "price": "Rp. 1.000.000",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                "sections": [
-                    {
-                        "label": "Mendapatkan",
-                        "items": [
-                            {
-                                "label": "Tanda Terima Pelaporan",
-                                "included": true
-                            },
-                            {
-                                "label": "Data LKPM",
-                                "included": true
-                            },
-                            { "label": "Persetujuan Pelaporan", "included": true }
-                        ]
-                    },
-                    {
-                        "label": "Termasuk",
-                        "items": [
-                            {
-                                "label": "Fasttrack Document Delivery Service",
-                                "included": true
-                            },
-                            {
-                                "label": "Fasttrack Digital Files Secure Storage",
-                                "included": true
-                            },
-                            { "label": "Fasttrack Kit", "included": true }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "PT Perorangan Standart",
-                "popular": true,
-                "price": "Rp. 1.500.000",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                "sections": [
-                    {
-                        "label": "Mendapatkan",
-                        "items": [
-                            {
-                                "label": "Tanda Terima Pelaporan",
-                                "included": true
-                            },
-                            {
-                                "label": "Data LKPM",
-                                "included": true
-                            },
-                            { "label": "Persetujuan Pelaporan", "included": true }
-                        ]
-                    },
-                    {
-                        "label": "Termasuk",
-                        "items": [
-                            {
-                                "label": "Fasttrack Document Delivery Service",
-                                "included": true
-                            },
-                            {
-                                "label": "Fasttrack Digital Files Secure Storage",
-                                "included": true
-                            },
-                            { "label": "Fasttrack Kit", "included": true }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "PT Perorangan Premium + VO",
-                "popular": false,
-                "price": "Rp. 1.000.000",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                "sections": [
-                    {
-                        "label": "Mendapatkan",
-                        "items": [
-                            {
-                                "label": "Tanda Terima Pelaporan",
-                                "included": true
-                            },
-                            {
-                                "label": "Data LKPM",
-                                "included": true
-                            },
-                            { "label": "Persetujuan Pelaporan", "included": true }
-                        ]
-                    },
-                    {
-                        "label": "Termasuk",
-                        "items": [
-                            {
-                                "label": "Fasttrack Document Delivery Service",
-                                "included": true
-                            },
-                            {
-                                "label": "Fasttrack Digital Files Secure Storage",
-                                "included": true
-                            },
-                            { "label": "Fasttrack Kit", "included": true }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "plans_info": "Harga dapat berubah menyesuaikan dengan skala bisnis, volume dokumen, dan kompleksitas proses.",
-        "plans_alert": [],
-        "dasar_hukum": [
-            "Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal;",
-            "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-            "Peraturan Badan Koordinasi Penanaman Modal (BKPM) No. 4 Tahun 2025."
-        ],
+        "description": {
+            "id": "Setiap pelaku usaha yang telah memperoleh perizinan berusaha melalui sistem OSS memiliki kewajiban untuk menyampaikan Laporan Kegiatan Penanaman Modal (LKPM) secara berkala kepada pemerintah.",
+            "en": "Every business actor who has obtained business licensing through the OSS system has an obligation to periodically submit an Investment Activity Report (LKPM) to the government.",
+            "zh": "每一位通过OSS系统获得营业许可的经营者，均有义务定期向政府提交投资活动报告（LKPM）。"
+        },
+        "excerpt": {
+            "id": "Setiap pelaku usaha yang telah memperoleh perizinan berusaha melalui sistem OSS memiliki kewajiban untuk menyampaikan Laporan Kegiatan Penanaman Modal (LKPM) secara berkala kepada pemerintah.",
+            "en": "Every business actor who has obtained business licensing through the OSS system has an obligation to periodically submit an Investment Activity Report (LKPM) to the government.",
+            "zh": "每一位通过OSS系统获得营业许可的经营者，均有义务定期向政府提交投资活动报告（LKPM）。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适用于初创企业、代理商、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Setiap pelaku usaha yang telah memperoleh perizinan berusaha melalui sistem OSS memiliki kewajiban untuk menyampaikan Laporan Kegiatan Penanaman Modal (LKPM) secara berkala kepada pemerintah. Kepatuhan terhadap kewajiban ini merupakan bagian penting dalam menjaga legalitas usaha, menghindari sanksi administratif, serta memastikan data investasi perusahaan tercatat dengan baik.",
+                "Laporan Kegiatan Penanaman Modal (LKPM) adalah laporan yang memuat perkembangan realisasi investasi dan pelaksanaan kegiatan usaha yang wajib disampaikan oleh pelaku usaha kepada pemerintah melalui sistem Online Single Submission (OSS).",
+                "LKPM berfungsi sebagai instrumen pengawasan dan evaluasi pemerintah terhadap perkembangan investasi serta pelaksanaan kegiatan usaha di Indonesia.",
+                {
+                    "label": "Kewajiban penyampaian LKPM berlaku bagi pelaku usaha yang telah memiliki:",
+                    "items": [
+                        "Nomor Induk Berusaha (NIB) baik Tahap Konstruksi maupun Tahap Produksi;",
+                        "Perizinan Berusaha Berbasis Risiko;",
+                        "Kegiatan usaha yang termasuk kategori wajib pelaporan sesuai ketentuan peraturan perundang-undangan;",
+                        "Penanam Modal Dalam Negeri (PMDN) maupun Penanam Modal Asing (PMA)."
+                    ]
+                },
+                {
+                    "label": "Informasi yang Dilaporkan dalam LKPM",
+                    "items": [
+                        "Identitas dan profil perusahaan;",
+                        "Perkembangan realisasi investasi;",
+                        "Penggunaan tenaga kerja;",
+                        "Pelaksanaan kegiatan usaha;",
+                        "Permasalahan atau hambatan yang dihadapi perusahaan;",
+                        "Rencana pengembangan usaha;",
+                        "Data pendukung lainnya sesuai ketentuan OSS."
+                    ]
+                }
+            ],
+            "en": [
+                "Every business actor who has obtained business licensing through the OSS system has an obligation to periodically submit an Investment Activity Report (LKPM) to the government. Compliance with this obligation is an important part of maintaining business legality, avoiding administrative sanctions, and ensuring the company's investment data is well recorded.",
+                "The Investment Activity Report (LKPM) is a report containing the progress of investment realization and business activity implementation that must be submitted by business actors to the government through the Online Single Submission (OSS) system.",
+                "LKPM serves as an instrument for government supervision and evaluation of investment progress and business activity implementation in Indonesia.",
+                {
+                    "label": "The obligation to submit LKPM applies to business actors who already have:",
+                    "items": [
+                        "Business Identification Number (NIB) for either the Construction Stage or Production Stage;",
+                        "Risk-Based Business Licensing;",
+                        "Business activities that fall under the mandatory reporting category according to statutory provisions;",
+                        "Domestic Investment (PMDN) or Foreign Investment (PMA)."
+                    ]
+                },
+                {
+                    "label": "Information Reported in the LKPM",
+                    "items": [
+                        "Company identity and profile;",
+                        "Progress of investment realization;",
+                        "Use of labor;",
+                        "Implementation of business activities;",
+                        "Problems or obstacles faced by the company;",
+                        "Business development plans;",
+                        "Other supporting data in accordance with OSS provisions."
+                    ]
+                }
+            ],
+            "zh": [
+                "每一位通过OSS系统获得营业许可的经营者，均有义务定期向政府提交投资活动报告（LKPM）。遵守此义务是维护业务合法性、避免行政处罚以及确保公司投资数据妥善记录的重要环节。",
+                "投资活动报告（LKPM）是一份记录投资实现进度及经营活动实施情况的报告，经营者须通过网上单一提交系统（OSS）向政府提交。",
+                "LKPM作为政府对印度尼西亚投资进展及经营活动实施情况进行监督及评估的工具。",
+                {
+                    "label": "提交LKPM的义务适用于已具备以下条件的经营者：",
+                    "items": [
+                        "营业执照号码（NIB），无论是建设阶段还是生产阶段；",
+                        "基于风险的营业许可；",
+                        "依据法律法规规定属于强制申报类别的经营活动；",
+                        "国内投资（PMDN）或外商投资（PMA）。"
+                    ]
+                },
+                {
+                    "label": "LKPM中申报的信息",
+                    "items": [
+                        "公司身份及概况；",
+                        "投资实现进度；",
+                        "劳动力使用情况；",
+                        "经营活动的实施情况；",
+                        "公司所面临的问题或障碍；",
+                        "业务发展计划；",
+                        "依据OSS规定提供的其他支持数据。"
+                    ]
+                }
+            ]
+        },
+        "term_condition": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "benefits": {
+            "id": [
+                {
+                    "title": "Menjaga Kepatuhan Perusahaan",
+                    "description": "Memastikan perusahaan memenuhi kewajiban pelaporan sesuai regulasi investasi yang berlaku."
+                },
+                {
+                    "title": "Menghindari Sanksi Administratif",
+                    "description": "Keterlambatan atau kelalaian dalam penyampaian LKPM dapat mengakibatkan teguran, pembatasan kegiatan usaha, hingga pencabutan perizinan."
+                },
+                {
+                    "title": "Mendukung Pengembangan Usaha",
+                    "description": "Data investasi yang tercatat dengan baik dapat menjadi dasar dalam proses pengembangan usaha dan pengajuan fasilitas investasi."
+                },
+                {
+                    "title": "Meningkatkan Kredibilitas Perusahaan",
+                    "description": "Perusahaan yang patuh terhadap kewajiban pelaporan menunjukkan tata kelola usaha yang baik dan profesional."
+                }
+            ],
+            "en": [
+                {
+                    "title": "Maintaining Company Compliance",
+                    "description": "Ensuring the company fulfills reporting obligations in accordance with applicable investment regulations."
+                },
+                {
+                    "title": "Avoiding Administrative Sanctions",
+                    "description": "Delay or negligence in submitting the LKPM can result in warnings, restrictions on business activities, or even license revocation."
+                },
+                {
+                    "title": "Supporting Business Development",
+                    "description": "Well-recorded investment data can serve as a basis for business development processes and investment facility applications."
+                },
+                {
+                    "title": "Enhancing Company Credibility",
+                    "description": "Companies that comply with reporting obligations demonstrate good and professional business governance."
+                }
+            ],
+            "zh": [
+                {
+                    "title": "维护公司合规",
+                    "description": "确保公司依据现行投资法规履行申报义务。"
+                },
+                {
+                    "title": "避免行政处罚",
+                    "description": "延误或疏忽提交LKPM可能导致警告、限制经营活动，甚至吊销许可证。"
+                },
+                {
+                    "title": "支持业务发展",
+                    "description": "妥善记录的投资数据可作为业务发展流程及投资便利申请的依据。"
+                },
+                {
+                    "title": "提升公司信誉",
+                    "description": "遵守申报义务的公司展现出良好且专业的企业治理。"
+                }
+            ]
+        },
+        "scope_of_service": {
+            "id": [
+                {
+                    "title": "Konsultasi Kewajiban LKPM",
+                    "description": "Analisis status perusahaan dan identifikasi kewajiban pelaporan sesuai sektor usaha."
+                },
+                {
+                    "title": "Penyusunan Data LKPM",
+                    "description": "Pendampingan pengumpulan dan verifikasi data investasi serta kegiatan usaha perusahaan."
+                },
+                {
+                    "title": "Penginputan dan Pelaporan OSS",
+                    "description": "Proses pengisian dan penyampaian LKPM melalui sistem OSS sesuai periode pelaporan yang berlaku."
+                },
+                {
+                    "title": "Pendampingan Klarifikasi",
+                    "description": "Bantuan dalam menindaklanjuti permintaan klarifikasi atau verifikasi dari instansi terkait."
+                },
+                {
+                    "title": "Monitoring Kepatuhan",
+                    "description": "Pengingat jadwal pelaporan dan evaluasi kepatuhan perusahaan terhadap kewajiban LKPM."
+                }
+            ],
+            "en": [
+                {
+                    "title": "LKPM Obligation Consultation",
+                    "description": "Analysis of the company's status and identification of reporting obligations according to the business sector."
+                },
+                {
+                    "title": "LKPM Data Preparation",
+                    "description": "Assistance with the collection and verification of investment data and company business activities."
+                },
+                {
+                    "title": "OSS Data Entry and Reporting",
+                    "description": "The process of filling in and submitting LKPM through the OSS system in accordance with the applicable reporting period."
+                },
+                {
+                    "title": "Clarification Assistance",
+                    "description": "Assistance in following up on clarification or verification requests from relevant agencies."
+                },
+                {
+                    "title": "Compliance Monitoring",
+                    "description": "Reminders for reporting schedules and evaluation of the company's compliance with LKPM obligations."
+                }
+            ],
+            "zh": [
+                {
+                    "title": "LKPM义务咨询",
+                    "description": "分析公司状况并依据业务领域确定申报义务。"
+                },
+                {
+                    "title": "LKPM数据编制",
+                    "description": "协助收集及核实投资数据及公司经营活动。"
+                },
+                {
+                    "title": "OSS数据录入及申报",
+                    "description": "依据现行申报周期，通过OSS系统填写并提交LKPM的流程。"
+                },
+                {
+                    "title": "澄清协助",
+                    "description": "协助跟进相关机构提出的澄清或核实要求。"
+                },
+                {
+                    "title": "合规监控",
+                    "description": "提醒申报时间表并评估公司对LKPM义务的合规情况。"
+                }
+            ]
+        },
+        "requirements": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "process": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "plans": {
+            "id": [
+                {
+                    "name": "LKPM KATEGORI UMK*",
+                    "popular": false,
+                    "price": "Rp. 1.000.000",
+                    "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "sections": [
+                        {
+                            "label": "Mendapatkan",
+                            "items": [
+                                {
+                                    "label": "Tanda Terima Pelaporan",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Data LKPM",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Persetujuan Pelaporan",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Termasuk",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PT Perorangan Standart",
+                    "popular": true,
+                    "price": "Rp. 1.500.000",
+                    "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "sections": [
+                        {
+                            "label": "Mendapatkan",
+                            "items": [
+                                {
+                                    "label": "Tanda Terima Pelaporan",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Data LKPM",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Persetujuan Pelaporan",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Termasuk",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PT Perorangan Premium + VO",
+                    "popular": false,
+                    "price": "Rp. 1.000.000",
+                    "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "sections": [
+                        {
+                            "label": "Mendapatkan",
+                            "items": [
+                                {
+                                    "label": "Tanda Terima Pelaporan",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Data LKPM",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Persetujuan Pelaporan",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Termasuk",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "name": "LKPM MICRO & SMALL BUSINESS CATEGORY*",
+                    "popular": false,
+                    "price": "Rp. 1.000.000",
+                    "bonus_note": "FREE Preparation and Post-Completion Consultation",
+                    "sections": [
+                        {
+                            "label": "Receive",
+                            "items": [
+                                {
+                                    "label": "Reporting Receipt",
+                                    "included": true
+                                },
+                                {
+                                    "label": "LKPM Data",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Reporting Approval",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Included",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Standard Individual PT",
+                    "popular": true,
+                    "price": "Rp. 1.500.000",
+                    "bonus_note": "FREE Preparation and Post-Completion Consultation",
+                    "sections": [
+                        {
+                            "label": "Receive",
+                            "items": [
+                                {
+                                    "label": "Reporting Receipt",
+                                    "included": true
+                                },
+                                {
+                                    "label": "LKPM Data",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Reporting Approval",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Included",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Premium Individual PT + VO",
+                    "popular": false,
+                    "price": "Rp. 1.000.000",
+                    "bonus_note": "FREE Preparation and Post-Completion Consultation",
+                    "sections": [
+                        {
+                            "label": "Receive",
+                            "items": [
+                                {
+                                    "label": "Reporting Receipt",
+                                    "included": true
+                                },
+                                {
+                                    "label": "LKPM Data",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Reporting Approval",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Included",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "name": "LKPM微型及小型企业类别*",
+                    "popular": false,
+                    "price": "Rp. 1.000.000",
+                    "bonus_note": "免费的准备及完成后咨询",
+                    "sections": [
+                        {
+                            "label": "获得",
+                            "items": [
+                                {
+                                    "label": "申报回执",
+                                    "included": true
+                                },
+                                {
+                                    "label": "LKPM数据",
+                                    "included": true
+                                },
+                                {
+                                    "label": "申报批准",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "包含",
+                            "items": [
+                                {
+                                    "label": "Fasttrack文件递送服务",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack数字文件安全存储",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack套件",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "标准个人PT",
+                    "popular": true,
+                    "price": "Rp. 1.500.000",
+                    "bonus_note": "免费的准备及完成后咨询",
+                    "sections": [
+                        {
+                            "label": "获得",
+                            "items": [
+                                {
+                                    "label": "申报回执",
+                                    "included": true
+                                },
+                                {
+                                    "label": "LKPM数据",
+                                    "included": true
+                                },
+                                {
+                                    "label": "申报批准",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "包含",
+                            "items": [
+                                {
+                                    "label": "Fasttrack文件递送服务",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack数字文件安全存储",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack套件",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "高级个人PT + 虚拟办公室",
+                    "popular": false,
+                    "price": "Rp. 1.000.000",
+                    "bonus_note": "免费的准备及完成后咨询",
+                    "sections": [
+                        {
+                            "label": "获得",
+                            "items": [
+                                {
+                                    "label": "申报回执",
+                                    "included": true
+                                },
+                                {
+                                    "label": "LKPM数据",
+                                    "included": true
+                                },
+                                {
+                                    "label": "申报批准",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "包含",
+                            "items": [
+                                {
+                                    "label": "Fasttrack文件递送服务",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack数字文件安全存储",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack套件",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "plans_info": {
+            "id": "Harga dapat berubah menyesuaikan dengan skala bisnis, volume dokumen, dan kompleksitas proses.",
+            "en": "Prices may change depending on the scale of the business, document volume, and process complexity.",
+            "zh": "价格可能根据企业规模、文件数量及流程复杂程度而有所变动。"
+        },
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal;",
+                "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                "Peraturan Badan Koordinasi Penanaman Modal (BKPM) No. 4 Tahun 2025."
+            ],
+            "en": [
+                "Law Number 25 of 2007 concerning Investment;",
+                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                "Investment Coordinating Board (BKPM) Regulation No. 4 of 2025."
+            ],
+            "zh": [
+                "2007年第25号法律关于投资；",
+                "2025年第28号政府法规，关于基于风险的营业许可实施；",
+                "2025年第4号投资协调委员会（BKPM）条例。"
+            ]
+        },
         "footer_cta": {
-            "title": "Pastikan perusahaan Anda tetap patuh terhadap ketentuan investasi yang berlaku.",
-            "subtitle": "Tim kami siap membantu proses penyusunan, pelaporan, hingga pendampingan LKPM secara profesional, efisien, dan sesuai regulasi. Kelola kepatuhan investasi dengan lebih mudah, aman, dan terpercaya bersama kami.",
-            "button_text": "Chat Langsung via WhatsApp",
-            "wa_message": "layanan yang tidak terdaftar"
+            "id": {
+                "title": "Pastikan perusahaan Anda tetap patuh terhadap ketentuan investasi yang berlaku.",
+                "subtitle": "Tim kami siap membantu proses penyusunan, pelaporan, hingga pendampingan LKPM secara profesional, efisien, dan sesuai regulasi. Kelola kepatuhan investasi dengan lebih mudah, aman, dan terpercaya bersama kami.",
+                "button_text": "Chat Langsung via WhatsApp",
+                "wa_message": "layanan yang tidak terdaftar"
+            },
+            "en": {
+                "title": "Ensure your company remains compliant with applicable investment provisions.",
+                "subtitle": "Our team is ready to help with the preparation, reporting, and assistance of LKPM professionally, efficiently, and in accordance with regulations. Manage your investment compliance more easily, safely, and reliably with us.",
+                "button_text": "Chat Directly via WhatsApp",
+                "wa_message": "an unlisted service"
+            },
+            "zh": {
+                "title": "确保贵公司持续遵守现行投资规定。",
+                "subtitle": "我们的团队随时准备以专业、高效且合规的方式协助LKPM的编制、申报及后续跟进。与我们一起，更轻松、安全、可靠地管理投资合规事务。",
+                "button_text": "直接通过WhatsApp聊天",
+                "wa_message": "未列出的服务"
+            }
         }
     },
     {
         "id": 2,
-        "name": "Laporan Industri (SIINAS)",
-        "tag": "",
+        "name": {
+            "id": "Laporan Industri (SIINAS)",
+            "en": "Industry Report (SIINAS)",
+            "zh": "工业报告（SIINAS）"
+        },
+        "tag": {
+            "id": "",
+            "en": "",
+            "zh": ""
+        },
         "price": "1750000",
         "price_label": "Rp 1.750.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Laporan Industri melalui Sistem Informasi Industri Nasional (SIINas) merupakan kewajiban pelaporan bagi perusahaan industri yang bertujuan untuk menyampaikan data dan informasi kegiatan usaha secara berkala kepada Kementerian Perindustrian.",
-        "excerpt": "Laporan Industri melalui Sistem Informasi Industri Nasional (SIINas) merupakan kewajiban pelaporan bagi perusahaan industri yang bertujuan untuk menyampaikan data dan informasi kegiatan usaha secara berkala kepada Kementerian Perindustrian.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Laporan Industri melalui Sistem Informasi Industri Nasional (SIINas) merupakan kewajiban pelaporan bagi perusahaan industri yang bertujuan untuk menyampaikan data dan informasi kegiatan usaha secara berkala kepada Kementerian Perindustrian. Pelaporan ini menjadi instrumen penting bagi pemerintah dalam melakukan pembinaan, pengawasan, pengembangan industri nasional, serta penyusunan kebijakan industri yang berbasis data dan kondisi riil di lapangan.",
-            "Kewajiban penyampaian laporan industri melalui SIINas memiliki dasar hukum yang kuat, antara lain Undang-Undang Nomor 3 Tahun 2014 tentang Perindustrian, Peraturan Pemerintah Nomor 28 Tahun 2021 tentang Penyelenggaraan Bidang Perindustrian, serta Peraturan Menteri Perindustrian yang mengatur tata cara penyampaian data industri melalui Sistem Informasi Industri Nasional. Perusahaan industri yang telah memiliki perizinan berusaha di sektor industri wajib memastikan pelaporan dilakukan secara tepat waktu, lengkap, dan sesuai ketentuan yang berlaku.",
-            "Kami menyediakan layanan pendampingan penyusunan dan penyampaian Laporan Industri SIINas secara profesional, akurat, dan sesuai regulasi. Dengan dukungan tim yang berpengalaman dalam bidang perizinan dan kepatuhan industri, kami membantu perusahaan memenuhi kewajiban pelaporan, mengurangi risiko sanksi administratif, serta memastikan data industri tersampaikan dengan benar."
-        ],
-        "term_condition": [],
-        "benefits": [],
-        "scope_of_service": [],
-        "requirements": [],
-        "process": [],
-        "faq": [],
-        "plans": [
-            {
-                "name": "LAPORAN INDUSTRI - KATEGORI UMK*",
-                "popular": false,
-                "price": "Rp. 1.750.000",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                "sections": [
-                    {
-                        "label": "Mendapatkan",
-                        "items": [
-                            {
-                                "label": "Tanda Terima Pelaporan",
-                                "included": true
-                            },
-                            {
-                                "label": "Data Laporan",
-                                "included": true
-                            }
-                        ]
-                    },
-                    {
-                        "label": "Termasuk",
-                        "items": [
-                            {
-                                "label": "Fasttrack Document Delivery Service",
-                                "included": true
-                            },
-                            {
-                                "label": "Fasttrack Digital Files Secure Storage",
-                                "included": true
-                            },
-                            { "label": "Fasttrack Kit", "included": true }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "LAPORAN INDUSTRI - KATEGORI NON-UMK*",
-                "popular": true,
-                "price": "Rp. 2.500.000",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                "sections": [
-                    {
-                        "label": "Mendapatkan",
-                        "items": [
-                            {
-                                "label": "Tanda Terima Pelaporan",
-                                "included": true
-                            },
-                            {
-                                "label": "Data Laporan",
-                                "included": true
-                            }
-                        ]
-                    },
-                    {
-                        "label": "Termasuk",
-                        "items": [
-                            {
-                                "label": "Fasttrack Document Delivery Service",
-                                "included": true
-                            },
-                            {
-                                "label": "Fasttrack Digital Files Secure Storage",
-                                "included": true
-                            },
-                            { "label": "Fasttrack Kit", "included": true }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "plans_info": "Biaya dapat disesuaikan dengan skala usaha, jumlah KBLI, kompleksitas kegiatan usaha, dan kebutuhan pendampingan yang diperlukan",
-        "plans_alert": [],
-        "dasar_hukum": [
-            "Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal;",
-            "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-            "Peraturan Badan Koordinasi Penanaman Modal (BKPM) No. 4 Tahun 2025."
-        ],
+        "description": {
+            "id": "Laporan Industri melalui Sistem Informasi Industri Nasional (SIINas) merupakan kewajiban pelaporan bagi perusahaan industri yang bertujuan untuk menyampaikan data dan informasi kegiatan usaha secara berkala kepada Kementerian Perindustrian.",
+            "en": "The Industry Report through the National Industry Information System (SIINas) is a reporting obligation for industrial companies aimed at periodically submitting business activity data and information to the Ministry of Industry.",
+            "zh": "通过国家工业信息系统（SIINas）提交的工业报告，是工业企业须履行的申报义务，旨在定期向工业部提交经营活动数据及信息。"
+        },
+        "excerpt": {
+            "id": "Laporan Industri melalui Sistem Informasi Industri Nasional (SIINas) merupakan kewajiban pelaporan bagi perusahaan industri yang bertujuan untuk menyampaikan data dan informasi kegiatan usaha secara berkala kepada Kementerian Perindustrian.",
+            "en": "The Industry Report through the National Industry Information System (SIINas) is a reporting obligation for industrial companies aimed at periodically submitting business activity data and information to the Ministry of Industry.",
+            "zh": "通过国家工业信息系统（SIINas）提交的工业报告，是工业企业须履行的申报义务，旨在定期向工业部提交经营活动数据及信息。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适用于初创企业、代理商、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Laporan Industri melalui Sistem Informasi Industri Nasional (SIINas) merupakan kewajiban pelaporan bagi perusahaan industri yang bertujuan untuk menyampaikan data dan informasi kegiatan usaha secara berkala kepada Kementerian Perindustrian. Pelaporan ini menjadi instrumen penting bagi pemerintah dalam melakukan pembinaan, pengawasan, pengembangan industri nasional, serta penyusunan kebijakan industri yang berbasis data dan kondisi riil di lapangan.",
+                "Kewajiban penyampaian laporan industri melalui SIINas memiliki dasar hukum yang kuat, antara lain Undang-Undang Nomor 3 Tahun 2014 tentang Perindustrian, Peraturan Pemerintah Nomor 28 Tahun 2021 tentang Penyelenggaraan Bidang Perindustrian, serta Peraturan Menteri Perindustrian yang mengatur tata cara penyampaian data industri melalui Sistem Informasi Industri Nasional. Perusahaan industri yang telah memiliki perizinan berusaha di sektor industri wajib memastikan pelaporan dilakukan secara tepat waktu, lengkap, dan sesuai ketentuan yang berlaku.",
+                "Kami menyediakan layanan pendampingan penyusunan dan penyampaian Laporan Industri SIINas secara profesional, akurat, dan sesuai regulasi. Dengan dukungan tim yang berpengalaman dalam bidang perizinan dan kepatuhan industri, kami membantu perusahaan memenuhi kewajiban pelaporan, mengurangi risiko sanksi administratif, serta memastikan data industri tersampaikan dengan benar."
+            ],
+            "en": [
+                "The Industry Report through the National Industry Information System (SIINas) is a reporting obligation for industrial companies aimed at periodically submitting business activity data and information to the Ministry of Industry. This reporting is an important instrument for the government in guiding, supervising, and developing the national industry, as well as formulating industrial policies based on data and real conditions in the field.",
+                "The obligation to submit industry reports through SIINas has a strong legal basis, including Law Number 3 of 2014 concerning Industry, Government Regulation Number 28 of 2021 concerning the Implementation of the Industrial Sector, and Minister of Industry Regulations governing the procedures for submitting industry data through the National Industry Information System. Industrial companies that already have business licenses in the industrial sector must ensure that reporting is done in a timely, complete manner and in accordance with applicable provisions.",
+                "We provide professional, accurate, and regulation-compliant assistance services for the preparation and submission of SIINas Industry Reports. With the support of a team experienced in licensing and industrial compliance, we help companies fulfill reporting obligations, reduce the risk of administrative sanctions, and ensure industrial data is submitted correctly."
+            ],
+            "zh": [
+                "通过国家工业信息系统（SIINas）提交的工业报告，是工业企业须履行的申报义务，旨在定期向工业部提交经营活动数据及信息。此项申报是政府对国家工业进行指导、监督及发展的重要工具，也是基于数据及实际情况制定产业政策的依据。",
+                "通过SIINas提交工业报告的义务具有坚实的法律依据，包括2014年第3号《工业法》、2021年第28号关于工业领域实施的政府法规，以及规定通过国家工业信息系统提交工业数据程序的工业部长条例。已在工业领域取得营业许可的工业企业，须确保申报及时、完整并符合现行规定。",
+                "我们提供专业、准确且合规的SIINas工业报告编制及提交协助服务。在拥有许可及工业合规领域丰富经验的团队支持下，我们协助企业履行申报义务、降低行政处罚风险，并确保工业数据正确提交。"
+            ]
+        },
+        "term_condition": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "benefits": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "scope_of_service": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "process": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "plans": {
+            "id": [
+                {
+                    "name": "LAPORAN INDUSTRI - KATEGORI UMK*",
+                    "popular": false,
+                    "price": "Rp. 1.750.000",
+                    "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "sections": [
+                        {
+                            "label": "Mendapatkan",
+                            "items": [
+                                {
+                                    "label": "Tanda Terima Pelaporan",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Data Laporan",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Termasuk",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LAPORAN INDUSTRI - KATEGORI NON-UMK*",
+                    "popular": true,
+                    "price": "Rp. 2.500.000",
+                    "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "sections": [
+                        {
+                            "label": "Mendapatkan",
+                            "items": [
+                                {
+                                    "label": "Tanda Terima Pelaporan",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Data Laporan",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Termasuk",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "name": "INDUSTRY REPORT - MICRO & SMALL BUSINESS CATEGORY*",
+                    "popular": false,
+                    "price": "Rp. 1.750.000",
+                    "bonus_note": "FREE Preparation and Post-Completion Consultation",
+                    "sections": [
+                        {
+                            "label": "Receive",
+                            "items": [
+                                {
+                                    "label": "Reporting Receipt",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Report Data",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Included",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "INDUSTRY REPORT - NON-MICRO & SMALL BUSINESS CATEGORY*",
+                    "popular": true,
+                    "price": "Rp. 2.500.000",
+                    "bonus_note": "FREE Preparation and Post-Completion Consultation",
+                    "sections": [
+                        {
+                            "label": "Receive",
+                            "items": [
+                                {
+                                    "label": "Reporting Receipt",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Report Data",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Included",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "name": "工业报告-微型及小型企业类别*",
+                    "popular": false,
+                    "price": "Rp. 1.750.000",
+                    "bonus_note": "免费的准备及完成后咨询",
+                    "sections": [
+                        {
+                            "label": "获得",
+                            "items": [
+                                {
+                                    "label": "申报回执",
+                                    "included": true
+                                },
+                                {
+                                    "label": "报告数据",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "包含",
+                            "items": [
+                                {
+                                    "label": "Fasttrack文件递送服务",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack数字文件安全存储",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack套件",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "工业报告-非微型及小型企业类别*",
+                    "popular": true,
+                    "price": "Rp. 2.500.000",
+                    "bonus_note": "免费的准备及完成后咨询",
+                    "sections": [
+                        {
+                            "label": "获得",
+                            "items": [
+                                {
+                                    "label": "申报回执",
+                                    "included": true
+                                },
+                                {
+                                    "label": "报告数据",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "包含",
+                            "items": [
+                                {
+                                    "label": "Fasttrack文件递送服务",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack数字文件安全存储",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack套件",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "plans_info": {
+            "id": "Biaya dapat disesuaikan dengan skala usaha, jumlah KBLI, kompleksitas kegiatan usaha, dan kebutuhan pendampingan yang diperlukan",
+            "en": "Costs may be adjusted according to business scale, number of KBLI, business activity complexity, and the assistance required",
+            "zh": "费用可依据企业规模、KBLI数量、经营活动复杂程度及所需协助程度进行调整"
+        },
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 25 Tahun 2007 tentang Penanaman Modal;",
+                "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                "Peraturan Badan Koordinasi Penanaman Modal (BKPM) No. 4 Tahun 2025."
+            ],
+            "en": [
+                "Law Number 25 of 2007 concerning Investment;",
+                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                "Investment Coordinating Board (BKPM) Regulation No. 4 of 2025."
+            ],
+            "zh": [
+                "2007年第25号法律关于投资；",
+                "2025年第28号政府法规，关于基于风险的营业许可实施；",
+                "2025年第4号投资协调委员会（BKPM）条例。"
+            ]
+        },
         "footer_cta": {
-            "title": "Pastikan perusahaan Anda tetap patuh terhadap ketentuan investasi yang berlaku.",
-            "subtitle": "Tim kami siap membantu proses penyusunan, pelaporan, hingga pendampingan Laporan Industri secara profesional, efisien, dan sesuai regulasi. Kelola kepatuhan investasi dengan lebih mudah, aman, dan terpercaya bersama kami.",
-            "button_text": "Chat Langsung via WhatsApp",
-            "wa_message": "layanan yang tidak terdaftar"
+            "id": {
+                "title": "Pastikan perusahaan Anda tetap patuh terhadap ketentuan investasi yang berlaku.",
+                "subtitle": "Tim kami siap membantu proses penyusunan, pelaporan, hingga pendampingan Laporan Industri secara profesional, efisien, dan sesuai regulasi. Kelola kepatuhan investasi dengan lebih mudah, aman, dan terpercaya bersama kami.",
+                "button_text": "Chat Langsung via WhatsApp",
+                "wa_message": "layanan yang tidak terdaftar"
+            },
+            "en": {
+                "title": "Ensure your company remains compliant with applicable investment provisions.",
+                "subtitle": "Our team is ready to help with the preparation, reporting, and assistance of Industry Reports professionally, efficiently, and in accordance with regulations. Manage your investment compliance more easily, safely, and reliably with us.",
+                "button_text": "Chat Directly via WhatsApp",
+                "wa_message": "an unlisted service"
+            },
+            "zh": {
+                "title": "确保贵公司持续遵守现行投资规定。",
+                "subtitle": "我们的团队随时准备以专业、高效且合规的方式协助工业报告的编制、申报及后续跟进。与我们一起，更轻松、安全、可靠地管理投资合规事务。",
+                "button_text": "直接通过WhatsApp聊天",
+                "wa_message": "未列出的服务"
+            }
         }
     },
     {
         "id": 3,
-        "name": "Wajib Lapor Ketenagakerjaan Perusahaan",
-        "tag": "",
+        "name": {
+            "id": "Wajib Lapor Ketenagakerjaan Perusahaan",
+            "en": "Mandatory Company Employment Report",
+            "zh": "企业强制劳动报告"
+        },
+        "tag": {
+            "id": "",
+            "en": "",
+            "zh": ""
+        },
         "price": "1500000",
         "price_label": "Rp 1.500.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP) merupakan kewajiban setiap perusahaan untuk melaporkan kondisi dan perkembangan ketenagakerjaan kepada pemerintah sebagai bagian dari sistem pembinaan, pengawasan, dan perencanaan tenaga kerja nasional.",
-        "excerpt": "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP) merupakan kewajiban setiap perusahaan untuk melaporkan kondisi dan perkembangan ketenagakerjaan kepada pemerintah sebagai bagian dari sistem pembinaan, pengawasan, dan perencanaan tenaga kerja nasional.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP) merupakan kewajiban setiap perusahaan untuk melaporkan kondisi dan perkembangan ketenagakerjaan kepada pemerintah sebagai bagian dari sistem pembinaan, pengawasan, dan perencanaan tenaga kerja nasional. Melalui pelaporan ini, perusahaan menyampaikan informasi mengenai identitas perusahaan, jumlah tenaga kerja, hubungan kerja, pelatihan, hingga aspek ketenagakerjaan lainnya yang dipersyaratkan oleh peraturan perundang-undangan.",
-            "Kewajiban tersebut diatur dalam Undang-Undang Nomor 7 Tahun 1981 tentang Wajib Lapor Ketenagakerjaan di Perusahaan, yang mewajibkan setiap pengusaha atau pengurus perusahaan untuk menyampaikan laporan ketenagakerjaan pada saat mendirikan, menghentikan, memindahkan, menjalankan kembali perusahaan, maupun secara berkala sesuai ketentuan yang berlaku. Saat ini, pelaporan dilakukan secara elektronik melalui sistem yang disediakan oleh Kementerian Ketenagakerjaan guna meningkatkan akurasi data dan efektivitas pengawasan.",
-            "Layanan kami membantu perusahaan dalam proses penyusunan, verifikasi, dan penyampaian Wajib Lapor Ketenagakerjaan secara tepat, cepat, dan sesuai regulasi. Dengan pemenuhan kewajiban pelaporan yang tertib, perusahaan dapat menjaga kepatuhan hukum, menghindari potensi sanksi administratif, serta mendukung terciptanya tata kelola ketenagakerjaan yang profesional dan berkelanjutan."
-        ],
-        "term_condition": [],
-        "benefits": [],
-        "scope_of_service": [],
-        "requirements": [],
-        "process": [],
-        "faq": [],
-        "plans": [
-            {
-                "name": "WAJIB LAPOR KETENAGAKERJAAN PERUSAHAAN*",
-                "popular": false,
-                "price": "Rp. 1.500.000",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                "sections": [
-                    {
-                        "label": "Mendapatkan",
-                        "items": [
-                            {
-                                "label": "Pendaftaran Akun (Baru)",
-                                "included": true
-                            },
-                            {
-                                "label": "Tanda Terima Pelaporan",
-                                "included": true
-                            },
-                            {
-                                "label": "Data Laporan WLKP",
-                                "included": true
-                            }
-                        ]
-                    },
-                    {
-                        "label": "Termasuk",
-                        "items": [
-                            {
-                                "label": "Fasttrack Document Delivery Service",
-                                "included": true
-                            },
-                            {
-                                "label": "Fasttrack Digital Files Secure Storage",
-                                "included": true
-                            },
-                            { "label": "Fasttrack Kit", "included": true }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "plans_info": "Biaya dapat disesuaikan dengan skala usaha, jumlah karyawan, dan kebutuhan pendampingan yang diperlukan",
-        "plans_alert": [],
-        "dasar_hukum": [],
+        "description": {
+            "id": "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP) merupakan kewajiban setiap perusahaan untuk melaporkan kondisi dan perkembangan ketenagakerjaan kepada pemerintah sebagai bagian dari sistem pembinaan, pengawasan, dan perencanaan tenaga kerja nasional.",
+            "en": "The Mandatory Company Employment Report (WLKP) is an obligation for every company to report employment conditions and developments to the government as part of the national labor guidance, supervision, and planning system.",
+            "zh": "企业强制劳动报告（WLKP）是每家公司须向政府申报劳动状况及发展情况的义务，作为国家劳动力指导、监督及规划体系的一部分。"
+        },
+        "excerpt": {
+            "id": "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP) merupakan kewajiban setiap perusahaan untuk melaporkan kondisi dan perkembangan ketenagakerjaan kepada pemerintah sebagai bagian dari sistem pembinaan, pengawasan, dan perencanaan tenaga kerja nasional.",
+            "en": "The Mandatory Company Employment Report (WLKP) is an obligation for every company to report employment conditions and developments to the government as part of the national labor guidance, supervision, and planning system.",
+            "zh": "企业强制劳动报告（WLKP）是每家公司须向政府申报劳动状况及发展情况的义务，作为国家劳动力指导、监督及规划体系的一部分。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适用于初创企业、代理商、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Wajib Lapor Ketenagakerjaan Perusahaan (WLKP) merupakan kewajiban setiap perusahaan untuk melaporkan kondisi dan perkembangan ketenagakerjaan kepada pemerintah sebagai bagian dari sistem pembinaan, pengawasan, dan perencanaan tenaga kerja nasional. Melalui pelaporan ini, perusahaan menyampaikan informasi mengenai identitas perusahaan, jumlah tenaga kerja, hubungan kerja, pelatihan, hingga aspek ketenagakerjaan lainnya yang dipersyaratkan oleh peraturan perundang-undangan.",
+                "Kewajiban tersebut diatur dalam Undang-Undang Nomor 7 Tahun 1981 tentang Wajib Lapor Ketenagakerjaan di Perusahaan, yang mewajibkan setiap pengusaha atau pengurus perusahaan untuk menyampaikan laporan ketenagakerjaan pada saat mendirikan, menghentikan, memindahkan, menjalankan kembali perusahaan, maupun secara berkala sesuai ketentuan yang berlaku. Saat ini, pelaporan dilakukan secara elektronik melalui sistem yang disediakan oleh Kementerian Ketenagakerjaan guna meningkatkan akurasi data dan efektivitas pengawasan.",
+                "Layanan kami membantu perusahaan dalam proses penyusunan, verifikasi, dan penyampaian Wajib Lapor Ketenagakerjaan secara tepat, cepat, dan sesuai regulasi. Dengan pemenuhan kewajiban pelaporan yang tertib, perusahaan dapat menjaga kepatuhan hukum, menghindari potensi sanksi administratif, serta mendukung terciptanya tata kelola ketenagakerjaan yang profesional dan berkelanjutan."
+            ],
+            "en": [
+                "The Mandatory Company Employment Report (WLKP) is an obligation for every company to report employment conditions and developments to the government as part of the national labor guidance, supervision, and planning system. Through this report, companies submit information regarding company identity, number of employees, employment relationships, training, and other employment aspects required by statutory regulations.",
+                "This obligation is regulated in Law Number 7 of 1981 concerning Mandatory Employment Reporting in Companies, which requires every business owner or company management to submit an employment report when establishing, ceasing, relocating, or resuming company operations, as well as periodically in accordance with applicable provisions. Currently, reporting is done electronically through a system provided by the Ministry of Manpower to improve data accuracy and supervision effectiveness.",
+                "Our service helps companies in the process of preparing, verifying, and submitting the Mandatory Employment Report accurately, quickly, and in accordance with regulations. By fulfilling this reporting obligation in an orderly manner, companies can maintain legal compliance, avoid potential administrative sanctions, and support the creation of professional and sustainable employment governance."
+            ],
+            "zh": [
+                "企业强制劳动报告（WLKP）是每家公司须向政府申报劳动状况及发展情况的义务，作为国家劳动力指导、监督及规划体系的一部分。通过此项申报，公司须提交有关公司身份、员工人数、劳动关系、培训以及法律法规要求的其他劳动方面的信息。",
+                "此项义务规定于1981年第7号《企业强制劳动申报法》，要求每位企业主或公司管理层在设立、终止、迁移、恢复公司运营时，以及依据现行规定定期提交劳动报告。目前，申报通过劳动部提供的系统以电子方式进行，以提高数据准确性及监督效率。",
+                "我们的服务协助企业准确、快速且合规地完成强制劳动报告的编制、核实及提交。通过有序履行此项申报义务，企业能够维护法律合规、避免潜在的行政处罚，并支持建立专业且可持续的劳动治理。"
+            ]
+        },
+        "term_condition": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "benefits": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "scope_of_service": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "process": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "plans": {
+            "id": [
+                {
+                    "name": "WAJIB LAPOR KETENAGAKERJAAN PERUSAHAAN*",
+                    "popular": false,
+                    "price": "Rp. 1.500.000",
+                    "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "sections": [
+                        {
+                            "label": "Mendapatkan",
+                            "items": [
+                                {
+                                    "label": "Pendaftaran Akun (Baru)",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Tanda Terima Pelaporan",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Data Laporan WLKP",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Termasuk",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "name": "MANDATORY COMPANY EMPLOYMENT REPORT*",
+                    "popular": false,
+                    "price": "Rp. 1.500.000",
+                    "bonus_note": "FREE Preparation and Post-Completion Consultation",
+                    "sections": [
+                        {
+                            "label": "Receive",
+                            "items": [
+                                {
+                                    "label": "Account Registration (New)",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Reporting Receipt",
+                                    "included": true
+                                },
+                                {
+                                    "label": "WLKP Report Data",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Included",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "name": "企业强制劳动报告*",
+                    "popular": false,
+                    "price": "Rp. 1.500.000",
+                    "bonus_note": "免费的准备及完成后咨询",
+                    "sections": [
+                        {
+                            "label": "获得",
+                            "items": [
+                                {
+                                    "label": "账户注册（新）",
+                                    "included": true
+                                },
+                                {
+                                    "label": "申报回执",
+                                    "included": true
+                                },
+                                {
+                                    "label": "WLKP报告数据",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "包含",
+                            "items": [
+                                {
+                                    "label": "Fasttrack文件递送服务",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack数字文件安全存储",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack套件",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "plans_info": {
+            "id": "Biaya dapat disesuaikan dengan skala usaha, jumlah karyawan, dan kebutuhan pendampingan yang diperlukan",
+            "en": "Costs may be adjusted according to business scale, number of employees, and the assistance required",
+            "zh": "费用可依据企业规模、员工人数及所需协助程度进行调整"
+        },
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "footer_cta": {
-            "title": "Pastikan perusahaan Anda tetap patuh terhadap ketentuan investasi yang berlaku.",
-            "subtitle": "Tim kami siap membantu proses penyusunan, pelaporan, hingga pendampingan WLKPM secara profesional, efisien, dan sesuai regulasi. Kelola kepatuhan investasi dengan lebih mudah, aman, dan terpercaya bersama kami.",
-            "button_text": "Chat Langsung via WhatsApp",
-            "wa_message": "layanan yang tidak terdaftar"
+            "id": {
+                "title": "Pastikan perusahaan Anda tetap patuh terhadap ketentuan investasi yang berlaku.",
+                "subtitle": "Tim kami siap membantu proses penyusunan, pelaporan, hingga pendampingan WLKPM secara profesional, efisien, dan sesuai regulasi. Kelola kepatuhan investasi dengan lebih mudah, aman, dan terpercaya bersama kami.",
+                "button_text": "Chat Langsung via WhatsApp",
+                "wa_message": "layanan yang tidak terdaftar"
+            },
+            "en": {
+                "title": "Ensure your company remains compliant with applicable investment provisions.",
+                "subtitle": "Our team is ready to help with the preparation, reporting, and assistance of WLKP professionally, efficiently, and in accordance with regulations. Manage your investment compliance more easily, safely, and reliably with us.",
+                "button_text": "Chat Directly via WhatsApp",
+                "wa_message": "an unlisted service"
+            },
+            "zh": {
+                "title": "确保贵公司持续遵守现行投资规定。",
+                "subtitle": "我们的团队随时准备以专业、高效且合规的方式协助WLKP的编制、申报及后续跟进。与我们一起，更轻松、安全、可靠地管理投资合规事务。",
+                "button_text": "直接通过WhatsApp聊天",
+                "wa_message": "未列出的服务"
+            }
         }
     },
     {
         "id": 4,
-        "name": "Wajib Lapor Fasilitas Kesejahteraan Pekerja",
-        "tag": "",
+        "name": {
+            "id": "Wajib Lapor Fasilitas Kesejahteraan Pekerja",
+            "en": "Mandatory Worker Welfare Facility Report",
+            "zh": "员工福利设施强制报告"
+        },
+        "tag": {
+            "id": "",
+            "en": "",
+            "zh": ""
+        },
         "price": "2000000",
         "price_label": "Rp 2.000.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Wajib Lapor Fasilitas Kesejahteraan Pekerja (WLFKP) merupakan kewajiban perusahaan untuk melaporkan penyediaan fasilitas kesejahteraan bagi pekerja sebagai bentuk tanggung jawab sosial dan perlindungan tenaga kerja.",
-        "excerpt": "Wajib Lapor Fasilitas Kesejahteraan Pekerja (WLFKP) merupakan kewajiban perusahaan untuk melaporkan penyediaan fasilitas kesejahteraan bagi pekerja sebagai bentuk tanggung jawab sosial dan perlindungan tenaga kerja.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Wajib Lapor Fasilitas Kesejahteraan Pekerja (WLFKP) merupakan kewajiban perusahaan untuk melaporkan penyediaan fasilitas kesejahteraan bagi pekerja sebagai bentuk tanggung jawab sosial dan perlindungan tenaga kerja. Pelaporan ini bertujuan memastikan bahwa perusahaan telah memenuhi standar kesejahteraan pekerja sesuai ketentuan yang berlaku, sekaligus menjadi instrumen pengawasan pemerintah dalam menciptakan hubungan industrial yang harmonis, produktif, dan berkeadilan.",
-            "Kewajiban tersebut diatur dalam Peraturan Daerah Provinsi DKI Jakarta Nomor 4 Tahun 2006 tentang Sistem Kesejahteraan Pekerja, yang mewajibkan perusahaan untuk menyampaikan laporan mengenai fasilitas kesejahteraan yang diberikan kepada pekerja. Fasilitas tersebut dapat meliputi pelayanan kesehatan, sarana ibadah, fasilitas keselamatan dan kesehatan kerja (K3), kantin, transportasi, koperasi pekerja, kegiatan olahraga, hingga program kesejahteraan lainnya yang mendukung peningkatan kualitas hidup tenaga kerja.",
-            "Kami menyediakan layanan pendampingan Wajib Lapor Fasilitas Kesejahteraan Pekerja (WLFKP) secara profesional, mulai dari identifikasi kewajiban pelaporan, penyusunan data dan dokumen pendukung, hingga proses penyampaian laporan kepada instansi yang berwenang. Dengan pemenuhan kewajiban ini secara tepat dan sesuai regulasi, perusahaan dapat meningkatkan kepatuhan hukum, meminimalisir risiko sanksi administratif, serta menunjukkan komitmen nyata terhadap kesejahteraan dan produktivitas pekerja."
-        ],
-        "term_condition": [],
-        "benefits": [],
-        "scope_of_service": [],
-        "requirements": [],
-        "process": [],
-        "faq": [],
-        "plans": [
-            {
-                "name": "WAJIB LAPOR FASILITAS KESEJAHTERAAN PEKERJA*",
-                "popular": false,
-                "price": "Rp. 2.000.000",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
-                "sections": [
-                    {
-                        "label": "Mendapatkan",
-                        "items": [
-                            {
-                                "label": "Tanda Terima Pelaporan",
-                                "included": true
-                            },
-                            {
-                                "label": "Data Laporan WLFKP",
-                                "included": true
-                            }
-                        ]
-                    },
-                    {
-                        "label": "Termasuk",
-                        "items": [
-                            {
-                                "label": "Fasttrack Document Delivery Service",
-                                "included": true
-                            },
-                            {
-                                "label": "Fasttrack Digital Files Secure Storage",
-                                "included": true
-                            },
-                            { "label": "Fasttrack Kit", "included": true }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "plans_info": "Biaya dapat disesuaikan dengan skala usaha, jumlah karyawan, dan kebutuhan pendampingan yang diperlukan",
-        "plans_alert": [],
-        "dasar_hukum": [],
+        "description": {
+            "id": "Wajib Lapor Fasilitas Kesejahteraan Pekerja (WLFKP) merupakan kewajiban perusahaan untuk melaporkan penyediaan fasilitas kesejahteraan bagi pekerja sebagai bentuk tanggung jawab sosial dan perlindungan tenaga kerja.",
+            "en": "The Mandatory Worker Welfare Facility Report (WLFKP) is a company obligation to report the provision of welfare facilities for workers as a form of social responsibility and labor protection.",
+            "zh": "员工福利设施强制报告（WLFKP）是公司须申报为员工提供福利设施情况的义务，作为社会责任及劳动保护的一种体现。"
+        },
+        "excerpt": {
+            "id": "Wajib Lapor Fasilitas Kesejahteraan Pekerja (WLFKP) merupakan kewajiban perusahaan untuk melaporkan penyediaan fasilitas kesejahteraan bagi pekerja sebagai bentuk tanggung jawab sosial dan perlindungan tenaga kerja.",
+            "en": "The Mandatory Worker Welfare Facility Report (WLFKP) is a company obligation to report the provision of welfare facilities for workers as a form of social responsibility and labor protection.",
+            "zh": "员工福利设施强制报告（WLFKP）是公司须申报为员工提供福利设施情况的义务，作为社会责任及劳动保护的一种体现。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适用于初创企业、代理商、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Wajib Lapor Fasilitas Kesejahteraan Pekerja (WLFKP) merupakan kewajiban perusahaan untuk melaporkan penyediaan fasilitas kesejahteraan bagi pekerja sebagai bentuk tanggung jawab sosial dan perlindungan tenaga kerja. Pelaporan ini bertujuan memastikan bahwa perusahaan telah memenuhi standar kesejahteraan pekerja sesuai ketentuan yang berlaku, sekaligus menjadi instrumen pengawasan pemerintah dalam menciptakan hubungan industrial yang harmonis, produktif, dan berkeadilan.",
+                "Kewajiban tersebut diatur dalam Peraturan Daerah Provinsi DKI Jakarta Nomor 4 Tahun 2006 tentang Sistem Kesejahteraan Pekerja, yang mewajibkan perusahaan untuk menyampaikan laporan mengenai fasilitas kesejahteraan yang diberikan kepada pekerja. Fasilitas tersebut dapat meliputi pelayanan kesehatan, sarana ibadah, fasilitas keselamatan dan kesehatan kerja (K3), kantin, transportasi, koperasi pekerja, kegiatan olahraga, hingga program kesejahteraan lainnya yang mendukung peningkatan kualitas hidup tenaga kerja.",
+                "Kami menyediakan layanan pendampingan Wajib Lapor Fasilitas Kesejahteraan Pekerja (WLFKP) secara profesional, mulai dari identifikasi kewajiban pelaporan, penyusunan data dan dokumen pendukung, hingga proses penyampaian laporan kepada instansi yang berwenang. Dengan pemenuhan kewajiban ini secara tepat dan sesuai regulasi, perusahaan dapat meningkatkan kepatuhan hukum, meminimalisir risiko sanksi administratif, serta menunjukkan komitmen nyata terhadap kesejahteraan dan produktivitas pekerja."
+            ],
+            "en": [
+                "The Mandatory Worker Welfare Facility Report (WLFKP) is a company obligation to report the provision of welfare facilities for workers as a form of social responsibility and labor protection. This report aims to ensure that the company has met worker welfare standards in accordance with applicable provisions, while also serving as a government supervisory instrument in creating harmonious, productive, and fair industrial relations.",
+                "This obligation is regulated in DKI Jakarta Provincial Regulation Number 4 of 2006 concerning the Worker Welfare System, which requires companies to submit a report on the welfare facilities provided to workers. These facilities may include health services, places of worship, occupational health and safety (K3) facilities, canteens, transportation, worker cooperatives, sports activities, and other welfare programs that support the improvement of workers' quality of life.",
+                "We provide professional assistance services for the Mandatory Worker Welfare Facility Report (WLFKP), starting from identifying reporting obligations, preparing data and supporting documents, to the process of submitting the report to the authorized agency. By fulfilling this obligation accurately and in accordance with regulations, companies can improve legal compliance, minimize the risk of administrative sanctions, and demonstrate a real commitment to worker welfare and productivity."
+            ],
+            "zh": [
+                "员工福利设施强制报告（WLFKP）是公司须申报为员工提供福利设施情况的义务，作为社会责任及劳动保护的一种体现。此项申报旨在确保公司已依据现行规定满足员工福利标准，同时也是政府在营造和谐、高效且公平的劳资关系方面的监督工具。",
+                "此项义务规定于2006年第4号《雅加达特区省级条例》关于员工福利制度，要求公司申报向员工提供的福利设施报告。此类设施可包括医疗服务、礼拜场所、职业安全与健康（K3）设施、食堂、交通、员工合作社、体育活动，以及其他有助于提升员工生活质量的福利项目。",
+                "我们提供专业的员工福利设施强制报告（WLFKP）协助服务，从确定申报义务、编制数据及支持文件，到向主管机关提交报告的整个流程。通过准确且合规地履行此项义务，企业能够提升法律合规性、降低行政处罚风险，并切实体现对员工福利及生产力的承诺。"
+            ]
+        },
+        "term_condition": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "benefits": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "scope_of_service": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "process": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "plans": {
+            "id": [
+                {
+                    "name": "WAJIB LAPOR FASILITAS KESEJAHTERAAN PEKERJA*",
+                    "popular": false,
+                    "price": "Rp. 2.000.000",
+                    "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "sections": [
+                        {
+                            "label": "Mendapatkan",
+                            "items": [
+                                {
+                                    "label": "Tanda Terima Pelaporan",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Data Laporan WLFKP",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Termasuk",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "name": "MANDATORY WORKER WELFARE FACILITY REPORT*",
+                    "popular": false,
+                    "price": "Rp. 2.000.000",
+                    "bonus_note": "FREE Preparation and Post-Completion Consultation",
+                    "sections": [
+                        {
+                            "label": "Receive",
+                            "items": [
+                                {
+                                    "label": "Reporting Receipt",
+                                    "included": true
+                                },
+                                {
+                                    "label": "WLFKP Report Data",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Included",
+                            "items": [
+                                {
+                                    "label": "Fasttrack Document Delivery Service",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Digital Files Secure Storage",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack Kit",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "name": "员工福利设施强制报告*",
+                    "popular": false,
+                    "price": "Rp. 2.000.000",
+                    "bonus_note": "免费的准备及完成后咨询",
+                    "sections": [
+                        {
+                            "label": "获得",
+                            "items": [
+                                {
+                                    "label": "申报回执",
+                                    "included": true
+                                },
+                                {
+                                    "label": "WLFKP报告数据",
+                                    "included": true
+                                }
+                            ]
+                        },
+                        {
+                            "label": "包含",
+                            "items": [
+                                {
+                                    "label": "Fasttrack文件递送服务",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack数字文件安全存储",
+                                    "included": true
+                                },
+                                {
+                                    "label": "Fasttrack套件",
+                                    "included": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "plans_info": {
+            "id": "Biaya dapat disesuaikan dengan skala usaha, jumlah karyawan, dan kebutuhan pendampingan yang diperlukan",
+            "en": "Costs may be adjusted according to business scale, number of employees, and the assistance required",
+            "zh": "费用可依据企业规模、员工人数及所需协助程度进行调整"
+        },
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "footer_cta": {
-            "title": "Pastikan perusahaan Anda tetap patuh terhadap ketentuan investasi yang berlaku.",
-            "subtitle": "Tim kami siap membantu proses penyusunan, pelaporan, hingga pendampingan WLFKP secara profesional, efisien, dan sesuai regulasi. Kelola kepatuhan investasi dengan lebih mudah, aman, dan terpercaya bersama kami.",
-            "button_text": "Chat Langsung via WhatsApp",
-            "wa_message": "layanan yang tidak terdaftar"
+            "id": {
+                "title": "Pastikan perusahaan Anda tetap patuh terhadap ketentuan investasi yang berlaku.",
+                "subtitle": "Tim kami siap membantu proses penyusunan, pelaporan, hingga pendampingan WLFKP secara profesional, efisien, dan sesuai regulasi. Kelola kepatuhan investasi dengan lebih mudah, aman, dan terpercaya bersama kami.",
+                "button_text": "Chat Langsung via WhatsApp",
+                "wa_message": "layanan yang tidak terdaftar"
+            },
+            "en": {
+                "title": "Ensure your company remains compliant with applicable investment provisions.",
+                "subtitle": "Our team is ready to help with the preparation, reporting, and assistance of WLFKP professionally, efficiently, and in accordance with regulations. Manage your investment compliance more easily, safely, and reliably with us.",
+                "button_text": "Chat Directly via WhatsApp",
+                "wa_message": "an unlisted service"
+            },
+            "zh": {
+                "title": "确保贵公司持续遵守现行投资规定。",
+                "subtitle": "我们的团队随时准备以专业、高效且合规的方式协助WLFKP的编制、申报及后续跟进。与我们一起，更轻松、安全、可靠地管理投资合规事务。",
+                "button_text": "直接通过WhatsApp聊天",
+                "wa_message": "未列出的服务"
+            }
         }
     }
 ]

@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -13,6 +16,37 @@ const buildWhatsappLink = (productName) => {
     const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
+
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        excerpt: pick(p.excerpt),
+        penjelasan_umum: pick(p.penjelasan_umum) ?? [],
+        sections: pick(p.sections) ?? [],
+        biaya_layanan_cards: pick(p.biaya_layanan_cards),
+        biaya_layanan_single: pick(p.biaya_layanan_single),
+        faq: pick(p.faq) ?? [],
+    };
+});
+
+const product = localizedProduct;
 
 const openSectionId = ref(null);
 const toggleSection = (id) => {

@@ -1,5 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -12,6 +16,34 @@ const buildWhatsappLink = (productName) => {
     const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
+
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        excerpt: pick(p.excerpt),
+        penjelasan_title: pick(p.penjelasan_title),
+        penjelasan_umum: pick(p.penjelasan_umum) ?? [],
+        biaya_layanan_cards: pick(p.biaya_layanan_cards),
+        faq: pick(p.faq) ?? [],
+    };
+});
 </script>
 
 <template>
@@ -39,7 +71,7 @@ const buildWhatsappLink = (productName) => {
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{ product.name }}</span>
+                        <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
                 <div class="flex items-center gap-5">
@@ -47,7 +79,7 @@ const buildWhatsappLink = (productName) => {
                         <img src="/icons/ft-persons.svg" class="w-9 h-9" alt="" />
                     </div>
                     <h1 class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
-                        {{ product.name }}
+                        {{ localizedProduct.name }}
                     </h1>
                 </div>
                 <div>
@@ -71,16 +103,16 @@ const buildWhatsappLink = (productName) => {
                     <div class="flex flex-col gap-5">
 
                         <!-- 1. Penjelasan Umum / Kamar Dagang -->
-                        <div v-if="product.penjelasan_umum?.length"
+                        <div v-if="localizedProduct.penjelasan_umum?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    {{ product.penjelasan_title ?? 'Penjelasan Umum' }}
+                                    {{ localizedProduct.penjelasan_title ?? 'Penjelasan Umum' }}
                                 </h2>
                             </div>
                             <div class="space-y-4">
-                                <template v-for="(block, i) in product.penjelasan_umum" :key="`pu-${i}`">
+                                <template v-for="(block, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`">
                                     <template v-if="typeof block === 'object'">
                                         <p v-if="block.type === 'title'"
                                             class="text-[14px] font-bold text-[#1A1B18] leading-snug pt-2">
@@ -100,7 +132,7 @@ const buildWhatsappLink = (productName) => {
                         </div>
 
                         <!-- 2. Biaya Layanan -->
-                        <div v-if="product.biaya_layanan_cards?.length"
+                        <div v-if="localizedProduct.biaya_layanan_cards?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
@@ -108,7 +140,7 @@ const buildWhatsappLink = (productName) => {
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div v-for="(card, ci) in product.biaya_layanan_cards" :key="`card-${ci}`"
+                                <div v-for="(card, ci) in localizedProduct.biaya_layanan_cards" :key="`card-${ci}`"
                                     class="rounded-xl border border-[#E8E8E6] p-5 flex flex-col">
 
                                     <!-- Nama & Harga -->
@@ -203,7 +235,7 @@ const buildWhatsappLink = (productName) => {
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
                                 Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
                             </p>
-                            <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
+                            <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
                                 Pesan Layanan Sekarang
@@ -216,14 +248,14 @@ const buildWhatsappLink = (productName) => {
                             <div class="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFF0EF] px-3 py-1">
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
                                 <span class="text-[11px] font-semibold text-primary truncate max-w-[180px]">
-                                    {{ product.name }}
+                                    {{ localizedProduct.name }}
                                 </span>
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1 mt-2">Start From</div>
                             <div class="text-[28px] font-bold leading-none text-primary mb-4">
-                                {{ product.price_label }}
+                                {{ localizedProduct.price_label }}
                             </div>
-                            <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
+                            <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
                                 Konsultasi Gratis via Whatsapp
@@ -275,7 +307,7 @@ const buildWhatsappLink = (productName) => {
                             Tim kami siap membantu memilih jenis sertifikasi yang tepat<br class="hidden sm:block" />
                             dan mendampingi seluruh prosesnya.
                         </p>
-                        <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
+                        <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                             class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]">
                             Chat Langsung via WhatsApp
                             <img src="/icons/ft-wa.svg" alt="WhatsApp" class="h-5 w-5" />

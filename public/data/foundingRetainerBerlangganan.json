@@ -1,378 +1,1386 @@
 [
     {
         "id": 1,
-        "name": "Retainer / Berlangganan",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Retainer / Berlangganan",
+            "en": "Retainer / Subscription",
+            "zh": "常年顾问/订阅服务"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "2000000",
         "price_label": "Rp 2.000.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
-        "excerpt": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Dalam dunia bisnis, perjanjian tertulis memiliki peranan yang sangat penting sebagai dasar hukum dalam setiap bentuk kerja sama, transaksi, maupun hubungan profesional antar pihak. Perjanjian yang dibuat secara jelas, detail, dan sesuai ketentuan hukum dapat memberikan kepastian, perlindungan, serta meminimalisir risiko terjadinya perselisihan di kemudian hari.",
-            "Tanpa adanya perjanjian yang tepat, hak dan kewajiban para pihak sering kali menjadi tidak jelas sehingga berpotensi menimbulkan kerugian, kesalahpahaman, bahkan sengketa hukum. Oleh karena itu, setiap pelaku usaha maupun individu yang menjalin kerja sama profesional perlu memastikan bahwa seluruh kesepakatan dituangkan dalam dokumen hukum yang sah dan mengikat."
-        ],
-        "faq": [
-            {
-                "question": "Kapan sebaiknya memilih PT?",
-                "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
-            },
-            {
-                "question": "Apakah FastTrack membantu memilih KBLI?",
-                "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
-            }
-        ],
-        "contract_categories": [
-            {
-                "name": "Ketenagakerjaan",
-                "items": [
-                    { "name": "Perjanjian Kerja Waktu Tertentu (PKWT)" },
-                    { "name": "Perjanjian Kerja Waktu Tidak Tertentu (PKWTT)" },
-                    { "name": "Perjanjian Kerja Freelance" },
-                    { "name": "Peraturan Perusahaan" },
-                    {
-                        "name": "Perjanjian Kepemilikan Saham Karyawan (Employee Stock Ownership Plan)"
-                    }
-                ]
-            },
-            {
-                "name": "Korporasi & Investasi",
-                "items": [
-                    { "name": "Perjanjian Pendiri (Founder Agreement)" },
-                    {
-                        "name": "Perjanjian Pemegang Saham (Shareholder Agreement)"
-                    },
-                    {
-                        "name": "Perjanjian Hutang Pemegang Saham (Shareholder Loan Agreement)"
-                    },
-                    { "name": "Perjanjian Investasi" }
-                ]
-            },
-            {
-                "name": "Kerjasama Bisnis",
-                "items": [
-                    { "name": "Perjanjian Kerjasama" },
-                    {
-                        "name": "Perjanjian Kerjasama Bagi Hasil (Profit Sharing Agreement)"
-                    },
-                    { "name": "Perjanjian Joint Venture" },
-                    {
-                        "name": "Perjanjian Distributor (Distributor Agreement)"
-                    },
-                    {
-                        "name": "Perjanjian Pemasok Barang (Supplier Agreement)"
-                    },
-                    { "name": "Perjanjian Penyedia Jasa" },
-                    { "name": "Perjanjian Sponsor" }
-                ]
-            },
-            {
-                "name": "Komersial & Transaksi",
-                "items": [
-                    { "name": "Perjanjian Jual Beli" },
-                    { "name": "Perjanjian Hutang Piutang" },
-                    { "name": "Perjanjian Sewa" },
-                    { "name": "Perjanjian Pinjam Pakai" },
-                    { "name": "Perjanjian Pengalihan Hak" }
-                ]
-            },
-            {
-                "name": "HKI & Lisensi",
-                "items": [
-                    { "name": "Perjanjian Lisensi" },
-                    { "name": "Perjanjian Pengalihan HKI" },
-                    { "name": "Perjanjian Waralaba" }
-                ]
-            },
-            {
-                "name": "Kerahasiaan & Platform Digital",
-                "items": [
-                    {
-                        "name": "Perjanjian Kerahasiaan (Non-Disclosure Agreement)"
-                    },
-                    { "name": "Terms & Conditions" },
-                    { "name": "Syarat & Ketentuan Penggunaan Platform" },
-                    {
-                        "name": "Kebijakan Privasi Penyelenggaraan Platform Digital (Privacy Policy)"
-                    }
-                ]
-            },
-            {
-                "name": "Surat & Dokumen Lainnya",
-                "items": [
-                    { "name": "Surat Kuasa" },
-                    { "name": "Surat Pernyataan" },
-                    { "name": "Surat Jawaban" }
-                ]
-            }
-        ],
-        "regular_packages": {
-            "default_scale": "mikro",
-            "scales": [
+        "description": {
+            "id": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
+            "en": "Establishment of an official representative office for foreign companies wishing to have a legal presence in Indonesia.",
+            "zh": "为希望在印度尼西亚建立合法业务据点的外国公司设立官方代表处。"
+        },
+        "excerpt": {
+            "id": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
+            "en": "A PT establishment package for businesses that need a separate legal entity, liability protection, and expansion readiness.",
+            "zh": "适用于需要独立法人实体、责任保护及扩张准备的企业的PT设立套餐。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适用于初创企业、代理商、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Dalam dunia bisnis, perjanjian tertulis memiliki peranan yang sangat penting sebagai dasar hukum dalam setiap bentuk kerja sama, transaksi, maupun hubungan profesional antar pihak. Perjanjian yang dibuat secara jelas, detail, dan sesuai ketentuan hukum dapat memberikan kepastian, perlindungan, serta meminimalisir risiko terjadinya perselisihan di kemudian hari.",
+                "Tanpa adanya perjanjian yang tepat, hak dan kewajiban para pihak sering kali menjadi tidak jelas sehingga berpotensi menimbulkan kerugian, kesalahpahaman, bahkan sengketa hukum. Oleh karena itu, setiap pelaku usaha maupun individu yang menjalin kerja sama profesional perlu memastikan bahwa seluruh kesepakatan dituangkan dalam dokumen hukum yang sah dan mengikat."
+            ],
+            "en": [
+                "In the business world, written agreements play a very important role as the legal basis for every form of cooperation, transaction, or professional relationship between parties. Agreements drafted clearly, in detail, and in accordance with legal provisions can provide certainty, protection, and minimize the risk of future disputes.",
+                "Without a proper agreement, the rights and obligations of the parties often become unclear, potentially causing losses, misunderstandings, or even legal disputes. Therefore, every business actor or individual entering into a professional partnership needs to ensure that all agreements are set out in a valid and binding legal document."
+            ],
+            "zh": [
+                "在商业世界中，书面协议作为各方合作、交易或专业关系的法律依据，具有极其重要的作用。清晰、详细且符合法律规定的协议能够提供确定性和保护，并将日后发生纠纷的风险降至最低。",
+                "若无适当的协议，各方的权利与义务往往变得不明确，可能导致损失、误解甚至法律纠纷。因此，建立专业合作关系的每一位经营者或个人都须确保所有约定均以合法且具有约束力的法律文件形式记录。"
+            ]
+        },
+        "faq": {
+            "id": [
                 {
-                    "key": "mikro",
-                    "label": "Skala Mickro & Kecil",
-                    "price_label": "Rp 2.000.000/bln"
+                    "question": "Kapan sebaiknya memilih PT?",
+                    "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
                 },
                 {
-                    "key": "menengah",
-                    "label": "Skala Menengah",
-                    "price_label": "Rp 4.500.000/bln"
-                },
-                {
-                    "key": "besar",
-                    "label": "Skala Besar",
-                    "price_label": "Rp 5.000.000/bln"
-                },
-                {
-                    "key": "pma",
-                    "label": "PMA",
-                    "price_label": "Rp 10.000.000/bln"
+                    "question": "Apakah FastTrack membantu memilih KBLI?",
+                    "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
                 }
             ],
-            "rows": [
+            "en": [
                 {
-                    "label": "Konsultasi Online",
-                    "values": {
-                        "mikro": "3 Jam",
-                        "menengah": "3 Jam",
-                        "besar": "3 Jam",
-                        "pma": "3 Jam"
-                    }
+                    "question": "When should you choose a PT?",
+                    "answer": "A PT is suitable when a business needs a separate legal entity, a more professional structure, and readiness for broader cooperation."
                 },
                 {
-                    "label": "Konsultasi Offline",
-                    "values": {
-                        "mikro": "1 Jam",
-                        "menengah": "3 Jam",
-                        "besar": "3 Jam",
-                        "pma": "3 Jam"
-                    }
+                    "question": "Does FastTrack help choose the KBLI?",
+                    "answer": "Yes, the FastTrack team helps match business activities with the most relevant KBLI so that the legal process is safer and more efficient."
+                }
+            ],
+            "zh": [
+                {
+                    "question": "何时应选择PT？",
+                    "answer": "当企业需要独立法人实体、更专业的结构以及为更广泛合作做好准备时，PT是合适的选择。"
                 },
                 {
-                    "label": "Pembuatan Perjanjian/Kontrak",
-                    "values": {
-                        "mikro": "1 kali",
-                        "menengah": "3 Jam",
-                        "besar": "3 Jam",
-                        "pma": "3 Jam"
-                    }
-                },
-                {
-                    "label": "Peninjauan Perjanjian/Kontrak",
-                    "values": {
-                        "mikro": "3 kali",
-                        "menengah": "3 Jam",
-                        "besar": "3 Jam",
-                        "pma": "3 Jam"
-                    }
-                },
-                {
-                    "label": "Pelaporan WLKP",
-                    "values": {
-                        "mikro": "-",
-                        "menengah": "-",
-                        "besar": "3 Jam",
-                        "pma": "3 Jam"
-                    }
-                },
-                {
-                    "label": "Pelaporan LKPM",
-                    "values": {
-                        "mikro": "-",
-                        "menengah": "-",
-                        "besar": "2 kali",
-                        "pma": "2 kali"
-                    }
-                },
-                {
-                    "label": "Riset Perizinan",
-                    "values": {
-                        "mikro": "1 kali",
-                        "menengah": "2 kali",
-                        "besar": "3 kali",
-                        "pma": "4 kali"
-                    }
-                },
-                {
-                    "label": "Syarat dan Ketentuan",
-                    "values": {
-                        "mikro": "Minimal Kontrak 6 Bulan",
-                        "menengah": "Minimal Kontrak 6 Bulan",
-                        "besar": "Minimal Kontrak 6 Bulan",
-                        "pma": "Minimal Kontrak 6 Bulan"
-                    }
-                },
-                {
-                    "label": "Biaya Perbulan",
-                    "values": {
-                        "mikro": "Rp. 2.000.000,-",
-                        "menengah": "Rp. 4.500.000,-",
-                        "besar": "Rp. 5.000.000,-",
-                        "pma": "Rp. 10.000.000,-"
-                    }
+                    "question": "FastTrack是否协助选择KBLI？",
+                    "answer": "是的，FastTrack团队协助将经营活动与最相关的KBLI进行匹配，以使法律流程更安全、更高效。"
                 }
             ]
         },
-        "corporate_secretary": {
-            "pmdn": [
+        "contract_categories": {
+            "id": [
                 {
-                    "name": "PAKET STANDART PMDN",
-                    "popular": false,
-                    "price": "Rp 10.000.000,-",
-                    "features": [
+                    "name": "Ketenagakerjaan",
+                    "items": [
                         {
-                            "text": "Cakupan Lokasi & KBLI",
-                            "bold": "1 Lokasi Usaha · maks. 5 KBLI"
-                        },
-                        { "text": "Konsultasi Online", "bold": "24 kali" },
-                        { "text": "Update Data Badan Usaha", "bold": "4x" },
-                        {
-                            "text": "Pelaporan LKPM",
-                            "bold": "4 Periode (1 Tahun)"
+                            "name": "Perjanjian Kerja Waktu Tertentu (PKWT)"
                         },
                         {
-                            "text": "Pelaporan WLKP",
-                            "bold": "Maks. 100 Karyawan"
+                            "name": "Perjanjian Kerja Waktu Tidak Tertentu (PKWTT)"
                         },
                         {
-                            "text": "Pelaporan WLFPKP (Perda No. 4) — Wilayah Jakarta",
-                            "bold": "1x"
+                            "name": "Perjanjian Kerja Freelance"
                         },
                         {
-                            "text": "Pelaporan Industri (SIINas)",
-                            "bold": "2 Periode (1 Tahun)"
+                            "name": "Peraturan Perusahaan"
                         },
                         {
-                            "text": "Rapat Umum Pemegang Saham Tahunan",
-                            "bold": "1x"
-                        },
-                        { "text": "Riset Perizinan", "bold": "1 kali" }
-                    ],
-                    "note": {
-                        "label": "Syarat & Ketentuan",
-                        "bold": "Min. Kontrak 6 Bulan"
-                    }
+                            "name": "Perjanjian Kepemilikan Saham Karyawan (Employee Stock Ownership Plan)"
+                        }
+                    ]
                 },
                 {
-                    "name": "PAKET PREMIUM PMDN",
-                    "popular": true,
-                    "price": "Rp 14.000.000,-",
-                    "features": [
+                    "name": "Korporasi & Investasi",
+                    "items": [
                         {
-                            "text": "Cakupan Lokasi & KBLI",
-                            "bold": "3 Lokasi Usaha · maks. 7 KBLI"
-                        },
-                        { "text": "Konsultasi Online", "bold": "36 kali" },
-                        { "text": "Update Data Badan Usaha", "bold": "8x" },
-                        {
-                            "text": "Pelaporan LKPM",
-                            "bold": "4 Periode (1 Tahun)"
+                            "name": "Perjanjian Pendiri (Founder Agreement)"
                         },
                         {
-                            "text": "Pelaporan WLKP",
-                            "bold": "Maks. 100 Karyawan"
+                            "name": "Perjanjian Pemegang Saham (Shareholder Agreement)"
                         },
                         {
-                            "text": "Pelaporan WLFPKP (Perda No. 4) — Wilayah Jakarta",
-                            "bold": "1x"
+                            "name": "Perjanjian Hutang Pemegang Saham (Shareholder Loan Agreement)"
                         },
                         {
-                            "text": "Pelaporan Industri (SIINas)",
-                            "bold": "2 Periode (1 Tahun)"
+                            "name": "Perjanjian Investasi"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kerjasama Bisnis",
+                    "items": [
+                        {
+                            "name": "Perjanjian Kerjasama"
                         },
                         {
-                            "text": "Rapat Umum Pemegang Saham Tahunan",
-                            "bold": "1x"
+                            "name": "Perjanjian Kerjasama Bagi Hasil (Profit Sharing Agreement)"
                         },
-                        { "text": "Riset Perizinan", "bold": "1 kali" }
-                    ],
-                    "note": {
-                        "label": "Syarat & Ketentuan",
-                        "bold": "Min. Kontrak 6 Bulan"
-                    }
+                        {
+                            "name": "Perjanjian Joint Venture"
+                        },
+                        {
+                            "name": "Perjanjian Distributor (Distributor Agreement)"
+                        },
+                        {
+                            "name": "Perjanjian Pemasok Barang (Supplier Agreement)"
+                        },
+                        {
+                            "name": "Perjanjian Penyedia Jasa"
+                        },
+                        {
+                            "name": "Perjanjian Sponsor"
+                        }
+                    ]
+                },
+                {
+                    "name": "Komersial & Transaksi",
+                    "items": [
+                        {
+                            "name": "Perjanjian Jual Beli"
+                        },
+                        {
+                            "name": "Perjanjian Hutang Piutang"
+                        },
+                        {
+                            "name": "Perjanjian Sewa"
+                        },
+                        {
+                            "name": "Perjanjian Pinjam Pakai"
+                        },
+                        {
+                            "name": "Perjanjian Pengalihan Hak"
+                        }
+                    ]
+                },
+                {
+                    "name": "HKI & Lisensi",
+                    "items": [
+                        {
+                            "name": "Perjanjian Lisensi"
+                        },
+                        {
+                            "name": "Perjanjian Pengalihan HKI"
+                        },
+                        {
+                            "name": "Perjanjian Waralaba"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kerahasiaan & Platform Digital",
+                    "items": [
+                        {
+                            "name": "Perjanjian Kerahasiaan (Non-Disclosure Agreement)"
+                        },
+                        {
+                            "name": "Terms & Conditions"
+                        },
+                        {
+                            "name": "Syarat & Ketentuan Penggunaan Platform"
+                        },
+                        {
+                            "name": "Kebijakan Privasi Penyelenggaraan Platform Digital (Privacy Policy)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Surat & Dokumen Lainnya",
+                    "items": [
+                        {
+                            "name": "Surat Kuasa"
+                        },
+                        {
+                            "name": "Surat Pernyataan"
+                        },
+                        {
+                            "name": "Surat Jawaban"
+                        }
+                    ]
                 }
             ],
-            "pma": [
+            "en": [
                 {
-                    "name": "PAKET STANDART PMA",
-                    "popular": false,
-                    "price": "Rp 15.000.000",
-                    "features": [
+                    "name": "Employment",
+                    "items": [
                         {
-                            "text": "Cakupan Lokasi & KBLI",
-                            "bold": "1 Lokasi Usaha · maks. 5 KBLI"
-                        },
-                        { "text": "Konsultasi Online", "bold": "24 kali" },
-                        { "text": "Update Data Badan Usaha", "bold": "4x" },
-                        {
-                            "text": "Pelaporan LKPM",
-                            "bold": "4 Periode (1 Tahun)"
+                            "name": "Fixed-Term Employment Agreement (PKWT)"
                         },
                         {
-                            "text": "Pelaporan WLKP",
-                            "bold": "Maks. 100 Karyawan"
+                            "name": "Indefinite-Term Employment Agreement (PKWTT)"
                         },
                         {
-                            "text": "Pelaporan WLFPKP (Perda No. 4) — Wilayah Jakarta",
-                            "bold": "1x"
+                            "name": "Freelance Work Agreement"
                         },
                         {
-                            "text": "Pelaporan Industri (SIINas)",
-                            "bold": "2 Periode (1 Tahun)"
+                            "name": "Company Regulations"
                         },
                         {
-                            "text": "Rapat Umum Pemegang Saham Tahunan",
-                            "bold": "1x"
-                        },
-                        { "text": "Riset Perizinan", "bold": "1 kali" }
-                    ],
-                    "note": {
-                        "label": "Syarat & Ketentuan",
-                        "bold": "Min. Kontrak 6 Bulan"
-                    }
+                            "name": "Employee Stock Ownership Plan Agreement"
+                        }
+                    ]
                 },
                 {
-                    "name": "PAKET PREMIUM PMA",
-                    "popular": true,
-                    "price": "Rp 19.000.000",
-                    "features": [
+                    "name": "Corporate & Investment",
+                    "items": [
                         {
-                            "text": "Cakupan Lokasi & KBLI",
-                            "bold": "3 Lokasi Usaha · maks. 7 KBLI"
-                        },
-                        { "text": "Konsultasi Online", "bold": "36 kali" },
-                        { "text": "Update Data Badan Usaha", "bold": "8x" },
-                        {
-                            "text": "Pelaporan LKPM",
-                            "bold": "4 Periode (1 Tahun)"
+                            "name": "Founder Agreement"
                         },
                         {
-                            "text": "Pelaporan WLKP",
-                            "bold": "Maks. 100 Karyawan"
+                            "name": "Shareholder Agreement"
                         },
                         {
-                            "text": "Pelaporan WLFPKP (Perda No. 4) — Wilayah Jakarta",
-                            "bold": "1x"
+                            "name": "Shareholder Loan Agreement"
                         },
                         {
-                            "text": "Pelaporan Industri (SIINas)",
-                            "bold": "2 Periode (1 Tahun)"
+                            "name": "Investment Agreement"
+                        }
+                    ]
+                },
+                {
+                    "name": "Business Cooperation",
+                    "items": [
+                        {
+                            "name": "Cooperation Agreement"
                         },
                         {
-                            "text": "Rapat Umum Pemegang Saham Tahunan",
-                            "bold": "1x"
+                            "name": "Profit Sharing Agreement"
                         },
-                        { "text": "Riset Perizinan", "bold": "1 kali" }
-                    ],
-                    "note": {
-                        "label": "Syarat & Ketentuan",
-                        "bold": "Min. Kontrak 6 Bulan"
-                    }
+                        {
+                            "name": "Joint Venture Agreement"
+                        },
+                        {
+                            "name": "Distributor Agreement"
+                        },
+                        {
+                            "name": "Supplier Agreement"
+                        },
+                        {
+                            "name": "Service Provider Agreement"
+                        },
+                        {
+                            "name": "Sponsorship Agreement"
+                        }
+                    ]
+                },
+                {
+                    "name": "Commercial & Transactions",
+                    "items": [
+                        {
+                            "name": "Sale and Purchase Agreement"
+                        },
+                        {
+                            "name": "Debt Agreement"
+                        },
+                        {
+                            "name": "Lease Agreement"
+                        },
+                        {
+                            "name": "Loan-for-Use Agreement"
+                        },
+                        {
+                            "name": "Rights Transfer Agreement"
+                        }
+                    ]
+                },
+                {
+                    "name": "IP & Licensing",
+                    "items": [
+                        {
+                            "name": "License Agreement"
+                        },
+                        {
+                            "name": "IP Transfer Agreement"
+                        },
+                        {
+                            "name": "Franchise Agreement"
+                        }
+                    ]
+                },
+                {
+                    "name": "Confidentiality & Digital Platform",
+                    "items": [
+                        {
+                            "name": "Non-Disclosure Agreement"
+                        },
+                        {
+                            "name": "Terms & Conditions"
+                        },
+                        {
+                            "name": "Platform Terms of Use"
+                        },
+                        {
+                            "name": "Digital Platform Privacy Policy"
+                        }
+                    ]
+                },
+                {
+                    "name": "Letters & Other Documents",
+                    "items": [
+                        {
+                            "name": "Power of Attorney"
+                        },
+                        {
+                            "name": "Statement Letter"
+                        },
+                        {
+                            "name": "Reply Letter"
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "name": "劳动关系",
+                    "items": [
+                        {
+                            "name": "定期劳动合同（PKWT）"
+                        },
+                        {
+                            "name": "不定期劳动合同（PKWTT）"
+                        },
+                        {
+                            "name": "自由职业合同"
+                        },
+                        {
+                            "name": "公司规章"
+                        },
+                        {
+                            "name": "员工持股计划协议（Employee Stock Ownership Plan）"
+                        }
+                    ]
+                },
+                {
+                    "name": "公司与投资",
+                    "items": [
+                        {
+                            "name": "创始人协议（Founder Agreement）"
+                        },
+                        {
+                            "name": "股东协议（Shareholder Agreement）"
+                        },
+                        {
+                            "name": "股东借款协议（Shareholder Loan Agreement）"
+                        },
+                        {
+                            "name": "投资协议"
+                        }
+                    ]
+                },
+                {
+                    "name": "商业合作",
+                    "items": [
+                        {
+                            "name": "合作协议"
+                        },
+                        {
+                            "name": "利润分成协议（Profit Sharing Agreement）"
+                        },
+                        {
+                            "name": "合资协议（Joint Venture）"
+                        },
+                        {
+                            "name": "经销商协议（Distributor Agreement）"
+                        },
+                        {
+                            "name": "供应商协议（Supplier Agreement）"
+                        },
+                        {
+                            "name": "服务提供商协议"
+                        },
+                        {
+                            "name": "赞助协议"
+                        }
+                    ]
+                },
+                {
+                    "name": "商业与交易",
+                    "items": [
+                        {
+                            "name": "买卖协议"
+                        },
+                        {
+                            "name": "债权债务协议"
+                        },
+                        {
+                            "name": "租赁协议"
+                        },
+                        {
+                            "name": "借用协议"
+                        },
+                        {
+                            "name": "权利转让协议"
+                        }
+                    ]
+                },
+                {
+                    "name": "知识产权与许可",
+                    "items": [
+                        {
+                            "name": "许可协议"
+                        },
+                        {
+                            "name": "知识产权转让协议"
+                        },
+                        {
+                            "name": "特许经营协议"
+                        }
+                    ]
+                },
+                {
+                    "name": "保密与数字平台",
+                    "items": [
+                        {
+                            "name": "保密协议（Non-Disclosure Agreement）"
+                        },
+                        {
+                            "name": "条款与条件"
+                        },
+                        {
+                            "name": "平台使用条款"
+                        },
+                        {
+                            "name": "数字平台隐私政策（Privacy Policy）"
+                        }
+                    ]
+                },
+                {
+                    "name": "信函及其他文件",
+                    "items": [
+                        {
+                            "name": "授权书"
+                        },
+                        {
+                            "name": "声明书"
+                        },
+                        {
+                            "name": "答复函"
+                        }
+                    ]
                 }
             ]
+        },
+        "regular_packages": {
+            "id": {
+                "default_scale": "mikro",
+                "scales": [
+                    {
+                        "key": "mikro",
+                        "label": "Skala Mickro & Kecil",
+                        "price_label": "Rp 2.000.000/bln"
+                    },
+                    {
+                        "key": "menengah",
+                        "label": "Skala Menengah",
+                        "price_label": "Rp 4.500.000/bln"
+                    },
+                    {
+                        "key": "besar",
+                        "label": "Skala Besar",
+                        "price_label": "Rp 5.000.000/bln"
+                    },
+                    {
+                        "key": "pma",
+                        "label": "PMA",
+                        "price_label": "Rp 10.000.000/bln"
+                    }
+                ],
+                "rows": [
+                    {
+                        "label": "Konsultasi Online",
+                        "values": {
+                            "mikro": "3 Jam",
+                            "menengah": "3 Jam",
+                            "besar": "3 Jam",
+                            "pma": "3 Jam"
+                        }
+                    },
+                    {
+                        "label": "Konsultasi Offline",
+                        "values": {
+                            "mikro": "1 Jam",
+                            "menengah": "3 Jam",
+                            "besar": "3 Jam",
+                            "pma": "3 Jam"
+                        }
+                    },
+                    {
+                        "label": "Pembuatan Perjanjian/Kontrak",
+                        "values": {
+                            "mikro": "1 kali",
+                            "menengah": "3 Jam",
+                            "besar": "3 Jam",
+                            "pma": "3 Jam"
+                        }
+                    },
+                    {
+                        "label": "Peninjauan Perjanjian/Kontrak",
+                        "values": {
+                            "mikro": "3 kali",
+                            "menengah": "3 Jam",
+                            "besar": "3 Jam",
+                            "pma": "3 Jam"
+                        }
+                    },
+                    {
+                        "label": "Pelaporan WLKP",
+                        "values": {
+                            "mikro": "-",
+                            "menengah": "-",
+                            "besar": "3 Jam",
+                            "pma": "3 Jam"
+                        }
+                    },
+                    {
+                        "label": "Pelaporan LKPM",
+                        "values": {
+                            "mikro": "-",
+                            "menengah": "-",
+                            "besar": "2 kali",
+                            "pma": "2 kali"
+                        }
+                    },
+                    {
+                        "label": "Riset Perizinan",
+                        "values": {
+                            "mikro": "1 kali",
+                            "menengah": "2 kali",
+                            "besar": "3 kali",
+                            "pma": "4 kali"
+                        }
+                    },
+                    {
+                        "label": "Syarat dan Ketentuan",
+                        "values": {
+                            "mikro": "Minimal Kontrak 6 Bulan",
+                            "menengah": "Minimal Kontrak 6 Bulan",
+                            "besar": "Minimal Kontrak 6 Bulan",
+                            "pma": "Minimal Kontrak 6 Bulan"
+                        }
+                    },
+                    {
+                        "label": "Biaya Perbulan",
+                        "values": {
+                            "mikro": "Rp. 2.000.000,-",
+                            "menengah": "Rp. 4.500.000,-",
+                            "besar": "Rp. 5.000.000,-",
+                            "pma": "Rp. 10.000.000,-"
+                        }
+                    }
+                ]
+            },
+            "en": {
+                "default_scale": "mikro",
+                "scales": [
+                    {
+                        "key": "mikro",
+                        "label": "Micro & Small Scale",
+                        "price_label": "Rp 2.000.000/bln"
+                    },
+                    {
+                        "key": "menengah",
+                        "label": "Medium Scale",
+                        "price_label": "Rp 4.500.000/bln"
+                    },
+                    {
+                        "key": "besar",
+                        "label": "Large Scale",
+                        "price_label": "Rp 5.000.000/bln"
+                    },
+                    {
+                        "key": "pma",
+                        "label": "PMA",
+                        "price_label": "Rp 10.000.000/bln"
+                    }
+                ],
+                "rows": [
+                    {
+                        "label": "Online Consultation",
+                        "values": {
+                            "mikro": "3 Hours",
+                            "menengah": "3 Hours",
+                            "besar": "3 Hours",
+                            "pma": "3 Hours"
+                        }
+                    },
+                    {
+                        "label": "Offline Consultation",
+                        "values": {
+                            "mikro": "1 Hour",
+                            "menengah": "3 Hours",
+                            "besar": "3 Hours",
+                            "pma": "3 Hours"
+                        }
+                    },
+                    {
+                        "label": "Drafting of Agreements/Contracts",
+                        "values": {
+                            "mikro": "1 time",
+                            "menengah": "3 Hours",
+                            "besar": "3 Hours",
+                            "pma": "3 Hours"
+                        }
+                    },
+                    {
+                        "label": "Review of Agreements/Contracts",
+                        "values": {
+                            "mikro": "3 times",
+                            "menengah": "3 Hours",
+                            "besar": "3 Hours",
+                            "pma": "3 Hours"
+                        }
+                    },
+                    {
+                        "label": "WLKP Reporting",
+                        "values": {
+                            "mikro": "-",
+                            "menengah": "-",
+                            "besar": "3 Hours",
+                            "pma": "3 Hours"
+                        }
+                    },
+                    {
+                        "label": "LKPM Reporting",
+                        "values": {
+                            "mikro": "-",
+                            "menengah": "-",
+                            "besar": "2 times",
+                            "pma": "2 times"
+                        }
+                    },
+                    {
+                        "label": "Licensing Research",
+                        "values": {
+                            "mikro": "1 time",
+                            "menengah": "2 times",
+                            "besar": "3 times",
+                            "pma": "4 times"
+                        }
+                    },
+                    {
+                        "label": "Terms and Conditions",
+                        "values": {
+                            "mikro": "Minimum 6-Month Contract",
+                            "menengah": "Minimum 6-Month Contract",
+                            "besar": "Minimum 6-Month Contract",
+                            "pma": "Minimum 6-Month Contract"
+                        }
+                    },
+                    {
+                        "label": "Monthly Fee",
+                        "values": {
+                            "mikro": "Rp. 2.000.000,-",
+                            "menengah": "Rp. 4.500.000,-",
+                            "besar": "Rp. 5.000.000,-",
+                            "pma": "Rp. 10.000.000,-"
+                        }
+                    }
+                ]
+            },
+            "zh": {
+                "default_scale": "mikro",
+                "scales": [
+                    {
+                        "key": "mikro",
+                        "label": "微型及小型规模",
+                        "price_label": "Rp 2.000.000/bln"
+                    },
+                    {
+                        "key": "menengah",
+                        "label": "中型规模",
+                        "price_label": "Rp 4.500.000/bln"
+                    },
+                    {
+                        "key": "besar",
+                        "label": "大型规模",
+                        "price_label": "Rp 5.000.000/bln"
+                    },
+                    {
+                        "key": "pma",
+                        "label": "PMA（外商投资）",
+                        "price_label": "Rp 10.000.000/bln"
+                    }
+                ],
+                "rows": [
+                    {
+                        "label": "线上咨询",
+                        "values": {
+                            "mikro": "3小时",
+                            "menengah": "3小时",
+                            "besar": "3小时",
+                            "pma": "3小时"
+                        }
+                    },
+                    {
+                        "label": "线下咨询",
+                        "values": {
+                            "mikro": "1小时",
+                            "menengah": "3小时",
+                            "besar": "3小时",
+                            "pma": "3小时"
+                        }
+                    },
+                    {
+                        "label": "协议/合同的起草",
+                        "values": {
+                            "mikro": "1次",
+                            "menengah": "3小时",
+                            "besar": "3小时",
+                            "pma": "3小时"
+                        }
+                    },
+                    {
+                        "label": "协议/合同的审查",
+                        "values": {
+                            "mikro": "3次",
+                            "menengah": "3小时",
+                            "besar": "3小时",
+                            "pma": "3小时"
+                        }
+                    },
+                    {
+                        "label": "WLKP报告",
+                        "values": {
+                            "mikro": "-",
+                            "menengah": "-",
+                            "besar": "3小时",
+                            "pma": "3小时"
+                        }
+                    },
+                    {
+                        "label": "LKPM报告",
+                        "values": {
+                            "mikro": "-",
+                            "menengah": "-",
+                            "besar": "2次",
+                            "pma": "2次"
+                        }
+                    },
+                    {
+                        "label": "许可研究",
+                        "values": {
+                            "mikro": "1次",
+                            "menengah": "2次",
+                            "besar": "3次",
+                            "pma": "4次"
+                        }
+                    },
+                    {
+                        "label": "条款与条件",
+                        "values": {
+                            "mikro": "最低合同期6个月",
+                            "menengah": "最低合同期6个月",
+                            "besar": "最低合同期6个月",
+                            "pma": "最低合同期6个月"
+                        }
+                    },
+                    {
+                        "label": "每月费用",
+                        "values": {
+                            "mikro": "Rp. 2.000.000,-",
+                            "menengah": "Rp. 4.500.000,-",
+                            "besar": "Rp. 5.000.000,-",
+                            "pma": "Rp. 10.000.000,-"
+                        }
+                    }
+                ]
+            }
+        },
+        "corporate_secretary": {
+            "id": {
+                "pmdn": [
+                    {
+                        "name": "PAKET STANDART PMDN",
+                        "popular": false,
+                        "price": "Rp 10.000.000,-",
+                        "features": [
+                            {
+                                "text": "Cakupan Lokasi & KBLI",
+                                "bold": "1 Lokasi Usaha · maks. 5 KBLI"
+                            },
+                            {
+                                "text": "Konsultasi Online",
+                                "bold": "24 kali"
+                            },
+                            {
+                                "text": "Update Data Badan Usaha",
+                                "bold": "4x"
+                            },
+                            {
+                                "text": "Pelaporan LKPM",
+                                "bold": "4 Periode (1 Tahun)"
+                            },
+                            {
+                                "text": "Pelaporan WLKP",
+                                "bold": "Maks. 100 Karyawan"
+                            },
+                            {
+                                "text": "Pelaporan WLFPKP (Perda No. 4) — Wilayah Jakarta",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Pelaporan Industri (SIINas)",
+                                "bold": "2 Periode (1 Tahun)"
+                            },
+                            {
+                                "text": "Rapat Umum Pemegang Saham Tahunan",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Riset Perizinan",
+                                "bold": "1 kali"
+                            }
+                        ],
+                        "note": {
+                            "label": "Syarat & Ketentuan",
+                            "bold": "Min. Kontrak 6 Bulan"
+                        }
+                    },
+                    {
+                        "name": "PAKET PREMIUM PMDN",
+                        "popular": true,
+                        "price": "Rp 14.000.000,-",
+                        "features": [
+                            {
+                                "text": "Cakupan Lokasi & KBLI",
+                                "bold": "3 Lokasi Usaha · maks. 7 KBLI"
+                            },
+                            {
+                                "text": "Konsultasi Online",
+                                "bold": "36 kali"
+                            },
+                            {
+                                "text": "Update Data Badan Usaha",
+                                "bold": "8x"
+                            },
+                            {
+                                "text": "Pelaporan LKPM",
+                                "bold": "4 Periode (1 Tahun)"
+                            },
+                            {
+                                "text": "Pelaporan WLKP",
+                                "bold": "Maks. 100 Karyawan"
+                            },
+                            {
+                                "text": "Pelaporan WLFPKP (Perda No. 4) — Wilayah Jakarta",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Pelaporan Industri (SIINas)",
+                                "bold": "2 Periode (1 Tahun)"
+                            },
+                            {
+                                "text": "Rapat Umum Pemegang Saham Tahunan",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Riset Perizinan",
+                                "bold": "1 kali"
+                            }
+                        ],
+                        "note": {
+                            "label": "Syarat & Ketentuan",
+                            "bold": "Min. Kontrak 6 Bulan"
+                        }
+                    }
+                ],
+                "pma": [
+                    {
+                        "name": "PAKET STANDART PMA",
+                        "popular": false,
+                        "price": "Rp 15.000.000",
+                        "features": [
+                            {
+                                "text": "Cakupan Lokasi & KBLI",
+                                "bold": "1 Lokasi Usaha · maks. 5 KBLI"
+                            },
+                            {
+                                "text": "Konsultasi Online",
+                                "bold": "24 kali"
+                            },
+                            {
+                                "text": "Update Data Badan Usaha",
+                                "bold": "4x"
+                            },
+                            {
+                                "text": "Pelaporan LKPM",
+                                "bold": "4 Periode (1 Tahun)"
+                            },
+                            {
+                                "text": "Pelaporan WLKP",
+                                "bold": "Maks. 100 Karyawan"
+                            },
+                            {
+                                "text": "Pelaporan WLFPKP (Perda No. 4) — Wilayah Jakarta",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Pelaporan Industri (SIINas)",
+                                "bold": "2 Periode (1 Tahun)"
+                            },
+                            {
+                                "text": "Rapat Umum Pemegang Saham Tahunan",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Riset Perizinan",
+                                "bold": "1 kali"
+                            }
+                        ],
+                        "note": {
+                            "label": "Syarat & Ketentuan",
+                            "bold": "Min. Kontrak 6 Bulan"
+                        }
+                    },
+                    {
+                        "name": "PAKET PREMIUM PMA",
+                        "popular": true,
+                        "price": "Rp 19.000.000",
+                        "features": [
+                            {
+                                "text": "Cakupan Lokasi & KBLI",
+                                "bold": "3 Lokasi Usaha · maks. 7 KBLI"
+                            },
+                            {
+                                "text": "Konsultasi Online",
+                                "bold": "36 kali"
+                            },
+                            {
+                                "text": "Update Data Badan Usaha",
+                                "bold": "8x"
+                            },
+                            {
+                                "text": "Pelaporan LKPM",
+                                "bold": "4 Periode (1 Tahun)"
+                            },
+                            {
+                                "text": "Pelaporan WLKP",
+                                "bold": "Maks. 100 Karyawan"
+                            },
+                            {
+                                "text": "Pelaporan WLFPKP (Perda No. 4) — Wilayah Jakarta",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Pelaporan Industri (SIINas)",
+                                "bold": "2 Periode (1 Tahun)"
+                            },
+                            {
+                                "text": "Rapat Umum Pemegang Saham Tahunan",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Riset Perizinan",
+                                "bold": "1 kali"
+                            }
+                        ],
+                        "note": {
+                            "label": "Syarat & Ketentuan",
+                            "bold": "Min. Kontrak 6 Bulan"
+                        }
+                    }
+                ]
+            },
+            "en": {
+                "pmdn": [
+                    {
+                        "name": "STANDARD PMDN PACKAGE",
+                        "popular": false,
+                        "price": "Rp 10.000.000,-",
+                        "features": [
+                            {
+                                "text": "Location & KBLI Coverage",
+                                "bold": "1 Business Location · max. 5 KBLI"
+                            },
+                            {
+                                "text": "Online Consultation",
+                                "bold": "24 times"
+                            },
+                            {
+                                "text": "Business Entity Data Update",
+                                "bold": "4x"
+                            },
+                            {
+                                "text": "LKPM Reporting",
+                                "bold": "4 Periods (1 Year)"
+                            },
+                            {
+                                "text": "WLKP Reporting",
+                                "bold": "Max. 100 Employees"
+                            },
+                            {
+                                "text": "WLFPKP Reporting (Regional Regulation No. 4) — Jakarta Area",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Industry Reporting (SIINas)",
+                                "bold": "2 Periods (1 Year)"
+                            },
+                            {
+                                "text": "Annual General Meeting of Shareholders",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Licensing Research",
+                                "bold": "1 time"
+                            }
+                        ],
+                        "note": {
+                            "label": "Terms & Conditions",
+                            "bold": "Min. 6-Month Contract"
+                        }
+                    },
+                    {
+                        "name": "PREMIUM PMDN PACKAGE",
+                        "popular": true,
+                        "price": "Rp 14.000.000,-",
+                        "features": [
+                            {
+                                "text": "Location & KBLI Coverage",
+                                "bold": "3 Business Locations · max. 7 KBLI"
+                            },
+                            {
+                                "text": "Online Consultation",
+                                "bold": "36 times"
+                            },
+                            {
+                                "text": "Business Entity Data Update",
+                                "bold": "8x"
+                            },
+                            {
+                                "text": "LKPM Reporting",
+                                "bold": "4 Periods (1 Year)"
+                            },
+                            {
+                                "text": "WLKP Reporting",
+                                "bold": "Max. 100 Employees"
+                            },
+                            {
+                                "text": "WLFPKP Reporting (Regional Regulation No. 4) — Jakarta Area",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Industry Reporting (SIINas)",
+                                "bold": "2 Periods (1 Year)"
+                            },
+                            {
+                                "text": "Annual General Meeting of Shareholders",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Licensing Research",
+                                "bold": "1 time"
+                            }
+                        ],
+                        "note": {
+                            "label": "Terms & Conditions",
+                            "bold": "Min. 6-Month Contract"
+                        }
+                    }
+                ],
+                "pma": [
+                    {
+                        "name": "STANDARD PMA PACKAGE",
+                        "popular": false,
+                        "price": "Rp 15.000.000",
+                        "features": [
+                            {
+                                "text": "Location & KBLI Coverage",
+                                "bold": "1 Business Location · max. 5 KBLI"
+                            },
+                            {
+                                "text": "Online Consultation",
+                                "bold": "24 times"
+                            },
+                            {
+                                "text": "Business Entity Data Update",
+                                "bold": "4x"
+                            },
+                            {
+                                "text": "LKPM Reporting",
+                                "bold": "4 Periods (1 Year)"
+                            },
+                            {
+                                "text": "WLKP Reporting",
+                                "bold": "Max. 100 Employees"
+                            },
+                            {
+                                "text": "WLFPKP Reporting (Regional Regulation No. 4) — Jakarta Area",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Industry Reporting (SIINas)",
+                                "bold": "2 Periods (1 Year)"
+                            },
+                            {
+                                "text": "Annual General Meeting of Shareholders",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Licensing Research",
+                                "bold": "1 time"
+                            }
+                        ],
+                        "note": {
+                            "label": "Terms & Conditions",
+                            "bold": "Min. 6-Month Contract"
+                        }
+                    },
+                    {
+                        "name": "PREMIUM PMA PACKAGE",
+                        "popular": true,
+                        "price": "Rp 19.000.000",
+                        "features": [
+                            {
+                                "text": "Location & KBLI Coverage",
+                                "bold": "3 Business Locations · max. 7 KBLI"
+                            },
+                            {
+                                "text": "Online Consultation",
+                                "bold": "36 times"
+                            },
+                            {
+                                "text": "Business Entity Data Update",
+                                "bold": "8x"
+                            },
+                            {
+                                "text": "LKPM Reporting",
+                                "bold": "4 Periods (1 Year)"
+                            },
+                            {
+                                "text": "WLKP Reporting",
+                                "bold": "Max. 100 Employees"
+                            },
+                            {
+                                "text": "WLFPKP Reporting (Regional Regulation No. 4) — Jakarta Area",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Industry Reporting (SIINas)",
+                                "bold": "2 Periods (1 Year)"
+                            },
+                            {
+                                "text": "Annual General Meeting of Shareholders",
+                                "bold": "1x"
+                            },
+                            {
+                                "text": "Licensing Research",
+                                "bold": "1 time"
+                            }
+                        ],
+                        "note": {
+                            "label": "Terms & Conditions",
+                            "bold": "Min. 6-Month Contract"
+                        }
+                    }
+                ]
+            },
+            "zh": {
+                "pmdn": [
+                    {
+                        "name": "PMDN标准套餐",
+                        "popular": false,
+                        "price": "Rp 10.000.000,-",
+                        "features": [
+                            {
+                                "text": "地点及KBLI覆盖范围",
+                                "bold": "1个经营地点·最多5个KBLI"
+                            },
+                            {
+                                "text": "线上咨询",
+                                "bold": "24次"
+                            },
+                            {
+                                "text": "企业数据更新",
+                                "bold": "4次"
+                            },
+                            {
+                                "text": "LKPM报告",
+                                "bold": "4个周期（1年）"
+                            },
+                            {
+                                "text": "WLKP报告",
+                                "bold": "最多100名员工"
+                            },
+                            {
+                                "text": "WLFPKP报告（第4号地方法规）——雅加达地区",
+                                "bold": "1次"
+                            },
+                            {
+                                "text": "工业报告（SIINas）",
+                                "bold": "2个周期（1年）"
+                            },
+                            {
+                                "text": "年度股东大会",
+                                "bold": "1次"
+                            },
+                            {
+                                "text": "许可研究",
+                                "bold": "1次"
+                            }
+                        ],
+                        "note": {
+                            "label": "条款与条件",
+                            "bold": "最低合同期6个月"
+                        }
+                    },
+                    {
+                        "name": "PMDN高级套餐",
+                        "popular": true,
+                        "price": "Rp 14.000.000,-",
+                        "features": [
+                            {
+                                "text": "地点及KBLI覆盖范围",
+                                "bold": "3个经营地点·最多7个KBLI"
+                            },
+                            {
+                                "text": "线上咨询",
+                                "bold": "36次"
+                            },
+                            {
+                                "text": "企业数据更新",
+                                "bold": "8次"
+                            },
+                            {
+                                "text": "LKPM报告",
+                                "bold": "4个周期（1年）"
+                            },
+                            {
+                                "text": "WLKP报告",
+                                "bold": "最多100名员工"
+                            },
+                            {
+                                "text": "WLFPKP报告（第4号地方法规）——雅加达地区",
+                                "bold": "1次"
+                            },
+                            {
+                                "text": "工业报告（SIINas）",
+                                "bold": "2个周期（1年）"
+                            },
+                            {
+                                "text": "年度股东大会",
+                                "bold": "1次"
+                            },
+                            {
+                                "text": "许可研究",
+                                "bold": "1次"
+                            }
+                        ],
+                        "note": {
+                            "label": "条款与条件",
+                            "bold": "最低合同期6个月"
+                        }
+                    }
+                ],
+                "pma": [
+                    {
+                        "name": "PMA标准套餐",
+                        "popular": false,
+                        "price": "Rp 15.000.000",
+                        "features": [
+                            {
+                                "text": "地点及KBLI覆盖范围",
+                                "bold": "1个经营地点·最多5个KBLI"
+                            },
+                            {
+                                "text": "线上咨询",
+                                "bold": "24次"
+                            },
+                            {
+                                "text": "企业数据更新",
+                                "bold": "4次"
+                            },
+                            {
+                                "text": "LKPM报告",
+                                "bold": "4个周期（1年）"
+                            },
+                            {
+                                "text": "WLKP报告",
+                                "bold": "最多100名员工"
+                            },
+                            {
+                                "text": "WLFPKP报告（第4号地方法规）——雅加达地区",
+                                "bold": "1次"
+                            },
+                            {
+                                "text": "工业报告（SIINas）",
+                                "bold": "2个周期（1年）"
+                            },
+                            {
+                                "text": "年度股东大会",
+                                "bold": "1次"
+                            },
+                            {
+                                "text": "许可研究",
+                                "bold": "1次"
+                            }
+                        ],
+                        "note": {
+                            "label": "条款与条件",
+                            "bold": "最低合同期6个月"
+                        }
+                    },
+                    {
+                        "name": "PMA高级套餐",
+                        "popular": true,
+                        "price": "Rp 19.000.000",
+                        "features": [
+                            {
+                                "text": "地点及KBLI覆盖范围",
+                                "bold": "3个经营地点·最多7个KBLI"
+                            },
+                            {
+                                "text": "线上咨询",
+                                "bold": "36次"
+                            },
+                            {
+                                "text": "企业数据更新",
+                                "bold": "8次"
+                            },
+                            {
+                                "text": "LKPM报告",
+                                "bold": "4个周期（1年）"
+                            },
+                            {
+                                "text": "WLKP报告",
+                                "bold": "最多100名员工"
+                            },
+                            {
+                                "text": "WLFPKP报告（第4号地方法规）——雅加达地区",
+                                "bold": "1次"
+                            },
+                            {
+                                "text": "工业报告（SIINas）",
+                                "bold": "2个周期（1年）"
+                            },
+                            {
+                                "text": "年度股东大会",
+                                "bold": "1次"
+                            },
+                            {
+                                "text": "许可研究",
+                                "bold": "1次"
+                            }
+                        ],
+                        "note": {
+                            "label": "条款与条件",
+                            "bold": "最低合同期6个月"
+                        }
+                    }
+                ]
+            }
         }
     }
 ]

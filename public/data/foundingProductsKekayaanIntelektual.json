@@ -1,176 +1,602 @@
 [
     {
         "id": 1,
-        "name": "Pendaftaran Merek",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Pendaftaran Merek",
+            "en": "Trademark Registration",
+            "zh": "商标注册"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "3000000",
         "price_label": "Rp 3.000.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Daftarkan merek dagang Anda secara resmi untuk mendapatkan perlindungan hukum yang sah.",
-        "excerpt": "Pendaftaran Merek merupakan proses memperoleh hak eksklusif atas suatu tanda yang digunakan untuk membedakan barang dan/atau jasa yang diperdagangkan oleh seseorang atau badan usaha dengan pihak lainnya.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Pendaftaran Merek merupakan proses memperoleh hak eksklusif atas suatu tanda yang digunakan untuk membedakan barang dan/atau jasa yang diperdagangkan oleh seseorang atau badan usaha dengan pihak lainnya. Hak atas merek hanya diperoleh setelah merek tersebut terdaftar dan mendapatkan sertifikat dari Direktorat Jenderal Kekayaan Intelektual (DJKI)."
-        ],
-        "term_condition": [],
-        "benefits": [
-            "Memberikan hak eksklusif kepada pemilik merek",
-            "Melindungi identitas bisnis dari penggunaan tanpa izin",
-            "Meningkatkan nilai komersial usaha",
-            "Menjadi aset perusahaan yang dapat dialihkan atau dilisensikan",
-            "Memperkuat kepercayaan konsumen dan mitra usaha"
-        ],
-        "scope_of_service": [],
-        "requirements": [],
-        "process": [],
-        "faq": [],
-        "criteria": [
-            "Nama usaha atau nama dagang",
-            "Logo perusahaan",
-            "Nama produk atau jasa",
-            "Kombinasi kata, huruf, angka, gambar, warna, atau unsur lainnya",
-            "Merek yang memiliki daya pembeda dan tidak bertentangan dengan ketentuan hukum"
-        ],
-        "plans": [
-            {
-                "name": "Pendaftaran Merek 1 Kelas",
-                "price": "Rp. 3.000.000",
-                "cta": "Hubungi Kami"
-            },
-            {
-                "name": "Pendaftaran Merek Multi-Kelas",
-                "price": "-",
-                "cta": "Hubungi Kami"
-            }
-        ],
-        "plans_info": "Harga dapat berubah menyesuaikan dengan skala bisnis, volume dokumen, dan kompleksitas proses.",
-        "plans_alert": [],
-        "dasar_hukum": [
-            "Undang-Undang Nomor 20 Tahun 2016 tentang Merek dan Indikasi Geografis;",
-            "Peraturan Menteri Hukum Nomor 5 Tahun 2026 Tentang Pendaftaran Merek"
-        ],
+        "description": {
+            "id": "Daftarkan merek dagang Anda secara resmi untuk mendapatkan perlindungan hukum yang sah.",
+            "en": "Officially register your trademark to obtain valid legal protection.",
+            "zh": "正式注册您的商标，以获得合法的法律保护。"
+        },
+        "excerpt": {
+            "id": "Pendaftaran Merek merupakan proses memperoleh hak eksklusif atas suatu tanda yang digunakan untuk membedakan barang dan/atau jasa yang diperdagangkan oleh seseorang atau badan usaha dengan pihak lainnya.",
+            "en": "Trademark Registration is the process of obtaining exclusive rights over a sign used to distinguish goods and/or services traded by a person or business entity from those of other parties.",
+            "zh": "商标注册是指获得对某一标志的专有权利的过程，该标志用于区分个人或企业所交易的商品及/或服务与其他方的商品及/或服务。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适用于初创企业、代理商、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Pendaftaran Merek merupakan proses memperoleh hak eksklusif atas suatu tanda yang digunakan untuk membedakan barang dan/atau jasa yang diperdagangkan oleh seseorang atau badan usaha dengan pihak lainnya. Hak atas merek hanya diperoleh setelah merek tersebut terdaftar dan mendapatkan sertifikat dari Direktorat Jenderal Kekayaan Intelektual (DJKI)."
+            ],
+            "en": [
+                "Trademark Registration is the process of obtaining exclusive rights over a sign used to distinguish goods and/or services traded by a person or business entity from those of other parties. Trademark rights are only obtained after the trademark is registered and receives a certificate from the Directorate General of Intellectual Property (DJKI)."
+            ],
+            "zh": [
+                "商标注册是指获得对某一标志的专有权利的过程，该标志用于区分个人或企业所交易的商品及/或服务与其他方的商品及/或服务。商标权仅在该商标完成注册并获得知识产权总局（DJKI）颁发的证书后方可取得。"
+            ]
+        },
+        "term_condition": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "benefits": {
+            "id": [
+                "Memberikan hak eksklusif kepada pemilik merek",
+                "Melindungi identitas bisnis dari penggunaan tanpa izin",
+                "Meningkatkan nilai komersial usaha",
+                "Menjadi aset perusahaan yang dapat dialihkan atau dilisensikan",
+                "Memperkuat kepercayaan konsumen dan mitra usaha"
+            ],
+            "en": [
+                "Granting exclusive rights to the trademark owner",
+                "Protecting business identity from unauthorized use",
+                "Increasing the commercial value of the business",
+                "Becoming a company asset that can be transferred or licensed",
+                "Strengthening consumer and business partner trust"
+            ],
+            "zh": [
+                "赋予商标所有者专有权利",
+                "保护企业身份免受未经授权的使用",
+                "提升企业的商业价值",
+                "成为可转让或授权许可的公司资产",
+                "增强消费者及商业伙伴的信任"
+            ]
+        },
+        "scope_of_service": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "process": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "criteria": {
+            "id": [
+                "Nama usaha atau nama dagang",
+                "Logo perusahaan",
+                "Nama produk atau jasa",
+                "Kombinasi kata, huruf, angka, gambar, warna, atau unsur lainnya",
+                "Merek yang memiliki daya pembeda dan tidak bertentangan dengan ketentuan hukum"
+            ],
+            "en": [
+                "Business name or trade name",
+                "Company logo",
+                "Product or service name",
+                "A combination of words, letters, numbers, images, colors, or other elements",
+                "A trademark that has distinctiveness and does not conflict with legal provisions"
+            ],
+            "zh": [
+                "企业名称或商号",
+                "公司标志",
+                "产品或服务名称",
+                "文字、字母、数字、图像、颜色或其他元素的组合",
+                "具有显著性且不违反法律规定的商标"
+            ]
+        },
+        "plans": {
+            "id": [
+                {
+                    "name": "Pendaftaran Merek 1 Kelas",
+                    "price": "Rp. 3.000.000",
+                    "cta": "Hubungi Kami"
+                },
+                {
+                    "name": "Pendaftaran Merek Multi-Kelas",
+                    "price": "-",
+                    "cta": "Hubungi Kami"
+                }
+            ],
+            "en": [
+                {
+                    "name": "Trademark Registration - 1 Class",
+                    "price": "Rp. 3.000.000",
+                    "cta": "Contact Us"
+                },
+                {
+                    "name": "Trademark Registration - Multi-Class",
+                    "price": "-",
+                    "cta": "Contact Us"
+                }
+            ],
+            "zh": [
+                {
+                    "name": "商标注册-1个类别",
+                    "price": "Rp. 3.000.000",
+                    "cta": "联系我们"
+                },
+                {
+                    "name": "商标注册-多个类别",
+                    "price": "-",
+                    "cta": "联系我们"
+                }
+            ]
+        },
+        "plans_info": {
+            "id": "Harga dapat berubah menyesuaikan dengan skala bisnis, volume dokumen, dan kompleksitas proses.",
+            "en": "Prices may change depending on the scale of the business, document volume, and process complexity.",
+            "zh": "价格可能根据企业规模、文件数量及流程复杂程度而有所变动。"
+        },
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 20 Tahun 2016 tentang Merek dan Indikasi Geografis;",
+                "Peraturan Menteri Hukum Nomor 5 Tahun 2026 Tentang Pendaftaran Merek"
+            ],
+            "en": [
+                "Law Number 20 of 2016 concerning Trademarks and Geographical Indications;",
+                "Minister of Law Regulation Number 5 of 2026 concerning Trademark Registration"
+            ],
+            "zh": [
+                "2016年第20号法律关于商标与地理标志；",
+                "2026年第5号法务部长条例，关于商标注册"
+            ]
+        },
         "footer_cta": {
-            "title": "Tidak Menemukan Layanan yang Anda Cari?",
-            "subtitle": "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
-            "button_text": "Chat Langsung via WhatsApp",
-            "wa_message": "layanan yang tidak terdaftar"
+            "id": {
+                "title": "Tidak Menemukan Layanan yang Anda Cari?",
+                "subtitle": "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
+                "button_text": "Chat Langsung via WhatsApp",
+                "wa_message": "layanan yang tidak terdaftar"
+            },
+            "en": {
+                "title": "Can't Find the Service You're Looking For?",
+                "subtitle": "Our team is ready to help you find the right solution for your business legal needs.",
+                "button_text": "Chat Directly via WhatsApp",
+                "wa_message": "an unlisted service"
+            },
+            "zh": {
+                "title": "找不到您需要的服务？",
+                "subtitle": "我们的团队随时准备协助您找到符合企业法律需求的合适解决方案。",
+                "button_text": "直接通过WhatsApp聊天",
+                "wa_message": "未列出的服务"
+            }
         }
     },
     {
         "id": 2,
-        "name": "Perpanjangan Merek",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Perpanjangan Merek",
+            "en": "Trademark Renewal",
+            "zh": "商标续展"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "3000000",
         "price_label": "Rp 3.000.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Perpanjang masa berlaku merek terdaftar agar perlindungan hukum tetap berkelanjutan.",
-        "excerpt":"Hak atas merek memiliki jangka waktu perlindungan tertentu dan wajib diperpanjang agar tetap memperoleh perlindungan hukum.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Hak atas merek memiliki jangka waktu perlindungan tertentu dan wajib diperpanjang agar tetap memperoleh perlindungan hukum. Perpanjangan merek dilakukan sebelum masa perlindungan berakhir untuk menjaga keberlangsungan hak eksklusif pemilik merek."
-        ],
-        "term_condition": [],
-        "benefits": [
-            "Menjaga hak eksklusif atas merek",
-            "Menghindari penghapusan hak merek karena masa berlaku berakhir",
-            "Menjamin keberlanjutan perlindungan hukum",
-            "Melindungi investasi dan reputasi bisnis yang telah dibangun"
-        ],
-        "scope_of_service": [],
-        "requirements": [],
-        "process": [],
-        "faq": [],
-        "criteria": [
-            "Merek telah terdaftar secara sah",
-            "Masa perlindungan merek akan atau telah berakhir dalam tenggang waktu yang diperbolehkan",
-            "Merek masih digunakan dalam kegiatan perdagangan barang dan/atau jasa"
-        ],
-        "plans": [
-            {
-                "name": "Perpanjangan Merek 1 Kelas",
-                "price": "Rp. 3.000.000",
-                "cta": "Hubungi Kami"
-            },
-            {
-                "name": "Perpanjangan Merek Multi-Kelas",
-                "price": "-",
-                "cta": "Hubungi Kami"
-            }
-        ],
-        "plans_info": "Belum termasuk biaya resmi pemerintah (PNBP) yang berlaku.",
-        "plans_alert": [],
-        "dasar_hukum": [
-            "Undang-Undang Nomor 20 Tahun 2016 tentang Merek dan Indikasi Geografis;",
-            "Peraturan Menteri Hukum Nomor 5 Tahun 2026 Tentang Pendaftaran Merek"
-        ],
+        "description": {
+            "id": "Perpanjang masa berlaku merek terdaftar agar perlindungan hukum tetap berkelanjutan.",
+            "en": "Renew the validity period of a registered trademark to keep its legal protection ongoing.",
+            "zh": "续展已注册商标的有效期，以维持法律保护的持续性。"
+        },
+        "excerpt": {
+            "id": "Hak atas merek memiliki jangka waktu perlindungan tertentu dan wajib diperpanjang agar tetap memperoleh perlindungan hukum.",
+            "en": "Trademark rights have a certain protection period and must be renewed to continue receiving legal protection.",
+            "zh": "商标权具有一定的保护期限，须续展方可继续获得法律保护。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适用于初创企业、代理商、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Hak atas merek memiliki jangka waktu perlindungan tertentu dan wajib diperpanjang agar tetap memperoleh perlindungan hukum. Perpanjangan merek dilakukan sebelum masa perlindungan berakhir untuk menjaga keberlangsungan hak eksklusif pemilik merek."
+            ],
+            "en": [
+                "Trademark rights have a certain protection period and must be renewed to continue receiving legal protection. Trademark renewal is carried out before the protection period ends to maintain the continuity of the trademark owner's exclusive rights."
+            ],
+            "zh": [
+                "商标权具有一定的保护期限，须续展方可继续获得法律保护。商标续展须在保护期届满前办理，以维持商标所有者专有权利的持续性。"
+            ]
+        },
+        "term_condition": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "benefits": {
+            "id": [
+                "Menjaga hak eksklusif atas merek",
+                "Menghindari penghapusan hak merek karena masa berlaku berakhir",
+                "Menjamin keberlanjutan perlindungan hukum",
+                "Melindungi investasi dan reputasi bisnis yang telah dibangun"
+            ],
+            "en": [
+                "Maintaining exclusive rights to the trademark",
+                "Avoiding removal of trademark rights due to expiration",
+                "Ensuring the continuity of legal protection",
+                "Protecting the investment and business reputation already built"
+            ],
+            "zh": [
+                "维持商标的专有权利",
+                "避免因有效期届满而导致商标权被撤销",
+                "确保法律保护的持续性",
+                "保护已建立的投资及企业声誉"
+            ]
+        },
+        "scope_of_service": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "process": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "criteria": {
+            "id": [
+                "Merek telah terdaftar secara sah",
+                "Masa perlindungan merek akan atau telah berakhir dalam tenggang waktu yang diperbolehkan",
+                "Merek masih digunakan dalam kegiatan perdagangan barang dan/atau jasa"
+            ],
+            "en": [
+                "The trademark has been legally registered",
+                "The trademark's protection period will or has expired within the permitted grace period",
+                "The trademark is still used in the trading of goods and/or services"
+            ],
+            "zh": [
+                "商标已合法注册",
+                "商标保护期即将或已在允许的宽限期内届满",
+                "该商标仍在商品及/或服务的贸易活动中使用"
+            ]
+        },
+        "plans": {
+            "id": [
+                {
+                    "name": "Perpanjangan Merek 1 Kelas",
+                    "price": "Rp. 3.000.000",
+                    "cta": "Hubungi Kami"
+                },
+                {
+                    "name": "Perpanjangan Merek Multi-Kelas",
+                    "price": "-",
+                    "cta": "Hubungi Kami"
+                }
+            ],
+            "en": [
+                {
+                    "name": "Trademark Renewal - 1 Class",
+                    "price": "Rp. 3.000.000",
+                    "cta": "Contact Us"
+                },
+                {
+                    "name": "Trademark Renewal - Multi-Class",
+                    "price": "-",
+                    "cta": "Contact Us"
+                }
+            ],
+            "zh": [
+                {
+                    "name": "商标续展-1个类别",
+                    "price": "Rp. 3.000.000",
+                    "cta": "联系我们"
+                },
+                {
+                    "name": "商标续展-多个类别",
+                    "price": "-",
+                    "cta": "联系我们"
+                }
+            ]
+        },
+        "plans_info": {
+            "id": "Belum termasuk biaya resmi pemerintah (PNBP) yang berlaku.",
+            "en": "Does not yet include applicable official government fees (PNBP).",
+            "zh": "尚不包含现行的政府官方规费（PNBP）。"
+        },
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 20 Tahun 2016 tentang Merek dan Indikasi Geografis;",
+                "Peraturan Menteri Hukum Nomor 5 Tahun 2026 Tentang Pendaftaran Merek"
+            ],
+            "en": [
+                "Law Number 20 of 2016 concerning Trademarks and Geographical Indications;",
+                "Minister of Law Regulation Number 5 of 2026 concerning Trademark Registration"
+            ],
+            "zh": [
+                "2016年第20号法律关于商标与地理标志；",
+                "2026年第5号法务部长条例，关于商标注册"
+            ]
+        },
         "footer_cta": {
-            "title": "Tidak Menemukan Layanan yang Anda Cari?",
-            "subtitle": "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
-            "button_text": "Chat Langsung via WhatsApp",
-            "wa_message": "layanan yang tidak terdaftar"
+            "id": {
+                "title": "Tidak Menemukan Layanan yang Anda Cari?",
+                "subtitle": "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
+                "button_text": "Chat Langsung via WhatsApp",
+                "wa_message": "layanan yang tidak terdaftar"
+            },
+            "en": {
+                "title": "Can't Find the Service You're Looking For?",
+                "subtitle": "Our team is ready to help you find the right solution for your business legal needs.",
+                "button_text": "Chat Directly via WhatsApp",
+                "wa_message": "an unlisted service"
+            },
+            "zh": {
+                "title": "找不到您需要的服务？",
+                "subtitle": "我们的团队随时准备协助您找到符合企业法律需求的合适解决方案。",
+                "button_text": "直接通过WhatsApp聊天",
+                "wa_message": "未列出的服务"
+            }
         }
     },
     {
         "id": 3,
-        "name": "Hak Cipta",
-        "tag": "",
+        "name": {
+            "id": "Hak Cipta",
+            "en": "Copyright",
+            "zh": "著作权"
+        },
+        "tag": {
+            "id": "",
+            "en": "",
+            "zh": ""
+        },
         "price": "3000000",
         "price_label": "Rp 3.000.000",
-        "duration": "Estimasi 7-14 hari kerja",
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 business days",
+            "zh": "预计7-14个工作日"
+        },
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Daftarkan hak cipta atas karya Anda untuk mendapatkan perlindungan dan pengakuan hukum resmi.",
-        "excerpt":"Hak Cipta merupakan hak eksklusif yang timbul secara otomatis atas suatu ciptaan setelah diwujudkan dalam bentuk nyata.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Hak Cipta merupakan hak eksklusif yang timbul secara otomatis atas suatu ciptaan setelah diwujudkan dalam bentuk nyata. Meskipun perlindungan hak cipta lahir secara otomatis, pencatatan hak cipta memberikan bukti administratif yang kuat mengenai kepemilikan suatu karya."
-        ],
-        "term_condition": [],
-        "benefits": [
-            "Memperkuat bukti kepemilikan karya",
-            "Memberikan perlindungan hukum terhadap penggunaan tanpa izin",
-            "Meningkatkan nilai ekonomi dan komersialisasi karya",
-            "Mempermudah proses pembuktian dalam sengketa hukum",
-            "Mendukung lisensi, kerja sama, maupun pengalihan hak"
-        ],
-        "scope_of_service": [],
-        "requirements": [],
-        "process": [],
-        "faq": [],
-        "criteria": [
-            "Buku dan karya tulis",
-            "Artikel dan publikasi digital",
-            "Program komputer atau perangkat lunak",
-            "Desain grafis dan ilustrasi",
-            "Foto dan karya fotografi",
-            "Video dan karya audiovisual",
-            "Musik dan lagu",
-            "Modul pelatihan dan materi edukasi",
-            "Karya kreatif lainnya sesuai ketentuan peraturan perundang-undangan"
-        ],
-        "plans": [
-            {
-                "name": "Pencatatan Hak Cipta",
-                "price": "Rp. 3.000.000",
-                "cta": "Hubungi Kami"
-            },
-            {
-                "name": "Pencatatan Beberapa Karya",
-                "price": "-",
-                "cta": "Hubungi Kami"
-            }
-        ],
-        "plans_info": "Belum termasuk biaya resmi pemerintah (PNBP) yang berlaku.",
-        "plans_alert": [],
-        "dasar_hukum": [
-            "Undang-Undang Nomor 28 Tahun 2014 tentang Hak Cipta"
-        ],
+        "description": {
+            "id": "Daftarkan hak cipta atas karya Anda untuk mendapatkan perlindungan dan pengakuan hukum resmi.",
+            "en": "Register the copyright of your work to obtain official legal protection and recognition.",
+            "zh": "为您的作品登记著作权，以获得正式的法律保护及承认。"
+        },
+        "excerpt": {
+            "id": "Hak Cipta merupakan hak eksklusif yang timbul secara otomatis atas suatu ciptaan setelah diwujudkan dalam bentuk nyata.",
+            "en": "Copyright is an exclusive right that arises automatically over a creation once it has been embodied in a tangible form.",
+            "zh": "著作权是一种专有权利，在创作以实体形式呈现后自动产生。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适用于初创企业、代理商、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Hak Cipta merupakan hak eksklusif yang timbul secara otomatis atas suatu ciptaan setelah diwujudkan dalam bentuk nyata. Meskipun perlindungan hak cipta lahir secara otomatis, pencatatan hak cipta memberikan bukti administratif yang kuat mengenai kepemilikan suatu karya."
+            ],
+            "en": [
+                "Copyright is an exclusive right that arises automatically over a creation once it has been embodied in a tangible form. Although copyright protection arises automatically, copyright recordation provides strong administrative evidence of ownership of a work."
+            ],
+            "zh": [
+                "著作权是一种专有权利，在创作以实体形式呈现后自动产生。尽管著作权保护自动产生，但著作权登记能够为作品所有权提供有力的行政证明。"
+            ]
+        },
+        "term_condition": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "benefits": {
+            "id": [
+                "Memperkuat bukti kepemilikan karya",
+                "Memberikan perlindungan hukum terhadap penggunaan tanpa izin",
+                "Meningkatkan nilai ekonomi dan komersialisasi karya",
+                "Mempermudah proses pembuktian dalam sengketa hukum",
+                "Mendukung lisensi, kerja sama, maupun pengalihan hak"
+            ],
+            "en": [
+                "Strengthening proof of ownership of the work",
+                "Providing legal protection against unauthorized use",
+                "Increasing the economic value and commercialization of the work",
+                "Facilitating the process of proof in legal disputes",
+                "Supporting licensing, cooperation, or transfer of rights"
+            ],
+            "zh": [
+                "强化作品所有权的证明",
+                "针对未经授权的使用提供法律保护",
+                "提升作品的经济价值及商业化程度",
+                "简化法律纠纷中的举证流程",
+                "支持许可、合作及权利转让"
+            ]
+        },
+        "scope_of_service": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "process": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "criteria": {
+            "id": [
+                "Buku dan karya tulis",
+                "Artikel dan publikasi digital",
+                "Program komputer atau perangkat lunak",
+                "Desain grafis dan ilustrasi",
+                "Foto dan karya fotografi",
+                "Video dan karya audiovisual",
+                "Musik dan lagu",
+                "Modul pelatihan dan materi edukasi",
+                "Karya kreatif lainnya sesuai ketentuan peraturan perundang-undangan"
+            ],
+            "en": [
+                "Books and written works",
+                "Articles and digital publications",
+                "Computer programs or software",
+                "Graphic design and illustrations",
+                "Photos and photographic works",
+                "Videos and audiovisual works",
+                "Music and songs",
+                "Training modules and educational materials",
+                "Other creative works in accordance with statutory provisions"
+            ],
+            "zh": [
+                "书籍及文字作品",
+                "文章及数字出版物",
+                "计算机程序或软件",
+                "平面设计及插画",
+                "照片及摄影作品",
+                "视频及视听作品",
+                "音乐及歌曲",
+                "培训模块及教育材料",
+                "符合法律法规规定的其他创意作品"
+            ]
+        },
+        "plans": {
+            "id": [
+                {
+                    "name": "Pencatatan Hak Cipta",
+                    "price": "Rp. 3.000.000",
+                    "cta": "Hubungi Kami"
+                },
+                {
+                    "name": "Pencatatan Beberapa Karya",
+                    "price": "-",
+                    "cta": "Hubungi Kami"
+                }
+            ],
+            "en": [
+                {
+                    "name": "Copyright Recordation",
+                    "price": "Rp. 3.000.000",
+                    "cta": "Contact Us"
+                },
+                {
+                    "name": "Recordation of Multiple Works",
+                    "price": "-",
+                    "cta": "Contact Us"
+                }
+            ],
+            "zh": [
+                {
+                    "name": "著作权登记",
+                    "price": "Rp. 3.000.000",
+                    "cta": "联系我们"
+                },
+                {
+                    "name": "多件作品登记",
+                    "price": "-",
+                    "cta": "联系我们"
+                }
+            ]
+        },
+        "plans_info": {
+            "id": "Belum termasuk biaya resmi pemerintah (PNBP) yang berlaku.",
+            "en": "Does not yet include applicable official government fees (PNBP).",
+            "zh": "尚不包含现行的政府官方规费（PNBP）。"
+        },
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 28 Tahun 2014 tentang Hak Cipta"
+            ],
+            "en": [
+                "Law Number 28 of 2014 concerning Copyright"
+            ],
+            "zh": [
+                "2014年第28号法律关于著作权"
+            ]
+        },
         "footer_cta": {
-            "title": "Tidak Menemukan Layanan yang Anda Cari?",
-            "subtitle": "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
-            "button_text": "Chat Langsung via WhatsApp",
-            "wa_message": "layanan yang tidak terdaftar"
+            "id": {
+                "title": "Tidak Menemukan Layanan yang Anda Cari?",
+                "subtitle": "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
+                "button_text": "Chat Langsung via WhatsApp",
+                "wa_message": "layanan yang tidak terdaftar"
+            },
+            "en": {
+                "title": "Can't Find the Service You're Looking For?",
+                "subtitle": "Our team is ready to help you find the right solution for your business legal needs.",
+                "button_text": "Chat Directly via WhatsApp",
+                "wa_message": "an unlisted service"
+            },
+            "zh": {
+                "title": "找不到您需要的服务？",
+                "subtitle": "我们的团队随时准备协助您找到符合企业法律需求的合适解决方案。",
+                "button_text": "直接通过WhatsApp聊天",
+                "wa_message": "未列出的服务"
+            }
         }
     }
 ]

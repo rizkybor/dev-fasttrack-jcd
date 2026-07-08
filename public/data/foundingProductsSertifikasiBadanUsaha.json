@@ -1,77 +1,225 @@
 [
     {
         "id": 1,
-        "name": "Sertifikasi Badan Usaha Jasa Konstruksi",
+        "name": {
+            "id": "Sertifikasi Badan Usaha Jasa Konstruksi",
+            "en": "Construction Services Business Entity Certification",
+            "zh": "建筑服务企业认证"
+        },
         "price": "2500000",
         "price_label": "Rp 2.500.000",
-        "excerpt": "Pengurusan Sertifikasi Badan Usaha (SBU) Jasa Konstruksi untuk memenuhi kualifikasi dan legalitas usaha konstruksi.",
+        "excerpt": {
+            "id": "Pengurusan Sertifikasi Badan Usaha (SBU) Jasa Konstruksi untuk memenuhi kualifikasi dan legalitas usaha konstruksi.",
+            "en": "Processing of the Construction Services Business Entity Certificate (SBU) to fulfill construction business qualifications and legality.",
+            "zh": "办理建筑服务企业认证证书（SBU），以满足建筑业务的资质及合法性要求。"
+        },
         "detail_path": "/sertifikasi-badan-usaha/1",
         "image": "",
-        "penjelasan_title": "KAMAR DAGANG DAN INDUSTRI",
-        "penjelasan_umum": [
-            "Sertifikasi Badan Usaha Jasa Konstruksi (SBU-JK) pada Kadin atau Badan Usaha (BUJK) merupakan dokumen pengakuan yang diterbitkan untuk menunjukkan kelayakan badan usaha jasa konstruksi di Indonesia untuk melaksanakan pekerjaan di bidang tertentu, serta untuk menyatakan legalitas kemampuan, kompetensi, dan kepatuhan Badan Usaha terhadap regulasi yang berlaku. Proses SBU jasa konstruksi mencakup Pembuatan Paket SIA–SBU dan Pembuatan Paket SIA–SBU 6ID–NKJK mencakup Certificates of Origin."
-        ],
-        "biaya_layanan_cards": [
-            {
-                "nama": "SERTIFIKASI BADAN USAHA KECIL/KECIL/SBU",
-                "harga": "Rp 2.500.000",
-                "gratis_konsultasi": true,
-                "mendapatkan": [
-                    "Kartu Tanda Anggota (KTA) KADIN"
-                ],
-                "syarat": [
-                    {
-                        "label": null,
-                        "text": "Formulir Permohonan Izin (RN) atau Formulir Izin yang ada dilengkapi."
-                    },
-                    {
-                        "label": "Syarat:",
-                        "items": [
-                            "NPWP Perseroan",
-                            "Nomor Induk Berusaha",
-                            "KTP Direksi, Penanggung jawab, Pemegang Saham sesuai Kepemilikan",
-                            "Akta Pendirian dan Perubahannya",
-                            "SK Kementerian Hukum dan HAM dari Kementerian Hukum dan HAM",
-                            "Pas Foto Direksi, Kepala Teknik, Penanggung jawab teknis, SKA dan SKT Tenaga Ahli",
-                            "Foto Kantor dengan papan nama yang menyebutkan nama Perseroan"
-                        ]
-                    }
-                ],
-                "termasuk": [
-                    "Fasttrack Document Delivery Service",
-                    "Fasttrack Digital Files Secure Storage",
-                    "Fasttrack Kit"
-                ]
-            },
-            {
-                "nama": "SERTIFIKASI BADAN USAHA ANGGOTA KADIN/KADIN",
-                "harga": "Rp 4.500.000",
-                "gratis_konsultasi": true,
-                "mendapatkan": [
-                    "Surat Bukti Izin Usaha KADIN"
-                ],
-                "syarat": [
-                    {
-                        "label": null,
-                        "text": "Formulir Permohonan Izin (RN) atau Formulir Izin yang ada dilengkapi."
-                    },
-                    {
-                        "label": "Syarat:",
-                        "items": [
-                            "Formulir Permohonan Kadin yang sudah dilengkapi dan ditandatangani.",
-                            "Foto 3x4 pengurus yang terdaftar dalam RIB perusahaan sebagai Penanggung Jawab.",
-                            "Data pengisian permohonan Kadin yang sudah ada lengkap dan seluruh lampiran sesuai dan terlampir.",
-                            "Daftar pengalaman kerja perusahaan yang dapat dilampirkan sebagai harta bawaan (Sertifikat Tanah dan Bangunan, BPKB, Buku Tabungan, Surat Berharga) harus dilampirkan."
-                        ]
-                    }
-                ],
-                "termasuk": [
-                    "Fasttrack Document Delivery Service",
-                    "Fasttrack Digital Files Secure Storage",
-                    "Fasttrack Kit"
-                ]
-            }
-        ],
-        "faq": []
+        "penjelasan_title": {
+            "id": "KAMAR DAGANG DAN INDUSTRI",
+            "en": "CHAMBER OF COMMERCE AND INDUSTRY",
+            "zh": "商工会"
+        },
+        "penjelasan_umum": {
+            "id": [
+                "Sertifikasi Badan Usaha Jasa Konstruksi (SBU-JK) pada Kadin atau Badan Usaha (BUJK) merupakan dokumen pengakuan yang diterbitkan untuk menunjukkan kelayakan badan usaha jasa konstruksi di Indonesia untuk melaksanakan pekerjaan di bidang tertentu, serta untuk menyatakan legalitas kemampuan, kompetensi, dan kepatuhan Badan Usaha terhadap regulasi yang berlaku. Proses SBU jasa konstruksi mencakup Pembuatan Paket SIA–SBU dan Pembuatan Paket SIA–SBU 6ID–NKJK mencakup Certificates of Origin."
+            ],
+            "en": [
+                "The Construction Services Business Entity Certificate (SBU-JK) at the Chamber of Commerce (Kadin) or Construction Services Business Entity (BUJK) is a recognition document issued to demonstrate the eligibility of a construction services business entity in Indonesia to carry out work in a particular field, and to declare the legality of the Business Entity's capability, competence, and compliance with applicable regulations. The SBU-JK process includes the preparation of the SIA-SBU Package and the SIA-SBU 6ID-NKJK Package, which includes Certificates of Origin."
+            ],
+            "zh": [
+                "建筑服务企业认证证书（SBU-JK），在商会（Kadin）或建筑服务企业（BUJK）处颁发，是一份认可文件，用以证明印度尼西亚建筑服务企业在特定领域开展工作的资格，并声明该企业的能力、能力水平及对现行法规的合规性。SBU-JK流程包括SIA-SBU套件的制作及包含产地证明（Certificates of Origin）的SIA-SBU 6ID-NKJK套件的制作。"
+            ]
+        },
+        "biaya_layanan_cards": {
+            "id": [
+                {
+                    "nama": "SERTIFIKASI BADAN USAHA KECIL/KECIL/SBU",
+                    "harga": "Rp 2.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "Kartu Tanda Anggota (KTA) KADIN"
+                    ],
+                    "syarat": [
+                        {
+                            "label": null,
+                            "text": "Formulir Permohonan Izin (RN) atau Formulir Izin yang ada dilengkapi."
+                        },
+                        {
+                            "label": "Syarat:",
+                            "items": [
+                                "NPWP Perseroan",
+                                "Nomor Induk Berusaha",
+                                "KTP Direksi, Penanggung jawab, Pemegang Saham sesuai Kepemilikan",
+                                "Akta Pendirian dan Perubahannya",
+                                "SK Kementerian Hukum dan HAM dari Kementerian Hukum dan HAM",
+                                "Pas Foto Direksi, Kepala Teknik, Penanggung jawab teknis, SKA dan SKT Tenaga Ahli",
+                                "Foto Kantor dengan papan nama yang menyebutkan nama Perseroan"
+                            ]
+                        }
+                    ],
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                {
+                    "nama": "SERTIFIKASI BADAN USAHA ANGGOTA KADIN/KADIN",
+                    "harga": "Rp 4.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "Surat Bukti Izin Usaha KADIN"
+                    ],
+                    "syarat": [
+                        {
+                            "label": null,
+                            "text": "Formulir Permohonan Izin (RN) atau Formulir Izin yang ada dilengkapi."
+                        },
+                        {
+                            "label": "Syarat:",
+                            "items": [
+                                "Formulir Permohonan Kadin yang sudah dilengkapi dan ditandatangani.",
+                                "Foto 3x4 pengurus yang terdaftar dalam RIB perusahaan sebagai Penanggung Jawab.",
+                                "Data pengisian permohonan Kadin yang sudah ada lengkap dan seluruh lampiran sesuai dan terlampir.",
+                                "Daftar pengalaman kerja perusahaan yang dapat dilampirkan sebagai harta bawaan (Sertifikat Tanah dan Bangunan, BPKB, Buku Tabungan, Surat Berharga) harus dilampirkan."
+                            ]
+                        }
+                    ],
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "nama": "SMALL BUSINESS ENTITY CERTIFICATION/SBU",
+                    "harga": "Rp 2.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "KADIN Membership Card (KTA)"
+                    ],
+                    "syarat": [
+                        {
+                            "label": null,
+                            "text": "Completed License Application Form (RN) or existing License Form."
+                        },
+                        {
+                            "label": "Requirements:",
+                            "items": [
+                                "Company Tax ID (NPWP)",
+                                "Business Identification Number (NIB)",
+                                "ID Card (KTP) of Directors, Person in Charge, and Shareholders according to Ownership",
+                                "Deed of Establishment and its Amendments",
+                                "Decree from the Ministry of Law and Human Rights",
+                                "Passport photos of Directors, Technical Head, Technical Person in Charge, and Expert Competency Certificates (SKA/SKT)",
+                                "Photo of the Office with a nameboard displaying the Company's name"
+                            ]
+                        }
+                    ],
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                {
+                    "nama": "KADIN MEMBER BUSINESS ENTITY CERTIFICATION/KADIN",
+                    "harga": "Rp 4.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "KADIN Business License Proof Letter"
+                    ],
+                    "syarat": [
+                        {
+                            "label": null,
+                            "text": "Completed License Application Form (RN) or existing License Form."
+                        },
+                        {
+                            "label": "Requirements:",
+                            "items": [
+                                "Completed and signed KADIN Application Form.",
+                                "3x4 photo of the management registered in the company's RIB as Person in Charge.",
+                                "Complete KADIN application data with all attachments correctly enclosed.",
+                                "A list of the company's work experience that can be enclosed as collateral assets (Land and Building Certificates, Vehicle Ownership Book (BPKB), Savings Book, Securities) must be attached."
+                            ]
+                        }
+                    ],
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "nama": "小型企业认证/SBU",
+                    "harga": "Rp 2.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "商会会员证（KTA）"
+                    ],
+                    "syarat": [
+                        {
+                            "label": null,
+                            "text": "填妥的许可申请表（RN）或现有许可表格。"
+                        },
+                        {
+                            "label": "要求：",
+                            "items": [
+                                "公司税号（NPWP）",
+                                "营业执照号码（NIB）",
+                                "依据持股情况提供董事、负责人及股东的身份证（KTP）",
+                                "设立公证书及其变更",
+                                "法律与人权部签发的批准函",
+                                "董事、技术负责人、技术负责人的证件照，以及专家能力证书（SKA/SKT）",
+                                "带有显示公司名称招牌的办公室照片"
+                            ]
+                        }
+                    ],
+                    "termasuk": [
+                        "Fasttrack文件递送服务",
+                        "Fasttrack数字文件安全存储",
+                        "Fasttrack套件"
+                    ]
+                },
+                {
+                    "nama": "商会会员企业认证/商会",
+                    "harga": "Rp 4.500.000",
+                    "gratis_konsultasi": true,
+                    "mendapatkan": [
+                        "商会营业许可证明函"
+                    ],
+                    "syarat": [
+                        {
+                            "label": null,
+                            "text": "填妥的许可申请表（RN）或现有许可表格。"
+                        },
+                        {
+                            "label": "要求：",
+                            "items": [
+                                "填妥并签署的商会申请表。",
+                                "登记于公司RIB中作为负责人的管理层3x4照片。",
+                                "完整的商会申请数据，且所有附件均已正确附上。",
+                                "须附上可作为担保财产（土地及建筑物证书、车辆所有权证（BPKB）、存折、有价证券）的公司工作经历清单。"
+                            ]
+                        }
+                    ],
+                    "termasuk": [
+                        "Fasttrack文件递送服务",
+                        "Fasttrack数字文件安全存储",
+                        "Fasttrack套件"
+                    ]
+                }
+            ]
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]
