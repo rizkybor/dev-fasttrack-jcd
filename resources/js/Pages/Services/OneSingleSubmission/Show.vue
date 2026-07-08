@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -20,17 +23,136 @@ const buildWhatsappLink = (productName, paketNama) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-// Paket aktif — default ke paket pertama
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizePaket = (p) => {
+    if (!p) return p;
+
+    const result = {
+        ...p,
+        nama: pick(p.nama),
+        deskripsi: pick(p.deskripsi),
+        penjelasan_layanan: pick(p.penjelasan_layanan) ?? [],
+        dasar_hukum: pick(p.dasar_hukum) ?? [],
+    };
+
+    if (p.penjelasan_layanan_items) {
+        result.penjelasan_layanan_items = pick(p.penjelasan_layanan_items) ?? [];
+    }
+
+    if (p.dokumen_legalitas) {
+        result.dokumen_legalitas = {
+            ...p.dokumen_legalitas,
+            dokumen: pick(p.dokumen_legalitas.dokumen) ?? [],
+            termasuk: pick(p.dokumen_legalitas.termasuk) ?? [],
+        };
+        if (p.dokumen_legalitas.dokumen_sub) {
+            result.dokumen_legalitas.dokumen_sub = pick(p.dokumen_legalitas.dokumen_sub) ?? [];
+        }
+    }
+
+    if (p.biaya_layanan) {
+        result.biaya_layanan = {
+            ...p.biaya_layanan,
+            nama: pick(p.biaya_layanan.nama),
+        };
+    }
+
+    if (p.paket_layanan) {
+        result.paket_layanan = p.paket_layanan.map((item) => ({
+            ...item,
+            nama: pick(item.nama),
+            dokumen_legalitas: item.dokumen_legalitas
+                ? {
+                      ...item.dokumen_legalitas,
+                      dokumen: pick(item.dokumen_legalitas.dokumen) ?? [],
+                      termasuk: pick(item.dokumen_legalitas.termasuk) ?? [],
+                      ...(item.dokumen_legalitas.dokumen_sub
+                          ? { dokumen_sub: pick(item.dokumen_legalitas.dokumen_sub) ?? [] }
+                          : {}),
+                  }
+                : item.dokumen_legalitas,
+        }));
+    }
+
+    return result;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        excerpt: pick(p.excerpt),
+        penjelasan_umum: pick(p.penjelasan_umum) ?? [],
+        penjelasan_umum_bullets: pick(p.penjelasan_umum_bullets) ?? [],
+        penjelasan_umum_bullets_2: pick(p.penjelasan_umum_bullets_2) ?? [],
+        dasar_hukum: pick(p.dasar_hukum) ?? [],
+        faq: pick(p.faq) ?? [],
+        paket: (p.paket ?? []).map(localizePaket),
+    };
+});
+
+// Paket aktif — default ke paket pertama (id paket adalah string struktural, tidak diterjemahkan)
 const selectedPaketId = ref(props.product?.paket?.[0]?.id ?? null);
 
 const selectedPaket = computed(
     () =>
-        props.product?.paket?.find((p) => p.id === selectedPaketId.value) ??
-        props.product?.paket?.[0] ??
+        localizedProduct.value?.paket?.find((p) => p.id === selectedPaketId.value) ??
+        localizedProduct.value?.paket?.[0] ??
         null,
 );
 
-const hasPaket = computed(() => !!props.product?.paket?.length);
+const hasPaket = computed(() => !!localizedProduct.value?.paket?.length);
+
+// id 1 = Pendaftaran NIB, id 2 = Perubahan/Pemutakhiran NIB — dibandingkan lewat id numerik
+// (bukan nama produk) agar tidak bergantung pada locale aktif.
+const isPendaftaranNib = computed(() => props.product?.id === 1);
+
+const pilihPaketHeading = computed(() => {
+    const data = {
+        id: isPendaftaranNib.value
+            ? "Pilih Paket Pendaftaran NIB"
+            : "Pilih Paket Perubahan/Pemutakhiran NIB",
+        en: isPendaftaranNib.value
+            ? "Choose an NIB Registration Package"
+            : "Choose an NIB Amendment/Update Package",
+        zh: isPendaftaranNib.value
+            ? "选择NIB注册套餐"
+            : "选择NIB变更/更新套餐",
+    };
+    return data[locale.value] ?? data.id;
+});
+
+const dokumenSectionLabel = computed(() => {
+    const data = {
+        id: isPendaftaranNib.value
+            ? "Dokumen"
+            : "Pelaku Usaha dapat melakukan perubahan Data Usaha diantaranya adalah :",
+        en: isPendaftaranNib.value
+            ? "Documents"
+            : "Business Actors can make the following Business Data changes:",
+        zh: isPendaftaranNib.value
+            ? "文件"
+            : "经营者可进行以下业务数据变更：",
+    };
+    return data[locale.value] ?? data.id;
+});
 </script>
 
 <template>
@@ -68,7 +190,7 @@ const hasPaket = computed(() => !!props.product?.paket?.length);
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                         <span class="text-sm font-medium text-[#9e1f16]">{{
-                            product.name
+                            localizedProduct.name
                             }}</span>
                     </div>
                 </nav>
@@ -81,7 +203,7 @@ const hasPaket = computed(() => !!props.product?.paket?.length);
                     </div>
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
-                        {{ product.name }}
+                        {{ localizedProduct.name }}
                     </h1>
                 </div>
 
@@ -102,7 +224,7 @@ const hasPaket = computed(() => !!props.product?.paket?.length);
         <section id="edukasi" class="bg-[#F7F7F5] py-12 sm:py-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <!-- 1. Penjelasan Umum -->
-                <div v-if="product.penjelasan_umum?.length"
+                <div v-if="localizedProduct.penjelasan_umum?.length"
                     class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
@@ -111,34 +233,34 @@ const hasPaket = computed(() => !!props.product?.paket?.length);
                         </h2>
                     </div>
                     <div class="space-y-4 text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">
-                        <p>{{ product.penjelasan_umum[0] }}</p>
+                        <p>{{ localizedProduct.penjelasan_umum[0] }}</p>
 
-                        <template v-if="product.penjelasan_umum[1]">
-                            <p>{{ product.penjelasan_umum[1] }}</p>
-                            <ul v-if="product.penjelasan_umum_bullets?.length"
+                        <template v-if="localizedProduct.penjelasan_umum[1]">
+                            <p>{{ localizedProduct.penjelasan_umum[1] }}</p>
+                            <ul v-if="localizedProduct.penjelasan_umum_bullets?.length"
                                 class="list-disc list-inside space-y-1 pl-1">
                                 <li v-for="(
 b, i
-                                    ) in product.penjelasan_umum_bullets" :key="`b1-${i}`">
+                                    ) in localizedProduct.penjelasan_umum_bullets" :key="`b1-${i}`">
                                     {{ b }}
                                 </li>
                             </ul>
                         </template>
 
-                        <template v-if="product.penjelasan_umum[2]">
-                            <p>{{ product.penjelasan_umum[2] }}</p>
-                            <ul v-if="product.penjelasan_umum_bullets_2?.length"
+                        <template v-if="localizedProduct.penjelasan_umum[2]">
+                            <p>{{ localizedProduct.penjelasan_umum[2] }}</p>
+                            <ul v-if="localizedProduct.penjelasan_umum_bullets_2?.length"
                                 class="list-disc list-inside space-y-1 pl-1">
                                 <li v-for="(
 b, i
-                                    ) in product.penjelasan_umum_bullets_2" :key="`b2-${i}`">
+                                    ) in localizedProduct.penjelasan_umum_bullets_2" :key="`b2-${i}`">
                                     {{ b }}
                                 </li>
                             </ul>
                         </template>
 
-                        <p v-if="product.penjelasan_umum[3]">
-                            {{ product.penjelasan_umum[3] }}
+                        <p v-if="localizedProduct.penjelasan_umum[3]">
+                            {{ localizedProduct.penjelasan_umum[3] }}
                         </p>
                     </div>
                 </div>
@@ -148,17 +270,12 @@ b, i
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                         <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                            {{
-                                product.name ==
-                                    "Pendaftaran Nomor Induk Berusaha (NIB)"
-                                    ? "Pilih Paket Pendaftaran NIB"
-                                    : "Pilih Paket Perubahan/Pemutakhiran NIB"
-                            }}
+                            {{ pilihPaketHeading }}
                         </h2>
                     </div>
 
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        <button v-for="paket in product.paket" :key="paket.id" @click="selectedPaketId = paket.id"
+                        <button v-for="paket in localizedProduct.paket" :key="paket.id" @click="selectedPaketId = paket.id"
                             class="flex flex-col items-start rounded-xl border p-4 text-left transition-all" :class="selectedPaketId === paket.id
                                     ? 'border-primary bg-primary text-white shadow-md'
                                     : 'border-[#E8E8E6] bg-white hover:border-primary/40 hover:shadow-sm'
@@ -280,12 +397,7 @@ b, i
                                         ?.length
                                 " class="mb-5">
                                     <p class="text-[13px] font-bold text-[#1A1B18] mb-3">
-                                        {{
-                                            product.name ==
-                                                "Pendaftaran Nomor Induk Berusaha (NIB)"
-                                                ? "Dokumen"
-                                                : "Pelaku Usaha dapat melakukan perubahan Data Usaha diantaranya adalah :"
-                                        }}
+                                        {{ dokumenSectionLabel }}
                                     </p>
                                     <ul class="space-y-2.5">
                                         <li v-for="(item, i) in selectedPaket
@@ -400,7 +512,7 @@ b, i
 
                                             <div class="flex-1"></div>
 
-                                            <a :href="buildWhatsappLink(product.name, item.nama)" target="_blank"
+                                            <a :href="buildWhatsappLink(localizedProduct.name, item.nama)" target="_blank"
                                                 rel="noopener noreferrer"
                                                 class="mt-4 flex items-center justify-center gap-2 rounded-xl border border-primary px-4 py-3 text-[13px] font-semibold text-primary hover:bg-primary/5 transition-colors">
                                                 Pesan Sekarang
@@ -439,7 +551,7 @@ b, i
                                                 </p>
                                             </div>
                                         </div>
-                                        <a :href="buildWhatsappLink(product.name, selectedPaket.nama)" target="_blank"
+                                        <a :href="buildWhatsappLink(localizedProduct.name, selectedPaket.nama)" target="_blank"
                                             rel="noopener noreferrer"
                                             class="flex items-center gap-1.5 rounded-lg bg-white px-4 py-2 text-[12px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors">
                                             Pesan Sekarang
@@ -487,7 +599,7 @@ hukum, i
                             <div class="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFF0EF] px-3 py-1">
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
                                 <span class="text-[11px] font-semibold text-primary">
-                                    {{ selectedPaket?.nama ?? product.name }}
+                                    {{ selectedPaket?.nama ?? localizedProduct.name }}
                                 </span>
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1 mt-2">
@@ -495,14 +607,14 @@ hukum, i
                             </div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
                                 {{
-                                    selectedPaket?.harga ?? product.price_label
+                                    selectedPaket?.harga ?? localizedProduct.price_label
                                 }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
                                 *Harga final dikonfirmasi setelah konsultasi
                             </div>
                             <a :href="buildWhatsappLink(
-                                product.name,
+                                localizedProduct.name,
                                 selectedPaket?.nama ?? '',
                             )
                                 " target="_blank" rel="noopener noreferrer"
@@ -514,7 +626,7 @@ hukum, i
                                 </svg>
                             </a>
                             <a :href="buildWhatsappLink(
-                                product.name,
+                                localizedProduct.name,
                                 selectedPaket?.nama ?? '',
                             )
                                 " target="_blank" rel="noopener noreferrer"
@@ -561,7 +673,7 @@ hukum, i
                                 (Satu) Hari
                             </p>
                             <a :href="buildWhatsappLink(
-                                product.name,
+                                localizedProduct.name,
                                 selectedPaket?.nama ?? '',
                             )
                                 " target="_blank" rel="noopener noreferrer"
@@ -575,12 +687,12 @@ hukum, i
                         </div>
 
                         <!-- Paket NIB Lainnya -->
-                        <div v-if="product.paket?.length > 1" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
+                        <div v-if="localizedProduct.paket?.length > 1" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">
-                                Paket {{ product.name }} Lainnya
+                                Paket {{ localizedProduct.name }} Lainnya
                             </h3>
                             <div class="flex flex-col gap-2">
-                                <button v-for="paket in product.paket.filter(
+                                <button v-for="paket in localizedProduct.paket.filter(
                                     (p) => p.id !== selectedPaketId,
                                 )" :key="`other-${paket.id}`" @click="selectedPaketId = paket.id"
                                     class="group flex items-center justify-between rounded-xl border border-[#E8E8E6] bg-white px-4 py-3 text-left hover:border-primary/30 hover:shadow-sm transition-all">

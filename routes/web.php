@@ -1448,7 +1448,7 @@ Route::get('/badan-usaha/{id}', function (Request $request, int $id) use ($found
     ]);
 })->whereNumber('id');
 
-Route::get('/kantor-perwakilan/{id}', function (Request $request, int $id) use ($kantorPerwakilanProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/kantor-perwakilan/{id}', function (Request $request, int $id) use ($kantorPerwakilanProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($kantorPerwakilanProducts)->firstWhere('id', $id);
 
@@ -1460,12 +1460,17 @@ Route::get('/kantor-perwakilan/{id}', function (Request $request, int $id) use (
         ->values()
         ->all();
 
+    // Resolve field translatable untuk kebutuhan SEO & Schema
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/KantorPerwakilan/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
         'seo' => [
-            'title' => $product['name'] . ' - FastTrack',
-            'description' => $product['excerpt'],
+            'title' => $productName . ' - FastTrack',
+            'description' => $productExcerpt,
             'canonical' => $baseUrl . $product['detail_path'],
             'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
         ],
@@ -1473,9 +1478,9 @@ Route::get('/kantor-perwakilan/{id}', function (Request $request, int $id) use (
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'Service',
-                'name' => $product['name'],
-                'description' => $product['excerpt'],
-                'serviceType' => $product['name'],
+                'name' => $productName,
+                'description' => $productExcerpt,
+                'serviceType' => $productName,
                 'provider' => $organizationReference($baseUrl),
                 'areaServed' => [
                     '@type' => 'Country',
@@ -1494,7 +1499,7 @@ Route::get('/kantor-perwakilan/{id}', function (Request $request, int $id) use (
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'FAQPage',
-                'mainEntity' => collect($product['faq'])->map(
+                'mainEntity' => collect($productFaq)->map(
                     static fn(array $faq): array => [
                         '@type' => 'Question',
                         'name' => $faq['question'],
@@ -1782,7 +1787,7 @@ Route::get('/izin-tinggal-tetap/{id}', function (Request $request, int $id) use 
 })->whereNumber('id');
 
 // BADAN USAHA LUAR NEGERI
-Route::get('/badan-usaha-luar-negeri/{id}', function (Request $request, int $id) use ($badanUsahaLuarNegeriProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/badan-usaha-luar-negeri/{id}', function (Request $request, int $id) use ($badanUsahaLuarNegeriProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($badanUsahaLuarNegeriProducts)->firstWhere('id', $id);
 
@@ -1794,12 +1799,17 @@ Route::get('/badan-usaha-luar-negeri/{id}', function (Request $request, int $id)
         ->values()
         ->all();
 
+    // Resolve field translatable untuk kebutuhan SEO & Schema
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/BadanUsahaLuarNegeri/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
         'seo' => [
-            'title' => $product['name'] . ' - FastTrack',
-            'description' => $product['excerpt'],
+            'title' => $productName . ' - FastTrack',
+            'description' => $productExcerpt,
             'canonical' => $baseUrl . $product['detail_path'],
             'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
         ],
@@ -1807,9 +1817,9 @@ Route::get('/badan-usaha-luar-negeri/{id}', function (Request $request, int $id)
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'Service',
-                'name' => $product['name'],
-                'description' => $product['excerpt'],
-                'serviceType' => $product['name'],
+                'name' => $productName,
+                'description' => $productExcerpt,
+                'serviceType' => $productName,
                 'provider' => $organizationReference($baseUrl),
                 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
                 'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
@@ -1825,7 +1835,7 @@ Route::get('/badan-usaha-luar-negeri/{id}', function (Request $request, int $id)
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'FAQPage',
-                'mainEntity' => collect($product['faq'])->map(
+                'mainEntity' => collect($productFaq)->map(
                     static fn(array $faq): array => [
                         '@type' => 'Question',
                         'name' => $faq['question'],
@@ -1836,14 +1846,14 @@ Route::get('/badan-usaha-luar-negeri/{id}', function (Request $request, int $id)
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'Badan Usaha Luar Negeri', 'item' => $baseUrl . '/badan-usaha-luar-negeri'],
-                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+                ['name' => $productName, 'item' => $baseUrl . $product['detail_path']],
             ]),
         ],
     ]);
 })->whereNumber('id');
 
 // ONE SINGLE SUBMISSION
-Route::get('/one-single-submission/{id}', function (Request $request, int $id) use ($oneSingleSubmissionProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/one-single-submission/{id}', function (Request $request, int $id) use ($oneSingleSubmissionProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($oneSingleSubmissionProducts)->firstWhere('id', $id);
 
@@ -1855,12 +1865,17 @@ Route::get('/one-single-submission/{id}', function (Request $request, int $id) u
         ->values()
         ->all();
 
+    // Resolve field translatable untuk kebutuhan SEO & Schema
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/OneSingleSubmission/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
         'seo' => [
-            'title' => $product['name'] . ' - FastTrack',
-            'description' => $product['excerpt'],
+            'title' => $productName . ' - FastTrack',
+            'description' => $productExcerpt,
             'canonical' => $baseUrl . $product['detail_path'],
             'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
         ],
@@ -1868,9 +1883,9 @@ Route::get('/one-single-submission/{id}', function (Request $request, int $id) u
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'Service',
-                'name' => $product['name'],
-                'description' => $product['excerpt'],
-                'serviceType' => $product['name'],
+                'name' => $productName,
+                'description' => $productExcerpt,
+                'serviceType' => $productName,
                 'provider' => $organizationReference($baseUrl),
                 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
                 'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
@@ -1886,7 +1901,7 @@ Route::get('/one-single-submission/{id}', function (Request $request, int $id) u
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'FAQPage',
-                'mainEntity' => collect($product['faq'])->map(
+                'mainEntity' => collect($productFaq)->map(
                     static fn(array $faq): array => [
                         '@type' => 'Question',
                         'name' => $faq['question'],
@@ -1897,7 +1912,7 @@ Route::get('/one-single-submission/{id}', function (Request $request, int $id) u
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'One Single Submission', 'item' => $baseUrl . '/one-single-submission'],
-                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+                ['name' => $productName, 'item' => $baseUrl . $product['detail_path']],
             ]),
         ],
     ]);
@@ -2221,7 +2236,7 @@ Route::get('/uji-tuntas-hukum/{id}', function (Request $request, int $id) use ($
 })->whereNumber('id');
 
 // PERIZINAN LAINNYA
-Route::get('/perizinan-lainnya/{id}', function (Request $request, int $id) use ($perizinanLainnyaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/perizinan-lainnya/{id}', function (Request $request, int $id) use ($perizinanLainnyaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($perizinanLainnyaProducts)->firstWhere('id', $id);
 
@@ -2233,12 +2248,17 @@ Route::get('/perizinan-lainnya/{id}', function (Request $request, int $id) use (
         ->values()
         ->all();
 
+    // Resolve field translatable untuk kebutuhan SEO & Schema
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/PerizinanLainnya/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
         'seo' => [
-            'title' => $product['name'] . ' - FastTrack',
-            'description' => $product['excerpt'],
+            'title' => $productName . ' - FastTrack',
+            'description' => $productExcerpt,
             'canonical' => $baseUrl . $product['detail_path'],
             'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
         ],
@@ -2246,9 +2266,9 @@ Route::get('/perizinan-lainnya/{id}', function (Request $request, int $id) use (
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'Service',
-                'name' => $product['name'],
-                'description' => $product['excerpt'],
-                'serviceType' => $product['name'],
+                'name' => $productName,
+                'description' => $productExcerpt,
+                'serviceType' => $productName,
                 'provider' => $organizationReference($baseUrl),
                 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
                 'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
@@ -2264,7 +2284,7 @@ Route::get('/perizinan-lainnya/{id}', function (Request $request, int $id) use (
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'FAQPage',
-                'mainEntity' => collect($product['faq'])->map(
+                'mainEntity' => collect($productFaq)->map(
                     static fn(array $faq): array => [
                         '@type' => 'Question',
                         'name' => $faq['question'],
@@ -2275,7 +2295,7 @@ Route::get('/perizinan-lainnya/{id}', function (Request $request, int $id) use (
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'Perizinan Lainnya', 'item' => $baseUrl . '/perizinan-lainnya'],
-                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+                ['name' => $productName, 'item' => $baseUrl . $product['detail_path']],
             ]),
         ],
     ]);

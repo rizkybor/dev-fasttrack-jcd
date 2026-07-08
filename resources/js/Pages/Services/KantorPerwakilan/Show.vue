@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const docsOpen = ref(false);
 const dasarHukumOpen = ref(false);
@@ -28,8 +31,63 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-const currentPlans = computed(() => props.product?.plans ?? []);
-const currentDasarHukum = computed(() => props.product?.dasar_hukum ?? []);
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        description: pick(p.description),
+        excerpt: pick(p.excerpt),
+        audience: pick(p.audience),
+        content: pick(p.content) ?? [],
+        term_condition: pick(p.term_condition) ?? [],
+        benefits: pick(p.benefits) ?? [],
+        requirements: pick(p.requirements) ?? [],
+        process: pick(p.process) ?? [],
+        faq: pick(p.faq) ?? [],
+        plans_alert: pick(p.plans_alert) ?? [],
+        dasar_hukum: pick(p.dasar_hukum) ?? [],
+        plans: (p.plans ?? []).map((plan) => ({
+            ...plan,
+            name: pick(plan.name),
+            bonus_note: pick(plan.bonus_note),
+            dokumen: (plan.dokumen ?? []).map((d) => ({
+                ...d,
+                label: pick(d.label),
+            })),
+            termasuk: (plan.termasuk ?? []).map((item) => ({
+                ...item,
+                label: pick(item.label),
+            })),
+            bonus: (plan.bonus ?? []).map((b) => ({
+                ...b,
+                label: pick(b.label),
+            })),
+        })),
+    };
+});
+
+const currentPlans = computed(() => localizedProduct.value?.plans ?? []);
+const currentDasarHukum = computed(
+    () => localizedProduct.value?.dasar_hukum ?? [],
+);
 
 // Toggle truncate per doc item
 const expandedDocs = ref({});
@@ -128,7 +186,7 @@ const toggleDoc = (key) => {
                             />
                         </svg>
                         <span class="text-sm font-medium text-[#9e1f16]">{{
-                            product.name
+                            localizedProduct.name
                         }}</span>
                     </div>
                 </nav>
@@ -147,7 +205,7 @@ const toggleDoc = (key) => {
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2"
                     >
-                        {{ product.name }}
+                        {{ localizedProduct.name }}
                     </h1>
                 </div>
 
@@ -204,7 +262,7 @@ const toggleDoc = (key) => {
                                 <p
                                     v-for="(
                                         paragraph, index
-                                    ) in product.content"
+                                    ) in localizedProduct.content"
                                     :key="`content-${index}`"
                                     class="text-[14px] leading-[1.8] text-[#3D3D3A]"
                                 >
@@ -215,7 +273,7 @@ const toggleDoc = (key) => {
 
                         <!-- 2. Syarat dan Ketentuan -->
                         <div
-                            v-if="product.term_condition.length"
+                            v-if="localizedProduct.term_condition.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-5">
@@ -235,7 +293,7 @@ const toggleDoc = (key) => {
                                 <li
                                     v-for="(
                                         req, index
-                                    ) in product.term_condition"
+                                    ) in localizedProduct.term_condition"
                                     :key="`req-${index}`"
                                     class="flex gap-3 text-[14px] leading-[1.7] text-[#3D3D3A]"
                                 >
@@ -321,7 +379,7 @@ const toggleDoc = (key) => {
 
                         <!-- 3. Keuntungan & Manfaat -->
                         <div
-                            v-if="product.benefits.length"
+                            v-if="localizedProduct.benefits.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-6">
@@ -339,13 +397,13 @@ const toggleDoc = (key) => {
                             <!-- Benefits: < 4 item = 1 kolom full, >= 4 item = 2 kolom grid -->
                             <div
                                 :class="
-                                    product.benefits.length < 4
+                                    localizedProduct.benefits.length < 4
                                         ? 'flex flex-col gap-4'
                                         : 'grid grid-cols-1 sm:grid-cols-2 gap-4'
                                 "
                             >
                                 <div
-                                    v-for="(benefit, index) in product.benefits"
+                                    v-for="(benefit, index) in localizedProduct.benefits"
                                     :key="`benefit-${index}`"
                                     class="flex gap-3 rounded-xl border border-[#E8E8E6] p-4"
                                 >
@@ -365,7 +423,7 @@ const toggleDoc = (key) => {
                                             v-if="benefit.description"
                                             class="text-[13px] leading-[1.6] text-[#3D3D3A]"
                                             :class="
-                                                product.benefits.length >= 4
+                                                localizedProduct.benefits.length >= 4
                                                     ? 'text-justify'
                                                     : ''
                                             "
@@ -377,7 +435,7 @@ const toggleDoc = (key) => {
                                         <ul
                                             v-if="
                                                 benefit.notes &&
-                                                product.benefits.length < 4
+                                                localizedProduct.benefits.length < 4
                                             "
                                             class="mt-1 space-y-0.5 list-disc list-inside"
                                         >
@@ -396,7 +454,7 @@ const toggleDoc = (key) => {
                                         <p
                                             v-if="
                                                 benefit.footer &&
-                                                product.benefits.length < 4
+                                                localizedProduct.benefits.length < 4
                                             "
                                             class="mt-1.5 text-[13px] leading-[1.6] text-[#3D3D3A]"
                                         >
@@ -427,14 +485,14 @@ const toggleDoc = (key) => {
                                 class="flex flex-col sm:flex-row gap-6 sm:gap-0"
                             >
                                 <div
-                                    v-for="(step, index) in product.process"
+                                    v-for="(step, index) in localizedProduct.process"
                                     :key="`step-${index}`"
                                     class="relative flex flex-col items-center text-center flex-1"
                                 >
                                     <!-- Connector line -->
                                     <div
                                         v-if="
-                                            index < product.process.length - 1
+                                            index < localizedProduct.process.length - 1
                                         "
                                         class="absolute top-[22px] left-[calc(50%+22px)] hidden sm:block h-px w-[calc(100%-44px)] bg-[#E8E8E6]"
                                     ></div>
@@ -511,7 +569,7 @@ const toggleDoc = (key) => {
                                     <li
                                         v-for="(
                                             req, index
-                                        ) in product.requirements"
+                                        ) in localizedProduct.requirements"
                                         :key="`doc-${index}`"
                                         class="flex gap-4"
                                     >
@@ -1941,11 +1999,11 @@ const toggleDoc = (key) => {
 
                             <!-- Alert Info -->
                             <div
-                                v-if="product.plans_alert.length"
+                                v-if="localizedProduct.plans_alert.length"
                                 class="mt-4 space-y-2"
                             >
                                 <div
-                                    v-for="(alert, ai) in product.plans_alert"
+                                    v-for="(alert, ai) in localizedProduct.plans_alert"
                                     :key="`alert-${ai}`"
                                     class="flex items-center gap-2.5 rounded-2xl bg-[#D6F0FA] px-4 py-3.5"
                                 >
@@ -2068,7 +2126,7 @@ const toggleDoc = (key) => {
                                 (Satu) Hari
                             </p>
                             <a
-                                :href="buildWhatsappLink(product.name)"
+                                :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20"
@@ -2096,7 +2154,7 @@ const toggleDoc = (key) => {
                                 class="mb-4 flex items-center justify-between rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3 py-2.5"
                             >
                                 <span class="text-[13px] text-[#1A1B18]">{{
-                                    product.name
+                                    localizedProduct.name
                                 }}</span>
                                 <svg
                                     class="h-4 w-4 text-[#686964]"
@@ -2118,13 +2176,13 @@ const toggleDoc = (key) => {
                             <div
                                 class="text-[32px] font-bold leading-none text-primary mb-1"
                             >
-                                {{ product.price_label }}
+                                {{ localizedProduct.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
                                 *Harga final dikonfirmasi setelah konsultasi
                             </div>
                             <a
-                                :href="buildWhatsappLink(product.name)"
+                                :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors"

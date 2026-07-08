@@ -1,5 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -12,6 +16,76 @@ const buildWhatsappLink = (productName) => {
     const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
+
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    const fs = p.fungsi_strategis;
+    const syarat = p.syarat ?? {};
+    const pp = p.peraturan_perusahaan;
+    const rb = p.rincian_biaya;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        excerpt: pick(p.excerpt),
+        penjelasan_umum: pick(p.penjelasan_umum) ?? [],
+        fungsi_strategis: fs
+            ? {
+                  ...fs,
+                  title: pick(fs.title),
+                  desc: pick(fs.desc),
+                  items: pick(fs.items) ?? [],
+                  note: pick(fs.note),
+              }
+            : fs,
+        dokumen_didapat: pick(p.dokumen_didapat) ?? [],
+        syarat: syarat.sections
+            ? {
+                  ...syarat,
+                  sections: syarat.sections.map((section) => ({
+                      ...section,
+                      label: pick(section.label),
+                      groups: (section.groups ?? []).map((group) => ({
+                          ...group,
+                          notes: pick(group.notes) ?? [],
+                      })),
+                  })),
+              }
+            : syarat,
+        peraturan_perusahaan: pp
+            ? {
+                  ...pp,
+                  intro: pick(pp.intro),
+                  items: pick(pp.items) ?? [],
+              }
+            : pp,
+        rincian_biaya: rb
+            ? {
+                  ...rb,
+                  items: pick(rb.items) ?? [],
+                  total_label: pick(rb.total_label),
+              }
+            : rb,
+        dasar_hukum: pick(p.dasar_hukum) ?? [],
+        faq: pick(p.faq) ?? [],
+    };
+});
 </script>
 
 <template>
@@ -49,7 +123,7 @@ const buildWhatsappLink = (productName) => {
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{ product.name }}</span>
+                        <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
 
@@ -61,7 +135,7 @@ const buildWhatsappLink = (productName) => {
                     </div>
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2">
-                        {{ product.name }}
+                        {{ localizedProduct.name }}
                     </h1>
                 </div>
 
@@ -87,7 +161,7 @@ const buildWhatsappLink = (productName) => {
                     <div class="flex flex-col gap-6">
 
                         <!-- 1. Penjelasan Umum -->
-                        <div v-if="product.penjelasan_umum?.length"
+                        <div v-if="localizedProduct.penjelasan_umum?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
@@ -96,7 +170,7 @@ const buildWhatsappLink = (productName) => {
                                 </h2>
                             </div>
                             <div class="space-y-4">
-                                <p v-for="(paragraph, index) in product.penjelasan_umum" :key="`penjelasan-${index}`"
+                                <p v-for="(paragraph, index) in localizedProduct.penjelasan_umum" :key="`penjelasan-${index}`"
                                     class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">
                                     {{ paragraph }}
                                 </p>
@@ -104,33 +178,33 @@ const buildWhatsappLink = (productName) => {
                         </div>
 
                         <!-- 2. Fungsi Strategis (opsional) -->
-                        <div v-if="product.fungsi_strategis"
+                        <div v-if="localizedProduct.fungsi_strategis"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    {{ product.fungsi_strategis.title }}
+                                    {{ localizedProduct.fungsi_strategis.title }}
                                 </h2>
                             </div>
-                            <p v-if="product.fungsi_strategis.desc"
+                            <p v-if="localizedProduct.fungsi_strategis.desc"
                                 class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">
-                                {{ product.fungsi_strategis.desc }}
+                                {{ localizedProduct.fungsi_strategis.desc }}
                             </p>
                             <ul class="space-y-2 mb-4">
-                                <li v-for="(item, index) in product.fungsi_strategis.items" :key="`fungsi-${index}`"
+                                <li v-for="(item, index) in localizedProduct.fungsi_strategis.items" :key="`fungsi-${index}`"
                                     class="flex items-start gap-2 text-[14px] leading-[1.7] text-[#3D3D3A]">
                                     <span class="mt-[6px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3D3D3A]"></span>
                                     <span>{{ item }}</span>
                                 </li>
                             </ul>
-                            <p v-if="product.fungsi_strategis.note"
+                            <p v-if="localizedProduct.fungsi_strategis.note"
                                 class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">
-                                {{ product.fungsi_strategis.note }}
+                                {{ localizedProduct.fungsi_strategis.note }}
                             </p>
                         </div>
 
                         <!-- 3. Dokumen yang Didapat -->
-                        <div v-if="product.dokumen_didapat?.length"
+                        <div v-if="localizedProduct.dokumen_didapat?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
@@ -139,7 +213,7 @@ const buildWhatsappLink = (productName) => {
                                 </h2>
                             </div>
                             <ul class="space-y-3">
-                                <li v-for="(doc, index) in product.dokumen_didapat" :key="`dok-${index}`"
+                                <li v-for="(doc, index) in localizedProduct.dokumen_didapat" :key="`dok-${index}`"
                                     class="flex items-start gap-2.5">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
                                     <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ doc }}</span>
@@ -148,7 +222,7 @@ const buildWhatsappLink = (productName) => {
                         </div>
 
                         <!-- 4. Syarat -->
-                        <div v-if="product.syarat?.sections?.length"
+                        <div v-if="localizedProduct.syarat?.sections?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
@@ -157,7 +231,7 @@ const buildWhatsappLink = (productName) => {
                                 </h2>
                             </div>
                             <div class="space-y-6">
-                                <div v-for="(section, sIndex) in product.syarat.sections"
+                                <div v-for="(section, sIndex) in localizedProduct.syarat.sections"
                                     :key="`syarat-section-${sIndex}`">
                                     <p class="text-[13px] font-bold text-[#1A1B18] mb-3">
                                         {{ section.label }}
@@ -183,7 +257,7 @@ const buildWhatsappLink = (productName) => {
                         </div>
 
                         <!-- Peraturan Perusahaan (opsional) -->
-                        <div v-if="product.peraturan_perusahaan?.items?.length"
+                        <div v-if="localizedProduct.peraturan_perusahaan?.items?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
@@ -193,14 +267,14 @@ const buildWhatsappLink = (productName) => {
                             </div>
 
                             <!-- Intro -->
-                            <p v-if="product.peraturan_perusahaan.intro"
+                            <p v-if="localizedProduct.peraturan_perusahaan.intro"
                                 class="text-[13px] font-bold text-[#1A1B18] mb-4">
-                                {{ product.peraturan_perusahaan.intro }}
+                                {{ localizedProduct.peraturan_perusahaan.intro }}
                             </p>
 
                             <!-- Items -->
                             <div class="space-y-5">
-                                <div v-for="(item, index) in product.peraturan_perusahaan.items" :key="`pp-${index}`">
+                                <div v-for="(item, index) in localizedProduct.peraturan_perusahaan.items" :key="`pp-${index}`">
                                     <!-- Title row dengan icon centang hijau -->
                                     <div class="flex items-center gap-3 mb-2">
                                         <img src="/icons/ft-done.svg" class="h-5 w-5 flex-shrink-0" alt="done" />
@@ -229,7 +303,7 @@ const buildWhatsappLink = (productName) => {
                         </div>
 
                         <!-- 5. Biaya Layanan -->
-                        <div v-if="product.rincian_biaya"
+                        <div v-if="localizedProduct.rincian_biaya"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
@@ -248,13 +322,13 @@ const buildWhatsappLink = (productName) => {
                                     </div>
                                     <div class="flex-1 min-w-0">
                                         <div class="text-[12px] text-white/70 mb-0.5">
-                                            {{ product.rincian_biaya.total_label }}
+                                            {{ localizedProduct.rincian_biaya.total_label }}
                                         </div>
                                         <div class="text-[16px] font-semibold text-white leading-tight truncate">
-                                            {{ product.rincian_biaya.total_amount }}
+                                            {{ localizedProduct.rincian_biaya.total_amount }}
                                         </div>
                                     </div>
-                                    <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
+                                    <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                         class="flex items-center gap-1.5 rounded-lg bg-white px-4 py-2.5 text-[13px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors flex-shrink-0">
                                         Pesan Sekarang
                                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -267,8 +341,8 @@ const buildWhatsappLink = (productName) => {
                             </div>
 
                             <!-- Rincian item biaya -->
-                            <div v-if="product.rincian_biaya.items?.length" class="mt-5 space-y-3">
-                                <div v-for="(item, index) in product.rincian_biaya.items" :key="`biaya-${index}`"
+                            <div v-if="localizedProduct.rincian_biaya.items?.length" class="mt-5 space-y-3">
+                                <div v-for="(item, index) in localizedProduct.rincian_biaya.items" :key="`biaya-${index}`"
                                     class="flex items-center justify-between gap-4 border-b border-[#F0F0EE] pb-3 last:border-0 last:pb-0">
                                     <span class="text-[13px] leading-[1.5] text-[#3D3D3A]">{{ item.label }}</span>
                                     <span class="text-[13px] font-semibold text-black whitespace-nowrap">{{ item.amount
@@ -278,7 +352,7 @@ const buildWhatsappLink = (productName) => {
                         </div>
 
                         <!-- 6. Dasar Hukum -->
-                        <div v-if="product.dasar_hukum?.length"
+                        <div v-if="localizedProduct.dasar_hukum?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
@@ -287,7 +361,7 @@ const buildWhatsappLink = (productName) => {
                                 </h2>
                             </div>
                             <ul class="space-y-4">
-                                <li v-for="(hukum, index) in product.dasar_hukum" :key="`hukum-${index}`"
+                                <li v-for="(hukum, index) in localizedProduct.dasar_hukum" :key="`hukum-${index}`"
                                     class="flex items-start gap-4">
                                     <span
                                         class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#ddffe3]">
@@ -318,7 +392,7 @@ const buildWhatsappLink = (productName) => {
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
                                 Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
                             </p>
-                            <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
+                            <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
                                 Pesan Layanan Sekarang
@@ -332,7 +406,7 @@ const buildWhatsappLink = (productName) => {
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <div
                                 class="mb-4 flex items-center justify-between rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3 py-2.5">
-                                <span class="text-[13px] text-[#1A1B18] truncate">{{ product.name }}</span>
+                                <span class="text-[13px] text-[#1A1B18] truncate">{{ localizedProduct.name }}</span>
                                 <svg class="h-4 w-4 flex-shrink-0 text-[#686964]" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -340,12 +414,12 @@ const buildWhatsappLink = (productName) => {
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1">Estimasi total biaya</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
-                                {{ product.rincian_biaya?.total_amount ?? product.price_label }}
+                                {{ localizedProduct.rincian_biaya?.total_amount ?? localizedProduct.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
                                 *Harga final dikonfirmasi setelah konsultasi
                             </div>
-                            <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
+                            <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-6 w-6 flex-shrink-0" alt="wa" />
                                 Konsultasi Gratis via Whatsapp
