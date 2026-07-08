@@ -197,6 +197,47 @@ export const useAktaPDF = () => {
         const thD = today.getFullYear() + 1;
 
         // ══════════════════════════════════════
+        //  WATERMARK FUNCTION
+        // ══════════════════════════════════════
+        const addWatermark = (doc, totalPages) => {
+            const wmText = "Bukan Dokumen Resmi, Sebatas Hasil Simulasi";
+            const wmSize = 12;
+            const pW = 210, pH = 297;
+
+            for (let page = 1; page <= totalPages; page++) {
+                doc.setPage(page);
+                doc.setFontSize(wmSize);
+                doc.setFont("helvetica", "bold");
+
+                try {
+                    doc.setGState(doc.GState({ opacity: 0.18 }));
+                } catch (_) {}
+
+                doc.setTextColor(160, 160, 160);
+
+                const stepX = 75;
+                const stepY = 38;
+
+                for (let yi = -4; yi <= 8; yi++) {
+                    for (let xi = -4; xi <= 4; xi++) {
+                        doc.text(wmText, xi * stepX, yi * stepY, {
+                            angle: -45,
+                            align: "center",
+                        });
+                    }
+                }
+
+                // Reset ke normal
+                try {
+                    doc.setGState(doc.GState({ opacity: 1 }));
+                } catch (_) {}
+                doc.setTextColor(0, 0, 0);
+            }
+        };
+
+        // ══════════════════════════════════════
+
+        // ══════════════════════════════════════
         //  HALAMAN JUDUL & KOMPARISI
         // ══════════════════════════════════════
         sp(10);
@@ -269,7 +310,7 @@ export const useAktaPDF = () => {
 
         const kTxt = selectedKBLI?.length
             ? selectedKBLI
-                  .slice(0, 10)
+                  .slice(0, 20)
                   .map((k) => k.kegiatan)
                   .join(", ")
             : "_______________";
@@ -1464,6 +1505,12 @@ export const useAktaPDF = () => {
             doc.setTextColor(0);
             doc.setDrawColor(0);
         }
+
+        // ══════════════════════════════════════
+        //  TERAPKAN WATERMARK KE SEMUA HALAMAN
+        // ══════════════════════════════════════
+        const totalPages = doc.getNumberOfPages();
+        addWatermark(doc, totalPages);
 
         const pdfBlob = doc.output("blob");
         const blobUrl = URL.createObjectURL(pdfBlob);
