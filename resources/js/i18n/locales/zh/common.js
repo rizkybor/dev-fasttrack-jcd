@@ -10,7 +10,6 @@ export default {
         close: "关闭",
         menu: "菜单",
         informasi: {
-            artikel: "文章",
             kbli: "KBLI",
             faq: "常见问题",
         },

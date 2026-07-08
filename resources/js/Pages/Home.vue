@@ -48,7 +48,7 @@ const marqueeRows = [
         reverse: false,
         logos: [
             { src: "/images/klien-kami/ft-kk-1-bni.svg", alt: "BNI" },
-            { src: "/images/klien-kami/ft-kk-2-hpplaw.svg", alt: "HPP Law" },
+            // { src: "/images/klien-kami/ft-kk-2-hpplaw.svg", alt: "HPP Law" },
             {
                 src: "/images/klien-kami/ft-kk-3-traveloka.svg",
                 alt: "Traveloka",
