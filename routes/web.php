@@ -2302,7 +2302,7 @@ Route::get('/perizinan-lainnya/{id}', function (Request $request, int $id) use (
 })->whereNumber('id');
 
 // NOTARIS VIRTUAL DAN AKTA
-Route::get('/notaris-virtual-dan-akta/{id}', function (Request $request, int $id) use ($notarisVirtualDanAktaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/notaris-virtual-dan-akta/{id}', function (Request $request, int $id) use ($notarisVirtualDanAktaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($notarisVirtualDanAktaProducts)->firstWhere('id', $id);
 
@@ -2314,12 +2314,17 @@ Route::get('/notaris-virtual-dan-akta/{id}', function (Request $request, int $id
         ->values()
         ->all();
 
+    // Resolve field translatable untuk kebutuhan SEO & Schema
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/NotarisVirtualDanAkta/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
         'seo' => [
-            'title' => $product['name'] . ' - FastTrack',
-            'description' => $product['excerpt'],
+            'title' => $productName . ' - FastTrack',
+            'description' => $productExcerpt,
             'canonical' => $baseUrl . $product['detail_path'],
             'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
         ],
@@ -2327,9 +2332,9 @@ Route::get('/notaris-virtual-dan-akta/{id}', function (Request $request, int $id
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'Service',
-                'name' => $product['name'],
-                'description' => $product['excerpt'],
-                'serviceType' => $product['name'],
+                'name' => $productName,
+                'description' => $productExcerpt,
+                'serviceType' => $productName,
                 'provider' => $organizationReference($baseUrl),
                 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
                 'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
@@ -2345,7 +2350,7 @@ Route::get('/notaris-virtual-dan-akta/{id}', function (Request $request, int $id
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'FAQPage',
-                'mainEntity' => collect($product['faq'])->map(
+                'mainEntity' => collect($productFaq)->map(
                     static fn(array $faq): array => [
                         '@type' => 'Question',
                         'name' => $faq['question'],
@@ -2356,14 +2361,14 @@ Route::get('/notaris-virtual-dan-akta/{id}', function (Request $request, int $id
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'Notaris Virtual & Akta', 'item' => $baseUrl . '/notaris-virtual-dan-akta'],
-                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+                ['name' => $productName, 'item' => $baseUrl . $product['detail_path']],
             ]),
         ],
     ]);
 })->whereNumber('id');
 
 // RESTRUKTURISASI PERSEROAN TERBATAS
-Route::get('/restrukturisasi-perseroan-terbatas/{id}', function (Request $request, int $id) use ($restrukturisasiPerseroanTerbatasProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/restrukturisasi-perseroan-terbatas/{id}', function (Request $request, int $id) use ($restrukturisasiPerseroanTerbatasProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($restrukturisasiPerseroanTerbatasProducts)->firstWhere('id', $id);
 
@@ -2375,12 +2380,17 @@ Route::get('/restrukturisasi-perseroan-terbatas/{id}', function (Request $reques
         ->values()
         ->all();
 
+    // Resolve field translatable untuk kebutuhan SEO & Schema
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/RestrukturisasiPerseroanTerbatas/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
         'seo' => [
-            'title' => $product['name'] . ' - FastTrack',
-            'description' => $product['excerpt'],
+            'title' => $productName . ' - FastTrack',
+            'description' => $productExcerpt,
             'canonical' => $baseUrl . $product['detail_path'],
             'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
         ],
@@ -2388,9 +2398,9 @@ Route::get('/restrukturisasi-perseroan-terbatas/{id}', function (Request $reques
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'Service',
-                'name' => $product['name'],
-                'description' => $product['excerpt'],
-                'serviceType' => $product['name'],
+                'name' => $productName,
+                'description' => $productExcerpt,
+                'serviceType' => $productName,
                 'provider' => $organizationReference($baseUrl),
                 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
                 'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
@@ -2406,7 +2416,7 @@ Route::get('/restrukturisasi-perseroan-terbatas/{id}', function (Request $reques
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'FAQPage',
-                'mainEntity' => collect($product['faq'])->map(
+                'mainEntity' => collect($productFaq)->map(
                     static fn(array $faq): array => [
                         '@type' => 'Question',
                         'name' => $faq['question'],
@@ -2417,7 +2427,7 @@ Route::get('/restrukturisasi-perseroan-terbatas/{id}', function (Request $reques
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'Restrukturisasi Perseroan Terbatas', 'item' => $baseUrl . '/restrukturisasi-perseroan-terbatas'],
-                ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']],
+                ['name' => $productName, 'item' => $baseUrl . $product['detail_path']],
             ]),
         ],
     ]);
