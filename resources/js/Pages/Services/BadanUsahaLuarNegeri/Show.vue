@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const docsOpen = ref(false);
 const dasarHukumOpen = ref(false);
@@ -28,14 +31,65 @@ const buildWhatsappLink = (productName) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-// Semua konten utama ada di product.baru
-const currentData = computed(() => props.product?.baru ?? {});
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
 
-// Persyaratan ada di product.baru.persyaratan
-const currentRequirements = computed(() => props.product?.baru?.persyaratan ?? []);
+// Semua konten utama ada di localizedProduct.baru — di-localize sesuai locale aktif
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
 
-// Dasar hukum ada di product.baru.dasar_hukum
-const currentDasarHukum = computed(() => props.product?.baru?.dasar_hukum ?? []);
+    const baru = p.baru ?? {};
+    const paketHarga = baru.paket_harga ?? null;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        excerpt: pick(p.excerpt),
+        faq: pick(p.faq) ?? [],
+        baru: {
+            ...baru,
+            penjelasan_umum: pick(baru.penjelasan_umum) ?? [],
+            kriteria: pick(baru.kriteria) ?? [],
+            persyaratan: pick(baru.persyaratan) ?? [],
+            dasar_hukum: pick(baru.dasar_hukum) ?? [],
+            paket_harga: paketHarga
+                ? {
+                      ...paketHarga,
+                      nama_paket: pick(paketHarga.nama_paket),
+                      bonus: pick(paketHarga.bonus),
+                      dokumen_legalitas: pick(paketHarga.dokumen_legalitas) ?? [],
+                      termasuk: pick(paketHarga.termasuk) ?? [],
+                  }
+                : null,
+        },
+    };
+});
+
+// Semua konten utama ada di localizedProduct.baru
+const currentData = computed(() => localizedProduct.value?.baru ?? {});
+
+// Persyaratan ada di localizedProduct.baru.persyaratan
+const currentRequirements = computed(
+    () => localizedProduct.value?.baru?.persyaratan ?? [],
+);
+
+// Dasar hukum ada di localizedProduct.baru.dasar_hukum
+const currentDasarHukum = computed(
+    () => localizedProduct.value?.baru?.dasar_hukum ?? [],
+);
 </script>
 
 <template>
@@ -128,7 +182,7 @@ const currentDasarHukum = computed(() => props.product?.baru?.dasar_hukum ?? [])
                             />
                         </svg>
                         <span class="text-sm font-medium text-[#9e1f16]">{{
-                            product.name
+                            localizedProduct.name
                         }}</span>
                     </div>
                 </nav>
@@ -147,7 +201,7 @@ const currentDasarHukum = computed(() => props.product?.baru?.dasar_hukum ?? [])
                     <h1
                         class="font-extrabold leading-tight text-white sm:text-2xl lg:text-4xl max-w-[800px] line-clamp-2"
                     >
-                        {{ product.name }}
+                        {{ localizedProduct.name }}
                     </h1>
                 </div>
 
@@ -395,7 +449,7 @@ const currentDasarHukum = computed(() => props.product?.baru?.dasar_hukum ?? [])
                                         </ul>
                                     </div>
                                     <a
-                                        :href="buildWhatsappLink(product.name)"
+                                        :href="buildWhatsappLink(localizedProduct.name)"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         class="flex items-center justify-center gap-1.5 rounded-xl border border-primary px-4 py-3 text-[13px] font-semibold text-primary hover:bg-primary/5 transition-colors"
@@ -716,7 +770,7 @@ const currentDasarHukum = computed(() => props.product?.baru?.dasar_hukum ?? [])
                                 (Satu) Hari
                             </p>
                             <a
-                                :href="buildWhatsappLink(product.name)"
+                                :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20"
@@ -744,7 +798,7 @@ const currentDasarHukum = computed(() => props.product?.baru?.dasar_hukum ?? [])
                                 class="mb-4 flex items-center justify-between rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3 py-2.5"
                             >
                                 <span class="text-[13px] text-[#1A1B18]">{{
-                                    product.name
+                                    localizedProduct.name
                                 }}</span>
                                 <svg
                                     class="h-4 w-4 text-[#686964]"
@@ -766,13 +820,13 @@ const currentDasarHukum = computed(() => props.product?.baru?.dasar_hukum ?? [])
                             <div
                                 class="text-[32px] font-bold leading-none text-primary mb-1"
                             >
-                                {{ product.price_label }}
+                                {{ localizedProduct.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
                                 *Harga final dikonfirmasi setelah konsultasi
                             </div>
                             <a
-                                :href="buildWhatsappLink(product.name)"
+                                :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors"

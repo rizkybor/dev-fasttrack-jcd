@@ -1,331 +1,1049 @@
 [
     {
         "id": 1,
-        "name": "Nomor Pokok Wajib Pajak (NPWP)",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Nomor Pokok Wajib Pajak (NPWP)",
+            "en": "Taxpayer Identification Number (NPWP)",
+            "zh": "纳税人识别号（NPWP）"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "1250000",
         "price_label": "Rp 1.250.000",
-        "excerpt": "...",
+        "excerpt": {
+            "id": "...",
+            "en": "...",
+            "zh": "..."
+        },
         "detail_path": "/perizinan-lainnya/1",
         "image": "",
-        "penjelasan_umum": [
-            "Nomor Pokok Wajib Pajak (NPWP) merupakan identitas resmi yang diberikan kepada Wajib Pajak sebagai sarana administrasi perpajakan untuk melaksanakan hak dan kewajiban perpajakan sesuai ketentuan yang berlaku. Kepemilikan NPWP tidak hanya menjadi kewajiban hukum, tetapi juga menjadi salah satu persyaratan penting dalam berbagai aktivitas bisnis, perizinan, perbankan, investasi, dan administrasi perusahaan. Seiring implementasi sistem administrasi perpajakan terbaru melalui Coretax DJP, pendaftaran NPWP dilakukan secara terintegrasi dan elektronik untuk Wajib Pajak Orang Pribadi maupun Badan Usaha. Untuk Wajib Pajak Orang Pribadi penduduk, Nomor Induk Kependudukan (NIK) berfungsi sebagai NPWP setelah dilakukan aktivasi dan validasi sesuai ketentuan Direktorat Jenderal Pajak.",
-            "Seiring implementasi sistem administrasi perpajakan terbaru melalui Coretax DJP, pendaftaran NPWP dilakukan secara terintegrasi dan elektronik untuk Wajib Pajak Orang Pribadi maupun Badan Usaha. Untuk Wajib Pajak Orang Pribadi penduduk, Nomor Induk Kependudukan (NIK) berfungsi sebagai NPWP setelah dilakukan aktivasi dan validasi sesuai ketentuan Direktorat Jenderal Pajak."
-        ],
-        "fungsi_strategis": {
-            "title": "FUNGSI STRATEGIS NPWP",
-            "items": [
-                "Identitas resmi Wajib Pajak dalam administrasi perpajakan;",
-                "Persyaratan pembukaan rekening dan fasilitas perbankan tertentu;",
-                "Persyaratan pengajuan kredit dan pembiayaan;",
-                "Persyaratan mengikuti tender dan pengadaan barang/jasa;",
-                "Persyaratan pengurusan perizinan usaha dan investasi;",
-                "Sarana pelaksanaan kewajiban pelaporan dan pembayaran pajak."
+        "penjelasan_umum": {
+            "id": [
+                "Nomor Pokok Wajib Pajak (NPWP) merupakan identitas resmi yang diberikan kepada Wajib Pajak sebagai sarana administrasi perpajakan untuk melaksanakan hak dan kewajiban perpajakan sesuai ketentuan yang berlaku. Kepemilikan NPWP tidak hanya menjadi kewajiban hukum, tetapi juga menjadi salah satu persyaratan penting dalam berbagai aktivitas bisnis, perizinan, perbankan, investasi, dan administrasi perusahaan. Seiring implementasi sistem administrasi perpajakan terbaru melalui Coretax DJP, pendaftaran NPWP dilakukan secara terintegrasi dan elektronik untuk Wajib Pajak Orang Pribadi maupun Badan Usaha. Untuk Wajib Pajak Orang Pribadi penduduk, Nomor Induk Kependudukan (NIK) berfungsi sebagai NPWP setelah dilakukan aktivasi dan validasi sesuai ketentuan Direktorat Jenderal Pajak.",
+                "Seiring implementasi sistem administrasi perpajakan terbaru melalui Coretax DJP, pendaftaran NPWP dilakukan secara terintegrasi dan elektronik untuk Wajib Pajak Orang Pribadi maupun Badan Usaha. Untuk Wajib Pajak Orang Pribadi penduduk, Nomor Induk Kependudukan (NIK) berfungsi sebagai NPWP setelah dilakukan aktivasi dan validasi sesuai ketentuan Direktorat Jenderal Pajak."
             ],
-            "note": "NPWP wajib dimiliki oleh pihak yang telah memenuhi persyaratan subjektif dan objektif sebagai Wajib Pajak baik bagi Wajib Pajak Orang Pribadi maupun Wajib Pajak Badan."
+            "en": [
+                "The Taxpayer Identification Number (NPWP) is an official identity issued to Taxpayers as a tax administration tool for exercising tax rights and obligations in accordance with applicable regulations. Having an NPWP is not only a legal obligation but also an important requirement for various business, licensing, banking, investment, and corporate administration activities. Following the implementation of the latest tax administration system through Coretax DJP, NPWP registration is carried out in an integrated and electronic manner for both Individual Taxpayers and Business Entities. For resident Individual Taxpayers, the Population Identification Number (NIK) functions as the NPWP after activation and validation in accordance with the provisions of the Directorate General of Taxes.",
+                "Following the implementation of the latest tax administration system through Coretax DJP, NPWP registration is carried out in an integrated and electronic manner for both Individual Taxpayers and Business Entities. For resident Individual Taxpayers, the Population Identification Number (NIK) functions as the NPWP after activation and validation in accordance with the provisions of the Directorate General of Taxes."
+            ],
+            "zh": [
+                "纳税人识别号（NPWP）是颁发给纳税人的官方身份标识，作为依照现行规定行使纳税权利和履行纳税义务的税务管理工具。持有NPWP不仅是一项法律义务，也是各种商业、许可、银行、投资及企业行政活动的重要要求。随着通过Coretax DJP实施最新的税务管理系统，个人纳税人及企业纳税人的NPWP注册均以综合电子化方式进行。对于居民个人纳税人，居民身份号码（NIK）在按照税务总局规定完成激活和验证后即作为NPWP使用。",
+                "随着通过Coretax DJP实施最新的税务管理系统，个人纳税人及企业纳税人的NPWP注册均以综合电子化方式进行。对于居民个人纳税人，居民身份号码（NIK）在按照税务总局规定完成激活和验证后即作为NPWP使用。"
+            ]
         },
-        "dokumen_didapat": [
-            "E-NPWP",
-            "Surat Keterangan Terdaftar (SKT)",
-            "Surat Penerbitan Akun Pajak"
-        ],
+        "fungsi_strategis": {
+            "title": {
+                "id": "FUNGSI STRATEGIS NPWP",
+                "en": "STRATEGIC FUNCTIONS OF NPWP",
+                "zh": "NPWP的战略功能"
+            },
+            "items": {
+                "id": [
+                    "Identitas resmi Wajib Pajak dalam administrasi perpajakan;",
+                    "Persyaratan pembukaan rekening dan fasilitas perbankan tertentu;",
+                    "Persyaratan pengajuan kredit dan pembiayaan;",
+                    "Persyaratan mengikuti tender dan pengadaan barang/jasa;",
+                    "Persyaratan pengurusan perizinan usaha dan investasi;",
+                    "Sarana pelaksanaan kewajiban pelaporan dan pembayaran pajak."
+                ],
+                "en": [
+                    "Official identity of the Taxpayer in tax administration;",
+                    "Requirement for opening accounts and certain banking facilities;",
+                    "Requirement for applying for credit and financing;",
+                    "Requirement for participating in tenders and procurement of goods/services;",
+                    "Requirement for processing business and investment licenses;",
+                    "A tool for fulfilling tax reporting and payment obligations."
+                ],
+                "zh": [
+                    "纳税人在税务管理中的官方身份标识；",
+                    "开设账户及特定银行业务的必要条件；",
+                    "申请信贷及融资的必要条件；",
+                    "参与招标及采购货物/服务的必要条件；",
+                    "办理营业及投资许可的必要条件；",
+                    "履行纳税申报及缴纳义务的工具。"
+                ]
+            },
+            "note": {
+                "id": "NPWP wajib dimiliki oleh pihak yang telah memenuhi persyaratan subjektif dan objektif sebagai Wajib Pajak baik bagi Wajib Pajak Orang Pribadi maupun Wajib Pajak Badan.",
+                "en": "An NPWP must be held by parties who have met the subjective and objective requirements as Taxpayers, whether Individual Taxpayers or Corporate Taxpayers.",
+                "zh": "凡符合个人纳税人或企业纳税人主观和客观要求的各方，均须持有NPWP。"
+            }
+        },
+        "dokumen_didapat": {
+            "id": [
+                "E-NPWP",
+                "Surat Keterangan Terdaftar (SKT)",
+                "Surat Penerbitan Akun Pajak"
+            ],
+            "en": [
+                "E-NPWP",
+                "Certificate of Registration (SKT)",
+                "Tax Account Issuance Letter"
+            ],
+            "zh": [
+                "电子NPWP",
+                "登记证明（SKT）",
+                "税务账户核发函"
+            ]
+        },
         "syarat": {
             "sections": [
                 {
-                    "label": "A. Dokumen Perusahaan",
+                    "label": {
+                        "id": "A. Dokumen Perusahaan",
+                        "en": "A. Company Documents",
+                        "zh": "甲、公司文件"
+                    },
                     "groups": [
                         {
-                            "notes": [
-                                "Salinan Akta Pendirian atau dokumen pendirian badan usaha beserta perubahannya.",
-                                "Surat Keputusan (SK) Pengesahan dari Kementerian Hukum dan HAM (Kemenkumham).",
-                                "Identitas Pengurus: Berupa kartu NPWP dan KTP milik direktur atau penanggung jawab utama perusahaan yang berstatus aktif.",
-                                "Surat/Formulir permohonan yang telah dilengkapo oleh Perusahaan."
-                            ]
+                            "notes": {
+                                "id": [
+                                    "Salinan Akta Pendirian atau dokumen pendirian badan usaha beserta perubahannya.",
+                                    "Surat Keputusan (SK) Pengesahan dari Kementerian Hukum dan HAM (Kemenkumham).",
+                                    "Identitas Pengurus: Berupa kartu NPWP dan KTP milik direktur atau penanggung jawab utama perusahaan yang berstatus aktif.",
+                                    "Surat/Formulir permohonan yang telah dilengkapo oleh Perusahaan."
+                                ],
+                                "en": [
+                                    "A copy of the Deed of Establishment or business entity establishment documents along with their amendments.",
+                                    "Ratification Decree (SK) from the Ministry of Law and Human Rights (Kemenkumham).",
+                                    "Management's Identity: NPWP card and ID card belonging to the company's director or primary responsible person, in active status.",
+                                    "Application letter/form completed by the Company."
+                                ],
+                                "zh": [
+                                    "公司设立公证书或企业设立文件及其变更文件的复印件。",
+                                    "法律与人权部（Kemenkumham）批准决定书（SK）。",
+                                    "管理层身份证明：公司现任董事或主要负责人的NPWP卡及身份证。",
+                                    "由公司填写完成的申请函/表格。"
+                                ]
+                            }
                         }
                     ]
                 }
             ]
         },
         "rincian_biaya": {
-            "items": [{ "label": "", "amount": "" }],
-            "total_label": "Pendaftaran NPWP",
+            "items": {
+                "id": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "zh": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ]
+            },
+            "total_label": {
+                "id": "Pendaftaran NPWP",
+                "en": "NPWP Registration",
+                "zh": "NPWP注册"
+            },
             "total_amount": "Rp 1.250.000"
         },
-        "dasar_hukum": [],
-        "faq": []
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 2,
-        "name": "Surat Pengukuhan Pengusaha Kena Pajak (SP PKP)",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Surat Pengukuhan Pengusaha Kena Pajak (SP PKP)",
+            "en": "Taxable Entrepreneur Confirmation Letter (SP PKP)",
+            "zh": "应税企业家确认函（SP PKP）"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "1750000",
         "price_label": "Rp 1.750.000",
-        "excerpt": "...",
+        "excerpt": {
+            "id": "...",
+            "en": "...",
+            "zh": "..."
+        },
         "detail_path": "/perizinan-lainnya/2",
         "image": "",
-        "penjelasan_umum": [
-            "SPPKP (Surat Pengukuhan Pengusaha Kena Pajak) adalah dokumen resmi yang diterbitkan oleh Direktorat Jenderal Pajak (DJP) sebagai bukti bahwa seorang pengusaha atau sebuah badan usaha telah resmi dikukuhkan sebagai Pengusaha Kena Pajak (PKP). Dokumen ini memberikan legalitas kepada pelaku usaha untuk memungut, menyetor, dan melaporkan Pajak Pertambahan Nilai (PPN) serta Pajak Penjualan atas Barang Mewah (PPnBM) yang terutang. Kriteria Wajib: Pengusaha (Orang Pribadi maupun Badan) yang memiliki omzet atau peredaran bruto tahunan melebihi Rp4,8 Miliar wajib mengajukan pengukuhan PKP.",
-            "Kriteria Sukarela: Pengusaha dengan omzet di bawah Rp4,8 Miliar per tahun tetap diperbolehkan mengajukan secara sukarela demi keperluan kredibilitas bisnis atau transaksi dengan instansi pemerintah."
-        ],
+        "penjelasan_umum": {
+            "id": [
+                "SPPKP (Surat Pengukuhan Pengusaha Kena Pajak) adalah dokumen resmi yang diterbitkan oleh Direktorat Jenderal Pajak (DJP) sebagai bukti bahwa seorang pengusaha atau sebuah badan usaha telah resmi dikukuhkan sebagai Pengusaha Kena Pajak (PKP). Dokumen ini memberikan legalitas kepada pelaku usaha untuk memungut, menyetor, dan melaporkan Pajak Pertambahan Nilai (PPN) serta Pajak Penjualan atas Barang Mewah (PPnBM) yang terutang. Kriteria Wajib: Pengusaha (Orang Pribadi maupun Badan) yang memiliki omzet atau peredaran bruto tahunan melebihi Rp4,8 Miliar wajib mengajukan pengukuhan PKP.",
+                "Kriteria Sukarela: Pengusaha dengan omzet di bawah Rp4,8 Miliar per tahun tetap diperbolehkan mengajukan secara sukarela demi keperluan kredibilitas bisnis atau transaksi dengan instansi pemerintah."
+            ],
+            "en": [
+                "SPPKP (Taxable Entrepreneur Confirmation Letter) is an official document issued by the Directorate General of Taxes (DJP) as evidence that an entrepreneur or business entity has been officially confirmed as a Taxable Entrepreneur (PKP). This document grants business actors the legality to collect, deposit, and report Value Added Tax (PPN) and Sales Tax on Luxury Goods (PPnBM) owed. Mandatory Criteria: Entrepreneurs (Individuals or Corporations) with annual turnover or gross revenue exceeding IDR 4.8 Billion are required to apply for PKP confirmation.",
+                "Voluntary Criteria: Entrepreneurs with annual turnover below IDR 4.8 Billion are still permitted to apply voluntarily for business credibility purposes or transactions with government agencies."
+            ],
+            "zh": [
+                "SPPKP（应税企业家确认函）是由税务总局（DJP）颁发的官方文件，证明某企业家或企业已正式被确认为应税企业家（PKP）。该文件赋予经营者征收、缴纳及申报所欠增值税（PPN）和奢侈品销售税（PPnBM）的合法资格。强制标准：年营业额或毛收入超过48亿印尼盾的企业家（个人或法人）须申请PKP确认。",
+                "自愿标准：年营业额低于48亿印尼盾的企业家仍可自愿申请，以提升商业信誉或用于与政府机构的交易。"
+            ]
+        },
         "fungsi_strategis": null,
-        "dokumen_didapat": ["Surat Pengukuhan Perusahaan Kena Pajak"],
+        "dokumen_didapat": {
+            "id": [
+                "Surat Pengukuhan Perusahaan Kena Pajak"
+            ],
+            "en": [
+                "Taxable Company Confirmation Letter"
+            ],
+            "zh": [
+                "应税企业确认函"
+            ]
+        },
         "syarat": {
             "sections": [
                 {
-                    "label": "A. Dokumen Perusahaan",
+                    "label": {
+                        "id": "A. Dokumen Perusahaan",
+                        "en": "A. Company Documents",
+                        "zh": "甲、公司文件"
+                    },
                     "groups": [
                         {
-                            "notes": [
-                                "Salinan Akta Pendirian atau dokumen pendirian badan usaha beserta perubahannya.",
-                                "Surat Keputusan (SK) Pengesahan dari Kementerian Hukum dan HAM (Kemenkumham).",
-                                "Identitas Pengurus: Berupa kartu NPWP dan KTP milik direktur atau penanggung jawab utama perusahaan yang berstatus aktif.",
-                                "NPWP Perusahaan",
-                                "Bukti kepemilikan tempat usaha (Sertifikat/Akta) atau Bukti Sewa Tempat Usaha jika kontrak.",
-                                "Foto tempat usaha (tampak depan, ruang kerja, papan nama perusahaan).",
-                                "Denah atau peta lokasi tempat usaha.",
-                                "Bukti lapor SPT Tahunan Pajak Penghasilan selama 2 tahun terakhir bagi pengurus/direktur.",
-                                "Dokumen transaksi pendukung seperti contoh Purchase Order (PO) atau invoice kegiatan usaha utama.",
-                                "Surat/Formulir permohonan yang telah dilengkapo oleh Perusahaan."
-                            ]
+                            "notes": {
+                                "id": [
+                                    "Salinan Akta Pendirian atau dokumen pendirian badan usaha beserta perubahannya.",
+                                    "Surat Keputusan (SK) Pengesahan dari Kementerian Hukum dan HAM (Kemenkumham).",
+                                    "Identitas Pengurus: Berupa kartu NPWP dan KTP milik direktur atau penanggung jawab utama perusahaan yang berstatus aktif.",
+                                    "NPWP Perusahaan",
+                                    "Bukti kepemilikan tempat usaha (Sertifikat/Akta) atau Bukti Sewa Tempat Usaha jika kontrak.",
+                                    "Foto tempat usaha (tampak depan, ruang kerja, papan nama perusahaan).",
+                                    "Denah atau peta lokasi tempat usaha.",
+                                    "Bukti lapor SPT Tahunan Pajak Penghasilan selama 2 tahun terakhir bagi pengurus/direktur.",
+                                    "Dokumen transaksi pendukung seperti contoh Purchase Order (PO) atau invoice kegiatan usaha utama.",
+                                    "Surat/Formulir permohonan yang telah dilengkapo oleh Perusahaan."
+                                ],
+                                "en": [
+                                    "A copy of the Deed of Establishment or business entity establishment documents along with their amendments.",
+                                    "Ratification Decree (SK) from the Ministry of Law and Human Rights (Kemenkumham).",
+                                    "Management's Identity: NPWP card and ID card belonging to the company's director or primary responsible person, in active status.",
+                                    "Company NPWP",
+                                    "Proof of business premises ownership (Certificate/Deed) or Proof of Business Premises Lease if under contract.",
+                                    "Photos of the business premises (front view, workspace, company signboard).",
+                                    "Floor plan or location map of the business premises.",
+                                    "Proof of Annual Income Tax Return (SPT) filing for the last 2 years for the management/director.",
+                                    "Supporting transaction documents such as sample Purchase Orders (PO) or invoices for the main business activities.",
+                                    "Application letter/form completed by the Company."
+                                ],
+                                "zh": [
+                                    "公司设立公证书或企业设立文件及其变更文件的复印件。",
+                                    "法律与人权部（Kemenkumham）批准决定书（SK）。",
+                                    "管理层身份证明：公司现任董事或主要负责人的NPWP卡及身份证。",
+                                    "公司纳税人识别号（NPWP）",
+                                    "营业场所所有权证明（证书/契约）或租赁合同下的营业场所租赁证明。",
+                                    "营业场所照片（正面、工作空间、公司招牌）。",
+                                    "营业场所平面图或位置地图。",
+                                    "管理层/董事最近2年的年度所得税申报（SPT）证明。",
+                                    "支持性交易文件，例如主要业务活动的采购订单（PO）或发票样本。",
+                                    "由公司填写完成的申请函/表格。"
+                                ]
+                            }
                         }
                     ]
                 }
             ]
         },
         "rincian_biaya": {
-            "items": [{ "label": "", "amount": "" }],
-            "total_label": "Pendaftaran PKP",
+            "items": {
+                "id": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "zh": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ]
+            },
+            "total_label": {
+                "id": "Pendaftaran PKP",
+                "en": "PKP Registration",
+                "zh": "PKP注册"
+            },
             "total_amount": "Rp 1.750.000"
         },
-        "dasar_hukum": [],
-        "faq": []
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 3,
-        "name": "Tanda Daftar Lembaga Kesejahteraan Sosial (LKS)",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Tanda Daftar Lembaga Kesejahteraan Sosial (LKS)",
+            "en": "Social Welfare Institution Registration Certificate (LKS)",
+            "zh": "社会福利机构注册证书（LKS）"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "hubungikami",
         "price_label": "Hubungi Kami",
-        "excerpt": "...",
+        "excerpt": {
+            "id": "...",
+            "en": "...",
+            "zh": "..."
+        },
         "detail_path": "/perizinan-lainnya/3",
         "image": "",
-        "penjelasan_umum": [
-            "Tanda Daftar LKS merupakan dokumen registrasi yang diberikan kepada organisasi atau lembaga yang menyelenggarakan kegiatan kesejahteraan sosial sebagai bukti bahwa lembaga tersebut telah terdaftar pada instansi pemerintah yang membidangi urusan sosial.",
-            "Kepemilikan tanda daftar menjadi bagian penting dalam tata kelola organisasi karena menunjukkan legalitas kelembagaan, memudahkan proses pembinaan, serta mendukung kerja sama dengan berbagai pihak, baik pemerintah, donor, perusahaan, maupun lembaga filantropi lainnya."
-        ],
-        "fungsi_strategis": {
-            "title": "DAFTAR LEMBAGA ATAU ORGANISASI",
-            "desc": "Kewajiban pendaftaran umumnya berlaku bagi organisasi atau lembaga yang menyelenggarakan kegiatan kesejahteraan sosial, antara lain:",
-            "items": [
-                "Yayasan sosial;",
-                "Panti asuhan;",
-                "Panti sosial lanjut usia;",
-                "Lembaga rehabilitasi sosial;",
-                "Lembaga pelayanan disabilitas;",
-                "Organisasi sosial kemasyarakatan;",
-                "Lembaga kemanusiaan dan filantropi;",
-                "Lembaga sosial berbasis keagamaan;",
-                "Organisasi yang menjalankan program bantuan dan pemberdayaan masyarakat."
+        "penjelasan_umum": {
+            "id": [
+                "Tanda Daftar LKS merupakan dokumen registrasi yang diberikan kepada organisasi atau lembaga yang menyelenggarakan kegiatan kesejahteraan sosial sebagai bukti bahwa lembaga tersebut telah terdaftar pada instansi pemerintah yang membidangi urusan sosial.",
+                "Kepemilikan tanda daftar menjadi bagian penting dalam tata kelola organisasi karena menunjukkan legalitas kelembagaan, memudahkan proses pembinaan, serta mendukung kerja sama dengan berbagai pihak, baik pemerintah, donor, perusahaan, maupun lembaga filantropi lainnya."
             ],
-            "note": ""
+            "en": [
+                "The LKS Registration Certificate is a registration document given to organizations or institutions that carry out social welfare activities, as proof that the institution has been registered with the government agency responsible for social affairs.",
+                "Having this registration certificate is an important part of organizational governance because it demonstrates institutional legality, facilitates the guidance process, and supports cooperation with various parties, whether government, donors, companies, or other philanthropic institutions."
+            ],
+            "zh": [
+                "LKS注册证书是颁发给开展社会福利活动的组织或机构的注册文件，用以证明该机构已在负责社会事务的政府机构登记。",
+                "持有该注册证书是组织治理的重要组成部分，因为它体现了机构的合法性，便于辅导管理流程，并支持与政府、捐助方、企业及其他慈善机构等各方的合作。"
+            ]
         },
-        "dokumen_didapat": [],
+        "fungsi_strategis": {
+            "title": {
+                "id": "DAFTAR LEMBAGA ATAU ORGANISASI",
+                "en": "LIST OF INSTITUTIONS OR ORGANIZATIONS",
+                "zh": "机构或组织清单"
+            },
+            "desc": {
+                "id": "Kewajiban pendaftaran umumnya berlaku bagi organisasi atau lembaga yang menyelenggarakan kegiatan kesejahteraan sosial, antara lain:",
+                "en": "The registration obligation generally applies to organizations or institutions that carry out social welfare activities, including:",
+                "zh": "登记义务通常适用于开展社会福利活动的组织或机构，包括："
+            },
+            "items": {
+                "id": [
+                    "Yayasan sosial;",
+                    "Panti asuhan;",
+                    "Panti sosial lanjut usia;",
+                    "Lembaga rehabilitasi sosial;",
+                    "Lembaga pelayanan disabilitas;",
+                    "Organisasi sosial kemasyarakatan;",
+                    "Lembaga kemanusiaan dan filantropi;",
+                    "Lembaga sosial berbasis keagamaan;",
+                    "Organisasi yang menjalankan program bantuan dan pemberdayaan masyarakat."
+                ],
+                "en": [
+                    "Social foundations;",
+                    "Orphanages;",
+                    "Elderly social care homes;",
+                    "Social rehabilitation institutions;",
+                    "Disability service institutions;",
+                    "Community social organizations;",
+                    "Humanitarian and philanthropic institutions;",
+                    "Faith-based social institutions;",
+                    "Organizations running community assistance and empowerment programs."
+                ],
+                "zh": [
+                    "社会基金会；",
+                    "孤儿院；",
+                    "老年社会福利院；",
+                    "社会康复机构；",
+                    "残疾人服务机构；",
+                    "社会公民组织；",
+                    "人道主义及慈善机构；",
+                    "宗教背景的社会机构；",
+                    "开展社区援助及赋能项目的组织。"
+                ]
+            },
+            "note": {
+                "id": "",
+                "en": "",
+                "zh": ""
+            }
+        },
+        "dokumen_didapat": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "syarat": {},
         "rincian_biaya": {
-            "items": [{ "label": "", "amount": "" }],
-            "total_label": "Tanda Daftar Lembaga Kesejahteraan Sosial (LKS)",
+            "items": {
+                "id": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "zh": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ]
+            },
+            "total_label": {
+                "id": "Tanda Daftar Lembaga Kesejahteraan Sosial (LKS)",
+                "en": "Social Welfare Institution Registration Certificate (LKS)",
+                "zh": "社会福利机构注册证书（LKS）"
+            },
             "total_amount": "Hubungi Kami"
         },
-        "dasar_hukum": [
-            "Undang-Undang Nomor 11 Tahun 2009 tentang Kesejahteraan Sosial;",
-            "Undang-Undang Nomor 25 Tahun 2009 tentang Pelayanan Publik;",
-            "Peraturan Pemerintah Nomor 39 Tahun 2012 tentang Penyelenggaraan Kesejahteraan Sosial;",
-            "Peraturan Menteri Sosial Nomor 184 Tahun 2011 tentang Lembaga Kesejahteraan Sosial;",
-            "Peraturan Menteri Sosial Nomor 22 Tahun 2016 tentang Standar Nasional Lembaga Kesejahteraan Sosial;",
-            "Peraturan Gubernur DKI Jakarta Nomor 6 Tahun 2012 tentang Tata Cara Pendaftaran Lembaga Kesejahteraan Sosial;",
-            "Ketentuan pelayanan perizinan dan administrasi yang berlaku pada Pemerintah Provinsi DKI Jakarta."
-        ],
-        "faq": []
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 11 Tahun 2009 tentang Kesejahteraan Sosial;",
+                "Undang-Undang Nomor 25 Tahun 2009 tentang Pelayanan Publik;",
+                "Peraturan Pemerintah Nomor 39 Tahun 2012 tentang Penyelenggaraan Kesejahteraan Sosial;",
+                "Peraturan Menteri Sosial Nomor 184 Tahun 2011 tentang Lembaga Kesejahteraan Sosial;",
+                "Peraturan Menteri Sosial Nomor 22 Tahun 2016 tentang Standar Nasional Lembaga Kesejahteraan Sosial;",
+                "Peraturan Gubernur DKI Jakarta Nomor 6 Tahun 2012 tentang Tata Cara Pendaftaran Lembaga Kesejahteraan Sosial;",
+                "Ketentuan pelayanan perizinan dan administrasi yang berlaku pada Pemerintah Provinsi DKI Jakarta."
+            ],
+            "en": [
+                "Law Number 11 of 2009 concerning Social Welfare;",
+                "Law Number 25 of 2009 concerning Public Services;",
+                "Government Regulation Number 39 of 2012 concerning the Implementation of Social Welfare;",
+                "Regulation of the Minister of Social Affairs Number 184 of 2011 concerning Social Welfare Institutions;",
+                "Regulation of the Minister of Social Affairs Number 22 of 2016 concerning National Standards for Social Welfare Institutions;",
+                "Regulation of the Governor of DKI Jakarta Number 6 of 2012 concerning Procedures for Registration of Social Welfare Institutions;",
+                "Applicable licensing and administrative service provisions of the DKI Jakarta Provincial Government."
+            ],
+            "zh": [
+                "2009年第11号法律关于社会福利；",
+                "2009年第25号法律关于公共服务；",
+                "2012年第39号政府法规关于社会福利的实施；",
+                "社会事务部长2011年第184号条例，关于社会福利机构；",
+                "社会事务部长2016年第22号条例，关于社会福利机构国家标准；",
+                "雅加达首都特区省长2012年第6号条例，关于社会福利机构注册程序；",
+                "雅加达首都特区省政府适用的许可及行政服务规定。"
+            ]
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 4,
-        "name": "Izin Kegiatan LKS Daerah/Lokal — DKI Jakarta",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Izin Kegiatan LKS Daerah/Lokal — DKI Jakarta",
+            "en": "Regional/Local LKS Activity Permit — DKI Jakarta",
+            "zh": "地区/地方LKS活动许可证——雅加达首都特区"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "hubungikami",
         "price_label": "Hubungi Kami",
-        "excerpt": "...",
+        "excerpt": {
+            "id": "...",
+            "en": "...",
+            "zh": "..."
+        },
         "detail_path": "/perizinan-lainnya/4",
         "image": "",
-        "penjelasan_umum": [],
-        "fungsi_strategis": {
-            "title": "PENJELASAN UMUM",
-            "desc": "Lembaga Kesejahteraan Sosial adalah organisasi sosial atau perkumpulan sosial yang dibentuk oleh masyarakat untuk menyelenggarakan kegiatan kesejahteraan sosial, baik yang berbadan hukum maupun yang belum berbadan hukum. Kegiatan yang dilakukan dapat mencakup pelayanan kepada anak, lanjut usia, penyandang disabilitas, fakir miskin, keluarga rentan, korban bencana, maupun kelompok masyarakat lainnya yang memerlukan perlindungan dan pelayanan sosial. Dalam praktiknya, sebagian besar LKS berbentuk:",
-            "items": [
-                "Yayasan;",
-                "Perkumpulan;",
-                "Organisasi sosial kemasyarakatan;",
-                "Lembaga sosial berbasis keagamaan;",
-                "Panti sosial dan lembaga pelayanan sosial lainnya."
-            ],
-            "note": ""
+        "penjelasan_umum": {
+            "id": [],
+            "en": [],
+            "zh": []
         },
-        "dokumen_didapat": [],
+        "fungsi_strategis": {
+            "title": {
+                "id": "PENJELASAN UMUM",
+                "en": "GENERAL EXPLANATION",
+                "zh": "一般说明"
+            },
+            "desc": {
+                "id": "Lembaga Kesejahteraan Sosial adalah organisasi sosial atau perkumpulan sosial yang dibentuk oleh masyarakat untuk menyelenggarakan kegiatan kesejahteraan sosial, baik yang berbadan hukum maupun yang belum berbadan hukum. Kegiatan yang dilakukan dapat mencakup pelayanan kepada anak, lanjut usia, penyandang disabilitas, fakir miskin, keluarga rentan, korban bencana, maupun kelompok masyarakat lainnya yang memerlukan perlindungan dan pelayanan sosial. Dalam praktiknya, sebagian besar LKS berbentuk:",
+                "en": "A Social Welfare Institution is a social organization or association formed by the community to carry out social welfare activities, whether incorporated or not yet incorporated. The activities carried out may include services for children, the elderly, persons with disabilities, the poor, vulnerable families, disaster victims, and other community groups requiring protection and social services. In practice, most LKS take the form of:",
+                "zh": "社会福利机构是由社会组建、用于开展社会福利活动的社会组织或社团，无论是否具有法人资格。所开展的活动可包括为儿童、老年人、残疾人、贫困人群、弱势家庭、灾害受害者以及其他需要保护和社会服务的社区群体提供服务。实践中，大多数LKS的形式包括："
+            },
+            "items": {
+                "id": [
+                    "Yayasan;",
+                    "Perkumpulan;",
+                    "Organisasi sosial kemasyarakatan;",
+                    "Lembaga sosial berbasis keagamaan;",
+                    "Panti sosial dan lembaga pelayanan sosial lainnya."
+                ],
+                "en": [
+                    "Foundations;",
+                    "Associations;",
+                    "Community social organizations;",
+                    "Faith-based social institutions;",
+                    "Social care homes and other social service institutions."
+                ],
+                "zh": [
+                    "基金会；",
+                    "社团；",
+                    "社会公民组织；",
+                    "宗教背景的社会机构；",
+                    "社会福利院及其他社会服务机构。"
+                ]
+            },
+            "note": {
+                "id": "",
+                "en": "",
+                "zh": ""
+            }
+        },
+        "dokumen_didapat": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "syarat": {},
         "rincian_biaya": {
-            "items": [{ "label": "", "amount": "" }],
-            "total_label": "Izin Kegiatan LKS Daerah/Lokal — DKI Jakarta",
+            "items": {
+                "id": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "zh": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ]
+            },
+            "total_label": {
+                "id": "Izin Kegiatan LKS Daerah/Lokal — DKI Jakarta",
+                "en": "Regional/Local LKS Activity Permit — DKI Jakarta",
+                "zh": "地区/地方LKS活动许可证——雅加达首都特区"
+            },
             "total_amount": "Hubungi Kami"
         },
-        "dasar_hukum": [
-            "Undang-Undang Nomor 11 Tahun 2009 tentang Kesejahteraan Sosial.",
-            "Peraturan Pemerintah Nomor 39 Tahun 2012 tentang Penyelenggaraan Kesejahteraan Sosial.",
-            "Peraturan Menteri Sosial Nomor 184 Tahun 2011 tentang Lembaga Kesejahteraan Sosial.",
-            "Peraturan Menteri Sosial Nomor 22 Tahun 2016 tentang Standar Nasional Lembaga Kesejahteraan Sosial.",
-            "Peraturan Menteri Sosial Nomor 5 Tahun 2024 yang mengatur penyelenggaraan dan perizinan tertentu di bidang kesejahteraan sosial, termasuk pengaturan LKS dalam lingkup kewenangan Kementerian Sosial.",
-            "Peraturan Gubernur Nomor 12 Tahun 2013 tentang Prosedur Pemberian Izin Lembaga Kesejahteraan Sosial dan",
-            "Peraturan Gubernur Nomor 7 Tahun 2025 tentang Petunjuk Pelaksanaan Penanaman Modal dan Pelayanan Terpadu Satu Pintu"
-        ],
-        "faq": []
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 11 Tahun 2009 tentang Kesejahteraan Sosial.",
+                "Peraturan Pemerintah Nomor 39 Tahun 2012 tentang Penyelenggaraan Kesejahteraan Sosial.",
+                "Peraturan Menteri Sosial Nomor 184 Tahun 2011 tentang Lembaga Kesejahteraan Sosial.",
+                "Peraturan Menteri Sosial Nomor 22 Tahun 2016 tentang Standar Nasional Lembaga Kesejahteraan Sosial.",
+                "Peraturan Menteri Sosial Nomor 5 Tahun 2024 yang mengatur penyelenggaraan dan perizinan tertentu di bidang kesejahteraan sosial, termasuk pengaturan LKS dalam lingkup kewenangan Kementerian Sosial.",
+                "Peraturan Gubernur Nomor 12 Tahun 2013 tentang Prosedur Pemberian Izin Lembaga Kesejahteraan Sosial dan",
+                "Peraturan Gubernur Nomor 7 Tahun 2025 tentang Petunjuk Pelaksanaan Penanaman Modal dan Pelayanan Terpadu Satu Pintu"
+            ],
+            "en": [
+                "Law Number 11 of 2009 concerning Social Welfare.",
+                "Government Regulation Number 39 of 2012 concerning the Implementation of Social Welfare.",
+                "Regulation of the Minister of Social Affairs Number 184 of 2011 concerning Social Welfare Institutions.",
+                "Regulation of the Minister of Social Affairs Number 22 of 2016 concerning National Standards for Social Welfare Institutions.",
+                "Regulation of the Minister of Social Affairs Number 5 of 2024 which regulates the implementation and certain licensing in the field of social welfare, including the regulation of LKS within the authority of the Ministry of Social Affairs.",
+                "Governor Regulation Number 12 of 2013 concerning Procedures for Granting Permits to Social Welfare Institutions, and",
+                "Governor Regulation Number 7 of 2025 concerning Implementation Guidelines for Investment and One-Stop Integrated Services"
+            ],
+            "zh": [
+                "2009年第11号法律关于社会福利。",
+                "2012年第39号政府法规关于社会福利的实施。",
+                "社会事务部长2011年第184号条例，关于社会福利机构。",
+                "社会事务部长2016年第22号条例，关于社会福利机构国家标准。",
+                "社会事务部长2024年第5号条例，规范社会福利领域的实施及特定许可，包括在社会事务部职权范围内对LKS的规定。",
+                "省长2013年第12号条例，关于社会福利机构许可核发程序，及",
+                "省长2025年第7号条例，关于投资及一站式综合服务实施指南"
+            ]
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 5,
-        "name": "Tanda Daftar Yayasan",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Tanda Daftar Yayasan",
+            "en": "Foundation Registration Certificate",
+            "zh": "基金会注册证书"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "hubungikami",
         "price_label": "Hubungi Kami",
-        "excerpt": "...",
+        "excerpt": {
+            "id": "...",
+            "en": "...",
+            "zh": "..."
+        },
         "detail_path": "/perizinan-lainnya/5",
         "image": "",
-        "penjelasan_umum": [
-            "Tanda Daftar Yayasan (TDY) merupakan dokumen registrasi yang diberikan kepada yayasan yang melaksanakan kegiatan kesejahteraan sosial sebagai bentuk pengakuan administratif dari Pemerintah Daerah.",
-            "Melalui pendaftaran tersebut, pemerintah dapat melakukan pembinaan, pengawasan, serta pemetaan terhadap yayasan yang aktif menjalankan program sosial di wilayah DKI Jakarta."
-        ],
-        "fungsi_strategis": {
-            "title": "KEWAJIBAN PENDAFTARAN",
-            "desc": "Secara umum, kewajiban pendaftaran berlaku bagi yayasan yang melaksanakan kegiatan di bidang kesejahteraan sosial, antara lain:",
-            "items": [
-                "Yayasan sosial;",
-                "Yayasan pengelola panti asuhan;",
-                "Yayasan pelayanan lanjut usia;",
-                "Yayasan rehabilitasi sosial;",
-                "Yayasan pelayanan disabilitas;",
-                "Yayasan kemanusiaan;",
-                "Yayasan pemberdayaan masyarakat;",
-                "Yayasan yang mengelola program bantuan sosial;",
-                "Yayasan sosial berbasis keagamaan."
+        "penjelasan_umum": {
+            "id": [
+                "Tanda Daftar Yayasan (TDY) merupakan dokumen registrasi yang diberikan kepada yayasan yang melaksanakan kegiatan kesejahteraan sosial sebagai bentuk pengakuan administratif dari Pemerintah Daerah.",
+                "Melalui pendaftaran tersebut, pemerintah dapat melakukan pembinaan, pengawasan, serta pemetaan terhadap yayasan yang aktif menjalankan program sosial di wilayah DKI Jakarta."
             ],
-            "note": ""
+            "en": [
+                "The Foundation Registration Certificate (TDY) is a registration document given to foundations that carry out social welfare activities as a form of administrative recognition from the Regional Government.",
+                "Through this registration, the government can provide guidance, supervision, and mapping of foundations actively running social programs in the DKI Jakarta area."
+            ],
+            "zh": [
+                "基金会注册证书（TDY）是颁发给开展社会福利活动的基金会的注册文件，作为地方政府的行政认可形式。",
+                "通过该注册，政府能够对在雅加达首都特区积极开展社会项目的基金会进行辅导、监督及摸底。"
+            ]
         },
-        "dokumen_didapat": [],
+        "fungsi_strategis": {
+            "title": {
+                "id": "KEWAJIBAN PENDAFTARAN",
+                "en": "REGISTRATION OBLIGATION",
+                "zh": "登记义务"
+            },
+            "desc": {
+                "id": "Secara umum, kewajiban pendaftaran berlaku bagi yayasan yang melaksanakan kegiatan di bidang kesejahteraan sosial, antara lain:",
+                "en": "In general, the registration obligation applies to foundations that carry out activities in the field of social welfare, including:",
+                "zh": "一般而言，登记义务适用于在社会福利领域开展活动的基金会，包括："
+            },
+            "items": {
+                "id": [
+                    "Yayasan sosial;",
+                    "Yayasan pengelola panti asuhan;",
+                    "Yayasan pelayanan lanjut usia;",
+                    "Yayasan rehabilitasi sosial;",
+                    "Yayasan pelayanan disabilitas;",
+                    "Yayasan kemanusiaan;",
+                    "Yayasan pemberdayaan masyarakat;",
+                    "Yayasan yang mengelola program bantuan sosial;",
+                    "Yayasan sosial berbasis keagamaan."
+                ],
+                "en": [
+                    "Social foundations;",
+                    "Foundations managing orphanages;",
+                    "Elderly care foundations;",
+                    "Social rehabilitation foundations;",
+                    "Disability service foundations;",
+                    "Humanitarian foundations;",
+                    "Community empowerment foundations;",
+                    "Foundations managing social assistance programs;",
+                    "Faith-based social foundations."
+                ],
+                "zh": [
+                    "社会基金会；",
+                    "管理孤儿院的基金会；",
+                    "老年服务基金会；",
+                    "社会康复基金会；",
+                    "残疾人服务基金会；",
+                    "人道主义基金会；",
+                    "社区赋能基金会；",
+                    "管理社会援助项目的基金会；",
+                    "宗教背景的社会基金会。"
+                ]
+            },
+            "note": {
+                "id": "",
+                "en": "",
+                "zh": ""
+            }
+        },
+        "dokumen_didapat": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "syarat": {},
         "rincian_biaya": {
-            "items": [{ "label": "", "amount": "" }],
-            "total_label": "Tanda Daftar Yayasan",
+            "items": {
+                "id": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "zh": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ]
+            },
+            "total_label": {
+                "id": "Tanda Daftar Yayasan",
+                "en": "Foundation Registration Certificate",
+                "zh": "基金会注册证书"
+            },
             "total_amount": "Hubungi Kami"
         },
-        "dasar_hukum": [
-            "Undang-Undang Nomor 16 Tahun 2001 tentang Yayasan, sebagaimana telah diubah dengan Undang-Undang Nomor 28 Tahun 2004.",
-            "Undang-Undang Nomor 11 Tahun 2009 tentang Kesejahteraan Sosial",
-            "Undang-Undang Nomor 25 Tahun 2009 tentang Pelayanan Publik",
-            "Peraturan Pemerintah Nomor 39 Tahun 2012 tentang Penyelenggaraan Kesejahteraan Sosial",
-            "Peraturan Gubernur Provinsi DKI Jakarta Nomor 6 Tahun 2012 tentang Tata Cara Pendaftaran Lembaga Kesejahteraan Sosial    "
-        ],
-        "faq": []
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 16 Tahun 2001 tentang Yayasan, sebagaimana telah diubah dengan Undang-Undang Nomor 28 Tahun 2004.",
+                "Undang-Undang Nomor 11 Tahun 2009 tentang Kesejahteraan Sosial",
+                "Undang-Undang Nomor 25 Tahun 2009 tentang Pelayanan Publik",
+                "Peraturan Pemerintah Nomor 39 Tahun 2012 tentang Penyelenggaraan Kesejahteraan Sosial",
+                "Peraturan Gubernur Provinsi DKI Jakarta Nomor 6 Tahun 2012 tentang Tata Cara Pendaftaran Lembaga Kesejahteraan Sosial    "
+            ],
+            "en": [
+                "Law Number 16 of 2001 concerning Foundations, as amended by Law Number 28 of 2004.",
+                "Law Number 11 of 2009 concerning Social Welfare",
+                "Law Number 25 of 2009 concerning Public Services",
+                "Government Regulation Number 39 of 2012 concerning the Implementation of Social Welfare",
+                "Regulation of the Governor of DKI Jakarta Province Number 6 of 2012 concerning Procedures for Registration of Social Welfare Institutions"
+            ],
+            "zh": [
+                "2001年第16号法律关于基金会，经2004年第28号法律修订。",
+                "2009年第11号法律关于社会福利",
+                "2009年第25号法律关于公共服务",
+                "2012年第39号政府法规关于社会福利的实施",
+                "雅加达首都特区省长2012年第6号条例，关于社会福利机构注册程序"
+            ]
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 6,
-        "name": "Peraturan Perusahaan",
-        "tag": "Paling Diminati",
+        "name": {
+            "id": "Peraturan Perusahaan",
+            "en": "Company Regulations",
+            "zh": "公司规章制度"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
         "price": "hubungikami",
         "price_label": "Hubungi Kami",
-        "excerpt": "...",
+        "excerpt": {
+            "id": "...",
+            "en": "...",
+            "zh": "..."
+        },
         "detail_path": "/perizinan-lainnya/4",
         "image": "",
-        "penjelasan_umum": [
-            "Peraturan Perusahaan adalah peraturan tertulis yang dibuat oleh pengusaha yang memuat syarat kerja, hak dan kewajiban pekerja serta pengusaha, tata tertib perusahaan, dan ketentuan lain yang mengatur hubungan kerja di dalam perusahaan.",
-            "Peraturan Perusahaan berlaku bagi seluruh pekerja dan manajemen perusahaan serta menjadi pedoman resmi dalam pelaksanaan hubungan industrial sehari-hari. Sesuai ketentuan perundang-undangan, Peraturan Perusahaan wajib disahkan oleh instansi yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan sebelum diberlakukan."
-        ],
-        "fungsi_strategis": {
-            "title": "KEWAJIBAN MENYUSUN PERATURAN",
-            "desc": "Perusahaan wajib menyusun Peraturan Perusahaan apabila:",
-            "items": [
-                "Mempekerjakan sekurang-kurangnya 10 (sepuluh) orang pekerja atau lebih;;",
-                "Belum memiliki Perjanjian Kerja Bersama (PKB) dengan serikat pekerja/serikat buruh;",
-                "Menjalankan kegiatan usaha secara berkelanjutan baik berbentuk Perseroan Terbatas, CV, Firma, Yayasan, Koperasi, maupun bentuk badan usaha lainnya."
+        "penjelasan_umum": {
+            "id": [
+                "Peraturan Perusahaan adalah peraturan tertulis yang dibuat oleh pengusaha yang memuat syarat kerja, hak dan kewajiban pekerja serta pengusaha, tata tertib perusahaan, dan ketentuan lain yang mengatur hubungan kerja di dalam perusahaan.",
+                "Peraturan Perusahaan berlaku bagi seluruh pekerja dan manajemen perusahaan serta menjadi pedoman resmi dalam pelaksanaan hubungan industrial sehari-hari. Sesuai ketentuan perundang-undangan, Peraturan Perusahaan wajib disahkan oleh instansi yang menyelenggarakan urusan pemerintahan di bidang ketenagakerjaan sebelum diberlakukan."
             ],
-            "note": ""
-        },
-        "dokumen_didapat": [],
-        "syarat": {},
-        "peraturan_perusahaan": {
-            "intro": "Peraturan Perusahaan sekurang-kurangnya memuat:",
-            "items": [
-                {
-                    "title": "Hak dan Kewajiban Pengusaha",
-                    "bullets": [
-                        "Penyediaan lingkungan kerja yang aman;",
-                        "Pembayaran upah dan fasilitas kerja;",
-                        "Perlindungan keselamatan dan kesehatan kerja;",
-                        "Kepesertaan program jaminan sosial ketenagakerjaan."
-                    ],
-                    "note": ""
-                },
-                {
-                    "title": "Hak dan Kewajiban Pekerja",
-                    "bullets": [
-                        "Kepatuhan terhadap tata tertib perusahaan;",
-                        "Pelaksanaan pekerjaan sesuai jabatan;",
-                        "Menjaga kerahasiaan perusahaan;",
-                        "Mematuhi ketentuan keselamatan kerja."
-                    ],
-                    "note": ""
-                },
-                {
-                    "title": "Syarat Kerja",
-                    "bullets": [
-                        "Jam kerja;",
-                        "Hari kerja;",
-                        "Sistem kerja;",
-                        "Pengupahan;",
-                        "Tunjangan;",
-                        "Lembur;",
-                        "Cuti dan izin."
-                    ],
-                    "note": ""
-                },
-                {
-                    "title": "Tata Tertib Perusahaan",
-                    "bullets": [
-                        "Standar perilaku kerja;",
-                        "Larangan dan kewajiban pekerja;",
-                        "Penggunaan fasilitas perusahaan;",
-                        "Etika kerja dan kepatuhan internal."
-                    ],
-                    "note": ""
-                },
-                {
-                    "title": "Mekanisme Sanksi Disiplin",
-                    "bullets": [],
-                    "note": "Mengatur jenis pelanggaran dan tindakan disiplin yang dapat diterapkan perusahaan sesuai ketentuan hukum yang berlaku."
-                },
-                {
-                    "title": "Jangka Waktu Berlaku",
-                    "bullets": [],
-                    "note": "Peraturan Perusahaan berlaku paling lama 2 (dua) tahun dan wajib diperbaharui atau diajukan kembali untuk memperoleh pengesahan."
-                }
+            "en": [
+                "Company Regulations are written rules made by the employer that contain working conditions, the rights and obligations of workers and the employer, company rules of conduct, and other provisions governing employment relations within the company.",
+                "Company Regulations apply to all workers and company management and serve as the official guideline for the day-to-day implementation of industrial relations. In accordance with statutory provisions, Company Regulations must be ratified by the government agency responsible for manpower affairs before they take effect."
+            ],
+            "zh": [
+                "公司规章制度是由雇主制定的书面规定，内容包括工作条件、劳资双方的权利与义务、公司纪律及其他规范公司内部劳动关系的规定。",
+                "公司规章制度适用于全体员工及公司管理层，并作为日常劳动关系实施的正式指南。根据法律法规规定，公司规章制度在生效前须经负责劳动事务的政府机构批准。"
             ]
         },
+        "fungsi_strategis": {
+            "title": {
+                "id": "KEWAJIBAN MENYUSUN PERATURAN",
+                "en": "OBLIGATION TO PREPARE REGULATIONS",
+                "zh": "制定规章制度的义务"
+            },
+            "desc": {
+                "id": "Perusahaan wajib menyusun Peraturan Perusahaan apabila:",
+                "en": "A company is required to prepare Company Regulations if:",
+                "zh": "公司须在以下情况下制定公司规章制度："
+            },
+            "items": {
+                "id": [
+                    "Mempekerjakan sekurang-kurangnya 10 (sepuluh) orang pekerja atau lebih;;",
+                    "Belum memiliki Perjanjian Kerja Bersama (PKB) dengan serikat pekerja/serikat buruh;",
+                    "Menjalankan kegiatan usaha secara berkelanjutan baik berbentuk Perseroan Terbatas, CV, Firma, Yayasan, Koperasi, maupun bentuk badan usaha lainnya."
+                ],
+                "en": [
+                    "Employs at least 10 (ten) workers or more;",
+                    "Does not yet have a Collective Labor Agreement (PKB) with a labor union/trade union;",
+                    "Continuously conducts business activities, whether in the form of a Limited Liability Company, CV, Firma, Foundation, Cooperative, or other forms of business entity."
+                ],
+                "zh": [
+                    "雇佣至少10（十）名员工或以上；",
+                    "尚未与工会/劳工联盟签订集体劳动协议（PKB）；",
+                    "持续开展经营活动，无论是有限责任公司、CV、Firma、基金会、合作社，还是其他企业形式。"
+                ]
+            },
+            "note": {
+                "id": "",
+                "en": "",
+                "zh": ""
+            }
+        },
+        "dokumen_didapat": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "syarat": {},
+        "peraturan_perusahaan": {
+            "intro": {
+                "id": "Peraturan Perusahaan sekurang-kurangnya memuat:",
+                "en": "Company Regulations must at least contain:",
+                "zh": "公司规章制度至少须包含："
+            },
+            "items": {
+                "id": [
+                    {
+                        "title": "Hak dan Kewajiban Pengusaha",
+                        "bullets": [
+                            "Penyediaan lingkungan kerja yang aman;",
+                            "Pembayaran upah dan fasilitas kerja;",
+                            "Perlindungan keselamatan dan kesehatan kerja;",
+                            "Kepesertaan program jaminan sosial ketenagakerjaan."
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "Hak dan Kewajiban Pekerja",
+                        "bullets": [
+                            "Kepatuhan terhadap tata tertib perusahaan;",
+                            "Pelaksanaan pekerjaan sesuai jabatan;",
+                            "Menjaga kerahasiaan perusahaan;",
+                            "Mematuhi ketentuan keselamatan kerja."
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "Syarat Kerja",
+                        "bullets": [
+                            "Jam kerja;",
+                            "Hari kerja;",
+                            "Sistem kerja;",
+                            "Pengupahan;",
+                            "Tunjangan;",
+                            "Lembur;",
+                            "Cuti dan izin."
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "Tata Tertib Perusahaan",
+                        "bullets": [
+                            "Standar perilaku kerja;",
+                            "Larangan dan kewajiban pekerja;",
+                            "Penggunaan fasilitas perusahaan;",
+                            "Etika kerja dan kepatuhan internal."
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "Mekanisme Sanksi Disiplin",
+                        "bullets": [],
+                        "note": "Mengatur jenis pelanggaran dan tindakan disiplin yang dapat diterapkan perusahaan sesuai ketentuan hukum yang berlaku."
+                    },
+                    {
+                        "title": "Jangka Waktu Berlaku",
+                        "bullets": [],
+                        "note": "Peraturan Perusahaan berlaku paling lama 2 (dua) tahun dan wajib diperbaharui atau diajukan kembali untuk memperoleh pengesahan."
+                    }
+                ],
+                "en": [
+                    {
+                        "title": "Employer's Rights and Obligations",
+                        "bullets": [
+                            "Provision of a safe working environment;",
+                            "Payment of wages and work facilities;",
+                            "Occupational safety and health protection;",
+                            "Participation in the employment social security program."
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "Workers' Rights and Obligations",
+                        "bullets": [
+                            "Compliance with company rules of conduct;",
+                            "Performing work in accordance with the position held;",
+                            "Maintaining company confidentiality;",
+                            "Complying with occupational safety provisions."
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "Working Conditions",
+                        "bullets": [
+                            "Working hours;",
+                            "Working days;",
+                            "Work system;",
+                            "Wages;",
+                            "Allowances;",
+                            "Overtime;",
+                            "Leave and permits."
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "Company Rules of Conduct",
+                        "bullets": [
+                            "Standards of work conduct;",
+                            "Worker prohibitions and obligations;",
+                            "Use of company facilities;",
+                            "Work ethics and internal compliance."
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "Disciplinary Sanction Mechanism",
+                        "bullets": [],
+                        "note": "Regulates the types of violations and disciplinary actions that the company may impose in accordance with applicable legal provisions."
+                    },
+                    {
+                        "title": "Validity Period",
+                        "bullets": [],
+                        "note": "Company Regulations are valid for a maximum of 2 (two) years and must be renewed or resubmitted for ratification."
+                    }
+                ],
+                "zh": [
+                    {
+                        "title": "雇主的权利与义务",
+                        "bullets": [
+                            "提供安全的工作环境；",
+                            "支付工资及工作设施；",
+                            "职业安全与健康保护；",
+                            "参加劳动社会保险计划。"
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "员工的权利与义务",
+                        "bullets": [
+                            "遵守公司纪律；",
+                            "按照职位履行工作职责；",
+                            "保守公司机密；",
+                            "遵守职业安全规定。"
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "工作条件",
+                        "bullets": [
+                            "工作时间；",
+                            "工作日；",
+                            "工作制度；",
+                            "薪酬；",
+                            "津贴；",
+                            "加班；",
+                            "休假与请假。"
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "公司纪律",
+                        "bullets": [
+                            "工作行为标准；",
+                            "员工的禁止事项及义务；",
+                            "公司设施的使用；",
+                            "职业道德与内部合规。"
+                        ],
+                        "note": ""
+                    },
+                    {
+                        "title": "纪律处分机制",
+                        "bullets": [],
+                        "note": "规定公司可依据现行法律规定实施的违规类型及纪律处分措施。"
+                    },
+                    {
+                        "title": "有效期",
+                        "bullets": [],
+                        "note": "公司规章制度的有效期最长为2（二）年，须重新更新或提交以获得批准。"
+                    }
+                ]
+            }
+        },
         "rincian_biaya": {
-            "items": [{ "label": "", "amount": "" }],
-            "total_label": "Peraturan Perusahaan",
+            "items": {
+                "id": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ],
+                "zh": [
+                    {
+                        "label": "",
+                        "amount": ""
+                    }
+                ]
+            },
+            "total_label": {
+                "id": "Peraturan Perusahaan",
+                "en": "Company Regulations",
+                "zh": "公司规章制度"
+            },
             "total_amount": "Hubungi Kami"
         },
-        "dasar_hukum": [
-            "Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan, khususnya Pasal 108 sampai dengan Pasal 111 mengenai Peraturan Perusahaan.",
-            "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang.",
-            "Peraturan Menteri Ketenagakerjaan Nomor 28 Tahun 2014 tentang Tata Cara Pembuatan dan Pengesahan Peraturan Perusahaan serta Pembuatan dan Pendaftaran Perjanjian Kerja Bersama.",
-            "Peraturan Pemerintah Nomor 35 Tahun 2021 yang mengatur berbagai ketentuan hubungan kerja, waktu kerja, PKWT, alih daya, dan pemutusan hubungan kerja yang perlu diakomodasi dalam penyusunan Peraturan Perusahaan."
-        ],
-        "faq": []
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan, khususnya Pasal 108 sampai dengan Pasal 111 mengenai Peraturan Perusahaan.",
+                "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang.",
+                "Peraturan Menteri Ketenagakerjaan Nomor 28 Tahun 2014 tentang Tata Cara Pembuatan dan Pengesahan Peraturan Perusahaan serta Pembuatan dan Pendaftaran Perjanjian Kerja Bersama.",
+                "Peraturan Pemerintah Nomor 35 Tahun 2021 yang mengatur berbagai ketentuan hubungan kerja, waktu kerja, PKWT, alih daya, dan pemutusan hubungan kerja yang perlu diakomodasi dalam penyusunan Peraturan Perusahaan."
+            ],
+            "en": [
+                "Law Number 13 of 2003 concerning Manpower, specifically Articles 108 to 111 concerning Company Regulations.",
+                "Law Number 6 of 2023 on the Enactment of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law.",
+                "Regulation of the Minister of Manpower Number 28 of 2014 concerning Procedures for the Preparation and Ratification of Company Regulations as well as the Preparation and Registration of Collective Labor Agreements.",
+                "Government Regulation Number 35 of 2021 which regulates various provisions on employment relations, working hours, fixed-term employment contracts (PKWT), outsourcing, and termination of employment that need to be accommodated in the preparation of Company Regulations."
+            ],
+            "zh": [
+                "2003年第13号法律关于劳动力，特别是第108条至第111条关于公司规章制度。",
+                "2023年第6号法律关于将2022年第2号代替法律的政府条例确立为法律。",
+                "劳动部长2014年第28号条例，关于公司规章制度的制定和批准程序，以及集体劳动协议的制定和登记。",
+                "2021年第35号政府法规，规范劳动关系、工作时间、定期劳动合同（PKWT）、外包及解雇的各项规定，这些内容需在制定公司规章制度时予以考虑。"
+            ]
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]

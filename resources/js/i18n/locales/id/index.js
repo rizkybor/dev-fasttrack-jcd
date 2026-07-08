@@ -18,11 +18,13 @@ import penutupanBadanUsaha from './services/penutupan-badan-usaha'
 import keimigrasianWniWna from './services/keimigrasian-wni-wna'
 import visaMancanegara from './services/visa-mancanegara'
 import perpajakanDanPembukuan from './services/perpajakan-dan-pembukuan'
+import layanan from './services/layanan'
 
 export default {
     common,
     home,
     services: {
+        layanan,
         badanUsaha,
         badanUsahaDetail,
         kantorPerwakilan,

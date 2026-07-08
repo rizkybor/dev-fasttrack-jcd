@@ -1,1047 +1,2759 @@
 [
     {
         "id": 1,
-        "name": "Kantor Perwakilan Perusahaan Asing (KPPA)",
-        "tag": "Paling Diminati",
         "price": "4500000",
         "price_label": "Rp 4.500.000",
-        "duration": "Estimasi 7-14 hari kerja",
-        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
-        "excerpt": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Kantor Perwakilan Perusahaan Asing yang selanjutnya disingkat KPPA adalah kantor yang dipimpin oleh 1 (satu) atau lebih perseorangan warga negara asing atau warga negara Indonesia yang ditunjuk oleh perusahaan asing atau gabungan perusahaan asing di luar negeri sebagai perwakilannya di Indonesia."
-        ],
-        "term_condition": [
-            {
-                "title": "Kegiatan bersifat limitatif antara lain :",
-                "description": "",
-                "notes": [
-                    "Sebagai pengawas, penghubung, koordinator, dan mengurus kepentingan perusahaan atau perusahaan-perusahaan afiliasinya;",
-                    "Mempersiapkan pendirian dan Pengembangan Usaha perusahaan PMA di Indonesia;",
-                    "Berlokasi di gedung perkantoran di ibu kota provinsi;",
-                    "Tidak mencari sesuatu penghasilan dari sumber di Indonesia termasuk tidak dibenarkan melaksanakan kegiatan atau melakukan sesuatu perikatan/ transaksi penjualan dan pembelian barang atau jasa komersial antara perusahaan induk dengan perusahaan atau perseorangan di dalam negeri; dan",
-                    "Tidak ikut serta dalam bentuk apapun dalam pengelolaan sesuatu perusahaan, anak perusahaan atau cabang perusahaan yang ada di Indonesia."
-                ]
-            },
-            {
-                "title": "Kepala perwakilan perusahaan asing harus memenuhi ketentuan sebagai berikut ketentuan:",
-                "description": "",
-                "notes": [
-                    "Wajib bertempat tinggal di Indonesia;",
-                    "Wajib bertanggung jawab penuh atas kelancaran jalannya kantor;",
-                    "Tidak dibenarkan melakukan kegiatan di luar kegiatan KPPA sebagaimana dimaksud pada ayat (3); dan",
-                    "Tidak dibenarkan merangkap jabatan sebagai direksi perusahaan dan/atau kepala perwakilan di KPPA lainnya."
-                ],
-                "notes_extra": {
-                    "label": "Dalam hal kepala KPPA yang ditunjuk adalah warga negara asing dan/atau mempekerjakan tenaga kerja asing, KPPA harus mempekerjakan tenaga kerja Indonesia sesuai dengan ketentuan peraturan perundang-undangan.",
-                    "items": []
-                }
-            }
-        ],
-        "benefits": [],
-        "requirements": [
-            {
-                "title": "Data Kepala Perwakilan",
-                "sections": [
-                    {
-                        "label": "",
-                        "groups": [
-                            {
-                                "label": "Document:",
-                                "notes": [
-                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                    "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-                                ]
-                            },
-                            {
-                                "label": "Data:",
-                                "notes": ["Nomor telepon", "Alamat email"]
-                            }
-                        ]
+        "image": "",
+        "name": {
+            "id": "Kantor Perwakilan Perusahaan Asing (KPPA)",
+            "en": "Foreign Company Representative Office (KPPA)",
+            "zh": "外国公司代表处（KPPA）"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 working days",
+            "zh": "预计7-14个工作日"
+        },
+        "description": {
+            "id": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
+            "en": "Establishment of an official representative office for foreign companies that want to have a legal presence in Indonesia.",
+            "zh": "为希望在印度尼西亚拥有合法存在的外国公司提供正式代表处设立服务。"
+        },
+        "excerpt": {
+            "id": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
+            "en": "Establishment package for businesses requiring a separate legal entity, liability protection, and expansion readiness.",
+            "zh": "适合需要独立法律实体、责任保护和扩展准备的企业的设立套餐。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适合初创企业、代理机构、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Kantor Perwakilan Perusahaan Asing yang selanjutnya disingkat KPPA adalah kantor yang dipimpin oleh 1 (satu) atau lebih perseorangan warga negara asing atau warga negara Indonesia yang ditunjuk oleh perusahaan asing atau gabungan perusahaan asing di luar negeri sebagai perwakilannya di Indonesia."
+            ],
+            "en": [
+                "A Foreign Company Representative Office, hereinafter abbreviated as KPPA, is an office headed by 1 (one) or more individuals, whether foreign citizens or Indonesian citizens, appointed by a foreign company or a consortium of foreign companies abroad as its representative in Indonesia."
+            ],
+            "zh": [
+                "外国公司代表处（以下简称KPPA）是由一名或多名外籍或印尼籍个人担任负责人的办事处，该负责人由境外的外国公司或外国公司联合体指定，作为其在印度尼西亚的代表。"
+            ]
+        },
+        "term_condition": {
+            "id": [
+                {
+                    "title": "Kegiatan bersifat limitatif antara lain :",
+                    "description": "",
+                    "notes": [
+                        "Sebagai pengawas, penghubung, koordinator, dan mengurus kepentingan perusahaan atau perusahaan-perusahaan afiliasinya;",
+                        "Mempersiapkan pendirian dan Pengembangan Usaha perusahaan PMA di Indonesia;",
+                        "Berlokasi di gedung perkantoran di ibu kota provinsi;",
+                        "Tidak mencari sesuatu penghasilan dari sumber di Indonesia termasuk tidak dibenarkan melaksanakan kegiatan atau melakukan sesuatu perikatan/ transaksi penjualan dan pembelian barang atau jasa komersial antara perusahaan induk dengan perusahaan atau perseorangan di dalam negeri; dan",
+                        "Tidak ikut serta dalam bentuk apapun dalam pengelolaan sesuatu perusahaan, anak perusahaan atau cabang perusahaan yang ada di Indonesia."
+                    ]
+                },
+                {
+                    "title": "Kepala perwakilan perusahaan asing harus memenuhi ketentuan sebagai berikut ketentuan:",
+                    "description": "",
+                    "notes": [
+                        "Wajib bertempat tinggal di Indonesia;",
+                        "Wajib bertanggung jawab penuh atas kelancaran jalannya kantor;",
+                        "Tidak dibenarkan melakukan kegiatan di luar kegiatan KPPA sebagaimana dimaksud pada ayat (3); dan",
+                        "Tidak dibenarkan merangkap jabatan sebagai direksi perusahaan dan/atau kepala perwakilan di KPPA lainnya."
+                    ],
+                    "notes_extra": {
+                        "label": "Dalam hal kepala KPPA yang ditunjuk adalah warga negara asing dan/atau mempekerjakan tenaga kerja asing, KPPA harus mempekerjakan tenaga kerja Indonesia sesuai dengan ketentuan peraturan perundang-undangan.",
+                        "items": []
                     }
-                ]
-            },
-            {
-                "title": "Bukti Kepemilikan/Perjanjian Sewa Lokasi Usaha",
-                "notes": [
-                    "Scan copy bewarna.",
-                    "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office."
-                ]
-            },
-            {
-                "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
-                "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab."
-            },
-            {
-                "title": "Letter of Appointment",
-                "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat"
-            },
-            {
-                "title": "Letter of Intent",
-                "description": "Surat Permohonan (Letter of Intent) yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat"
-            },
-            {
-                "title": "Letter of Statement",
-                "description": "Surat Pernyataan (Letter of Statement) dari Kepala Kantor Perwakilan yang menyatakan kesediaan untuk tinggal dan hanya bekerja sebagai Kepala Kantor Perwakilan, tanpa melakukan kegiatan bisnis lainnya di Indonesia yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat (jika chief rep nya WNI maka cukup ttd diatas materai 10.000)"
-            },
-            {
-                "title": "Letter of Reference",
-                "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
-            },
-            {
-                "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
-                "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-            },
-            {
-                "title": "Alamat Kantor/Usaha",
-                "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Nomor Telepon Lokasi Usaha",
-                "description": "Tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Alamat Email Usaha",
-                "description": "Alamat email aktif perusahaan"
-            },
-            {
-                "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
-                "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
-            }
-        ],
-        "process": [
-            {
-                "title": "Konsultasi & Persiapan",
-                "description": "Dokumen dikumpulkan"
-            },
-            {
-                "title": "Pengecekan Nama",
-                "description": "Drafting akta notaris"
-            },
-            {
-                "title": "Proses Kemenkumham",
-                "description": "Pengesahan resmi"
-            },
-            {
-                "title": "Selesai & Dikirim",
-                "description": "Dokumen Anda siap"
-            }
-        ],
-        "faq": [
-            {
-                "question": "Kapan sebaiknya memilih PT?",
-                "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
-            },
-            {
-                "question": "Apakah FastTrack membantu memilih KBLI?",
-                "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
-            }
-        ],
+                }
+            ],
+            "en": [
+                {
+                    "title": "Activities are limited to, among others:",
+                    "description": "",
+                    "notes": [
+                        "Acting as a supervisor, liaison, coordinator, and managing the interests of the company or its affiliated companies;",
+                        "Preparing for the establishment and business development of a foreign investment (PMA) company in Indonesia;",
+                        "Being located in an office building in a provincial capital;",
+                        "Not seeking any income from sources in Indonesia, including not being permitted to carry out activities or enter into any agreement/commercial sale and purchase transaction of goods or services between the parent company and a company or individual within the country; and",
+                        "Not participating in any form in the management of any company, subsidiary, or branch office located in Indonesia."
+                    ]
+                },
+                {
+                    "title": "The head of the foreign company representative office must meet the following requirements:",
+                    "description": "",
+                    "notes": [
+                        "Must reside in Indonesia;",
+                        "Must be fully responsible for the smooth operation of the office;",
+                        "Is not permitted to carry out activities outside of the KPPA activities referred to in paragraph (3); and",
+                        "Is not permitted to concurrently hold a position as a company director and/or head of representative office at another KPPA."
+                    ],
+                    "notes_extra": {
+                        "label": "In the event that the appointed head of the KPPA is a foreign citizen and/or employs foreign workers, the KPPA must employ Indonesian workers in accordance with applicable laws and regulations.",
+                        "items": []
+                    }
+                }
+            ],
+            "zh": [
+                {
+                    "title": "活动范围限于以下事项：",
+                    "description": "",
+                    "notes": [
+                        "作为监督者、联络人、协调人，管理公司或其关联公司的利益；",
+                        "为在印度尼西亚设立及发展外商投资（PMA）公司做准备；",
+                        "位于省会城市的办公大楼内；",
+                        "不得从印度尼西亚境内来源获取任何收入，包括不得进行母公司与境内公司或个人之间的商品或商业服务买卖交易或签订相关协议；且",
+                        "不得以任何形式参与印度尼西亚境内任何公司、子公司或分公司的管理。"
+                    ]
+                },
+                {
+                    "title": "外国公司代表处负责人须符合以下规定：",
+                    "description": "",
+                    "notes": [
+                        "须居住在印度尼西亚；",
+                        "须对办事处的顺利运作全权负责；",
+                        "不得从事第（3）款所述KPPA活动以外的活动；且",
+                        "不得兼任公司董事及/或其他KPPA的代表处负责人职务。"
+                    ],
+                    "notes_extra": {
+                        "label": "若指定的KPPA负责人为外国公民及/或雇用外籍员工，则KPPA须依据现行法律法规雇用印尼籍员工。",
+                        "items": []
+                    }
+                }
+            ]
+        },
+        "benefits": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [
+                {
+                    "title": "Data Kepala Perwakilan",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Document:",
+                                    "notes": [
+                                        "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                        "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Nomor telepon",
+                                        "Alamat email"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Bukti Kepemilikan/Perjanjian Sewa Lokasi Usaha",
+                    "notes": [
+                        "Scan copy bewarna.",
+                        "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office."
+                    ]
+                },
+                {
+                    "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
+                    "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab."
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat"
+                },
+                {
+                    "title": "Letter of Intent",
+                    "description": "Surat Permohonan (Letter of Intent) yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat"
+                },
+                {
+                    "title": "Letter of Statement",
+                    "description": "Surat Pernyataan (Letter of Statement) dari Kepala Kantor Perwakilan yang menyatakan kesediaan untuk tinggal dan hanya bekerja sebagai Kepala Kantor Perwakilan, tanpa melakukan kegiatan bisnis lainnya di Indonesia yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat (jika chief rep nya WNI maka cukup ttd diatas materai 10.000)"
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
+                },
+                {
+                    "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
+                    "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                },
+                {
+                    "title": "Alamat Kantor/Usaha",
+                    "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Nomor Telepon Lokasi Usaha",
+                    "description": "Tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Alamat Email Usaha",
+                    "description": "Alamat email aktif perusahaan"
+                },
+                {
+                    "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
+                    "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Data of the Head of Representative Office",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Documents:",
+                                    "notes": [
+                                        "For Indonesian individuals, please attach a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
+                                        "Foreign individuals: A copy of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Phone number",
+                                        "Email address"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Proof of Ownership/Lease Agreement for Business Location",
+                    "notes": [
+                        "Color scan copy.",
+                        "Required if you already have an office/business location or are not using a Virtual Office service."
+                    ]
+                },
+                {
+                    "title": "Articles of Association (Article of Association/Article of Incorporation) of the Principal/Head Office",
+                    "description": "A color scan of the articles of association in English or its Indonesian translation by a sworn translator or legalized by an Indonesian representative office abroad, along with a copy of the responsible person's passport."
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "A Letter of Appointment that has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Letter of Intent",
+                    "description": "A Letter of Intent that has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Letter of Statement",
+                    "description": "A Letter of Statement from the Head of the Representative Office stating their willingness to reside and work solely as the Head of the Representative Office, without conducting any other business activities in Indonesia, which has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC (if the chief representative is an Indonesian citizen, a signature on IDR 10,000 stamp duty is sufficient)"
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "A Letter of Reference from the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Identity of the Responsible Person / Director of the Principal / Head Office",
+                    "description": "A scan of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                },
+                {
+                    "title": "Office/Business Address",
+                    "description": "Required if you already have an office/business location or are not using a Virtual Office service"
+                },
+                {
+                    "title": "Business Location Phone Number",
+                    "description": "Not using a Virtual Office service"
+                },
+                {
+                    "title": "Business Email Address",
+                    "description": "The company's active email address"
+                },
+                {
+                    "title": "Forms/Documents Completed and Signed by All Parties",
+                    "description": "All drafts and content will be prepared by us after the order is placed and all required documents have been received"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "代表处负责人资料",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "文件：",
+                                    "notes": [
+                                        "印尼籍个人，请附上有效的身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件；及/或",
+                                        "外籍个人：护照复印件须清晰显示姓名、护照持有人签名及护照有效期。"
+                                    ]
+                                },
+                                {
+                                    "label": "资料：",
+                                    "notes": [
+                                        "电话号码",
+                                        "电子邮箱地址"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "营业场所所有权证明/租赁协议",
+                    "notes": [
+                        "彩色扫描件。",
+                        "适用于已拥有办公室/营业场所，或未使用虚拟办公室（Virtual Office）服务的情况。"
+                    ]
+                },
+                {
+                    "title": "总公司/母公司章程（Article of Association/Article of Incorporation）",
+                    "description": "英文公司章程（article of association）彩色扫描件，或经宣誓翻译员翻译成印尼语，或经印度尼西亚驻外代表处认证的翻译件，以及负责人护照复印件。"
+                },
+                {
+                    "title": "委任书（Letter of Appointment）",
+                    "description": "已经公证并经当地印尼大使馆（KBRI）/IIPC确认的委任书（Letter of Appointment）"
+                },
+                {
+                    "title": "意向书（Letter of Intent）",
+                    "description": "已经公证并经当地印尼大使馆（KBRI）/IIPC确认的意向书（Letter of Intent）"
+                },
+                {
+                    "title": "声明书（Letter of Statement）",
+                    "description": "代表处负责人出具的声明书（Letter of Statement），声明其愿意居留并仅以代表处负责人身份工作，不在印尼从事其他任何商业活动，该声明书须经公证并经当地印尼大使馆（KBRI）/IIPC确认（若首席代表为印尼公民，则仅需在10,000印尼盾印花税票上签名即可）"
+                },
+                {
+                    "title": "推荐函（Letter of Reference）",
+                    "description": "由当地印尼大使馆（KBRI）/IIPC出具的推荐函（Letter of Reference）"
+                },
+                {
+                    "title": "总公司/母公司负责人/董事身份证明",
+                    "description": "护照扫描件须清晰显示姓名、护照持有人签名及护照有效期。"
+                },
+                {
+                    "title": "办公室/营业地址",
+                    "description": "适用于已拥有办公室/营业场所，或未使用虚拟办公室（Virtual Office）服务的情况"
+                },
+                {
+                    "title": "营业场所电话号码",
+                    "description": "未使用虚拟办公室（Virtual Office）服务"
+                },
+                {
+                    "title": "企业电子邮箱地址",
+                    "description": "公司有效使用中的电子邮箱地址"
+                },
+                {
+                    "title": "由各方填写并签署的表格/文件",
+                    "description": "所有草案及内容将在订单确认及收到所需文件后由我方准备"
+                }
+            ]
+        },
+        "process": {
+            "id": [
+                {
+                    "title": "Konsultasi & Persiapan",
+                    "description": "Dokumen dikumpulkan"
+                },
+                {
+                    "title": "Pengecekan Nama",
+                    "description": "Drafting akta notaris"
+                },
+                {
+                    "title": "Proses Kemenkumham",
+                    "description": "Pengesahan resmi"
+                },
+                {
+                    "title": "Selesai & Dikirim",
+                    "description": "Dokumen Anda siap"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Consultation & Preparation",
+                    "description": "Documents collected"
+                },
+                {
+                    "title": "Name Verification",
+                    "description": "Notarial deed drafting"
+                },
+                {
+                    "title": "Ministry of Law Process",
+                    "description": "Official ratification"
+                },
+                {
+                    "title": "Completed & Delivered",
+                    "description": "Your documents are ready"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "咨询与准备",
+                    "description": "收集文件"
+                },
+                {
+                    "title": "名称核查",
+                    "description": "起草公证书"
+                },
+                {
+                    "title": "法务部流程",
+                    "description": "正式批准"
+                },
+                {
+                    "title": "完成并交付",
+                    "description": "您的文件已准备就绪"
+                }
+            ]
+        },
+        "faq": {
+            "id": [
+                {
+                    "question": "Kapan sebaiknya memilih PT?",
+                    "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
+                },
+                {
+                    "question": "Apakah FastTrack membantu memilih KBLI?",
+                    "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
+                }
+            ],
+            "en": [
+                {
+                    "question": "When should you choose a PT?",
+                    "answer": "A PT is suitable when a business needs a separate legal entity, a more professional structure, and readiness for broader cooperation."
+                },
+                {
+                    "question": "Does FastTrack help choose KBLI?",
+                    "answer": "Yes, the FastTrack team helps match business activities with the most relevant KBLI to make the legality process safer and more efficient."
+                }
+            ],
+            "zh": [
+                {
+                    "question": "何时应选择PT？",
+                    "answer": "当企业需要独立法律实体、更专业的结构以及更广泛合作准备时，PT是合适的选择。"
+                },
+                {
+                    "question": "FastTrack是否协助选择KBLI？",
+                    "answer": "是的，FastTrack团队帮助将业务活动与最相关的KBLI进行匹配，使合法化流程更安全、更高效。"
+                }
+            ]
+        },
         "plans": [
             {
-                "name": "KPPA  STARTER",
+                "name": {
+                    "id": "KPPA  STARTER",
+                    "en": "KPPA Starter",
+                    "zh": "KPPA 入门版"
+                },
                 "popular": false,
                 "price": "Rp. 4.500.000,-",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                "bonus_note": {
+                    "id": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "en": "FREE Pre and Post-Completion Consultation",
+                    "zh": "免费提供完成前后咨询"
+                },
                 "dokumen": [
                     {
-                        "label": "Pendaftaran OSS",
+                        "label": {
+                            "id": "Pendaftaran OSS",
+                            "en": "OSS Registration",
+                            "zh": "OSS注册"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Induk Berusaha",
+                        "label": {
+                            "id": "Nomor Induk Berusaha",
+                            "en": "Business Identification Number (NIB)",
+                            "zh": "营业执照号码（NIB）"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Izin Kantor Perwakilan Perusahaan Asing",
+                        "label": {
+                            "id": "Izin Kantor Perwakilan Perusahaan Asing",
+                            "en": "Foreign Company Representative Office License",
+                            "zh": "外国公司代表处许可证"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                        "label": {
+                            "id": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                            "en": "Taxpayer Identification Number (NPWP) & Certificate of Registration (SKT)",
+                            "zh": "纳税人识别号(NPWP)及登记证明(SKT)"
+                        },
                         "included": false
                     },
                     {
-                        "label": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                        "label": {
+                            "id": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                            "en": "Virtual Office Address Rental for 1 Year + 5 Hours of Meeting Room per Year",
+                            "zh": "虚拟办公室地址租赁1年+每年5小时会议室使用"
+                        },
                         "included": false
                     }
                 ],
                 "termasuk": [
                     {
-                        "label": "Fasttrack Document Delivery Service",
+                        "label": {
+                            "id": "Fasttrack Document Delivery Service",
+                            "en": "Fasttrack Document Delivery Service",
+                            "zh": "Fasttrack 文件快递服务"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Digital Files Secure Storage",
+                        "label": {
+                            "id": "Fasttrack Digital Files Secure Storage",
+                            "en": "Fasttrack Digital Files Secure Storage",
+                            "zh": "Fasttrack 数字文件安全存储"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Kit",
+                        "label": {
+                            "id": "Fasttrack Kit",
+                            "en": "Fasttrack Kit",
+                            "zh": "Fasttrack 套件"
+                        },
                         "included": true
                     }
                 ],
                 "bonus": [
                     {
-                        "label": "Pembukaan Rekening Bank",
+                        "label": {
+                            "id": "Pembukaan Rekening Bank",
+                            "en": "Bank Account Opening",
+                            "zh": "银行开户"
+                        },
                         "included": false
                     },
                     {
-                        "label": "Stempel Perusahaan",
+                        "label": {
+                            "id": "Stempel Perusahaan",
+                            "en": "Company Stamp",
+                            "zh": "公司印章"
+                        },
                         "included": false
                     }
                 ]
             },
             {
-                "name": "KPPA  STANDART",
+                "name": {
+                    "id": "KPPA  STANDART",
+                    "en": "KPPA Standard",
+                    "zh": "KPPA 标准版"
+                },
                 "popular": true,
                 "price": "Rp. 6.750.000,-",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                "bonus_note": {
+                    "id": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "en": "FREE Pre and Post-Completion Consultation",
+                    "zh": "免费提供完成前后咨询"
+                },
                 "dokumen": [
                     {
-                        "label": "Pendaftaran OSS",
+                        "label": {
+                            "id": "Pendaftaran OSS",
+                            "en": "OSS Registration",
+                            "zh": "OSS注册"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Induk Berusaha",
+                        "label": {
+                            "id": "Nomor Induk Berusaha",
+                            "en": "Business Identification Number (NIB)",
+                            "zh": "营业执照号码（NIB）"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Izin Kantor Perwakilan Perusahaan Asing",
+                        "label": {
+                            "id": "Izin Kantor Perwakilan Perusahaan Asing",
+                            "en": "Foreign Company Representative Office License",
+                            "zh": "外国公司代表处许可证"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                        "label": {
+                            "id": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                            "en": "Taxpayer Identification Number (NPWP) & Certificate of Registration (SKT)",
+                            "zh": "纳税人识别号(NPWP)及登记证明(SKT)"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                        "label": {
+                            "id": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                            "en": "Virtual Office Address Rental for 1 Year + 5 Hours of Meeting Room per Year",
+                            "zh": "虚拟办公室地址租赁1年+每年5小时会议室使用"
+                        },
                         "included": false
                     }
                 ],
                 "termasuk": [
                     {
-                        "label": "Fasttrack Document Delivery Service",
+                        "label": {
+                            "id": "Fasttrack Document Delivery Service",
+                            "en": "Fasttrack Document Delivery Service",
+                            "zh": "Fasttrack 文件快递服务"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Digital Files Secure Storage",
+                        "label": {
+                            "id": "Fasttrack Digital Files Secure Storage",
+                            "en": "Fasttrack Digital Files Secure Storage",
+                            "zh": "Fasttrack 数字文件安全存储"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Kit",
+                        "label": {
+                            "id": "Fasttrack Kit",
+                            "en": "Fasttrack Kit",
+                            "zh": "Fasttrack 套件"
+                        },
                         "included": true
                     }
                 ],
                 "bonus": [
                     {
-                        "label": "Pembukaan Rekening Bank",
+                        "label": {
+                            "id": "Pembukaan Rekening Bank",
+                            "en": "Bank Account Opening",
+                            "zh": "银行开户"
+                        },
                         "included": false
                     },
                     {
-                        "label": "Stempel Perusahaan",
+                        "label": {
+                            "id": "Stempel Perusahaan",
+                            "en": "Company Stamp",
+                            "zh": "公司印章"
+                        },
                         "included": true
                     }
                 ]
             },
             {
-                "name": "KPPA PREMIUM + VO",
+                "name": {
+                    "id": "KPPA PREMIUM + VO",
+                    "en": "KPPA Premium + VO",
+                    "zh": "KPPA 高级版 + VO"
+                },
                 "popular": false,
                 "price": "Rp. 10.500.000,-",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                "bonus_note": {
+                    "id": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "en": "FREE Pre and Post-Completion Consultation",
+                    "zh": "免费提供完成前后咨询"
+                },
                 "dokumen": [
                     {
-                        "label": "Pendaftaran OSS",
+                        "label": {
+                            "id": "Pendaftaran OSS",
+                            "en": "OSS Registration",
+                            "zh": "OSS注册"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Induk Berusaha",
+                        "label": {
+                            "id": "Nomor Induk Berusaha",
+                            "en": "Business Identification Number (NIB)",
+                            "zh": "营业执照号码（NIB）"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Izin Kantor Perwakilan Perusahaan Asing",
+                        "label": {
+                            "id": "Izin Kantor Perwakilan Perusahaan Asing",
+                            "en": "Foreign Company Representative Office License",
+                            "zh": "外国公司代表处许可证"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                        "label": {
+                            "id": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                            "en": "Taxpayer Identification Number (NPWP) & Certificate of Registration (SKT)",
+                            "zh": "纳税人识别号(NPWP)及登记证明(SKT)"
+                        },
                         "included": false
                     },
                     {
-                        "label": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                        "label": {
+                            "id": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                            "en": "Virtual Office Address Rental for 1 Year + 5 Hours of Meeting Room per Year",
+                            "zh": "虚拟办公室地址租赁1年+每年5小时会议室使用"
+                        },
                         "included": true
                     }
                 ],
                 "termasuk": [
                     {
-                        "label": "Fasttrack Document Delivery Service",
+                        "label": {
+                            "id": "Fasttrack Document Delivery Service",
+                            "en": "Fasttrack Document Delivery Service",
+                            "zh": "Fasttrack 文件快递服务"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Digital Files Secure Storage",
+                        "label": {
+                            "id": "Fasttrack Digital Files Secure Storage",
+                            "en": "Fasttrack Digital Files Secure Storage",
+                            "zh": "Fasttrack 数字文件安全存储"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Kit",
+                        "label": {
+                            "id": "Fasttrack Kit",
+                            "en": "Fasttrack Kit",
+                            "zh": "Fasttrack 套件"
+                        },
                         "included": true
                     }
                 ],
                 "bonus": [
                     {
-                        "label": "Pembukaan Rekening Bank",
+                        "label": {
+                            "id": "Pembukaan Rekening Bank",
+                            "en": "Bank Account Opening",
+                            "zh": "银行开户"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Stempel Perusahaan",
+                        "label": {
+                            "id": "Stempel Perusahaan",
+                            "en": "Company Stamp",
+                            "zh": "公司印章"
+                        },
                         "included": true
                     }
                 ]
             }
         ],
-        "plans_alert": [],
-        "dasar_hukum": [
-            "Keputusan Presiden (Keppres) Nomor 90 Tahun 2000 tentang Kantor Perwakilan Perusahaan Asing",
-            "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-            "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);",
-            "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
-        ]
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [
+                "Keputusan Presiden (Keppres) Nomor 90 Tahun 2000 tentang Kantor Perwakilan Perusahaan Asing",
+                "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);",
+                "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
+            ],
+            "en": [
+                "Presidential Decree (Keppres) Number 90 of 2000 concerning Foreign Company Representative Offices",
+                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                "Regulation of the Minister of Investment and Downstreaming/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities through the Online Single Submission System;",
+                "Regulation of the Minister of Investment and Downstreaming/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities through the Online Single Submission System;"
+            ],
+            "zh": [
+                "2000年第90号总统令，关于外国公司代表处",
+                "2025年第28号政府法规，关于基于风险的营业许可实施；",
+                "投资部长/投资协调委员会主席2025年第5号条例，关于通过在线单一提交系统（OSS）实施基于风险的营业许可及投资便利指南和程序；",
+                "投资部长/投资协调委员会主席2025年第5号条例，关于通过在线单一提交系统（OSS）实施基于风险的营业许可及投资便利指南和程序；"
+            ]
+        }
     },
     {
         "id": 2,
-        "name": "Kantor Perwakilan Perusahaan Perdagangan Asing",
-        "tag": "Paling Diminati",
         "price": "4500000",
         "price_label": "Rp 4.500.000",
-        "duration": "Estimasi 7-14 hari kerja",
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
-        "excerpt": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Kantor Perwakilan Perusahaan Perdagangan Asing yang selanjutnya disingkat KP3A adalah kantor yang dipimpin oleh perseorangan warga negara Indonesia atau warga negara asing yang ditunjuk oleh perusahaan asing atau gabungan perusahaan asing di luar negeri sebagai perwakilannya di Indonesia."
-        ],
-        "term_condition": [
-            {
-                "title": "Perwakilan Perusahaan Perdagangan Asing dapat :",
-                "description": "",
-                "notes": [
-                    "Melakukan kegiatan memperkenalkan, mempromosikan, dan memajukan pemasaran barang-barang yang dihasilkan oleh Perusahaan Asing atau Gabungan Perusahaan Asing di luar negeri yang menunjuknya, serta memberikan keterangan-keterangan, atau petunjuk-petunjuk bagi penggunaan dan pengimporan barang kepada perusahaan/pemakai di dalam negeri;",
-                    "Melakukan penelitian pasar dan pengawasan penjualan di dalam negeri dalam rangka pemasaran barang dari Perusahaan Asing atau Gabungan Perusahaan Asing di luar negeri yang menunjuknya;",
-                    "Melakukan penelitian pasar atas barang-barang yang dibutuhkan oleh Perusahaan Asing atau Gabungan Perusahaan Asing di luar negeri yang menunjuknya dan menghubungkan serta memberikan keterangan-keterangan dan petunjuk-petunjuk tentang syarat-syarat pengeksporan barang kepada perusahaan di dalam negeri;",
-                    "Menutup kontrak untuk dan atas nama perusahaan yang menunjuknya dengan perusahaan di dalam negeri dalam rangka ekspor."
-                ],
-                "notes_extra": {
-                    "label": "Dalam hal kepala KP3A yang ditunjuk adalah warga negara asing dan/atau mempekerjakan tenaga kerja asing, KP3A harus mempekerjakan tenaga kerja Indonesia sesuai dengan ketentuan peraturan perundang-undangan. Perwakilan Perusahaan Perdagangan Asing dilarang melakukan kegiatan perdagangan dan transaksi penjualan, baik dari tingkat permulaan sampai dengan penyelesaiannya seperti mengajukan tender, menandatangani kontrak, menyelesaikan klaim dan sejenisnya.",
-                    "items": []
-                }
-            }
-        ],
-        "benefits": [],
-        "requirements": [
-            {
-                "title": "Data Kepala Perwakilan",
-                "sections": [
-                    {
-                        "label": "",
-                        "groups": [
-                            {
-                                "label": "Document:",
-                                "notes": [
-                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                    "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-                                ]
-                            },
-                            {
-                                "label": "Data:",
-                                "notes": ["Nomor telepon", "Alamat email"]
-                            }
-                        ]
+        "name": {
+            "id": "Kantor Perwakilan Perusahaan Perdagangan Asing",
+            "en": "Foreign Trading Company Representative Office (KP3A)",
+            "zh": "外国贸易公司代表处（KP3A）"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 working days",
+            "zh": "预计7-14个工作日"
+        },
+        "description": {
+            "id": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
+            "en": "Establishment of an official representative office for foreign companies that want to have a legal presence in Indonesia.",
+            "zh": "为希望在印度尼西亚拥有合法存在的外国公司提供正式代表处设立服务。"
+        },
+        "excerpt": {
+            "id": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
+            "en": "Establishment package for businesses requiring a separate legal entity, liability protection, and expansion readiness.",
+            "zh": "适合需要独立法律实体、责任保护和扩展准备的企业的设立套餐。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适合初创企业、代理机构、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Kantor Perwakilan Perusahaan Perdagangan Asing yang selanjutnya disingkat KP3A adalah kantor yang dipimpin oleh perseorangan warga negara Indonesia atau warga negara asing yang ditunjuk oleh perusahaan asing atau gabungan perusahaan asing di luar negeri sebagai perwakilannya di Indonesia."
+            ],
+            "en": [
+                "A Foreign Trading Company Representative Office, hereinafter abbreviated as KP3A, is an office headed by an individual, whether an Indonesian citizen or a foreign citizen, appointed by a foreign company or a consortium of foreign companies abroad as its representative in Indonesia."
+            ],
+            "zh": [
+                "外国贸易公司代表处（以下简称KP3A）是由印尼籍或外籍个人担任负责人的办事处，该负责人由境外的外国公司或外国公司联合体指定，作为其在印度尼西亚的代表。"
+            ]
+        },
+        "term_condition": {
+            "id": [
+                {
+                    "title": "Perwakilan Perusahaan Perdagangan Asing dapat :",
+                    "description": "",
+                    "notes": [
+                        "Melakukan kegiatan memperkenalkan, mempromosikan, dan memajukan pemasaran barang-barang yang dihasilkan oleh Perusahaan Asing atau Gabungan Perusahaan Asing di luar negeri yang menunjuknya, serta memberikan keterangan-keterangan, atau petunjuk-petunjuk bagi penggunaan dan pengimporan barang kepada perusahaan/pemakai di dalam negeri;",
+                        "Melakukan penelitian pasar dan pengawasan penjualan di dalam negeri dalam rangka pemasaran barang dari Perusahaan Asing atau Gabungan Perusahaan Asing di luar negeri yang menunjuknya;",
+                        "Melakukan penelitian pasar atas barang-barang yang dibutuhkan oleh Perusahaan Asing atau Gabungan Perusahaan Asing di luar negeri yang menunjuknya dan menghubungkan serta memberikan keterangan-keterangan dan petunjuk-petunjuk tentang syarat-syarat pengeksporan barang kepada perusahaan di dalam negeri;",
+                        "Menutup kontrak untuk dan atas nama perusahaan yang menunjuknya dengan perusahaan di dalam negeri dalam rangka ekspor."
+                    ],
+                    "notes_extra": {
+                        "label": "Dalam hal kepala KP3A yang ditunjuk adalah warga negara asing dan/atau mempekerjakan tenaga kerja asing, KP3A harus mempekerjakan tenaga kerja Indonesia sesuai dengan ketentuan peraturan perundang-undangan. Perwakilan Perusahaan Perdagangan Asing dilarang melakukan kegiatan perdagangan dan transaksi penjualan, baik dari tingkat permulaan sampai dengan penyelesaiannya seperti mengajukan tender, menandatangani kontrak, menyelesaikan klaim dan sejenisnya.",
+                        "items": []
                     }
-                ]
-            },
-            {
-                "title": "Bukti Kepemilikan/Perjanjian Sewa Lokasi Usaha",
-                "notes": [
-                    "Scan copy bewarna.",
-                    "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office."
-                ]
-            },
-            {
-                "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
-                "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab."
-            },
-            {
-                "title": "Letter of Appointment",
-                "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat"
-            },
-            {
-                "title": "Letter of Intent",
-                "description": "Surat Permohonan (Letter of Intent) yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat"
-            },
-            {
-                "title": "Letter of Statement",
-                "description": "Surat Pernyataan (Letter of Statement) dari Kepala Kantor Perwakilan yang menyatakan kesediaan untuk tinggal dan hanya bekerja sebagai Kepala Kantor Perwakilan, tanpa melakukan kegiatan bisnis lainnya di Indonesia yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat (jika chief rep nya WNI maka cukup ttd diatas materai 10.000)"
-            },
-            {
-                "title": "Letter of Reference",
-                "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
-            },
-            {
-                "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
-                "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-            },
-            {
-                "title": "Alamat Kantor/Usaha",
-                "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Nomor Telepon Lokasi Usaha",
-                "description": "Tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Alamat Email Usaha",
-                "description": "Alamat email aktif perusahaan"
-            },
-            {
-                "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
-                "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
-            }
-        ],
-        "process": [
-            {
-                "title": "Konsultasi & Persiapan",
-                "description": "Dokumen dikumpulkan"
-            },
-            {
-                "title": "Pengecekan Nama",
-                "description": "Drafting akta notaris"
-            },
-            {
-                "title": "Proses Kemenkumham",
-                "description": "Pengesahan resmi"
-            },
-            {
-                "title": "Selesai & Dikirim",
-                "description": "Dokumen Anda siap"
-            }
-        ],
-        "faq": [
-            {
-                "question": "Kapan sebaiknya memilih PT?",
-                "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
-            },
-            {
-                "question": "Apakah FastTrack membantu memilih KBLI?",
-                "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
-            }
-        ],
+                }
+            ],
+            "en": [
+                {
+                    "title": "The Foreign Trading Company Representative Office may:",
+                    "description": "",
+                    "notes": [
+                        "Carry out activities to introduce, promote, and advance the marketing of goods produced by the Foreign Company or Consortium of Foreign Companies abroad that appointed it, and provide information or guidance for the use and importation of goods to companies/users within the country;",
+                        "Conduct market research and monitor domestic sales in connection with the marketing of goods from the Foreign Company or Consortium of Foreign Companies abroad that appointed it;",
+                        "Conduct market research on goods needed by the Foreign Company or Consortium of Foreign Companies abroad that appointed it, and liaise with and provide information and guidance on export requirements to domestic companies;",
+                        "Conclude contracts for and on behalf of the company that appointed it with domestic companies for export purposes."
+                    ],
+                    "notes_extra": {
+                        "label": "In the event that the appointed head of the KP3A is a foreign citizen and/or employs foreign workers, the KP3A must employ Indonesian workers in accordance with applicable laws and regulations. The Foreign Trading Company Representative Office is prohibited from carrying out trading activities and sales transactions, from the initial stage through to completion, such as submitting tenders, signing contracts, settling claims, and the like.",
+                        "items": []
+                    }
+                }
+            ],
+            "zh": [
+                {
+                    "title": "外国贸易公司代表处可从事以下活动：",
+                    "description": "",
+                    "notes": [
+                        "开展介绍、推广及促进由指定其的境外外国公司或外国公司联合体所生产商品的营销活动，并向境内企业/使用者提供有关商品使用及进口的信息或指导；",
+                        "为营销指定其的境外外国公司或外国公司联合体的商品，开展市场调研并监督境内销售情况；",
+                        "针对指定其的境外外国公司或外国公司联合体所需商品开展市场调研，并与境内企业联络，提供有关商品出口条件的信息和指导；",
+                        "为出口目的，以指定其的公司的名义与境内公司签订合同。"
+                    ],
+                    "notes_extra": {
+                        "label": "若指定的KP3A负责人为外国公民及/或雇用外籍员工，则KP3A须依据现行法律法规雇用印尼籍员工。外国贸易公司代表处禁止从事贸易活动及销售交易，无论是初始阶段还是完成阶段，例如提交招标、签署合同、处理索赔等类似事宜。",
+                        "items": []
+                    }
+                }
+            ]
+        },
+        "benefits": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [
+                {
+                    "title": "Data Kepala Perwakilan",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Document:",
+                                    "notes": [
+                                        "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                        "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Nomor telepon",
+                                        "Alamat email"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Bukti Kepemilikan/Perjanjian Sewa Lokasi Usaha",
+                    "notes": [
+                        "Scan copy bewarna.",
+                        "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office."
+                    ]
+                },
+                {
+                    "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
+                    "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab."
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat"
+                },
+                {
+                    "title": "Letter of Intent",
+                    "description": "Surat Permohonan (Letter of Intent) yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat"
+                },
+                {
+                    "title": "Letter of Statement",
+                    "description": "Surat Pernyataan (Letter of Statement) dari Kepala Kantor Perwakilan yang menyatakan kesediaan untuk tinggal dan hanya bekerja sebagai Kepala Kantor Perwakilan, tanpa melakukan kegiatan bisnis lainnya di Indonesia yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat (jika chief rep nya WNI maka cukup ttd diatas materai 10.000)"
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
+                },
+                {
+                    "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
+                    "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                },
+                {
+                    "title": "Alamat Kantor/Usaha",
+                    "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Nomor Telepon Lokasi Usaha",
+                    "description": "Tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Alamat Email Usaha",
+                    "description": "Alamat email aktif perusahaan"
+                },
+                {
+                    "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
+                    "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Data of the Head of Representative Office",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Documents:",
+                                    "notes": [
+                                        "For Indonesian individuals, please attach a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
+                                        "Foreign individuals: A copy of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Phone number",
+                                        "Email address"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Proof of Ownership/Lease Agreement for Business Location",
+                    "notes": [
+                        "Color scan copy.",
+                        "Required if you already have an office/business location or are not using a Virtual Office service."
+                    ]
+                },
+                {
+                    "title": "Articles of Association (Article of Association/Article of Incorporation) of the Principal/Head Office",
+                    "description": "A color scan of the articles of association in English or its Indonesian translation by a sworn translator or legalized by an Indonesian representative office abroad, along with a copy of the responsible person's passport."
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "A Letter of Appointment that has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Letter of Intent",
+                    "description": "A Letter of Intent that has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Letter of Statement",
+                    "description": "A Letter of Statement from the Head of the Representative Office stating their willingness to reside and work solely as the Head of the Representative Office, without conducting any other business activities in Indonesia, which has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC (if the chief representative is an Indonesian citizen, a signature on IDR 10,000 stamp duty is sufficient)"
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "A Letter of Reference from the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Identity of the Responsible Person / Director of the Principal / Head Office",
+                    "description": "A scan of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                },
+                {
+                    "title": "Office/Business Address",
+                    "description": "Required if you already have an office/business location or are not using a Virtual Office service"
+                },
+                {
+                    "title": "Business Location Phone Number",
+                    "description": "Not using a Virtual Office service"
+                },
+                {
+                    "title": "Business Email Address",
+                    "description": "The company's active email address"
+                },
+                {
+                    "title": "Forms/Documents Completed and Signed by All Parties",
+                    "description": "All drafts and content will be prepared by us after the order is placed and all required documents have been received"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "代表处负责人资料",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "文件：",
+                                    "notes": [
+                                        "印尼籍个人，请附上有效的身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件；及/或",
+                                        "外籍个人：护照复印件须清晰显示姓名、护照持有人签名及护照有效期。"
+                                    ]
+                                },
+                                {
+                                    "label": "资料：",
+                                    "notes": [
+                                        "电话号码",
+                                        "电子邮箱地址"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "营业场所所有权证明/租赁协议",
+                    "notes": [
+                        "彩色扫描件。",
+                        "适用于已拥有办公室/营业场所，或未使用虚拟办公室（Virtual Office）服务的情况。"
+                    ]
+                },
+                {
+                    "title": "总公司/母公司章程（Article of Association/Article of Incorporation）",
+                    "description": "英文公司章程（article of association）彩色扫描件，或经宣誓翻译员翻译成印尼语，或经印度尼西亚驻外代表处认证的翻译件，以及负责人护照复印件。"
+                },
+                {
+                    "title": "委任书（Letter of Appointment）",
+                    "description": "已经公证并经当地印尼大使馆（KBRI）/IIPC确认的委任书（Letter of Appointment）"
+                },
+                {
+                    "title": "意向书（Letter of Intent）",
+                    "description": "已经公证并经当地印尼大使馆（KBRI）/IIPC确认的意向书（Letter of Intent）"
+                },
+                {
+                    "title": "声明书（Letter of Statement）",
+                    "description": "代表处负责人出具的声明书（Letter of Statement），声明其愿意居留并仅以代表处负责人身份工作，不在印尼从事其他任何商业活动，该声明书须经公证并经当地印尼大使馆（KBRI）/IIPC确认（若首席代表为印尼公民，则仅需在10,000印尼盾印花税票上签名即可）"
+                },
+                {
+                    "title": "推荐函（Letter of Reference）",
+                    "description": "由当地印尼大使馆（KBRI）/IIPC出具的推荐函（Letter of Reference）"
+                },
+                {
+                    "title": "总公司/母公司负责人/董事身份证明",
+                    "description": "护照扫描件须清晰显示姓名、护照持有人签名及护照有效期。"
+                },
+                {
+                    "title": "办公室/营业地址",
+                    "description": "适用于已拥有办公室/营业场所，或未使用虚拟办公室（Virtual Office）服务的情况"
+                },
+                {
+                    "title": "营业场所电话号码",
+                    "description": "未使用虚拟办公室（Virtual Office）服务"
+                },
+                {
+                    "title": "企业电子邮箱地址",
+                    "description": "公司有效使用中的电子邮箱地址"
+                },
+                {
+                    "title": "由各方填写并签署的表格/文件",
+                    "description": "所有草案及内容将在订单确认及收到所需文件后由我方准备"
+                }
+            ]
+        },
+        "process": {
+            "id": [
+                {
+                    "title": "Konsultasi & Persiapan",
+                    "description": "Dokumen dikumpulkan"
+                },
+                {
+                    "title": "Pengecekan Nama",
+                    "description": "Drafting akta notaris"
+                },
+                {
+                    "title": "Proses Kemenkumham",
+                    "description": "Pengesahan resmi"
+                },
+                {
+                    "title": "Selesai & Dikirim",
+                    "description": "Dokumen Anda siap"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Consultation & Preparation",
+                    "description": "Documents collected"
+                },
+                {
+                    "title": "Name Verification",
+                    "description": "Notarial deed drafting"
+                },
+                {
+                    "title": "Ministry of Law Process",
+                    "description": "Official ratification"
+                },
+                {
+                    "title": "Completed & Delivered",
+                    "description": "Your documents are ready"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "咨询与准备",
+                    "description": "收集文件"
+                },
+                {
+                    "title": "名称核查",
+                    "description": "起草公证书"
+                },
+                {
+                    "title": "法务部流程",
+                    "description": "正式批准"
+                },
+                {
+                    "title": "完成并交付",
+                    "description": "您的文件已准备就绪"
+                }
+            ]
+        },
+        "faq": {
+            "id": [
+                {
+                    "question": "Kapan sebaiknya memilih PT?",
+                    "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
+                },
+                {
+                    "question": "Apakah FastTrack membantu memilih KBLI?",
+                    "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
+                }
+            ],
+            "en": [
+                {
+                    "question": "When should you choose a PT?",
+                    "answer": "A PT is suitable when a business needs a separate legal entity, a more professional structure, and readiness for broader cooperation."
+                },
+                {
+                    "question": "Does FastTrack help choose KBLI?",
+                    "answer": "Yes, the FastTrack team helps match business activities with the most relevant KBLI to make the legality process safer and more efficient."
+                }
+            ],
+            "zh": [
+                {
+                    "question": "何时应选择PT？",
+                    "answer": "当企业需要独立法律实体、更专业的结构以及更广泛合作准备时，PT是合适的选择。"
+                },
+                {
+                    "question": "FastTrack是否协助选择KBLI？",
+                    "answer": "是的，FastTrack团队帮助将业务活动与最相关的KBLI进行匹配，使合法化流程更安全、更高效。"
+                }
+            ]
+        },
         "plans": [
             {
-                "name": "KP3A  STARTER",
+                "name": {
+                    "id": "KP3A  STARTER",
+                    "en": "KP3A Starter",
+                    "zh": "KP3A 入门版"
+                },
                 "popular": false,
                 "price": "Rp. 4.500.000,-",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                "bonus_note": {
+                    "id": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "en": "FREE Pre and Post-Completion Consultation",
+                    "zh": "免费提供完成前后咨询"
+                },
                 "dokumen": [
                     {
-                        "label": "Pendaftaran OSS",
+                        "label": {
+                            "id": "Pendaftaran OSS",
+                            "en": "OSS Registration",
+                            "zh": "OSS注册"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Induk Berusaha",
+                        "label": {
+                            "id": "Nomor Induk Berusaha",
+                            "en": "Business Identification Number (NIB)",
+                            "zh": "营业执照号码（NIB）"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Izin Kantor Perwakilan Perusahaan Perdagangan Asing",
+                        "label": {
+                            "id": "Izin Kantor Perwakilan Perusahaan Perdagangan Asing",
+                            "en": "Foreign Trading Company Representative Office License",
+                            "zh": "外国贸易公司代表处许可证"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                        "label": {
+                            "id": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                            "en": "Taxpayer Identification Number (NPWP) & Certificate of Registration (SKT)",
+                            "zh": "纳税人识别号(NPWP)及登记证明(SKT)"
+                        },
                         "included": false
                     },
                     {
-                        "label": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                        "label": {
+                            "id": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                            "en": "Virtual Office Address Rental for 1 Year + 5 Hours of Meeting Room per Year",
+                            "zh": "虚拟办公室地址租赁1年+每年5小时会议室使用"
+                        },
                         "included": false
                     }
                 ],
                 "termasuk": [
                     {
-                        "label": "Fasttrack Document Delivery Service",
+                        "label": {
+                            "id": "Fasttrack Document Delivery Service",
+                            "en": "Fasttrack Document Delivery Service",
+                            "zh": "Fasttrack 文件快递服务"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Digital Files Secure Storage",
+                        "label": {
+                            "id": "Fasttrack Digital Files Secure Storage",
+                            "en": "Fasttrack Digital Files Secure Storage",
+                            "zh": "Fasttrack 数字文件安全存储"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Kit",
+                        "label": {
+                            "id": "Fasttrack Kit",
+                            "en": "Fasttrack Kit",
+                            "zh": "Fasttrack 套件"
+                        },
                         "included": true
                     }
                 ],
                 "bonus": [
                     {
-                        "label": "Pembukaan Rekening Bank",
+                        "label": {
+                            "id": "Pembukaan Rekening Bank",
+                            "en": "Bank Account Opening",
+                            "zh": "银行开户"
+                        },
                         "included": false
                     },
                     {
-                        "label": "Stempel Perusahaan",
+                        "label": {
+                            "id": "Stempel Perusahaan",
+                            "en": "Company Stamp",
+                            "zh": "公司印章"
+                        },
                         "included": false
                     }
                 ]
             },
             {
-                "name": "KP3A STANDART",
+                "name": {
+                    "id": "KP3A STANDART",
+                    "en": "KP3A Standard",
+                    "zh": "KP3A 标准版"
+                },
                 "popular": true,
                 "price": "Rp. 6.750.000,-",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                "bonus_note": {
+                    "id": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "en": "FREE Pre and Post-Completion Consultation",
+                    "zh": "免费提供完成前后咨询"
+                },
                 "dokumen": [
                     {
-                        "label": "Pendaftaran OSS",
+                        "label": {
+                            "id": "Pendaftaran OSS",
+                            "en": "OSS Registration",
+                            "zh": "OSS注册"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Induk Berusaha",
+                        "label": {
+                            "id": "Nomor Induk Berusaha",
+                            "en": "Business Identification Number (NIB)",
+                            "zh": "营业执照号码（NIB）"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Izin Kantor Perwakilan Perusahaan Asing",
+                        "label": {
+                            "id": "Izin Kantor Perwakilan Perusahaan Asing",
+                            "en": "Foreign Company Representative Office License",
+                            "zh": "外国公司代表处许可证"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                        "label": {
+                            "id": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                            "en": "Taxpayer Identification Number (NPWP) & Certificate of Registration (SKT)",
+                            "zh": "纳税人识别号(NPWP)及登记证明(SKT)"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                        "label": {
+                            "id": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                            "en": "Virtual Office Address Rental for 1 Year + 5 Hours of Meeting Room per Year",
+                            "zh": "虚拟办公室地址租赁1年+每年5小时会议室使用"
+                        },
                         "included": false
                     }
                 ],
                 "termasuk": [
                     {
-                        "label": "Fasttrack Document Delivery Service",
+                        "label": {
+                            "id": "Fasttrack Document Delivery Service",
+                            "en": "Fasttrack Document Delivery Service",
+                            "zh": "Fasttrack 文件快递服务"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Digital Files Secure Storage",
+                        "label": {
+                            "id": "Fasttrack Digital Files Secure Storage",
+                            "en": "Fasttrack Digital Files Secure Storage",
+                            "zh": "Fasttrack 数字文件安全存储"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Kit",
+                        "label": {
+                            "id": "Fasttrack Kit",
+                            "en": "Fasttrack Kit",
+                            "zh": "Fasttrack 套件"
+                        },
                         "included": true
                     }
                 ],
                 "bonus": [
                     {
-                        "label": "Pembukaan Rekening Bank",
+                        "label": {
+                            "id": "Pembukaan Rekening Bank",
+                            "en": "Bank Account Opening",
+                            "zh": "银行开户"
+                        },
                         "included": false
                     },
                     {
-                        "label": "Stempel Perusahaan",
+                        "label": {
+                            "id": "Stempel Perusahaan",
+                            "en": "Company Stamp",
+                            "zh": "公司印章"
+                        },
                         "included": true
                     }
                 ]
             },
             {
-                "name": "KP3A PREMIUM + VO",
+                "name": {
+                    "id": "KP3A PREMIUM + VO",
+                    "en": "KP3A Premium + VO",
+                    "zh": "KP3A 高级版 + VO"
+                },
                 "popular": false,
                 "price": "Rp. 10.500.000,-",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                "bonus_note": {
+                    "id": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "en": "FREE Pre and Post-Completion Consultation",
+                    "zh": "免费提供完成前后咨询"
+                },
                 "dokumen": [
                     {
-                        "label": "Pendaftaran OSS",
+                        "label": {
+                            "id": "Pendaftaran OSS",
+                            "en": "OSS Registration",
+                            "zh": "OSS注册"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Induk Berusaha",
+                        "label": {
+                            "id": "Nomor Induk Berusaha",
+                            "en": "Business Identification Number (NIB)",
+                            "zh": "营业执照号码（NIB）"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Izin Kantor Perwakilan Perusahaan Asing",
+                        "label": {
+                            "id": "Izin Kantor Perwakilan Perusahaan Asing",
+                            "en": "Foreign Company Representative Office License",
+                            "zh": "外国公司代表处许可证"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                        "label": {
+                            "id": "Nomor Pokok Wajib Pajak (NPWP) & Surat Keterangan Terdaftar (SKT)",
+                            "en": "Taxpayer Identification Number (NPWP) & Certificate of Registration (SKT)",
+                            "zh": "纳税人识别号(NPWP)及登记证明(SKT)"
+                        },
                         "included": false
                     },
                     {
-                        "label": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                        "label": {
+                            "id": "Sewa Alamat Kantor Virtual 1 tahun + 5 jam meeting room per-tahun",
+                            "en": "Virtual Office Address Rental for 1 Year + 5 Hours of Meeting Room per Year",
+                            "zh": "虚拟办公室地址租赁1年+每年5小时会议室使用"
+                        },
                         "included": true
                     }
                 ],
                 "termasuk": [
                     {
-                        "label": "Fasttrack Document Delivery Service",
+                        "label": {
+                            "id": "Fasttrack Document Delivery Service",
+                            "en": "Fasttrack Document Delivery Service",
+                            "zh": "Fasttrack 文件快递服务"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Digital Files Secure Storage",
+                        "label": {
+                            "id": "Fasttrack Digital Files Secure Storage",
+                            "en": "Fasttrack Digital Files Secure Storage",
+                            "zh": "Fasttrack 数字文件安全存储"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Kit",
+                        "label": {
+                            "id": "Fasttrack Kit",
+                            "en": "Fasttrack Kit",
+                            "zh": "Fasttrack 套件"
+                        },
                         "included": true
                     }
                 ],
                 "bonus": [
                     {
-                        "label": "Pembukaan Rekening Bank",
+                        "label": {
+                            "id": "Pembukaan Rekening Bank",
+                            "en": "Bank Account Opening",
+                            "zh": "银行开户"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Stempel Perusahaan",
+                        "label": {
+                            "id": "Stempel Perusahaan",
+                            "en": "Company Stamp",
+                            "zh": "公司印章"
+                        },
                         "included": true
                     }
                 ]
             }
         ],
-        "plans_alert": [],
-        "dasar_hukum": [
-            "Peraturan Menteri Perdagangan Nomor 10/M-Dag/Per/3/2006 Tahun 2006 tentang Ketentuan dan Tata Cara Penerbitan Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing.",
-            "Peraturan Menteri Perdagangan Nomor 28/M-DAG/PER/6/2010 Tahun 2010 tentang Perubahan atas Peraturan Menteri Perdagangan Nomor 10/M-Dag/Per/3/2006 Tahun 2006 tentang Ketentuan dan Tata Cara Penerbitan Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing.",
-            "Peraturan Menteri Perdagangan Nomor 49 Tahun 2020 tentang Perubahan Kedua atas Peraturan Menteri Perdagangan Nomor 10/M-Dag/Per/3/2006 Tahun 2006 tentang Ketentuan dan Tata Cara Penerbitan Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing;",
-            "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-            "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);",
-            "Peraturan Direktur Jenderal Pajak Nomor Per-7/PJ/2025 Tentang Petunjuk Pelaksanaan Administrasi Nomor Pokok Wajib Pajak, Pengusaha Kena Pajak, Objek Pajak Pajak Bumi Dan Bangunan Serta Perincian Jenis, Dokumen, Dan Saluran Untuk Pelaksanaan Hak Dan Pemenuhan Kewajiban Perpajakan."
-        ]
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [
+                "Peraturan Menteri Perdagangan Nomor 10/M-Dag/Per/3/2006 Tahun 2006 tentang Ketentuan dan Tata Cara Penerbitan Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing.",
+                "Peraturan Menteri Perdagangan Nomor 28/M-DAG/PER/6/2010 Tahun 2010 tentang Perubahan atas Peraturan Menteri Perdagangan Nomor 10/M-Dag/Per/3/2006 Tahun 2006 tentang Ketentuan dan Tata Cara Penerbitan Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing.",
+                "Peraturan Menteri Perdagangan Nomor 49 Tahun 2020 tentang Perubahan Kedua atas Peraturan Menteri Perdagangan Nomor 10/M-Dag/Per/3/2006 Tahun 2006 tentang Ketentuan dan Tata Cara Penerbitan Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing;",
+                "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);",
+                "Peraturan Direktur Jenderal Pajak Nomor Per-7/PJ/2025 Tentang Petunjuk Pelaksanaan Administrasi Nomor Pokok Wajib Pajak, Pengusaha Kena Pajak, Objek Pajak Pajak Bumi Dan Bangunan Serta Perincian Jenis, Dokumen, Dan Saluran Untuk Pelaksanaan Hak Dan Pemenuhan Kewajiban Perpajakan."
+            ],
+            "en": [
+                "Regulation of the Minister of Trade Number 10/M-Dag/Per/3/2006 of 2006 concerning Provisions and Procedures for the Issuance of Business Licenses for Foreign Trading Company Representative Offices.",
+                "Regulation of the Minister of Trade Number 28/M-DAG/PER/6/2010 of 2010 concerning Amendment to Regulation of the Minister of Trade Number 10/M-Dag/Per/3/2006 of 2006 concerning Provisions and Procedures for the Issuance of Business Licenses for Foreign Trading Company Representative Offices.",
+                "Regulation of the Minister of Trade Number 49 of 2020 concerning the Second Amendment to Regulation of the Minister of Trade Number 10/M-Dag/Per/3/2006 of 2006 concerning Provisions and Procedures for the Issuance of Business Licenses for Foreign Trading Company Representative Offices;",
+                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                "Regulation of the Minister of Investment and Downstreaming/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities through the Online Single Submission System;",
+                "Regulation of the Director General of Taxes Number Per-7/PJ/2025 concerning Implementation Guidelines for the Administration of Taxpayer Identification Numbers, Taxable Entrepreneurs, Land and Building Tax Objects, as well as Details of Types, Documents, and Channels for the Exercise of Rights and Fulfillment of Tax Obligations."
+            ],
+            "zh": [
+                "贸易部长2006年第10/M-Dag/Per/3/2006号条例，关于外国贸易公司代表处营业许可证的颁发规定及程序。",
+                "贸易部长2010年第28/M-DAG/PER/6/2010号条例，关于修订2006年第10/M-Dag/Per/3/2006号贸易部长条例关于外国贸易公司代表处营业许可证的颁发规定及程序。",
+                "贸易部长2020年第49号条例，关于第二次修订2006年第10/M-Dag/Per/3/2006号贸易部长条例关于外国贸易公司代表处营业许可证的颁发规定及程序；",
+                "2025年第28号政府法规，关于基于风险的营业许可实施；",
+                "投资部长/投资协调委员会主席2025年第5号条例，关于通过在线单一提交系统（OSS）实施基于风险的营业许可及投资便利指南和程序；",
+                "税务总局局长条例第Per-7/PJ/2025号，关于税务识别号、应税企业家、土地及建筑物税对象的行政实施指南，以及行使权利和履行纳税义务所需的类型、文件和渠道的详细说明。"
+            ]
+        }
     },
     {
         "id": 3,
-        "name": "KP3A Perdagangan Melalui Sistem Elektronik",
-        "tag": "Paling Diminati",
         "price": "3500000",
         "price_label": "Rp 3.500.000",
-        "duration": "Estimasi 7-14 hari kerja",
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
-        "excerpt": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Perdagangan Melalui Sistem Elektronik (PMSE) adalah Perdagangan yang transaksinya dilakukan melalui serangkaian perangkat dan prosedur elektronik, yang dimaksud dengan Sistem Elektronik adalah serangkaian perangkat dan prosedur elektronik yang berfungsi mempersiapkan, mengumpulkan, mengolah, menganalisis, menyimpan, menampilkan, mengumumkan, mengirimkan, dan/atau menyebarkan informasi elektronik.",
-            "Pelaku Usaha Perdagangan Melalui Sistem Elektronik yang selanjutnya disebut Pelaku Usaha adalah setiap orang perseorangan atau badan usaha yang berbentuk badan hukum atau bukan badan hukum yang dapat berupa Pelaku Usaha Dalam Negeri dan Pelaku Usaha Luar Negeri dan melakukan kegiatan usaha di bidang PMSE.",
-            "Penyelenggara Perdagangan Melalui Sistem Elektronik (PPMSE) adalah Pelaku Usaha penyedia sarana Komunikasi Elektronik yang digunakan untuk transaksi Perdagangan.",
-            "Pelaku Usaha yang melakukan kegiatan PPMSE di dalam wilayah Republik Indonesia wajib memiliki NIB dan Perizinan Berusaha Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing di Bidang PMSE yang (SIUP3A Bidang PMSE) sebagai Kantor Perwakilan Perusahaan Perdagangan Asing di Bidang Perdagangan Melalui Sistem Elektronik (KP3A Bidang PMSE)."
-        ],
-        "term_condition": [
-            {
-                "title": "Telah memenuhi kriteria sebagai berikut :",
-                "description": "",
-                "notes": [
-                    "Melakukan transaksi dengan paling sedikit 1.000 (seribu) konsumen dalam periode 1 (satu) tahun;",
-                    "Melakukan pengiriman paling sedikit 1.000 (seribu) paket kepada konsumen dalam periode 1 (satu) tahun; dan/atau",
-                    "Memiliki jumlah traffic atau pengakses paling sedikit 1% (satu persen) dari pengguna internet dalam negeri dalam periode 1 (satu) tahun."
-                ],
-                "notes_extra": {
-                    "label": "",
-                    "items": []
-                }
-            }
-        ],
-        "benefits": [],
-        "requirements": [
-            {
-                "title": "Data Kepala Perwakilan",
-                "sections": [
-                    {
+        "name": {
+            "id": "KP3A Perdagangan Melalui Sistem Elektronik",
+            "en": "KP3A for Trade Through Electronic Systems",
+            "zh": "电子系统贸易KP3A（PMSE领域代表处）"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 working days",
+            "zh": "预计7-14个工作日"
+        },
+        "description": {
+            "id": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
+            "en": "Establishment of an official representative office for foreign companies that want to have a legal presence in Indonesia.",
+            "zh": "为希望在印度尼西亚拥有合法存在的外国公司提供正式代表处设立服务。"
+        },
+        "excerpt": {
+            "id": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
+            "en": "Establishment package for businesses requiring a separate legal entity, liability protection, and expansion readiness.",
+            "zh": "适合需要独立法律实体、责任保护和扩展准备的企业的设立套餐。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适合初创企业、代理机构、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Perdagangan Melalui Sistem Elektronik (PMSE) adalah Perdagangan yang transaksinya dilakukan melalui serangkaian perangkat dan prosedur elektronik, yang dimaksud dengan Sistem Elektronik adalah serangkaian perangkat dan prosedur elektronik yang berfungsi mempersiapkan, mengumpulkan, mengolah, menganalisis, menyimpan, menampilkan, mengumumkan, mengirimkan, dan/atau menyebarkan informasi elektronik.",
+                "Pelaku Usaha Perdagangan Melalui Sistem Elektronik yang selanjutnya disebut Pelaku Usaha adalah setiap orang perseorangan atau badan usaha yang berbentuk badan hukum atau bukan badan hukum yang dapat berupa Pelaku Usaha Dalam Negeri dan Pelaku Usaha Luar Negeri dan melakukan kegiatan usaha di bidang PMSE.",
+                "Penyelenggara Perdagangan Melalui Sistem Elektronik (PPMSE) adalah Pelaku Usaha penyedia sarana Komunikasi Elektronik yang digunakan untuk transaksi Perdagangan.",
+                "Pelaku Usaha yang melakukan kegiatan PPMSE di dalam wilayah Republik Indonesia wajib memiliki NIB dan Perizinan Berusaha Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing di Bidang PMSE yang (SIUP3A Bidang PMSE) sebagai Kantor Perwakilan Perusahaan Perdagangan Asing di Bidang Perdagangan Melalui Sistem Elektronik (KP3A Bidang PMSE)."
+            ],
+            "en": [
+                "Trade Through Electronic Systems (PMSE) is trade whose transactions are conducted through a series of electronic devices and procedures. An Electronic System refers to a series of electronic devices and procedures that function to prepare, collect, process, analyze, store, display, announce, transmit, and/or disseminate electronic information.",
+                "A Trade Through Electronic Systems Business Actor, hereinafter referred to as a Business Actor, is any individual or business entity, whether incorporated or unincorporated, which may be a Domestic Business Actor or a Foreign Business Actor, that conducts business activities in the field of PMSE.",
+                "A Trade Through Electronic Systems Provider (PPMSE) is a Business Actor that provides electronic communication facilities used for trade transactions.",
+                "A Business Actor conducting PPMSE activities within the territory of the Republic of Indonesia must have an NIB and a Business License in the form of a Business License for a Foreign Trading Company Representative Office in the PMSE Field (SIUP3A PMSE Field) as a Foreign Trading Company Representative Office in the Field of Trade Through Electronic Systems (KP3A PMSE Field)."
+            ],
+            "zh": [
+                "电子系统贸易（PMSE）是指通过一系列电子设备和程序进行交易的贸易活动。所谓电子系统，是指用于准备、收集、处理、分析、存储、显示、公布、传输及/或传播电子信息的一系列电子设备和程序。",
+                "电子系统贸易经营者（以下简称经营者）是指从事PMSE领域业务活动的任何个人或企业实体（无论是否具有法人资格），可以是境内经营者或境外经营者。",
+                "电子系统贸易提供者（PPMSE）是指提供用于贸易交易的电子通信设施的经营者。",
+                "在印度尼西亚共和国境内开展PPMSE活动的经营者，须持有NIB（营业识别号）以及作为PMSE领域外国贸易公司代表处（KP3A PMSE领域）所需的营业许可，即PMSE领域外国贸易公司代表处营业许可证（SIUP3A PMSE领域）。"
+            ]
+        },
+        "term_condition": {
+            "id": [
+                {
+                    "title": "Telah memenuhi kriteria sebagai berikut :",
+                    "description": "",
+                    "notes": [
+                        "Melakukan transaksi dengan paling sedikit 1.000 (seribu) konsumen dalam periode 1 (satu) tahun;",
+                        "Melakukan pengiriman paling sedikit 1.000 (seribu) paket kepada konsumen dalam periode 1 (satu) tahun; dan/atau",
+                        "Memiliki jumlah traffic atau pengakses paling sedikit 1% (satu persen) dari pengguna internet dalam negeri dalam periode 1 (satu) tahun."
+                    ],
+                    "notes_extra": {
                         "label": "",
-                        "groups": [
-                            {
-                                "label": "Document:",
-                                "notes": [
-                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                    "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-                                ]
-                            },
-                            {
-                                "label": "Data:",
-                                "notes": ["Nomor telepon", "Alamat email"]
-                            }
-                        ]
+                        "items": []
                     }
-                ]
-            },
-            {
-                "title": "NIB PSE ASING & TDPSE ASING",
-                "description": "Terlebih dahulu Prinsipal Company telah mendaftarkan plarform PMSE sebagai PSE Asing."
-            },
-            {
-                "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
-                "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab."
-            },
-            {
-                "title": "Letter of Appointment",
-                "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat"
-            },
-            {
-                "title": "Letter of Intent",
-                "description": "Surat Permohonan (Letter of Intent) yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat"
-            },
-            {
-                "title": "Letter of Statement",
-                "description": "Surat Pernyataan (Letter of Statement) dari Kepala Kantor Perwakilan yang menyatakan kesediaan untuk tinggal dan hanya bekerja sebagai Kepala Kantor Perwakilan, tanpa melakukan kegiatan bisnis lainnya di Indonesia yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat (jika chief rep nya WNI maka cukup ttd diatas materai 10.000)"
-            },
-            {
-                "title": "Letter of Reference",
-                "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
-            },
-            {
-                "title": "Screenshot Platform",
-                "description": "",
-                "notes": [
-                    "Screenshot website/aplikasi yang memuat email & telepon kontak pengaduan",
-                    "Screenshot website/aplikasi yang memuat info kontak layanan pengaduan PKTN"
-                ]
-            },
-            {
-                "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
-                "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-            },
-            {
-                "title": "Alamat Kantor/Usaha",
-                "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Nomor Telepon Lokasi Usaha",
-                "description": "Tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Alamat Email Usaha",
-                "description": "Alamat email aktif perusahaan"
-            },
-            {
-                "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
-                "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
-            }
-        ],
-        "process": [
-            {
-                "title": "Konsultasi & Persiapan",
-                "description": "Dokumen dikumpulkan"
-            },
-            {
-                "title": "Pengecekan Nama",
-                "description": "Drafting akta notaris"
-            },
-            {
-                "title": "Proses Kemenkumham",
-                "description": "Pengesahan resmi"
-            },
-            {
-                "title": "Selesai & Dikirim",
-                "description": "Dokumen Anda siap"
-            }
-        ],
-        "faq": [
-            {
-                "question": "Kapan sebaiknya memilih PT?",
-                "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
-            },
-            {
-                "question": "Apakah FastTrack membantu memilih KBLI?",
-                "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
-            }
-        ],
+                }
+            ],
+            "en": [
+                {
+                    "title": "Has met the following criteria:",
+                    "description": "",
+                    "notes": [
+                        "Conducting transactions with at least 1,000 (one thousand) consumers within a period of 1 (one) year;",
+                        "Making at least 1,000 (one thousand) deliveries of packages to consumers within a period of 1 (one) year; and/or",
+                        "Having a traffic or visitor volume of at least 1% (one percent) of domestic internet users within a period of 1 (one) year."
+                    ],
+                    "notes_extra": {
+                        "label": "",
+                        "items": []
+                    }
+                }
+            ],
+            "zh": [
+                {
+                    "title": "已满足以下标准：",
+                    "description": "",
+                    "notes": [
+                        "在1（一）年期间内与至少1,000（一千）名消费者进行交易；",
+                        "在1（一）年期间内向消费者发送至少1,000（一千）个包裹；及/或",
+                        "在1（一）年期间内，流量或访问量至少达到国内互联网用户的1%（百分之一）。"
+                    ],
+                    "notes_extra": {
+                        "label": "",
+                        "items": []
+                    }
+                }
+            ]
+        },
+        "benefits": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [
+                {
+                    "title": "Data Kepala Perwakilan",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Document:",
+                                    "notes": [
+                                        "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                        "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Nomor telepon",
+                                        "Alamat email"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "NIB PSE ASING & TDPSE ASING",
+                    "description": "Terlebih dahulu Prinsipal Company telah mendaftarkan plarform PMSE sebagai PSE Asing."
+                },
+                {
+                    "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
+                    "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab."
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat"
+                },
+                {
+                    "title": "Letter of Intent",
+                    "description": "Surat Permohonan (Letter of Intent) yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat"
+                },
+                {
+                    "title": "Letter of Statement",
+                    "description": "Surat Pernyataan (Letter of Statement) dari Kepala Kantor Perwakilan yang menyatakan kesediaan untuk tinggal dan hanya bekerja sebagai Kepala Kantor Perwakilan, tanpa melakukan kegiatan bisnis lainnya di Indonesia yang telah di notarisasi dan diketahui oleh KBRI/ IIPC setempat (jika chief rep nya WNI maka cukup ttd diatas materai 10.000)"
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
+                },
+                {
+                    "title": "Screenshot Platform",
+                    "description": "",
+                    "notes": [
+                        "Screenshot website/aplikasi yang memuat email & telepon kontak pengaduan",
+                        "Screenshot website/aplikasi yang memuat info kontak layanan pengaduan PKTN"
+                    ]
+                },
+                {
+                    "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
+                    "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                },
+                {
+                    "title": "Alamat Kantor/Usaha",
+                    "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Nomor Telepon Lokasi Usaha",
+                    "description": "Tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Alamat Email Usaha",
+                    "description": "Alamat email aktif perusahaan"
+                },
+                {
+                    "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
+                    "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Data of the Head of Representative Office",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Documents:",
+                                    "notes": [
+                                        "For Indonesian individuals, please attach a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
+                                        "Foreign individuals: A copy of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Phone number",
+                                        "Email address"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "NIB PSE Asing & TDPSE Asing (Foreign Electronic System Provider NIB & Registration Certificate)",
+                    "description": "The Principal Company must have first registered the PMSE platform as a Foreign Electronic System Provider (PSE Asing)."
+                },
+                {
+                    "title": "Articles of Association (Article of Association/Article of Incorporation) of the Principal/Head Office",
+                    "description": "A color scan of the articles of association in English or its Indonesian translation by a sworn translator or legalized by an Indonesian representative office abroad, along with a copy of the responsible person's passport."
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "A Letter of Appointment that has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Letter of Intent",
+                    "description": "A Letter of Intent that has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Letter of Statement",
+                    "description": "A Letter of Statement from the Head of the Representative Office stating their willingness to reside and work solely as the Head of the Representative Office, without conducting any other business activities in Indonesia, which has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC (if the chief representative is an Indonesian citizen, a signature on IDR 10,000 stamp duty is sufficient)"
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "A Letter of Reference from the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Platform Screenshot",
+                    "description": "",
+                    "notes": [
+                        "A screenshot of the website/application containing the complaint contact email & phone number",
+                        "A screenshot of the website/application containing the PKTN complaint service contact information"
+                    ]
+                },
+                {
+                    "title": "Identity of the Responsible Person / Director of the Principal / Head Office",
+                    "description": "A scan of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                },
+                {
+                    "title": "Office/Business Address",
+                    "description": "Required if you already have an office/business location or are not using a Virtual Office service"
+                },
+                {
+                    "title": "Business Location Phone Number",
+                    "description": "Not using a Virtual Office service"
+                },
+                {
+                    "title": "Business Email Address",
+                    "description": "The company's active email address"
+                },
+                {
+                    "title": "Forms/Documents Completed and Signed by All Parties",
+                    "description": "All drafts and content will be prepared by us after the order is placed and all required documents have been received"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "代表处负责人资料",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "文件：",
+                                    "notes": [
+                                        "印尼籍个人，请附上有效的身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件；及/或",
+                                        "外籍个人：护照复印件须清晰显示姓名、护照持有人签名及护照有效期。"
+                                    ]
+                                },
+                                {
+                                    "label": "资料：",
+                                    "notes": [
+                                        "电话号码",
+                                        "电子邮箱地址"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "外国电子系统提供者NIB及TDPSE注册证书",
+                    "description": "总公司须事先将PMSE平台注册为外国电子系统提供者（PSE Asing）。"
+                },
+                {
+                    "title": "总公司/母公司章程（Article of Association/Article of Incorporation）",
+                    "description": "英文公司章程（article of association）彩色扫描件，或经宣誓翻译员翻译成印尼语，或经印度尼西亚驻外代表处认证的翻译件，以及负责人护照复印件。"
+                },
+                {
+                    "title": "委任书（Letter of Appointment）",
+                    "description": "已经公证并经当地印尼大使馆（KBRI）/IIPC确认的委任书（Letter of Appointment）"
+                },
+                {
+                    "title": "意向书（Letter of Intent）",
+                    "description": "已经公证并经当地印尼大使馆（KBRI）/IIPC确认的意向书（Letter of Intent）"
+                },
+                {
+                    "title": "声明书（Letter of Statement）",
+                    "description": "代表处负责人出具的声明书（Letter of Statement），声明其愿意居留并仅以代表处负责人身份工作，不在印尼从事其他任何商业活动，该声明书须经公证并经当地印尼大使馆（KBRI）/IIPC确认（若首席代表为印尼公民，则仅需在10,000印尼盾印花税票上签名即可）"
+                },
+                {
+                    "title": "推荐函（Letter of Reference）",
+                    "description": "由当地印尼大使馆（KBRI）/IIPC出具的推荐函（Letter of Reference）"
+                },
+                {
+                    "title": "平台截图",
+                    "description": "",
+                    "notes": [
+                        "网站/应用程序截图，须包含投诉联系邮箱及电话",
+                        "网站/应用程序截图，须包含PKTN投诉服务联系信息"
+                    ]
+                },
+                {
+                    "title": "总公司/母公司负责人/董事身份证明",
+                    "description": "护照扫描件须清晰显示姓名、护照持有人签名及护照有效期。"
+                },
+                {
+                    "title": "办公室/营业地址",
+                    "description": "适用于已拥有办公室/营业场所，或未使用虚拟办公室（Virtual Office）服务的情况"
+                },
+                {
+                    "title": "营业场所电话号码",
+                    "description": "未使用虚拟办公室（Virtual Office）服务"
+                },
+                {
+                    "title": "企业电子邮箱地址",
+                    "description": "公司有效使用中的电子邮箱地址"
+                },
+                {
+                    "title": "由各方填写并签署的表格/文件",
+                    "description": "所有草案及内容将在订单确认及收到所需文件后由我方准备"
+                }
+            ]
+        },
+        "process": {
+            "id": [
+                {
+                    "title": "Konsultasi & Persiapan",
+                    "description": "Dokumen dikumpulkan"
+                },
+                {
+                    "title": "Pengecekan Nama",
+                    "description": "Drafting akta notaris"
+                },
+                {
+                    "title": "Proses Kemenkumham",
+                    "description": "Pengesahan resmi"
+                },
+                {
+                    "title": "Selesai & Dikirim",
+                    "description": "Dokumen Anda siap"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Consultation & Preparation",
+                    "description": "Documents collected"
+                },
+                {
+                    "title": "Name Verification",
+                    "description": "Notarial deed drafting"
+                },
+                {
+                    "title": "Ministry of Law Process",
+                    "description": "Official ratification"
+                },
+                {
+                    "title": "Completed & Delivered",
+                    "description": "Your documents are ready"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "咨询与准备",
+                    "description": "收集文件"
+                },
+                {
+                    "title": "名称核查",
+                    "description": "起草公证书"
+                },
+                {
+                    "title": "法务部流程",
+                    "description": "正式批准"
+                },
+                {
+                    "title": "完成并交付",
+                    "description": "您的文件已准备就绪"
+                }
+            ]
+        },
+        "faq": {
+            "id": [
+                {
+                    "question": "Kapan sebaiknya memilih PT?",
+                    "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
+                },
+                {
+                    "question": "Apakah FastTrack membantu memilih KBLI?",
+                    "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
+                }
+            ],
+            "en": [
+                {
+                    "question": "When should you choose a PT?",
+                    "answer": "A PT is suitable when a business needs a separate legal entity, a more professional structure, and readiness for broader cooperation."
+                },
+                {
+                    "question": "Does FastTrack help choose KBLI?",
+                    "answer": "Yes, the FastTrack team helps match business activities with the most relevant KBLI to make the legality process safer and more efficient."
+                }
+            ],
+            "zh": [
+                {
+                    "question": "何时应选择PT？",
+                    "answer": "当企业需要独立法律实体、更专业的结构以及更广泛合作准备时，PT是合适的选择。"
+                },
+                {
+                    "question": "FastTrack是否协助选择KBLI？",
+                    "answer": "是的，FastTrack团队帮助将业务活动与最相关的KBLI进行匹配，使合法化流程更安全、更高效。"
+                }
+            ]
+        },
         "plans": [
             {
-                "name": "KP3A BIDANG PMSE STARTER",
+                "name": {
+                    "id": "KP3A BIDANG PMSE STARTER",
+                    "en": "KP3A PMSE Field Starter",
+                    "zh": "PMSE领域KP3A 入门版"
+                },
                 "popular": false,
                 "price": "Rp. 3.500.000,-",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                "bonus_note": {
+                    "id": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "en": "FREE Pre and Post-Completion Consultation",
+                    "zh": "免费提供完成前后咨询"
+                },
                 "dokumen": [
                     {
-                        "label": "Pendaftaran OSS",
+                        "label": {
+                            "id": "Pendaftaran OSS",
+                            "en": "OSS Registration",
+                            "zh": "OSS注册"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Induk Berusaha",
+                        "label": {
+                            "id": "Nomor Induk Berusaha",
+                            "en": "Business Identification Number (NIB)",
+                            "zh": "营业执照号码（NIB）"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing di Bidang PMSE",
+                        "label": {
+                            "id": "Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing di Bidang PMSE",
+                            "en": "Business License for Foreign Trading Company Representative Office in the PMSE Field",
+                            "zh": "PMSE领域外国贸易公司代表处营业许可证"
+                        },
                         "included": false
                     }
                 ],
                 "termasuk": [
                     {
-                        "label": "Fasttrack Document Delivery Service",
+                        "label": {
+                            "id": "Fasttrack Document Delivery Service",
+                            "en": "Fasttrack Document Delivery Service",
+                            "zh": "Fasttrack 文件快递服务"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Digital Files Secure Storage",
+                        "label": {
+                            "id": "Fasttrack Digital Files Secure Storage",
+                            "en": "Fasttrack Digital Files Secure Storage",
+                            "zh": "Fasttrack 数字文件安全存储"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Kit",
+                        "label": {
+                            "id": "Fasttrack Kit",
+                            "en": "Fasttrack Kit",
+                            "zh": "Fasttrack 套件"
+                        },
                         "included": true
                     }
                 ],
                 "bonus": []
             },
             {
-                "name": "KP3A BIDANG PMSE STANDART",
+                "name": {
+                    "id": "KP3A BIDANG PMSE STANDART",
+                    "en": "KP3A PMSE Field Standard",
+                    "zh": "PMSE领域KP3A 标准版"
+                },
                 "popular": true,
                 "price": "Rp. 7.750.000,-",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                "bonus_note": {
+                    "id": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "en": "FREE Pre and Post-Completion Consultation",
+                    "zh": "免费提供完成前后咨询"
+                },
                 "dokumen": [
                     {
-                        "label": "Pendaftaran OSS",
+                        "label": {
+                            "id": "Pendaftaran OSS",
+                            "en": "OSS Registration",
+                            "zh": "OSS注册"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Induk Berusaha",
+                        "label": {
+                            "id": "Nomor Induk Berusaha",
+                            "en": "Business Identification Number (NIB)",
+                            "zh": "营业执照号码（NIB）"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing di Bidang PMSE",
+                        "label": {
+                            "id": "Surat Izin Usaha Perwakilan Perusahaan Perdagangan Asing di Bidang PMSE",
+                            "en": "Business License for Foreign Trading Company Representative Office in the PMSE Field",
+                            "zh": "PMSE领域外国贸易公司代表处营业许可证"
+                        },
                         "included": true
                     }
                 ],
                 "termasuk": [
                     {
-                        "label": "Fasttrack Document Delivery Service",
+                        "label": {
+                            "id": "Fasttrack Document Delivery Service",
+                            "en": "Fasttrack Document Delivery Service",
+                            "zh": "Fasttrack 文件快递服务"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Digital Files Secure Storage",
+                        "label": {
+                            "id": "Fasttrack Digital Files Secure Storage",
+                            "en": "Fasttrack Digital Files Secure Storage",
+                            "zh": "Fasttrack 数字文件安全存储"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Kit",
+                        "label": {
+                            "id": "Fasttrack Kit",
+                            "en": "Fasttrack Kit",
+                            "zh": "Fasttrack 套件"
+                        },
                         "included": true
                     }
                 ],
                 "bonus": []
             }
         ],
-        "plans_alert": [],
-        "dasar_hukum": [
-            "Undang-Undang Nomor 7 Tahun 2014 tentang Perdagangan;",
-            "Peraturan Pemerintah Nomor 80 Tahun 2019 tentang Perdagangan Melalui Sistem Elektronik;",
-            "Peraturan Menteri Perdagangan Nomor 31 Tahun 2023 tentang Perizinan Berusaha, Periklanan, Pembinaan, dan Pengawasan Pelaku Usaha dalam Perdagangan melalui Sistem Elektronik;",
-            "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-            "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
-        ]
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 7 Tahun 2014 tentang Perdagangan;",
+                "Peraturan Pemerintah Nomor 80 Tahun 2019 tentang Perdagangan Melalui Sistem Elektronik;",
+                "Peraturan Menteri Perdagangan Nomor 31 Tahun 2023 tentang Perizinan Berusaha, Periklanan, Pembinaan, dan Pengawasan Pelaku Usaha dalam Perdagangan melalui Sistem Elektronik;",
+                "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
+            ],
+            "en": [
+                "Law Number 7 of 2014 concerning Trade;",
+                "Government Regulation Number 80 of 2019 concerning Trade Through Electronic Systems;",
+                "Regulation of the Minister of Trade Number 31 of 2023 concerning Business Licensing, Advertising, Guidance, and Supervision of Business Actors in Trade Through Electronic Systems;",
+                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                "Regulation of the Minister of Investment and Downstreaming/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities through the Online Single Submission System;"
+            ],
+            "zh": [
+                "2014年第7号法律关于贸易；",
+                "2019年第80号政府法规关于电子系统贸易；",
+                "贸易部长2023年第31号条例，关于电子系统贸易经营者的营业许可、广告、辅导及监督；",
+                "2025年第28号政府法规，关于基于风险的营业许可实施；",
+                "投资部长/投资协调委员会主席2025年第5号条例，关于通过在线单一提交系统（OSS）实施基于风险的营业许可及投资便利指南和程序；"
+            ]
+        }
     },
     {
         "id": 4,
-        "name": "Kantor Perwakilan Badan Usaha Jasa Konstruksi Asing",
-        "tag": "Paling Diminati",
         "price": "3500000",
         "price_label": "Rp 3.500.000",
-        "duration": "Estimasi 7-14 hari kerja",
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80&fm=webp",
-        "description": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
-        "excerpt": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
-        "audience": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
-        "content": [
-            "Jasa Konstruksi adalah layanan Jasa Kosnultasi Konstruksi dan/atau Pekerjaan Konstruksi.",
-            "Badan Hukum/Badan Usaha Luar Negeri, dapat melakukan kegiatan usaha layanan Jasa Konstruksi di Indonesia dengan mendirikan sebuah Kantor Perwakilan, yakni Kantor Perwakilan Badan Usaha Jasa Konstruksi Asing (Kantor Perwakilan BUJKA).",
-            "Kantor Perwakilan BUJKA adalah badan usaha yang didirikan menurut hukum dan berdomisili di negara asing, memiliki kantor perwakilan di Indonesia, dan dipersamakan dengan badan hukum perseroan terbatas yang bergerak di bidang usaha jasa konstruksi."
-        ],
-        "term_condition": [
-            {
-                "title": "Peralatan Konstruksi",
-                "description": "Kantor Perwakilan BUJKA diwajibkan memiliki peralatan konstruksi yang memadai sesuai dengan bidang dan subklasifikasi usaha yang dijalankan. Untuk usaha :",
-                "notes": [
-                    "Pekerjaan Konstruksi",
-                    "Pekerjaan Konstruksi Terintegrasi"
-                ],
-                "notes_extra": {
-                    "label": "BUJKA wajib memiliki minimal 5 (lima) peralatan utama pada setiap subklasifikasi usaha yang dimiliki. Ketentuan ini bertujuan memastikan kesiapan operasional serta kemampuan teknis perusahaan dalam melaksanakan pekerjaan konstruksi secara efektif dan sesuai standar keselamatan kerja.",
-                    "items": []
-                }
-            },
-            {
-                "title": "Persyaratan Tenaga Kerja Konstruksi",
-                "description": "Dalam menjalankan kegiatan usahanya, BUJKA juga wajib memiliki tenaga kerja konstruksi yang kompeten dan bersertifikat. Tenaga kerja tersebut meliputi:",
-                "notes": [
-                    "Penanggung Jawab Teknik Badan Usaha (PJTBU)",
-                    "Penanggung Jawab Subklasifikasi Badan Usaha (PJSKBU)"
-                ],
-                "notes_extra": {
-                    "label": "Setiap tenaga kerja yang menduduki posisi tersebut wajib memiliki Sertifikat Kompetensi Kerja sesuai bidang keahlian masing-masing. Sertifikasi kompetensi menjadi bukti bahwa tenaga ahli yang dimiliki telah memenuhi standar profesional di sektor jasa konstruksi.",
-                    "items": []
-                }
-            },
-            {
-                "title": "Persyaratan Kemampuan Keuangan",
-                "description": "Kemampuan finansial menjadi salah satu aspek penting dalam penilaian kelayakan BUJKA untuk beroperasi di Indonesia. Ketentuan kemampuan keuangan minimal meliputi:",
-                "notes": [
-                    "Rp.   2.000.000.000,- (dua miliar rupiah) untuk usaha Jasa Konsultan Konstruksi;",
-                    "Rp. 35.000.000.000,- (tiga puluh lima miliar rupiah) untuk usaha Pekerjaan Konstruksi."
-                ],
-                "notes_extra": {
-                    "label": "Persyaratan ini menunjukkan bahwa badan usaha memiliki kapasitas finansial yang cukup untuk menjalankan proyek konstruksi secara berkelanjutan dan bertanggung jawab.",
-                    "items": []
-                }
-            },
-            {
-                "title": "Persyaratan Pengalaman Kerja",
-                "description": "Selain kemampuan teknis dan finansial, BUJKA juga diwajibkan memiliki pengalaman kerja yang memadai sesuai bidang usaha yang dijalankan. Ketentuan pengalaman usaha meliputi:",
-                "notes": [
-                    "Nilai penjualan tahunan minimal Rp10.000.000.000,- (sepuluh miliar rupiah) untuk usaha Jasa Konsultan Konstruksi",
-                    "Nilai penjualan tahunan minimal Rp100.000.000.000,- (seratus miliar rupiah) untuk usaha Pekerjaan Konstruksi"
-                ],
-                "notes_extra": {
-                    "label": "Ketentuan ini bertujuan memastikan bahwa badan usaha asing yang masuk ke Indonesia benar-benar memiliki rekam jejak dan kapasitas yang memadai dalam mengelola proyek konstruksi berskala besar.",
-                    "items": []
-                }
-            }
-        ],
-        "benefits": [],
-        "requirements": [
-            {
-                "title": "Data Kepala Perwakilan",
-                "sections": [
-                    {
-                        "label": "",
-                        "groups": [
-                            {
-                                "label": "Document:",
-                                "notes": [
-                                    "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                    "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-                                ]
-                            },
-                            {
-                                "label": "Data:",
-                                "notes": ["Nomor telepon", "Alamat email"]
-                            }
-                        ]
+        "name": {
+            "id": "Kantor Perwakilan Badan Usaha Jasa Konstruksi Asing",
+            "en": "Foreign Construction Services Business Entity Representative Office (BUJKA)",
+            "zh": "外国建筑服务企业代表处（BUJKA）"
+        },
+        "tag": {
+            "id": "Paling Diminati",
+            "en": "Most Popular",
+            "zh": "最受欢迎"
+        },
+        "duration": {
+            "id": "Estimasi 7-14 hari kerja",
+            "en": "Estimated 7-14 working days",
+            "zh": "预计7-14个工作日"
+        },
+        "description": {
+            "id": "Pendirian kantor perwakilan resmi bagi perusahaan asing yang ingin memiliki kehadiran legal di Indonesia.",
+            "en": "Establishment of an official representative office for foreign companies that want to have a legal presence in Indonesia.",
+            "zh": "为希望在印度尼西亚拥有合法存在的外国公司提供正式代表处设立服务。"
+        },
+        "excerpt": {
+            "id": "Paket pendirian PT untuk usaha yang membutuhkan badan hukum terpisah, perlindungan tanggung jawab, dan kesiapan ekspansi.",
+            "en": "Establishment package for businesses requiring a separate legal entity, liability protection, and expansion readiness.",
+            "zh": "适合需要独立法律实体、责任保护和扩展准备的企业的设立套餐。"
+        },
+        "audience": {
+            "id": "Cocok untuk startup, agency, distributor, manufaktur, konsultan, dan bisnis yang menargetkan pertumbuhan jangka panjang.",
+            "en": "Suitable for startups, agencies, distributors, manufacturers, consultants, and businesses targeting long-term growth.",
+            "zh": "适合初创企业、代理机构、经销商、制造商、顾问以及以长期增长为目标的企业。"
+        },
+        "content": {
+            "id": [
+                "Jasa Konstruksi adalah layanan Jasa Kosnultasi Konstruksi dan/atau Pekerjaan Konstruksi.",
+                "Badan Hukum/Badan Usaha Luar Negeri, dapat melakukan kegiatan usaha layanan Jasa Konstruksi di Indonesia dengan mendirikan sebuah Kantor Perwakilan, yakni Kantor Perwakilan Badan Usaha Jasa Konstruksi Asing (Kantor Perwakilan BUJKA).",
+                "Kantor Perwakilan BUJKA adalah badan usaha yang didirikan menurut hukum dan berdomisili di negara asing, memiliki kantor perwakilan di Indonesia, dan dipersamakan dengan badan hukum perseroan terbatas yang bergerak di bidang usaha jasa konstruksi."
+            ],
+            "en": [
+                "Construction Services are Construction Consultancy Services and/or Construction Work services.",
+                "A Foreign Legal Entity/Business Entity may conduct Construction Services business activities in Indonesia by establishing a Representative Office, namely a Foreign Construction Services Business Entity Representative Office (BUJKA Representative Office).",
+                "A BUJKA Representative Office is a business entity established under the law of and domiciled in a foreign country, which has a representative office in Indonesia and is treated as equivalent to a limited liability company operating in the construction services business."
+            ],
+            "zh": [
+                "建筑服务是指建筑咨询服务及/或建筑工程服务。",
+                "外国法人/企业可通过设立代表处，即外国建筑服务企业代表处（BUJKA代表处），在印度尼西亚开展建筑服务经营活动。",
+                "BUJKA代表处是依据外国法律设立并住所设于外国的企业，其在印度尼西亚设有代表处，并被视同为从事建筑服务业务的有限责任公司法人。"
+            ]
+        },
+        "term_condition": {
+            "id": [
+                {
+                    "title": "Peralatan Konstruksi",
+                    "description": "Kantor Perwakilan BUJKA diwajibkan memiliki peralatan konstruksi yang memadai sesuai dengan bidang dan subklasifikasi usaha yang dijalankan. Untuk usaha :",
+                    "notes": [
+                        "Pekerjaan Konstruksi",
+                        "Pekerjaan Konstruksi Terintegrasi"
+                    ],
+                    "notes_extra": {
+                        "label": "BUJKA wajib memiliki minimal 5 (lima) peralatan utama pada setiap subklasifikasi usaha yang dimiliki. Ketentuan ini bertujuan memastikan kesiapan operasional serta kemampuan teknis perusahaan dalam melaksanakan pekerjaan konstruksi secara efektif dan sesuai standar keselamatan kerja.",
+                        "items": []
                     }
-                ]
-            },
-            {
-                "title": "AKTA Pendirian (Deed Of Establishment)",
-                "description": "Akta pendirian (deeds of establishment) yang mengacu pada ketentuan perundang-undangan negara asal BUJKA"
-            },
-            {
-                "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
-                "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab.",
-                "notes": []
-            },
-            {
-                "title": "Letter of Appointment",
-                "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat",
-                "notes": [
-                    "Otoritas yang berkompeten bagi negara peserta Konvensi Penghapusan Persyaratan Legalisasi Terhadap Dokumen Publik Asing; atau",
-                    "Pejabat perwakilan Republik Indonesia di negara asal bagi negara bukan peserta Konvensi Penghapusan Persyaratan Legalisasi Terhadap Dokumen Publik Asing;"
-                ]
-            },
-            {
-                "title": "Letter of Reference",
-                "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
-            },
-            {
-                "title": "Perjanjian Sewa",
-                "description": "Perjanjian sewa-menyewa antara Kantor Perwakilan BUJKA dengan pengelola atau pemilik gedung perkantoran yang masih berlaku dan sah secara hukum;",
-                "notes": []
-            },
-            {
-                "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
-                "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
-            },
-            {
-                "title": "Alamat Kantor/Usaha",
-                "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Nomor Telepon Lokasi Usaha",
-                "description": "Tidak menggunakan layanan Virtual Office"
-            },
-            {
-                "title": "Alamat Email Usaha",
-                "description": "Alamat email aktif perusahaan"
-            },
-            {
-                "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
-                "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
-            }
-        ],
-        "process": [
-            {
-                "title": "Konsultasi & Persiapan",
-                "description": "Dokumen dikumpulkan"
-            },
-            {
-                "title": "Pengecekan Nama",
-                "description": "Drafting akta notaris"
-            },
-            {
-                "title": "Proses Kemenkumham",
-                "description": "Pengesahan resmi"
-            },
-            {
-                "title": "Selesai & Dikirim",
-                "description": "Dokumen Anda siap"
-            }
-        ],
-        "faq": [
-            {
-                "question": "Kapan sebaiknya memilih PT?",
-                "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
-            },
-            {
-                "question": "Apakah FastTrack membantu memilih KBLI?",
-                "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
-            }
-        ],
+                },
+                {
+                    "title": "Persyaratan Tenaga Kerja Konstruksi",
+                    "description": "Dalam menjalankan kegiatan usahanya, BUJKA juga wajib memiliki tenaga kerja konstruksi yang kompeten dan bersertifikat. Tenaga kerja tersebut meliputi:",
+                    "notes": [
+                        "Penanggung Jawab Teknik Badan Usaha (PJTBU)",
+                        "Penanggung Jawab Subklasifikasi Badan Usaha (PJSKBU)"
+                    ],
+                    "notes_extra": {
+                        "label": "Setiap tenaga kerja yang menduduki posisi tersebut wajib memiliki Sertifikat Kompetensi Kerja sesuai bidang keahlian masing-masing. Sertifikasi kompetensi menjadi bukti bahwa tenaga ahli yang dimiliki telah memenuhi standar profesional di sektor jasa konstruksi.",
+                        "items": []
+                    }
+                },
+                {
+                    "title": "Persyaratan Kemampuan Keuangan",
+                    "description": "Kemampuan finansial menjadi salah satu aspek penting dalam penilaian kelayakan BUJKA untuk beroperasi di Indonesia. Ketentuan kemampuan keuangan minimal meliputi:",
+                    "notes": [
+                        "Rp.   2.000.000.000,- (dua miliar rupiah) untuk usaha Jasa Konsultan Konstruksi;",
+                        "Rp. 35.000.000.000,- (tiga puluh lima miliar rupiah) untuk usaha Pekerjaan Konstruksi."
+                    ],
+                    "notes_extra": {
+                        "label": "Persyaratan ini menunjukkan bahwa badan usaha memiliki kapasitas finansial yang cukup untuk menjalankan proyek konstruksi secara berkelanjutan dan bertanggung jawab.",
+                        "items": []
+                    }
+                },
+                {
+                    "title": "Persyaratan Pengalaman Kerja",
+                    "description": "Selain kemampuan teknis dan finansial, BUJKA juga diwajibkan memiliki pengalaman kerja yang memadai sesuai bidang usaha yang dijalankan. Ketentuan pengalaman usaha meliputi:",
+                    "notes": [
+                        "Nilai penjualan tahunan minimal Rp10.000.000.000,- (sepuluh miliar rupiah) untuk usaha Jasa Konsultan Konstruksi",
+                        "Nilai penjualan tahunan minimal Rp100.000.000.000,- (seratus miliar rupiah) untuk usaha Pekerjaan Konstruksi"
+                    ],
+                    "notes_extra": {
+                        "label": "Ketentuan ini bertujuan memastikan bahwa badan usaha asing yang masuk ke Indonesia benar-benar memiliki rekam jejak dan kapasitas yang memadai dalam mengelola proyek konstruksi berskala besar.",
+                        "items": []
+                    }
+                }
+            ],
+            "en": [
+                {
+                    "title": "Construction Equipment",
+                    "description": "A BUJKA Representative Office is required to have adequate construction equipment in accordance with the business field and sub-classification carried out. For the business of:",
+                    "notes": [
+                        "Construction Work",
+                        "Integrated Construction Work"
+                    ],
+                    "notes_extra": {
+                        "label": "A BUJKA must have at least 5 (five) main pieces of equipment for each business sub-classification it holds. This provision aims to ensure the company's operational readiness and technical capability to carry out construction work effectively and in accordance with work safety standards.",
+                        "items": []
+                    }
+                },
+                {
+                    "title": "Construction Workforce Requirements",
+                    "description": "In carrying out its business activities, a BUJKA is also required to have competent and certified construction workforce. This workforce includes:",
+                    "notes": [
+                        "Business Entity Technical Person in Charge (PJTBU)",
+                        "Business Entity Sub-Classification Person in Charge (PJSKBU)"
+                    ],
+                    "notes_extra": {
+                        "label": "Every worker holding such a position must have a Work Competency Certificate in accordance with their respective field of expertise. Competency certification serves as proof that the experts employed meet the professional standards in the construction services sector.",
+                        "items": []
+                    }
+                },
+                {
+                    "title": "Financial Capability Requirements",
+                    "description": "Financial capability is one of the important aspects in assessing the eligibility of a BUJKA to operate in Indonesia. The minimum financial capability requirements include:",
+                    "notes": [
+                        "IDR 2,000,000,000 (two billion rupiah) for Construction Consultancy Services;",
+                        "IDR 35,000,000,000 (thirty-five billion rupiah) for Construction Work."
+                    ],
+                    "notes_extra": {
+                        "label": "This requirement demonstrates that the business entity has sufficient financial capacity to carry out construction projects in a sustainable and responsible manner.",
+                        "items": []
+                    }
+                },
+                {
+                    "title": "Work Experience Requirements",
+                    "description": "In addition to technical and financial capability, a BUJKA is also required to have adequate work experience in accordance with the business field it operates in. The business experience requirements include:",
+                    "notes": [
+                        "A minimum annual sales value of IDR 10,000,000,000 (ten billion rupiah) for Construction Consultancy Services",
+                        "A minimum annual sales value of IDR 100,000,000,000 (one hundred billion rupiah) for Construction Work"
+                    ],
+                    "notes_extra": {
+                        "label": "This provision aims to ensure that foreign business entities entering Indonesia genuinely have an adequate track record and capacity to manage large-scale construction projects.",
+                        "items": []
+                    }
+                }
+            ],
+            "zh": [
+                {
+                    "title": "建筑设备",
+                    "description": "BUJKA代表处须依据其所经营的业务领域及子类别，配备充足的建筑设备。就以下业务而言：",
+                    "notes": [
+                        "建筑工程",
+                        "综合建筑工程"
+                    ],
+                    "notes_extra": {
+                        "label": "BUJKA须为其持有的每个业务子类别配备至少5（五）台主要设备。该规定旨在确保企业具备运营准备及技术能力，从而有效开展建筑工程并符合工作安全标准。",
+                        "items": []
+                    }
+                },
+                {
+                    "title": "建筑劳动力要求",
+                    "description": "BUJKA在开展经营活动时，亦须配备具备资格及持证的建筑劳动力。该劳动力包括：",
+                    "notes": [
+                        "企业技术负责人（PJTBU）",
+                        "企业子类别负责人（PJSKBU）"
+                    ],
+                    "notes_extra": {
+                        "label": "担任上述职位的每位人员均须持有与其各自专业领域相符的工作能力证书。能力认证是证明所聘专家已达到建筑服务行业专业标准的凭证。",
+                        "items": []
+                    }
+                },
+                {
+                    "title": "财务能力要求",
+                    "description": "财务能力是评估BUJKA在印度尼西亚运营资格的重要方面之一。最低财务能力要求包括：",
+                    "notes": [
+                        "建筑咨询服务业务：20亿印尼盾；",
+                        "建筑工程业务：350亿印尼盾。"
+                    ],
+                    "notes_extra": {
+                        "label": "该要求表明企业具备足够的财务能力，以可持续且负责任的方式开展建筑项目。",
+                        "items": []
+                    }
+                },
+                {
+                    "title": "工作经验要求",
+                    "description": "除技术及财务能力外，BUJKA还须具备与其经营业务领域相符的充足工作经验。业务经验要求包括：",
+                    "notes": [
+                        "建筑咨询服务业务：最低年销售额100亿印尼盾",
+                        "建筑工程业务：最低年销售额1000亿印尼盾"
+                    ],
+                    "notes_extra": {
+                        "label": "该规定旨在确保进入印度尼西亚的外国企业确实具备充分的业绩记录及管理大型建筑项目的能力。",
+                        "items": []
+                    }
+                }
+            ]
+        },
+        "benefits": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "requirements": {
+            "id": [
+                {
+                    "title": "Data Kepala Perwakilan",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Document:",
+                                    "notes": [
+                                        "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                        "Perseorangan Asing : Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Nomor telepon",
+                                        "Alamat email"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "AKTA Pendirian (Deed Of Establishment)",
+                    "description": "Akta pendirian (deeds of establishment) yang mengacu pada ketentuan perundang-undangan negara asal BUJKA"
+                },
+                {
+                    "title": "Anggaran Dasar (Article of Assocation/Article of Incorporation) Prinsipal/Head Office",
+                    "description": "Scancopy berwarna anggaran dasar (article of association) dalam bahasa inggris atau terjemahannya dalam Bahasa Indonesia dari penerjemah tersumpah atau di legalisasi oleh perwakilan Republik Indonesia di luar negeri dan copy passport penanggungjawab.",
+                    "notes": []
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "Surat penunjukan (Letter of Appointment) yang telah di notarisasi dan diketahui oleh KBRI/IIPC setempat",
+                    "notes": [
+                        "Otoritas yang berkompeten bagi negara peserta Konvensi Penghapusan Persyaratan Legalisasi Terhadap Dokumen Publik Asing; atau",
+                        "Pejabat perwakilan Republik Indonesia di negara asal bagi negara bukan peserta Konvensi Penghapusan Persyaratan Legalisasi Terhadap Dokumen Publik Asing;"
+                    ]
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "Surat Keterangan (Letter of Reference) dari oleh KBRI/ IIPC setempat"
+                },
+                {
+                    "title": "Perjanjian Sewa",
+                    "description": "Perjanjian sewa-menyewa antara Kantor Perwakilan BUJKA dengan pengelola atau pemilik gedung perkantoran yang masih berlaku dan sah secara hukum;",
+                    "notes": []
+                },
+                {
+                    "title": "Identitas Penanggung Jawab / Direktur Prinsipal / Head Office",
+                    "description": "Scancopy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                },
+                {
+                    "title": "Alamat Kantor/Usaha",
+                    "description": "Apabila telah memiliki lokasi kantor/usaha atau tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Nomor Telepon Lokasi Usaha",
+                    "description": "Tidak menggunakan layanan Virtual Office"
+                },
+                {
+                    "title": "Alamat Email Usaha",
+                    "description": "Alamat email aktif perusahaan"
+                },
+                {
+                    "title": "Formulir/Surat yang telah Dilengkapi dan Ditandatangani oleh Seluruh Pihak",
+                    "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen diterima"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Data of the Head of Representative Office",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "Documents:",
+                                    "notes": [
+                                        "For Indonesian individuals, please attach a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
+                                        "Foreign individuals: A copy of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                                    ]
+                                },
+                                {
+                                    "label": "Data:",
+                                    "notes": [
+                                        "Phone number",
+                                        "Email address"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Deed of Establishment",
+                    "description": "A deed of establishment prepared in accordance with the laws and regulations of the BUJKA's country of origin"
+                },
+                {
+                    "title": "Articles of Association (Article of Association/Article of Incorporation) of the Principal/Head Office",
+                    "description": "A color scan of the articles of association in English or its Indonesian translation by a sworn translator or legalized by an Indonesian representative office abroad, along with a copy of the responsible person's passport.",
+                    "notes": []
+                },
+                {
+                    "title": "Letter of Appointment",
+                    "description": "A Letter of Appointment that has been notarized and acknowledged by the local Indonesian Embassy (KBRI)/IIPC",
+                    "notes": [
+                        "The competent authority for countries that are parties to the Convention Abolishing the Requirement of Legalisation for Foreign Public Documents; or",
+                        "An official representative of the Republic of Indonesia in the country of origin for countries that are not parties to the Convention Abolishing the Requirement of Legalisation for Foreign Public Documents;"
+                    ]
+                },
+                {
+                    "title": "Letter of Reference",
+                    "description": "A Letter of Reference from the local Indonesian Embassy (KBRI)/IIPC"
+                },
+                {
+                    "title": "Lease Agreement",
+                    "description": "A lease agreement between the BUJKA Representative Office and the manager or owner of the office building, which is still valid and legally binding;",
+                    "notes": []
+                },
+                {
+                    "title": "Identity of the Responsible Person / Director of the Principal / Head Office",
+                    "description": "A scan of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                },
+                {
+                    "title": "Office/Business Address",
+                    "description": "Required if you already have an office/business location or are not using a Virtual Office service"
+                },
+                {
+                    "title": "Business Location Phone Number",
+                    "description": "Not using a Virtual Office service"
+                },
+                {
+                    "title": "Business Email Address",
+                    "description": "The company's active email address"
+                },
+                {
+                    "title": "Forms/Documents Completed and Signed by All Parties",
+                    "description": "All drafts and content will be prepared by us after the order is placed and all required documents have been received"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "代表处负责人资料",
+                    "sections": [
+                        {
+                            "label": "",
+                            "groups": [
+                                {
+                                    "label": "文件：",
+                                    "notes": [
+                                        "印尼籍个人，请附上有效的身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件；及/或",
+                                        "外籍个人：护照复印件须清晰显示姓名、护照持有人签名及护照有效期。"
+                                    ]
+                                },
+                                {
+                                    "label": "资料：",
+                                    "notes": [
+                                        "电话号码",
+                                        "电子邮箱地址"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "设立公证书（Deed of Establishment）",
+                    "description": "根据BUJKA原籍国法律法规制作的设立公证书"
+                },
+                {
+                    "title": "总公司/母公司章程（Article of Association/Article of Incorporation）",
+                    "description": "英文公司章程（article of association）彩色扫描件，或经宣誓翻译员翻译成印尼语，或经印度尼西亚驻外代表处认证的翻译件，以及负责人护照复印件。",
+                    "notes": []
+                },
+                {
+                    "title": "委任书（Letter of Appointment）",
+                    "description": "已经公证并经当地印尼大使馆（KBRI）/IIPC确认的委任书（Letter of Appointment）",
+                    "notes": [
+                        "《取消外国公文书认证要求公约》缔约国的主管机关；或",
+                        "对于非《取消外国公文书认证要求公约》缔约国，由原籍国的印度尼西亚共和国代表机构官员出具；"
+                    ]
+                },
+                {
+                    "title": "推荐函（Letter of Reference）",
+                    "description": "由当地印尼大使馆（KBRI）/IIPC出具的推荐函（Letter of Reference）"
+                },
+                {
+                    "title": "租赁协议",
+                    "description": "BUJKA代表处与办公大楼管理方或所有者之间仍然有效且具有法律效力的租赁协议；",
+                    "notes": []
+                },
+                {
+                    "title": "总公司/母公司负责人/董事身份证明",
+                    "description": "护照扫描件须清晰显示姓名、护照持有人签名及护照有效期。"
+                },
+                {
+                    "title": "办公室/营业地址",
+                    "description": "适用于已拥有办公室/营业场所，或未使用虚拟办公室（Virtual Office）服务的情况"
+                },
+                {
+                    "title": "营业场所电话号码",
+                    "description": "未使用虚拟办公室（Virtual Office）服务"
+                },
+                {
+                    "title": "企业电子邮箱地址",
+                    "description": "公司有效使用中的电子邮箱地址"
+                },
+                {
+                    "title": "由各方填写并签署的表格/文件",
+                    "description": "所有草案及内容将在订单确认及收到所需文件后由我方准备"
+                }
+            ]
+        },
+        "process": {
+            "id": [
+                {
+                    "title": "Konsultasi & Persiapan",
+                    "description": "Dokumen dikumpulkan"
+                },
+                {
+                    "title": "Pengecekan Nama",
+                    "description": "Drafting akta notaris"
+                },
+                {
+                    "title": "Proses Kemenkumham",
+                    "description": "Pengesahan resmi"
+                },
+                {
+                    "title": "Selesai & Dikirim",
+                    "description": "Dokumen Anda siap"
+                }
+            ],
+            "en": [
+                {
+                    "title": "Consultation & Preparation",
+                    "description": "Documents collected"
+                },
+                {
+                    "title": "Name Verification",
+                    "description": "Notarial deed drafting"
+                },
+                {
+                    "title": "Ministry of Law Process",
+                    "description": "Official ratification"
+                },
+                {
+                    "title": "Completed & Delivered",
+                    "description": "Your documents are ready"
+                }
+            ],
+            "zh": [
+                {
+                    "title": "咨询与准备",
+                    "description": "收集文件"
+                },
+                {
+                    "title": "名称核查",
+                    "description": "起草公证书"
+                },
+                {
+                    "title": "法务部流程",
+                    "description": "正式批准"
+                },
+                {
+                    "title": "完成并交付",
+                    "description": "您的文件已准备就绪"
+                }
+            ]
+        },
+        "faq": {
+            "id": [
+                {
+                    "question": "Kapan sebaiknya memilih PT?",
+                    "answer": "PT cocok ketika bisnis membutuhkan badan hukum terpisah, struktur yang lebih profesional, dan kesiapan untuk kerja sama yang lebih luas."
+                },
+                {
+                    "question": "Apakah FastTrack membantu memilih KBLI?",
+                    "answer": "Ya, tim FastTrack membantu mencocokkan aktivitas usaha dengan KBLI yang paling relevan agar proses legalitas lebih aman dan efisien."
+                }
+            ],
+            "en": [
+                {
+                    "question": "When should you choose a PT?",
+                    "answer": "A PT is suitable when a business needs a separate legal entity, a more professional structure, and readiness for broader cooperation."
+                },
+                {
+                    "question": "Does FastTrack help choose KBLI?",
+                    "answer": "Yes, the FastTrack team helps match business activities with the most relevant KBLI to make the legality process safer and more efficient."
+                }
+            ],
+            "zh": [
+                {
+                    "question": "何时应选择PT？",
+                    "answer": "当企业需要独立法律实体、更专业的结构以及更广泛合作准备时，PT是合适的选择。"
+                },
+                {
+                    "question": "FastTrack是否协助选择KBLI？",
+                    "answer": "是的，FastTrack团队帮助将业务活动与最相关的KBLI进行匹配，使合法化流程更安全、更高效。"
+                }
+            ]
+        },
         "plans": [
             {
-                "name": "KP3A BIDANG PMSE STANDART",
+                "name": {
+                    "id": "KP3A BIDANG PMSE STANDART",
+                    "en": "KP3A PMSE Field Standard",
+                    "zh": "PMSE领域KP3A 标准版"
+                },
                 "popular": true,
                 "price": "Hubungi Kami",
-                "bonus_note": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                "bonus_note": {
+                    "id": "GRATIS Konsultasi Persiapan dan Pasca Selesai",
+                    "en": "FREE Pre and Post-Completion Consultation",
+                    "zh": "免费提供完成前后咨询"
+                },
                 "dokumen": [
                     {
-                        "label": "Pendaftaran OSS;",
+                        "label": {
+                            "id": "Pendaftaran OSS;",
+                            "en": "OSS Registration;",
+                            "zh": "OSS注册；"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Nomor Induk Berusaha;",
+                        "label": {
+                            "id": "Nomor Induk Berusaha;",
+                            "en": "Business Identification Number (NIB);",
+                            "zh": "营业执照号码（NIB）；"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Sertifikat Kompetensi Kerja;",
+                        "label": {
+                            "id": "Sertifikat Kompetensi Kerja;",
+                            "en": "Work Competency Certificate;",
+                            "zh": "工作能力证书；"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Kartu Tanda Anggota Asosiasi Jasa Konstruksi;",
+                        "label": {
+                            "id": "Kartu Tanda Anggota Asosiasi Jasa Konstruksi;",
+                            "en": "Construction Services Association Membership Card;",
+                            "zh": "建筑服务协会会员证；"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Sertifikat Badan Usaha/Penetapan Kemempuan Badan Usaha Jasa Konstruksi;",
+                        "label": {
+                            "id": "Sertifikat Badan Usaha/Penetapan Kemempuan Badan Usaha Jasa Konstruksi;",
+                            "en": "Business Entity Certificate/Determination of Construction Services Business Entity Capability;",
+                            "zh": "企业证书/建筑服务企业能力认定；"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Sertifikat Standar : Terverifikasi.",
+                        "label": {
+                            "id": "Sertifikat Standar : Terverifikasi.",
+                            "en": "Standard Certificate: Verified.",
+                            "zh": "标准证书：已核实。"
+                        },
                         "included": true
                     }
                 ],
                 "termasuk": [
                     {
-                        "label": "Fasttrack Document Delivery Service",
+                        "label": {
+                            "id": "Fasttrack Document Delivery Service",
+                            "en": "Fasttrack Document Delivery Service",
+                            "zh": "Fasttrack 文件快递服务"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Digital Files Secure Storage",
+                        "label": {
+                            "id": "Fasttrack Digital Files Secure Storage",
+                            "en": "Fasttrack Digital Files Secure Storage",
+                            "zh": "Fasttrack 数字文件安全存储"
+                        },
                         "included": true
                     },
                     {
-                        "label": "Fasttrack Kit",
+                        "label": {
+                            "id": "Fasttrack Kit",
+                            "en": "Fasttrack Kit",
+                            "zh": "Fasttrack 套件"
+                        },
                         "included": true
                     }
                 ],
                 "bonus": []
             }
         ],
-        "plans_alert": [],
-        "dasar_hukum": [
-            "Undang-Undang Nomor 2 Tahun 2017 tentang Jasa Konstruksi;",
-            "UU No. 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang;",
-            "Peraturan Pemerintah Nomor 22 Tahun 2020 tentang Peraturan Pelaksanaan Undang-Undang Nomor 2 Tahun 2017 tentang Jasa Konstruksi;",
-            "Peraturan Pemerintah Nomor 14 Tahun 2021 tentang Perubahan Atas Peraturan Pemerintah Nomor 22 Tahun 2020 Tentang Peraturan Pelaksanaan Undang-Undang Nomor 2 Tahun 2017 Tentang Jasa Konstruksi;",
-            "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-            "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);",
-            "Peraturan Menteri Pekerjaan Umum dan Perumahan Rakyat Nomor 6 Tahun 2021 tentang Standar Kegiatan Usaha dan Produk pada Penyelenggaraan Perizinan Berusaha Berbasis Risiko Sektor Pekerjaan Umum dan Perumahan Rakyat;",
-            "Peraturan Menteri Pekerjaan Umum dan Perumahan Rakyat Nomor 8 Tahun 2022 tentang Tata Cara Pelaksanaan Pemenuhan Sertifikat Standar Jasa Konstruksi Dalam Rangka Mendukung Kemudahan Perizinan Berusaha Bagi Pelaku Usaha Jasa Konstruksi."
-        ]
+        "plans_alert": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "dasar_hukum": {
+            "id": [
+                "Undang-Undang Nomor 2 Tahun 2017 tentang Jasa Konstruksi;",
+                "UU No. 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang;",
+                "Peraturan Pemerintah Nomor 22 Tahun 2020 tentang Peraturan Pelaksanaan Undang-Undang Nomor 2 Tahun 2017 tentang Jasa Konstruksi;",
+                "Peraturan Pemerintah Nomor 14 Tahun 2021 tentang Perubahan Atas Peraturan Pemerintah Nomor 22 Tahun 2020 Tentang Peraturan Pelaksanaan Undang-Undang Nomor 2 Tahun 2017 Tentang Jasa Konstruksi;",
+                "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);",
+                "Peraturan Menteri Pekerjaan Umum dan Perumahan Rakyat Nomor 6 Tahun 2021 tentang Standar Kegiatan Usaha dan Produk pada Penyelenggaraan Perizinan Berusaha Berbasis Risiko Sektor Pekerjaan Umum dan Perumahan Rakyat;",
+                "Peraturan Menteri Pekerjaan Umum dan Perumahan Rakyat Nomor 8 Tahun 2022 tentang Tata Cara Pelaksanaan Pemenuhan Sertifikat Standar Jasa Konstruksi Dalam Rangka Mendukung Kemudahan Perizinan Berusaha Bagi Pelaku Usaha Jasa Konstruksi."
+            ],
+            "en": [
+                "Law Number 2 of 2017 concerning Construction Services;",
+                "Law No. 6 of 2023 on the Enactment of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                "Government Regulation Number 22 of 2020 concerning Implementing Regulations of Law Number 2 of 2017 concerning Construction Services;",
+                "Government Regulation Number 14 of 2021 concerning Amendment to Government Regulation Number 22 of 2020 concerning Implementing Regulations of Law Number 2 of 2017 concerning Construction Services;",
+                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                "Regulation of the Minister of Investment and Downstreaming/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities through the Online Single Submission System;",
+                "Regulation of the Minister of Public Works and Public Housing Number 6 of 2021 concerning Business Activity and Product Standards in the Implementation of Risk-Based Business Licensing in the Public Works and Public Housing Sector;",
+                "Regulation of the Minister of Public Works and Public Housing Number 8 of 2022 concerning Procedures for the Implementation of Fulfillment of the Construction Services Standard Certificate in Order to Support the Ease of Business Licensing for Construction Services Business Actors."
+            ],
+            "zh": [
+                "2017年第2号法律关于建筑服务；",
+                "2023年第6号法律关于将2022年第2号代替法律的政府条例确立为法律；",
+                "2020年第22号政府法规，关于2017年第2号建筑服务法律的实施条例；",
+                "2021年第14号政府法规，关于修订2020年第22号政府法规关于2017年第2号建筑服务法律的实施条例；",
+                "2025年第28号政府法规，关于基于风险的营业许可实施；",
+                "投资部长/投资协调委员会主席2025年第5号条例，关于通过在线单一提交系统（OSS）实施基于风险的营业许可及投资便利指南和程序；",
+                "公共工程与民生住房部长2021年第6号条例，关于公共工程与民生住房行业基于风险的营业许可实施中的业务活动及产品标准；",
+                "公共工程与民生住房部长2022年第8号条例，关于为支持建筑服务经营者的营业许可便利化而履行建筑服务标准证书的实施程序。"
+            ]
+        }
     }
 ]

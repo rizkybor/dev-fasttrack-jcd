@@ -1,0 +1,697 @@
+[
+    {
+        "id": 1,
+        "price": "9000000",
+        "price_label": "Rp 9.000.000",
+        "image": "",
+        "detail_path": "/perizinan-usaha/pemberi-waralaba",
+        "name": {
+            "id": "Pemberi Waralaba (Surat Tanda Pendaftaran Waralaba)",
+            "en": "Franchisor (Franchise Registration Certificate)",
+            "zh": "特许经营授权方（特许经营注册证书）"
+        },
+        "tag": {
+            "id": "Profesional",
+            "en": "Professional",
+            "zh": "专业级"
+        },
+        "duration": {
+            "id": "Estimasi 7-12 hari kerja",
+            "en": "Estimated 7-12 working days",
+            "zh": "预计7-12个工作日"
+        },
+        "excerpt": {
+            "id": "Pendaftaran Surat Tanda Pendaftaran Waralaba (STPW) bagi Pemberi Waralaba yang berasal dari Luar Negeri.",
+            "en": "Registration of the Franchise Registration Certificate (STPW) for Franchisors originating from abroad.",
+            "zh": "为境外特许经营授权方办理特许经营注册证书（STPW）登记。"
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "baru": {
+            "penjelasan_umum": {
+                "id": [
+                    "Badan usaha luar negeri merupakan badan usaha asing yang didirikan di luar wilayah Negara Kesatuan Republik Indonesia yang melakukan kegiatan usaha sesuai dengan ketentuan Peraturan Pemerintah tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko (PP PSBR).",
+                    "Salah satu kegiatan Badan Usaha Luar Negeri yang diatur dalam PP PSBR adalah Pemberi Waralaba berasal dari Luar Negeri.",
+                    "Pemberi Waralaba adalah orang perseorangan atau badan usaha yang memberikan hak untuk memanfaatkan dan/atau menggunakan Waralaba yang dimilikinya kepada Penerima Waralaba."
+                ],
+                "en": [
+                    "A foreign business entity is a foreign business established outside the territory of the Unitary State of the Republic of Indonesia that conducts business activities in accordance with the provisions of the Government Regulation concerning the Implementation of Risk-Based Business Licensing (PP PSBR).",
+                    "One of the activities of a Foreign Business Entity regulated in the PP PSBR is being a Franchisor originating from abroad.",
+                    "A Franchisor is an individual or business entity that grants the right to utilize and/or use its Franchise to a Franchisee."
+                ],
+                "zh": [
+                    "外国企业是指在印度尼西亚共和国境外设立的外国企业，其经营活动依据《基于风险的营业许可实施政府条例》（PP PSBR）的规定进行。",
+                    "PP PSBR所规范的外国企业活动之一，即为境外特许经营授权方。",
+                    "特许经营授权方是指将其所拥有的特许经营权授予特许经营受让方使用及/或利用的个人或企业。"
+                ]
+            },
+            "kriteria": {
+                "id": [
+                    {
+                        "text": "Memiliki sistem usaha:",
+                        "items": [
+                            "pengelolaan sumber daya manusia;",
+                            "pengadministrasian;",
+                            "pengelolaan operasional;",
+                            "metode standar pengoperasian;",
+                            "pemilihan lokasi usaha;",
+                            "desain tempat usaha;",
+                            "penyajian/penataan; dan",
+                            "strategi pemasaran."
+                        ],
+                        "note": {
+                            "label": "Dengan ketentuan:",
+                            "items": [
+                                "dibuat secara tertulis dan ditawarkan oleh Pemberi Waralaba atau Pemberi Waralaba Lanjutan kepada Penerima Waralaba atau Penerima Waralaba Lanjutan;",
+                                "mudah diajarkan dan diaplikasikan; dan",
+                                "memiliki ciri khas/kekhasan usaha yang jelas dan sama antara Pemberi Waralaba atau Pemberi Waralaba Lanjutan kepada Penerima Waralaba atau Penerima Waralaba Lanjutan."
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Bisnis sudah memberikan keuntungan;",
+                        "items": [
+                            "kegiatan usaha yang diusulkan telah berlangsung paling sedikit 5 (lima) tahun terus-menerus; dan",
+                            "laporan keuangan 2 (dua) tahun terakhir yang menunjukkan adanya keuntungan dan telah diaudit oleh akuntan publik dengan opini wajar tanpa pengecualian."
+                        ]
+                    },
+                    {
+                        "text": "Memiliki kekayaan intelektual yang tercatat atau terdaftar; meliputi kekayaan intelektual yang terkait dengan usaha berupa merek, hak cipta, paten, rahasia dagang, desain industri, dan/atau desain tata letak sirkuit terpadu."
+                    },
+                    {
+                        "text": "Dukungan yang berkesinambungan dari Pemberi Waralaba dan/atau Pemberi Waralaba Lanjutan kepada Penerima Waralaba dan/atau Penerima Waralaba Lanjutan:",
+                        "items": [
+                            "pelatihan;",
+                            "manajemen operasional;",
+                            "promosi;",
+                            "penelitian;",
+                            "pengembangan pasar; dan",
+                            "bentuk pembinaan lainnya."
+                        ]
+                    }
+                ],
+                "en": [
+                    {
+                        "text": "Has a business system covering:",
+                        "items": [
+                            "human resource management;",
+                            "administration;",
+                            "operational management;",
+                            "standard operating procedures;",
+                            "business location selection;",
+                            "business premises design;",
+                            "presentation/layout; and",
+                            "marketing strategy."
+                        ],
+                        "note": {
+                            "label": "Subject to the following provisions:",
+                            "items": [
+                                "made in writing and offered by the Franchisor or Sub-Franchisor to the Franchisee or Sub-Franchisee;",
+                                "easy to teach and apply; and",
+                                "has clear and consistent distinctive business characteristics between the Franchisor or Sub-Franchisor and the Franchisee or Sub-Franchisee."
+                            ]
+                        }
+                    },
+                    {
+                        "text": "The business has already generated profit;",
+                        "items": [
+                            "the proposed business activity has been continuously operating for at least 5 (five) years; and",
+                            "financial statements for the last 2 (two) years showing profit and audited by a public accountant with an unqualified opinion."
+                        ]
+                    },
+                    {
+                        "text": "Possesses recorded or registered intellectual property; covering business-related intellectual property in the form of trademarks, copyrights, patents, trade secrets, industrial designs, and/or integrated circuit layout designs."
+                    },
+                    {
+                        "text": "Continuous support from the Franchisor and/or Sub-Franchisor to the Franchisee and/or Sub-Franchisee:",
+                        "items": [
+                            "training;",
+                            "operational management;",
+                            "promotion;",
+                            "research;",
+                            "market development; and",
+                            "other forms of guidance."
+                        ]
+                    }
+                ],
+                "zh": [
+                    {
+                        "text": "具备以下经营体系：",
+                        "items": [
+                            "人力资源管理；",
+                            "行政管理；",
+                            "运营管理；",
+                            "标准操作方法；",
+                            "营业地点选择；",
+                            "营业场所设计；",
+                            "陈列/布置；且",
+                            "营销策略。"
+                        ],
+                        "note": {
+                            "label": "须符合以下规定：",
+                            "items": [
+                                "以书面形式制作，并由特许经营授权方或次级特许经营授权方向特许经营受让方或次级特许经营受让方提供；",
+                                "易于传授和应用；且",
+                                "特许经营授权方或次级特许经营授权方与特许经营受让方或次级特许经营受让方之间，须具有明确且一致的经营特色。"
+                            ]
+                        }
+                    },
+                    {
+                        "text": "业务已产生盈利；",
+                        "items": [
+                            "拟经营的业务活动须已连续经营至少5（五）年；且",
+                            "最近2（二）年的财务报表须显示盈利，并经公共会计师审计并出具无保留意见。"
+                        ]
+                    },
+                    {
+                        "text": "拥有已记录或注册的知识产权；涵盖与业务相关的知识产权，包括商标、著作权、专利、商业秘密、工业设计及/或集成电路布图设计。"
+                    },
+                    {
+                        "text": "特许经营授权方及/或次级特许经营授权方向特许经营受让方及/或次级特许经营受让方提供持续支持：",
+                        "items": [
+                            "培训；",
+                            "运营管理；",
+                            "推广；",
+                            "研究；",
+                            "市场开发；且",
+                            "其他形式的辅导。"
+                        ]
+                    }
+                ]
+            },
+            "paket_harga": {
+                "nama_paket": {
+                    "id": "STPW Luar Negeri",
+                    "en": "Foreign STPW",
+                    "zh": "境外STPW"
+                },
+                "harga": "Rp 9.000.000",
+                "bonus": {
+                    "id": "Gratis konsultasi persiapan dokumen sebelum pemesanan",
+                    "en": "Free document preparation consultation before ordering",
+                    "zh": "下单前免费提供文件准备咨询"
+                },
+                "dokumen_legalitas": {
+                    "id": [
+                        "Pendaftaran OSS;",
+                        "Nomor Induk Berusaha;",
+                        "Surat Tanda Pendaftaran Waralaba Luar Negeri."
+                    ],
+                    "en": [
+                        "OSS Registration;",
+                        "Business Identification Number (NIB);",
+                        "Foreign Franchise Registration Certificate."
+                    ],
+                    "zh": [
+                        "OSS注册；",
+                        "营业执照号码（NIB）；",
+                        "境外特许经营注册证书。"
+                    ]
+                },
+                "termasuk": {
+                    "id": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ],
+                    "en": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ],
+                    "zh": [
+                        "Fasttrack 文件快递服务",
+                        "Fasttrack 数字文件安全存储",
+                        "Fasttrack 套件"
+                    ]
+                }
+            },
+            "persyaratan": {
+                "id": [
+                    {
+                        "title": "Data Penanggung Jawab",
+                        "groups": [
+                            {
+                                "label": "Dokumen:",
+                                "items": [
+                                    "Perseorangan Indonesia: agar melampirkan scan/copy berwarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                    "Perseorangan Asing: Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                                ]
+                            },
+                            {
+                                "label": "Data",
+                                "items": [
+                                    "Nomor telepon",
+                                    "Alamat email"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Akta Pendirian (Deed Of Establishment)",
+                        "description": "Akta pendirian (deed of establishment) yang mengacu pada ketentuan perundang-undangan negara asal yang telah diterjemahkan oleh penerjemah tersumpah."
+                    },
+                    {
+                        "title": "Pengesahan Akta (Article Of Association/Article Of Incorporation) Prinsipal/Head Office",
+                        "description": "Pengesahan (article of association/incorporation) yang mengacu pada ketentuan perundang-undangan negara asal yang telah diterjemahkan oleh penerjemah tersumpah."
+                    },
+                    {
+                        "title": "Prospektus Penawaran Waralaba Yang Dilegalisir Oleh Public Notary",
+                        "groups": [
+                            {
+                                "label": "Paling sedikit memuat atau klausula:",
+                                "items": [
+                                    "Data identitas Pemberi Waralaba;",
+                                    "Legalitas usaha Pemberi Waralaba;",
+                                    "Sejarah kegiatan usahanya;",
+                                    "Struktur organisasi Pemberi Waralaba;",
+                                    "Laporan keuangan 2 (dua) tahun terakhir;",
+                                    "Jumlah tempat usaha;",
+                                    "Daftar Penerima Waralaba;",
+                                    "Hak dan kewajiban Pemberi Waralaba dan Penerima Waralaba;",
+                                    "Hak kekayaan intelektual, yang diterjemahkan secara resmi oleh penerjemah tersumpah ke dalam Bahasa Indonesia."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Perjanjian Waralaba",
+                        "description": "Template"
+                    },
+                    {
+                        "title": "Surat Keterangan Dari Atase Perdagangan Republik Indonesia",
+                        "description": "Surat Keterangan dari Atase Perdagangan Republik Indonesia, Pejabat Promosi Investasi Republik Indonesia, atau Pejabat Kantor Perwakilan Republik Indonesia di Negara asal yang telah dilegalisasi."
+                    },
+                    {
+                        "title": "Sertifikat Pendaftaran Merek",
+                        "description": "Template"
+                    },
+                    {
+                        "title": "Formulir/Surat Yang Telah Dilengkapi Dan Ditanda Tangani Oleh Seluruh Pihak",
+                        "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                    }
+                ],
+                "en": [
+                    {
+                        "title": "Responsible Person's Data",
+                        "groups": [
+                            {
+                                "label": "Documents:",
+                                "items": [
+                                    "For Indonesian individuals: please attach a color scan/copy of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
+                                    "Foreign individuals: A copy of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                                ]
+                            },
+                            {
+                                "label": "Data",
+                                "items": [
+                                    "Phone number",
+                                    "Email address"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Deed of Establishment",
+                        "description": "A deed of establishment prepared in accordance with the laws and regulations of the country of origin, translated by a sworn translator."
+                    },
+                    {
+                        "title": "Ratification of the Deed (Articles of Association/Articles of Incorporation) of the Principal/Head Office",
+                        "description": "The ratification (articles of association/incorporation) prepared in accordance with the laws and regulations of the country of origin, translated by a sworn translator."
+                    },
+                    {
+                        "title": "Franchise Offering Prospectus Legalized by a Public Notary",
+                        "groups": [
+                            {
+                                "label": "Must contain at least the following clauses:",
+                                "items": [
+                                    "Identity details of the Franchisor;",
+                                    "Business legality of the Franchisor;",
+                                    "History of its business activities;",
+                                    "Organizational structure of the Franchisor;",
+                                    "Financial statements for the last 2 (two) years;",
+                                    "Number of business premises;",
+                                    "List of Franchisees;",
+                                    "Rights and obligations of the Franchisor and Franchisee;",
+                                    "Intellectual property rights, officially translated into Indonesian by a sworn translator."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Franchise Agreement",
+                        "description": "Template"
+                    },
+                    {
+                        "title": "Certificate from the Trade Attaché of the Republic of Indonesia",
+                        "description": "A legalized certificate from the Trade Attaché of the Republic of Indonesia, an Investment Promotion Official of the Republic of Indonesia, or an Official of the Representative Office of the Republic of Indonesia in the country of origin."
+                    },
+                    {
+                        "title": "Trademark Registration Certificate",
+                        "description": "Template"
+                    },
+                    {
+                        "title": "Forms/Documents Completed and Signed by All Parties",
+                        "description": "All drafts and content will be prepared by us after the order is placed and all required documents and information have been received."
+                    }
+                ],
+                "zh": [
+                    {
+                        "title": "负责人资料",
+                        "groups": [
+                            {
+                                "label": "文件：",
+                                "items": [
+                                    "印尼籍个人：请附上有效的身份证（e-KTP）彩色扫描件/复印件及纳税人识别号（NPWP）复印件；及/或",
+                                    "外籍个人：护照复印件须清晰显示姓名、护照持有人签名及护照有效期。"
+                                ]
+                            },
+                            {
+                                "label": "资料",
+                                "items": [
+                                    "电话号码",
+                                    "电子邮箱地址"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "设立公证书（Deed of Establishment）",
+                        "description": "根据原籍国法律法规制作、并经宣誓翻译员翻译的设立公证书。"
+                    },
+                    {
+                        "title": "总公司/母公司章程批准文件（Article of Association/Article of Incorporation）",
+                        "description": "根据原籍国法律法规制作、并经宣誓翻译员翻译的批准文件（公司章程/设立文件）。"
+                    },
+                    {
+                        "title": "经公证人（Public Notary）认证的特许经营招募说明书",
+                        "groups": [
+                            {
+                                "label": "至少须包含以下条款：",
+                                "items": [
+                                    "特许经营授权方的身份资料；",
+                                    "特许经营授权方的经营合法性；",
+                                    "其业务活动历史；",
+                                    "特许经营授权方的组织架构；",
+                                    "最近2（二）年的财务报表；",
+                                    "营业场所数量；",
+                                    "特许经营受让方名单；",
+                                    "特许经营授权方与受让方的权利和义务；",
+                                    "知识产权，须由宣誓翻译员正式翻译成印尼语。"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "特许经营协议",
+                        "description": "模板"
+                    },
+                    {
+                        "title": "印度尼西亚共和国贸易参赞出具的证明函",
+                        "description": "由印度尼西亚共和国贸易参赞、印度尼西亚共和国投资促进官员，或印度尼西亚共和国驻原籍国代表处官员出具并经认证的证明函。"
+                    },
+                    {
+                        "title": "商标注册证书",
+                        "description": "模板"
+                    },
+                    {
+                        "title": "由各方填写并签署的表格/文件",
+                        "description": "所有草案及内容将在下单且收到所有文件与信息要求后由我方准备。"
+                    }
+                ]
+            },
+            "dasar_hukum": {
+                "id": [
+                    "Undang-Undang Nomor 7 Tahun 2014 tentang Perdagangan;",
+                    "UU No. 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang;",
+                    "Peraturan Pemerintah Nomor 35 Tahun 2024 tentang Waralaba;",
+                    "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 8 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                ],
+                "en": [
+                    "Law Number 7 of 2014 concerning Trade;",
+                    "Law No. 6 of 2023 on the Enactment of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                    "Government Regulation Number 35 of 2024 concerning Franchising;",
+                    "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                    "Regulation of the Minister of Investment and Downstreaming/Head of the Investment Coordinating Board Number 8 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities through the Online Single Submission System."
+                ],
+                "zh": [
+                    "2014年第7号法律关于贸易；",
+                    "2023年第6号法律关于将2022年第2号代替法律的政府条例确立为法律；",
+                    "2024年第35号政府法规关于特许经营；",
+                    "2025年第28号政府法规，关于基于风险的营业许可实施；",
+                    "投资部长/投资协调委员会主席2025年第8号条例，关于通过在线单一提交系统（OSS）实施基于风险的营业许可及投资便利指南和程序。"
+                ]
+            }
+        }
+    },
+    {
+        "id": 2,
+        "price": "3500000",
+        "price_label": "Rp 3.500.000",
+        "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80&fm=webp",
+        "detail_path": "/perizinan-usaha/pse-asing",
+        "name": {
+            "id": "Penyelenggara Sistem Elektronik Asing",
+            "en": "Foreign Electronic System Provider",
+            "zh": "外国电子系统提供者"
+        },
+        "tag": {
+            "id": "Kolaboratif",
+            "en": "Collaborative",
+            "zh": "协作型"
+        },
+        "duration": {
+            "id": "Estimasi 5-10 hari kerja",
+            "en": "Estimated 5-10 working days",
+            "zh": "预计5-10个工作日"
+        },
+        "excerpt": {
+            "id": "Pendaftaran Penyelenggara Sistem Elektronik (PSE) Lingkup Privat bagi pelaku usaha asing yang menyelenggarakan sistem elektronik di Indonesia.",
+            "en": "Registration of a Private Scope Electronic System Provider (PSE) for foreign business actors operating an electronic system in Indonesia.",
+            "zh": "为在印度尼西亚运营电子系统的外国经营者办理私营范围电子系统提供者（PSE）登记。"
+        },
+        "_catatan": "DRAFT: konten di bawah ini belum ada referensi Figma-nya, jadi masih perkiraan agar mengikuti struktur baru. Mohon dicek ulang/dilengkapi sebelum publish.",
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "baru": {
+            "penjelasan_umum": {
+                "id": [
+                    "Penyelenggara Sistem Elektronik (PSE) Lingkup Privat adalah setiap orang, penyelenggara negara, badan usaha, dan masyarakat yang menyelenggarakan sistem elektronik secara tersendiri maupun bersama-sama kepada pengguna sistem elektronik untuk keperluan dirinya dan/atau keperluan pihak lain.",
+                    "PSE yang berkedudukan di luar wilayah Negara Kesatuan Republik Indonesia namun memenuhi kriteria tertentu wajib melakukan pendaftaran sebagai PSE Lingkup Privat melalui sistem Online Single Submission (OSS) Kementerian Komunikasi dan Digital."
+                ],
+                "en": [
+                    "A Private Scope Electronic System Provider (PSE) is any person, state administrator, business entity, or member of the public that operates an electronic system, either individually or jointly, for users of the electronic system for its own purposes and/or the purposes of other parties.",
+                    "A PSE domiciled outside the territory of the Unitary State of the Republic of Indonesia but meeting certain criteria is required to register as a Private Scope PSE through the Online Single Submission (OSS) system of the Ministry of Communication and Digital Affairs."
+                ],
+                "zh": [
+                    "私营范围电子系统提供者（PSE）是指任何个人、国家机关、企业或社会公众，无论是单独还是共同为电子系统用户运营电子系统，以满足自身及/或他方的需求。",
+                    "住所设于印度尼西亚共和国境外但符合特定标准的PSE，须通过通信与数字部的在线单一提交系统（OSS）注册为私营范围PSE。"
+                ]
+            },
+            "kriteria": {
+                "id": [
+                    {
+                        "text": "Wajib mendaftar apabila memenuhi salah satu kriteria berikut:",
+                        "items": [
+                            "menawarkan layanan kepada pengguna yang berdomisili di Indonesia;",
+                            "melakukan kegiatan usaha di Indonesia; dan/atau",
+                            "sistem elektronik digunakan dan/atau ditawarkan kepada pengguna dalam wilayah Indonesia secara berkelanjutan."
+                        ]
+                    }
+                ],
+                "en": [
+                    {
+                        "text": "Must register if it meets one of the following criteria:",
+                        "items": [
+                            "offering services to users domiciled in Indonesia;",
+                            "conducting business activities in Indonesia; and/or",
+                            "the electronic system is used and/or offered to users within the territory of Indonesia on an ongoing basis."
+                        ]
+                    }
+                ],
+                "zh": [
+                    {
+                        "text": "若符合以下任一标准，即须办理登记：",
+                        "items": [
+                            "向居住在印度尼西亚的用户提供服务；",
+                            "在印度尼西亚开展经营活动；及/或",
+                            "该电子系统在印度尼西亚境内持续被用户使用及/或提供。"
+                        ]
+                    }
+                ]
+            },
+            "paket_harga": {
+                "nama_paket": {
+                    "id": "PSE Asing",
+                    "en": "Foreign PSE",
+                    "zh": "境外PSE"
+                },
+                "harga": "Rp 3.500.000",
+                "bonus": {
+                    "id": "Gratis konsultasi kelengkapan dokumen sebelum pemesanan",
+                    "en": "Free document completeness consultation before ordering",
+                    "zh": "下单前免费提供文件完整性咨询"
+                },
+                "dokumen_legalitas": {
+                    "id": [
+                        "Pendaftaran OSS;",
+                        "Nomor Induk Berusaha;",
+                        "Tanda Daftar Penyelenggara Sistem Elektronik."
+                    ],
+                    "en": [
+                        "OSS Registration;",
+                        "Business Identification Number (NIB);",
+                        "Electronic System Provider Registration Certificate."
+                    ],
+                    "zh": [
+                        "OSS注册；",
+                        "营业执照号码（NIB）；",
+                        "电子系统提供者注册证书。"
+                    ]
+                },
+                "termasuk": {
+                    "id": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ],
+                    "en": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ],
+                    "zh": [
+                        "Fasttrack 文件快递服务",
+                        "Fasttrack 数字文件安全存储",
+                        "Fasttrack 套件"
+                    ]
+                }
+            },
+            "persyaratan": {
+                "id": [
+                    {
+                        "title": "Data Penanggung Jawab",
+                        "groups": [
+                            {
+                                "label": "Dokumen:",
+                                "items": [
+                                    "Perseorangan Indonesia: agar melampirkan scan/copy berwarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                    "Perseorangan Asing: Copy paspor yang mencantumkan dengan jelas nama, tandatangan pemilik paspor serta masa berlaku paspor."
+                                ]
+                            },
+                            {
+                                "label": "Data",
+                                "items": [
+                                    "Nomor telepon",
+                                    "Alamat email"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Akta Pendirian (Deed Of Establishment)",
+                        "description": "Akta pendirian (deed of establishment) yang mengacu pada ketentuan perundang-undangan negara asal yang telah diterjemahkan oleh penerjemah tersumpah."
+                    },
+                    {
+                        "title": "Deskripsi Sistem Elektronik",
+                        "description": "Penjelasan ringkas mengenai sistem elektronik yang diselenggarakan, termasuk fungsi dan cara kerjanya."
+                    },
+                    {
+                        "title": "Formulir/Surat Yang Telah Dilengkapi Dan Ditanda Tangani Oleh Seluruh Pihak",
+                        "description": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                    }
+                ],
+                "en": [
+                    {
+                        "title": "Responsible Person's Data",
+                        "groups": [
+                            {
+                                "label": "Documents:",
+                                "items": [
+                                    "For Indonesian individuals: please attach a color scan/copy of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
+                                    "Foreign individuals: A copy of the passport clearly stating the name, signature of the passport holder, and passport validity period."
+                                ]
+                            },
+                            {
+                                "label": "Data",
+                                "items": [
+                                    "Phone number",
+                                    "Email address"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Deed of Establishment",
+                        "description": "A deed of establishment prepared in accordance with the laws and regulations of the country of origin, translated by a sworn translator."
+                    },
+                    {
+                        "title": "Description of the Electronic System",
+                        "description": "A brief explanation of the electronic system being operated, including its functions and how it works."
+                    },
+                    {
+                        "title": "Forms/Documents Completed and Signed by All Parties",
+                        "description": "All drafts and content will be prepared by us after the order is placed and all required documents and information have been received."
+                    }
+                ],
+                "zh": [
+                    {
+                        "title": "负责人资料",
+                        "groups": [
+                            {
+                                "label": "文件：",
+                                "items": [
+                                    "印尼籍个人：请附上有效的身份证（e-KTP）彩色扫描件/复印件及纳税人识别号（NPWP）复印件；及/或",
+                                    "外籍个人：护照复印件须清晰显示姓名、护照持有人签名及护照有效期。"
+                                ]
+                            },
+                            {
+                                "label": "资料",
+                                "items": [
+                                    "电话号码",
+                                    "电子邮箱地址"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "设立公证书（Deed of Establishment）",
+                        "description": "根据原籍国法律法规制作、并经宣誓翻译员翻译的设立公证书。"
+                    },
+                    {
+                        "title": "电子系统描述",
+                        "description": "对所运营电子系统的简要说明，包括其功能及运作方式。"
+                    },
+                    {
+                        "title": "由各方填写并签署的表格/文件",
+                        "description": "所有草案及内容将在下单且收到所有文件与信息要求后由我方准备。"
+                    }
+                ]
+            },
+            "dasar_hukum": {
+                "id": [
+                    "Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik sebagaimana diubah dengan Undang-Undang Nomor 19 Tahun 2016;",
+                    "Peraturan Pemerintah Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik;",
+                    "Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggara Sistem Elektronik Lingkup Privat beserta perubahannya."
+                ],
+                "en": [
+                    "Law Number 11 of 2008 concerning Electronic Information and Transactions as amended by Law Number 19 of 2016;",
+                    "Government Regulation Number 71 of 2019 concerning the Implementation of Electronic Systems and Transactions;",
+                    "Regulation of the Minister of Communication and Informatics Number 5 of 2020 concerning Private Scope Electronic System Providers and its amendments."
+                ],
+                "zh": [
+                    "2008年第11号法律关于电子信息与交易，经2016年第19号法律修订；",
+                    "2019年第71号政府法规关于电子系统与交易的实施；",
+                    "通信与信息部长2020年第5号条例，关于私营范围电子系统提供者及其修订。"
+                ]
+            }
+        }
+    }
+]

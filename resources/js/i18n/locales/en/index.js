@@ -5,14 +5,22 @@ import badanUsaha from './services/badan-usaha'
 import kantorPerwakilan from './services/kantor-perwakilan'
 import izinTinggalTerbatas from './services/izin-tinggal-terbatas'
 import badanUsahaDetail from './services/show/badan-usaha-detail'
+import layanan from './services/layanan'
+import badanUsahaLuarNegeri from './services/badan-usaha-luar-negeri'
+import oneSingleSubmission from './services/one-single-submission'
+import perizinanLainnya from './services/perizinan-lainnya'
 
 export default {
     common,
     home,
     services: {
+        layanan,
         badanUsaha,
         badanUsahaDetail,
         kantorPerwakilan,
-        izinTinggalTerbatas
+        izinTinggalTerbatas,
+        badanUsahaLuarNegeri,
+        oneSingleSubmission,
+        perizinanLainnya
     },
 }
