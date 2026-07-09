@@ -13,16 +13,11 @@ const props = defineProps({
 const whatsappNumber = "6282298604144";
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
-const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
-    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
-    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
-    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
-];
+const itemMeta = [{ icon: "/icons/ft-building.svg", path: "/virtual-office" }];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
 const serviceList = computed(() =>
-    tm("services.izinTinggalTerbatas.list").map((item, i) => ({
+    tm("services.virtualOffice.list").map((item, i) => ({
         ...item,
         icon: itemMeta[i].icon,
         path: itemMeta[i].path,
@@ -30,7 +25,7 @@ const serviceList = computed(() =>
 );
 
 const buildWhatsappLink = (productName) => {
-    const message = `${t("services.izinTinggalTerbatas.cta.waMessage")} ${productName}.`;
+    const message = `${t("services.virtualOffice.cta.waMessage")} ${productName}.`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 </script>
@@ -94,7 +89,7 @@ const buildWhatsappLink = (productName) => {
                             class="text-sm font-medium text-[#9e1f16] hover:underline"
                         >
                             {{
-                                t("services.izinTinggalTerbatas.hero.breadcrumb.layanan")
+                                t("services.virtualOffice.hero.breadcrumb.layanan")
                             }}
                         </a>
                         <svg
@@ -112,7 +107,7 @@ const buildWhatsappLink = (productName) => {
                         </svg>
                         <span class="text-sm font-medium text-[#9e1f16]">
                             {{
-                                t("services.izinTinggalTerbatas.hero.breadcrumb.current")
+                                t("services.virtualOffice.hero.breadcrumb.current")
                             }}
                         </span>
                     </div>
@@ -123,16 +118,16 @@ const buildWhatsappLink = (productName) => {
                     <h1
                         class="text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl"
                     >
-                        {{ t("services.izinTinggalTerbatas.hero.title")
+                        {{ t("services.virtualOffice.hero.title")
                         }}<br class="hidden sm:block" />
                         <span class="text-white/90">{{
-                            t("services.izinTinggalTerbatas.hero.titleSub")
+                            t("services.virtualOffice.hero.titleSub")
                         }}</span>
                     </h1>
                     <p
                         class="mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base sm:leading-7"
                     >
-                        {{ t("services.izinTinggalTerbatas.hero.desc") }}
+                        {{ t("services.virtualOffice.hero.desc") }}
                     </p>
                     <div class="mt-6">
                         <a
@@ -152,7 +147,7 @@ const buildWhatsappLink = (productName) => {
                                     d="M10 19l-7-7m0 0l7-7m-7 7h18"
                                 />
                             </svg>
-                            {{ t("services.izinTinggalTerbatas.hero.back") }}
+                            {{ t("services.virtualOffice.hero.back") }}
                         </a>
                     </div>
                 </div>
@@ -170,7 +165,7 @@ const buildWhatsappLink = (productName) => {
                         <a
                             v-for="(item, idx) in serviceList"
                             :key="idx"
-                            :href="`/izin-tinggal-terbatas/${item.id}`"
+                            :href="`/virtual-office/${item.id}`"
                             class="group flex flex-col rounded-[14px] border border-[#D9DAD8] bg-[#FEFEFE] p-[15px] backdrop-blur-[13px] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-primary/30"
                         >
                             <div class="flex flex-col gap-4 flex-grow">
@@ -212,7 +207,7 @@ const buildWhatsappLink = (productName) => {
                                         class="text-[11px] leading-[18px] text-[#1A1B18]"
                                     >
                                         {{
-                                            t("services.izinTinggalTerbatas.items.from")
+                                            t("services.virtualOffice.items.from")
                                         }}
                                     </span>
                                     <span
@@ -232,7 +227,7 @@ const buildWhatsappLink = (productName) => {
                             <div
                                 class="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[13px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors whitespace-nowrap"
                             >
-                                {{ t("services.izinTinggalTerbatas.items.cta") }}
+                                {{ t("services.virtualOffice.items.cta") }}
                                 <svg
                                     class="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0"
                                     fill="none"
@@ -265,18 +260,18 @@ const buildWhatsappLink = (productName) => {
                             <h3
                                 class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]"
                             >
-                                {{ t("services.izinTinggalTerbatas.cta.title") }}
+                                {{ t("services.virtualOffice.cta.title") }}
                             </h3>
                             <p
                                 class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]"
                             >
-                                {{ t("services.izinTinggalTerbatas.cta.desc") }}
+                                {{ t("services.virtualOffice.cta.desc") }}
                             </p>
                             <a
                                 :href="
                                     buildWhatsappLink(
                                         t(
-                                            'services.izinTinggalTerbatas.hero.breadcrumb.current',
+                                            'services.virtualOffice.hero.breadcrumb.current',
                                         ),
                                     )
                                 "
@@ -284,7 +279,7 @@ const buildWhatsappLink = (productName) => {
                                 rel="noopener noreferrer"
                                 class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]"
                             >
-                                {{ t("services.izinTinggalTerbatas.cta.whatsapp") }}
+                                {{ t("services.virtualOffice.cta.whatsapp") }}
                                 <img
                                     src="/icons/ft-wa.svg"
                                     alt="WhatsApp"
