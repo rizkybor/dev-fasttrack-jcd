@@ -1,11 +1,16 @@
 <script setup>
 import { ref, computed, watch } from "vue";
-import { Link } from "@inertiajs/vue3";
+import { Link, router } from "@inertiajs/vue3";
 import MainLayout from "@/Layouts/MainLayout.vue";
 
 /**
  * Halaman "Artikel" — Wawasan Hukum & Bisnis Terkini
  * Sesuai desain Figma: hero + search + list artikel + CTA banner
+ *
+ * Search & pagination didorong lewat URL (?search=&page=) dan diproses
+ * server-side di routes/web.php — bukan slicing array di client — supaya
+ * link tiap halaman bisa di-bookmark/dibagikan dan payload tidak memuat
+ * seluruh artikel sekaligus saat datanya nanti berkembang banyak.
  */
 
 const props = defineProps({
@@ -13,52 +18,50 @@ const props = defineProps({
         type: Array,
         default: () => [],
     },
+    pagination: {
+        type: Object,
+        default: () => ({ current_page: 1, last_page: 1, per_page: 5, total: 0 }),
+    },
+    filters: {
+        type: Object,
+        default: () => ({ search: "" }),
+    },
 });
 
 /* ------------------------------------------------------------------ */
-/* Search                                                               */
+/* Search (debounced, memicu kunjungan Inertia baru ke /artikel)        */
 /* ------------------------------------------------------------------ */
 
-const searchQuery = ref("");
+const searchQuery = ref(props.filters.search ?? "");
+let searchDebounce = null;
 
-const filteredArticles = computed(() => {
-    const query = searchQuery.value.trim().toLowerCase();
-    if (!query) return props.articles;
-
-    return props.articles.filter((article) => {
-        const haystack = [article.title, article.excerpt, article.category]
-            .filter(Boolean)
-            .join(" ")
-            .toLowerCase();
-        return haystack.includes(query);
+const visitArtikel = (params, options = {}) => {
+    router.get("/artikel", params, {
+        preserveState: true,
+        preserveScroll: true,
+        replace: true,
+        ...options,
     });
-});
-
-/* ------------------------------------------------------------------ */
-/* Pagination                                                           */
-/* ------------------------------------------------------------------ */
-
-const perPage = 5;
-const currentPage = ref(1);
-
-const totalPages = computed(() => {
-    return Math.max(1, Math.ceil(filteredArticles.value.length / perPage));
-});
-
-const paginatedArticles = computed(() => {
-    const start = (currentPage.value - 1) * perPage;
-    return filteredArticles.value.slice(start, start + perPage);
-});
-
-const goToPage = (page) => {
-    if (page < 1 || page > totalPages.value) return;
-    currentPage.value = page;
 };
 
-// Reset ke halaman 1 setiap kali pencarian berubah
-watch(searchQuery, () => {
-    currentPage.value = 1;
+watch(searchQuery, (value) => {
+    clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(() => {
+        visitArtikel(value.trim() ? { search: value.trim() } : {});
+    }, 350);
 });
+
+/* ------------------------------------------------------------------ */
+/* Pagination (link ke ?page=N, mempertahankan search yang aktif)      */
+/* ------------------------------------------------------------------ */
+
+const pageHref = (page) => {
+    const params = new URLSearchParams();
+    if (props.filters.search) params.set("search", props.filters.search);
+    if (page > 1) params.set("page", String(page));
+    const query = params.toString();
+    return query ? `/artikel?${query}` : "/artikel";
+};
 
 /* ------------------------------------------------------------------ */
 /* WhatsApp CTA                                                        */
@@ -171,9 +174,9 @@ const whatsappLink = computed(() => {
                     </div>
 
                     <!-- Article List -->
-                    <div v-if="filteredArticles.length" class="flex flex-col gap-4">
+                    <div v-if="articles.length" class="flex flex-col gap-4">
                         <Link
-                            v-for="article in paginatedArticles"
+                            v-for="article in articles"
                             :key="article.slug ?? article.id"
                             :href="`/artikel/${article.slug ?? article.id}`"
                             class="block rounded-lg border border-[#D9DAD8] p-5 transition hover:border-[#9e1f16]/40 hover:shadow-sm"
@@ -233,15 +236,17 @@ const whatsappLink = computed(() => {
 
                     <!-- Pagination -->
                     <div
-                        v-if="filteredArticles.length && totalPages > 1"
+                        v-if="pagination.last_page > 1"
                         class="flex items-center justify-center gap-2 pt-2"
                     >
-                        <button
-                            type="button"
-                            :disabled="currentPage === 1"
-                            @click="goToPage(currentPage - 1)"
-                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#D9DAD8] text-[#7A7B78] transition hover:border-[#9e1f16]/40 hover:text-[#9e1f16] disabled:cursor-not-allowed disabled:opacity-40"
+                        <Link
+                            :href="pageHref(pagination.current_page - 1)"
+                            :class="[
+                                'flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#D9DAD8] text-[#7A7B78] transition hover:border-[#9e1f16]/40 hover:text-[#9e1f16]',
+                                pagination.current_page === 1 && 'pointer-events-none opacity-40',
+                            ]"
                             aria-label="Halaman sebelumnya"
+                            preserve-scroll
                         >
                             <svg
                                 class="h-3.5 w-3.5"
@@ -256,29 +261,31 @@ const whatsappLink = computed(() => {
                                     d="M15 19l-7-7 7-7"
                                 />
                             </svg>
-                        </button>
+                        </Link>
 
-                        <button
-                            v-for="page in totalPages"
+                        <Link
+                            v-for="page in pagination.last_page"
                             :key="page"
-                            type="button"
-                            @click="goToPage(page)"
+                            :href="pageHref(page)"
                             :class="[
                                 'flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[12px] font-semibold transition',
-                                page === currentPage
+                                page === pagination.current_page
                                     ? 'bg-[#9e1f16] text-white'
                                     : 'border border-[#D9DAD8] text-[#4A4B47] hover:border-[#9e1f16]/40 hover:text-[#9e1f16]',
                             ]"
+                            preserve-scroll
                         >
                             {{ page }}
-                        </button>
+                        </Link>
 
-                        <button
-                            type="button"
-                            :disabled="currentPage === totalPages"
-                            @click="goToPage(currentPage + 1)"
-                            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#D9DAD8] text-[#7A7B78] transition hover:border-[#9e1f16]/40 hover:text-[#9e1f16] disabled:cursor-not-allowed disabled:opacity-40"
+                        <Link
+                            :href="pageHref(pagination.current_page + 1)"
+                            :class="[
+                                'flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#D9DAD8] text-[#7A7B78] transition hover:border-[#9e1f16]/40 hover:text-[#9e1f16]',
+                                pagination.current_page === pagination.last_page && 'pointer-events-none opacity-40',
+                            ]"
                             aria-label="Halaman berikutnya"
+                            preserve-scroll
                         >
                             <svg
                                 class="h-3.5 w-3.5"
@@ -293,12 +300,12 @@ const whatsappLink = computed(() => {
                                     d="M9 5l7 7-7 7"
                                 />
                             </svg>
-                        </button>
+                        </Link>
                     </div>
 
                     <!-- Empty State -->
                     <div
-                        v-else-if="!filteredArticles.length"
+                        v-if="!articles.length"
                         class="flex flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-[#D9DAD8] px-6 py-16 text-center"
                     >
                         <p class="text-[13px] font-medium text-[#1A1B18]">

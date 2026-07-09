@@ -10,8 +10,10 @@ const seo = computed(() => page.props.seo || {});
 const site = computed(() => page.props.site || {});
 const currentUrl = computed(() => seo.value.canonical || site.value.current_url || page.props.ziggy?.location || '');
 const pageTitle = computed(() => seo.value.title || 'Layanan Legalitas Bisnis | FastTrack');
-const pageDescription = computed(() => seo.value.description || 'Legal Services - Partner Terbaik Perusahaan Anda');
-const pageImage = computed(() => seo.value.image || site.value.default_image || '/favicon.ico');
+const pageDescription = computed(() => seo.value.description || 'FastTrack Legal Services adalah partner tepercaya untuk pendirian perusahaan, perizinan usaha, dan legalitas bisnis Anda di Indonesia — profesional, cepat, dan terpercaya.');
+const defaultOgImage = computed(() => site.value.default_image || '/images/og/og-image.png');
+const pageImage = computed(() => seo.value.image || defaultOgImage.value);
+const isDefaultOgImage = computed(() => pageImage.value === defaultOgImage.value);
 const pageType = computed(() => seo.value.type || 'website');
 const pageRobots = computed(() => seo.value.robots || 'index, follow, max-image-preview:large');
 const siteName = computed(() => site.value.name || 'FastTrack');
@@ -68,12 +70,20 @@ const globalSchemas = computed(() => {
         <meta property="og:description" :content="pageDescription">
         <meta property="og:url" :content="currentUrl">
         <meta property="og:image" :content="pageImage">
+        <meta property="og:image:secure_url" :content="pageImage">
+        <meta property="og:image:alt" :content="pageTitle">
+        <template v-if="isDefaultOgImage">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:image:type" content="image/png">
+        </template>
 
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@fasttrack_legal">
         <meta name="twitter:title" :content="pageTitle">
         <meta name="twitter:description" :content="pageDescription">
         <meta name="twitter:image" :content="pageImage">
-        <meta property="og:image:alt" :content="pageTitle">
+        <meta name="twitter:image:alt" :content="pageTitle">
 
         <component
             :is="'script'"

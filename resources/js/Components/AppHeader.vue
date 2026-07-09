@@ -15,109 +15,70 @@ const mobileInformasiOpen = ref(false);
 
 const serviceCategories = [
     {
-        title: "Badan Usaha",
+        title: "Pendirian & Struktur Badan Usaha",
         path: "/badan-usaha",
         icon: "building",
         items: [
-            "Pendirian PT",
-            "Pendirian CV",
-            "Pendirian Yayasan",
-            "dan sejenisnya",
+            "Pendirian PT, CV & Yayasan",
+            "Kantor Perwakilan",
+            "Restrukturisasi, Penutupan & Sertifikasi Badan Usaha",
+            "Badan Usaha Luar Negeri",
         ],
     },
     {
-        title: "Pembuatan dan Peninjauan Perjanjian",
-        path: "/pembuatan-perjanjian",
-        icon: "document",
-        items: ["Perjanjian Kerja", "Perjanjian Investasi"],
-    },
-    {
-        title: "IZINTAX",
-        path: "/perpajakan",
-        isLogo: true,
-        logoText: 'IZIN<span class="text-blue-600">TAX</span>',
-        desc: "Layanan perpajakan dan pembukuan",
-    },
-    {
-        title: "IZINHUKUM",
-        path: "/hukum",
-        isLogo: true,
-        logoText:
-            'IZIN<span class="text-indigo-900">HU<span class="text-red-500">Q</span>UM</span>',
-        desc: "Solusi Hukum Profesional",
-    },
-    {
-        title: "Penutupan Perusahaan",
-        path: "/penutupan-perusahaan",
-        icon: "building",
-        items: ["Penutupan PT", "Penutupan CV"],
-    },
-    {
-        title: "Pembuatan dan Perubahan Dokumen",
-        path: "/perubahan-akta",
-        icon: "document-check",
-        items: ["Perubahan Dokumen", "Anggaran Dasar"],
-    },
-    {
-        title: "IZINHAKI",
-        path: "/haki",
-        isLogo: true,
-        logoText:
-            'IZIN<span class="text-blue-500 border border-blue-500 px-1 ml-1 rounded">HAKI</span>',
-        desc: "Perlindungan Hak Kekayaan Intelektual",
-    },
-    {
-        title: "IZINPROPERTI",
-        path: "/izin-properti",
-        isLogo: true,
-        logoText: 'IZIN<span class="text-red-700">PROPERTI</span>',
-        desc: "Legalitas tanah dan properti",
-    },
-    {
-        title: "Virtual Office",
-        path: "/virtual-office-jakarta",
-        icon: "pin",
-        items: ["Virtual Office Lite", "Virtual Office Premium"],
-    },
-    {
-        title: "Digital Marketing",
-        path: "/digital-marketing",
-        icon: "globe",
-        items: ["Pembuatan Website", "Pendaftaran Domain"],
-    },
-    {
-        title: "invest in asia",
-        path: "/foreignservice",
-        isLogo: true,
-        logoText:
-            '<span class="text-blue-900 lowercase font-serif">invest<span class="text-green-500">in</span>asia</span>',
-        desc: "Set up companies in Indonesia",
-    },
-    {
-        title: "IZIN PRIVILEGE",
-        path: "/izin-privilege",
-        isLogo: true,
-        logoText:
-            'IZIN <span class="font-normal tracking-widest">PRIVILEGE</span>',
-        desc: "Benefit untuk klien layanan khusus",
-    },
-    {
-        title: "Perizinan Khusus",
-        path: "/perizinan",
-        icon: "doc-stack",
-        items: ["Perizinan Perusahaan", "Perizinan Sektoral"],
-    },
-    {
-        title: "Perizinan Usaha",
-        path: "/perizinan-usaha",
+        title: "Perizinan & OSS",
+        path: "/one-single-submission",
         icon: "license",
-        items: ["OSS", "NIB"],
+        items: ["NIB & OSS", "Perizinan Lainnya"],
     },
     {
-        title: "Layanan Lainnya",
-        path: "/layanan-lain",
+        title: "Notaris & Legalisasi Dokumen",
+        path: "/notaris-virtual-dan-akta",
+        icon: "document",
+        items: [
+            "Notaris Virtual & Akta",
+            "Penyusunan & Peninjauan Perjanjian",
+            "Legalisasi Kedutaan & Apostille",
+            "Penerjemah Tersumpah",
+        ],
+    },
+    {
+        title: "Kekayaan Intelektual & Kepatuhan",
+        path: "/kekayaan-intelektual",
+        icon: "document-check",
+        items: [
+            "Merek & Hak Cipta (HAKI)",
+            "Uji Tuntas Hukum",
+            "Kewajiban Pelaporan Perusahaan",
+        ],
+    },
+    {
+        title: "Keimigrasian & Izin Tinggal",
+        path: "/izin-tinggal-terbatas",
+        icon: "doc-stack",
+        items: [
+            "KITAS & KITAP",
+            "Keimigrasian WNI & WNA",
+            "Naturalisasi & Kewarganegaraan",
+        ],
+    },
+    {
+        title: "Visa",
+        path: "/visa-indonesia",
+        icon: "globe",
+        items: ["Visa Indonesia", "Visa Mancanegara"],
+    },
+    {
+        title: "Virtual Office & Digital Marketing",
+        path: "/virtual-office",
+        icon: "pin",
+        items: ["Virtual Office Jakarta", "Digital Marketing"],
+    },
+    {
+        title: "Perpajakan & Retainer",
+        path: "/perpajakan-dan-pembukuan",
         icon: "grid",
-        items: ["Penerjemah", "Pelaporan LKPM"],
+        items: ["Perpajakan & Pembukuan", "Retainer / Berlangganan"],
     },
 ];
 

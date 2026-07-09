@@ -13,6 +13,13 @@ import { usePromoData } from "@/Data/usePromoData";
 
 const { promoItems } = usePromoData();
 
+const props = defineProps({
+    articles: {
+        type: Array,
+        default: () => [],
+    },
+});
+
 // // Pakai default
 // waLink('Pendirian PT')
 
@@ -1411,6 +1418,8 @@ onUnmounted(() => {
                         class="flex flex-col gap-6 bg-[#ffffff03] backdrop-blur-[13px] rounded-b-2xl"
                     >
                         <div
+                            v-for="article in articles"
+                            :key="article.id"
                             class="flex flex-col gap-6 border border-[#D9DAD8] rounded-xl bg-[#FEFEFE] p-[23px]"
                         >
                             <div class="flex flex-col gap-4">
@@ -1418,12 +1427,12 @@ onUnmounted(() => {
                                     <h3
                                         class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
                                     >
-                                        {{ t("home.blog.article1.title") }}
+                                        {{ article.title }}
                                     </h3>
                                     <p
-                                        class="text-[14px] leading-[21px] text-[#1A1B18]"
+                                        class="text-[14px] leading-[21px] text-[#1A1B18] line-clamp-2"
                                     >
-                                        {{ t("home.blog.article1.desc") }}
+                                        {{ article.excerpt }}
                                     </p>
                                 </div>
                                 <div class="inline-flex items-center gap-1">
@@ -1442,72 +1451,15 @@ onUnmounted(() => {
                                     </svg>
                                     <span
                                         class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]"
-                                        >{{ t("home.blog.date") }}</span
+                                        >{{ article.date }}</span
                                     >
                                 </div>
                             </div>
                             <a
-                                href="/artikel/1"
+                                :href="article.detail_path ?? `/artikel/${article.id}`"
                                 class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#9e1f16] hover:underline w-max"
                             >
                                 {{ t("common.button.readMore") }}
-                                <svg
-                                    class="w-6 h-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div
-                            class="flex flex-col gap-6 border border-[#D9DAD8] rounded-xl bg-[#FEFEFE] p-[23px]"
-                        >
-                            <div class="flex flex-col gap-4">
-                                <div class="flex flex-col gap-1">
-                                    <h3
-                                        class="text-[24px] font-bold leading-[36px] text-[#1A1B18]"
-                                    >
-                                        {{ t("home.blog.article2.title") }}
-                                    </h3>
-                                    <p
-                                        class="text-[14px] leading-[21px] text-[#1A1B18]"
-                                    >
-                                        {{ t("home.blog.article2.desc") }}
-                                    </p>
-                                </div>
-                                <div class="inline-flex items-center gap-1">
-                                    <svg
-                                        class="w-5 h-5 text-[#8E8F8B]"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                        />
-                                    </svg>
-                                    <span
-                                        class="text-[12px] font-semibold leading-[18px] text-[#8E8F8B]"
-                                        >{{ t("home.blog.date") }}</span
-                                    >
-                                </div>
-                            </div>
-                            <a
-                                href="/artikel/2"
-                                class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#9e1f16] hover:underline w-max"
-                            >
-                                {{ t("home.blog.readMore") }}
                                 <svg
                                     class="w-6 h-6"
                                     fill="none"

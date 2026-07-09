@@ -13,7 +13,7 @@ $resolveBaseUrl = static function (Request $request): string {
         : $request->getSchemeAndHttpHost();
 };
 
-$defaultImageUrl = static fn(string $baseUrl): string => $baseUrl . '/favicon.ico';
+$defaultImageUrl = static fn(string $baseUrl): string => $baseUrl . '/images/og/og-image.png';
 
 $organizationReference = static fn(string $baseUrl): array => [
     '@type' => 'Organization',
@@ -69,10 +69,28 @@ $serviceSchema = static function (string $baseUrl, array $service, ?string $pric
     return $schema;
 };
 
-Route::get('/', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl) {
+// ARTIKEL / BLOG
+$articles = (static function (): array {
+    $path = public_path('data/articles.json');
+    if (!file_exists($path)) {
+        return [];
+    }
+    $decoded = json_decode(file_get_contents($path), true);
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$articles = collect($articles)
+    ->map(static function (array $article): array {
+        $article['detail_path'] = '/artikel/' . $article['id'];
+        return $article;
+    })
+    ->all();
+
+Route::get('/', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $articles) {
     $baseUrl = $resolveBaseUrl($request);
 
     return Inertia::render('Home', [
+        'articles' => collect($articles)->take(2)->values()->all(),
         'seo' => [
             'title' => 'FastTrack - Layanan Legalitas Bisnis Terpercaya',
             'description' => 'Platform layanan legalitas pendirian PT/CV dengan standar profesional tinggi.',
@@ -197,6 +215,7 @@ $customServices = [
     ['component' => 'Services/Penerjemah/Show', 'title' => 'Penerjemah', 'path' => '/penerjemah', 'description' => 'Layanan penerjemahan dan legalisasi dokumen yang dirancang untuk memenuhi kebutuhan individu maupun perusahaan di tingkat global.'],
     ['component' => 'Services/UjiTuntasHukum/Show', 'title' => 'Uji Tuntas Hukum', 'path' => '/uji-tuntas-hukum', 'description' => 'Mengidentifikasi Risiko, Memastikan Kepatuhan, dan Melindungi Investasi Anda dalam setiap transaksi bisnis, investasi, akuisisi, kerja sama strategis, maupun restrukturisasi perusahaan, memahami kondisi hukum suatu Perseroan Terbatas merupakan langkah yang sangat penting.'],
     ['component' => 'Services/PerizinanLainnya/Index', 'title' => 'Perizinan Lainnya', 'path' => '/perizinan-lainnya', 'description' => 'Layanan pengurusan perizinan usaha lainnya yang dibutuhkan untuk mendukung operasional bisnis Anda di Indonesia.'],
+    ['component' => 'Services/PerizinanBerusaha/Index', 'title' => 'Perizinan Berusaha', 'path' => '/perizinan-berusaha', 'description' => 'Layanan pengurusan perizinan berusaha berbasis risiko melalui sistem OSS untuk mendukung operasional bisnis Anda di Indonesia.'],
     ['component' => 'Services/NotarisVirtualDanAkta/Index', 'title' => 'Notaris Virtual & Akta', 'path' => '/notaris-virtual-dan-akta', 'description' => 'Layanan notaris virtual dan pembuatan akta untuk kebutuhan legalitas perusahaan Anda secara efisien.'],
     ['component' => 'Services/RestrukturisasiPerseroanTerbatas/Index', 'title' => 'Restrukturisasi Perseroan Terbatas', 'path' => '/restrukturisasi-perseroan-terbatas', 'description' => 'Layanan restrukturisasi perseroan terbatas untuk mendukung transformasi dan pengembangan bisnis Anda.'],
     ['component' => 'Services/PenutupanBadanUsaha/Index', 'title' => 'Penutupan Badan Usaha', 'path' => '/penutupan-badan-usaha', 'description' => 'Layanan pengurusan penutupan badan usaha secara legal dan sesuai regulasi yang berlaku di Indonesia.'],
@@ -475,6 +494,22 @@ $perizinanLainnyaProducts = collect($perizinanLainnyaProducts)
     })
     ->all();
 
+// PERIZINAN BERUSAHA
+$perizinanBerusahaProducts = (static function (): array{
+    $path = public_path('data/foundingProductsPerizinanBerusaha.json');
+    if (!file_exists($path))
+        return [];
+    $decoded = json_decode(file_get_contents($path), true);
+    return is_array($decoded) ? $decoded : [];
+})();
+
+$perizinanBerusahaProducts = collect($perizinanBerusahaProducts)
+    ->map(static function (array $product): array {
+        $product['detail_path'] = '/perizinan-berusaha/' . $product['id'];
+        return $product;
+    })
+    ->all();
+
 // NOTARIS VIRTUAL DAN AKTA
 $notarisVirtualDanAktaProducts = (static function (): array{
     $path = public_path('data/foundingProductsNotarisVirtualDanAkta.json');
@@ -679,17 +714,14 @@ $staticPages = [
     '/simulasi-akta',
     '/faq',
     '/kerjasama',
-    '/minta-penawaran',
-    // '/kbli',
-    // '/tentang-kami',
-    // '/kontak',
+    '/minta-penawaran'
 ];
 
 // robots.txt & sitemap.xml are registered at the end of this file (see bottom),
 // once every *Products collection and $articles has been defined above.
 
 foreach ($customServices as $service) {
-    Route::get($service['path'], function (Request $request) use ($sertifikasiBadanUsahaProducts, $visaMancanegaraProducts, $visaIndonesiaProducts, $virtualOfficeProducts, $naturalisasiProducts, $digitalMarketingProducts, $perpajakanDanPembukuanProducts, $perizinanDasarProducts, $keimigrasianWniWnaProducts, $notarisVirtualDanAktaProducts, $perizinanLainnyaProducts, $restrukturisasiPerseroanTerbatasProducts, $penutupanBadanUsahaProducts, $penerjemahProducts, $ujiTuntasHukumProducts, $kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanUsahaLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
+    Route::get($service['path'], function (Request $request) use ($sertifikasiBadanUsahaProducts, $visaMancanegaraProducts, $visaIndonesiaProducts, $virtualOfficeProducts, $naturalisasiProducts, $digitalMarketingProducts, $perpajakanDanPembukuanProducts, $perizinanDasarProducts, $perizinanBerusahaProducts, $keimigrasianWniWnaProducts, $notarisVirtualDanAktaProducts, $perizinanLainnyaProducts, $restrukturisasiPerseroanTerbatasProducts, $penutupanBadanUsahaProducts, $penerjemahProducts, $ujiTuntasHukumProducts, $kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanUsahaLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
         $baseUrl = $resolveBaseUrl($request);
         $props = [
             'service' => $service,
@@ -1270,6 +1302,29 @@ foreach ($customServices as $service) {
                 'mainEntity' => [
                     '@type' => 'ItemList',
                     'itemListElement' => collect($perpajakanDanPembukuanProducts)->values()->map(
+                        static fn(array $product, int $index): array => [
+                            '@type' => 'ListItem',
+                            'position' => $index + 1,
+                            'name' => $product['name'],
+                            'url' => $baseUrl . $product['detail_path'],
+                        ]
+                    )->all(),
+                ],
+            ];
+        }
+
+        // PERIZINAN BERUSAHA
+        if ($service['path'] === '/perizinan-berusaha') {
+            $props['products'] = $perizinanBerusahaProducts;
+            $props['schemas'][] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'CollectionPage',
+                'name' => 'Perizinan Berusaha - FastTrack',
+                'description' => 'Daftar produk perizinan berusaha FastTrack.',
+                'url' => $baseUrl . '/perizinan-berusaha',
+                'mainEntity' => [
+                    '@type' => 'ItemList',
+                    'itemListElement' => collect($perizinanBerusahaProducts)->values()->map(
                         static fn(array $product, int $index): array => [
                             '@type' => 'ListItem',
                             'position' => $index + 1,
@@ -2276,6 +2331,72 @@ Route::get('/perizinan-lainnya/{id}', function (Request $request, int $id) use (
     ]);
 })->whereNumber('id');
 
+// PERIZINAN BERUSAHA
+Route::get('/perizinan-berusaha/{id}', function (Request $request, int $id) use ($perizinanBerusahaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+    $baseUrl = $resolveBaseUrl($request);
+    $product = collect($perizinanBerusahaProducts)->firstWhere('id', $id);
+
+    abort_if($product === null, 404);
+
+    $relatedProducts = collect($perizinanBerusahaProducts)
+        ->where('id', '!=', $id)
+        ->take(3)
+        ->values()
+        ->all();
+
+    // Resolve field translatable untuk kebutuhan SEO & Schema
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
+    return Inertia::render('Services/PerizinanBerusaha/Show', [
+        'product' => $product,
+        'relatedProducts' => $relatedProducts,
+        'seo' => [
+            'title' => $productName . ' - FastTrack',
+            'description' => $productExcerpt,
+            'canonical' => $baseUrl . $product['detail_path'],
+            'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+        ],
+        'schemas' => [
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Service',
+                'name' => $productName,
+                'description' => $productExcerpt,
+                'serviceType' => $productName,
+                'provider' => $organizationReference($baseUrl),
+                'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'],
+                'image' => $product['image'] ?: $defaultImageUrl($baseUrl),
+                'url' => $baseUrl . $product['detail_path'],
+                'offers' => [
+                    '@type' => 'Offer',
+                    'priceCurrency' => 'IDR',
+                    'price' => $product['price'],
+                    'availability' => 'https://schema.org/InStock',
+                    'url' => $baseUrl . $product['detail_path'],
+                ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($productFaq)->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']],
+                    ]
+                )->all(),
+            ],
+            $breadcrumbSchema([
+                ['name' => 'Beranda', 'item' => $baseUrl . '/'],
+                ['name' => 'Perizinan Berusaha', 'item' => $baseUrl . '/perizinan-berusaha'],
+                ['name' => $productName, 'item' => $baseUrl . $product['detail_path']],
+            ]),
+        ],
+    ]);
+})->whereNumber('id');
+
 // NOTARIS VIRTUAL DAN AKTA
 Route::get('/notaris-virtual-dan-akta/{id}', function (Request $request, int $id) use ($notarisVirtualDanAktaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
@@ -2808,28 +2929,48 @@ Route::get('/konversi-kbli', function (Request $request) use ($resolveBaseUrl, $
     ]);
 });
 
-// ARTIKEL / BLOG
-$articles = (static function (): array {
-    $path = public_path('data/articles.json');
-    if (!file_exists($path)) {
-        return [];
-    }
-    $decoded = json_decode(file_get_contents($path), true);
-    return is_array($decoded) ? $decoded : [];
-})();
-
-$articles = collect($articles)
-    ->map(static function (array $article): array {
-        $article['detail_path'] = '/artikel/' . $article['id'];
-        return $article;
-    })
-    ->all();
-
 Route::get('/artikel', function (Request $request) use ($articles, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
 
+    $search = trim((string) $request->query('search', ''));
+    $perPage = 5;
+
+    $filteredArticles = collect($articles)
+        ->filter(function (array $article) use ($search) {
+            if ($search === '') {
+                return true;
+            }
+
+            $haystack = strtolower(implode(' ', array_filter([
+                $article['title'] ?? '',
+                $article['excerpt'] ?? '',
+                $article['category'] ?? '',
+            ])));
+
+            return str_contains($haystack, strtolower($search));
+        })
+        ->values();
+
+    $total = $filteredArticles->count();
+    $lastPage = max(1, (int) ceil($total / $perPage));
+    $currentPage = max(1, min($lastPage, (int) $request->query('page', 1)));
+
+    $paginatedArticles = $filteredArticles
+        ->forPage($currentPage, $perPage)
+        ->values()
+        ->all();
+
     return Inertia::render('Articles/Index', [
-        'articles' => $articles,
+        'articles' => $paginatedArticles,
+        'pagination' => [
+            'current_page' => $currentPage,
+            'last_page' => $lastPage,
+            'per_page' => $perPage,
+            'total' => $total,
+        ],
+        'filters' => [
+            'search' => $search,
+        ],
         'seo' => [
             'title' => 'Artikel & Edukasi Hukum Bisnis - FastTrack',
             'description' => 'Dapatkan informasi terbaru seputar legalitas, perpajakan, dan regulasi bisnis di Indonesia.',
@@ -2905,89 +3046,6 @@ Route::get('/artikel/{id}', function (Request $request, int $id) use ($articles,
         ],
     ]);
 });
-
-// Route::get('/tentang-kami', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
-//     $baseUrl = $resolveBaseUrl($request);
-
-//     return Inertia::render('About', [
-//         'seo' => [
-//             'title' => 'Tentang Kami - FastTrack',
-//             'description' => 'Kenali filosofi, visi misi, komitmen, keunggulan, dan tim profesional FastTrack.',
-//             'canonical' => $baseUrl . '/tentang-kami',
-//             'image' => $defaultImageUrl($baseUrl),
-//         ],
-//         'schemas' => [
-//             [
-//                 '@context' => 'https://schema.org',
-//                 '@type' => 'AboutPage',
-//                 'name' => 'Tentang Kami - FastTrack',
-//                 'description' => 'Kenali filosofi, visi misi, komitmen, keunggulan, dan tim profesional FastTrack.',
-//                 'url' => $baseUrl . '/tentang-kami',
-//             ],
-//             $breadcrumbSchema([
-//                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-//                 ['name' => 'Tentang Kami', 'item' => $baseUrl . '/tentang-kami'],
-//             ]),
-//         ],
-//     ]);
-// });
-
-// Route::get('/kontak', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
-//     $baseUrl = $resolveBaseUrl($request);
-
-//     return Inertia::render('Contact', [
-//         'seo' => [
-//             'title' => 'Hubungi Kami - FastTrack',
-//             'description' => 'Konsultasikan kebutuhan legalitas bisnis Anda dengan tim ahli kami.',
-//             'canonical' => $baseUrl . '/kontak',
-//             'image' => $defaultImageUrl($baseUrl),
-//         ],
-//         'schemas' => [
-//             [
-//                 '@context' => 'https://schema.org',
-//                 '@type' => 'ContactPage',
-//                 'name' => 'Hubungi Kami - FastTrack',
-//                 'description' => 'Konsultasikan kebutuhan legalitas bisnis Anda dengan tim ahli kami.',
-//                 'url' => $baseUrl . '/kontak',
-//             ],
-//             [
-//                 '@context' => 'https://schema.org',
-//                 '@type' => 'LegalService',
-//                 'name' => 'FastTrack Legalitas',
-//                 'image' => $defaultImageUrl($baseUrl),
-//                 'url' => $baseUrl,
-//                 'telephone' => '+622173885036',
-//                 'email' => 'cs@fasttrack.legal',
-//                 'address' => [
-//                     '@type' => 'PostalAddress',
-//                     'streetAddress' => 'Grand Bintaro Blok A7, Jl. Raya Bintaro Permai, Pesanggrahan, Bintaro',
-//                     'addressLocality' => 'Jakarta Selatan',
-//                     'postalCode' => '12330',
-//                     'addressCountry' => 'ID',
-//                 ],
-//                 'contactPoint' => [
-//                     '@type' => 'ContactPoint',
-//                     'telephone' => '+6282298604144',
-//                     'contactType' => 'customer service',
-//                     'email' => 'cs@fasttrack.legal',
-//                     'areaServed' => 'ID',
-//                     'availableLanguage' => ['id', 'en'],
-//                 ],
-//                 'openingHoursSpecification' => [
-//                     '@type' => 'OpeningHoursSpecification',
-//                     'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-//                     'opens' => '09:00',
-//                     'closes' => '17:00',
-//                 ],
-//             ],
-//             $breadcrumbSchema([
-//                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-//                 ['name' => 'Kontak', 'item' => $baseUrl . '/kontak'],
-//             ]),
-//         ],
-//     ]);
-// });
-
 
 Route::get('/kebijakan-cookie', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
@@ -3070,6 +3128,39 @@ Route::get('/kerjasama', function (Request $request) use ($resolveBaseUrl, $defa
         ],
     ]);
 });
+
+Route::post('/kerjasama', function (Request $request) {
+    $request->validate([
+        'nama_lengkap' => ['required', 'string', 'max:255'],
+        'nama_pic' => ['nullable', 'string', 'max:255'],
+        'jenis_peserta' => ['required', 'string', 'max:100'],
+        'jenis_peserta_lainnya' => ['nullable', 'string', 'max:255'],
+        'bidang_usaha' => ['required', 'string', 'max:255'],
+        'nomor_identitas' => ['nullable', 'string', 'max:100'],
+        'no_whatsapp' => ['required', 'string', 'max:30'],
+        'email' => ['required', 'email', 'max:255'],
+        'alamat_domisili' => ['required', 'string', 'max:1000'],
+        'media_sosial' => ['nullable', 'string', 'max:255'],
+        'nama_bank' => ['required', 'string', 'max:100'],
+        'nomor_rekening' => ['required', 'string', 'max:100'],
+        'atas_nama' => ['required', 'string', 'max:255'],
+        'nama_klien' => ['required', 'string', 'max:255'],
+        'nama_pic_klien' => ['required', 'string', 'max:255'],
+        'nomor_kontak_klien' => ['required', 'string', 'max:30'],
+        'email_klien' => ['nullable', 'email', 'max:255'],
+        'layanan_dibutuhkan' => ['nullable', 'array'],
+        'layanan_dibutuhkan.*' => ['string', 'max:255'],
+        'keterangan_tambahan' => ['nullable', 'string', 'max:2000'],
+        'skema_insentif' => ['required', 'string', 'max:100'],
+        'setuju_pernyataan' => ['accepted'],
+    ]);
+
+    // TODO: belum ada persistensi (DB/email) — saat ini submission hanya divalidasi
+    // dan dikonfirmasi kembali ke pengguna. Tambahkan model/migration/notifikasi
+    // di sini kalau data pendaftaran mitra referral perlu disimpan/ditindaklanjuti.
+
+    return back()->with('success', 'Pendaftaran mitra referral Anda berhasil dikirim. Tim kami akan segera menghubungi Anda.');
+})->name('kerjasama.store');
 
 // MINTA PENAWARAN
 Route::get('/minta-penawaran', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
@@ -3255,6 +3346,7 @@ $allServiceProducts = array_merge(
     $penerjemahProducts,
     $ujiTuntasHukumProducts,
     $perizinanLainnyaProducts,
+    $perizinanBerusahaProducts,
     $notarisVirtualDanAktaProducts,
     $restrukturisasiPerseroanTerbatasProducts,
     $penutupanBadanUsahaProducts,

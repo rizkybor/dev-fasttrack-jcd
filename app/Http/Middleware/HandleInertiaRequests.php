@@ -36,7 +36,7 @@ class HandleInertiaRequests extends Middleware
         $siteUrl = $configuredUrl && ! str_contains($configuredUrl, 'localhost')
             ? $configuredUrl
             : $request->getSchemeAndHttpHost();
-        $defaultImage = $siteUrl . '/favicon.ico';
+        $defaultImage = $siteUrl . '/images/og/og-image.png';
 
         // Tanggal aktif welcome banner selalu ditafsirkan sebagai waktu Indonesia (WIB),
         // bukan app.timezone (UTC) — supaya "2026-07-10" berarti awal hari itu di Jakarta,
@@ -55,7 +55,7 @@ class HandleInertiaRequests extends Middleware
             ],
             'site' => [
                 'name' => config('app.name', 'FastTrack'),
-                'tagline' => 'Legal Services - Partner Terbaik Perusahaan Anda',
+                'tagline' => 'Partner Tepercaya untuk Pendirian Perusahaan, Perizinan, dan Legalitas Bisnis Anda di Indonesia',
                 'url' => $siteUrl,
                 'current_url' => $currentUrl,
                 'default_image' => $defaultImage,
@@ -66,7 +66,7 @@ class HandleInertiaRequests extends Middleware
             ],
             'seo' => fn () => [
                 'title' => $request->session()->get('seo.title', 'Layanan Legalitas Bisnis | FastTrack'),
-                'description' => $request->session()->get('seo.description', 'Legal Services - Partner Terbaik Perusahaan Anda'),
+                'description' => $request->session()->get('seo.description', 'FastTrack Legal Services adalah partner tepercaya untuk pendirian perusahaan, perizinan usaha, dan legalitas bisnis Anda di Indonesia — profesional, cepat, dan terpercaya.'),
                 'canonical' => $currentUrl,
                 'image' => $defaultImage,
                 'type' => 'website',

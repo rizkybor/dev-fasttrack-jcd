@@ -12,6 +12,7 @@ import layanan from './services/layanan'
 import badanUsahaLuarNegeri from './services/badan-usaha-luar-negeri'
 import oneSingleSubmission from './services/one-single-submission'
 import perizinanLainnya from './services/perizinan-lainnya'
+import perizinanBerusaha from './services/perizinan-berusaha'
 import notarisVirtualDanAkta from './services/notaris-virtual-dan-akta'
 import restrukturisasiPerseroanTerbatas from './services/restrukturisasi-perseroan-terbatas'
 import penutupanBadanUsaha from './services/penutupan-badan-usaha'
@@ -41,6 +42,7 @@ export default {
         badanUsahaLuarNegeri,
         oneSingleSubmission,
         perizinanLainnya,
+        perizinanBerusaha,
         notarisVirtualDanAkta,
         restrukturisasiPerseroanTerbatas,
         penutupanBadanUsaha,
