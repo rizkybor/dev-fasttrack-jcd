@@ -1,58 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# FastTrack — Business Legal Services Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Website layanan legalitas bisnis `FastTrack`, dibangun dengan `Laravel + Inertia.js + Vue 3 + Vite`, mendukung tiga bahasa (Indonesia / Inggris / Mandarin) di seluruh halaman layanan.
 
-## About Laravel
+Untuk penjelasan arsitektur lengkap (routing, i18n, sitemap, welcome banner, dsb.), lihat [`architecture.md`](./architecture.md).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tech Stack
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Backend:** PHP ^8.3, Laravel ^13.7, Inertia Laravel ^2.0, Ziggy, Sanctum
+- **Frontend:** Vue 3, `@inertiajs/vue3`, `vue-i18n` (trilingual `id`/`en`/`zh`), Tailwind CSS
+- **Build:** Vite ^8, `laravel-vite-plugin`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Persiapan Lokal
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Prasyarat: PHP 8.3+, Composer, Node.js + NPM, database (MySQL/MariaDB atau SQLite untuk lokal).
 
 ```bash
-composer require laravel/boost --dev
+# clone & masuk ke folder project
+git clone <repo-url>
+cd dev-fasttrack-jcd
 
-php artisan boost:install
+# install dependency
+composer install
+npm install
+
+# environment
+cp .env.example .env
+php artisan key:generate
+
+# konfigurasi koneksi database di .env, lalu jalankan migrasi
+php artisan migrate
+
+# build asset (development)
+npm run dev
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Atau pakai script gabungan bawaan Composer yang menjalankan server, queue listener, log viewer, dan Vite sekaligus:
 
-## Contributing
+```bash
+composer run dev
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Server akan tersedia di `http://localhost:8000` (sesuaikan dengan `APP_URL` di `.env`).
 
-## Code of Conduct
+## Build Production
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+npm run build   # menjalankan `vite build` + `vite build --ssr`
+```
 
-## Security Vulnerabilities
+> Build SSR (`bootstrap/ssr/`) berhasil dibuat dan Inertia SSR **enabled by default** di konfigurasi package, tapi repo ini belum menyediakan proses supervisor untuk menjalankan `php artisan inertia:start-ssr`. Tanpa proses tersebut aktif, aplikasi tetap berjalan normal via client-side rendering. Lihat [`architecture.md`](./architecture.md#utang-teknis--hal-yang-perlu-diperhatikan) untuk detail.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Environment Variables Penting
 
-## License
+Selain variabel standar Laravel (`APP_*`, `DB_*`), project ini punya beberapa env var khusus:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+| Variabel | Default | Kegunaan |
+| --- | --- | --- |
+| `APP_LOCALE` | `en` | Locale Laravel untuk `app()->getLocale()`, dipakai `$pickLocale` di `routes/web.php` untuk resolve SEO/schema. **Tidak otomatis sinkron** dengan pilihan bahasa user di frontend (lihat `architecture.md`). |
+| `WELCOME_BANNER_ENABLED` | `false` | Mengaktifkan/menonaktifkan welcome banner full-screen. |
+| `WELCOME_BANNER_START_DATE` | *(kosong)* | Format `Y-m-d`. Banner mulai tampil sejak tanggal ini (kosong = tanpa batas awal). |
+| `WELCOME_BANNER_END_DATE` | *(kosong)* | Format `Y-m-d`. Banner otomatis berhenti tampil setelah tanggal ini (kosong = tanpa batas akhir). |
+| `INERTIA_SSR_ENABLED` | `true` | Bawaan package `inertiajs/inertia-laravel`. |
+
+Konfigurasi welcome banner ada di `config/welcome-banner.php`.
+
+## Struktur Konten Trilingual
+
+Sebagian besar konten layanan disimpan dalam struktur `{ "id": "...", "en": "...", "zh": "..." }`, baik di:
+
+- **`public/data/foundingProducts*.json`** — data produk per layanan (satu file per service)
+- **`resources/js/i18n/locales/{id,en,zh}/`** — teks UI statis (hero, form, kartu layanan)
+
+Field struktural (`id` numerik, `price`, `image`, `detail_path`, dsb.) tetap disimpan sebagai nilai biasa, tidak dibungkus per-bahasa. Detail pola dan helper (`pick()` di Vue, `$pickLocale` di Laravel) ada di [`architecture.md`](./architecture.md#3-i18n-layer-trilingual-content).
+
+## Testing
+
+```bash
+composer test   # php artisan config:clear + php artisan test
+```
+
+## Dokumentasi Tambahan
+
+- [`architecture.md`](./architecture.md) — arsitektur lengkap: routing, shared Inertia data, i18n, sitemap, welcome banner, daftar 25 layanan, utang teknis yang diketahui.

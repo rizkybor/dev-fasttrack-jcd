@@ -1,575 +1,440 @@
 [
     {
         "id": 1,
-        "name": "Kesesuaian Kegiatan Pemanfaatan Ruang",
-        "tag": "Profesional",
-        "price": "1000000",
-        "price_label": "Rp 1.000.000",
-        "duration": "Estimasi 3-5 hari kerja",
+        "name": {
+            "id": "Visa Kunjungan Wisata (B211A)",
+            "en": "Tourist Visit Visa (B211A)",
+            "zh": "旅游访问签证（B211A）"
+        },
+        "tag": {
+            "id": "Populer",
+            "en": "Popular",
+            "zh": "热门"
+        },
+        "price": "2500000",
+        "price_label": "Rp 2.500.000",
+        "duration": {
+            "id": "Estimasi 3-5 hari kerja",
+            "en": "Estimated 3-5 business days",
+            "zh": "预计3-5个工作日"
+        },
         "image": "",
-        "excerpt": "Pendaftaran NIB untuk pelaku usaha perseorangan yang baru memulai kegiatan usaha.",
-        "detail_path": "/one-single-submission/nib",
-        "penjelasan_umum": [
-            "Nomor Induk Berusaha yang selanjutnya disingkat NIB adalah bukti registrasi/pendaftaran Pelaku Usaha untuk melakukan kegiatan usaha dan sebagai identitas bagi Pelaku Usaha dalam pelaksanaan kegiatan usahanya yang diterbitkan oleh OSS. Sistem OSS adalah sistem elektronik terintegrasi yang dikelola dan diselenggarakan oleh lembaga OSS untuk penyelenggaraan Perizinan Berusaha Berbasis Risiko (PBBR).",
-            "NIB sebagai identitas Pelaku Usaha sebagaimana dimaksud pada ayat (3) berlaku juga sebagai:",
-            "NIB sebagai legalitas berusaha berlaku bagi:",
-            "NIB sebagaimana dimaksud diatas berlaku juga sebagai legalitas terbatas untuk Pelaku Usaha dengan kegiatan usaha tingkat Risiko menengah rendah, Risiko menengah tinggi, dan Risiko tinggi."
-        ],
-        "penjelasan_umum_bullets": [
-            "Hak akses kepabeanan;",
-            "Angka pengenal importir;",
-            "Pendaftaran kepesertaan Pelaku Usaha untuk jaminan sosial kesehatan dan jaminan sosial ketenagakerjaan; dan",
-            "Wajib lapor ketenagakerjaan untuk periode pertama Pelaku Usaha."
-        ],
-        "penjelasan_umum_bullets_2": [
-            "Pelaku Usaha dengan kegiatan usaha tingkat Risiko rendah;",
-            "Badan usaha luar negeri dengan kegiatan usaha transportasi udara; atau",
-            "Badan usaha luar negeri dengan kegiatan usaha hulu minyak dan gas bumi yang telah memiliki kontrak kerja sama."
-        ],
-        "paket": [
-            {
-                "id": "perorangan",
-                "nama": "NIB Perorangan",
-                "deskripsi": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
-                "harga": "Rp 1.000.000",
-                "penjelasan_layanan": [
-                    "Layanan pendaftaran Nomor Induk Berusaha (NIB) bagi pelaku usaha perseorangan melalui sistem Online Single Submission (OSS). NIB menjadi bukti registrasi sekaligus dokumen izin dasar dalam menjalankan kegiatan usaha secara legal.",
-                    "Fasttrack mendampingi Anda mulai dari pendaftaran akun OSS, pengisian data usaha, pemilihan KBLI yang tepat, hingga penerbitan NIB beserta Perizinan Dasar — cepat, akurat, dan sesuai ketentuan yang berlaku."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Pendaftaran OSS;",
-                        "Nomor Induk Berusaha (NIB);",
-                        "Perizinan Dasar"
-                    ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
+        "excerpt": {
+            "id": "Pengurusan visa kunjungan wisata bagi warga negara asing yang ingin berlibur atau mengunjungi keluarga di Indonesia.",
+            "en": "Tourist visit visa processing for foreign nationals wishing to vacation or visit family in Indonesia.",
+            "zh": "为希望在印度尼西亚度假或探亲的外国公民办理旅游访问签证。"
+        },
+        "detail_path": "/visa-indonesia/1",
+        "sections": {
+            "id": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "Penjelasan Umum",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Visa Kunjungan Wisata (B211A) adalah izin masuk yang diberikan kepada warga negara asing untuk melakukan kunjungan wisata, keluarga, atau kegiatan sosial di Indonesia dalam jangka waktu terbatas."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Visa ini dapat diperpanjang beberapa kali sesuai dengan ketentuan keimigrasian yang berlaku, dan tidak diperuntukkan bagi kegiatan yang menghasilkan penghasilan di Indonesia."
+                        }
                     ]
                 },
-                "biaya_layanan": {
-                    "nama": "NIB Perorangan",
-                    "harga": "Rp 1.000.000"
-                },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            },
-            {
-                "id": "umk-selain-pt",
-                "nama": "NIB UMK & Selain PT",
-                "deskripsi": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
-                "harga": "Rp 1.750.000",
-                "penjelasan_layanan": [
-                    "Layanan pendaftaran NIB untuk Usaha Mikro dan Kecil (UMK) serta badan usaha selain Perseroan Terbatas — seperti CV, Firma, Persekutuan Perdata, atau Koperasi — dengan modal dasar di bawah Rp 5 Miliar.",
-                    "Tim Fasttrack memastikan klasifikasi KBLI, skala usaha, dan tingkat risiko terkini dengan benar sehingga NIB dan Perizinan Dasar dapat terbit sesuai dengan ketentuan yang berlaku bagi kegiatan usaha Anda."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Pendaftaran OSS;",
-                        "Nomor Induk Berusaha (NIB);",
-                        "Perizinan Dasar"
-                    ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
+                {
+                    "id": "syarat-dokumen",
+                    "type": "numbered_detail",
+                    "title": "Syarat dan Dokumen",
+                    "intro": "Berikut dokumen yang perlu disiapkan untuk pengajuan Visa Kunjungan Wisata:",
+                    "items": [
+                        {
+                            "title": "Paspor",
+                            "desc": "Paspor asli dengan masa berlaku minimal 6 bulan sejak tanggal kedatangan."
+                        },
+                        {
+                            "title": "Bukti Keuangan",
+                            "desc": "Rekening koran atau bukti keuangan yang menunjukkan kemampuan membiayai kunjungan."
+                        },
+                        {
+                            "title": "Tiket Pulang Pergi",
+                            "desc": "Bukti tiket keberangkatan dan kepulangan dari Indonesia."
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "General Explanation",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "The Tourist Visit Visa (B211A) is an entry permit granted to foreign nationals for tourism, family visits, or social activities in Indonesia for a limited period."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "This visa can be extended several times in accordance with applicable immigration regulations, and is not intended for income-generating activities in Indonesia."
+                        }
                     ]
                 },
-                "biaya_layanan": {
-                    "nama": "NIB UMK & Selain PT",
-                    "harga": "Rp 1.750.000"
-                },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            },
-            {
-                "id": "non-umk",
-                "nama": "NIB Non UMK (PMDN/PMA)",
-                "deskripsi": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
-                "harga": "Rp 2.750.000",
-                "penjelasan_layanan": [
-                    "Layanan pendaftaran NIB untuk badan usaha Non UMK — Penanaman Modal Dalam Negeri (PMDN) maupun Penanaman Modal Asing (PMA) — di atas Rp 5 Miliar.",
-                    "Selain penerbitan NIB, layanan ini memastikan pemenuhan izin lokasi, penerbitan Pernyataan Dasar Perizinan Berusaha, hingga pemenuhan Standar/Sertifikasi Tertentu (apabila diperlukan) sesuai dengan ketentuan yang berlaku dan sektor bisnis Anda."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Pendaftaran OSS;",
-                        "Nomor Induk Berusaha (NIB);",
-                        "Perizinan Dasar;",
-                        "Pernyataan Mandiri Kesesuaian Memenuhi Persyaratan Izin Lokasi (Bila Belum Terbit Peta);",
-                        "Pernyataan Mandiri Usaha/Kegiatan Tidak Termasuk Usaha Tingkat Risiko adalah Tinggi"
-                    ],
-                    "termasuk": [
-                        "Sertifikat Standar (Risiko Menengah)/Sertifikasi Izin (Berupa Sertifikat Standar (Belum Terverifikasi) Bila Belum Penuhi Persyaratan);",
-                        "Pernyataan Mandiri Kesanggupan Memenuhi Persyaratan Izin Tingkat Risiko adalah Tinggi",
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
+                {
+                    "id": "syarat-dokumen",
+                    "type": "numbered_detail",
+                    "title": "Requirements and Documents",
+                    "intro": "The following documents need to be prepared for a Tourist Visit Visa application:",
+                    "items": [
+                        {
+                            "title": "Passport",
+                            "desc": "Original passport valid for at least 6 months from the date of arrival."
+                        },
+                        {
+                            "title": "Proof of Finances",
+                            "desc": "Bank statement or proof of finances showing the ability to fund the visit."
+                        },
+                        {
+                            "title": "Round-Trip Ticket",
+                            "desc": "Proof of departure and return tickets from Indonesia."
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "一般说明",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "旅游访问签证（B211A）是颁发给外国公民在印度尼西亚境内进行旅游、探亲或社会活动的限期入境许可。"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "该签证可依据现行移民规定多次延期，但不适用于在印度尼西亚从事产生收入的活动。"
+                        }
                     ]
                 },
-                "biaya_layanan": {
-                    "nama": "NIB Non UMK (PMDN/PMA)",
-                    "harga": "Rp 2.750.000"
-                },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            },
-            {
-                "id": "cabang",
-                "nama": "NIB Cabang",
-                "deskripsi": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
-                "harga": "Rp 750.000",
-                "penjelasan_layanan": [
-                    "Layanan pendaftaran Nomor Induk Berusaha Cabang bagi badan usaha yang membuka kantor satu atau beberapa kantor satu atau usaha di lain lokasi dari kantor pusat di lain kota. NIB Cabang mencatat kegiatan usaha sekaligus mendaftarkan cabang ke dalam sistem OSS.",
-                    "Fasttrack memastikan data cabang, NIB, dan lokasi terdaftar dengan benar sehingga operasional cabang Anda sah sesuai hukum."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Pendaftaran OSS;",
-                        "Nomor Induk Berusaha Cabang"
-                    ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
+                {
+                    "id": "syarat-dokumen",
+                    "type": "numbered_detail",
+                    "title": "要求与文件",
+                    "intro": "申请旅游访问签证需准备以下文件：",
+                    "items": [
+                        {
+                            "title": "护照",
+                            "desc": "原件护照，自入境之日起有效期至少6个月。"
+                        },
+                        {
+                            "title": "财力证明",
+                            "desc": "银行对账单或能够证明有能力支付访问费用的财力证明。"
+                        },
+                        {
+                            "title": "往返机票",
+                            "desc": "离境及返程印度尼西亚的机票证明。"
+                        }
                     ]
-                },
-                "biaya_layanan": {
-                    "nama": "NIB Cabang",
-                    "harga": "Rp 750.000"
-                },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            }
-        ],
-        "dasar_hukum": [],
+                }
+            ]
+        },
         "faq": []
     },
     {
         "id": 2,
-        "name": "Perizinan Berusaha (Sertifikat Standar/Izin)",
-        "tag": "Profesional",
-        "price": "1000000",
-        "price_label": "Rp 1.000.000",
-        "duration": "Estimasi 3-5 hari kerja",
+        "name": {
+            "id": "Visa Kunjungan Bisnis",
+            "en": "Business Visit Visa",
+            "zh": "商务访问签证"
+        },
+        "tag": {
+            "id": "Profesional",
+            "en": "Professional",
+            "zh": "专业"
+        },
+        "price": "3000000",
+        "price_label": "Rp 3.000.000",
+        "duration": {
+            "id": "Estimasi 3-5 hari kerja",
+            "en": "Estimated 3-5 business days",
+            "zh": "预计3-5个工作日"
+        },
         "image": "",
-        "excerpt": "Pendaftaran NIB untuk pelaku usaha perseorangan yang baru memulai kegiatan usaha.",
-        "detail_path": "/one-single-submission/nib",
-        "penjelasan_umum": [],
-        "penjelasan_umum_bullets": [],
-        "penjelasan_umum_bullets_2": [],
-        "paket": [
-            {
-                "id": "1",
-                "nama": "Perubahan Data Pelaku Usaha",
-                "deskripsi": "Pengurusan perubahan data NIB seperti nama, alamat, KBLI, dan susunan pengurus secara cepat dan akurat.",
-                "harga": "Rp 1.000.000",
-                "penjelasan_layanan": [
-                    "Layanan pengurusan perubahan data badan usaha pada sistem OSS, mencakup perubahan alamat email, nama badan usaha, NPWP, nomor akta pendirian, data penanggung jawab, status PMA/PMDN, alamat korespondensi, jangka waktu badan usaha, rencana permodalan, data pengurus dan pemegang saham, KBLI, hingga akses kepabeanan dan API. Proses dilakukan secara cepat, akurat, dan sesuai ketentuan yang berlaku melalui sistem OSS."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Alamat surat elektronik (e-mail) badan usaha;",
-                        "Nama badan usaha;",
-                        "NPWP badan usaha;",
-                        "Nomor akta pendirian beserta pengesahannya atau nomor pendaftaran;",
-                        "Nomor telepon badan usaha;",
-                        "Data penanggung jawab;",
-                        "Status Penanaman Modal berupa PMA/PMDN;",
-                        "Alamat korespondensi;",
-                        "Jangka waktu badan usaha;",
-                        "Besaran rencana permodalan;",
-                        "Data pengurus dan pemegang saham/pemilik;",
-                        "Negara asal pengurus dan pemegang saham;",
-                        "Maksud dan Tujuan Badan Usaha;",
-                        "Daftar KBLI sesuai dengan maksud dan tujuan badan usaha;",
-                        "Akses Kepabeanan; dan/atau",
-                        "Angka Pengenal Importir."
-                    ],
-                    "termasuk": []
-                },
-                "biaya_layanan": {
-                    "nama": "Perubahan Data Pelaku Usaha Pada OSS/NIB",
-                    "harga": "Rp 750.000"
-                },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
-                ]
-            },
-            {
-                "id": "2",
-                "nama": "Penambahan Data Usaha",
-                "deskripsi": "Pengurusan penambahan kapasitas, lokasi, atau jenis kegiatan usaha baru pada NIB yang sudah dimiliki.",
-                "harga": "Rp 1.500.000",
-                "penjelasan_layanan": [
-                    "Layanan bagi pelaku usaha yang telah memiliki NIB dan ingin mengembangkan usaha melalui penambahan volume/kapasitas produksi, lokasi kegiatan usaha, maupun jenis kegiatan usaha baru. Mencakup pengurusan untuk skala UMK & Selain PT (modal di bawah Rp 5 Miliar) maupun Non-UMK (modal di atas Rp 5 Miliar), termasuk persyaratan dasar, perizinan berusaha, dan dokumen pendukung lainnya sesuai tingkat risiko usaha."
-                ],
-                "paket_layanan": [
-                    {
-                        "nama": "Penambahan Data Usaha UMK & Selain PT\n(Modal < Rp. 5 Miliar)",
-                        "harga": "Rp 1.500.000",
-                        "dokumen_legalitas": {
-                            "dokumen": [
-                                "Nomor Induk Berusaha (NIB);",
-                                "Perizinan Dasar"
-                            ],
-                            "termasuk": [
-                                "Fasttrack Document Delivery Service",
-                                "Fasttrack Digital Files Secure Storage",
-                                "Fasttrack Kit"
+        "excerpt": {
+            "id": "Pengurusan visa kunjungan bisnis bagi warga negara asing yang melakukan kegiatan bisnis non-produktif di Indonesia.",
+            "en": "Business visit visa processing for foreign nationals conducting non-productive business activities in Indonesia.",
+            "zh": "为在印度尼西亚从事非生产性商务活动的外国公民办理商务访问签证。"
+        },
+        "detail_path": "/visa-indonesia/2",
+        "sections": {
+            "id": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "Penjelasan Umum",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Visa Kunjungan Bisnis diberikan kepada warga negara asing yang melakukan kegiatan bisnis non-produktif di Indonesia, seperti rapat, negosiasi kontrak, atau kunjungan ke mitra usaha."
+                        },
+                        {
+                            "type": "title",
+                            "text": "Cakupan Kegiatan yang Diperbolehkan"
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "Menghadiri rapat dengan mitra bisnis;",
+                                "Melakukan survei atau studi kelayakan bisnis;",
+                                "Mengikuti pameran atau konferensi bisnis."
                             ]
                         }
-                    },
-                    {
-                        "nama": "Penambahan Data Usaha Non UMK\n(Modal > Rp. 5 Miliar)",
-                        "harga": "Rp 2.750.000",
-                        "dokumen_legalitas": {
-                            "dokumen": [
-                                "Pendaftaran OSS;",
-                                "Nomor Induk Berusaha (NIB);",
-                                "Pembuatan Poligon"
+                    ]
+                },
+                {
+                    "id": "syarat-dokumen",
+                    "type": "numbered_detail",
+                    "title": "Syarat dan Dokumen",
+                    "intro": "Berikut dokumen yang perlu disiapkan untuk pengajuan Visa Kunjungan Bisnis:",
+                    "items": [
+                        {
+                            "title": "Paspor",
+                            "desc": "Paspor asli dengan masa berlaku minimal 6 bulan sejak tanggal kedatangan."
+                        },
+                        {
+                            "title": "Surat Sponsor Perusahaan",
+                            "desc": "Surat undangan atau sponsor dari perusahaan di Indonesia yang dikunjungi.",
+                            "bullets": [
+                                "Nama dan tujuan kunjungan;",
+                                "Durasi kunjungan yang direncanakan."
                             ],
-                            "dokumen_sub": [
-                                {
-                                    "label": "Persyaratan Dasar",
-                                    "items": [
-                                        "Kesesuaian Kegiatan Pemanfaatan Ruang (Tanpa Persetujuan);",
-                                        "Persetujuan Lingkungan : SPPL"
-                                    ]
-                                },
-                                {
-                                    "label": "Perizinan Berusaha",
-                                    "items": [
-                                        "Sertifikat Standar (Risiko Rendah)/Sertifikat Standar (Belum Terverifikasi)/Izin (Belum Terverifikasi);",
-                                        "Pernyataan Mandiri K3L;",
-                                        "Pernyataan Mandiri Kesediaan Memenuhi Persyaratan Izin (jika Tingkat Risiko Usaha adalah Tinggi)"
-                                    ]
-                                }
-                            ],
-                            "termasuk": [
-                                "Fasttrack Document Delivery Service",
-                                "Fasttrack Digital Files Secure Storage",
-                                "Fasttrack Kit"
+                            "after_bullets": "Surat harus dikeluarkan di atas kop resmi perusahaan."
+                        }
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "General Explanation",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "The Business Visit Visa is granted to foreign nationals conducting non-productive business activities in Indonesia, such as meetings, contract negotiations, or visits to business partners."
+                        },
+                        {
+                            "type": "title",
+                            "text": "Scope of Permitted Activities"
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "Attending meetings with business partners;",
+                                "Conducting business surveys or feasibility studies;",
+                                "Attending business exhibitions or conferences."
                             ]
                         }
-                    }
-                ],
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            },
-            {
-                "id": "3",
-                "nama": "Pencabutan Data Usaha",
-                "deskripsi": "Pengurusan pencabutan kegiatan usaha yang sudah tidak dijalankan pada NIB Anda.",
-                "harga": "Rp 2.750.000",
-                "penjelasan_layanan": [
-                    "Pelaku Usaha pemegang NIB yang memiliki lebih dari 1 (satu) kegiatan usaha kemudian sudah tidak lagi menjalankan salah satu atau lebih kegiatan usahanya, namun masih berminat dan menjalankan kegiatan usaha lainnya, maka terhadap kegiatan usaha yang sudah tidak dijalankan dapat dilakukan Pencabutan Data Usaha."
-                ],
-                "biaya_layanan": {
-                    "nama": "Pencabutan Data Pada OSS/NIB",
-                    "harga": "Rp 750.000"
+                    ]
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            },
-            {
-                "id": "4",
-                "nama": "Kendala & Permasalahan OSS",
-                "deskripsi": "Pendampingan menyelesaikan kendala teknis dan administratif pada sistem OSS secara cepat dan akurat.",
-                "harga": "Rp 750.000",
-                "penjelasan_layanan": [
-                    "Sebagai Pelaku Usaha yang bersentuhan langsung dengan sistem OSS, adakalanya Anda menemui beberapa kendala teknis maupun administratif, semisal :"
-                ],
-                "penjelasan_layanan_items": [
-                    {
-                        "title": "Sinkronisasi Data Antar Kementerian/Lembaga Belum Optimal",
-                        "desc": "Data perusahaan yang telah diperbarui pada instansi tertentu sering kali belum otomatis terintegrasi dalam sistem OSS."
-                    },
-                    {
-                        "title": "Perbedaan Interpretasi Persyaratan Perizinan",
-                        "desc": "Terdapat perbedaan pemahaman antara pelaku usaha dan instansi teknis terkait persyaratan penerbitan izin tertentu."
-                    },
-                    {
-                        "title": "Kesulitan Penyesuaian KBLI",
-                        "desc": "Pelaku usaha sering mengalami kendala dalam menentukan KBLI yang sesuai dengan kegiatan usaha yang dijalankan."
-                    },
-                    {
-                        "title": "Gangguan Sistem dan Akses Platform",
-                        "desc": "Sistem OSS terkadang mengalami error, maintenance, atau lambat diakses terutama pada jam-jam sibuk."
-                    },
-                    {
-                        "title": "Proses Verifikasi yang Memerlukan Waktu Lama",
-                        "desc": "Beberapa izin masih membutuhkan verifikasi atau persetujuan dari kementerian/lembaga teknis yang menyebabkan proses menjadi lebih panjang."
-                    },
-                    {
-                        "title": "Ketidaksesuaian Data Legalitas Perusahaan",
-                        "desc": "Perbedaan data antara OSS, AHU, DJP, dan instansi lainnya sering menghambat proses perubahan maupun penerbitan perizinan."
-                    },
-                    {
-                        "title": "Kendala Migrasi dan Pembaruan Data Perizinan Lama",
-                        "desc": "Pelaku usaha yang memiliki izin terbit sebelum OSS sering mengalami kesulitan dalam penyesuaian atau migrasi data ke sistem terbaru."
-                    },
-                    {
-                        "title": "Kurangnya Kepastian Status Permohonan",
-                        "desc": "Pada beberapa kasus, pelaku usaha mengalami kesulitan memantau progres permohonan karena status pada sistem tidak diperbarui secara real-time atau tidak disertai keterangan yang memadai."
-                    },
-                    {
-                        "title": "Keterbatasan Layanan Bantuan Teknis",
-                        "desc": "Helpdesk atau penyelesaian kendala teknis terkadang memerlukan waktu sehingga menghambat proses perizinan usaha."
-                    }
-                ],
-                "biaya_layanan": {
-                    "nama": "NIB Cabang",
-                    "harga": "Rp 750.000"
+                {
+                    "id": "syarat-dokumen",
+                    "type": "numbered_detail",
+                    "title": "Requirements and Documents",
+                    "intro": "The following documents need to be prepared for a Business Visit Visa application:",
+                    "items": [
+                        {
+                            "title": "Passport",
+                            "desc": "Original passport valid for at least 6 months from the date of arrival."
+                        },
+                        {
+                            "title": "Company Sponsor Letter",
+                            "desc": "Invitation or sponsor letter from the company in Indonesia being visited.",
+                            "bullets": [
+                                "Name and purpose of the visit;",
+                                "Planned duration of the visit."
+                            ],
+                            "after_bullets": "The letter must be issued on the company's official letterhead."
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "一般说明",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "商务访问签证颁发给在印度尼西亚从事非生产性商务活动的外国公民，例如会议、合同谈判或拜访商业伙伴。"
+                        },
+                        {
+                            "type": "title",
+                            "text": "允许活动范围"
+                        },
+                        {
+                            "type": "bullets",
+                            "items": [
+                                "参加与商业伙伴的会议；",
+                                "进行商业调研或可行性研究；",
+                                "参加商业展览或会议。"
+                            ]
+                        }
+                    ]
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            }
-        ],
-        "dasar_hukum": [],
+                {
+                    "id": "syarat-dokumen",
+                    "type": "numbered_detail",
+                    "title": "要求与文件",
+                    "intro": "申请商务访问签证需准备以下文件：",
+                    "items": [
+                        {
+                            "title": "护照",
+                            "desc": "原件护照，自入境之日起有效期至少6个月。"
+                        },
+                        {
+                            "title": "公司担保函",
+                            "desc": "来自所拜访的印度尼西亚公司的邀请函或担保函。",
+                            "bullets": [
+                                "姓名及访问目的；",
+                                "计划访问时长。"
+                            ],
+                            "after_bullets": "该函件须以公司正式信头出具。"
+                        }
+                    ]
+                }
+            ]
+        },
         "faq": []
     },
     {
         "id": 3,
-        "name": "Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU)",
-        "tag": "Profesional",
+        "name": {
+            "id": "Perpanjangan Visa on Arrival (VOA)",
+            "en": "Visa on Arrival (VOA) Extension",
+            "zh": "落地签证（VOA）延期"
+        },
+        "tag": {
+            "id": "Cepat",
+            "en": "Fast",
+            "zh": "快速"
+        },
         "price": "1000000",
         "price_label": "Rp 1.000.000",
-        "duration": "Estimasi 3-5 hari kerja",
+        "duration": {
+            "id": "Estimasi 1-2 hari kerja",
+            "en": "Estimated 1-2 business days",
+            "zh": "预计1-2个工作日"
+        },
         "image": "",
-        "excerpt": "Pendaftaran NIB untuk pelaku usaha perseorangan yang baru memulai kegiatan usaha.",
-        "detail_path": "/one-single-submission/nib",
-        "penjelasan_umum": [],
-        "penjelasan_umum_bullets": [],
-        "penjelasan_umum_bullets_2": [],
-        "paket": [
-            {
-                "id": "1",
-                "nama": "Perubahan Data Pelaku Usaha",
-                "deskripsi": "Pengurusan perubahan data NIB seperti nama, alamat, KBLI, dan susunan pengurus secara cepat dan akurat.",
-                "harga": "Rp 1.000.000",
-                "penjelasan_layanan": [
-                    "Layanan pengurusan perubahan data badan usaha pada sistem OSS, mencakup perubahan alamat email, nama badan usaha, NPWP, nomor akta pendirian, data penanggung jawab, status PMA/PMDN, alamat korespondensi, jangka waktu badan usaha, rencana permodalan, data pengurus dan pemegang saham, KBLI, hingga akses kepabeanan dan API. Proses dilakukan secara cepat, akurat, dan sesuai ketentuan yang berlaku melalui sistem OSS."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Alamat surat elektronik (e-mail) badan usaha;",
-                        "Nama badan usaha;",
-                        "NPWP badan usaha;",
-                        "Nomor akta pendirian beserta pengesahannya atau nomor pendaftaran;",
-                        "Nomor telepon badan usaha;",
-                        "Data penanggung jawab;",
-                        "Status Penanaman Modal berupa PMA/PMDN;",
-                        "Alamat korespondensi;",
-                        "Jangka waktu badan usaha;",
-                        "Besaran rencana permodalan;",
-                        "Data pengurus dan pemegang saham/pemilik;",
-                        "Negara asal pengurus dan pemegang saham;",
-                        "Maksud dan Tujuan Badan Usaha;",
-                        "Daftar KBLI sesuai dengan maksud dan tujuan badan usaha;",
-                        "Akses Kepabeanan; dan/atau",
-                        "Angka Pengenal Importir."
-                    ],
-                    "termasuk": []
-                },
-                "biaya_layanan": {
-                    "nama": "Perubahan Data Pelaku Usaha Pada OSS/NIB",
-                    "harga": "Rp 750.000"
-                },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
-                ]
-            },
-            {
-                "id": "2",
-                "nama": "Penambahan Data Usaha",
-                "deskripsi": "Pengurusan penambahan kapasitas, lokasi, atau jenis kegiatan usaha baru pada NIB yang sudah dimiliki.",
-                "harga": "Rp 1.500.000",
-                "penjelasan_layanan": [
-                    "Layanan bagi pelaku usaha yang telah memiliki NIB dan ingin mengembangkan usaha melalui penambahan volume/kapasitas produksi, lokasi kegiatan usaha, maupun jenis kegiatan usaha baru. Mencakup pengurusan untuk skala UMK & Selain PT (modal di bawah Rp 5 Miliar) maupun Non-UMK (modal di atas Rp 5 Miliar), termasuk persyaratan dasar, perizinan berusaha, dan dokumen pendukung lainnya sesuai tingkat risiko usaha."
-                ],
-                "paket_layanan": [
-                    {
-                        "nama": "Penambahan Data Usaha UMK & Selain PT\n(Modal < Rp. 5 Miliar)",
-                        "harga": "Rp 1.500.000",
-                        "dokumen_legalitas": {
-                            "dokumen": [
-                                "Nomor Induk Berusaha (NIB);",
-                                "Perizinan Dasar"
-                            ],
-                            "termasuk": [
-                                "Fasttrack Document Delivery Service",
-                                "Fasttrack Digital Files Secure Storage",
-                                "Fasttrack Kit"
-                            ]
+        "excerpt": {
+            "id": "Pengurusan perpanjangan Visa on Arrival (VOA) bagi warga negara asing yang membutuhkan tambahan waktu tinggal di Indonesia.",
+            "en": "Visa on Arrival (VOA) extension processing for foreign nationals needing additional time to stay in Indonesia.",
+            "zh": "为需要延长在印度尼西亚停留时间的外国公民办理落地签证（VOA）延期。"
+        },
+        "detail_path": "/visa-indonesia/3",
+        "sections": {
+            "id": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "Penjelasan Umum",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Visa on Arrival (VOA) adalah visa yang diberikan langsung pada saat kedatangan di pintu masuk Indonesia, berlaku selama 30 hari dan dapat diperpanjang satu kali."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Perpanjangan VOA harus diajukan sebelum masa berlaku visa berakhir melalui kantor imigrasi setempat."
                         }
-                    },
-                    {
-                        "nama": "Penambahan Data Usaha Non UMK\n(Modal > Rp. 5 Miliar)",
-                        "harga": "Rp 2.750.000",
-                        "dokumen_legalitas": {
-                            "dokumen": [
-                                "Pendaftaran OSS;",
-                                "Nomor Induk Berusaha (NIB);",
-                                "Pembuatan Poligon"
-                            ],
-                            "dokumen_sub": [
-                                {
-                                    "label": "Persyaratan Dasar",
-                                    "items": [
-                                        "Kesesuaian Kegiatan Pemanfaatan Ruang (Tanpa Persetujuan);",
-                                        "Persetujuan Lingkungan : SPPL"
-                                    ]
-                                },
-                                {
-                                    "label": "Perizinan Berusaha",
-                                    "items": [
-                                        "Sertifikat Standar (Risiko Rendah)/Sertifikat Standar (Belum Terverifikasi)/Izin (Belum Terverifikasi);",
-                                        "Pernyataan Mandiri K3L;",
-                                        "Pernyataan Mandiri Kesediaan Memenuhi Persyaratan Izin (jika Tingkat Risiko Usaha adalah Tinggi)"
-                                    ]
-                                }
-                            ],
-                            "termasuk": [
-                                "Fasttrack Document Delivery Service",
-                                "Fasttrack Digital Files Secure Storage",
-                                "Fasttrack Kit"
-                            ]
+                    ]
+                },
+                {
+                    "id": "syarat-dokumen",
+                    "type": "numbered_detail",
+                    "title": "Syarat dan Dokumen",
+                    "intro": "Berikut dokumen yang perlu disiapkan untuk perpanjangan VOA:",
+                    "items": [
+                        {
+                            "title": "Paspor & VOA Asli",
+                            "desc": "Paspor asli beserta stiker atau cap VOA yang diterima saat kedatangan."
+                        },
+                        {
+                            "title": "Foto",
+                            "desc": "Pas foto terbaru sesuai ketentuan keimigrasian."
                         }
-                    }
-                ],
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            },
-            {
-                "id": "3",
-                "nama": "Pencabutan Data Usaha",
-                "deskripsi": "Pengurusan pencabutan kegiatan usaha yang sudah tidak dijalankan pada NIB Anda.",
-                "harga": "Rp 2.750.000",
-                "penjelasan_layanan": [
-                    "Pelaku Usaha pemegang NIB yang memiliki lebih dari 1 (satu) kegiatan usaha kemudian sudah tidak lagi menjalankan salah satu atau lebih kegiatan usahanya, namun masih berminat dan menjalankan kegiatan usaha lainnya, maka terhadap kegiatan usaha yang sudah tidak dijalankan dapat dilakukan Pencabutan Data Usaha."
-                ],
-                "biaya_layanan": {
-                    "nama": "Pencabutan Data Pada OSS/NIB",
-                    "harga": "Rp 750.000"
+                    ]
+                }
+            ],
+            "en": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "General Explanation",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Visa on Arrival (VOA) is a visa granted directly upon arrival at Indonesia's entry points, valid for 30 days and can be extended once."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "VOA extension must be applied for before the visa expires through the local immigration office."
+                        }
+                    ]
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            },
-            {
-                "id": "4",
-                "nama": "Kendala & Permasalahan OSS",
-                "deskripsi": "Pendampingan menyelesaikan kendala teknis dan administratif pada sistem OSS secara cepat dan akurat.",
-                "harga": "Rp 750.000",
-                "penjelasan_layanan": [
-                    "Sebagai Pelaku Usaha yang bersentuhan langsung dengan sistem OSS, adakalanya Anda menemui beberapa kendala teknis maupun administratif, semisal :"
-                ],
-                "penjelasan_layanan_items": [
-                    {
-                        "title": "Sinkronisasi Data Antar Kementerian/Lembaga Belum Optimal",
-                        "desc": "Data perusahaan yang telah diperbarui pada instansi tertentu sering kali belum otomatis terintegrasi dalam sistem OSS."
-                    },
-                    {
-                        "title": "Perbedaan Interpretasi Persyaratan Perizinan",
-                        "desc": "Terdapat perbedaan pemahaman antara pelaku usaha dan instansi teknis terkait persyaratan penerbitan izin tertentu."
-                    },
-                    {
-                        "title": "Kesulitan Penyesuaian KBLI",
-                        "desc": "Pelaku usaha sering mengalami kendala dalam menentukan KBLI yang sesuai dengan kegiatan usaha yang dijalankan."
-                    },
-                    {
-                        "title": "Gangguan Sistem dan Akses Platform",
-                        "desc": "Sistem OSS terkadang mengalami error, maintenance, atau lambat diakses terutama pada jam-jam sibuk."
-                    },
-                    {
-                        "title": "Proses Verifikasi yang Memerlukan Waktu Lama",
-                        "desc": "Beberapa izin masih membutuhkan verifikasi atau persetujuan dari kementerian/lembaga teknis yang menyebabkan proses menjadi lebih panjang."
-                    },
-                    {
-                        "title": "Ketidaksesuaian Data Legalitas Perusahaan",
-                        "desc": "Perbedaan data antara OSS, AHU, DJP, dan instansi lainnya sering menghambat proses perubahan maupun penerbitan perizinan."
-                    },
-                    {
-                        "title": "Kendala Migrasi dan Pembaruan Data Perizinan Lama",
-                        "desc": "Pelaku usaha yang memiliki izin terbit sebelum OSS sering mengalami kesulitan dalam penyesuaian atau migrasi data ke sistem terbaru."
-                    },
-                    {
-                        "title": "Kurangnya Kepastian Status Permohonan",
-                        "desc": "Pada beberapa kasus, pelaku usaha mengalami kesulitan memantau progres permohonan karena status pada sistem tidak diperbarui secara real-time atau tidak disertai keterangan yang memadai."
-                    },
-                    {
-                        "title": "Keterbatasan Layanan Bantuan Teknis",
-                        "desc": "Helpdesk atau penyelesaian kendala teknis terkadang memerlukan waktu sehingga menghambat proses perizinan usaha."
-                    }
-                ],
-                "biaya_layanan": {
-                    "nama": "NIB Cabang",
-                    "harga": "Rp 750.000"
+                {
+                    "id": "syarat-dokumen",
+                    "type": "numbered_detail",
+                    "title": "Requirements and Documents",
+                    "intro": "The following documents need to be prepared for a VOA extension:",
+                    "items": [
+                        {
+                            "title": "Passport & Original VOA",
+                            "desc": "Original passport along with the VOA sticker or stamp received upon arrival."
+                        },
+                        {
+                            "title": "Photograph",
+                            "desc": "Recent passport photo in accordance with immigration requirements."
+                        }
+                    ]
+                }
+            ],
+            "zh": [
+                {
+                    "id": "penjelasan-umum",
+                    "type": "penjelasan",
+                    "title": "一般说明",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "落地签证（VOA）是抵达印度尼西亚入境口岸时直接颁发的签证，有效期30天，可延期一次。"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "VOA延期须在签证到期前通过当地移民局提出申请。"
+                        }
+                    ]
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
-            }
-        ],
-        "dasar_hukum": [],
+                {
+                    "id": "syarat-dokumen",
+                    "type": "numbered_detail",
+                    "title": "要求与文件",
+                    "intro": "申请VOA延期需准备以下文件：",
+                    "items": [
+                        {
+                            "title": "护照及VOA原件",
+                            "desc": "原件护照及入境时获得的VOA贴纸或印章。"
+                        },
+                        {
+                            "title": "照片",
+                            "desc": "符合移民要求的近期护照照片。"
+                        }
+                    ]
+                }
+            ]
+        },
         "faq": []
     }
 ]

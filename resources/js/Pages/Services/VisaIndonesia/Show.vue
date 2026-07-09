@@ -1,5 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -12,6 +16,36 @@ const buildWhatsappLink = (productName) => {
     const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
+
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        excerpt: pick(p.excerpt),
+        sections: pick(p.sections) ?? [],
+        faq: pick(p.faq) ?? [],
+    };
+});
+
+const product = localizedProduct;
 </script>
 
 <template>
@@ -35,7 +69,7 @@ const buildWhatsappLink = (productName) => {
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/naturalisasi" class="text-sm font-medium text-[#9e1f16] hover:underline">Naturalisasi</a>
+                        <a href="/visa-indonesia" class="text-sm font-medium text-[#9e1f16] hover:underline">Visa Indonesia</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
@@ -51,7 +85,7 @@ const buildWhatsappLink = (productName) => {
                     </h1>
                 </div>
                 <div>
-                    <a href="/naturalisasi"
+                    <a href="/visa-indonesia"
                         class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition">
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -263,11 +297,11 @@ const buildWhatsappLink = (productName) => {
                         class="absolute right-6 top-6 h-16 w-16 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24" />
                     <div class="relative flex flex-col items-center text-center">
                         <h3 class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]">
-                            Butuh Konsultasi Naturalisasi?
+                            Butuh Konsultasi Visa Indonesia?
                         </h3>
                         <p class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]">
-                            Tim kami siap membantu proses naturalisasi dan alih kewarganegaraan<br class="hidden sm:block" />
-                            sesuai ketentuan hukum yang berlaku.
+                            Tim kami siap membantu proses pengurusan visa Anda<br class="hidden sm:block" />
+                            sesuai ketentuan keimigrasian yang berlaku.
                         </p>
                         <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                             class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]">

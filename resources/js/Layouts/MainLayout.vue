@@ -3,6 +3,7 @@ import { Head, usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
 import AppHeader from '@/Components/AppHeader.vue';
 import AppFooter from '@/Components/AppFooter.vue';
+import WelcomeBanner from '@/Components/WelcomeBanner.vue';
 
 const page = usePage();
 const seo = computed(() => page.props.seo || {});
@@ -90,6 +91,8 @@ const globalSchemas = computed(() => {
     </Head>
 
     <div class="min-h-screen bg-[#F9F9F9] text-[#1A1B18] font-sans flex flex-col">
+        <WelcomeBanner />
+
         <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-[#1A1B18] focus:shadow-lg">
             Lewati ke konten
         </a>

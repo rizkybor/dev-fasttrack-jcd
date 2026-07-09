@@ -672,82 +672,21 @@ $staticPages = [
     // '/promo',
     '/layanan',
     '/artikel',
+    '/panduan-kbli',
+    '/konversi-kbli',
+    '/kebijakan-cookie',
+    '/kebijakan-privasi',
+    '/simulasi-akta',
+    '/faq',
+    '/kerjasama',
+    '/minta-penawaran',
     // '/kbli',
-    // '/faq',
     // '/tentang-kami',
     // '/kontak',
 ];
 
-// Route::get('/robots.txt', function (Request $request) use ($resolveBaseUrl) {
-//     $baseUrl = $resolveBaseUrl($request);
-
-//     $content = implode("\n", [
-//         'User-agent: *',
-//         'Allow: /',
-//         '',
-//         'Sitemap: ' . $baseUrl . '/sitemap.xml',
-//     ]);
-
-//     return response($content, 200)->header('Content-Type', 'text/plain');
-// });
-
-// Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $customServices, $articles, $resolveBaseUrl, $foundingProducts, $foundingPackages) {
-//     $baseUrl = $resolveBaseUrl($request);
-
-//     $urls = collect($staticPages)
-//         ->map(fn ($path) => [
-//             'loc' => $baseUrl . $path,
-//             'lastmod' => now()->toDateString(),
-//             'changefreq' => 'weekly',
-//             'priority' => $path === '/' ? '1.0' : '0.8',
-//         ])
-//         ->merge(
-//             collect($customServices)->map(fn ($service) => [
-//                 'loc' => $baseUrl . $service['path'],
-//                 'lastmod' => now()->toDateString(),
-//                 'changefreq' => 'weekly',
-//                 'priority' => '0.8',
-//             ])
-//         )
-//         ->merge(
-//             Service::query()->get()->map(fn ($service) => [
-//                 'loc' => $baseUrl . '/layanan/' . $service->slug,
-//                 'lastmod' => $service->updated_at?->toDateString() ?? now()->toDateString(),
-//                 'changefreq' => 'monthly',
-//                 'priority' => '0.7',
-//             ])
-//         )
-//         ->merge(
-//             collect($articles)->map(fn ($article) => [
-//                 'loc' => $baseUrl . '/artikel/' . $article['id'],
-//                 'lastmod' => now()->toDateString(),
-//                 'changefreq' => 'monthly',
-//                 'priority' => '0.7',
-//             ])
-//         )
-//         ->merge(
-//             collect($foundingProducts)->map(fn ($product) => [
-//                 'loc' => $baseUrl . $product['detail_path'],
-//                 'lastmod' => now()->toDateString(),
-//                 'changefreq' => 'monthly',
-//                 'priority' => '0.7',
-//             ])
-//         )
-//         ->merge(
-//             collect($foundingPackages)->map(fn ($package) => [
-//                 'loc' => $baseUrl . '/badan-usaha/paket/' . $package['slug'],
-//                 'lastmod' => now()->toDateString(),
-//                 'changefreq' => 'monthly',
-//                 'priority' => '0.7',
-//             ])
-//         )
-//         ->unique('loc')
-//         ->values();
-
-//     $xml = view('sitemap', ['urls' => $urls])->render();
-
-//     return response($xml, 200)->header('Content-Type', 'application/xml');
-// });
+// robots.txt & sitemap.xml are registered at the end of this file (see bottom),
+// once every *Products collection and $articles has been defined above.
 
 foreach ($customServices as $service) {
     Route::get($service['path'], function (Request $request) use ($sertifikasiBadanUsahaProducts, $visaMancanegaraProducts, $visaIndonesiaProducts, $virtualOfficeProducts, $naturalisasiProducts, $digitalMarketingProducts, $perpajakanDanPembukuanProducts, $perizinanDasarProducts, $keimigrasianWniWnaProducts, $notarisVirtualDanAktaProducts, $perizinanLainnyaProducts, $restrukturisasiPerseroanTerbatasProducts, $penutupanBadanUsahaProducts, $penerjemahProducts, $ujiTuntasHukumProducts, $kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanUsahaLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
@@ -2643,19 +2582,24 @@ Route::get('/visa-mancanegara/{id}', function (Request $request, int $id) use ($
 })->whereNumber('id');
 
 // VISA INDONESIA
-Route::get('/visa-indonesia/{id}', function (Request $request, int $id) use ($visaIndonesiaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/visa-indonesia/{id}', function (Request $request, int $id) use ($visaIndonesiaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($visaIndonesiaProducts)->firstWhere('id', $id);
     abort_if($product === null, 404);
     $relatedProducts = collect($visaIndonesiaProducts)->where('id', '!=', $id)->take(3)->values()->all();
+
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/VisaIndonesia/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
-        'seo' => ['title' => $product['name'] . ' - FastTrack', 'description' => $product['excerpt'], 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
+        'seo' => ['title' => $productName . ' - FastTrack', 'description' => $productExcerpt, 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
         'schemas' => [
-            ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $product['name'], 'description' => $product['excerpt'], 'serviceType' => $product['name'], 'provider' => $organizationReference($baseUrl), 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl), 'url' => $baseUrl . $product['detail_path'], 'offers' => ['@type' => 'Offer', 'priceCurrency' => 'IDR', 'price' => $product['price'], 'availability' => 'https://schema.org/InStock', 'url' => $baseUrl . $product['detail_path']]],
-            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => collect($product['faq'])->map(static fn(array $faq): array => ['@type' => 'Question', 'name' => $faq['question'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']]])->all()],
-            $breadcrumbSchema([['name' => 'Beranda', 'item' => $baseUrl . '/'], ['name' => 'Visa Indonesia', 'item' => $baseUrl . '/visa-indonesia'], ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']]]),
+            ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $productName, 'description' => $productExcerpt, 'serviceType' => $productName, 'provider' => $organizationReference($baseUrl), 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl), 'url' => $baseUrl . $product['detail_path'], 'offers' => ['@type' => 'Offer', 'priceCurrency' => 'IDR', 'price' => $product['price'], 'availability' => 'https://schema.org/InStock', 'url' => $baseUrl . $product['detail_path']]],
+            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => collect($productFaq)->map(static fn(array $faq): array => ['@type' => 'Question', 'name' => $faq['question'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']]])->all()],
+            $breadcrumbSchema([['name' => 'Beranda', 'item' => $baseUrl . '/'], ['name' => 'Visa Indonesia', 'item' => $baseUrl . '/visa-indonesia'], ['name' => $productName, 'item' => $baseUrl . $product['detail_path']]]),
         ],
     ]);
 })->whereNumber('id');
@@ -2684,19 +2628,24 @@ Route::get('/virtual-office/{id}', function (Request $request, int $id) use ($vi
 })->whereNumber('id');
 
 // DIGITAL MARKETING
-Route::get('/digital-marketing/{id}', function (Request $request, int $id) use ($digitalMarketingProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/digital-marketing/{id}', function (Request $request, int $id) use ($digitalMarketingProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($digitalMarketingProducts)->firstWhere('id', $id);
     abort_if($product === null, 404);
     $relatedProducts = collect($digitalMarketingProducts)->where('id', '!=', $id)->take(3)->values()->all();
+
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/DigitalMarketing/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
-        'seo' => ['title' => $product['name'] . ' - FastTrack', 'description' => $product['excerpt'], 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
+        'seo' => ['title' => $productName . ' - FastTrack', 'description' => $productExcerpt, 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
         'schemas' => [
-            ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $product['name'], 'description' => $product['excerpt'], 'serviceType' => $product['name'], 'provider' => $organizationReference($baseUrl), 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl), 'url' => $baseUrl . $product['detail_path'], 'offers' => ['@type' => 'Offer', 'priceCurrency' => 'IDR', 'price' => $product['price'], 'availability' => 'https://schema.org/InStock', 'url' => $baseUrl . $product['detail_path']]],
-            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => collect($product['faq'])->map(static fn(array $faq): array => ['@type' => 'Question', 'name' => $faq['question'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']]])->all()],
-            $breadcrumbSchema([['name' => 'Beranda', 'item' => $baseUrl . '/'], ['name' => 'Digital Marketing', 'item' => $baseUrl . '/digital-marketing'], ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']]]),
+            ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $productName, 'description' => $productExcerpt, 'serviceType' => $productName, 'provider' => $organizationReference($baseUrl), 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl), 'url' => $baseUrl . $product['detail_path'], 'offers' => ['@type' => 'Offer', 'priceCurrency' => 'IDR', 'price' => $product['price'], 'availability' => 'https://schema.org/InStock', 'url' => $baseUrl . $product['detail_path']]],
+            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => collect($productFaq)->map(static fn(array $faq): array => ['@type' => 'Question', 'name' => $faq['question'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']]])->all()],
+            $breadcrumbSchema([['name' => 'Beranda', 'item' => $baseUrl . '/'], ['name' => 'Digital Marketing', 'item' => $baseUrl . '/digital-marketing'], ['name' => $productName, 'item' => $baseUrl . $product['detail_path']]]),
         ],
     ]);
 })->whereNumber('id');
@@ -3100,8 +3049,8 @@ Route::get('/kerjasama', function (Request $request) use ($resolveBaseUrl, $defa
 
     return Inertia::render('Kerjasama', [
         'seo' => [
-            'title' => 'Syarat dan Ketentuan - FastTrack',
-            'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+            'title' => 'Kerjasama - FastTrack',
+            'description' => 'Bergabunglah sebagai mitra referral FastTrack Legal melalui Program Client Get Client dan raih keuntungan bersama setiap kali rekomendasi Anda berhasil.',
             'canonical' => $baseUrl . '/kerjasama',
             'image' => $defaultImageUrl($baseUrl),
             'type' => 'website',
@@ -3110,13 +3059,13 @@ Route::get('/kerjasama', function (Request $request) use ($resolveBaseUrl, $defa
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'WebPage',
-                'name' => 'Syarat dan Ketentuan - FastTrack',
-                'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+                'name' => 'Kerjasama - FastTrack',
+                'description' => 'Bergabunglah sebagai mitra referral FastTrack Legal melalui Program Client Get Client dan raih keuntungan bersama setiap kali rekomendasi Anda berhasil.',
                 'url' => $baseUrl . '/kerjasama',
             ],
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-                ['name' => 'Syarat dan Ketentuan', 'item' => $baseUrl . '/kerjasama'],
+                ['name' => 'Kerjasama', 'item' => $baseUrl . '/kerjasama'],
             ]),
         ],
     ]);
@@ -3128,8 +3077,8 @@ Route::get('/minta-penawaran', function (Request $request) use ($resolveBaseUrl,
 
     return Inertia::render('MintaPenawaran', [
         'seo' => [
-            'title' => 'Syarat dan Ketentuan - FastTrack',
-            'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+            'title' => 'Minta Penawaran - FastTrack',
+            'description' => 'Ajukan permintaan penawaran layanan FastTrack sesuai kebutuhan legalitas bisnis Anda.',
             'canonical' => $baseUrl . '/minta-penawaran',
             'image' => $defaultImageUrl($baseUrl),
             'type' => 'website',
@@ -3138,13 +3087,13 @@ Route::get('/minta-penawaran', function (Request $request) use ($resolveBaseUrl,
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'WebPage',
-                'name' => 'Syarat dan Ketentuan - FastTrack',
-                'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+                'name' => 'Minta Penawaran - FastTrack',
+                'description' => 'Ajukan permintaan penawaran layanan FastTrack sesuai kebutuhan legalitas bisnis Anda.',
                 'url' => $baseUrl . '/minta-penawaran',
             ],
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-                ['name' => 'Syarat dan Ketentuan', 'item' => $baseUrl . '/minta-penawaran'],
+                ['name' => 'Minta Penawaran', 'item' => $baseUrl . '/minta-penawaran'],
             ]),
         ],
     ]);
@@ -3210,10 +3159,10 @@ Route::get('/penawaran-khusus', function (Request $request) use ($resolveBaseUrl
 Route::get('/faq', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
 
-    return Inertia::render('TermCondition', [
+    return Inertia::render('Faq', [
         'seo' => [
-            'title' => 'Syarat dan Ketentuan - FastTrack',
-            'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+            'title' => 'FAQ - FastTrack',
+            'description' => 'Jawaban singkat untuk pertanyaan yang paling sering ditanyakan terkait legalitas bisnis dan layanan FastTrack.',
             'canonical' => $baseUrl . '/faq',
             'image' => $defaultImageUrl($baseUrl),
             'type' => 'website',
@@ -3222,13 +3171,13 @@ Route::get('/faq', function (Request $request) use ($resolveBaseUrl, $defaultIma
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'WebPage',
-                'name' => 'Syarat dan Ketentuan - FastTrack',
-                'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+                'name' => 'FAQ - FastTrack',
+                'description' => 'Jawaban singkat untuk pertanyaan yang paling sering ditanyakan terkait legalitas bisnis dan layanan FastTrack.',
                 'url' => $baseUrl . '/faq',
             ],
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-                ['name' => 'Syarat dan Ketentuan', 'item' => $baseUrl . '/faq'],
+                ['name' => 'FAQ', 'item' => $baseUrl . '/faq'],
             ]),
         ],
     ]);
@@ -3288,6 +3237,108 @@ Route::get('/syarat-ketentuan', function (Request $request) use ($resolveBaseUrl
             ]),
         ],
     ]);
+});
+
+// SITEMAP & ROBOTS
+$allServiceProducts = array_merge(
+    $foundingProducts,
+    $kantorPerwakilanProducts,
+    $penyusunanDanPeninjauanProducts,
+    $retainerBerlanggananProducts,
+    $izinTinggalTerbatasProducts,
+    $izinTinggalTetapProducts,
+    $badanUsahaLuarNegeriProducts,
+    $oneSingleSubmissionProducts,
+    $kewajibanPelaporanPerusahaanProducts,
+    $legalisasiKedutaanProducts,
+    $kekayaanIntelektualProducts,
+    $penerjemahProducts,
+    $ujiTuntasHukumProducts,
+    $perizinanLainnyaProducts,
+    $notarisVirtualDanAktaProducts,
+    $restrukturisasiPerseroanTerbatasProducts,
+    $penutupanBadanUsahaProducts,
+    $keimigrasianWniWnaProducts,
+    $sertifikasiBadanUsahaProducts,
+    $visaMancanegaraProducts,
+    $visaIndonesiaProducts,
+    $virtualOfficeProducts,
+    $digitalMarketingProducts,
+    $naturalisasiProducts,
+    $perpajakanDanPembukuanProducts,
+    // $perizinanDasarProducts intentionally excluded: Services/PerizinanDasar/Index & Show
+    // Vue components don't exist yet, so those routes 404 client-side. Add it back
+    // to $allServiceProducts (and drop the $customServices filter below) once built.
+);
+
+// Services without a working Vue page yet should not be submitted to search engines.
+$sitemapExcludedPaths = ['/perizinan-dasar'];
+$sitemapCustomServices = collect($customServices)
+    ->reject(fn ($service) => in_array($service['path'], $sitemapExcludedPaths, true))
+    ->values()
+    ->all();
+
+Route::get('/robots.txt', function (Request $request) use ($resolveBaseUrl) {
+    $baseUrl = $resolveBaseUrl($request);
+
+    $content = implode("\n", [
+        'User-agent: *',
+        'Allow: /',
+        '',
+        'Sitemap: ' . $baseUrl . '/sitemap.xml',
+    ]);
+
+    return response($content, 200)->header('Content-Type', 'text/plain');
+});
+
+Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $sitemapCustomServices, $articles, $allServiceProducts, $resolveBaseUrl) {
+    $baseUrl = $resolveBaseUrl($request);
+
+    $urls = collect($staticPages)
+        ->map(fn ($path) => [
+            'loc' => $baseUrl . $path,
+            'lastmod' => now()->toDateString(),
+            'changefreq' => 'weekly',
+            'priority' => $path === '/' ? '1.0' : '0.8',
+        ])
+        ->merge(
+            collect($sitemapCustomServices)->map(fn ($service) => [
+                'loc' => $baseUrl . $service['path'],
+                'lastmod' => now()->toDateString(),
+                'changefreq' => 'weekly',
+                'priority' => '0.8',
+            ])
+        )
+        ->merge(
+            Service::query()->get()->map(fn ($service) => [
+                'loc' => $baseUrl . '/layanan/' . $service->slug,
+                'lastmod' => $service->updated_at?->toDateString() ?? now()->toDateString(),
+                'changefreq' => 'monthly',
+                'priority' => '0.7',
+            ])
+        )
+        ->merge(
+            collect($articles)->map(fn ($article) => [
+                'loc' => $baseUrl . $article['detail_path'],
+                'lastmod' => now()->toDateString(),
+                'changefreq' => 'monthly',
+                'priority' => '0.7',
+            ])
+        )
+        ->merge(
+            collect($allServiceProducts)->map(fn ($product) => [
+                'loc' => $baseUrl . $product['detail_path'],
+                'lastmod' => now()->toDateString(),
+                'changefreq' => 'monthly',
+                'priority' => '0.7',
+            ])
+        )
+        ->unique('loc')
+        ->values();
+
+    $xml = view('sitemap', ['urls' => $urls])->render();
+
+    return response($xml, 200)->header('Content-Type', 'application/xml');
 });
 
 // require __DIR__.'/auth.php';

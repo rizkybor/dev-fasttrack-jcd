@@ -1,10 +1,20 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "bundler",
         "paths": {
-            "@/*": ["resources/js/*"],
+            "@/*": ["./resources/js/*"],
             "ziggy-js": ["./vendor/tightenco/ziggy"]
-        }
+        },
+        "allowJs": true,
+        "checkJs": false
     },
-    "exclude": ["node_modules", "public"]
+    "exclude": [
+        "node_modules",
+        "public",
+        "vendor",
+        "storage",
+        "bootstrap/cache"
+    ]
 }
