@@ -77,9 +77,15 @@ const removeLayanan = (index) => {
 
 const isLainnya = computed(() => form.jenis_peserta === "lainnya");
 
+const submitted = ref(false);
+
 const submit = () => {
     form.post(route("kerjasama.store"), {
         preserveScroll: true,
+        onSuccess: () => {
+            submitted.value = true;
+            form.reset();
+        },
     });
 };
 </script>
@@ -222,6 +228,34 @@ const submit = () => {
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Success Banner -->
+                        <div
+                            v-if="submitted"
+                            class="flex items-start gap-3 rounded-xl border border-[#B7E4C7] bg-[#EAF9F0] p-5"
+                        >
+                            <svg
+                                class="mt-0.5 h-5 w-5 flex-shrink-0 text-[#1E9E5A]"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                />
+                            </svg>
+                            <div>
+                                <p class="text-[14px] font-semibold text-[#0F6B37]">
+                                    Pendaftaran Berhasil Dikirim
+                                </p>
+                                <p class="mt-1 text-[13px] leading-[20px] text-[#1A1B18]">
+                                    Terima kasih telah mendaftar sebagai mitra referral. Tim kami akan segera menghubungi Anda.
+                                </p>
                             </div>
                         </div>
 

@@ -12,7 +12,7 @@ const site = computed(() => page.props.site || {});
 const siteTagline = computed(
     () =>
         site.value.tagline ||
-        "Legal Services - Partner Terbaik Perusahaan Anda",
+        "Partner Tepercaya untuk Pendirian Perusahaan, Perizinan, dan Legalitas Bisnis Anda di Indonesia",
 );
 
 const offices = [

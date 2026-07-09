@@ -198,6 +198,6 @@ export default {
             "Grand Bintaro Blok A7, JI. Raya Bintaro Permai, Pesanggrahan, Bintaro, Jakarta Selatan - 12330",
         phone: "0217 3885 036",
         wa: "0822 9860 4144",
-        email_addr: "cs@fasttrack.legal",
+        email_addr: "cs{'@'}fasttrack.legal",
     },
 };
