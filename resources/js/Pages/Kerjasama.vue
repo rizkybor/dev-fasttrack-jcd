@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useForm } from "@inertiajs/vue3";
+import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 
 /**
@@ -8,86 +9,17 @@ import MainLayout from "@/Layouts/MainLayout.vue";
  * Sesuai desain Figma: hero + kartu program + form pendaftaran mitra referral
  */
 
+const { t, tm } = useI18n();
+
 /* ------------------------------------------------------------------ */
-/* Static data                                                         */
+/* Locale-driven data                                                  */
 /* ------------------------------------------------------------------ */
 
-const steps = [
-    {
-        number: 1,
-        title: "Daftarkan diri Anda sebagai mitra referral.",
-    },
-    {
-        number: 2,
-        title: "Rekomendasikan calon klien yang membutuhkan layanan FastTrack.",
-        description:
-            "Bagikan pengalaman Anda ke rekan, kerabat, atau relasi bisnis yang membutuhkan layanan kami.",
-    },
-    {
-        number: 3,
-        title: "Klien bertransaksi — Anda menerima insentif atau benefit pilihan.",
-        description:
-            "Setiap referral yang berhasil bertransaksi akan mengubah Anda menjadi insentif yang telah dipilih.",
-    },
-];
-
-const jenisPesertaOptions = [
-    { value: "individual", label: "Individual" },
-    { value: "perusahaan", label: "Perusahaan" },
-    { value: "partner_bisnis", label: "Partner Bisnis" },
-    { value: "konsultan", label: "Konsultan" },
-    { value: "agen_freelance", label: "Agen / Freelance" },
-    { value: "lainnya", label: "Lainnya" },
-];
-
-const skemaInsentifOptions = [
-    {
-        value: "komisi_tunai",
-        title: "Komisi Tunai",
-        description:
-            "Imbalan diberikan tunai ke rekening Anda untuk setiap klien yang berlangganan.",
-    },
-    {
-        value: "cashback_layanan",
-        title: "Cashback Layanan",
-        description:
-            "Pengembalian sebagian biaya untuk layanan FastTrack yang Anda gunakan.",
-    },
-    {
-        value: "diskon_layanan",
-        title: "Diskon Layanan",
-        description: "Potongan harga khusus untuk layanan FastTrack berikutnya.",
-    },
-    {
-        value: "kerjasama_strategic_partner",
-        title: "Kerjasama Strategic Partner",
-        description:
-            "Skema kemitraan jangka panjang dengan benefit yang dirancang khusus.",
-    },
-];
-
-const komisiHighlights = [
-    {
-        title: "Pendaftaran gratis",
-        description: "Tidak ada biaya untuk mendaftar menjadi mitra FastTrack Legal.",
-    },
-    {
-        title: "Tanpa batas referral",
-        description: "Referensikan sebanyak mungkin klien tanpa batasan jumlah.",
-    },
-    {
-        title: "Pencairan transparan",
-        description: "Komisi dibayarkan mengikuti progres closing setiap referral.",
-    },
-];
-
-const pernyataanList = [
-    "Data yang saya berikan adalah benar dan dapat dipertanggungjawabkan.",
-    "Saya memahami bahwa komisi hanya diberikan atas klien yang berhasil melakukan transaksi menggunakan jasa FastTrack.",
-    "Saya menyetujui seluruh syarat dan ketentuan Program Client Get Client.",
-    "Saya bersedia menjaga kerahasiaan informasi klien dan perusahaan.",
-    "Saya memahami bahwa pihak FastTrack melakukan verifikasi atas seluruh referral yang diberikan.",
-];
+const steps = computed(() => tm("kerjasama.program.steps"));
+const jenisPesertaOptions = computed(() => tm("kerjasama.form.jenis_peserta_options"));
+const skemaInsentifOptions = computed(() => tm("kerjasama.form.skema_insentif_options"));
+const komisiHighlights = computed(() => tm("kerjasama.sidebar.highlights"));
+const pernyataanList = computed(() => tm("kerjasama.form.pernyataan_list"));
 
 /* ------------------------------------------------------------------ */
 /* Form state                                                          */
@@ -118,7 +50,7 @@ const form = useForm({
     nama_pic_klien: "",
     nomor_kontak_klien: "",
     email_klien: "",
-    layanan_dibutuhkan: ["Pendirian PT Perorangan"],
+    layanan_dibutuhkan: [t("kerjasama.form.section4.default_layanan")],
     keterangan_tambahan: "",
 
     // 5. Skema Insentif
@@ -206,7 +138,7 @@ const submit = () => {
                                     d="M9 5l7 7-7 7"
                                 />
                             </svg>
-                            <span class="text-sm font-medium text-white">Kerjasama</span>
+                            <span class="text-sm font-medium text-white">{{ t("kerjasama.hero.breadcrumb") }}</span>
                         </div>
                     </nav>
 
@@ -214,11 +146,10 @@ const submit = () => {
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl"
                     >
-                        Mari Bertumbuh Bersama FASTTRACK
+                        {{ t("kerjasama.hero.title") }}
                     </h1>
                     <p class="mt-3 text-sm sm:text-base text-white/85">
-                        Bergabunglah sebagai mitra referral FastTrack Legal dan raih
-                        keuntungan bersama setiap kali rekomendasi Anda berhasil.
+                        {{ t("kerjasama.hero.desc") }}
                     </p>
 
                     <!-- Back button -->
@@ -240,7 +171,7 @@ const submit = () => {
                                     d="M10 19l-7-7m0 0l7-7m-7 7h18"
                                 />
                             </svg>
-                            Kembali
+                            {{ t("kerjasama.hero.back") }}
                         </a>
                     </div>
                 </div>
@@ -260,14 +191,10 @@ const submit = () => {
                             <h2
                                 class="text-lg sm:text-xl font-bold text-[#1A1B18] mb-2"
                             >
-                                Program "Client Get Client"
+                                {{ t("kerjasama.program.title") }}
                             </h2>
                             <p class="text-[12px] leading-[22px] text-[#4A4B47] mb-6">
-                                Bantu relasi bisnis Anda mendapatkan solusi legal dan
-                                bisnis terbaik, sekaligus dapatkan keuntungan melalui
-                                Program Client Get Client dari FastTrack. Setiap
-                                referral yang berhasil menggunakan layanan kami akan
-                                menghasilkan imbalan untuk Anda.
+                                {{ t("kerjasama.program.desc") }}
                             </p>
 
                             <div class="flex flex-col gap-4">
@@ -314,11 +241,10 @@ const submit = () => {
                                         <h3
                                             class="text-[15px] font-bold text-[#1A1B18]"
                                         >
-                                            Data Peserta
+                                            {{ t("kerjasama.form.section1.title") }}
                                         </h3>
                                         <p class="text-[11px] text-[#7A7B78]">
-                                            Informasi pribadi / perusahaan anda sebagai
-                                            mitra referral.
+                                            {{ t("kerjasama.form.section1.desc") }}
                                         </p>
                                     </div>
                                 </div>
@@ -328,13 +254,13 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Nama Lengkap / Nama Perusahaan
+                                            {{ t("kerjasama.form.section1.nama_lengkap_label") }}
                                             <span class="text-[#9e1f16]">*</span>
                                         </label>
                                         <input
                                             v-model="form.nama_lengkap"
                                             type="text"
-                                            placeholder="cth: Budi Santoso / PT Maju Jaya"
+                                            :placeholder="t('kerjasama.form.section1.nama_lengkap_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -342,12 +268,12 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Nama PIC (Apabila Perusahaan)
+                                            {{ t("kerjasama.form.section1.nama_pic_label") }}
                                         </label>
                                         <input
                                             v-model="form.nama_pic"
                                             type="text"
-                                            placeholder="cth: Budi Santoso"
+                                            :placeholder="t('kerjasama.form.section1.nama_pic_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -357,7 +283,7 @@ const submit = () => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        Jenis Peserta
+                                        {{ t("kerjasama.form.section1.jenis_peserta_label") }}
                                         <span class="text-[#9e1f16]">*</span>
                                     </label>
                                     <div class="grid grid-cols-3 gap-2 sm:max-w-md">
@@ -402,7 +328,7 @@ const submit = () => {
                                         v-if="isLainnya"
                                         v-model="form.jenis_peserta_lainnya"
                                         type="text"
-                                        placeholder="Sebutkan jenis peserta lainnya..."
+                                        :placeholder="t('kerjasama.form.section1.jenis_peserta_lainnya_placeholder')"
                                         class="mt-1 w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none sm:max-w-md"
                                     />
                                 </div>
@@ -412,13 +338,13 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Bidang Usaha / Profesi
+                                            {{ t("kerjasama.form.section1.bidang_usaha_label") }}
                                             <span class="text-[#9e1f16]">*</span>
                                         </label>
                                         <input
                                             v-model="form.bidang_usaha"
                                             type="text"
-                                            placeholder="cth: Konsultan Pajak, F&B, Properti"
+                                            :placeholder="t('kerjasama.form.section1.bidang_usaha_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -426,12 +352,12 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Nomor KTP / NPWP / NIB (Opsional)
+                                            {{ t("kerjasama.form.section1.nomor_identitas_label") }}
                                         </label>
                                         <input
                                             v-model="form.nomor_identitas"
                                             type="text"
-                                            placeholder="cth: 3175xxxxxxxxxxxx"
+                                            :placeholder="t('kerjasama.form.section1.nomor_identitas_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -448,7 +374,7 @@ const submit = () => {
                                         >2</span
                                     >
                                     <h3 class="text-[15px] font-bold text-[#1A1B18]">
-                                        Kontak Peserta
+                                        {{ t("kerjasama.form.section2.title") }}
                                     </h3>
                                 </div>
 
@@ -457,13 +383,13 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Nomor Handphone / WhatsApp
+                                            {{ t("kerjasama.form.section2.no_whatsapp_label") }}
                                             <span class="text-[#9e1f16]">*</span>
                                         </label>
                                         <input
                                             v-model="form.no_whatsapp"
                                             type="text"
-                                            placeholder="cth: 0812 3456 7890"
+                                            :placeholder="t('kerjasama.form.section2.no_whatsapp_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -471,13 +397,13 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Alamat Email
+                                            {{ t("kerjasama.form.section2.email_label") }}
                                             <span class="text-[#9e1f16]">*</span>
                                         </label>
                                         <input
                                             v-model="form.email"
                                             type="email"
-                                            placeholder="cth: nama@email.com"
+                                            :placeholder="t('kerjasama.form.section2.email_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -487,13 +413,13 @@ const submit = () => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        Alamat Domisili / Kantor
+                                        {{ t("kerjasama.form.section2.alamat_label") }}
                                         <span class="text-[#9e1f16]">*</span>
                                     </label>
                                     <textarea
                                         v-model="form.alamat_domisili"
                                         rows="2"
-                                        placeholder="Alamat lengkap domisili atau kantor"
+                                        :placeholder="t('kerjasama.form.section2.alamat_placeholder')"
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none resize-none"
                                     ></textarea>
                                 </div>
@@ -502,12 +428,12 @@ const submit = () => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        Media Sosial / Website (Opsional)
+                                        {{ t("kerjasama.form.section2.media_sosial_label") }}
                                     </label>
                                     <input
                                         v-model="form.media_sosial"
                                         type="text"
-                                        placeholder="cth: instagram.com/namaanda"
+                                        :placeholder="t('kerjasama.form.section2.media_sosial_placeholder')"
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
@@ -526,11 +452,10 @@ const submit = () => {
                                         <h3
                                             class="text-[15px] font-bold text-[#1A1B18]"
                                         >
-                                            Informasi Rekening Pembayaran Komisi
+                                            {{ t("kerjasama.form.section3.title") }}
                                         </h3>
                                         <p class="text-[11px] text-[#7A7B78]">
-                                            Rekening tujuan pembayaran komisi atau
-                                            cashback Anda.
+                                            {{ t("kerjasama.form.section3.desc") }}
                                         </p>
                                     </div>
                                 </div>
@@ -540,13 +465,13 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Nama Bank
+                                            {{ t("kerjasama.form.section3.nama_bank_label") }}
                                             <span class="text-[#9e1f16]">*</span>
                                         </label>
                                         <input
                                             v-model="form.nama_bank"
                                             type="text"
-                                            placeholder="cth: BCA, Mandiri, BRI"
+                                            :placeholder="t('kerjasama.form.section3.nama_bank_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -554,13 +479,13 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Nomor Rekening
+                                            {{ t("kerjasama.form.section3.nomor_rekening_label") }}
                                             <span class="text-[#9e1f16]">*</span>
                                         </label>
                                         <input
                                             v-model="form.nomor_rekening"
                                             type="text"
-                                            placeholder="cth: 1234567890"
+                                            :placeholder="t('kerjasama.form.section3.nomor_rekening_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -570,13 +495,13 @@ const submit = () => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        Atas Nama
+                                        {{ t("kerjasama.form.section3.atas_nama_label") }}
                                         <span class="text-[#9e1f16]">*</span>
                                     </label>
                                     <input
                                         v-model="form.atas_nama"
                                         type="text"
-                                        placeholder="cth: Budi Santoso"
+                                        :placeholder="t('kerjasama.form.section3.atas_nama_placeholder')"
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
@@ -595,11 +520,10 @@ const submit = () => {
                                         <h3
                                             class="text-[15px] font-bold text-[#1A1B18]"
                                         >
-                                            Data Referensi Klien
+                                            {{ t("kerjasama.form.section4.title") }}
                                         </h3>
                                         <p class="text-[11px] text-[#7A7B78]">
-                                            Informasi calon klien yang Anda
-                                            rekomendasikan.
+                                            {{ t("kerjasama.form.section4.desc") }}
                                         </p>
                                     </div>
                                 </div>
@@ -609,13 +533,13 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Nama Perusahaan / Nama Klien
+                                            {{ t("kerjasama.form.section4.nama_klien_label") }}
                                             <span class="text-[#9e1f16]">*</span>
                                         </label>
                                         <input
                                             v-model="form.nama_klien"
                                             type="text"
-                                            placeholder="cth: Budi Santoso / PT Maju Jaya"
+                                            :placeholder="t('kerjasama.form.section4.nama_klien_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -623,13 +547,13 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Nama PIC Klien
+                                            {{ t("kerjasama.form.section4.nama_pic_klien_label") }}
                                             <span class="text-[#9e1f16]">*</span>
                                         </label>
                                         <input
                                             v-model="form.nama_pic_klien"
                                             type="text"
-                                            placeholder="cth: Budi Santoso"
+                                            :placeholder="t('kerjasama.form.section4.nama_pic_klien_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -637,13 +561,13 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Nomor Kontak Klien
+                                            {{ t("kerjasama.form.section4.nomor_kontak_klien_label") }}
                                             <span class="text-[#9e1f16]">*</span>
                                         </label>
                                         <input
                                             v-model="form.nomor_kontak_klien"
                                             type="text"
-                                            placeholder="cth: 0812 0000 0000"
+                                            :placeholder="t('kerjasama.form.section4.nomor_kontak_klien_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -651,12 +575,12 @@ const submit = () => {
                                         <label
                                             class="text-[12px] font-medium text-[#1A1B18]"
                                         >
-                                            Email Klien (Opsional)
+                                            {{ t("kerjasama.form.section4.email_klien_label") }}
                                         </label>
                                         <input
                                             v-model="form.email_klien"
                                             type="email"
-                                            placeholder="cth: klien@email.com"
+                                            :placeholder="t('kerjasama.form.section4.email_klien_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                         />
                                     </div>
@@ -666,13 +590,13 @@ const submit = () => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        Jenis Layanan Yang Dibutuhkan
+                                        {{ t("kerjasama.form.section4.layanan_label") }}
                                     </label>
                                     <div class="flex gap-2">
                                         <input
                                             v-model="layananInput"
                                             type="text"
-                                            placeholder="Ketik layanan, cth: Pendirian PT PMA"
+                                            :placeholder="t('kerjasama.form.section4.layanan_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                             @keydown.enter.prevent="addLayanan"
                                         />
@@ -694,7 +618,7 @@ const submit = () => {
                                                     d="M12 4.5v15m7.5-7.5h-15"
                                                 />
                                             </svg>
-                                            Tambah
+                                            {{ t("kerjasama.form.section4.layanan_add") }}
                                         </button>
                                     </div>
 
@@ -735,12 +659,12 @@ const submit = () => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        Keterangan Tambahan
+                                        {{ t("kerjasama.form.section4.keterangan_label") }}
                                     </label>
                                     <textarea
                                         v-model="form.keterangan_tambahan"
                                         rows="3"
-                                        placeholder="Catatan tambahan terkait klien..."
+                                        :placeholder="t('kerjasama.form.section4.keterangan_placeholder')"
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none resize-none"
                                     ></textarea>
                                 </div>
@@ -759,11 +683,10 @@ const submit = () => {
                                         <h3
                                             class="text-[15px] font-bold text-[#1A1B18]"
                                         >
-                                            Skema Insentif yang Dipilih
+                                            {{ t("kerjasama.form.section5.title") }}
                                         </h3>
                                         <p class="text-[11px] text-[#7A7B78]">
-                                            Pilih satu skema imbalan yang paling sesuai
-                                            dengan Anda.
+                                            {{ t("kerjasama.form.section5.desc") }}
                                         </p>
                                     </div>
                                 </div>
@@ -820,7 +743,7 @@ const submit = () => {
                                         >6</span
                                     >
                                     <h3 class="text-[15px] font-bold text-[#1A1B18]">
-                                        Pernyataan dan Persetujuan
+                                        {{ t("kerjasama.form.section6.title") }}
                                     </h3>
                                 </div>
 
@@ -845,8 +768,7 @@ const submit = () => {
                                         class="mt-0.5 h-4 w-4 rounded border-[#D9DAD8] text-[#9e1f16] focus:ring-[#9e1f16]"
                                     />
                                     <span class="text-[12px] leading-[18px] text-[#1A1B18]">
-                                        Saya telah membaca, memahami, dan menyetujui
-                                        seluruh pernyataan di atas.
+                                        {{ t("kerjasama.form.setuju_label") }}
                                     </span>
                                 </label>
                             </div>
@@ -860,7 +782,7 @@ const submit = () => {
                                     :disabled="!form.setuju_pernyataan || form.processing"
                                     class="inline-flex items-center gap-2 rounded-lg bg-[#9e1f16] px-6 py-3 text-[13px] font-semibold text-white transition hover:bg-[#7f1912] disabled:cursor-not-allowed disabled:opacity-50"
                                 >
-                                    Kirim Pendaftaran
+                                    {{ t("kerjasama.form.submit_cta") }}
                                     <svg
                                         class="h-4 w-4"
                                         fill="none"
@@ -876,8 +798,7 @@ const submit = () => {
                                     </svg>
                                 </button>
                                 <p class="text-[11px] text-[#7A7B78] text-right">
-                                    Dengan mengirim formulir, Anda menyetujui Syarat &
-                                    Ketentuan Program Client Get Client.
+                                    {{ t("kerjasama.form.submit_note") }}
                                 </p>
                             </div>
                         </form>
@@ -887,13 +808,10 @@ const submit = () => {
                     <aside class="lg:sticky lg:top-24">
                         <div class="rounded-xl bg-[#9e1f16] p-6 text-white">
                             <h3 class="text-[15px] font-bold mb-2">
-                                Bagaimana Komisi dihitung
+                                {{ t("kerjasama.sidebar.title") }}
                             </h3>
                             <p class="text-[11px] leading-[18px] text-white/85 mb-5">
-                                Komisi atau benefit diberikan setelah klien yang Anda
-                                referensikan menggunakan layanan FastTrack dan
-                                menyelesaikan pembayaran. Tidak ada batasan jumlah
-                                referral.
+                                {{ t("kerjasama.sidebar.desc") }}
                             </p>
 
                             <div class="flex flex-col gap-4">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Tighten\Ziggy\Ziggy;
@@ -37,6 +38,16 @@ class HandleInertiaRequests extends Middleware
             : $request->getSchemeAndHttpHost();
         $defaultImage = $siteUrl . '/favicon.ico';
 
+        // Tanggal aktif welcome banner selalu ditafsirkan sebagai waktu Indonesia (WIB),
+        // bukan app.timezone (UTC) — supaya "2026-07-10" berarti awal hari itu di Jakarta,
+        // sesuai maksud admin saat mengisi WELCOME_BANNER_START_DATE/END_DATE.
+        $welcomeBannerEnabled = (bool) config('welcome-banner.enabled');
+        $welcomeBannerStart = config('welcome-banner.start_date');
+        $welcomeBannerEnd = config('welcome-banner.end_date');
+        $now = Carbon::now('Asia/Jakarta');
+        $isAfterStart = ! $welcomeBannerStart || $now->greaterThanOrEqualTo(Carbon::parse($welcomeBannerStart, 'Asia/Jakarta')->startOfDay());
+        $isBeforeEnd = ! $welcomeBannerEnd || $now->lessThanOrEqualTo(Carbon::parse($welcomeBannerEnd, 'Asia/Jakarta')->endOfDay());
+
         return [
             ...parent::share($request),
             'auth' => [
@@ -49,6 +60,9 @@ class HandleInertiaRequests extends Middleware
                 'current_url' => $currentUrl,
                 'default_image' => $defaultImage,
                 'locale' => 'id_ID',
+            ],
+            'welcomeBanner' => [
+                'active' => $welcomeBannerEnabled && $isAfterStart && $isBeforeEnd,
             ],
             'seo' => fn () => [
                 'title' => $request->session()->get('seo.title', 'Layanan Legalitas Bisnis | FastTrack'),

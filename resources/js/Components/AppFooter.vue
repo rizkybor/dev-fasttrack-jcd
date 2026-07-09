@@ -3,7 +3,9 @@ import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { usePage } from "@inertiajs/vue3";
 
-const { t } = useI18n();
+const { t, tm } = useI18n();
+
+const popularLinks = computed(() => tm("common.footer.popularLinks.links"));
 
 const page = usePage();
 const site = computed(() => page.props.site || {});
@@ -197,9 +199,33 @@ const legalLinks = [
 
             <div class="mt-8 h-px bg-[#8A8D7F66]"></div>
 
-            <p class="mt-6 text-[14px] leading-[21px] text-[#F9F9F9]">
-                {{ t("common.footer.popularLinks") }}
-            </p>
+            <div class="mt-6">
+                <p class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9]">
+                    {{ t("common.footer.popularLinks.title") }}
+                </p>
+                <nav
+                    class="mt-3 flex flex-wrap gap-x-2 gap-y-2 text-[13px] leading-[20px]"
+                    aria-label="Popular links"
+                >
+                    <template
+                        v-for="(link, index) in popularLinks"
+                        :key="link.href"
+                    >
+                        <a
+                            :href="link.href"
+                            class="text-[#C7C8C2] hover:text-primary transition-colors whitespace-nowrap"
+                        >
+                            {{ link.label }}
+                        </a>
+                        <span
+                            v-if="index < popularLinks.length - 1"
+                            class="text-[#8A8D7F66]"
+                            aria-hidden="true"
+                            >|</span
+                        >
+                    </template>
+                </nav>
+            </div>
 
             <p class="mt-6 text-[14px] font-semibold leading-[21px] text-[#F9F9F9] text-center">
                 {{ t("common.footer.copyright") }}

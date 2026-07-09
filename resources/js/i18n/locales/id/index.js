@@ -1,6 +1,9 @@
 // id/index.js, en/index.js, zh/index.js
 import common from './common'
 import home from './home'
+import faq from './faq'
+import kerjasama from './kerjasama'
+import mintaPenawaran from './minta-penawaran'
 import badanUsaha from './services/badan-usaha'
 import kantorPerwakilan from './services/kantor-perwakilan'
 import izinTinggalTerbatas from './services/izin-tinggal-terbatas'
@@ -20,10 +23,15 @@ import visaMancanegara from './services/visa-mancanegara'
 import perpajakanDanPembukuan from './services/perpajakan-dan-pembukuan'
 import layanan from './services/layanan'
 import virtualOffice from './services/virtual-office'
+import digitalMarketing from './services/digital-marketing'
+import visaIndonesia from './services/visa-indonesia'
 
 export default {
     common,
     home,
+    faq,
+    kerjasama,
+    mintaPenawaran,
     services: {
         layanan,
         badanUsaha,
@@ -43,6 +51,8 @@ export default {
         keimigrasianWniWna,
         visaMancanegara,
         perpajakanDanPembukuan,
-        virtualOffice
+        virtualOffice,
+        digitalMarketing,
+        visaIndonesia
     },
 }

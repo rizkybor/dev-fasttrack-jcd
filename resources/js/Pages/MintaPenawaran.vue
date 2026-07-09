@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, watch } from "vue";
 import { useForm } from "@inertiajs/vue3";
+import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 
 /**
@@ -9,70 +10,15 @@ import MainLayout from "@/Layouts/MainLayout.vue";
  * + ringkasan biaya + form pemohon.
  */
 
+const { t, tm } = useI18n();
+
 /* ------------------------------------------------------------------ */
-/* Static data — sesuaikan dengan sumber data asli (props / JSON)      */
+/* Locale-driven data                                                  */
 /* ------------------------------------------------------------------ */
 
-const kategoriOptions = [
-    { value: "pendirian-badan-usaha", label: "Pendirian Badan Usaha" },
-    { value: "perizinan", label: "Perizinan" },
-    { value: "keimigrasian", label: "Keimigrasian" },
-    { value: "perpajakan", label: "Perpajakan & Pembukuan" },
-];
-
-const layananByKategori = {
-    "pendirian-badan-usaha": [
-        { value: "pendirian-pt-perorangan", label: "Pendirian PT Perorangan" },
-        { value: "pendirian-pt-pmdn", label: "Pendirian PT PMDN" },
-        { value: "pendirian-pt-pma", label: "Pendirian PT PMA" },
-        { value: "pendirian-cv", label: "Pendirian CV" },
-        { value: "pendirian-yayasan", label: "Pendirian Yayasan" },
-    ],
-    perizinan: [
-        { value: "nib", label: "Nomor Induk Berusaha (NIB)" },
-        { value: "izin-usaha", label: "Izin Usaha" },
-    ],
-    keimigrasian: [
-        { value: "kitas", label: "KITAS" },
-        { value: "visa-kunjungan", label: "Visa Kunjungan" },
-    ],
-    perpajakan: [
-        { value: "pembukuan-bulanan", label: "Pembukuan Bulanan" },
-        { value: "lapor-pajak", label: "Lapor Pajak Tahunan" },
-    ],
-};
-
-const detailByLayanan = {
-    "pendirian-pt-perorangan": [
-        {
-            value: "standar",
-            label: "Pendirian PT Perorangan",
-            harga: 3500000,
-        },
-    ],
-    "pendirian-pt-pmdn": [
-        { value: "standar", label: "Pendirian PT PMDN", harga: 5500000 },
-    ],
-    "pendirian-pt-pma": [
-        { value: "standar", label: "Pendirian PT PMA", harga: 12000000 },
-    ],
-    "pendirian-cv": [{ value: "standar", label: "Pendirian CV", harga: 3000000 }],
-    "pendirian-yayasan": [
-        { value: "standar", label: "Pendirian Yayasan", harga: 6000000 },
-    ],
-    nib: [{ value: "standar", label: "Pengurusan NIB", harga: 1500000 }],
-    "izin-usaha": [{ value: "standar", label: "Izin Usaha", harga: 2500000 }],
-    kitas: [{ value: "standar", label: "KITAS", harga: 8000000 }],
-    "visa-kunjungan": [
-        { value: "standar", label: "Visa Kunjungan", harga: 1200000 },
-    ],
-    "pembukuan-bulanan": [
-        { value: "standar", label: "Pembukuan Bulanan", harga: 1000000 },
-    ],
-    "lapor-pajak": [
-        { value: "standar", label: "Lapor Pajak Tahunan", harga: 1500000 },
-    ],
-};
+const kategoriOptions = computed(() => tm("mintaPenawaran.kategori_options"));
+const layananByKategori = computed(() => tm("mintaPenawaran.layanan_by_kategori"));
+const detailByLayanan = computed(() => tm("mintaPenawaran.detail_by_layanan"));
 
 /* ------------------------------------------------------------------ */
 /* Selection state                                                     */
@@ -83,11 +29,11 @@ const selectedLayanan = ref("");
 const selectedDetail = ref("");
 
 const layananOptions = computed(() => {
-    return layananByKategori[selectedKategori.value] ?? [];
+    return layananByKategori.value[selectedKategori.value] ?? [];
 });
 
 const detailOptions = computed(() => {
-    return detailByLayanan[selectedLayanan.value] ?? [];
+    return detailByLayanan.value[selectedLayanan.value] ?? [];
 });
 
 // Reset pilihan turunan ketika pilihan induk berubah
@@ -217,7 +163,7 @@ const whatsappLink = computed(() => {
                                 />
                             </svg>
                             <span class="text-sm font-medium text-white"
-                                >Minta Penawaran</span
+                                >{{ t("mintaPenawaran.hero.breadcrumb") }}</span
                             >
                         </div>
                     </nav>
@@ -226,10 +172,10 @@ const whatsappLink = computed(() => {
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl"
                     >
-                        Penawaran Fasttrack
+                        {{ t("mintaPenawaran.hero.title") }}
                     </h1>
                     <p class="mt-3 text-sm sm:text-base text-white/85">
-                        Langkah cepat kamu untuk mendapatkan layanan FASTTRACK.
+                        {{ t("mintaPenawaran.hero.desc") }}
                     </p>
                 </div>
             </div>
@@ -262,7 +208,7 @@ const whatsappLink = computed(() => {
                                         d="M10 19l-7-7m0 0l7-7m-7 7h18"
                                     />
                                 </svg>
-                                Pilih Layanan
+                                {{ t("mintaPenawaran.pilih_layanan.link") }}
                             </a>
 
                             <div class="grid gap-4 sm:grid-cols-3">
@@ -270,7 +216,7 @@ const whatsappLink = computed(() => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        Kategori
+                                        {{ t("mintaPenawaran.pilih_layanan.kategori_label") }}
                                     </label>
                                     <div class="relative">
                                         <select
@@ -278,7 +224,7 @@ const whatsappLink = computed(() => {
                                             class="w-full appearance-none rounded-lg border border-[#D9DAD8] px-3 py-2.5 pr-9 text-[12px] text-[#1A1B18] focus:border-[#9e1f16] focus:outline-none"
                                         >
                                             <option value="" disabled>
-                                                Pilih kategori
+                                                {{ t("mintaPenawaran.pilih_layanan.kategori_placeholder") }}
                                             </option>
                                             <option
                                                 v-for="opt in kategoriOptions"
@@ -308,7 +254,7 @@ const whatsappLink = computed(() => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        Layanan
+                                        {{ t("mintaPenawaran.pilih_layanan.layanan_label") }}
                                     </label>
                                     <div class="relative">
                                         <select
@@ -317,7 +263,7 @@ const whatsappLink = computed(() => {
                                             class="w-full appearance-none rounded-lg border border-[#D9DAD8] px-3 py-2.5 pr-9 text-[12px] text-[#1A1B18] focus:border-[#9e1f16] focus:outline-none disabled:bg-[#F5F5F4] disabled:text-[#B0B1AE]"
                                         >
                                             <option value="" disabled>
-                                                Pilih layanan
+                                                {{ t("mintaPenawaran.pilih_layanan.layanan_placeholder") }}
                                             </option>
                                             <option
                                                 v-for="opt in layananOptions"
@@ -347,7 +293,7 @@ const whatsappLink = computed(() => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        Detail Layanan
+                                        {{ t("mintaPenawaran.pilih_layanan.detail_label") }}
                                     </label>
                                     <div class="relative">
                                         <select
@@ -356,7 +302,7 @@ const whatsappLink = computed(() => {
                                             class="w-full appearance-none rounded-lg border border-[#D9DAD8] px-3 py-2.5 pr-9 text-[12px] text-[#1A1B18] focus:border-[#9e1f16] focus:outline-none disabled:bg-[#F5F5F4] disabled:text-[#B0B1AE]"
                                         >
                                             <option value="" disabled>
-                                                Pilih detail layanan
+                                                {{ t("mintaPenawaran.pilih_layanan.detail_placeholder") }}
                                             </option>
                                             <option
                                                 v-for="opt in detailOptions"
@@ -398,7 +344,7 @@ const whatsappLink = computed(() => {
                                 >
                                     {{ selectedDetailData.label }}
                                 </p>
-                                <p class="mt-4 text-[11px] text-white/70">Mulai dari</p>
+                                <p class="mt-4 text-[11px] text-white/70">{{ t("mintaPenawaran.pilih_layanan.starting_from") }}</p>
                                 <p class="text-xl font-extrabold text-white">
                                     {{ formatRupiah(selectedDetailData.harga) }}
                                 </p>
@@ -410,8 +356,7 @@ const whatsappLink = computed(() => {
                                 class="mt-6 flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-[#D9DAD8] px-6 py-12 text-center"
                             >
                                 <p class="text-[12px] text-[#7A7B78]">
-                                    Pilih kategori, layanan, dan detail layanan untuk
-                                    melihat ringkasan penawaran.
+                                    {{ t("mintaPenawaran.pilih_layanan.empty_state") }}
                                 </p>
                             </div>
                         </div>
@@ -428,7 +373,7 @@ const whatsappLink = computed(() => {
                                 <h3
                                     class="text-[13px] font-bold uppercase tracking-wide text-[#1A1B18]"
                                 >
-                                    Biaya Layanan
+                                    {{ t("mintaPenawaran.biaya.title") }}
                                 </h3>
 
                                 <div v-if="selectedDetailData" class="flex flex-col gap-2">
@@ -440,7 +385,7 @@ const whatsappLink = computed(() => {
 
                                     <div class="flex items-center justify-between">
                                         <span class="text-[11px] text-[#4A4B47]"
-                                            >Biaya Layanan</span
+                                            >{{ t("mintaPenawaran.biaya.biaya_label") }}</span
                                         >
                                         <span class="text-[11px] font-medium text-[#1A1B18]">
                                             {{ formatRupiah(biayaLayanan) }}
@@ -448,7 +393,7 @@ const whatsappLink = computed(() => {
                                     </div>
                                     <div class="flex items-center justify-between">
                                         <span class="text-[11px] text-[#4A4B47]"
-                                            >PPN 11%</span
+                                            >{{ t("mintaPenawaran.biaya.ppn_label") }}</span
                                         >
                                         <span class="text-[11px] font-medium text-[#1A1B18]">
                                             {{ formatRupiah(ppn) }}
@@ -459,7 +404,7 @@ const whatsappLink = computed(() => {
 
                                     <div class="flex items-center justify-between">
                                         <span class="text-[12px] font-semibold text-[#1A1B18]"
-                                            >Subtotal</span
+                                            >{{ t("mintaPenawaran.biaya.subtotal_label") }}</span
                                         >
                                         <span class="text-[13px] font-bold text-[#9e1f16]">
                                             {{ formatRupiah(subtotal) }}
@@ -467,14 +412,12 @@ const whatsappLink = computed(() => {
                                     </div>
 
                                     <p class="text-[10px] leading-[15px] text-[#B0B1AE] mt-1">
-                                        Harga diatas belum termasuk biaya lain. Rincian
-                                        lengkap dapat dilihat di halaman detail layanan.
+                                        {{ t("mintaPenawaran.biaya.note") }}
                                     </p>
                                 </div>
 
                                 <p v-else class="text-[11px] text-[#B0B1AE]">
-                                    Pilih layanan terlebih dahulu untuk melihat rincian
-                                    biaya.
+                                    {{ t("mintaPenawaran.biaya.empty") }}
                                 </p>
                             </div>
 
@@ -485,53 +428,53 @@ const whatsappLink = computed(() => {
                                 <h3
                                     class="text-[13px] font-bold uppercase tracking-wide text-[#1A1B18]"
                                 >
-                                    Pemohon
+                                    {{ t("mintaPenawaran.pemohon.title") }}
                                 </h3>
 
                                 <div class="flex flex-col gap-1.5">
                                     <label class="text-[11px] font-medium text-[#1A1B18]"
-                                        >Nama</label
+                                        >{{ t("mintaPenawaran.pemohon.nama_label") }}</label
                                     >
                                     <input
                                         v-model="form.nama"
                                         type="text"
-                                        placeholder="Masukkan nama lengkap"
+                                        :placeholder="t('mintaPenawaran.pemohon.nama_placeholder')"
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
 
                                 <div class="flex flex-col gap-1.5">
                                     <label class="text-[11px] font-medium text-[#1A1B18]"
-                                        >Perusahaan</label
+                                        >{{ t("mintaPenawaran.pemohon.perusahaan_label") }}</label
                                     >
                                     <input
                                         v-model="form.perusahaan"
                                         type="text"
-                                        placeholder="Masukkan nama perusahaan"
+                                        :placeholder="t('mintaPenawaran.pemohon.perusahaan_placeholder')"
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
 
                                 <div class="flex flex-col gap-1.5">
                                     <label class="text-[11px] font-medium text-[#1A1B18]"
-                                        >No Whatsapp</label
+                                        >{{ t("mintaPenawaran.pemohon.whatsapp_label") }}</label
                                     >
                                     <input
                                         v-model="form.no_whatsapp"
                                         type="text"
-                                        placeholder="Masukkan no whatsapp"
+                                        :placeholder="t('mintaPenawaran.pemohon.whatsapp_placeholder')"
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
 
                                 <div class="flex flex-col gap-1.5">
                                     <label class="text-[11px] font-medium text-[#1A1B18]"
-                                        >Email</label
+                                        >{{ t("mintaPenawaran.pemohon.email_label") }}</label
                                     >
                                     <input
                                         v-model="form.email"
                                         type="email"
-                                        placeholder="Masukkan email"
+                                        :placeholder="t('mintaPenawaran.pemohon.email_placeholder')"
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
@@ -548,7 +491,7 @@ const whatsappLink = computed(() => {
                                         class="h-4 w-4 rounded border-[#D9DAD8] text-[#9e1f16] focus:ring-[#9e1f16]"
                                     />
                                     <span class="text-[11px] text-[#1A1B18]"
-                                        >I'm not a robot</span
+                                        >{{ t("mintaPenawaran.captcha_label") }}</span
                                     >
                                 </span>
                                 <span
@@ -564,7 +507,7 @@ const whatsappLink = computed(() => {
                                 :disabled="!isFormValid || form.processing"
                                 class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#9e1f16] px-6 py-3 text-[13px] font-semibold text-white transition hover:bg-[#7f1912] disabled:cursor-not-allowed disabled:opacity-50"
                             >
-                                Minta Penawaran
+                                {{ t("mintaPenawaran.submit_cta") }}
                                 <svg
                                     class="h-4 w-4"
                                     fill="none"
@@ -599,10 +542,7 @@ const whatsappLink = computed(() => {
                                 />
                             </svg>
                             <p class="text-[11px] leading-[17px] text-[#2E6A96]">
-                                Pengajuan kamu akan dibuatkan akun ke Dashboard Pelanggan.
-                                Login ke Dashboard Pelanggan akan menggunakan OTP melalui
-                                Whatsapp. Pastikan kamu menggunakan nomor Whatsapp yang
-                                aktif.
+                                {{ t("mintaPenawaran.info_box") }}
                             </p>
                         </div>
                     </aside>
@@ -631,11 +571,10 @@ const whatsappLink = computed(() => {
                     </svg>
 
                     <h2 class="text-xl sm:text-2xl font-extrabold text-white">
-                        Butuh Penjelasan Lebih Spesifik?
+                        {{ t("mintaPenawaran.cta.title") }}
                     </h2>
                     <p class="mt-2 text-[13px] text-white/80 max-w-md mx-auto">
-                        Tim kami siap membantu Anda menemukan solusi yang tepat untuk
-                        kebutuhan legalitas bisnis Anda.
+                        {{ t("mintaPenawaran.cta.desc") }}
                     </p>
 
                     <a
@@ -644,7 +583,7 @@ const whatsappLink = computed(() => {
                         rel="noopener noreferrer"
                         class="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 text-[13px] font-semibold text-white transition hover:bg-[#1fb955]"
                     >
-                        Chat Langsung via Whatsapp
+                        {{ t("mintaPenawaran.cta.whatsapp") }}
                         <svg
                             class="h-4 w-4"
                             fill="currentColor"

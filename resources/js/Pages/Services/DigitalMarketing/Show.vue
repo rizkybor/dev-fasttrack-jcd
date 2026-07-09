@@ -1,6 +1,9 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -21,13 +24,44 @@ const buildWhatsappLink = (productName, jenis) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
+// Helper: pick nilai berdasarkan locale, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === "object" &&
+        !Array.isArray(field) &&
+        ("id" in field || "en" in field || "zh" in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedProduct = computed(() => {
+    const p = props.product;
+    if (!p) return p;
+
+    return {
+        ...p,
+        name: pick(p.name),
+        tag: pick(p.tag),
+        duration: pick(p.duration),
+        excerpt: pick(p.excerpt),
+        baru: pick(p.baru),
+        perpanjangan: pick(p.perpanjangan),
+        faq: pick(p.faq) ?? [],
+    };
+});
+
+const product = localizedProduct;
+
 // ===== Toggle Jenis Pengajuan: 'baru' | 'perpanjangan' =====
 const jenisPengajuan = ref("baru");
 
 // Toggle hanya tampil jika produk punya data 'perpanjangan'
-const hasToggle = computed(() => !!props.product?.perpanjangan);
+const hasToggle = computed(() => !!product.value?.perpanjangan);
 
-const currentData = computed(() => props.product?.[jenisPengajuan.value] ?? {});
+const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
 </script>
 
 <template>
@@ -102,9 +136,9 @@ const currentData = computed(() => props.product?.[jenisPengajuan.value] ?? {});
                             />
                         </svg>
                         <a
-                            href="/izin-tinggal-terbatas"
+                            href="/digital-marketing"
                             class="text-sm font-medium text-[#9e1f16] hover:underline"
-                            >Izin Tinggal Terbatas</a
+                            >Digital Marketing</a
                         >
                         <svg
                             class="h-3 w-3 text-[#9e1f16]"
@@ -146,7 +180,7 @@ const currentData = computed(() => props.product?.[jenisPengajuan.value] ?? {});
                 <!-- Bottom: Back button -->
                 <div>
                     <a
-                        href="/izin-tinggal-terbatas"
+                        href="/digital-marketing"
                         class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition"
                     >
                         <svg
@@ -754,13 +788,13 @@ const currentData = computed(() => props.product?.[jenisPengajuan.value] ?? {});
                         <h3
                             class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]"
                         >
-                            Butuh Konsultasi Soal izin Tinggal Orang Asing?
+                            Butuh Konsultasi Soal Digital Marketing?
                         </h3>
                         <p
                             class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]"
                         >
-                            Tim Fasttrack siap membantu memilih kategori ITAS
-                            yang<br class="hidden sm:block" />
+                            Tim Fasttrack siap membantu memilih strategi digital
+                            marketing yang<br class="hidden sm:block" />
                             tepat dan mendampingi seluruh prosesnya.
                         </p>
                         <a
