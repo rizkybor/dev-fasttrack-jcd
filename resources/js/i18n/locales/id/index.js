@@ -19,6 +19,7 @@ import keimigrasianWniWna from './services/keimigrasian-wni-wna'
 import visaMancanegara from './services/visa-mancanegara'
 import perpajakanDanPembukuan from './services/perpajakan-dan-pembukuan'
 import layanan from './services/layanan'
+import virtualOffice from './services/virtual-office'
 
 export default {
     common,
@@ -41,6 +42,7 @@ export default {
         penutupanBadanUsaha,
         keimigrasianWniWna,
         visaMancanegara,
-        perpajakanDanPembukuan
+        perpajakanDanPembukuan,
+        virtualOffice
     },
 }

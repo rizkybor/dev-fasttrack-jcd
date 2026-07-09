@@ -2661,19 +2661,24 @@ Route::get('/visa-indonesia/{id}', function (Request $request, int $id) use ($vi
 })->whereNumber('id');
 
 // VIRTUAL OFFICE
-Route::get('/virtual-office/{id}', function (Request $request, int $id) use ($virtualOfficeProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/virtual-office/{id}', function (Request $request, int $id) use ($virtualOfficeProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($virtualOfficeProducts)->firstWhere('id', $id);
     abort_if($product === null, 404);
     $relatedProducts = collect($virtualOfficeProducts)->where('id', '!=', $id)->take(3)->values()->all();
+
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/VirtualOffice/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
-        'seo' => ['title' => $product['name'] . ' - FastTrack', 'description' => $product['excerpt'], 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
+        'seo' => ['title' => $productName . ' - FastTrack', 'description' => $productExcerpt, 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
         'schemas' => [
-            ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $product['name'], 'description' => $product['excerpt'], 'serviceType' => $product['name'], 'provider' => $organizationReference($baseUrl), 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl), 'url' => $baseUrl . $product['detail_path'], 'offers' => ['@type' => 'Offer', 'priceCurrency' => 'IDR', 'price' => $product['price'], 'availability' => 'https://schema.org/InStock', 'url' => $baseUrl . $product['detail_path']]],
-            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => collect($product['faq'])->map(static fn(array $faq): array => ['@type' => 'Question', 'name' => $faq['question'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']]])->all()],
-            $breadcrumbSchema([['name' => 'Beranda', 'item' => $baseUrl . '/'], ['name' => 'Virtual Office', 'item' => $baseUrl . '/virtual-office'], ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']]]),
+            ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $productName, 'description' => $productExcerpt, 'serviceType' => $productName, 'provider' => $organizationReference($baseUrl), 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl), 'url' => $baseUrl . $product['detail_path'], 'offers' => ['@type' => 'Offer', 'priceCurrency' => 'IDR', 'price' => $product['price'], 'availability' => 'https://schema.org/InStock', 'url' => $baseUrl . $product['detail_path']]],
+            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => collect($productFaq)->map(static fn(array $faq): array => ['@type' => 'Question', 'name' => $faq['question'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']]])->all()],
+            $breadcrumbSchema([['name' => 'Beranda', 'item' => $baseUrl . '/'], ['name' => 'Virtual Office', 'item' => $baseUrl . '/virtual-office'], ['name' => $productName, 'item' => $baseUrl . $product['detail_path']]]),
         ],
     ]);
 })->whereNumber('id');
@@ -2739,19 +2744,24 @@ Route::get('/perpajakan-dan-pembukuan/{id}', function (Request $request, int $id
 })->whereNumber('id');
 
 // PERIZINAN DASAR
-Route::get('/perizinan-dasar/{id}', function (Request $request, int $id) use ($perizinanDasarProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema) {
+Route::get('/perizinan-dasar/{id}', function (Request $request, int $id) use ($perizinanDasarProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
     $baseUrl = $resolveBaseUrl($request);
     $product = collect($perizinanDasarProducts)->firstWhere('id', $id);
     abort_if($product === null, 404);
     $relatedProducts = collect($perizinanDasarProducts)->where('id', '!=', $id)->take(3)->values()->all();
+
+    $productName = $pickLocale($product['name']);
+    $productExcerpt = $pickLocale($product['excerpt']);
+    $productFaq = $pickLocale($product['faq']) ?? [];
+
     return Inertia::render('Services/PerizinanDasar/Show', [
         'product' => $product,
         'relatedProducts' => $relatedProducts,
-        'seo' => ['title' => $product['name'] . ' - FastTrack', 'description' => $product['excerpt'], 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
+        'seo' => ['title' => $productName . ' - FastTrack', 'description' => $productExcerpt, 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
         'schemas' => [
-            ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $product['name'], 'description' => $product['excerpt'], 'serviceType' => $product['name'], 'provider' => $organizationReference($baseUrl), 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl), 'url' => $baseUrl . $product['detail_path'], 'offers' => ['@type' => 'Offer', 'priceCurrency' => 'IDR', 'price' => $product['price'], 'availability' => 'https://schema.org/InStock', 'url' => $baseUrl . $product['detail_path']]],
-            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => collect($product['faq'])->map(static fn(array $faq): array => ['@type' => 'Question', 'name' => $faq['question'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']]])->all()],
-            $breadcrumbSchema([['name' => 'Beranda', 'item' => $baseUrl . '/'], ['name' => 'Perizinan Dasar', 'item' => $baseUrl . '/perizinan-dasar'], ['name' => $product['name'], 'item' => $baseUrl . $product['detail_path']]]),
+            ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $productName, 'description' => $productExcerpt, 'serviceType' => $productName, 'provider' => $organizationReference($baseUrl), 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl), 'url' => $baseUrl . $product['detail_path'], 'offers' => ['@type' => 'Offer', 'priceCurrency' => 'IDR', 'price' => $product['price'], 'availability' => 'https://schema.org/InStock', 'url' => $baseUrl . $product['detail_path']]],
+            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => collect($productFaq)->map(static fn(array $faq): array => ['@type' => 'Question', 'name' => $faq['question'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']]])->all()],
+            $breadcrumbSchema([['name' => 'Beranda', 'item' => $baseUrl . '/'], ['name' => 'Perizinan Dasar', 'item' => $baseUrl . '/perizinan-dasar'], ['name' => $productName, 'item' => $baseUrl . $product['detail_path']]]),
         ],
     ]);
 })->whereNumber('id');

@@ -19,6 +19,7 @@ import kewajibanPelaporanUsaha from './services/kewajiban-pelaporan-perusahaan'
 import izinTinggalTetap from './services/izin-tinggal-tetap'
 import keimigrasianWniWna from './services/keimigrasian-wni-wna'
 import visaMancanegara from './services/visa-mancanegara'
+import virtualOffice from './services/virtual-office'
 
 export default {
     common,
@@ -41,6 +42,7 @@ export default {
         kewajibanPelaporanUsaha,
         izinTinggalTetap,
         keimigrasianWniWna,
-        visaMancanegara
+        visaMancanegara,
+        virtualOffice
     },
 }

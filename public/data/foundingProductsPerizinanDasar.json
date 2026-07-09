@@ -1,575 +1,1605 @@
 [
     {
         "id": 1,
-        "name": "Kesesuaian Kegiatan Pemanfaatan Ruang",
+        "name": {
+            "id": "Kesesuaian Kegiatan Pemanfaatan Ruang",
+            "en": "Spatial Utilization Activity Conformity",
+            "zh": "空间利用活动符合性"
+        },
         "tag": "Profesional",
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "duration": "Estimasi 3-5 hari kerja",
         "image": "",
-        "excerpt": "Pendaftaran NIB untuk pelaku usaha perseorangan yang baru memulai kegiatan usaha.",
+        "excerpt": {
+            "id": "Pendaftaran NIB untuk pelaku usaha perseorangan yang baru memulai kegiatan usaha.",
+            "en": "NIB registration for individual business actors who are just starting their business activities.",
+            "zh": "为刚开始经营活动的个体经营者办理营业识别码（NIB）注册。"
+        },
         "detail_path": "/one-single-submission/nib",
-        "penjelasan_umum": [
-            "Nomor Induk Berusaha yang selanjutnya disingkat NIB adalah bukti registrasi/pendaftaran Pelaku Usaha untuk melakukan kegiatan usaha dan sebagai identitas bagi Pelaku Usaha dalam pelaksanaan kegiatan usahanya yang diterbitkan oleh OSS. Sistem OSS adalah sistem elektronik terintegrasi yang dikelola dan diselenggarakan oleh lembaga OSS untuk penyelenggaraan Perizinan Berusaha Berbasis Risiko (PBBR).",
-            "NIB sebagai identitas Pelaku Usaha sebagaimana dimaksud pada ayat (3) berlaku juga sebagai:",
-            "NIB sebagai legalitas berusaha berlaku bagi:",
-            "NIB sebagaimana dimaksud diatas berlaku juga sebagai legalitas terbatas untuk Pelaku Usaha dengan kegiatan usaha tingkat Risiko menengah rendah, Risiko menengah tinggi, dan Risiko tinggi."
-        ],
-        "penjelasan_umum_bullets": [
-            "Hak akses kepabeanan;",
-            "Angka pengenal importir;",
-            "Pendaftaran kepesertaan Pelaku Usaha untuk jaminan sosial kesehatan dan jaminan sosial ketenagakerjaan; dan",
-            "Wajib lapor ketenagakerjaan untuk periode pertama Pelaku Usaha."
-        ],
-        "penjelasan_umum_bullets_2": [
-            "Pelaku Usaha dengan kegiatan usaha tingkat Risiko rendah;",
-            "Badan usaha luar negeri dengan kegiatan usaha transportasi udara; atau",
-            "Badan usaha luar negeri dengan kegiatan usaha hulu minyak dan gas bumi yang telah memiliki kontrak kerja sama."
-        ],
+        "penjelasan_umum": {
+            "id": [
+                "Nomor Induk Berusaha yang selanjutnya disingkat NIB adalah bukti registrasi/pendaftaran Pelaku Usaha untuk melakukan kegiatan usaha dan sebagai identitas bagi Pelaku Usaha dalam pelaksanaan kegiatan usahanya yang diterbitkan oleh OSS. Sistem OSS adalah sistem elektronik terintegrasi yang dikelola dan diselenggarakan oleh lembaga OSS untuk penyelenggaraan Perizinan Berusaha Berbasis Risiko (PBBR).",
+                "NIB sebagai identitas Pelaku Usaha sebagaimana dimaksud pada ayat (3) berlaku juga sebagai:",
+                "NIB sebagai legalitas berusaha berlaku bagi:",
+                "NIB sebagaimana dimaksud diatas berlaku juga sebagai legalitas terbatas untuk Pelaku Usaha dengan kegiatan usaha tingkat Risiko menengah rendah, Risiko menengah tinggi, dan Risiko tinggi."
+            ],
+            "en": [
+                "Business Identification Number (NIB) is proof of registration for Business Actors to carry out business activities and serves as an identity for Business Actors in carrying out their business activities, issued by OSS. The OSS System is an integrated electronic system managed and operated by the OSS institution for the implementation of Risk-Based Business Licensing (PBBR).",
+                "NIB as the identity of Business Actors as referred to in paragraph (3) also serves as:",
+                "NIB as business legality applies to:",
+                "The NIB referred to above also serves as limited legality for Business Actors with business activities at Medium-Low Risk, Medium-High Risk, and High Risk levels."
+            ],
+            "zh": [
+                "营业识别码（NIB）是经营者进行经营活动的登记/注册凭证，也是经营者在开展经营活动过程中的身份标识，由OSS系统颁发。OSS系统是由OSS机构管理运营的一体化电子系统，用于实施基于风险的营业许可（PBBR）。",
+                "第（3）款所述作为经营者身份标识的NIB，同时也具有以下效力：",
+                "作为经营合法性依据的NIB适用于：",
+                "上述NIB同时对开展中低风险、中高风险及高风险等级经营活动的经营者具有有限的合法性效力。"
+            ]
+        },
+        "penjelasan_umum_bullets": {
+            "id": [
+                "Hak akses kepabeanan;",
+                "Angka pengenal importir;",
+                "Pendaftaran kepesertaan Pelaku Usaha untuk jaminan sosial kesehatan dan jaminan sosial ketenagakerjaan; dan",
+                "Wajib lapor ketenagakerjaan untuk periode pertama Pelaku Usaha."
+            ],
+            "en": [
+                "Customs access rights;",
+                "Importer identification number;",
+                "Registration of Business Actor participation for health social security and employment social security; and",
+                "Mandatory employment reporting for the Business Actor's first period."
+            ],
+            "zh": [
+                "海关准入权；",
+                "进口商识别号；",
+                "经营者参加医疗社会保障及就业社会保障的登记；以及",
+                "经营者首期强制性用工报告。"
+            ]
+        },
+        "penjelasan_umum_bullets_2": {
+            "id": [
+                "Pelaku Usaha dengan kegiatan usaha tingkat Risiko rendah;",
+                "Badan usaha luar negeri dengan kegiatan usaha transportasi udara; atau",
+                "Badan usaha luar negeri dengan kegiatan usaha hulu minyak dan gas bumi yang telah memiliki kontrak kerja sama."
+            ],
+            "en": [
+                "Business Actors with Low Risk level business activities;",
+                "Foreign business entities with air transportation business activities; or",
+                "Foreign business entities with upstream oil and gas business activities that already have a cooperation contract."
+            ],
+            "zh": [
+                "从事低风险等级经营活动的经营者；",
+                "从事航空运输业务的境外企业；或",
+                "已签订合作合同、从事石油天然气上游业务的境外企业。"
+            ]
+        },
         "paket": [
             {
                 "id": "perorangan",
-                "nama": "NIB Perorangan",
-                "deskripsi": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
+                "nama": {
+                    "id": "NIB Perorangan",
+                    "en": "Individual NIB",
+                    "zh": "个体NIB"
+                },
+                "deskripsi": {
+                    "id": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
+                    "en": "NIB registration for individually-owned businesses that are just starting their business activities.",
+                    "zh": "为刚开始经营活动的个人所有企业办理NIB注册。"
+                },
                 "harga": "Rp 1.000.000",
-                "penjelasan_layanan": [
-                    "Layanan pendaftaran Nomor Induk Berusaha (NIB) bagi pelaku usaha perseorangan melalui sistem Online Single Submission (OSS). NIB menjadi bukti registrasi sekaligus dokumen izin dasar dalam menjalankan kegiatan usaha secara legal.",
-                    "Fasttrack mendampingi Anda mulai dari pendaftaran akun OSS, pengisian data usaha, pemilihan KBLI yang tepat, hingga penerbitan NIB beserta Perizinan Dasar — cepat, akurat, dan sesuai ketentuan yang berlaku."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Pendaftaran OSS;",
-                        "Nomor Induk Berusaha (NIB);",
-                        "Perizinan Dasar"
+                "penjelasan_layanan": {
+                    "id": [
+                        "Layanan pendaftaran Nomor Induk Berusaha (NIB) bagi pelaku usaha perseorangan melalui sistem Online Single Submission (OSS). NIB menjadi bukti registrasi sekaligus dokumen izin dasar dalam menjalankan kegiatan usaha secara legal.",
+                        "Fasttrack mendampingi Anda mulai dari pendaftaran akun OSS, pengisian data usaha, pemilihan KBLI yang tepat, hingga penerbitan NIB beserta Perizinan Dasar — cepat, akurat, dan sesuai ketentuan yang berlaku."
                     ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
+                    "en": [
+                        "Business Identification Number (NIB) registration service for individual business actors through the Online Single Submission (OSS) system. NIB serves as proof of registration as well as a basic license document for conducting business activities legally.",
+                        "Fasttrack assists you from OSS account registration, filling in business data, selecting the appropriate KBLI, through to the issuance of NIB along with Basic Licensing — fast, accurate, and in accordance with applicable regulations."
+                    ],
+                    "zh": [
+                        "通过在线一体化申报系统（OSS）为个体经营者办理营业识别码（NIB）注册服务。NIB既是注册凭证，也是合法开展经营活动的基础许可文件。",
+                        "Fasttrack全程为您提供协助，从OSS账户注册、填写经营数据、选择合适的KBLI分类，到最终颁发NIB及基础许可——快速、准确，并符合现行规定。"
                     ]
                 },
+                "dokumen_legalitas": {
+                    "dokumen": {
+                        "id": [
+                            "Pendaftaran OSS;",
+                            "Nomor Induk Berusaha (NIB);",
+                            "Perizinan Dasar"
+                        ],
+                        "en": [
+                            "OSS Registration;",
+                            "Business Identification Number (NIB);",
+                            "Basic Licensing"
+                        ],
+                        "zh": [
+                            "OSS注册；",
+                            "营业识别码（NIB）；",
+                            "基础许可"
+                        ]
+                    },
+                    "termasuk": {
+                        "id": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ],
+                        "en": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ],
+                        "zh": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack工具包"
+                        ]
+                    }
+                },
                 "biaya_layanan": {
-                    "nama": "NIB Perorangan",
+                    "nama": {
+                        "id": "NIB Perorangan",
+                        "en": "Individual NIB",
+                        "zh": "个体NIB"
+                    },
                     "harga": "Rp 1.000.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             },
             {
                 "id": "umk-selain-pt",
-                "nama": "NIB UMK & Selain PT",
-                "deskripsi": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
+                "nama": {
+                    "id": "NIB UMK & Selain PT",
+                    "en": "NIB for Micro/Small Business & Non-PT Entities",
+                    "zh": "微小企业及非PT实体NIB"
+                },
+                "deskripsi": {
+                    "id": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
+                    "en": "NIB registration for individually-owned businesses that are just starting their business activities.",
+                    "zh": "为刚开始经营活动的个人所有企业办理NIB注册。"
+                },
                 "harga": "Rp 1.750.000",
-                "penjelasan_layanan": [
-                    "Layanan pendaftaran NIB untuk Usaha Mikro dan Kecil (UMK) serta badan usaha selain Perseroan Terbatas — seperti CV, Firma, Persekutuan Perdata, atau Koperasi — dengan modal dasar di bawah Rp 5 Miliar.",
-                    "Tim Fasttrack memastikan klasifikasi KBLI, skala usaha, dan tingkat risiko terkini dengan benar sehingga NIB dan Perizinan Dasar dapat terbit sesuai dengan ketentuan yang berlaku bagi kegiatan usaha Anda."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Pendaftaran OSS;",
-                        "Nomor Induk Berusaha (NIB);",
-                        "Perizinan Dasar"
+                "penjelasan_layanan": {
+                    "id": [
+                        "Layanan pendaftaran NIB untuk Usaha Mikro dan Kecil (UMK) serta badan usaha selain Perseroan Terbatas — seperti CV, Firma, Persekutuan Perdata, atau Koperasi — dengan modal dasar di bawah Rp 5 Miliar.",
+                        "Tim Fasttrack memastikan klasifikasi KBLI, skala usaha, dan tingkat risiko terkini dengan benar sehingga NIB dan Perizinan Dasar dapat terbit sesuai dengan ketentuan yang berlaku bagi kegiatan usaha Anda."
                     ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
+                    "en": [
+                        "NIB registration service for Micro and Small Businesses (UMK) as well as business entities other than Limited Liability Companies (PT) — such as CV, Firma, Civil Partnerships, or Cooperatives — with basic capital below Rp 5 Billion.",
+                        "The Fasttrack team ensures the correct KBLI classification, business scale, and current risk level so that NIB and Basic Licensing can be issued in accordance with applicable regulations for your business activities."
+                    ],
+                    "zh": [
+                        "为微小企业（UMK）以及有限责任公司（PT）以外的企业实体——例如CV、合伙企业、民事合伙或合作社——办理NIB注册服务，适用于基本资本低于50亿印尼盾的企业。",
+                        "Fasttrack团队确保正确的KBLI分类、经营规模及最新风险等级，从而使NIB及基础许可能够依据适用于您经营活动的现行规定顺利颁发。"
                     ]
                 },
+                "dokumen_legalitas": {
+                    "dokumen": {
+                        "id": [
+                            "Pendaftaran OSS;",
+                            "Nomor Induk Berusaha (NIB);",
+                            "Perizinan Dasar"
+                        ],
+                        "en": [
+                            "OSS Registration;",
+                            "Business Identification Number (NIB);",
+                            "Basic Licensing"
+                        ],
+                        "zh": [
+                            "OSS注册；",
+                            "营业识别码（NIB）；",
+                            "基础许可"
+                        ]
+                    },
+                    "termasuk": {
+                        "id": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ],
+                        "en": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ],
+                        "zh": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack工具包"
+                        ]
+                    }
+                },
                 "biaya_layanan": {
-                    "nama": "NIB UMK & Selain PT",
+                    "nama": {
+                        "id": "NIB UMK & Selain PT",
+                        "en": "NIB for Micro/Small Business & Non-PT Entities",
+                        "zh": "微小企业及非PT实体NIB"
+                    },
                     "harga": "Rp 1.750.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             },
             {
                 "id": "non-umk",
-                "nama": "NIB Non UMK (PMDN/PMA)",
-                "deskripsi": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
+                "nama": {
+                    "id": "NIB Non UMK (PMDN/PMA)",
+                    "en": "Non-UMK NIB (PMDN/PMA)",
+                    "zh": "非微小企业NIB（PMDN/PMA）"
+                },
+                "deskripsi": {
+                    "id": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
+                    "en": "NIB registration for individually-owned businesses that are just starting their business activities.",
+                    "zh": "为刚开始经营活动的个人所有企业办理NIB注册。"
+                },
                 "harga": "Rp 2.750.000",
-                "penjelasan_layanan": [
-                    "Layanan pendaftaran NIB untuk badan usaha Non UMK — Penanaman Modal Dalam Negeri (PMDN) maupun Penanaman Modal Asing (PMA) — di atas Rp 5 Miliar.",
-                    "Selain penerbitan NIB, layanan ini memastikan pemenuhan izin lokasi, penerbitan Pernyataan Dasar Perizinan Berusaha, hingga pemenuhan Standar/Sertifikasi Tertentu (apabila diperlukan) sesuai dengan ketentuan yang berlaku dan sektor bisnis Anda."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Pendaftaran OSS;",
-                        "Nomor Induk Berusaha (NIB);",
-                        "Perizinan Dasar;",
-                        "Pernyataan Mandiri Kesesuaian Memenuhi Persyaratan Izin Lokasi (Bila Belum Terbit Peta);",
-                        "Pernyataan Mandiri Usaha/Kegiatan Tidak Termasuk Usaha Tingkat Risiko adalah Tinggi"
+                "penjelasan_layanan": {
+                    "id": [
+                        "Layanan pendaftaran NIB untuk badan usaha Non UMK — Penanaman Modal Dalam Negeri (PMDN) maupun Penanaman Modal Asing (PMA) — di atas Rp 5 Miliar.",
+                        "Selain penerbitan NIB, layanan ini memastikan pemenuhan izin lokasi, penerbitan Pernyataan Dasar Perizinan Berusaha, hingga pemenuhan Standar/Sertifikasi Tertentu (apabila diperlukan) sesuai dengan ketentuan yang berlaku dan sektor bisnis Anda."
                     ],
-                    "termasuk": [
-                        "Sertifikat Standar (Risiko Menengah)/Sertifikasi Izin (Berupa Sertifikat Standar (Belum Terverifikasi) Bila Belum Penuhi Persyaratan);",
-                        "Pernyataan Mandiri Kesanggupan Memenuhi Persyaratan Izin Tingkat Risiko adalah Tinggi",
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
+                    "en": [
+                        "NIB registration service for Non-UMK business entities — Domestic Investment (PMDN) or Foreign Investment (PMA) — above Rp 5 Billion.",
+                        "In addition to NIB issuance, this service ensures fulfillment of location permits, issuance of the Basic Business Licensing Statement, and fulfillment of Specific Standards/Certifications (if required) in accordance with applicable regulations and your business sector."
+                    ],
+                    "zh": [
+                        "为资本超过50亿印尼盾的非微小企业实体——包括境内投资（PMDN）及外商投资（PMA）——办理NIB注册服务。",
+                        "除颁发NIB外，本服务还确保满足选址许可要求、颁发基础营业许可声明，并在需要时满足特定标准/认证要求，一切均依据现行规定及您所处的行业领域进行。"
                     ]
                 },
+                "dokumen_legalitas": {
+                    "dokumen": {
+                        "id": [
+                            "Pendaftaran OSS;",
+                            "Nomor Induk Berusaha (NIB);",
+                            "Perizinan Dasar;",
+                            "Pernyataan Mandiri Kesesuaian Memenuhi Persyaratan Izin Lokasi (Bila Belum Terbit Peta);",
+                            "Pernyataan Mandiri Usaha/Kegiatan Tidak Termasuk Usaha Tingkat Risiko adalah Tinggi"
+                        ],
+                        "en": [
+                            "OSS Registration;",
+                            "Business Identification Number (NIB);",
+                            "Basic Licensing;",
+                            "Self-Declaration of Conformity to Location Permit Requirements (If Map Has Not Been Issued);",
+                            "Self-Declaration that the Business/Activity Is Not a High-Risk Level Business"
+                        ],
+                        "zh": [
+                            "OSS注册；",
+                            "营业识别码（NIB）；",
+                            "基础许可；",
+                            "选址许可要求符合性自我声明（尚未颁发地图时适用）；",
+                            "经营/活动非高风险等级自我声明"
+                        ]
+                    },
+                    "termasuk": {
+                        "id": [
+                            "Sertifikat Standar (Risiko Menengah)/Sertifikasi Izin (Berupa Sertifikat Standar (Belum Terverifikasi) Bila Belum Penuhi Persyaratan);",
+                            "Pernyataan Mandiri Kesanggupan Memenuhi Persyaratan Izin Tingkat Risiko adalah Tinggi",
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ],
+                        "en": [
+                            "Standard Certificate (Medium Risk)/License Certification (in the form of Standard Certificate (Unverified) if Requirements Are Not Yet Met);",
+                            "Self-Declaration of Willingness to Fulfill High-Risk Level Permit Requirements",
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ],
+                        "zh": [
+                            "标准证书（中等风险）/许可认证（若尚未满足要求，则以标准证书（未核实）形式颁发）；",
+                            "高风险等级许可要求符合能力自我声明",
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack工具包"
+                        ]
+                    }
+                },
                 "biaya_layanan": {
-                    "nama": "NIB Non UMK (PMDN/PMA)",
+                    "nama": {
+                        "id": "NIB Non UMK (PMDN/PMA)",
+                        "en": "Non-UMK NIB (PMDN/PMA)",
+                        "zh": "非微小企业NIB（PMDN/PMA）"
+                    },
                     "harga": "Rp 2.750.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             },
             {
                 "id": "cabang",
-                "nama": "NIB Cabang",
-                "deskripsi": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
+                "nama": {
+                    "id": "NIB Cabang",
+                    "en": "Branch NIB",
+                    "zh": "分支机构NIB"
+                },
+                "deskripsi": {
+                    "id": "Pendaftaran NIB untuk usaha milik perseorangan yang baru memulai kegiatan usaha.",
+                    "en": "NIB registration for individually-owned businesses that are just starting their business activities.",
+                    "zh": "为刚开始经营活动的个人所有企业办理NIB注册。"
+                },
                 "harga": "Rp 750.000",
-                "penjelasan_layanan": [
-                    "Layanan pendaftaran Nomor Induk Berusaha Cabang bagi badan usaha yang membuka kantor satu atau beberapa kantor satu atau usaha di lain lokasi dari kantor pusat di lain kota. NIB Cabang mencatat kegiatan usaha sekaligus mendaftarkan cabang ke dalam sistem OSS.",
-                    "Fasttrack memastikan data cabang, NIB, dan lokasi terdaftar dengan benar sehingga operasional cabang Anda sah sesuai hukum."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Pendaftaran OSS;",
-                        "Nomor Induk Berusaha Cabang"
+                "penjelasan_layanan": {
+                    "id": [
+                        "Layanan pendaftaran Nomor Induk Berusaha Cabang bagi badan usaha yang membuka kantor satu atau beberapa kantor satu atau usaha di lain lokasi dari kantor pusat di lain kota. NIB Cabang mencatat kegiatan usaha sekaligus mendaftarkan cabang ke dalam sistem OSS.",
+                        "Fasttrack memastikan data cabang, NIB, dan lokasi terdaftar dengan benar sehingga operasional cabang Anda sah sesuai hukum."
                     ],
-                    "termasuk": [
-                        "Fasttrack Document Delivery Service",
-                        "Fasttrack Digital Files Secure Storage",
-                        "Fasttrack Kit"
+                    "en": [
+                        "Branch Business Identification Number registration service for business entities opening one or several offices or businesses in a different location from the head office in another city. Branch NIB records business activities while also registering the branch into the OSS system.",
+                        "Fasttrack ensures that branch data, NIB, and location are correctly registered so that your branch operations are legally valid."
+                    ],
+                    "zh": [
+                        "为在异地城市开设一个或多个办事处或分支业务的企业办理分支机构营业识别码注册服务。分支机构NIB既记录经营活动，也将该分支登记至OSS系统。",
+                        "Fasttrack确保分支机构数据、NIB及地址信息均正确登记，使您的分支机构运营依法合规。"
                     ]
                 },
+                "dokumen_legalitas": {
+                    "dokumen": {
+                        "id": [
+                            "Pendaftaran OSS;",
+                            "Nomor Induk Berusaha Cabang"
+                        ],
+                        "en": [
+                            "OSS Registration;",
+                            "Branch Business Identification Number"
+                        ],
+                        "zh": [
+                            "OSS注册；",
+                            "分支机构营业识别码"
+                        ]
+                    },
+                    "termasuk": {
+                        "id": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ],
+                        "en": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ],
+                        "zh": [
+                            "Fasttrack文件递送服务",
+                            "Fasttrack数字文件安全存储",
+                            "Fasttrack工具包"
+                        ]
+                    }
+                },
                 "biaya_layanan": {
-                    "nama": "NIB Cabang",
+                    "nama": {
+                        "id": "NIB Cabang",
+                        "en": "Branch NIB",
+                        "zh": "分支机构NIB"
+                    },
                     "harga": "Rp 750.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             }
         ],
-        "dasar_hukum": [],
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "faq": []
     },
     {
         "id": 2,
-        "name": "Perizinan Berusaha (Sertifikat Standar/Izin)",
+        "name": {
+            "id": "Perizinan Berusaha (Sertifikat Standar/Izin)",
+            "en": "Business Licensing (Standard Certificate/License)",
+            "zh": "营业许可（标准证书/执照）"
+        },
         "tag": "Profesional",
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "duration": "Estimasi 3-5 hari kerja",
         "image": "",
-        "excerpt": "Pendaftaran NIB untuk pelaku usaha perseorangan yang baru memulai kegiatan usaha.",
+        "excerpt": {
+            "id": "Pendaftaran NIB untuk pelaku usaha perseorangan yang baru memulai kegiatan usaha.",
+            "en": "NIB registration for individual business actors who are just starting their business activities.",
+            "zh": "为刚开始经营活动的个体经营者办理营业识别码（NIB）注册。"
+        },
         "detail_path": "/one-single-submission/nib",
-        "penjelasan_umum": [],
-        "penjelasan_umum_bullets": [],
-        "penjelasan_umum_bullets_2": [],
+        "penjelasan_umum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "penjelasan_umum_bullets": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "penjelasan_umum_bullets_2": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "paket": [
             {
                 "id": "1",
-                "nama": "Perubahan Data Pelaku Usaha",
-                "deskripsi": "Pengurusan perubahan data NIB seperti nama, alamat, KBLI, dan susunan pengurus secara cepat dan akurat.",
+                "nama": {
+                    "id": "Perubahan Data Pelaku Usaha",
+                    "en": "Business Actor Data Change",
+                    "zh": "经营者数据变更"
+                },
+                "deskripsi": {
+                    "id": "Pengurusan perubahan data NIB seperti nama, alamat, KBLI, dan susunan pengurus secara cepat dan akurat.",
+                    "en": "Fast and accurate processing of NIB data changes such as name, address, KBLI, and management structure.",
+                    "zh": "快速准确地办理NIB数据变更，如名称、地址、KBLI及管理层结构变更。"
+                },
                 "harga": "Rp 1.000.000",
-                "penjelasan_layanan": [
-                    "Layanan pengurusan perubahan data badan usaha pada sistem OSS, mencakup perubahan alamat email, nama badan usaha, NPWP, nomor akta pendirian, data penanggung jawab, status PMA/PMDN, alamat korespondensi, jangka waktu badan usaha, rencana permodalan, data pengurus dan pemegang saham, KBLI, hingga akses kepabeanan dan API. Proses dilakukan secara cepat, akurat, dan sesuai ketentuan yang berlaku melalui sistem OSS."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Alamat surat elektronik (e-mail) badan usaha;",
-                        "Nama badan usaha;",
-                        "NPWP badan usaha;",
-                        "Nomor akta pendirian beserta pengesahannya atau nomor pendaftaran;",
-                        "Nomor telepon badan usaha;",
-                        "Data penanggung jawab;",
-                        "Status Penanaman Modal berupa PMA/PMDN;",
-                        "Alamat korespondensi;",
-                        "Jangka waktu badan usaha;",
-                        "Besaran rencana permodalan;",
-                        "Data pengurus dan pemegang saham/pemilik;",
-                        "Negara asal pengurus dan pemegang saham;",
-                        "Maksud dan Tujuan Badan Usaha;",
-                        "Daftar KBLI sesuai dengan maksud dan tujuan badan usaha;",
-                        "Akses Kepabeanan; dan/atau",
-                        "Angka Pengenal Importir."
+                "penjelasan_layanan": {
+                    "id": [
+                        "Layanan pengurusan perubahan data badan usaha pada sistem OSS, mencakup perubahan alamat email, nama badan usaha, NPWP, nomor akta pendirian, data penanggung jawab, status PMA/PMDN, alamat korespondensi, jangka waktu badan usaha, rencana permodalan, data pengurus dan pemegang saham, KBLI, hingga akses kepabeanan dan API. Proses dilakukan secara cepat, akurat, dan sesuai ketentuan yang berlaku melalui sistem OSS."
                     ],
-                    "termasuk": []
+                    "en": [
+                        "Business entity data change processing service on the OSS system, covering changes to email address, business entity name, tax ID (NPWP), deed of establishment number, person-in-charge data, PMA/PMDN status, correspondence address, business entity term, capital plan, management and shareholder data, KBLI, up to customs access and API. The process is carried out quickly, accurately, and in accordance with applicable regulations through the OSS system."
+                    ],
+                    "zh": [
+                        "在OSS系统中办理企业数据变更服务，涵盖电子邮箱地址、企业名称、税号（NPWP）、成立契据编号、负责人数据、PMA/PMDN状态、通讯地址、企业存续期限、资本计划、管理层及股东数据、KBLI，直至海关准入及API接口的变更。整个流程通过OSS系统快速、准确且符合现行规定地完成。"
+                    ]
+                },
+                "dokumen_legalitas": {
+                    "dokumen": {
+                        "id": [
+                            "Alamat surat elektronik (e-mail) badan usaha;",
+                            "Nama badan usaha;",
+                            "NPWP badan usaha;",
+                            "Nomor akta pendirian beserta pengesahannya atau nomor pendaftaran;",
+                            "Nomor telepon badan usaha;",
+                            "Data penanggung jawab;",
+                            "Status Penanaman Modal berupa PMA/PMDN;",
+                            "Alamat korespondensi;",
+                            "Jangka waktu badan usaha;",
+                            "Besaran rencana permodalan;",
+                            "Data pengurus dan pemegang saham/pemilik;",
+                            "Negara asal pengurus dan pemegang saham;",
+                            "Maksud dan Tujuan Badan Usaha;",
+                            "Daftar KBLI sesuai dengan maksud dan tujuan badan usaha;",
+                            "Akses Kepabeanan; dan/atau",
+                            "Angka Pengenal Importir."
+                        ],
+                        "en": [
+                            "Business entity email address;",
+                            "Business entity name;",
+                            "Business entity tax ID (NPWP);",
+                            "Deed of establishment number along with its ratification or registration number;",
+                            "Business entity phone number;",
+                            "Person-in-charge data;",
+                            "Investment status in the form of PMA/PMDN;",
+                            "Correspondence address;",
+                            "Business entity term;",
+                            "Capital plan amount;",
+                            "Management and shareholder/owner data;",
+                            "Country of origin of management and shareholders;",
+                            "Business entity's purpose and objectives;",
+                            "List of KBLI in accordance with the business entity's purpose and objectives;",
+                            "Customs Access; and/or",
+                            "Importer Identification Number."
+                        ],
+                        "zh": [
+                            "企业电子邮箱地址；",
+                            "企业名称；",
+                            "企业税号（NPWP）；",
+                            "成立契据编号及其核准文件或注册编号；",
+                            "企业电话号码；",
+                            "负责人数据；",
+                            "PMA/PMDN形式的投资状态；",
+                            "通讯地址；",
+                            "企业存续期限；",
+                            "资本计划金额；",
+                            "管理层及股东/所有人数据；",
+                            "管理层及股东的原籍国；",
+                            "企业宗旨及目标；",
+                            "与企业宗旨及目标相符的KBLI清单；",
+                            "海关准入；及/或",
+                            "进口商识别号。"
+                        ]
+                    },
+                    "termasuk": {
+                        "id": [],
+                        "en": [],
+                        "zh": []
+                    }
                 },
                 "biaya_layanan": {
-                    "nama": "Perubahan Data Pelaku Usaha Pada OSS/NIB",
+                    "nama": {
+                        "id": "Perubahan Data Pelaku Usaha Pada OSS/NIB",
+                        "en": "Business Actor Data Change on OSS/NIB",
+                        "zh": "OSS/NIB经营者数据变更"
+                    },
                     "harga": "Rp 750.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission);"
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序；"
+                    ]
+                }
             },
             {
                 "id": "2",
-                "nama": "Penambahan Data Usaha",
-                "deskripsi": "Pengurusan penambahan kapasitas, lokasi, atau jenis kegiatan usaha baru pada NIB yang sudah dimiliki.",
+                "nama": {
+                    "id": "Penambahan Data Usaha",
+                    "en": "Business Data Addition",
+                    "zh": "经营数据新增"
+                },
+                "deskripsi": {
+                    "id": "Pengurusan penambahan kapasitas, lokasi, atau jenis kegiatan usaha baru pada NIB yang sudah dimiliki.",
+                    "en": "Processing of capacity, location, or new business activity type additions to an existing NIB.",
+                    "zh": "为已持有的NIB办理新增产能、地点或新经营活动类型。"
+                },
                 "harga": "Rp 1.500.000",
-                "penjelasan_layanan": [
-                    "Layanan bagi pelaku usaha yang telah memiliki NIB dan ingin mengembangkan usaha melalui penambahan volume/kapasitas produksi, lokasi kegiatan usaha, maupun jenis kegiatan usaha baru. Mencakup pengurusan untuk skala UMK & Selain PT (modal di bawah Rp 5 Miliar) maupun Non-UMK (modal di atas Rp 5 Miliar), termasuk persyaratan dasar, perizinan berusaha, dan dokumen pendukung lainnya sesuai tingkat risiko usaha."
-                ],
+                "penjelasan_layanan": {
+                    "id": [
+                        "Layanan bagi pelaku usaha yang telah memiliki NIB dan ingin mengembangkan usaha melalui penambahan volume/kapasitas produksi, lokasi kegiatan usaha, maupun jenis kegiatan usaha baru. Mencakup pengurusan untuk skala UMK & Selain PT (modal di bawah Rp 5 Miliar) maupun Non-UMK (modal di atas Rp 5 Miliar), termasuk persyaratan dasar, perizinan berusaha, dan dokumen pendukung lainnya sesuai tingkat risiko usaha."
+                    ],
+                    "en": [
+                        "Service for business actors who already have an NIB and wish to expand their business by adding production volume/capacity, business activity location, or new types of business activities. Covers processing for UMK & Non-PT scale (capital below Rp 5 Billion) as well as Non-UMK (capital above Rp 5 Billion), including basic requirements, business licensing, and other supporting documents according to the business risk level."
+                    ],
+                    "zh": [
+                        "为已持有NIB并希望通过新增生产量/产能、经营地点或新经营活动类型来拓展业务的经营者提供服务。涵盖微小企业及非PT规模（资本低于50亿印尼盾）以及非微小企业（资本超过50亿印尼盾）的办理，包括基本要求、营业许可及依经营风险等级所需的其他支持文件。"
+                    ]
+                },
                 "paket_layanan": [
                     {
-                        "nama": "Penambahan Data Usaha UMK & Selain PT\n(Modal < Rp. 5 Miliar)",
+                        "nama": {
+                            "id": "Penambahan Data Usaha UMK & Selain PT\n(Modal < Rp. 5 Miliar)",
+                            "en": "Business Data Addition for UMK & Non-PT\n(Capital < Rp. 5 Billion)",
+                            "zh": "微小企业及非PT经营数据新增\n（资本 < 50亿印尼盾）"
+                        },
                         "harga": "Rp 1.500.000",
                         "dokumen_legalitas": {
-                            "dokumen": [
-                                "Nomor Induk Berusaha (NIB);",
-                                "Perizinan Dasar"
-                            ],
-                            "termasuk": [
-                                "Fasttrack Document Delivery Service",
-                                "Fasttrack Digital Files Secure Storage",
-                                "Fasttrack Kit"
-                            ]
+                            "dokumen": {
+                                "id": [
+                                    "Nomor Induk Berusaha (NIB);",
+                                    "Perizinan Dasar"
+                                ],
+                                "en": [
+                                    "Business Identification Number (NIB);",
+                                    "Basic Licensing"
+                                ],
+                                "zh": [
+                                    "营业识别码（NIB）；",
+                                    "基础许可"
+                                ]
+                            },
+                            "termasuk": {
+                                "id": [
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
+                                ],
+                                "en": [
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
+                                ],
+                                "zh": [
+                                    "Fasttrack文件递送服务",
+                                    "Fasttrack数字文件安全存储",
+                                    "Fasttrack工具包"
+                                ]
+                            }
                         }
                     },
                     {
-                        "nama": "Penambahan Data Usaha Non UMK\n(Modal > Rp. 5 Miliar)",
+                        "nama": {
+                            "id": "Penambahan Data Usaha Non UMK\n(Modal > Rp. 5 Miliar)",
+                            "en": "Business Data Addition for Non-UMK\n(Capital > Rp. 5 Billion)",
+                            "zh": "非微小企业经营数据新增\n（资本 > 50亿印尼盾）"
+                        },
                         "harga": "Rp 2.750.000",
                         "dokumen_legalitas": {
-                            "dokumen": [
-                                "Pendaftaran OSS;",
-                                "Nomor Induk Berusaha (NIB);",
-                                "Pembuatan Poligon"
-                            ],
+                            "dokumen": {
+                                "id": [
+                                    "Pendaftaran OSS;",
+                                    "Nomor Induk Berusaha (NIB);",
+                                    "Pembuatan Poligon"
+                                ],
+                                "en": [
+                                    "OSS Registration;",
+                                    "Business Identification Number (NIB);",
+                                    "Polygon Creation"
+                                ],
+                                "zh": [
+                                    "OSS注册；",
+                                    "营业识别码（NIB）；",
+                                    "地块多边形制作"
+                                ]
+                            },
                             "dokumen_sub": [
                                 {
-                                    "label": "Persyaratan Dasar",
-                                    "items": [
-                                        "Kesesuaian Kegiatan Pemanfaatan Ruang (Tanpa Persetujuan);",
-                                        "Persetujuan Lingkungan : SPPL"
-                                    ]
+                                    "label": {
+                                        "id": "Persyaratan Dasar",
+                                        "en": "Basic Requirements",
+                                        "zh": "基本要求"
+                                    },
+                                    "items": {
+                                        "id": [
+                                            "Kesesuaian Kegiatan Pemanfaatan Ruang (Tanpa Persetujuan);",
+                                            "Persetujuan Lingkungan : SPPL"
+                                        ],
+                                        "en": [
+                                            "Spatial Utilization Activity Conformity (Without Approval);",
+                                            "Environmental Approval: SPPL"
+                                        ],
+                                        "zh": [
+                                            "空间利用活动符合性（无需批准）；",
+                                            "环境批准：SPPL"
+                                        ]
+                                    }
                                 },
                                 {
-                                    "label": "Perizinan Berusaha",
-                                    "items": [
-                                        "Sertifikat Standar (Risiko Rendah)/Sertifikat Standar (Belum Terverifikasi)/Izin (Belum Terverifikasi);",
-                                        "Pernyataan Mandiri K3L;",
-                                        "Pernyataan Mandiri Kesediaan Memenuhi Persyaratan Izin (jika Tingkat Risiko Usaha adalah Tinggi)"
-                                    ]
+                                    "label": {
+                                        "id": "Perizinan Berusaha",
+                                        "en": "Business Licensing",
+                                        "zh": "营业许可"
+                                    },
+                                    "items": {
+                                        "id": [
+                                            "Sertifikat Standar (Risiko Rendah)/Sertifikat Standar (Belum Terverifikasi)/Izin (Belum Terverifikasi);",
+                                            "Pernyataan Mandiri K3L;",
+                                            "Pernyataan Mandiri Kesediaan Memenuhi Persyaratan Izin (jika Tingkat Risiko Usaha adalah Tinggi)"
+                                        ],
+                                        "en": [
+                                            "Standard Certificate (Low Risk)/Standard Certificate (Unverified)/License (Unverified);",
+                                            "Self-Declaration of K3L (Occupational Health, Safety & Environment);",
+                                            "Self-Declaration of Willingness to Fulfill Permit Requirements (if Business Risk Level Is High)"
+                                        ],
+                                        "zh": [
+                                            "标准证书（低风险）/标准证书（未核实）/许可证（未核实）；",
+                                            "K3L（职业健康、安全与环境）自我声明；",
+                                            "许可要求符合意愿自我声明（经营风险等级为高时适用）"
+                                        ]
+                                    }
                                 }
                             ],
-                            "termasuk": [
-                                "Fasttrack Document Delivery Service",
-                                "Fasttrack Digital Files Secure Storage",
-                                "Fasttrack Kit"
-                            ]
+                            "termasuk": {
+                                "id": [
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
+                                ],
+                                "en": [
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
+                                ],
+                                "zh": [
+                                    "Fasttrack文件递送服务",
+                                    "Fasttrack数字文件安全存储",
+                                    "Fasttrack工具包"
+                                ]
+                            }
                         }
                     }
                 ],
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             },
             {
                 "id": "3",
-                "nama": "Pencabutan Data Usaha",
-                "deskripsi": "Pengurusan pencabutan kegiatan usaha yang sudah tidak dijalankan pada NIB Anda.",
+                "nama": {
+                    "id": "Pencabutan Data Usaha",
+                    "en": "Business Data Revocation",
+                    "zh": "经营数据撤销"
+                },
+                "deskripsi": {
+                    "id": "Pengurusan pencabutan kegiatan usaha yang sudah tidak dijalankan pada NIB Anda.",
+                    "en": "Processing of revocation of business activities that are no longer being carried out on your NIB.",
+                    "zh": "为您NIB上已不再开展的经营活动办理撤销手续。"
+                },
                 "harga": "Rp 2.750.000",
-                "penjelasan_layanan": [
-                    "Pelaku Usaha pemegang NIB yang memiliki lebih dari 1 (satu) kegiatan usaha kemudian sudah tidak lagi menjalankan salah satu atau lebih kegiatan usahanya, namun masih berminat dan menjalankan kegiatan usaha lainnya, maka terhadap kegiatan usaha yang sudah tidak dijalankan dapat dilakukan Pencabutan Data Usaha."
-                ],
+                "penjelasan_layanan": {
+                    "id": [
+                        "Pelaku Usaha pemegang NIB yang memiliki lebih dari 1 (satu) kegiatan usaha kemudian sudah tidak lagi menjalankan salah satu atau lebih kegiatan usahanya, namun masih berminat dan menjalankan kegiatan usaha lainnya, maka terhadap kegiatan usaha yang sudah tidak dijalankan dapat dilakukan Pencabutan Data Usaha."
+                    ],
+                    "en": [
+                        "Business Actors holding an NIB who have more than 1 (one) business activity and no longer carry out one or more of their business activities, but are still interested in and carrying out other business activities, may have Business Data Revocation carried out for the business activities that are no longer being conducted."
+                    ],
+                    "zh": [
+                        "持有NIB且拥有一项以上经营活动的经营者，若已不再开展其中一项或多项经营活动，但仍有意愿并继续开展其他经营活动，可对已不再开展的经营活动办理经营数据撤销。"
+                    ]
+                },
                 "biaya_layanan": {
-                    "nama": "Pencabutan Data Pada OSS/NIB",
+                    "nama": {
+                        "id": "Pencabutan Data Pada OSS/NIB",
+                        "en": "Data Revocation on OSS/NIB",
+                        "zh": "OSS/NIB数据撤销"
+                    },
                     "harga": "Rp 750.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             },
             {
                 "id": "4",
-                "nama": "Kendala & Permasalahan OSS",
-                "deskripsi": "Pendampingan menyelesaikan kendala teknis dan administratif pada sistem OSS secara cepat dan akurat.",
+                "nama": {
+                    "id": "Kendala & Permasalahan OSS",
+                    "en": "OSS Obstacles & Issues",
+                    "zh": "OSS障碍与问题"
+                },
+                "deskripsi": {
+                    "id": "Pendampingan menyelesaikan kendala teknis dan administratif pada sistem OSS secara cepat dan akurat.",
+                    "en": "Assistance resolving technical and administrative obstacles in the OSS system quickly and accurately.",
+                    "zh": "快速准确地协助解决OSS系统中的技术及行政障碍。"
+                },
                 "harga": "Rp 750.000",
-                "penjelasan_layanan": [
-                    "Sebagai Pelaku Usaha yang bersentuhan langsung dengan sistem OSS, adakalanya Anda menemui beberapa kendala teknis maupun administratif, semisal :"
-                ],
+                "penjelasan_layanan": {
+                    "id": [
+                        "Sebagai Pelaku Usaha yang bersentuhan langsung dengan sistem OSS, adakalanya Anda menemui beberapa kendala teknis maupun administratif, semisal :"
+                    ],
+                    "en": [
+                        "As a Business Actor who directly interacts with the OSS system, you may sometimes encounter several technical or administrative obstacles, such as:"
+                    ],
+                    "zh": [
+                        "作为直接接触OSS系统的经营者，您有时可能会遇到一些技术或行政方面的障碍，例如："
+                    ]
+                },
                 "penjelasan_layanan_items": [
                     {
-                        "title": "Sinkronisasi Data Antar Kementerian/Lembaga Belum Optimal",
-                        "desc": "Data perusahaan yang telah diperbarui pada instansi tertentu sering kali belum otomatis terintegrasi dalam sistem OSS."
+                        "title": {
+                            "id": "Sinkronisasi Data Antar Kementerian/Lembaga Belum Optimal",
+                            "en": "Data Synchronization Between Ministries/Agencies Not Yet Optimal",
+                            "zh": "部委/机构间数据同步尚未优化"
+                        },
+                        "desc": {
+                            "id": "Data perusahaan yang telah diperbarui pada instansi tertentu sering kali belum otomatis terintegrasi dalam sistem OSS.",
+                            "en": "Company data that has been updated at a particular agency is often not yet automatically integrated into the OSS system.",
+                            "zh": "在特定机构已更新的公司数据往往尚未自动集成至OSS系统。"
+                        }
                     },
                     {
-                        "title": "Perbedaan Interpretasi Persyaratan Perizinan",
-                        "desc": "Terdapat perbedaan pemahaman antara pelaku usaha dan instansi teknis terkait persyaratan penerbitan izin tertentu."
+                        "title": {
+                            "id": "Perbedaan Interpretasi Persyaratan Perizinan",
+                            "en": "Differences in Interpretation of Licensing Requirements",
+                            "zh": "许可要求解读差异"
+                        },
+                        "desc": {
+                            "id": "Terdapat perbedaan pemahaman antara pelaku usaha dan instansi teknis terkait persyaratan penerbitan izin tertentu.",
+                            "en": "There are differences in understanding between business actors and technical agencies regarding the requirements for issuing certain licenses.",
+                            "zh": "经营者与技术机构在特定许可颁发要求方面存在理解差异。"
+                        }
                     },
                     {
-                        "title": "Kesulitan Penyesuaian KBLI",
-                        "desc": "Pelaku usaha sering mengalami kendala dalam menentukan KBLI yang sesuai dengan kegiatan usaha yang dijalankan."
+                        "title": {
+                            "id": "Kesulitan Penyesuaian KBLI",
+                            "en": "Difficulty in KBLI Adjustment",
+                            "zh": "KBLI调整困难"
+                        },
+                        "desc": {
+                            "id": "Pelaku usaha sering mengalami kendala dalam menentukan KBLI yang sesuai dengan kegiatan usaha yang dijalankan.",
+                            "en": "Business actors often experience obstacles in determining the KBLI that matches the business activities being carried out.",
+                            "zh": "经营者在确定与其经营活动相符的KBLI时常常遇到困难。"
+                        }
                     },
                     {
-                        "title": "Gangguan Sistem dan Akses Platform",
-                        "desc": "Sistem OSS terkadang mengalami error, maintenance, atau lambat diakses terutama pada jam-jam sibuk."
+                        "title": {
+                            "id": "Gangguan Sistem dan Akses Platform",
+                            "en": "System Disruptions and Platform Access",
+                            "zh": "系统故障与平台访问问题"
+                        },
+                        "desc": {
+                            "id": "Sistem OSS terkadang mengalami error, maintenance, atau lambat diakses terutama pada jam-jam sibuk.",
+                            "en": "The OSS system sometimes experiences errors, maintenance, or slow access, especially during peak hours.",
+                            "zh": "OSS系统有时会出现故障、维护或访问缓慢的情况，尤其是在高峰时段。"
+                        }
                     },
                     {
-                        "title": "Proses Verifikasi yang Memerlukan Waktu Lama",
-                        "desc": "Beberapa izin masih membutuhkan verifikasi atau persetujuan dari kementerian/lembaga teknis yang menyebabkan proses menjadi lebih panjang."
+                        "title": {
+                            "id": "Proses Verifikasi yang Memerlukan Waktu Lama",
+                            "en": "Verification Process That Takes a Long Time",
+                            "zh": "验证流程耗时较长"
+                        },
+                        "desc": {
+                            "id": "Beberapa izin masih membutuhkan verifikasi atau persetujuan dari kementerian/lembaga teknis yang menyebabkan proses menjadi lebih panjang.",
+                            "en": "Some licenses still require verification or approval from technical ministries/agencies, which causes the process to take longer.",
+                            "zh": "部分许可仍需技术部委/机构进行验证或批准，导致流程耗时更长。"
+                        }
                     },
                     {
-                        "title": "Ketidaksesuaian Data Legalitas Perusahaan",
-                        "desc": "Perbedaan data antara OSS, AHU, DJP, dan instansi lainnya sering menghambat proses perubahan maupun penerbitan perizinan."
+                        "title": {
+                            "id": "Ketidaksesuaian Data Legalitas Perusahaan",
+                            "en": "Inconsistency in Company Legal Data",
+                            "zh": "公司合法性数据不一致"
+                        },
+                        "desc": {
+                            "id": "Perbedaan data antara OSS, AHU, DJP, dan instansi lainnya sering menghambat proses perubahan maupun penerbitan perizinan.",
+                            "en": "Data discrepancies between OSS, AHU, DJP, and other agencies often hinder the process of changing or issuing licenses.",
+                            "zh": "OSS、AHU、DJP及其他机构之间的数据差异常常阻碍许可变更或颁发流程。"
+                        }
                     },
                     {
-                        "title": "Kendala Migrasi dan Pembaruan Data Perizinan Lama",
-                        "desc": "Pelaku usaha yang memiliki izin terbit sebelum OSS sering mengalami kesulitan dalam penyesuaian atau migrasi data ke sistem terbaru."
+                        "title": {
+                            "id": "Kendala Migrasi dan Pembaruan Data Perizinan Lama",
+                            "en": "Obstacles in Migration and Updating of Old Licensing Data",
+                            "zh": "旧许可数据迁移与更新障碍"
+                        },
+                        "desc": {
+                            "id": "Pelaku usaha yang memiliki izin terbit sebelum OSS sering mengalami kesulitan dalam penyesuaian atau migrasi data ke sistem terbaru.",
+                            "en": "Business actors with licenses issued before OSS often experience difficulties in adjusting or migrating data to the latest system.",
+                            "zh": "持有OSS上线前颁发许可证的经营者，在将数据调整或迁移至最新系统时常常遇到困难。"
+                        }
                     },
                     {
-                        "title": "Kurangnya Kepastian Status Permohonan",
-                        "desc": "Pada beberapa kasus, pelaku usaha mengalami kesulitan memantau progres permohonan karena status pada sistem tidak diperbarui secara real-time atau tidak disertai keterangan yang memadai."
+                        "title": {
+                            "id": "Kurangnya Kepastian Status Permohonan",
+                            "en": "Lack of Certainty in Application Status",
+                            "zh": "申请状态不确定"
+                        },
+                        "desc": {
+                            "id": "Pada beberapa kasus, pelaku usaha mengalami kesulitan memantau progres permohonan karena status pada sistem tidak diperbarui secara real-time atau tidak disertai keterangan yang memadai.",
+                            "en": "In some cases, business actors experience difficulties monitoring application progress because the status in the system is not updated in real-time or is not accompanied by adequate information.",
+                            "zh": "在某些情况下，经营者由于系统状态未实时更新或缺乏充分说明信息，而难以追踪申请进度。"
+                        }
                     },
                     {
-                        "title": "Keterbatasan Layanan Bantuan Teknis",
-                        "desc": "Helpdesk atau penyelesaian kendala teknis terkadang memerlukan waktu sehingga menghambat proses perizinan usaha."
+                        "title": {
+                            "id": "Keterbatasan Layanan Bantuan Teknis",
+                            "en": "Limitations of Technical Support Services",
+                            "zh": "技术支持服务的局限性"
+                        },
+                        "desc": {
+                            "id": "Helpdesk atau penyelesaian kendala teknis terkadang memerlukan waktu sehingga menghambat proses perizinan usaha.",
+                            "en": "The helpdesk or resolution of technical obstacles sometimes takes time, which hinders the business licensing process.",
+                            "zh": "帮助台或技术障碍的解决有时需要较长时间，从而阻碍营业许可流程。"
+                        }
                     }
                 ],
                 "biaya_layanan": {
-                    "nama": "NIB Cabang",
+                    "nama": {
+                        "id": "NIB Cabang",
+                        "en": "Branch NIB",
+                        "zh": "分支机构NIB"
+                    },
                     "harga": "Rp 750.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             }
         ],
-        "dasar_hukum": [],
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "faq": []
     },
     {
         "id": 3,
-        "name": "Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU)",
+        "name": {
+            "id": "Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU)",
+            "en": "Business Licensing to Support Business Activities (PB UMKU)",
+            "zh": "支持经营活动的营业许可（PB UMKU）"
+        },
         "tag": "Profesional",
         "price": "1000000",
         "price_label": "Rp 1.000.000",
         "duration": "Estimasi 3-5 hari kerja",
         "image": "",
-        "excerpt": "Pendaftaran NIB untuk pelaku usaha perseorangan yang baru memulai kegiatan usaha.",
+        "excerpt": {
+            "id": "Pendaftaran NIB untuk pelaku usaha perseorangan yang baru memulai kegiatan usaha.",
+            "en": "NIB registration for individual business actors who are just starting their business activities.",
+            "zh": "为刚开始经营活动的个体经营者办理营业识别码（NIB）注册。"
+        },
         "detail_path": "/one-single-submission/nib",
-        "penjelasan_umum": [],
-        "penjelasan_umum_bullets": [],
-        "penjelasan_umum_bullets_2": [],
+        "penjelasan_umum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "penjelasan_umum_bullets": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "penjelasan_umum_bullets_2": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "paket": [
             {
                 "id": "1",
-                "nama": "Perubahan Data Pelaku Usaha",
-                "deskripsi": "Pengurusan perubahan data NIB seperti nama, alamat, KBLI, dan susunan pengurus secara cepat dan akurat.",
+                "nama": {
+                    "id": "Perubahan Data Pelaku Usaha",
+                    "en": "Business Actor Data Change",
+                    "zh": "经营者数据变更"
+                },
+                "deskripsi": {
+                    "id": "Pengurusan perubahan data NIB seperti nama, alamat, KBLI, dan susunan pengurus secara cepat dan akurat.",
+                    "en": "Fast and accurate processing of NIB data changes such as name, address, KBLI, and management structure.",
+                    "zh": "快速准确地办理NIB数据变更，如名称、地址、KBLI及管理层结构变更。"
+                },
                 "harga": "Rp 1.000.000",
-                "penjelasan_layanan": [
-                    "Layanan pengurusan perubahan data badan usaha pada sistem OSS, mencakup perubahan alamat email, nama badan usaha, NPWP, nomor akta pendirian, data penanggung jawab, status PMA/PMDN, alamat korespondensi, jangka waktu badan usaha, rencana permodalan, data pengurus dan pemegang saham, KBLI, hingga akses kepabeanan dan API. Proses dilakukan secara cepat, akurat, dan sesuai ketentuan yang berlaku melalui sistem OSS."
-                ],
-                "dokumen_legalitas": {
-                    "dokumen": [
-                        "Alamat surat elektronik (e-mail) badan usaha;",
-                        "Nama badan usaha;",
-                        "NPWP badan usaha;",
-                        "Nomor akta pendirian beserta pengesahannya atau nomor pendaftaran;",
-                        "Nomor telepon badan usaha;",
-                        "Data penanggung jawab;",
-                        "Status Penanaman Modal berupa PMA/PMDN;",
-                        "Alamat korespondensi;",
-                        "Jangka waktu badan usaha;",
-                        "Besaran rencana permodalan;",
-                        "Data pengurus dan pemegang saham/pemilik;",
-                        "Negara asal pengurus dan pemegang saham;",
-                        "Maksud dan Tujuan Badan Usaha;",
-                        "Daftar KBLI sesuai dengan maksud dan tujuan badan usaha;",
-                        "Akses Kepabeanan; dan/atau",
-                        "Angka Pengenal Importir."
+                "penjelasan_layanan": {
+                    "id": [
+                        "Layanan pengurusan perubahan data badan usaha pada sistem OSS, mencakup perubahan alamat email, nama badan usaha, NPWP, nomor akta pendirian, data penanggung jawab, status PMA/PMDN, alamat korespondensi, jangka waktu badan usaha, rencana permodalan, data pengurus dan pemegang saham, KBLI, hingga akses kepabeanan dan API. Proses dilakukan secara cepat, akurat, dan sesuai ketentuan yang berlaku melalui sistem OSS."
                     ],
-                    "termasuk": []
+                    "en": [
+                        "Business entity data change processing service on the OSS system, covering changes to email address, business entity name, tax ID (NPWP), deed of establishment number, person-in-charge data, PMA/PMDN status, correspondence address, business entity term, capital plan, management and shareholder data, KBLI, up to customs access and API. The process is carried out quickly, accurately, and in accordance with applicable regulations through the OSS system."
+                    ],
+                    "zh": [
+                        "在OSS系统中办理企业数据变更服务，涵盖电子邮箱地址、企业名称、税号（NPWP）、成立契据编号、负责人数据、PMA/PMDN状态、通讯地址、企业存续期限、资本计划、管理层及股东数据、KBLI，直至海关准入及API接口的变更。整个流程通过OSS系统快速、准确且符合现行规定地完成。"
+                    ]
+                },
+                "dokumen_legalitas": {
+                    "dokumen": {
+                        "id": [
+                            "Alamat surat elektronik (e-mail) badan usaha;",
+                            "Nama badan usaha;",
+                            "NPWP badan usaha;",
+                            "Nomor akta pendirian beserta pengesahannya atau nomor pendaftaran;",
+                            "Nomor telepon badan usaha;",
+                            "Data penanggung jawab;",
+                            "Status Penanaman Modal berupa PMA/PMDN;",
+                            "Alamat korespondensi;",
+                            "Jangka waktu badan usaha;",
+                            "Besaran rencana permodalan;",
+                            "Data pengurus dan pemegang saham/pemilik;",
+                            "Negara asal pengurus dan pemegang saham;",
+                            "Maksud dan Tujuan Badan Usaha;",
+                            "Daftar KBLI sesuai dengan maksud dan tujuan badan usaha;",
+                            "Akses Kepabeanan; dan/atau",
+                            "Angka Pengenal Importir."
+                        ],
+                        "en": [
+                            "Business entity email address;",
+                            "Business entity name;",
+                            "Business entity tax ID (NPWP);",
+                            "Deed of establishment number along with its ratification or registration number;",
+                            "Business entity phone number;",
+                            "Person-in-charge data;",
+                            "Investment status in the form of PMA/PMDN;",
+                            "Correspondence address;",
+                            "Business entity term;",
+                            "Capital plan amount;",
+                            "Management and shareholder/owner data;",
+                            "Country of origin of management and shareholders;",
+                            "Business entity's purpose and objectives;",
+                            "List of KBLI in accordance with the business entity's purpose and objectives;",
+                            "Customs Access; and/or",
+                            "Importer Identification Number."
+                        ],
+                        "zh": [
+                            "企业电子邮箱地址；",
+                            "企业名称；",
+                            "企业税号（NPWP）；",
+                            "成立契据编号及其核准文件或注册编号；",
+                            "企业电话号码；",
+                            "负责人数据；",
+                            "PMA/PMDN形式的投资状态；",
+                            "通讯地址；",
+                            "企业存续期限；",
+                            "资本计划金额；",
+                            "管理层及股东/所有人数据；",
+                            "管理层及股东的原籍国；",
+                            "企业宗旨及目标；",
+                            "与企业宗旨及目标相符的KBLI清单；",
+                            "海关准入；及/或",
+                            "进口商识别号。"
+                        ]
+                    },
+                    "termasuk": {
+                        "id": [],
+                        "en": [],
+                        "zh": []
+                    }
                 },
                 "biaya_layanan": {
-                    "nama": "Perubahan Data Pelaku Usaha Pada OSS/NIB",
+                    "nama": {
+                        "id": "Perubahan Data Pelaku Usaha Pada OSS/NIB",
+                        "en": "Business Actor Data Change on OSS/NIB",
+                        "zh": "OSS/NIB经营者数据变更"
+                    },
                     "harga": "Rp 750.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission);"
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission);"
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序；"
+                    ]
+                }
             },
             {
                 "id": "2",
-                "nama": "Penambahan Data Usaha",
-                "deskripsi": "Pengurusan penambahan kapasitas, lokasi, atau jenis kegiatan usaha baru pada NIB yang sudah dimiliki.",
+                "nama": {
+                    "id": "Penambahan Data Usaha",
+                    "en": "Business Data Addition",
+                    "zh": "经营数据新增"
+                },
+                "deskripsi": {
+                    "id": "Pengurusan penambahan kapasitas, lokasi, atau jenis kegiatan usaha baru pada NIB yang sudah dimiliki.",
+                    "en": "Processing of capacity, location, or new business activity type additions to an existing NIB.",
+                    "zh": "为已持有的NIB办理新增产能、地点或新经营活动类型。"
+                },
                 "harga": "Rp 1.500.000",
-                "penjelasan_layanan": [
-                    "Layanan bagi pelaku usaha yang telah memiliki NIB dan ingin mengembangkan usaha melalui penambahan volume/kapasitas produksi, lokasi kegiatan usaha, maupun jenis kegiatan usaha baru. Mencakup pengurusan untuk skala UMK & Selain PT (modal di bawah Rp 5 Miliar) maupun Non-UMK (modal di atas Rp 5 Miliar), termasuk persyaratan dasar, perizinan berusaha, dan dokumen pendukung lainnya sesuai tingkat risiko usaha."
-                ],
+                "penjelasan_layanan": {
+                    "id": [
+                        "Layanan bagi pelaku usaha yang telah memiliki NIB dan ingin mengembangkan usaha melalui penambahan volume/kapasitas produksi, lokasi kegiatan usaha, maupun jenis kegiatan usaha baru. Mencakup pengurusan untuk skala UMK & Selain PT (modal di bawah Rp 5 Miliar) maupun Non-UMK (modal di atas Rp 5 Miliar), termasuk persyaratan dasar, perizinan berusaha, dan dokumen pendukung lainnya sesuai tingkat risiko usaha."
+                    ],
+                    "en": [
+                        "Service for business actors who already have an NIB and wish to expand their business by adding production volume/capacity, business activity location, or new types of business activities. Covers processing for UMK & Non-PT scale (capital below Rp 5 Billion) as well as Non-UMK (capital above Rp 5 Billion), including basic requirements, business licensing, and other supporting documents according to the business risk level."
+                    ],
+                    "zh": [
+                        "为已持有NIB并希望通过新增生产量/产能、经营地点或新经营活动类型来拓展业务的经营者提供服务。涵盖微小企业及非PT规模（资本低于50亿印尼盾）以及非微小企业（资本超过50亿印尼盾）的办理，包括基本要求、营业许可及依经营风险等级所需的其他支持文件。"
+                    ]
+                },
                 "paket_layanan": [
                     {
-                        "nama": "Penambahan Data Usaha UMK & Selain PT\n(Modal < Rp. 5 Miliar)",
+                        "nama": {
+                            "id": "Penambahan Data Usaha UMK & Selain PT\n(Modal < Rp. 5 Miliar)",
+                            "en": "Business Data Addition for UMK & Non-PT\n(Capital < Rp. 5 Billion)",
+                            "zh": "微小企业及非PT经营数据新增\n（资本 < 50亿印尼盾）"
+                        },
                         "harga": "Rp 1.500.000",
                         "dokumen_legalitas": {
-                            "dokumen": [
-                                "Nomor Induk Berusaha (NIB);",
-                                "Perizinan Dasar"
-                            ],
-                            "termasuk": [
-                                "Fasttrack Document Delivery Service",
-                                "Fasttrack Digital Files Secure Storage",
-                                "Fasttrack Kit"
-                            ]
+                            "dokumen": {
+                                "id": [
+                                    "Nomor Induk Berusaha (NIB);",
+                                    "Perizinan Dasar"
+                                ],
+                                "en": [
+                                    "Business Identification Number (NIB);",
+                                    "Basic Licensing"
+                                ],
+                                "zh": [
+                                    "营业识别码（NIB）；",
+                                    "基础许可"
+                                ]
+                            },
+                            "termasuk": {
+                                "id": [
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
+                                ],
+                                "en": [
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
+                                ],
+                                "zh": [
+                                    "Fasttrack文件递送服务",
+                                    "Fasttrack数字文件安全存储",
+                                    "Fasttrack工具包"
+                                ]
+                            }
                         }
                     },
                     {
-                        "nama": "Penambahan Data Usaha Non UMK\n(Modal > Rp. 5 Miliar)",
+                        "nama": {
+                            "id": "Penambahan Data Usaha Non UMK\n(Modal > Rp. 5 Miliar)",
+                            "en": "Business Data Addition for Non-UMK\n(Capital > Rp. 5 Billion)",
+                            "zh": "非微小企业经营数据新增\n（资本 > 50亿印尼盾）"
+                        },
                         "harga": "Rp 2.750.000",
                         "dokumen_legalitas": {
-                            "dokumen": [
-                                "Pendaftaran OSS;",
-                                "Nomor Induk Berusaha (NIB);",
-                                "Pembuatan Poligon"
-                            ],
+                            "dokumen": {
+                                "id": [
+                                    "Pendaftaran OSS;",
+                                    "Nomor Induk Berusaha (NIB);",
+                                    "Pembuatan Poligon"
+                                ],
+                                "en": [
+                                    "OSS Registration;",
+                                    "Business Identification Number (NIB);",
+                                    "Polygon Creation"
+                                ],
+                                "zh": [
+                                    "OSS注册；",
+                                    "营业识别码（NIB）；",
+                                    "地块多边形制作"
+                                ]
+                            },
                             "dokumen_sub": [
                                 {
-                                    "label": "Persyaratan Dasar",
-                                    "items": [
-                                        "Kesesuaian Kegiatan Pemanfaatan Ruang (Tanpa Persetujuan);",
-                                        "Persetujuan Lingkungan : SPPL"
-                                    ]
+                                    "label": {
+                                        "id": "Persyaratan Dasar",
+                                        "en": "Basic Requirements",
+                                        "zh": "基本要求"
+                                    },
+                                    "items": {
+                                        "id": [
+                                            "Kesesuaian Kegiatan Pemanfaatan Ruang (Tanpa Persetujuan);",
+                                            "Persetujuan Lingkungan : SPPL"
+                                        ],
+                                        "en": [
+                                            "Spatial Utilization Activity Conformity (Without Approval);",
+                                            "Environmental Approval: SPPL"
+                                        ],
+                                        "zh": [
+                                            "空间利用活动符合性（无需批准）；",
+                                            "环境批准：SPPL"
+                                        ]
+                                    }
                                 },
                                 {
-                                    "label": "Perizinan Berusaha",
-                                    "items": [
-                                        "Sertifikat Standar (Risiko Rendah)/Sertifikat Standar (Belum Terverifikasi)/Izin (Belum Terverifikasi);",
-                                        "Pernyataan Mandiri K3L;",
-                                        "Pernyataan Mandiri Kesediaan Memenuhi Persyaratan Izin (jika Tingkat Risiko Usaha adalah Tinggi)"
-                                    ]
+                                    "label": {
+                                        "id": "Perizinan Berusaha",
+                                        "en": "Business Licensing",
+                                        "zh": "营业许可"
+                                    },
+                                    "items": {
+                                        "id": [
+                                            "Sertifikat Standar (Risiko Rendah)/Sertifikat Standar (Belum Terverifikasi)/Izin (Belum Terverifikasi);",
+                                            "Pernyataan Mandiri K3L;",
+                                            "Pernyataan Mandiri Kesediaan Memenuhi Persyaratan Izin (jika Tingkat Risiko Usaha adalah Tinggi)"
+                                        ],
+                                        "en": [
+                                            "Standard Certificate (Low Risk)/Standard Certificate (Unverified)/License (Unverified);",
+                                            "Self-Declaration of K3L (Occupational Health, Safety & Environment);",
+                                            "Self-Declaration of Willingness to Fulfill Permit Requirements (if Business Risk Level Is High)"
+                                        ],
+                                        "zh": [
+                                            "标准证书（低风险）/标准证书（未核实）/许可证（未核实）；",
+                                            "K3L（职业健康、安全与环境）自我声明；",
+                                            "许可要求符合意愿自我声明（经营风险等级为高时适用）"
+                                        ]
+                                    }
                                 }
                             ],
-                            "termasuk": [
-                                "Fasttrack Document Delivery Service",
-                                "Fasttrack Digital Files Secure Storage",
-                                "Fasttrack Kit"
-                            ]
+                            "termasuk": {
+                                "id": [
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
+                                ],
+                                "en": [
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
+                                ],
+                                "zh": [
+                                    "Fasttrack文件递送服务",
+                                    "Fasttrack数字文件安全存储",
+                                    "Fasttrack工具包"
+                                ]
+                            }
                         }
                     }
                 ],
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             },
             {
                 "id": "3",
-                "nama": "Pencabutan Data Usaha",
-                "deskripsi": "Pengurusan pencabutan kegiatan usaha yang sudah tidak dijalankan pada NIB Anda.",
+                "nama": {
+                    "id": "Pencabutan Data Usaha",
+                    "en": "Business Data Revocation",
+                    "zh": "经营数据撤销"
+                },
+                "deskripsi": {
+                    "id": "Pengurusan pencabutan kegiatan usaha yang sudah tidak dijalankan pada NIB Anda.",
+                    "en": "Processing of revocation of business activities that are no longer being carried out on your NIB.",
+                    "zh": "为您NIB上已不再开展的经营活动办理撤销手续。"
+                },
                 "harga": "Rp 2.750.000",
-                "penjelasan_layanan": [
-                    "Pelaku Usaha pemegang NIB yang memiliki lebih dari 1 (satu) kegiatan usaha kemudian sudah tidak lagi menjalankan salah satu atau lebih kegiatan usahanya, namun masih berminat dan menjalankan kegiatan usaha lainnya, maka terhadap kegiatan usaha yang sudah tidak dijalankan dapat dilakukan Pencabutan Data Usaha."
-                ],
+                "penjelasan_layanan": {
+                    "id": [
+                        "Pelaku Usaha pemegang NIB yang memiliki lebih dari 1 (satu) kegiatan usaha kemudian sudah tidak lagi menjalankan salah satu atau lebih kegiatan usahanya, namun masih berminat dan menjalankan kegiatan usaha lainnya, maka terhadap kegiatan usaha yang sudah tidak dijalankan dapat dilakukan Pencabutan Data Usaha."
+                    ],
+                    "en": [
+                        "Business Actors holding an NIB who have more than 1 (one) business activity and no longer carry out one or more of their business activities, but are still interested in and carrying out other business activities, may have Business Data Revocation carried out for the business activities that are no longer being conducted."
+                    ],
+                    "zh": [
+                        "持有NIB且拥有一项以上经营活动的经营者，若已不再开展其中一项或多项经营活动，但仍有意愿并继续开展其他经营活动，可对已不再开展的经营活动办理经营数据撤销。"
+                    ]
+                },
                 "biaya_layanan": {
-                    "nama": "Pencabutan Data Pada OSS/NIB",
+                    "nama": {
+                        "id": "Pencabutan Data Pada OSS/NIB",
+                        "en": "Data Revocation on OSS/NIB",
+                        "zh": "OSS/NIB数据撤销"
+                    },
                     "harga": "Rp 750.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             },
             {
                 "id": "4",
-                "nama": "Kendala & Permasalahan OSS",
-                "deskripsi": "Pendampingan menyelesaikan kendala teknis dan administratif pada sistem OSS secara cepat dan akurat.",
+                "nama": {
+                    "id": "Kendala & Permasalahan OSS",
+                    "en": "OSS Obstacles & Issues",
+                    "zh": "OSS障碍与问题"
+                },
+                "deskripsi": {
+                    "id": "Pendampingan menyelesaikan kendala teknis dan administratif pada sistem OSS secara cepat dan akurat.",
+                    "en": "Assistance resolving technical and administrative obstacles in the OSS system quickly and accurately.",
+                    "zh": "快速准确地协助解决OSS系统中的技术及行政障碍。"
+                },
                 "harga": "Rp 750.000",
-                "penjelasan_layanan": [
-                    "Sebagai Pelaku Usaha yang bersentuhan langsung dengan sistem OSS, adakalanya Anda menemui beberapa kendala teknis maupun administratif, semisal :"
-                ],
+                "penjelasan_layanan": {
+                    "id": [
+                        "Sebagai Pelaku Usaha yang bersentuhan langsung dengan sistem OSS, adakalanya Anda menemui beberapa kendala teknis maupun administratif, semisal :"
+                    ],
+                    "en": [
+                        "As a Business Actor who directly interacts with the OSS system, you may sometimes encounter several technical or administrative obstacles, such as:"
+                    ],
+                    "zh": [
+                        "作为直接接触OSS系统的经营者，您有时可能会遇到一些技术或行政方面的障碍，例如："
+                    ]
+                },
                 "penjelasan_layanan_items": [
                     {
-                        "title": "Sinkronisasi Data Antar Kementerian/Lembaga Belum Optimal",
-                        "desc": "Data perusahaan yang telah diperbarui pada instansi tertentu sering kali belum otomatis terintegrasi dalam sistem OSS."
+                        "title": {
+                            "id": "Sinkronisasi Data Antar Kementerian/Lembaga Belum Optimal",
+                            "en": "Data Synchronization Between Ministries/Agencies Not Yet Optimal",
+                            "zh": "部委/机构间数据同步尚未优化"
+                        },
+                        "desc": {
+                            "id": "Data perusahaan yang telah diperbarui pada instansi tertentu sering kali belum otomatis terintegrasi dalam sistem OSS.",
+                            "en": "Company data that has been updated at a particular agency is often not yet automatically integrated into the OSS system.",
+                            "zh": "在特定机构已更新的公司数据往往尚未自动集成至OSS系统。"
+                        }
                     },
                     {
-                        "title": "Perbedaan Interpretasi Persyaratan Perizinan",
-                        "desc": "Terdapat perbedaan pemahaman antara pelaku usaha dan instansi teknis terkait persyaratan penerbitan izin tertentu."
+                        "title": {
+                            "id": "Perbedaan Interpretasi Persyaratan Perizinan",
+                            "en": "Differences in Interpretation of Licensing Requirements",
+                            "zh": "许可要求解读差异"
+                        },
+                        "desc": {
+                            "id": "Terdapat perbedaan pemahaman antara pelaku usaha dan instansi teknis terkait persyaratan penerbitan izin tertentu.",
+                            "en": "There are differences in understanding between business actors and technical agencies regarding the requirements for issuing certain licenses.",
+                            "zh": "经营者与技术机构在特定许可颁发要求方面存在理解差异。"
+                        }
                     },
                     {
-                        "title": "Kesulitan Penyesuaian KBLI",
-                        "desc": "Pelaku usaha sering mengalami kendala dalam menentukan KBLI yang sesuai dengan kegiatan usaha yang dijalankan."
+                        "title": {
+                            "id": "Kesulitan Penyesuaian KBLI",
+                            "en": "Difficulty in KBLI Adjustment",
+                            "zh": "KBLI调整困难"
+                        },
+                        "desc": {
+                            "id": "Pelaku usaha sering mengalami kendala dalam menentukan KBLI yang sesuai dengan kegiatan usaha yang dijalankan.",
+                            "en": "Business actors often experience obstacles in determining the KBLI that matches the business activities being carried out.",
+                            "zh": "经营者在确定与其经营活动相符的KBLI时常常遇到困难。"
+                        }
                     },
                     {
-                        "title": "Gangguan Sistem dan Akses Platform",
-                        "desc": "Sistem OSS terkadang mengalami error, maintenance, atau lambat diakses terutama pada jam-jam sibuk."
+                        "title": {
+                            "id": "Gangguan Sistem dan Akses Platform",
+                            "en": "System Disruptions and Platform Access",
+                            "zh": "系统故障与平台访问问题"
+                        },
+                        "desc": {
+                            "id": "Sistem OSS terkadang mengalami error, maintenance, atau lambat diakses terutama pada jam-jam sibuk.",
+                            "en": "The OSS system sometimes experiences errors, maintenance, or slow access, especially during peak hours.",
+                            "zh": "OSS系统有时会出现故障、维护或访问缓慢的情况，尤其是在高峰时段。"
+                        }
                     },
                     {
-                        "title": "Proses Verifikasi yang Memerlukan Waktu Lama",
-                        "desc": "Beberapa izin masih membutuhkan verifikasi atau persetujuan dari kementerian/lembaga teknis yang menyebabkan proses menjadi lebih panjang."
+                        "title": {
+                            "id": "Proses Verifikasi yang Memerlukan Waktu Lama",
+                            "en": "Verification Process That Takes a Long Time",
+                            "zh": "验证流程耗时较长"
+                        },
+                        "desc": {
+                            "id": "Beberapa izin masih membutuhkan verifikasi atau persetujuan dari kementerian/lembaga teknis yang menyebabkan proses menjadi lebih panjang.",
+                            "en": "Some licenses still require verification or approval from technical ministries/agencies, which causes the process to take longer.",
+                            "zh": "部分许可仍需技术部委/机构进行验证或批准，导致流程耗时更长。"
+                        }
                     },
                     {
-                        "title": "Ketidaksesuaian Data Legalitas Perusahaan",
-                        "desc": "Perbedaan data antara OSS, AHU, DJP, dan instansi lainnya sering menghambat proses perubahan maupun penerbitan perizinan."
+                        "title": {
+                            "id": "Ketidaksesuaian Data Legalitas Perusahaan",
+                            "en": "Inconsistency in Company Legal Data",
+                            "zh": "公司合法性数据不一致"
+                        },
+                        "desc": {
+                            "id": "Perbedaan data antara OSS, AHU, DJP, dan instansi lainnya sering menghambat proses perubahan maupun penerbitan perizinan.",
+                            "en": "Data discrepancies between OSS, AHU, DJP, and other agencies often hinder the process of changing or issuing licenses.",
+                            "zh": "OSS、AHU、DJP及其他机构之间的数据差异常常阻碍许可变更或颁发流程。"
+                        }
                     },
                     {
-                        "title": "Kendala Migrasi dan Pembaruan Data Perizinan Lama",
-                        "desc": "Pelaku usaha yang memiliki izin terbit sebelum OSS sering mengalami kesulitan dalam penyesuaian atau migrasi data ke sistem terbaru."
+                        "title": {
+                            "id": "Kendala Migrasi dan Pembaruan Data Perizinan Lama",
+                            "en": "Obstacles in Migration and Updating of Old Licensing Data",
+                            "zh": "旧许可数据迁移与更新障碍"
+                        },
+                        "desc": {
+                            "id": "Pelaku usaha yang memiliki izin terbit sebelum OSS sering mengalami kesulitan dalam penyesuaian atau migrasi data ke sistem terbaru.",
+                            "en": "Business actors with licenses issued before OSS often experience difficulties in adjusting or migrating data to the latest system.",
+                            "zh": "持有OSS上线前颁发许可证的经营者，在将数据调整或迁移至最新系统时常常遇到困难。"
+                        }
                     },
                     {
-                        "title": "Kurangnya Kepastian Status Permohonan",
-                        "desc": "Pada beberapa kasus, pelaku usaha mengalami kesulitan memantau progres permohonan karena status pada sistem tidak diperbarui secara real-time atau tidak disertai keterangan yang memadai."
+                        "title": {
+                            "id": "Kurangnya Kepastian Status Permohonan",
+                            "en": "Lack of Certainty in Application Status",
+                            "zh": "申请状态不确定"
+                        },
+                        "desc": {
+                            "id": "Pada beberapa kasus, pelaku usaha mengalami kesulitan memantau progres permohonan karena status pada sistem tidak diperbarui secara real-time atau tidak disertai keterangan yang memadai.",
+                            "en": "In some cases, business actors experience difficulties monitoring application progress because the status in the system is not updated in real-time or is not accompanied by adequate information.",
+                            "zh": "在某些情况下，经营者由于系统状态未实时更新或缺乏充分说明信息，而难以追踪申请进度。"
+                        }
                     },
                     {
-                        "title": "Keterbatasan Layanan Bantuan Teknis",
-                        "desc": "Helpdesk atau penyelesaian kendala teknis terkadang memerlukan waktu sehingga menghambat proses perizinan usaha."
+                        "title": {
+                            "id": "Keterbatasan Layanan Bantuan Teknis",
+                            "en": "Limitations of Technical Support Services",
+                            "zh": "技术支持服务的局限性"
+                        },
+                        "desc": {
+                            "id": "Helpdesk atau penyelesaian kendala teknis terkadang memerlukan waktu sehingga menghambat proses perizinan usaha.",
+                            "en": "The helpdesk or resolution of technical obstacles sometimes takes time, which hinders the business licensing process.",
+                            "zh": "帮助台或技术障碍的解决有时需要较长时间，从而阻碍营业许可流程。"
+                        }
                     }
                 ],
                 "biaya_layanan": {
-                    "nama": "NIB Cabang",
+                    "nama": {
+                        "id": "NIB Cabang",
+                        "en": "Branch NIB",
+                        "zh": "分支机构NIB"
+                    },
                     "harga": "Rp 750.000"
                 },
-                "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
-                    "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
-                ]
+                "dasar_hukum": {
+                    "id": [
+                        "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja Menjadi Undang-Undang;",
+                        "Peraturan Pemerintah Nomor 28 Tahun 2025 Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko;",
+                        "Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Presiden Nomor 49 Tahun 2021 tentang Perubahan Atas Peraturan Presiden Nomor 10 Tahun 2021 tentang Bidang Usaha Penanaman Modal;",
+                        "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    ],
+                    "en": [
+                        "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law;",
+                        "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing;",
+                        "Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Presidential Regulation Number 49 of 2021 concerning Amendment to Presidential Regulation Number 10 of 2021 concerning Investment Business Fields;",
+                        "Regulation of the Minister of Investment and Downstream Industry/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing and Investment Facilities Through the Electronically Integrated Business Licensing System (Online Single Submission)."
+                    ],
+                    "zh": [
+                        "《2023年第6号法律》——关于将《2022年第2号创造就业政府替代法规》确立为法律；",
+                        "《2025年第28号政府条例》——关于基于风险的营业许可实施；",
+                        "《2021年第10号总统条例》——关于投资经营领域；",
+                        "《2021年第49号总统条例》——关于修订《2021年第10号关于投资经营领域总统条例》；",
+                        "《投资与产业下游发展部长/投资协调委员会主席2025年第5号条例》——关于通过电子一体化营业许可系统（在线一体化申报）实施基于风险的营业许可及投资便利化的指南与程序。"
+                    ]
+                }
             }
         ],
-        "dasar_hukum": [],
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
         "faq": []
     }
 ]

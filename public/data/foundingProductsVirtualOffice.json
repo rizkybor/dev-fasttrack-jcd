@@ -1,0 +1,502 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "id": "Virtual Office",
+            "en": "Virtual Office",
+            "zh": "虚拟办公室"
+        },
+        "price": "2000000",
+        "price_label": "Rp 2.000.000",
+        "image": "/images/dummy-virtual-office.png",
+        "excerpt": {
+            "id": "Layanan alamat bisnis profesional untuk kebutuhan domisili perusahaan — mendukung pengurusan legalitas usaha tanpa harus menyewa ruang kantor fisik.",
+            "en": "Professional business address service for company domicile needs — supporting business legality processing without having to rent a physical office space.",
+            "zh": "专业商业地址服务，满足公司注册地址需求——支持企业合法性办理，无需租赁实体办公空间。"
+        },
+        "detail_path": "/virtual-office/1",
+        "detail": {
+            "id": {
+                "intro": {
+                    "heading": "Virtual Office untuk Legalitas dan Pertumbuhan Bisnis",
+                    "paragraphs": [
+                        "Perkembangan teknologi dan pola kerja yang semakin fleksibel telah mengubah cara perusahaan menjalankan operasional bisnisnya. Saat ini, memiliki kantor fisik bukan lagi satu-satunya pilihan untuk membangun kehadiran bisnis yang profesional. Virtual Office menjadi solusi yang memungkinkan perusahaan memperoleh alamat usaha yang sah dan representatif, sekaligus menikmati berbagai fasilitas pendukung tanpa harus menanggung biaya operasional kantor konvensional.",
+                        "Melalui layanan Virtual Office yang disediakan oleh Fasttrack, pelaku usaha dapat memperoleh alamat domisili bisnis yang strategis untuk mendukung kebutuhan legalitas perusahaan, pengurusan perizinan berusaha, korespondensi bisnis, hingga aktivitas administrasi perusahaan. Solusi ini sangat sesuai bagi startup, UMKM, perusahaan yang sedang berekspansi, maupun investor dan perusahaan asing yang membutuhkan efisiensi dalam menjalankan kegiatan usahanya di Indonesia.",
+                        "Lebih dari sekadar alamat usaha, Virtual Office Fasttrack dirancang untuk membantu perusahaan membangun citra profesional, meningkatkan kepercayaan mitra bisnis, serta menciptakan fondasi yang kuat bagi pertumbuhan usaha. Dengan dukungan layanan yang responsif, fasilitas yang memadai, dan pendekatan yang berorientasi pada kebutuhan bisnis, Fasttrack menghadirkan solusi yang praktis, ekonomis, dan sesuai dengan perkembangan dunia usaha saat ini."
+                    ]
+                },
+                "promo": {
+                    "label": "Biaya Kantor Jadi Lebih",
+                    "highlight": "Hemat 90% Pasti!!!",
+                    "badge": "Mulai dari 5.000-an/hari"
+                },
+                "keunggulan": [
+                    {
+                        "title": "Alamat Bisnis di Kawasan Strategis",
+                        "desc": "Keberadaan alamat usaha yang berada di kawasan bisnis yang mudah diakses dan dikenal luas dapat memberikan nilai tambah bagi perusahaan. Selain mendukung kebutuhan administrasi dan legalitas usaha, lokasi yang tepat juga membantu membangun persepsi profesional di mata pelanggan, mitra usaha, investor, maupun instansi pemerintah."
+                    },
+                    {
+                        "title": "Dikelola Secara Mandiri, Profesional dan Terpercaya",
+                        "desc": "Aspek pengelolaan merupakan salah satu faktor penting dalam memilih penyedia Virtual Office. Fasttrack memastikan seluruh layanan dikelola secara langsung dan profesional untuk menjaga kualitas layanan, keamanan administrasi, serta kepastian penggunaan alamat usaha. Dengan sistem pengelolaan yang terintegrasi, perusahaan dapat memperoleh layanan yang lebih responsif, transparan, dan terpercaya."
+                    },
+                    {
+                        "title": "Privasi dan Keamanan Data Perusahaan Terjaga",
+                        "desc": "Seluruh dokumen dan korespondensi bisnis yang diterima melalui alamat Virtual Office dikelola dengan prosedur kerahasiaan yang ketat. Fasttrack menerapkan standar penanganan dokumen yang aman, sehingga informasi dan data perusahaan tetap terlindungi dari akses pihak yang tidak berkepentingan."
+                    },
+                    {
+                        "title": "Fasilitas Ruang Pertemuan yang Representatif",
+                        "desc": "Selain memperoleh alamat usaha profesional, perusahaan juga dapat memanfaatkan fasilitas ruang pertemuan yang nyaman dan representatif untuk berbagai kebutuhan bisnis, seperti rapat internal, pertemuan dengan klien, diskusi kerja sama, maupun presentasi perusahaan. Fasilitas ini membantu menciptakan suasana pertemuan yang lebih profesional dan produktif."
+                    },
+                    {
+                        "title": "Efisiensi Pengeluaran Operasional",
+                        "desc": "Mengelola kantor fisik memerlukan investasi yang tidak sedikit, mulai dari biaya sewa ruang kerja, utilitas, pemeliharaan fasilitas, hingga kebutuhan sumber daya pendukung lainnya. Dengan Virtual Office, perusahaan dapat menjalankan kegiatan usaha secara lebih efisien tanpa mengurangi profesionalisme dan kredibilitas bisnis, sehingga alokasi anggaran dapat difokuskan pada pengembangan usaha."
+                    },
+                    {
+                        "title": "Solusi Profesional dengan Investasi yang Terjangkau",
+                        "desc": "Virtual Office memberikan kesempatan bagi perusahaan untuk memiliki alamat usaha yang kredibel tanpa harus mengeluarkan biaya besar sebagaimana penyewaan kantor konvensional. Dengan investasi yang relatif ringan, perusahaan tetap dapat membangun identitas bisnis yang profesional sekaligus memperoleh berbagai fasilitas pendukung yang dibutuhkan untuk menjalankan usaha secara efektif."
+                    }
+                ],
+                "paket_reguler": {
+                    "heading": "Paket Reguler",
+                    "jenis_label": "Jenis Paket (per tahun)",
+                    "harga_label": "Biaya Per Tahun",
+                    "selected_label": "Paket terpilih",
+                    "per_tahun": "/tahun",
+                    "columns": [
+                        "Essential Package",
+                        "Growth Package",
+                        "Professional Package",
+                        "Executive Package"
+                    ],
+                    "harga": [
+                        "Rp 2.000.000",
+                        "Rp 3.000.000",
+                        "Rp 5.000.000",
+                        "Rp 6.000.000"
+                    ],
+                    "rows": [
+                        {
+                            "label": "Alamat usaha profesional",
+                            "values": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Dukungan layanan front office profesional",
+                            "values": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Nomor telepon perusahaan",
+                            "values": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Akses area penerima tamu dan ruang tunggu",
+                            "values": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Fasilitas refreshment area",
+                            "values": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Alokasi penggunaan ruang pertemuan",
+                            "values": [
+                                false,
+                                false,
+                                "24 jam/bulan",
+                                "72 jam/bulan"
+                            ]
+                        }
+                    ]
+                },
+                "gallery": {
+                    "heading": "Galeri Foto Fasttrack Office",
+                    "available_badge": "Tersedia",
+                    "items": [
+                        {
+                            "location": "Jakarta",
+                            "kpp": "KPP Setia Budi",
+                            "image": "/images/vo/ft-jakarta-1.png",
+                            "available": true
+                        },
+                        {
+                            "location": "Bali",
+                            "kpp": "KPP Setia Budi",
+                            "image": "/images/dummy-virtual-office.png",
+                            "available": true
+                        },
+                        {
+                            "location": "Indramayu",
+                            "kpp": "KPP Setia Budi",
+                            "image": "/images/vo/ft-indramayu-1.png",
+                            "available": true
+                        },
+                        {
+                            "location": "Lombok",
+                            "kpp": "KPP Kebayoran",
+                            "image": "/images/dummy-virtual-office.png",
+                            "available": true
+                        }
+                    ]
+                },
+                "sidebar": {
+                    "vip_title": "Fasttrack – VIP Line",
+                    "vip_desc": "Draft Perjanjian Mendesak Selesai dalam 1x24 Jam",
+                    "vip_cta": "Pesan Layanan Sekarang",
+                    "vip_note": "*(S&K Berlaku)",
+                    "starting_from": "Mulai dari",
+                    "consult_cta": "Konsultasi Gratis via Whatsapp",
+                    "checklist": [
+                        "Konsultasi pertama gratis",
+                        "Harga transparan, tanpa biaya tersembunyi",
+                        "Tim berpengalaman 18+ tahun",
+                        "Update proses berkala via WhatsApp"
+                    ]
+                }
+            },
+            "en": {
+                "intro": {
+                    "heading": "Virtual Office for Business Legality and Growth",
+                    "paragraphs": [
+                        "The development of technology and increasingly flexible work patterns have changed the way companies run their business operations. Today, having a physical office is no longer the only option for building a professional business presence. Virtual Office is a solution that allows companies to obtain a legitimate and representative business address, while enjoying various supporting facilities without having to bear the operational costs of a conventional office.",
+                        "Through the Virtual Office service provided by Fasttrack, business actors can obtain a strategic business domicile address to support company legality needs, business licensing processing, business correspondence, and company administrative activities. This solution is ideal for startups, MSMEs, expanding companies, as well as investors and foreign companies that need efficiency in running their business activities in Indonesia.",
+                        "More than just a business address, Fasttrack Virtual Office is designed to help companies build a professional image, increase the trust of business partners, and create a strong foundation for business growth. With responsive service support, adequate facilities, and a business-needs-oriented approach, Fasttrack presents a practical, economical solution that is in line with today's business developments."
+                    ]
+                },
+                "promo": {
+                    "label": "Make Your Office Costs",
+                    "highlight": "Guaranteed 90% Savings!!!",
+                    "badge": "Starting from around 5,000/day"
+                },
+                "keunggulan": [
+                    {
+                        "title": "Business Address in a Strategic Area",
+                        "desc": "Having a business address in an easily accessible and widely recognized business district adds value to a company. In addition to supporting administrative and business legality needs, the right location also helps build a professional perception among customers, business partners, investors, and government agencies."
+                    },
+                    {
+                        "title": "Independently, Professionally, and Reliably Managed",
+                        "desc": "Management is one of the important factors in choosing a Virtual Office provider. Fasttrack ensures that all services are managed directly and professionally to maintain service quality, administrative security, and certainty in the use of the business address. With an integrated management system, companies can obtain more responsive, transparent, and reliable service."
+                    },
+                    {
+                        "title": "Company Data Privacy and Security Maintained",
+                        "desc": "All business documents and correspondence received through the Virtual Office address are managed with strict confidentiality procedures. Fasttrack applies secure document handling standards, ensuring that company information and data remain protected from access by unauthorized parties."
+                    },
+                    {
+                        "title": "Representative Meeting Room Facilities",
+                        "desc": "In addition to obtaining a professional business address, companies can also make use of comfortable and representative meeting room facilities for various business needs, such as internal meetings, client meetings, partnership discussions, and company presentations. This facility helps create a more professional and productive meeting atmosphere."
+                    },
+                    {
+                        "title": "Operational Expense Efficiency",
+                        "desc": "Managing a physical office requires considerable investment, from workspace rental costs, utilities, facility maintenance, to other supporting resource needs. With Virtual Office, companies can run their business activities more efficiently without reducing business professionalism and credibility, so that budget allocation can be focused on business development."
+                    },
+                    {
+                        "title": "Professional Solution with Affordable Investment",
+                        "desc": "Virtual Office gives companies the opportunity to have a credible business address without having to incur large costs as with conventional office rentals. With a relatively light investment, companies can still build a professional business identity while obtaining various supporting facilities needed to run their business effectively."
+                    }
+                ],
+                "paket_reguler": {
+                    "heading": "Regular Packages",
+                    "jenis_label": "Package Type (per year)",
+                    "harga_label": "Cost Per Year",
+                    "selected_label": "Selected package",
+                    "per_tahun": "/year",
+                    "columns": [
+                        "Essential Package",
+                        "Growth Package",
+                        "Professional Package",
+                        "Executive Package"
+                    ],
+                    "harga": [
+                        "Rp 2.000.000",
+                        "Rp 3.000.000",
+                        "Rp 5.000.000",
+                        "Rp 6.000.000"
+                    ],
+                    "rows": [
+                        {
+                            "label": "Professional business address",
+                            "values": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Professional front office service support",
+                            "values": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Company phone number",
+                            "values": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Access to reception area and waiting room",
+                            "values": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Refreshment area facilities",
+                            "values": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "Meeting room usage allocation",
+                            "values": [
+                                false,
+                                false,
+                                "24 hours/month",
+                                "72 hours/month"
+                            ]
+                        }
+                    ]
+                },
+                "gallery": {
+                    "heading": "Fasttrack Office Photo Gallery",
+                    "available_badge": "Available",
+                    "items": [
+                        {
+                            "location": "Jakarta",
+                            "kpp": "KPP Setia Budi",
+                            "image": "/images/vo/ft-jakarta-1.png",
+                            "available": true
+                        },
+                        {
+                            "location": "Bali",
+                            "kpp": "KPP Setia Budi",
+                            "image": "/images/dummy-virtual-office.png",
+                            "available": true
+                        },
+                        {
+                            "location": "Indramayu",
+                            "kpp": "KPP Setia Budi",
+                            "image": "/images/vo/ft-indramayu-1.png",
+                            "available": true
+                        },
+                        {
+                            "location": "Lombok",
+                            "kpp": "KPP Kebayoran",
+                            "image": "/images/dummy-virtual-office.png",
+                            "available": true
+                        }
+                    ]
+                },
+                "sidebar": {
+                    "vip_title": "Fasttrack – VIP Line",
+                    "vip_desc": "Urgent Agreement Draft Completed Within 1x24 Hours",
+                    "vip_cta": "Order Service Now",
+                    "vip_note": "*(Terms & Conditions Apply)",
+                    "starting_from": "Starting from",
+                    "consult_cta": "Free Consultation via WhatsApp",
+                    "checklist": [
+                        "First consultation is free",
+                        "Transparent pricing, no hidden fees",
+                        "Team with 18+ years of experience",
+                        "Regular process updates via WhatsApp"
+                    ]
+                }
+            },
+            "zh": {
+                "intro": {
+                    "heading": "助力企业合法性与业务增长的虚拟办公室",
+                    "paragraphs": [
+                        "技术的发展与日益灵活的工作模式改变了企业开展业务运营的方式。如今，拥有实体办公室已不再是打造专业商业形象的唯一选择。虚拟办公室成为一种解决方案，使企业能够获得合法且具代表性的营业地址，同时享受各种配套设施，而无需承担传统办公室的运营成本。",
+                        "通过Fasttrack提供的虚拟办公室服务，经营者可获得具有战略意义的商业注册地址，以支持企业合法性需求、营业许可办理、商务信函往来乃至企业行政事务。该方案非常适合初创企业、中小微企业、正在扩张的公司，以及需要在印度尼西亚高效开展业务的投资者与外国企业。",
+                        "Fasttrack虚拟办公室不仅仅是一个营业地址，更旨在帮助企业树立专业形象、提升商业伙伴的信任度，并为业务增长奠定坚实基础。凭借响应迅速的服务支持、完善的设施以及以业务需求为导向的方式，Fasttrack为您提供实用、经济且顺应当今商业发展趋势的解决方案。"
+                    ]
+                },
+                "promo": {
+                    "label": "办公成本更",
+                    "highlight": "确定节省90%！！！",
+                    "badge": "每日仅需5,000印尼盾起"
+                },
+                "keunggulan": [
+                    {
+                        "title": "位于战略区域的商业地址",
+                        "desc": "位于易于抵达且广受认可的商业区域内的营业地址，能够为企业带来附加价值。除了满足行政与经营合法性需求外，恰当的地理位置也有助于在客户、商业伙伴、投资者及政府机构眼中树立专业形象。"
+                    },
+                    {
+                        "title": "独立、专业且值得信赖的管理",
+                        "desc": "管理水平是选择虚拟办公室服务商的重要因素之一。Fasttrack确保所有服务均由自身直接、专业地管理，以保障服务质量、行政安全及营业地址使用的确定性。凭借一体化的管理系统，企业能够获得更具响应性、透明度和可信度的服务。"
+                    },
+                    {
+                        "title": "保障企业数据隐私与安全",
+                        "desc": "通过虚拟办公室地址接收的所有商业文件与信函均按照严格的保密程序进行管理。Fasttrack采用安全的文件处理标准，确保企业信息与数据不被无关方获取。"
+                    },
+                    {
+                        "title": "具代表性的会议室设施",
+                        "desc": "除了获得专业的营业地址外，企业还可使用舒适且具代表性的会议室设施，满足内部会议、客户会晤、合作洽谈及企业演示等多种业务需求。该设施有助于营造更专业、更高效的会议氛围。"
+                    },
+                    {
+                        "title": "运营支出效率提升",
+                        "desc": "管理实体办公室需要相当可观的投入，从工作空间租金、水电等基础设施费用、设施维护，到其他配套资源需求皆是如此。借助虚拟办公室，企业可以更高效地开展经营活动，同时不降低业务的专业性与可信度，从而将预算集中用于业务发展。"
+                    },
+                    {
+                        "title": "投资实惠的专业解决方案",
+                        "desc": "虚拟办公室为企业提供了拥有可信营业地址的机会，而无需像传统办公室租赁那样支出高额费用。凭借相对轻量的投资，企业仍可树立专业的商业形象，并获得有效开展业务所需的各项配套设施。"
+                    }
+                ],
+                "paket_reguler": {
+                    "heading": "常规套餐",
+                    "jenis_label": "套餐类型（每年）",
+                    "harga_label": "每年费用",
+                    "selected_label": "已选套餐",
+                    "per_tahun": "/年",
+                    "columns": [
+                        "基础套餐",
+                        "成长套餐",
+                        "专业套餐",
+                        "尊享套餐"
+                    ],
+                    "harga": [
+                        "Rp 2.000.000",
+                        "Rp 3.000.000",
+                        "Rp 5.000.000",
+                        "Rp 6.000.000"
+                    ],
+                    "rows": [
+                        {
+                            "label": "专业营业地址",
+                            "values": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "专业前台服务支持",
+                            "values": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "公司电话号码",
+                            "values": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "接待区及候客区使用权限",
+                            "values": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "茶水休闲区设施",
+                            "values": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "label": "会议室使用配额",
+                            "values": [
+                                false,
+                                false,
+                                "每月24小时",
+                                "每月72小时"
+                            ]
+                        }
+                    ]
+                },
+                "gallery": {
+                    "heading": "Fasttrack办公室相册",
+                    "available_badge": "可预订",
+                    "items": [
+                        {
+                            "location": "Jakarta",
+                            "kpp": "KPP Setia Budi",
+                            "image": "/images/vo/ft-jakarta-1.png",
+                            "available": true
+                        },
+                        {
+                            "location": "Bali",
+                            "kpp": "KPP Setia Budi",
+                            "image": "/images/dummy-virtual-office.png",
+                            "available": true
+                        },
+                        {
+                            "location": "Indramayu",
+                            "kpp": "KPP Setia Budi",
+                            "image": "/images/vo/ft-indramayu-1.png",
+                            "available": true
+                        },
+                        {
+                            "location": "Lombok",
+                            "kpp": "KPP Kebayoran",
+                            "image": "/images/dummy-virtual-office.png",
+                            "available": true
+                        }
+                    ]
+                },
+                "sidebar": {
+                    "vip_title": "Fasttrack – VIP专线",
+                    "vip_desc": "紧急协议草案24小时内完成",
+                    "vip_cta": "立即预订服务",
+                    "vip_note": "*（适用条款与条件）",
+                    "starting_from": "起价",
+                    "consult_cta": "通过WhatsApp免费咨询",
+                    "checklist": [
+                        "首次咨询免费",
+                        "价格透明，无隐藏费用",
+                        "拥有18年以上经验的团队",
+                        "通过WhatsApp定期更新进度"
+                    ]
+                }
+            }
+        },
+        "faq": []
+    }
+]
