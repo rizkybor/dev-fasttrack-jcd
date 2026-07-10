@@ -3,7 +3,7 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -77,11 +77,11 @@ const activeBiayaTabData = computed(
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">Layanan</a>
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{ t("services.penutupanBadanUsahaDetail.breadcrumb.layanan") }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/penutupan-badan-usaha" class="text-sm font-medium text-[#9e1f16] hover:underline">Penutupan Badan Usaha</a>
+                        <a href="/penutupan-badan-usaha" class="text-sm font-medium text-[#9e1f16] hover:underline">{{ t("services.penutupanBadanUsahaDetail.breadcrumb.current") }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
@@ -101,7 +101,7 @@ const activeBiayaTabData = computed(
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{ t("services.penutupanBadanUsahaDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -120,7 +120,7 @@ const activeBiayaTabData = computed(
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan Umum</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.penutupanBadanUsahaDetail.sections.penjelasan") }}</h2>
                             </div>
                             <div class="space-y-4">
                                 <template v-for="(block, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`">
@@ -297,7 +297,7 @@ const activeBiayaTabData = computed(
     <template v-if="localizedProduct.biaya_layanan_tabs?.length">
         <div class="rounded-xl border border-[#E8E8E6] p-5">
             <p class="text-[13px] font-bold text-[#1A1B18] mb-1">{{ activeBiayaTabData.nama }}</p>
-            <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+            <p class="text-[11px] text-[#686964] mb-0.5">{{ t("services.penutupanBadanUsahaDetail.plans.mulai_dari") }}</p>
             <p class="text-[24px] font-bold text-primary leading-tight mb-2">{{ activeBiayaTabData.harga }}</p>
             <div v-if="activeBiayaTabData.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
                 <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
@@ -315,7 +315,7 @@ const activeBiayaTabData = computed(
                 </ul>
             </div>
             <div v-if="activeBiayaTabData.termasuk?.length" class="mb-5">
-                <p class="text-[13px] font-bold text-[#1A1B18] mb-3">Termasuk</p>
+                <p class="text-[13px] font-bold text-[#1A1B18] mb-3">{{ t("services.penutupanBadanUsahaDetail.plans.termasuk") }}</p>
                 <ul class="space-y-2">
                     <li v-for="(t, ti) in activeBiayaTabData.termasuk" :key="`t-${ti}`"
                         class="flex items-start gap-2">
@@ -327,7 +327,7 @@ const activeBiayaTabData = computed(
             <a :href="buildWhatsappLink(activeBiayaTabData.nama)"
                 target="_blank" rel="noopener noreferrer"
                 class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                Pesan Sekarang
+                {{ t("services.penutupanBadanUsahaDetail.plans.pesan") }}
                 <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -339,7 +339,7 @@ const activeBiayaTabData = computed(
     <template v-else-if="localizedProduct.biaya_layanan_single">
         <div class="rounded-xl border border-[#E8E8E6] p-5">
             <p class="text-[13px] font-bold text-[#1A1B18] mb-1">{{ localizedProduct.biaya_layanan_single.nama }}</p>
-            <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+            <p class="text-[11px] text-[#686964] mb-0.5">{{ t("services.penutupanBadanUsahaDetail.plans.mulai_dari") }}</p>
             <p class="text-[24px] font-bold text-primary leading-tight mb-2">{{ localizedProduct.biaya_layanan_single.harga }}</p>
             <div v-if="localizedProduct.biaya_layanan_single.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
                 <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
@@ -357,7 +357,7 @@ const activeBiayaTabData = computed(
                 </ul>
             </div>
             <div v-if="localizedProduct.biaya_layanan_single.termasuk?.length" class="mb-5">
-                <p class="text-[13px] font-bold text-[#1A1B18] mb-3">Termasuk</p>
+                <p class="text-[13px] font-bold text-[#1A1B18] mb-3">{{ t("services.penutupanBadanUsahaDetail.plans.termasuk") }}</p>
                 <ul class="space-y-2">
                     <li v-for="(t, ti) in localizedProduct.biaya_layanan_single.termasuk" :key="`st-${ti}`"
                         class="flex items-start gap-2">
@@ -369,7 +369,7 @@ const activeBiayaTabData = computed(
             <a :href="buildWhatsappLink(localizedProduct.biaya_layanan_single.nama)"
                 target="_blank" rel="noopener noreferrer"
                 class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                Pesan Sekarang
+                {{ t("services.penutupanBadanUsahaDetail.plans.pesan") }}
                 <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -383,7 +383,7 @@ const activeBiayaTabData = computed(
             <div v-for="(card, ci) in localizedProduct.biaya_layanan_cards" :key="`blc-${ci}`"
                 class="rounded-xl border border-[#E8E8E6] p-5 flex flex-col">
                 <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-1">{{ card.nama }}</p>
-                <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+                <p class="text-[11px] text-[#686964] mb-0.5">{{ t("services.penutupanBadanUsahaDetail.plans.mulai_dari") }}</p>
                 <p class="text-[22px] font-bold text-primary leading-tight mb-2">{{ card.harga }}</p>
                 <div v-if="card.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
                     <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
@@ -401,7 +401,7 @@ const activeBiayaTabData = computed(
                     </ul>
                 </div>
                 <div v-if="card.termasuk?.length" class="mb-5">
-                    <p class="text-[12px] font-bold text-[#1A1B18] mb-2">Termasuk</p>
+                    <p class="text-[12px] font-bold text-[#1A1B18] mb-2">{{ t("services.penutupanBadanUsahaDetail.plans.termasuk") }}</p>
                     <ul class="space-y-2">
                         <li v-for="(t, ti) in card.termasuk" :key="`t-${ci}-${ti}`"
                             class="flex items-start gap-2">
@@ -414,7 +414,7 @@ const activeBiayaTabData = computed(
                     <a :href="buildWhatsappLink(card.nama)"
                         target="_blank" rel="noopener noreferrer"
                         class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                        Pesan Sekarang
+                        {{ t("services.penutupanBadanUsahaDetail.plans.pesan") }}
                         <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
@@ -432,7 +432,7 @@ const activeBiayaTabData = computed(
                                 class="w-full flex items-center justify-between gap-3 text-left">
                                 <div class="flex items-center gap-3">
                                     <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Dasar Hukum</h2>
+                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.penutupanBadanUsahaDetail.sections.dasar_hukum") }}</h2>
                                 </div>
                                 <svg class="h-5 w-5 flex-shrink-0 text-[#686964] transition-transform duration-200"
                                     :class="openSectionId === 'dasar-hukum' ? 'rotate-180' : ''"
@@ -462,18 +462,16 @@ const activeBiayaTabData = computed(
                             style="background-image: url('/images/card-arrow-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
-                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">FASTRACK – VIP LINE</span>
+                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">{{ t("services.penutupanBadanUsahaDetail.sidebar.vip_title") }}</span>
                                 </div>
                             </div>
-                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
-                            </p>
+                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5" v-html="t('services.penutupanBadanUsahaDetail.sidebar.vip_desc')"></p>
                             <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{ t("services.penutupanBadanUsahaDetail.sidebar.vip_cta") }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{ t("services.penutupanBadanUsahaDetail.sidebar.vip_note") }}</div>
                         </div>
 
                         <!-- Price Card -->
@@ -482,12 +480,12 @@ const activeBiayaTabData = computed(
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
                                 <span class="text-[11px] font-semibold text-primary truncate max-w-[160px]">{{ localizedProduct.name }}</span>
                             </div>
-                            <div class="text-[12px] text-[#686964] mb-1 mt-2">Start From</div>
+                            <div class="text-[12px] text-[#686964] mb-1 mt-2">{{ t("services.penutupanBadanUsahaDetail.sidebar.price_label") }}</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">{{ localizedProduct.price_label }}</div>
-                            <div class="text-[11px] text-[#686964] mb-4">*Harga final dikonfirmasi setelah konsultasi</div>
+                            <div class="text-[11px] text-[#686964] mb-4">{{ t("services.penutupanBadanUsahaDetail.sidebar.price_note") }}</div>
                             <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors mb-2">
-                                Pesan Sekarang
+                                {{ t("services.penutupanBadanUsahaDetail.plans.pesan") }}
                                 <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
@@ -495,13 +493,13 @@ const activeBiayaTabData = computed(
                             <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.penutupanBadanUsahaDetail.sidebar.konsultasi_cta") }}
                             </a>
                         </div>
 
                         <!-- Layanan Terkait -->
                         <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Terkait</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.penutupanBadanUsahaDetail.sidebar.related_title") }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -513,7 +511,7 @@ const activeBiayaTabData = computed(
                                         <p class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug line-clamp-2">
                                             {{ related.name }}
                                         </p>
-                                        <p class="text-[11px] text-[#686964] mt-0.5">Mulai dari {{ related.price_label }}</p>
+                                        <p class="text-[11px] text-[#686964] mt-0.5">{{ t("services.penutupanBadanUsahaDetail.sidebar.related_from") }} {{ related.price_label }}</p>
                                     </div>
                                     <svg class="h-4 w-4 flex-shrink-0 text-[#686964] group-hover:text-primary transition-colors"
                                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -538,15 +536,14 @@ const activeBiayaTabData = computed(
                         class="absolute right-6 top-6 h-16 w-16 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24" />
                     <div class="relative flex flex-col items-center text-center">
                         <h3 class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]">
-                            Butuh Konsultasi Penutupan Badan Usaha?
+                            {{ t("services.penutupanBadanUsahaDetail.footer.title") }}
                         </h3>
                         <p class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]">
-                            Tim kami siap membantu Anda menyelesaikan proses penutupan badan usaha<br class="hidden sm:block" />
-                            secara legal dan sesuai ketentuan yang berlaku.
+                            {{ t("services.penutupanBadanUsahaDetail.footer.desc") }}
                         </p>
                         <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                             class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]">
-                            Chat Langsung via WhatsApp
+                            {{ t("services.penutupanBadanUsahaDetail.footer.cta") }}
                             <img src="/icons/ft-wa.svg" alt="WhatsApp" class="h-5 w-5" />
                         </a>
                     </div>

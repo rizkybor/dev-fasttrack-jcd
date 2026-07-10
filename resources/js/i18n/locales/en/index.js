@@ -8,6 +8,25 @@ import badanUsaha from './services/badan-usaha'
 import kantorPerwakilan from './services/kantor-perwakilan'
 import izinTinggalTerbatas from './services/izin-tinggal-terbatas'
 import badanUsahaDetail from './services/show/badan-usaha-detail'
+import badanUsahaLuarNegeriDetail from './services/show/badan-usaha-luar-negeri-detail'
+import digitalMarketingDetail from './services/show/digital-marketing-detail'
+import izinTinggalTerbatasDetail from './services/show/izin-tinggal-terbatas-detail'
+import izinTinggalTetapDetail from './services/show/izin-tinggal-tetap-detail'
+import kantorPerwakilanDetail from './services/show/kantor-perwakilan-detail'
+import keimigrasianWniWnaDetail from './services/show/keimigrasian-wni-wna-detail'
+import kekayaanIntelektualDetail from './services/show/kekayaan-intelektual-detail'
+import kewajibanPelaporanUsahaDetail from './services/show/kewajiban-pelaporan-perusahaan-detail'
+import legalisasiKedutaanDetail from './services/show/legalisasi-kedutaan-detail'
+import notarisVirtualDanAktaDetail from './services/show/notaris-virtual-dan-akta-detail'
+import oneSingleSubmissionDetail from './services/show/one-single-submission-detail'
+import penutupanBadanUsahaDetail from './services/show/penutupan-badan-usaha-detail'
+import perizinanBerusahaDetail from './services/show/perizinan-berusaha-detail'
+import perizinanLainnyaDetail from './services/show/perizinan-lainnya-detail'
+import perpajakanDanPembukuanDetail from './services/show/perpajakan-dan-pembukuan-detail'
+import restrukturisasiPerseroanTerbatasDetail from './services/show/restrukturisasi-perseroan-terbatas-detail'
+import virtualOfficeDetail from './services/show/virtual-office-detail'
+import visaIndonesiaDetail from './services/show/visa-indonesia-detail'
+import visaMancanegaraDetail from './services/show/visa-mancanegara-detail'
 import layanan from './services/layanan'
 import badanUsahaLuarNegeri from './services/badan-usaha-luar-negeri'
 import oneSingleSubmission from './services/one-single-submission'
@@ -38,23 +57,42 @@ export default {
         badanUsaha,
         badanUsahaDetail,
         kantorPerwakilan,
+        kantorPerwakilanDetail,
         izinTinggalTerbatas,
+        izinTinggalTerbatasDetail,
         badanUsahaLuarNegeri,
+        badanUsahaLuarNegeriDetail,
         oneSingleSubmission,
+        oneSingleSubmissionDetail,
         perizinanLainnya,
+        perizinanLainnyaDetail,
         perizinanBerusaha,
+        perizinanBerusahaDetail,
         notarisVirtualDanAkta,
+        notarisVirtualDanAktaDetail,
         restrukturisasiPerseroanTerbatas,
+        restrukturisasiPerseroanTerbatasDetail,
         penutupanBadanUsaha,
+        penutupanBadanUsahaDetail,
         kekayaanIntelektual,
+        kekayaanIntelektualDetail,
         perpajakanDanPembukuan,
+        perpajakanDanPembukuanDetail,
         legalisasiKedutaan,
+        legalisasiKedutaanDetail,
         kewajibanPelaporanUsaha,
+        kewajibanPelaporanUsahaDetail,
         izinTinggalTetap,
+        izinTinggalTetapDetail,
         keimigrasianWniWna,
+        keimigrasianWniWnaDetail,
         visaMancanegara,
+        visaMancanegaraDetail,
         virtualOffice,
+        virtualOfficeDetail,
         digitalMarketing,
-        visaIndonesia
+        digitalMarketingDetail,
+        visaIndonesia,
+        visaIndonesiaDetail
     },
 }

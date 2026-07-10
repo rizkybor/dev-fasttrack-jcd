@@ -3,7 +3,7 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -120,8 +120,13 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                         <a
                             href="/layanan"
                             class="text-sm font-medium text-[#9e1f16] hover:underline"
-                            >Layanan</a
                         >
+                            {{
+                                t(
+                                    "services.izinTinggalTetapDetail.breadcrumb.layanan",
+                                )
+                            }}
+                        </a>
                         <svg
                             class="h-3 w-3 text-[#9e1f16]"
                             fill="none"
@@ -138,8 +143,13 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                         <a
                             href="/izin-tinggal-tetap"
                             class="text-sm font-medium text-[#9e1f16] hover:underline"
-                            >Izin Tinggal Tetap</a
                         >
+                            {{
+                                t(
+                                    "services.izinTinggalTetapDetail.breadcrumb.current",
+                                )
+                            }}
+                        </a>
                         <svg
                             class="h-3 w-3 text-[#9e1f16]"
                             fill="none"
@@ -196,7 +206,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
                             />
                         </svg>
-                        Kembali
+                        {{ t("services.izinTinggalTetapDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -269,7 +279,11 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Penjelasan Umum
+                                    {{
+                                        t(
+                                            "services.izinTinggalTetapDetail.sections.penjelasan",
+                                        )
+                                    }}
                                 </h2>
                             </div>
                             <div class="space-y-4">
@@ -469,7 +483,11 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                         rel="noopener noreferrer"
                                         class="flex items-center gap-1.5 rounded-lg bg-white px-3.5 py-2 text-[12px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors"
                                     >
-                                        Pesan Sekarang
+                                        {{
+                                            t(
+                                                "services.izinTinggalTetapDetail.plans.pesan",
+                                            )
+                                        }}
                                         <svg
                                             class="h-3.5 w-3.5"
                                             fill="none"
@@ -502,7 +520,11 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Dasar Hukum
+                                    {{
+                                        t(
+                                            "services.izinTinggalTetapDetail.sections.dasar_hukum",
+                                        )
+                                    }}
                                 </h2>
                             </div>
                             <ul class="space-y-4">
@@ -552,17 +574,23 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                     <span
                                         class="text-[14px] font-extrabold uppercase tracking-widest text-white"
                                     >
-                                        FASTTRACK – VIP LINE
+                                        {{
+                                            t(
+                                                "services.izinTinggalTetapDetail.sidebar.vip_title",
+                                            )
+                                        }}
                                     </span>
                                 </div>
                             </div>
 
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                            >
-                                Pendirian Badan Usaha Selesai dalam<br />1
-                                (Satu) Hari
-                            </p>
+                                v-html="
+                                    t(
+                                        'services.izinTinggalTetapDetail.sidebar.vip_desc',
+                                    )
+                                "
+                            ></p>
                             <a
                                 :href="
                                     buildWhatsappLink(
@@ -579,13 +607,21 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                     class="mt-0.5 h-5 w-5 flex-shrink-0"
                                     alt="wa"
                                 />
-                                Pesan Layanan Sekarang
+                                {{
+                                    t(
+                                        "services.izinTinggalTetapDetail.sidebar.vip_cta",
+                                    )
+                                }}
                             </a>
 
                             <div
                                 class="relative mt-3 text-[11px] text-white/60"
                             >
-                                * (S&amp;K BERLAKU)
+                                {{
+                                    t(
+                                        "services.izinTinggalTetapDetail.sidebar.vip_note",
+                                    )
+                                }}
                             </div>
                         </div>
 
@@ -614,7 +650,11 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 </svg>
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1">
-                                Estimasi total biaya
+                                {{
+                                    t(
+                                        "services.izinTinggalTetapDetail.sidebar.price_label",
+                                    )
+                                }}
                             </div>
                             <div
                                 class="text-[32px] font-bold leading-none text-primary mb-1"
@@ -625,7 +665,11 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
-                                *Harga final dikonfirmasi setelah konsultasi
+                                {{
+                                    t(
+                                        "services.izinTinggalTetapDetail.sidebar.price_note",
+                                    )
+                                }}
                             </div>
                             <a
                                 :href="
@@ -643,7 +687,11 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                     class="mt-0.5 h-6 w-6 flex-shrink-0"
                                     alt="wa"
                                 />
-                                Konsultasi Gratis via Whatsapp
+                                {{
+                                    t(
+                                        "services.izinTinggalTetapDetail.sidebar.konsultasi_cta",
+                                    )
+                                }}
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li

@@ -70,12 +70,20 @@ const toggleSection = (id) => {
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">Layanan</a>
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                            t(
+                                "services.restrukturisasiPerseroanTerbatasDetail.breadcrumb.layanan",
+                            )
+                        }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                         <a href="/restrukturisasi-perseroan-terbatas"
-                            class="text-sm font-medium text-[#9e1f16] hover:underline">Restrukturisasi Perseroan Terbatas</a>
+                            class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                                t(
+                                    "services.restrukturisasiPerseroanTerbatasDetail.breadcrumb.current",
+                                )
+                            }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
@@ -96,7 +104,11 @@ const toggleSection = (id) => {
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{
+                            t(
+                                "services.restrukturisasiPerseroanTerbatasDetail.back",
+                            )
+                        }}
                     </a>
                 </div>
             </div>
@@ -115,7 +127,11 @@ const toggleSection = (id) => {
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan Umum</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{
+                                    t(
+                                        "services.restrukturisasiPerseroanTerbatasDetail.sections.penjelasan",
+                                    )
+                                }}</h2>
                             </div>
                             <div class="space-y-4">
                                 <template v-for="(block, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`">
@@ -303,7 +319,11 @@ const toggleSection = (id) => {
                                 class="w-full flex items-center justify-between gap-3 text-left group">
                                 <div class="flex items-center gap-3">
                                     <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Dasar Hukum</h2>
+                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{
+                                        t(
+                                            "services.restrukturisasiPerseroanTerbatasDetail.sections.dasar_hukum",
+                                        )
+                                    }}</h2>
                                 </div>
                                 <svg class="h-5 w-5 flex-shrink-0 text-[#686964] transition-transform duration-200"
                                     :class="openSectionId === 'dasar-hukum' ? 'rotate-180' : ''"
@@ -334,19 +354,35 @@ const toggleSection = (id) => {
                             style="background-image: url('/images/card-arrow-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
-                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">FASTRACK – VIP LINE</span>
+                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">{{
+                                        t(
+                                            "services.restrukturisasiPerseroanTerbatasDetail.sidebar.vip_title",
+                                        )
+                                    }}</span>
                                 </div>
                             </div>
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
+                                {{
+                                    t(
+                                        "services.restrukturisasiPerseroanTerbatasDetail.sidebar.vip_desc",
+                                    )
+                                }}
                             </p>
                             <a :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{
+                                    t(
+                                        "services.restrukturisasiPerseroanTerbatasDetail.sidebar.vip_cta",
+                                    )
+                                }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{
+                                t(
+                                    "services.restrukturisasiPerseroanTerbatasDetail.sidebar.vip_note",
+                                )
+                            }}</div>
                         </div>
 
                         <!-- Price Card -->
@@ -355,15 +391,27 @@ const toggleSection = (id) => {
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
                                 <span class="text-[11px] font-semibold text-primary">Free Konsultasi</span>
                             </div>
-                            <div class="text-[12px] text-[#686964] mb-1 mt-2">Start From</div>
+                            <div class="text-[12px] text-[#686964] mb-1 mt-2">{{
+                                t(
+                                    "services.restrukturisasiPerseroanTerbatasDetail.sidebar.price_label",
+                                )
+                            }}</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
                                 {{ localizedProduct.price_label }}
                             </div>
-                            <div class="text-[11px] text-[#686964] mb-4">*Harga final dikonfirmasi setelah konsultasi</div>
+                            <div class="text-[11px] text-[#686964] mb-4">{{
+                                t(
+                                    "services.restrukturisasiPerseroanTerbatasDetail.sidebar.price_note",
+                                )
+                            }}</div>
                             <a :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors mb-2">
-                                Pesan Sekarang
+                                {{
+                                    t(
+                                        "services.restrukturisasiPerseroanTerbatasDetail.plans.pesan",
+                                    )
+                                }}
                                 <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
@@ -372,13 +420,21 @@ const toggleSection = (id) => {
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{
+                                    t(
+                                        "services.restrukturisasiPerseroanTerbatasDetail.sidebar.konsultasi_cta",
+                                    )
+                                }}
                             </a>
                         </div>
 
                         <!-- Layanan Terkait -->
                         <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Terkait</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{
+                                t(
+                                    "services.restrukturisasiPerseroanTerbatasDetail.sidebar.related_title",
+                                )
+                            }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -390,7 +446,12 @@ const toggleSection = (id) => {
                                         <p class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug line-clamp-2">
                                             {{ related.name }}
                                         </p>
-                                        <p class="text-[11px] text-[#686964] mt-0.5">Mulai dari {{ related.price_label }}</p>
+                                        <p class="text-[11px] text-[#686964] mt-0.5">{{
+                                        t(
+                                            "services.restrukturisasiPerseroanTerbatasDetail.sidebar.related_from",
+                                        )
+                                    }}
+                                        {{ related.price_label }}</p>
                                     </div>
                                     <svg class="h-4 w-4 flex-shrink-0 text-[#686964] group-hover:text-primary transition-colors"
                                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -415,16 +476,27 @@ const toggleSection = (id) => {
                         class="absolute right-6 top-6 h-16 w-16 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24" />
                     <div class="relative flex flex-col items-center text-center">
                         <h3 class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]">
-                            Butuh Konsultasi Restrukturisasi Perseroan?
+                            {{
+                                t(
+                                    "services.restrukturisasiPerseroanTerbatasDetail.footer.title",
+                                )
+                            }}
                         </h3>
                         <p class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]">
-                            Tim kami siap membantu Anda menemukan solusi yang tepat<br class="hidden sm:block" />
-                            untuk kebutuhan restrukturisasi bisnis Anda.
+                            {{
+                                t(
+                                    "services.restrukturisasiPerseroanTerbatasDetail.footer.desc",
+                                )
+                            }}
                         </p>
                         <a :href="buildWhatsappLink(localizedProduct.name)"
                             target="_blank" rel="noopener noreferrer"
                             class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]">
-                            Chat Langsung via WhatsApp
+                            {{
+                                t(
+                                    "services.restrukturisasiPerseroanTerbatasDetail.footer.cta",
+                                )
+                            }}
                             <img src="/icons/ft-wa.svg" alt="WhatsApp" class="h-5 w-5" />
                         </a>
                     </div>

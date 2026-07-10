@@ -3,7 +3,7 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -112,13 +112,13 @@ const localizedProduct = computed(() => {
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">Layanan</a>
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{ t("services.perizinanLainnyaDetail.breadcrumb.layanan") }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                         <a href="/perizinan-lainnya"
-                            class="text-sm font-medium text-[#9e1f16] hover:underline">Perizinan Lainnya</a>
+                            class="text-sm font-medium text-[#9e1f16] hover:underline">{{ t("services.perizinanLainnyaDetail.breadcrumb.current") }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -146,7 +146,7 @@ const localizedProduct = computed(() => {
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{ t("services.perizinanLainnyaDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -166,7 +166,7 @@ const localizedProduct = computed(() => {
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Penjelasan Umum
+                                    {{ t("services.perizinanLainnyaDetail.sections.penjelasan") }}
                                 </h2>
                             </div>
                             <div class="space-y-4">
@@ -227,7 +227,7 @@ const localizedProduct = computed(() => {
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Syarat
+                                    {{ t("services.perizinanLainnyaDetail.sections.syarat") }}
                                 </h2>
                             </div>
                             <div class="space-y-6">
@@ -330,7 +330,7 @@ const localizedProduct = computed(() => {
                                     </div>
                                     <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                         class="flex items-center gap-1.5 rounded-lg bg-white px-4 py-2.5 text-[13px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors flex-shrink-0">
-                                        Pesan Sekarang
+                                        {{ t("services.perizinanLainnyaDetail.plans.pesan") }}
                                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                             stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round"

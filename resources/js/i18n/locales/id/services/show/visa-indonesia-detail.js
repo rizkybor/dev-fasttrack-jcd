@@ -1,0 +1,42 @@
+export default {
+    breadcrumb: {
+        layanan: "Layanan",
+        current: "Visa Indonesia",
+    },
+    back: "Kembali",
+    sections: {
+        penjelasan: "Penjelasan Umum",
+        syarat: "Syarat dan Ketentuan",
+        keuntungan: "Keuntungan & Manfaat",
+        alur: "Alur Proses",
+        dokumen: "Dokumen dan Informasi yang Diperlukan",
+        paket: "Paket & Harga",
+        dasar_hukum: "Dasar Hukum",
+    },
+    plans: {
+        mulai_dari: "Mulai dari",
+        paling_populer: "Paling Populer",
+        dokumen_legalitas: "Dokumen Legalitas",
+        termasuk: "Termasuk",
+        bonus: "Bonus",
+        pesan: "Pesan Sekarang",
+    },
+    sidebar: {
+        vip_title: "FASTTRACK – VIP LINE",
+        vip_desc: "Pengajuan Visa Indonesia Selesai dalam<br />1 (Satu) Hari",
+        vip_cta: "Pesan Layanan Sekarang",
+        vip_note: "* (S&K BERLAKU)",
+        price_label: "Estimasi total biaya",
+        price_note: "*Harga final dikonfirmasi setelah konsultasi",
+        konsultasi_cta: "Konsultasi Gratis via Whatsapp",
+        related_title: "Layanan Terkait",
+        related_from: "Mulai dari",
+        related_packages: "Paket",
+        related_cta: "Selengkapnya",
+    },
+    footer: {
+        title: "Tidak Menemukan Layanan yang Anda Cari?",
+        desc: "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
+        cta: "Chat Langsung via WhatsApp",
+    },
+}
