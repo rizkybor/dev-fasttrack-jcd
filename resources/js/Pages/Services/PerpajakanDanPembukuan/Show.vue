@@ -71,11 +71,19 @@ const toggleSection = (id) => {
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">Layanan</a>
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                            t(
+                                "services.perpajakanDanPembukuanDetail.breadcrumb.layanan",
+                            )
+                        }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/perpajakan-dan-pembukuan" class="text-sm font-medium text-[#9e1f16] hover:underline">Perpajakan & Pembukuan</a>
+                        <a href="/perpajakan-dan-pembukuan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                            t(
+                                "services.perpajakanDanPembukuanDetail.breadcrumb.current",
+                            )
+                        }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
@@ -96,7 +104,7 @@ const toggleSection = (id) => {
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{ t("services.perpajakanDanPembukuanDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -115,7 +123,11 @@ const toggleSection = (id) => {
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan Umum</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{
+                                    t(
+                                        "services.perpajakanDanPembukuanDetail.sections.penjelasan",
+                                    )
+                                }}</h2>
                             </div>
                             <div class="space-y-3">
                                 <template v-for="(block, i) in product.penjelasan_umum" :key="`pu-${i}`">
@@ -237,7 +249,11 @@ const toggleSection = (id) => {
                                 <div v-for="(card, ci) in product.biaya_layanan_cards" :key="`card-${ci}`"
                                     class="rounded-xl border border-[#E8E8E6] p-5 flex flex-col">
                                     <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-1">{{ card.nama }}</p>
-                                    <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+                                    <p class="text-[11px] text-[#686964] mb-0.5">{{
+                                        t(
+                                            "services.perpajakanDanPembukuanDetail.plans.mulai_dari",
+                                        )
+                                    }}</p>
                                     <p class="text-[22px] font-bold text-primary leading-tight mb-2">{{ card.harga }}</p>
                                     <div v-if="card.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
                                         <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
@@ -254,7 +270,11 @@ const toggleSection = (id) => {
                                         </ul>
                                     </div>
                                     <div v-if="card.termasuk?.length" class="mb-5">
-                                        <p class="text-[12px] font-bold text-[#1A1B18] mb-2">Termasuk</p>
+                                        <p class="text-[12px] font-bold text-[#1A1B18] mb-2">{{
+                                            t(
+                                                "services.perpajakanDanPembukuanDetail.plans.termasuk",
+                                            )
+                                        }}</p>
                                         <ul class="space-y-1.5">
                                             <li v-for="(t, ti) in card.termasuk" :key="`ct-${ci}-${ti}`"
                                                 class="flex items-start gap-2">
@@ -267,7 +287,11 @@ const toggleSection = (id) => {
                                         <a :href="buildWhatsappLink(card.nama)"
                                             target="_blank" rel="noopener noreferrer"
                                             class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                                            Pesan Sekarang
+                                            {{
+                                                t(
+                                                    "services.perpajakanDanPembukuanDetail.plans.pesan",
+                                                )
+                                            }}
                                             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                             </svg>
@@ -282,7 +306,11 @@ const toggleSection = (id) => {
                                 <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-1">
                                     {{ product.biaya_layanan_single.nama }}
                                 </p>
-                                <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+                                <p class="text-[11px] text-[#686964] mb-0.5">{{
+                                    t(
+                                        "services.perpajakanDanPembukuanDetail.plans.mulai_dari",
+                                    )
+                                }}</p>
                                 <p class="text-[24px] font-bold text-primary leading-tight mb-2">
                                     {{ product.biaya_layanan_single.harga }}
                                 </p>
@@ -303,7 +331,11 @@ const toggleSection = (id) => {
                                     </ul>
                                 </div>
                                 <div v-if="product.biaya_layanan_single.termasuk?.length" class="mb-5">
-                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-3">Termasuk</p>
+                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-3">{{
+                                        t(
+                                            "services.perpajakanDanPembukuanDetail.plans.termasuk",
+                                        )
+                                    }}</p>
                                     <ul class="space-y-2">
                                         <li v-for="(t, ti) in product.biaya_layanan_single.termasuk" :key="`st-${ti}`"
                                             class="flex items-start gap-2">
@@ -315,7 +347,11 @@ const toggleSection = (id) => {
                                 <a :href="buildWhatsappLink(product.biaya_layanan_single.nama)"
                                     target="_blank" rel="noopener noreferrer"
                                     class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                                    Pesan Sekarang
+                                    {{
+                                        t(
+                                            "services.perpajakanDanPembukuanDetail.plans.pesan",
+                                        )
+                                    }}
                                     <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                     </svg>
@@ -334,18 +370,34 @@ const toggleSection = (id) => {
                             style="background-image: url('/images/card-arrow-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
-                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">FASTRACK – VIP LINE</span>
+                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">{{
+                                        t(
+                                            "services.perpajakanDanPembukuanDetail.sidebar.vip_title",
+                                        )
+                                    }}</span>
                                 </div>
                             </div>
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
+                                {{
+                                    t(
+                                        "services.perpajakanDanPembukuanDetail.sidebar.vip_desc",
+                                    )
+                                }}
                             </p>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{
+                                    t(
+                                        "services.perpajakanDanPembukuanDetail.sidebar.vip_cta",
+                                    )
+                                }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{
+                                t(
+                                    "services.perpajakanDanPembukuanDetail.sidebar.vip_note",
+                                )
+                            }}</div>
                         </div>
 
                         <!-- Price Card dengan dropdown -->
@@ -359,14 +411,22 @@ const toggleSection = (id) => {
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
-                            <div class="text-[12px] text-[#686964] mb-1">Mulai dari</div>
+                            <div class="text-[12px] text-[#686964] mb-1">{{
+                                t(
+                                    "services.perpajakanDanPembukuanDetail.plans.mulai_dari",
+                                )
+                            }}</div>
                             <div class="text-[28px] font-bold leading-none text-primary mb-4">
                                 {{ product.price_label }}
                             </div>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors mb-4">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{
+                                    t(
+                                        "services.perpajakanDanPembukuanDetail.sidebar.konsultasi_cta",
+                                    )
+                                }}
                             </a>
                             <!-- Keunggulan checklist -->
                             <ul class="space-y-2">
@@ -391,7 +451,11 @@ const toggleSection = (id) => {
 
                         <!-- Layanan Terkait -->
                         <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Terkait</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{
+                                t(
+                                    "services.perpajakanDanPembukuanDetail.sidebar.related_title",
+                                )
+                            }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -404,18 +468,31 @@ const toggleSection = (id) => {
                                     </p>
                                     <div class="flex items-center justify-between mt-1">
                                         <div>
-                                            <div class="text-[11px] text-[#686964]">Mulai dari</div>
+                                            <div class="text-[11px] text-[#686964]">{{
+                                                t(
+                                                    "services.perpajakanDanPembukuanDetail.sidebar.related_from",
+                                                )
+                                            }}</div>
                                             <div class="text-[16px] font-bold text-primary leading-tight">
                                                 {{ related.price_label }}
                                             </div>
                                         </div>
                                         <span v-if="related.paket_count"
                                             class="text-[11px] text-[#686964] border border-[#E8E8E6] rounded px-2 py-0.5">
-                                            {{ related.paket_count }} Paket
+                                            {{ related.paket_count }}
+                                            {{
+                                                t(
+                                                    "services.perpajakanDanPembukuanDetail.sidebar.related_packages",
+                                                )
+                                            }}
                                         </span>
                                     </div>
                                     <div class="flex items-center justify-center gap-2 rounded-xl border border-primary py-2 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors">
-                                        Selengkapnya
+                                        {{
+                                            t(
+                                                "services.perpajakanDanPembukuanDetail.sidebar.related_cta",
+                                            )
+                                        }}
                                         <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                         </svg>

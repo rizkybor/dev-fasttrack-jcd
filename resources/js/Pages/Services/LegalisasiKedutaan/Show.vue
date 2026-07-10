@@ -3,7 +3,7 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed, watch } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -173,7 +173,9 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                         <a href="/layanan"
-                            class="text-xs sm:text-sm font-medium text-[#9e1f16] hover:underline whitespace-nowrap flex-shrink-0">Layanan</a>
+                            class="text-xs sm:text-sm font-medium text-[#9e1f16] hover:underline whitespace-nowrap flex-shrink-0">{{
+                                t("services.legalisasiKedutaanDetail.breadcrumb.layanan")
+                            }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16] flex-shrink-0" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -206,7 +208,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{ t("services.legalisasiKedutaanDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -244,7 +246,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <div class="flex items-center gap-3 mb-4 sm:mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Penjelasan Umum
+                                    {{ t("services.legalisasiKedutaanDetail.sections.penjelasan") }}
                                 </h2>
                             </div>
                             <div class="space-y-3 sm:space-y-4">
@@ -284,7 +286,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <div class="flex items-center gap-3 mb-2">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold text-black">
-                                    Dokumen yang Dapat Dilegalisasi
+                                    {{ t("services.legalisasiKedutaanDetail.sections.dokumen_dilegalisasi") }}
                                 </h2>
                             </div>
                             <p class="text-[12px] sm:text-[13px] text-[#686964] mb-4 sm:mb-5">
@@ -757,20 +759,19 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
                                     <span
                                         class="text-[13px] sm:text-[14px] font-extrabold uppercase tracking-widest text-white">
-                                        FASTTRACK – VIP LINE
+                                        {{ t("services.legalisasiKedutaanDetail.sidebar.vip_title") }}
                                     </span>
                                 </div>
                             </div>
-                            <p class="relative text-[13px] sm:text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
-                            </p>
+                            <p class="relative text-[13px] sm:text-[14px] leading-[1.6] text-white/90 mb-5"
+                                v-html="t('services.legalisasiKedutaanDetail.sidebar.vip_desc')"></p>
                             <a :href="buildWhatsappLink(product.name, jenisPengajuan)" target="_blank"
                                 rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{ t("services.legalisasiKedutaanDetail.sidebar.vip_cta") }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{ t("services.legalisasiKedutaanDetail.sidebar.vip_note") }}</div>
                         </div>
 
                         <!-- Price Card -->
@@ -784,18 +785,17 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
-                            <div class="text-[11px] sm:text-[12px] text-[#686964] mb-1">Estimasi total biaya</div>
+                            <div class="text-[11px] sm:text-[12px] text-[#686964] mb-1">{{ t("services.legalisasiKedutaanDetail.sidebar.price_label") }}</div>
                             <div
                                 class="text-[26px] sm:text-[32px] font-bold leading-none text-primary mb-1 break-words">
                                 {{ currentData.rincian_biaya?.total_amount ?? product.price_label }}
                             </div>
-                            <div class="text-[10px] sm:text-[11px] text-[#686964] mb-4">*Harga final dikonfirmasi
-                                setelah konsultasi</div>
+                            <div class="text-[10px] sm:text-[11px] text-[#686964] mb-4">{{ t("services.legalisasiKedutaanDetail.sidebar.price_note") }}</div>
                             <a :href="buildWhatsappLink(product.name, jenisPengajuan)" target="_blank"
                                 rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.legalisasiKedutaanDetail.sidebar.konsultasi_cta") }}
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
@@ -819,7 +819,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
 
                         <!-- Layanan Terkait -->
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Terkait</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.legalisasiKedutaanDetail.sidebar.related_title") }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -835,7 +835,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                     <hr class="border-[#E8E8E6]" />
                                     <div class="flex items-center justify-between min-w-0">
                                         <div class="min-w-0">
-                                            <div class="text-[10px] sm:text-[11px] text-[#686964] mb-0.5">Mulai dari
+                                            <div class="text-[10px] sm:text-[11px] text-[#686964] mb-0.5">{{ t("services.legalisasiKedutaanDetail.sidebar.related_from") }}
                                             </div>
                                             <div
                                                 class="text-[16px] sm:text-[18px] font-bold text-primary leading-none truncate">
@@ -845,7 +845,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                     </div>
                                     <div
                                         class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[12px] sm:text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors">
-                                        Selengkapnya
+                                        {{ t("services.legalisasiKedutaanDetail.sidebar.related_cta") }}
                                         <svg class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />

@@ -138,14 +138,21 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">Layanan</a>
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                            t(
+                                "services.kewajibanPelaporanUsahaDetail.breadcrumb.layanan",
+                            )
+                        }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                         <a href="/kewajiban-pelaporan-perusahaan"
-                            class="text-sm font-medium text-[#9e1f16] hover:underline">Kewajiban Pelaporan
-                            Perusahaan</a>
+                            class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                                t(
+                                    "services.kewajibanPelaporanUsahaDetail.breadcrumb.current",
+                                )
+                            }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -173,7 +180,7 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{ t("services.kewajibanPelaporanUsahaDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -192,7 +199,11 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Penjelasan Umum
+                                    {{
+                                        t(
+                                            "services.kewajibanPelaporanUsahaDetail.sections.penjelasan",
+                                        )
+                                    }}
                                 </h2>
                             </div>
                             <div class="space-y-4">
@@ -232,7 +243,11 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Syarat dan Ketentuan
+                                    {{
+                                        t(
+                                            "services.kewajibanPelaporanUsahaDetail.sections.syarat",
+                                        )
+                                    }}
                                 </h2>
                             </div>
                             <ol class="space-y-4">
@@ -355,7 +370,11 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                             <div class="flex items-center gap-3 mb-6">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Paket & Harga
+                                    {{
+                                        t(
+                                            "services.kewajibanPelaporanUsahaDetail.sections.paket",
+                                        )
+                                    }}
                                 </h2>
                             </div>
 
@@ -381,7 +400,11 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
 
                                             <!-- Harga -->
                                             <div>
-                                                <div class="text-[11px] text-[#686964]">Mulai dari</div>
+                                                <div class="text-[11px] text-[#686964]">{{
+                                                    t(
+                                                        "services.kewajibanPelaporanUsahaDetail.plans.mulai_dari",
+                                                    )
+                                                }}</div>
                                                 <div
                                                     class="text-[16px] sm:text-[18px] font-bold leading-tight text-primary">
                                                     {{ plan.price }}
@@ -445,7 +468,11 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                                         <a :href="buildWhatsappLink(plan.name)" target="_blank"
                                             rel="noopener noreferrer"
                                             class="flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-[12px] font-semibold transition-colors border border-primary text-primary hover:bg-primary hover:text-white">
-                                            Pesan Sekarang
+                                            {{
+                                                t(
+                                                    "services.kewajibanPelaporanUsahaDetail.plans.pesan",
+                                                )
+                                            }}
                                             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
                                                 stroke="currentColor" stroke-width="2.5">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -470,7 +497,11 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                                                 {{ plan.name }}
                                             </div>
                                             <div>
-                                                <div class="text-[11px] text-[#686964]">Mulai dari</div>
+                                                <div class="text-[11px] text-[#686964]">{{
+                                                    t(
+                                                        "services.kewajibanPelaporanUsahaDetail.plans.mulai_dari",
+                                                    )
+                                                }}</div>
                                                 <div
                                                     class="text-[16px] sm:text-[18px] font-bold leading-tight text-primary">
                                                     {{ plan.price }}
@@ -531,7 +562,11 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                                         <a :href="buildWhatsappLink(plan.name)" target="_blank"
                                             rel="noopener noreferrer"
                                             class="flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-[12px] font-semibold transition-colors border border-primary text-primary hover:bg-primary hover:text-white">
-                                            Pesan Sekarang
+                                            {{
+                                                t(
+                                                    "services.kewajibanPelaporanUsahaDetail.plans.pesan",
+                                                )
+                                            }}
                                             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
                                                 stroke="currentColor" stroke-width="2.5">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -563,7 +598,11 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                                 <div class="flex items-center gap-3">
                                     <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                     <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                        Dasar Hukum
+                                        {{
+                                            t(
+                                                "services.kewajibanPelaporanUsahaDetail.sections.dasar_hukum",
+                                            )
+                                        }}
                                     </h2>
                                 </div>
                                 <svg class="h-5 w-5 text-[#686964] flex-shrink-0 transition-transform duration-200"
@@ -597,19 +636,35 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
                                     <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">
-                                        FASTTRACK – VIP LINE
+                                        {{
+                                            t(
+                                                "services.kewajibanPelaporanUsahaDetail.sidebar.vip_title",
+                                            )
+                                        }}
                                     </span>
                                 </div>
                             </div>
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
+                                {{
+                                    t(
+                                        "services.kewajibanPelaporanUsahaDetail.sidebar.vip_desc",
+                                    )
+                                }}
                             </p>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{
+                                    t(
+                                        "services.kewajibanPelaporanUsahaDetail.sidebar.vip_cta",
+                                    )
+                                }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{
+                                t(
+                                    "services.kewajibanPelaporanUsahaDetail.sidebar.vip_note",
+                                )
+                            }}</div>
                         </div>
 
                         <!-- Price Card -->
@@ -622,17 +677,29 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
-                            <div class="text-[12px] text-[#686964] mb-1">Estimasi total biaya</div>
+                            <div class="text-[12px] text-[#686964] mb-1">{{
+                                t(
+                                    "services.kewajibanPelaporanUsahaDetail.sidebar.price_label",
+                                )
+                            }}</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
                                 {{ product.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
-                                *Harga final dikonfirmasi setelah konsultasi
+                                {{
+                                    t(
+                                        "services.kewajibanPelaporanUsahaDetail.sidebar.price_note",
+                                    )
+                                }}
                             </div>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-6 w-6 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{
+                                    t(
+                                        "services.kewajibanPelaporanUsahaDetail.sidebar.konsultasi_cta",
+                                    )
+                                }}
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">

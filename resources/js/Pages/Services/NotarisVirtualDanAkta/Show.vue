@@ -3,7 +3,7 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -94,13 +94,17 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">Layanan</a>
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                            t("services.notarisVirtualDanAktaDetail.breadcrumb.layanan")
+                        }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                         <a href="/notaris-virtual-dan-akta"
-                            class="text-sm font-medium text-[#9e1f16] hover:underline">Notaris Virtual Dan Akta</a>
+                            class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                                t("services.notarisVirtualDanAktaDetail.breadcrumb.current")
+                            }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -124,7 +128,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{ t("services.notarisVirtualDanAktaDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -139,7 +143,9 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                     class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan Umum</h2>
+                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{
+                            t("services.notarisVirtualDanAktaDetail.sections.penjelasan")
+                        }}</h2>
                     </div>
                     <div class="space-y-4">
                         <p v-for="(p, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`"
@@ -173,7 +179,9 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                 {{ paket.deskripsi }}
                             </p>
                             <p class="text-[10px]"
-                                :class="selectedPaketId === paket.id ? 'text-white/70' : 'text-[#686964]'">Mulai dari</p>
+                                :class="selectedPaketId === paket.id ? 'text-white/70' : 'text-[#686964]'">{{
+                                    t("services.notarisVirtualDanAktaDetail.plans.mulai_dari")
+                                }}</p>
                             <p class="text-[16px] font-bold leading-tight"
                                 :class="selectedPaketId === paket.id ? 'text-white' : 'text-primary'">
                                 {{ paket.harga }}
@@ -268,7 +276,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                                     <div class="flex items-center gap-2 mb-4">
                                                         <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
                                                         <h3 class="text-[13px] font-bold uppercase tracking-widest text-black">
-                                                            Paket & Harga
+                                                            {{ t("services.notarisVirtualDanAktaDetail.sections.paket") }}
                                                         </h3>
                                                     </div>
                                                     <div class="rounded-xl border border-[#E8E8E6] bg-white p-4">
@@ -279,7 +287,9 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                                                 {{ item.paket_harga.modal_note }}
                                                             </span>
                                                         </div>
-                                                        <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+                                                        <p class="text-[11px] text-[#686964] mb-0.5">{{
+                                                            t("services.notarisVirtualDanAktaDetail.plans.mulai_dari")
+                                                        }}</p>
                                                         <p class="text-[24px] font-bold text-primary leading-tight mb-2">
                                                             {{ item.paket_harga.harga }}
                                                         </p>
@@ -290,7 +300,9 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                                         </div>
                                                         <hr class="border-[#E8E8E6] mb-4" />
                                                         <div v-if="item.paket_harga.dokumen_legalitas?.length" class="mb-4">
-                                                            <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">Dokumen Legalitas</p>
+                                                            <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">{{
+                                                                t("services.notarisVirtualDanAktaDetail.plans.dokumen_legalitas")
+                                                            }}</p>
                                                             <ul class="space-y-2">
                                                                 <li v-for="(dok, di) in item.paket_harga.dokumen_legalitas"
                                                                     :key="`dok-${di}`" class="flex items-start gap-2">
@@ -300,7 +312,9 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                                             </ul>
                                                         </div>
                                                         <div v-if="item.paket_harga.termasuk?.length" class="mb-5">
-                                                            <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">Termasuk</p>
+                                                            <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">{{
+                                                                t("services.notarisVirtualDanAktaDetail.plans.termasuk")
+                                                            }}</p>
                                                             <ul class="space-y-2">
                                                                 <li v-for="(tmsk, ti) in item.paket_harga.termasuk"
                                                                     :key="`tmsk-${ti}`" class="flex items-start gap-2">
@@ -312,7 +326,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                                         <a :href="buildWhatsappLink(localizedProduct.name, item.paket_harga.nama)"
                                                             target="_blank" rel="noopener noreferrer"
                                                             class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                                                            Pesan Sekarang
+                                                            {{ t("services.notarisVirtualDanAktaDetail.plans.pesan") }}
                                                             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
                                                                 stroke="currentColor" stroke-width="2.5">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -327,7 +341,7 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                                                     <div class="flex items-center gap-2 mb-4">
                                                         <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
                                                         <h3 class="text-[13px] font-bold uppercase tracking-widest text-black">
-                                                            Dokumen dan Informasi yang Diperlukan
+                                                            {{ t("services.notarisVirtualDanAktaDetail.sections.dokumen") }}
                                                         </h3>
                                                     </div>
                                                     <div class="space-y-4">
