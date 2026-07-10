@@ -2,11 +2,11 @@ export default {
     hero: {
         breadcrumb: {
             layanan: 'Layanan',
-            current: 'Notaris Virtual Dan Akta',
+            current: 'Notaris Terintegrasi Digital – Akta Perusahaan Dan Perorangan',
         },
         title: 'Notaris Terintegrasi Digital – Akta Perusahaan Dan Perorangan',
         titleSub: '',
-        desc: 'Pengurusan berbagai perizinan tambahan yang dibutuhkan perusahaan — mulai dari perpajakan, legalitas yayasan, hingga peraturan ketenagakerjaan.',
+        desc: 'Penerbitan akta notaris untuk perusahaan dan perorangan — dari perubahan anggaran dasar, pergantian pengurus, hingga perjanjian dan dokumen hukum lainnya.',
         back: 'Kembali',
     },
     items: {
@@ -22,24 +22,31 @@ export default {
     list: [
         {
             id: '1',
-            title: 'Akta Notaris – PT (Perseroan Terbatas)',
-            description: 'Pengurusan akta perubahan anggaran dasar, pengurus, saham, dan RUPS Tahunan PT secara resmi.',
+            title: 'Perubahan Anggaran Dasar Perseroan',
+            description: 'Perubahan nama, tempat kedudukan, jangka waktu, maksud dan tujuan usaha, serta modal dasar dan modal disetor PT.',
             price: 'Rp 3.000.000',
-            packages: '1 Paket',
+            packages: '9 Paket',
         },
         {
             id: '2',
-            title: 'Akta Lainnya',
-            description: 'Penerbitan akta cabang, akuisisi, kuasa, jual beli saham, hingga perjanjian pranikah dan pisah harta.',
-            price: 'Rp 750.000',
-            packages: '1 Paket',
+            title: 'Perubahan Data Perseroan',
+            description: 'Pergantian atau pengangkatan kembali Direksi dan Dewan Komisaris melalui RUPS yang dituangkan dalam akta notaris.',
+            price: 'Rp 3.000.000',
+            packages: '3 Paket',
         },
          {
             id: '3',
-            title: 'Layanan Notaris Lainnya',
-            description: 'Pengesahan dokumen melalui waarmerking, legalisir, legalisasi, dan penerbitan profil perseroan dari AHU.',
-             price: 'Rp 250.000',
+            title: 'Rapat Umum Pemegang Saham Tahunan',
+            description: 'Pembuatan akta RUPS Tahunan untuk pengesahan laporan keuangan dan pelaporan ke Kementerian Hukum RI.',
+             price: 'Rp 750.000',
             packages: '1 Paket',
+        },
+        {
+            id: '4',
+            title: 'Akta Notaris Lainnya',
+            description: 'Penerbitan akta cabang, akuisisi, kuasa, jual beli saham, hingga perjanjian pranikah dan pisah harta.',
+             price: 'Rp 750.000',
+            packages: '7 Paket',
         }
     ],
 }

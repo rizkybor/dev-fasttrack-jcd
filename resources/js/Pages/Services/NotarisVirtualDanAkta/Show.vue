@@ -63,6 +63,7 @@ const selectedPaket = computed(
     () => localizedProduct.value?.paket?.find((p) => p.id === selectedPaketId.value) ?? localizedProduct.value?.paket?.[0] ?? null
 );
 const hasPaket = computed(() => !!localizedProduct.value?.paket?.length);
+const hasMultiplePaket = computed(() => (localizedProduct.value?.paket?.length ?? 0) > 1);
 
 // Accordion untuk penjelasan_layanan_items (hanya product id 1)
 const openItemId = ref(null);
@@ -70,8 +71,8 @@ const toggleItem = (id) => {
     openItemId.value = openItemId.value === id ? null : id;
 };
 
-// Mode accordion hanya untuk product id 1
-const isAccordionMode = computed(() => props.product?.id === 1);
+// Mode accordion untuk product id 1 & 2 (paket tunggal dengan sub-item detail)
+const isAccordionMode = computed(() => props.product?.id === 1 || props.product?.id === 2);
 </script>
 
 <template>
@@ -153,8 +154,8 @@ const isAccordionMode = computed(() => props.product?.id === 1);
                     </div>
                 </div>
 
-                <!-- 2. Pilih Jenis Layanan (full width) -->
-                <div v-if="hasPaket" class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
+                <!-- 2. Pilih Jenis Layanan (full width, disembunyikan jika produk hanya punya satu paket) -->
+                <div v-if="hasMultiplePaket" class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                         <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Pilih Jenis Layanan</h2>
