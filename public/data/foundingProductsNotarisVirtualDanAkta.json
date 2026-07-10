@@ -2,9 +2,9 @@
     {
         "id": 1,
         "name": {
-            "id": "Akta Notaris – PT (Perseroan Terbatas)",
-            "en": "Notarial Deed – PT (Limited Liability Company)",
-            "zh": "公证书 – PT（有限责任公司）"
+            "id": "Perubahan Anggaran Dasar Perseroan",
+            "en": "Amendment to the Company's Articles of Association",
+            "zh": "公司章程修订案"
         },
         "tag": {
             "id": "Profesional",
@@ -25,17 +25,7 @@
             "zh": "全面协助办理PT公证书事务，从章程变更、公司数据变更到年度股东大会。"
         },
         "detail_path": "/notaris-virtual-dan-akta/1",
-        "penjelasan_umum": {
-            "id": [
-                "Setelah perseroan berdiri, berbagai keputusan korporasi tetap memerlukan akta notaris agar sah dan tercatat resmi di Kementerian Hukum. Fasttrack menyediakan pendampingan menyeluruh untuk tiga layanan akta notaris yang paling sering dibutuhkan Perseroan Terbatas — mulai dari penyelenggaraan RUPS, penyusunan akta, hingga proses persetujuan dan pemberitahuan di sistem AHU Online."
-            ],
-            "en": [
-                "After a company is established, various corporate decisions still require a notarial deed to be legally valid and officially recorded at the Ministry of Law. Fasttrack provides comprehensive assistance for the three notarial deed services most frequently needed by Limited Liability Companies — from holding the General Meeting of Shareholders and drafting the deed, to the approval and notification process on the AHU Online system."
-            ],
-            "zh": [
-                "公司成立后，各项公司决议仍需公证书方可合法有效并正式登记于法律部。Fasttrack为有限责任公司最常需要的三项公证书服务提供全面协助——从召开股东大会、起草公证书，到AHU在线系统的批准及通知流程。"
-            ]
-        },
+        "penjelasan_umum": {},
         "penjelasan_umum_bullets": {
             "id": [],
             "en": [],
@@ -1710,7 +1700,57 @@
                     "en": [],
                     "zh": []
                 }
-            },
+            }
+        ],
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
+    },
+    {
+        "id": 2,
+        "name": {
+            "id": "Perubahan Data Perseroan",
+            "en": "Company Data Amendment",
+            "zh": "公司数据变更"
+        },
+        "tag": {
+            "id": "Profesional",
+            "en": "Professional",
+            "zh": "专业级"
+        },
+        "price": "1750000",
+        "price_label": "Rp 1.750.000",
+        "duration": {
+            "id": "Estimasi 3-5 hari kerja",
+            "en": "Estimated 3-5 working days",
+            "zh": "预计3-5个工作日"
+        },
+        "image": "",
+        "excerpt": {
+            "id": "Pergantian atau pengangkatan kembali Direksi dan Dewan Komisaris melalui RUPS yang dituangkan dalam akta notaris.",
+            "en": "Replacement or reappointment of the Board of Directors and Board of Commissioners through the RUPS, set out in a notarial deed.",
+            "zh": "通过股东大会（RUPS）更换或重新任命董事会及监事会，并以公证书形式载明。"
+        },
+        "detail_path": "/notaris-virtual-dan-akta/2",
+        "penjelasan_umum": {},
+        "penjelasan_umum_bullets": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "penjelasan_umum_bullets_2": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "paket": [
             {
                 "id": "perubahan-data-perseroan",
                 "nama": {
@@ -2261,7 +2301,57 @@
                     "en": [],
                     "zh": []
                 }
-            },
+            }
+        ],
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
+    },
+    {
+        "id": 3,
+        "name": {
+            "id": "Rapat Umum Pemegang Saham Tahunan",
+            "en": "Annual General Meeting of Shareholders",
+            "zh": "年度股东大会"
+        },
+        "tag": {
+            "id": "Profesional",
+            "en": "Professional",
+            "zh": "专业级"
+        },
+        "price": "3000000",
+        "price_label": "Rp 3.000.000",
+        "duration": {
+            "id": "Estimasi 3-5 hari kerja",
+            "en": "Estimated 3-5 working days",
+            "zh": "预计3-5个工作日"
+        },
+        "image": "",
+        "excerpt": {
+            "id": "Pembuatan akta RUPS Tahunan untuk pengesahan laporan keuangan dan pelaporan ke Kementerian Hukum RI.",
+            "en": "Preparation of the Annual RUPS deed for the ratification of financial statements and reporting to the Indonesian Ministry of Law.",
+            "zh": "起草年度股东大会公证书，用于批准财务报表并向印尼法律部报告。"
+        },
+        "detail_path": "/notaris-virtual-dan-akta/3",
+        "penjelasan_umum": {},
+        "penjelasan_umum_bullets": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "penjelasan_umum_bullets_2": {
+            "id": [],
+            "en": [],
+            "zh": []
+        },
+        "paket": [
             {
                 "id": "rapat-umum-pemegang-saham-tahunan",
                 "nama": {
@@ -2607,11 +2697,11 @@
         }
     },
     {
-        "id": 2,
+        "id": 4,
         "name": {
-            "id": "Akta Lainnya",
-            "en": "Other Deeds",
-            "zh": "其他公证书"
+            "id": "Akta Notaris Lainnya",
+            "en": "Other Notarial Deeds",
+            "zh": "其他公证文书"
         },
         "tag": {
             "id": "Profesional",
@@ -2621,26 +2711,26 @@
         "price": "750000",
         "price_label": "Rp 750.000",
         "duration": {
-            "id": "Estimasi 3-5 hari kerja",
-            "en": "Estimated 3-5 working days",
-            "zh": "预计3-5个工作日"
+            "id": "Estimasi 1-3 hari kerja",
+            "en": "Estimated 1-3 working days",
+            "zh": "预计1-3个工作日"
         },
         "image": "",
         "excerpt": {
-            "id": "Penerbitan akta cabang, akuisisi, kuasa, jual beli saham, hingga perjanjian pranikah dan pisah harta.",
-            "en": "Issuance of branch deeds, acquisition deeds, power of attorney deeds, share sale and purchase deeds, as well as prenuptial and property separation agreements.",
-            "zh": "颁发分支机构公证书、收购公证书、授权委托书、股份买卖公证书，以及婚前协议和财产分割协议。"
+            "id": "Pengesahan dokumen melalui waarmerking, legalisir, dan legalisasi, serta pengambilan profil lengkap perseroan terbatas dari Kementerian Hukum.",
+            "en": "Document authentication through waarmerking, certified copying, and legalization, as well as obtaining a complete company profile of a limited liability company from the Ministry of Law.",
+            "zh": "通过备案登记（waarmerking）、核证副本及公证认证进行文件认证，以及从法律部获取有限责任公司完整档案。"
         },
-        "detail_path": "/notaris-virtual-dan-akta/2",
+        "detail_path": "/notaris-virtual-dan-akta/4",
         "penjelasan_umum": {
             "id": [
-                "Layanan pengurusan berbagai jenis akta notaris di luar akta pendirian perusahaan, mencakup akta untuk keperluan pengembangan usaha seperti pembukaan cabang, jual beli saham, akuisisi, dan penggabungan perusahaan, serta akta untuk keperluan personal seperti surat kuasa dan perjanjian perkawinan. Seluruh akta disusun dan ditandatangani oleh notaris resmi sesuai ketentuan hukum yang berlaku di Indonesia."
+                "Layanan pengurusan berbagai jenis akta notaris di luar akta pendirian perusahaan, mencakup akta untuk keperluan pengembangan usaha seperti pembukaan cabang, jual beli saham, akuisisi, dan penggabungan perusahaan, serta akta untuk keperluan personal seperti surat kuasa dan perjanjian perkawinan, pengesahan dokumen melalui waarmeking, legalisir, dan legalisasi, serta pengambilan profil lengkap perseroan terbatas dari Kementerian Hukum. Seluruh akta disusun dan ditandatangani oleh notaris resmi sesuai ketentuan hukum yang berlaku di Indonesia."
             ],
             "en": [
-                "A service for processing various types of notarial deeds outside of the company establishment deed, including deeds for business development purposes such as opening branches, share sale and purchase, acquisition, and company mergers, as well as deeds for personal purposes such as powers of attorney and marriage agreements. All deeds are drafted and signed by an official notary in accordance with applicable legal provisions in Indonesia."
+                "Services for the preparation of various types of notarial deeds—excluding company incorporation deeds—encompass deeds for business expansion (such as branch openings, share transfers, acquisitions, and mergers) and personal matters (such as powers of attorney and marriage agreements), as well as document authentication services (including *waarmeking*, *legalisir*, and legalization) and the retrieval of comprehensive limited liability company profiles from the Ministry of Law. All deeds are drafted and signed by an official notary in accordance with applicable Indonesian laws."
             ],
             "zh": [
-                "为公司设立公证书以外的各类公证书提供办理服务，包括用于业务发展的公证书，如开设分支机构、股份买卖、收购及公司合并，以及用于个人事务的公证书，如授权委托书和婚姻协议。所有公证书均由正式公证人依据印度尼西亚现行法律规定起草并签署。"
+                "各类公证文书（不包括公司设立文书）的拟定服务涵盖业务扩张（如设立分公司、股权转让、收购及合并）与个人事务（如授权委托书及婚内协议）相关的文书；此外还包括文件认证服务（包括 *waarmeking*、*legalisir* 及正式认证）以及从法律部调取有限责任公司完整档案资料的服务。所有文书均由法定公证人依据印度尼西亚现行法律拟定并签署。"
             ]
         },
         "paket": [
@@ -2649,37 +2739,40 @@
                 "nama": {
                     "id": "Akta Cabang",
                     "en": "Branch Deed",
-                    "zh": "分支机构公证书"
+                    "zh": "分公司文书"
                 },
                 "deskripsi": {
-                    "id": "Pembuatan akta pembukaan kantor cabang perusahaan secara resmi melalui notaris yang berwenang.",
-                    "en": "Preparation of a deed for the official opening of a company branch office through an authorized notary.",
-                    "zh": "通过有权公证人正式起草公司分支机构开设公证书。"
+                    "id": "Pencatatan tanggal dan keberadaan dokumen di hadapan notaris tanpa memeriksa isi dokumen.",
+                    "en": "Recording the date and existence of a document before a notary without examining its contents.",
+                    "zh": "在公证人面前记录文件的日期及存在情况，而不审查文件内容。"
                 },
                 "harga": "Rp 750.000",
                 "penjelasan_layanan": {
                     "id": [
-                        "Akta cabang yang dikenal juga sebagai akta pembukaan cabang merupakan dokumen hukum yang digunakan untuk menyatakan secara resmi pembukaan unit usaha baru dari suatu perusahaan induk. Dokumen ini memiliki kekuatan hukum yang menjadi dasar legal bagi entitas baru tersebut untuk beroperasi, melakukan transaksi bisnis, serta menjalankan seluruh kegiatan yang berhubungan dengan tujuan bisnis perusahaan.",
-                        "Akta ini disusun dan disiapkan oleh notaris yang bertugas untuk memuat berbagai informasi penting, seperti identitas perusahaan induk, alamat cabang yang dibuka, penunjukan pihak yang bertanggung jawab atas kegiatan cabang, serta gambaran umum atau kuasa operasional untuk menjalankan kegiatan usaha di lokasi tersebut.",
-                        "Dengan adanya akta cabang, perusahaan memiliki dasar hukum yang jelas dalam menjalankan kegiatan usaha di wilayah baru. Sekaligus memastikan bahwa operasional cabang setiap tahap kegiatan dalam pengembangan dan tanggung jawab perusahaan dengan proporsional."
+                        "Akta cabang atau yang dikenal juga sebagai akta pembukaan cabang merupakan dokumen hukum yang digunakan untuk menyatakan secara resmi pembukaan unit usaha baru dari suatu perusahaan induk. Cabang tersebut bukan merupakan badan hukum yang berdiri sendiri, melainkan bagian yang tetap berada di bawah struktur dan tanggung jawab perusahaan pusat.",
+                        "Dokumen ini dibuat dan disahkan oleh notaris sebagai bentuk legalitas pendirian cabang usaha. Di dalamnya tercantum berbagai informasi penting, seperti identitas perusahaan induk, alamat cabang yang dibuka, penunjukan pihak yang bertanggung jawab sebagai pimpinan cabang, serta pemberian kewenangan atau kuasa operasional untuk menjalankan kegiatan usaha di lokasi tersebut.",
+                        "Dengan adanya akta cabang, perusahaan memiliki dasar hukum yang jelas dalam menjalankan kegiatan usaha di wilayah baru, sekaligus memastikan bahwa seluruh operasional cabang tetap berada dalam pengawasan dan tanggung jawab perusahaan induk.",
+                        "Dalam proses pengurusan legalitas cabang, perusahaan induk juga wajib melakukan pendaftaran dan pemrosesan melalui sistem Online Single Submission (OSS) sesuai ketentuan perizinan berusaha yang berlaku di Indonesia. Setelah seluruh persyaratan terpenuhi, akta pembukaan cabang kemudian dibuat melalui notaris sebagai dokumen resmi yang menjadi dasar hukum operasional cabang tersebut."
                     ],
                     "en": [
-                        "A branch deed, also known as a branch opening deed, is a legal document used to officially declare the opening of a new business unit of a parent company. This document has legal force that serves as the legal basis for the new entity to operate, conduct business transactions, and carry out all activities related to the company's business purpose.",
-                        "This deed is drafted and prepared by the notary in charge to contain various important information, such as the identity of the parent company, the address of the branch opened, the appointment of the party responsible for the branch's activities, as well as a general description or operational authority to conduct business activities at that location.",
-                        "With a branch deed, the company has a clear legal basis for conducting business activities in a new area, while also ensuring that the branch's operations at every stage of development and company responsibility are carried out proportionately."
+                        "Branch deed or also known as branch opening deed is a legal document used to officially declare the establishment of a new business unit from a parent company. The branch is not a separate legal entity, but rather a part that remains under the structure and responsibility of the head office.",
+                        "This document is created and approved by a notary as a form of legal validity for the establishment of the branch. It contains various important information, such as the identity of the parent company, the address of the opened branch, the designation of the party responsible as the branch manager, and the granting of authority or operational power to conduct business activities at that location.",
+                        "With the existence of a branch deed, the company has a clear legal basis for conducting business activities in a new area, while ensuring that all branch operations remain under the supervision and responsibility of the parent company.",
+                        "In the process of handling branch legality, the parent company must also register and process through the Online Single Submission (OSS) system according to the business licensing regulations in Indonesia. After all requirements are met, the branch opening deed is then created through a notary as an official document serving as the legal basis for the operational activities of that branch."
                     ],
                     "zh": [
-                        "分支机构公证书（又称分支机构开设公证书）是一种用于正式宣告母公司新设经营单位的法律文件。该文件具有法律效力，是新实体开展运营、进行商业交易，以及执行与公司经营目的相关的全部活动的法律依据。",
-                        "该公证书由负责的公证人起草和准备，须包含各项重要信息，例如母公司身份、所开设分支机构的地址、负责分支机构活动的责任人任命，以及在该地点开展经营活动的概况或运营授权。",
-                        "通过分支机构公证书，公司在新地区开展经营活动拥有明确的法律依据，同时确保分支机构在每个发展阶段的运营及公司责任均按比例落实。"
+                        "分公司设立契据（亦称分公司开立契据）是一份法律文件，用于正式宣告母公司设立新的业务单位。该分公司并不构成独立的法律实体，而是作为总公司组织架构的一部分，并由总公司承担相应责任。",
+                        "本文件由公证人拟定并认证，旨在确立业务分支机构的设立。文件中载有各项关键信息，例如母公司身份、新设分支机构地址、分支机构负责人的任命，以及在该地点开展业务活动的运营授权。",
+                        "随着分公司设立文件的落实，该公司在新的区域开展业务活动便有了明确的法律依据，同时也确保了所有分公司业务均处于母公司的监管与责任范围之内。",
+                        "在为分支机构确立法律地位的过程中，母公司还须根据印尼适用的营业许可法规，通过“在线单一申报”（OSS）系统进行注册并办理申请手续。在满足所有相关要求后，需在公证人面前签署分支机构设立契据；该契据即作为确立分支机构运营法律依据的正式文件。"
                     ]
                 },
                 "penjelasan_layanan_items": {
                     "id": [
                         {
-                            "id": "akta-cabang-item",
+                            "id": "akta-cabang",
                             "paket_harga": {
-                                "nama": "AKTA CABANG",
+                                "nama": "Akta Cabang",
                                 "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
                                 "harga": "Rp 750.000",
                                 "gratis_konsultasi": true,
@@ -2698,7 +2791,7 @@
                                     "judul": "Data Para Pemegang Saham",
                                     "items": [
                                         "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta  rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
                                         "Data: Nomor telepon, Alamat email"
                                     ]
                                 },
@@ -2707,16 +2800,16 @@
                                     "judul": "Legalitas Perusahaan Yang Dimiliki",
                                     "items": [
                                         "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
-                                        "Seluruh Akta Perusahaan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                        "Seluruh Akta Perubahan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
                                         "Nomor Poko Wajib Pajak Perseroan;",
-                                        "Nomor Induk Perusahaan"
+                                        "Nomor Induk Perusahaan."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                    "judul": "Notulen/Sirkular Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
                                     "items": [
-                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima"
                                     ]
                                 },
                                 {
@@ -2736,14 +2829,14 @@
                     ],
                     "en": [
                         {
-                            "id": "akta-cabang-item",
+                            "id": "akta-cabang",
                             "paket_harga": {
-                                "nama": "BRANCH DEED",
+                                "nama": "Branch Deed",
                                 "modal_note": "*Capital up to IDR 1 Billion",
                                 "harga": "Rp 750.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "Copy of the Branch Office Opening Deed"
+                                    "Copy of Branch Office Opening Deed"
                                 ],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
@@ -2756,33 +2849,33 @@
                                     "nomor": 1,
                                     "judul": "Shareholders' Data",
                                     "items": [
-                                        "For Indonesian individuals, please attach a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
-                                        "For Indonesian legal entities, please attach a color scan of the Deed of Establishment and all its amendments, complete with the approval/notification from the Ministry of Law and Human Rights, along with the company's Taxpayer Identification Number (NPWP) and a copy of the Director's ID Card.",
+                                        "Indonesian individuals must attach a valid colored scan copy of their Identity Card (e-KTP) and Tax Identification Number (NPWP), and/or;",
+                                        "Indonesian legal entities must attach a colored scan copy of the Company's Deed of Establishment and all its amendments, complete with the ratification and approval/notification from the Ministry of Law and Human Rights, along with the company's Tax Identification Number (NPWP) and a copy of the Director's Identity Card.",
                                         "Data: Phone number, Email address"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "Company Legal Documents Held",
+                                    "judul": "Legality of Existing Company",
                                     "items": [
-                                        "Deed of Establishment and Ratification from the Indonesian Ministry of Law;",
-                                        "All company deeds held, along with the Approval/Notification from the Indonesian Ministry of Law;",
-                                        "Company Taxpayer Identification Number;",
-                                        "Company Registration Number"
+                                        "Deed of Establishment and its ratification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "All Deeds of Amendment held, together with the Approval/Notification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "Company's Tax Identification Number (NPWP);",
+                                        "Company Registration Number (NIB)."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
                                     "judul": "Minutes/Circular Resolution of Shareholders/Forms/Letters Completed and Signed by All Parties",
                                     "items": [
-                                        "All drafts and content will be prepared by us after the order is placed and all required documents and information have been received."
+                                        "The complete draft and content will be prepared by us after the order is placed and all required documents and information have been received"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
                                     "judul": "Branch Head's Identity",
                                     "items": [
-                                        "a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP)"
+                                        "Colored scan copy of a valid Identity Card (e-KTP) and Tax Identification Number (NPWP)"
                                     ]
                                 },
                                 {
@@ -2795,19 +2888,17 @@
                     ],
                     "zh": [
                         {
-                            "id": "akta-cabang-item",
+                            "id": "akta-cabang",
                             "paket_harga": {
-                                "nama": "分支机构公证书",
-                                "modal_note": "*资本最高10亿印尼盾",
+                                "nama": "分公司设立文书",
+                                "modal_note": "*注册资本最高至10亿印尼盾",
                                 "harga": "Rp 750.000",
                                 "gratis_konsultasi": true,
-                                "dokumen_legalitas": [
-                                    "分支机构开设公证书复印件"
-                                ],
+                                "dokumen_legalitas": ["分公司设立文书副本"],
                                 "termasuk": [
-                                    "Fasttrack 文件快递服务",
-                                    "Fasttrack 数字文件安全存储",
-                                    "Fasttrack 套件"
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
                                 ]
                             },
                             "dokumen_diperlukan": [
@@ -2815,38 +2906,38 @@
                                     "nomor": 1,
                                     "judul": "股东资料",
                                     "items": [
-                                        "印尼籍个人，请附上有效的身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件；及/或",
-                                        "印尼法人实体，请附上公司设立公证书及其全部变更文件的彩色扫描件，须包含法律与人权部的批准/通知函，以及公司的纳税人识别号（NPWP）和董事身份证复印件。",
+                                        "印尼籍自然人股东须附上有效的彩色电子身份证（e-KTP）扫描件及纳税人识别号（NPWP）复印件，及/或；",
+                                        "印尼法人实体股东须附上公司设立文书及其全部修订文件的彩色扫描件（须附有法律与人权部的批准/核准通知），以及公司纳税人识别号（NPWP）复印件和董事身份证复印件。",
                                         "资料：电话号码、电子邮箱地址"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "所持有的公司合法性文件",
+                                    "judul": "现有公司合法文件",
                                     "items": [
-                                        "印尼法律部出具的设立公证书及批准文件；",
-                                        "所持有的全部公司公证书及印尼法律部的批准/通知函；",
-                                        "公司纳税人识别号；",
-                                        "公司注册号"
+                                        "公司设立文书及印尼法律与人权部核准文件；",
+                                        "所持有的全部变更文书及印尼法律与人权部的批准/核准通知；",
+                                        "公司纳税人识别号（NPWP）；",
+                                        "公司注册号（NIB）。"
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "股东会议纪要/循环决议/由各方填写并签署的表格/函件",
+                                    "judul": "股东会议记录/循环决议/表格/文件（须由各方填妥并签署）",
                                     "items": [
-                                        "所有草案及内容将在下单且收到所有文件与信息要求后由我方准备。"
+                                        "全部草案及内容将在您下单并且我方收到所有所需文件与资料后由我方准备"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "分支机构负责人身份证明",
+                                    "judul": "分公司负责人身份资料",
                                     "items": [
-                                        "有效身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件"
+                                        "有效的彩色电子身份证（e-KTP）扫描件及纳税人识别号（NPWP）复印件"
                                     ]
                                 },
                                 {
                                     "nomor": 5,
-                                    "judul": "分支机构办公地址",
+                                    "judul": "分公司办公地址",
                                     "items": []
                                 }
                             ]
@@ -2863,83 +2954,47 @@
                 "id": "akta-jual-beli-saham",
                 "nama": {
                     "id": "Akta Jual Beli Saham",
-                    "en": "Share Sale and Purchase Deed",
-                    "zh": "股份买卖公证书"
+                    "en": "Share Purchase and Sale Deed",
+                    "zh": "股票买卖文书"
                 },
                 "deskripsi": {
-                    "id": "Pembuatan akta pengalihan kepemilikan saham antar pemegang saham secara sah di hadapan notaris.",
-                    "en": "Preparation of a deed for the legal transfer of share ownership between shareholders before a notary.",
-                    "zh": "在公证人面前合法起草股东之间股份所有权转让公证书。"
+                    "id": "Pencatatan tanggal dan keberadaan dokumen di hadapan notaris tanpa memeriksa isi dokumen.",
+                    "en": "Recording the date and existence of a document before a notary without examining its contents.",
+                    "zh": "在公证人面前记录文件的日期及存在情况，而不审查文件内容。"
                 },
                 "harga": "Rp 1.500.000",
                 "penjelasan_layanan": {
                     "id": [
-                        "Akta Jual Beli (AJB) merupakan akta identik yang dibuat sebagai bukti sah terjadinya peralihan hak dari pihak penjual kepada pihak pembeli. Dokumen ini memiliki kekuatan hukum yang menjadi peralihan dan ketentuan yang harus dipenuhi agar transaksi memiliki kekuatan hukum dan dapat diproses sesuai peraturan yang berlaku.",
-                        "Pembuatan Akta Jual Beli (AJB) merupakan proses hukum yang dilakukan sebagai bukti sah terjadinya peralihan hak dari penjual kepada pembeli. Dokumen ini memuat identitas para pihak, ketentuan, dan ketentuan yang harus dipenuhi agar transaksi memiliki kekuatan hukum dan dapat diproses sesuai peraturan yang berlaku.",
-                        "Transaksi jual beli harus dilakukan oleh pihak yang cakap secara hukum, yaitu telah dewasa menurut ketentuan hukum atau telah menikah, serta tidak berada di bawah pengampuan.",
-                        {
-                            "type": "title",
-                            "text": "Kecakapan Hukum"
-                        },
-                        "Penjual dan pembeli wajib merupakan pihak yang cakap secara hukum, yaitu telah dewasa menurut ketentuan hukum atau telah menikah, serta tidak berada di bawah pengampuan.",
-                        {
-                            "type": "title",
-                            "text": "Identitas Para Pihak"
-                        },
-                        "Dokumen identitas Para Pihak meliputi : KTP, NIK, NPWP, Bukti/Akta Nikah atau Perjanjian Pra/Postnuptial jika ada.",
-                        {
-                            "type": "title",
-                            "text": "Kepemilikan Objek"
-                        },
-                        "Dokumen kepemilikan notaris yang sah dan berisi hukum berupa Dokumen Kepemilikan Saham Resmi dari Perusahaan."
+                        "Akta Jual Beli (AJB) merupakan akta otentik yang dibuat sebagai bukti sah terjadinya peralihan hak dari pihak penjual kepada pihak pembeli.",
+                        "Pembuatan Akta Jual Beli (AJB) merupakan proses hukum yang dilakukan sebagai bukti sah terjadinya peralihan hak dari penjual kepada pembeli. Dalam pelaksanaannya, terdapat sejumlah syarat dan ketentuan yang harus dipenuhi agar transaksi memiliki kekuatan hukum dan dapat diproses sesuai peraturan yang berlaku.",
+                        "Kesepakatan Para Pihak - Transaksi jual beli harus didasarkan pada kesepakatan antara penjual dan pembeli mengenai objek, harga, serta syarat pembayaran. Kesepakatan tersebut dilakukan tanpa adanya paksaan, penipuan, maupun kekhilafan.",
+                        "Kecakapan Hukum - Penjual dan pembeli wajib merupakan pihak yang cakap secara hukum, yaitu telah dewasa menurut ketentuan hukum atau telah menikah, serta tidak berada di bawah pengampuan.",
+                        "Dokumen Identitas Para Pihak - Dokumen Identitas Para Pihak meliputi : KTP, KK, NPWP, Buku/ Akta Nikah atau Perjanjian Pra/ Post Nikah jika ada.",
+                        "Dokumen kepemilikan Objek - Dokumen kepemilikan objek yang sah dimata hukum berupa Dokumen Kepemilikan Saham Resmi dari Perusahaan."
                     ],
                     "en": [
-                        "A Sale and Purchase Deed (AJB) is a deed made as valid proof of the transfer of rights from the seller to the buyer. This document has legal force covering the transfer and the provisions that must be fulfilled for the transaction to have legal force and be processed in accordance with applicable regulations.",
-                        "The preparation of a Sale and Purchase Deed (AJB) is a legal process carried out as valid proof of the transfer of rights from the seller to the buyer. This document contains the identity of the parties and the provisions that must be fulfilled for the transaction to have legal force and be processed in accordance with applicable regulations.",
-                        "The sale and purchase transaction must be carried out by legally competent parties, namely those who are of legal age or married, and are not under guardianship.",
-                        {
-                            "type": "title",
-                            "text": "Legal Capacity"
-                        },
-                        "The seller and buyer must be legally competent parties, namely those who are of legal age or married, and are not under guardianship.",
-                        {
-                            "type": "title",
-                            "text": "Identity of the Parties"
-                        },
-                        "Identity documents of the Parties include: ID Card (KTP), Population Identification Number (NIK), Taxpayer Identification Number (NPWP), Marriage Certificate, or Prenuptial/Postnuptial Agreement if any.",
-                        {
-                            "type": "title",
-                            "text": "Ownership of the Object"
-                        },
-                        "A valid notarial ownership document with legal content in the form of an Official Share Ownership Document from the Company."
+                        "A Sale and Purchase Deed (AJB) is an authentic deed executed as valid proof of the transfer of rights from the seller to the buyer.",
+                        "The drafting of a Sale and Purchase Deed (AJB) is a legal process serving as valid proof of the transfer of rights from the seller to the buyer. Its execution entails meeting specific terms and conditions to ensure the transaction holds legal force and can be processed in accordance with applicable regulations.",
+                        "Agreement Between the Parties – A sale and purchase transaction must be based on an agreement between the seller and the buyer regarding the object, price, and payment terms. This agreement must be reached without coercion, fraud, or mistake.",
+                        "Legal Capacity – The seller and the buyer must be legally competent parties—meaning they have reached the age of majority under applicable law or are married, and are not under legal guardianship.",
+                        "Document of Ownership – The document of ownership of the object must be valid under the law, such as the official share ownership documents from the company.",
+                        "Asset Ownership Documents – Legally valid asset ownership documents consist of official share ownership documents issued by the company."
                     ],
                     "zh": [
-                        "买卖公证书（AJB）是作为卖方向买方权利转让合法证明而制作的公证书。该文件具有法律效力，涵盖了转让内容及交易须满足的规定，以使交易具有法律效力并可依据现行法规办理。",
-                        "买卖公证书（AJB）的制作是作为卖方向买方权利转让合法证明而进行的法律程序。该文件载明各方身份及交易须满足的规定，以使交易具有法律效力并可依据现行法规办理。",
-                        "买卖交易须由具有法律行为能力的一方进行，即依法已成年或已婚，且未被监护的一方。",
-                        {
-                            "type": "title",
-                            "text": "法律行为能力"
-                        },
-                        "卖方和买方须为具有法律行为能力的一方，即依法已成年或已婚，且未被监护。",
-                        {
-                            "type": "title",
-                            "text": "各方身份"
-                        },
-                        "各方身份文件包括：身份证（KTP）、居民身份号码（NIK）、纳税人识别号（NPWP）、结婚证明/证书，或婚前/婚后协议（如有）。",
-                        {
-                            "type": "title",
-                            "text": "标的物所有权"
-                        },
-                        "由公证人出具、具有法律内容的合法所有权文件，形式为公司正式股权所有权文件。"
+                        "买卖契据（AJB）是一份具有法律效力的正式契据，作为权利从卖方转移至买方的有效证明。",
+                        "买卖契据（AJB）的拟定是一项法律程序，作为权利从卖方转移至买方的有效凭证。该契据的签署须满足特定条款与条件，以确保交易具备法律效力，并能依据相关法规进行办理。",
+                        "当事人之间的协议——买卖交易必须基于买卖双方就标的物、价格及付款条款达成的协议。该协议的达成不得存在胁迫、欺诈或重大误解。",
+                        "法律行为能力——卖方和买方必须是具备法律行为能力的当事人，即根据适用法律已达法定成年年龄或已结婚，且未处于法定监护之下。",
+                        "当事人的身份证明文件——当事人的身份证明文件包括：国民身份证（KTP）、户口簿（KK）、纳税人识别号（NPWP）、结婚证/婚姻登记簿，以及婚前或婚后协议（如适用）。",
+                        "资产所有权文件——具有法律效力的资产所有权文件包括由公司签发的正式股份所有权文件。"
                     ]
                 },
                 "penjelasan_layanan_items": {
                     "id": [
                         {
-                            "id": "akta-jual-beli-saham-item",
+                            "id": "akta-jual-beli-saham",
                             "paket_harga": {
-                                "nama": "AKTA JUAL BELI SAHAM",
+                                "nama": "Akta Jual Beli Saham",
                                 "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
                                 "harga": "Rp 1.500.000",
                                 "gratis_konsultasi": true,
@@ -2958,7 +3013,7 @@
                                     "judul": "Data Para Pemegang Saham",
                                     "items": [
                                         "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta  rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
                                         "Data: Nomor telepon, Alamat email"
                                     ]
                                 },
@@ -2967,16 +3022,16 @@
                                     "judul": "Legalitas Perusahaan Yang Dimiliki",
                                     "items": [
                                         "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
-                                        "Seluruh Akta Perusahaan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                        "Seluruh Akta Perubahan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
                                         "Nomor Poko Wajib Pajak Perseroan;",
-                                        "Nomor Induk Perusahaan"
+                                        "Nomor Induk Perusahaan."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                    "judul": "Notulen/Sirkular Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
                                     "items": [
-                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima"
                                     ]
                                 },
                                 {
@@ -2996,14 +3051,14 @@
                     ],
                     "en": [
                         {
-                            "id": "akta-jual-beli-saham-item",
+                            "id": "akta-jual-beli-saham",
                             "paket_harga": {
-                                "nama": "SHARE SALE AND PURCHASE DEED",
+                                "nama": "Deed of Share Sale and Purchase",
                                 "modal_note": "*Capital up to IDR 1 Billion",
                                 "harga": "Rp 1.500.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "2 (two) Copies of the Share Sale and Purchase Deed"
+                                    "2 (two) Copies of Deed of Share Sale and Purchase"
                                 ],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
@@ -3016,33 +3071,33 @@
                                     "nomor": 1,
                                     "judul": "Shareholders' Data",
                                     "items": [
-                                        "For Indonesian individuals, please attach a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
-                                        "For Indonesian legal entities, please attach a color scan of the Deed of Establishment and all its amendments, complete with the approval/notification from the Ministry of Law and Human Rights, along with the company's Taxpayer Identification Number (NPWP) and a copy of the Director's ID Card.",
+                                        "Indonesian individuals must attach a valid colored scan copy of their Identity Card (e-KTP) and Tax Identification Number (NPWP), and/or;",
+                                        "Indonesian legal entities must attach a colored scan copy of the Company's Deed of Establishment and all its amendments, complete with the ratification and approval/notification from the Ministry of Law and Human Rights, along with the company's Tax Identification Number (NPWP) and a copy of the Director's Identity Card.",
                                         "Data: Phone number, Email address"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "Company Legal Documents Held",
+                                    "judul": "Legality of Existing Company",
                                     "items": [
-                                        "Deed of Establishment and Ratification from the Indonesian Ministry of Law;",
-                                        "All company deeds held, along with the Approval/Notification from the Indonesian Ministry of Law;",
-                                        "Company Taxpayer Identification Number;",
-                                        "Company Registration Number"
+                                        "Deed of Establishment and its ratification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "All Deeds of Amendment held, together with the Approval/Notification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "Company's Tax Identification Number (NPWP);",
+                                        "Company Registration Number (NIB)."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
                                     "judul": "Minutes/Circular Resolution of Shareholders/Forms/Letters Completed and Signed by All Parties",
                                     "items": [
-                                        "All drafts and content will be prepared by us after the order is placed and all required documents and information have been received."
+                                        "The complete draft and content will be prepared by us after the order is placed and all required documents and information have been received"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
                                     "judul": "Branch Head's Identity",
                                     "items": [
-                                        "a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP)"
+                                        "Colored scan copy of a valid Identity Card (e-KTP) and Tax Identification Number (NPWP)"
                                     ]
                                 },
                                 {
@@ -3055,19 +3110,19 @@
                     ],
                     "zh": [
                         {
-                            "id": "akta-jual-beli-saham-item",
+                            "id": "akta-jual-beli-saham",
                             "paket_harga": {
-                                "nama": "股份买卖公证书",
-                                "modal_note": "*资本最高10亿印尼盾",
+                                "nama": "股份买卖文书",
+                                "modal_note": "*注册资本最高至10亿印尼盾",
                                 "harga": "Rp 1.500.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "2（两）份股份买卖公证书复印件"
+                                    "2（两）份股份买卖文书副本"
                                 ],
                                 "termasuk": [
-                                    "Fasttrack 文件快递服务",
-                                    "Fasttrack 数字文件安全存储",
-                                    "Fasttrack 套件"
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
                                 ]
                             },
                             "dokumen_diperlukan": [
@@ -3075,38 +3130,38 @@
                                     "nomor": 1,
                                     "judul": "股东资料",
                                     "items": [
-                                        "印尼籍个人，请附上有效的身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件；及/或",
-                                        "印尼法人实体，请附上公司设立公证书及其全部变更文件的彩色扫描件，须包含法律与人权部的批准/通知函，以及公司的纳税人识别号（NPWP）和董事身份证复印件。",
+                                        "印尼籍自然人股东须附上有效的彩色电子身份证（e-KTP）扫描件及纳税人识别号（NPWP）复印件，及/或；",
+                                        "印尼法人实体股东须附上公司设立文书及其全部修订文件的彩色扫描件（须附有法律与人权部的批准/核准通知），以及公司纳税人识别号（NPWP）复印件和董事身份证复印件。",
                                         "资料：电话号码、电子邮箱地址"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "所持有的公司合法性文件",
+                                    "judul": "现有公司合法文件",
                                     "items": [
-                                        "印尼法律部出具的设立公证书及批准文件；",
-                                        "所持有的全部公司公证书及印尼法律部的批准/通知函；",
-                                        "公司纳税人识别号；",
-                                        "公司注册号"
+                                        "公司设立文书及印尼法律与人权部核准文件；",
+                                        "所持有的全部变更文书及印尼法律与人权部的批准/核准通知；",
+                                        "公司纳税人识别号（NPWP）；",
+                                        "公司注册号（NIB）。"
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "股东会议纪要/循环决议/由各方填写并签署的表格/函件",
+                                    "judul": "股东会议记录/循环决议/表格/文件（须由各方填妥并签署）",
                                     "items": [
-                                        "所有草案及内容将在下单且收到所有文件与信息要求后由我方准备。"
+                                        "全部草案及内容将在您下单并且我方收到所有所需文件与资料后由我方准备"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "分支机构负责人身份证明",
+                                    "judul": "分公司负责人身份资料",
                                     "items": [
-                                        "有效身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件"
+                                        "有效的彩色电子身份证（e-KTP）扫描件及纳税人识别号（NPWP）复印件"
                                     ]
                                 },
                                 {
                                     "nomor": 5,
-                                    "judul": "分支机构办公地址",
+                                    "judul": "分公司办公地址",
                                     "items": []
                                 }
                             ]
@@ -3123,84 +3178,51 @@
                 "id": "akta-pengambilalihan-akuisisi",
                 "nama": {
                     "id": "Akta Pengambilalihan (Akuisisi)",
-                    "en": "Acquisition Deed",
-                    "zh": "收购公证书"
+                    "en": "Deed of Acquisition",
+                    "zh": "收购契据"
                 },
                 "deskripsi": {
-                    "id": "Pembuatan akta pengambilalihan perusahaan sesuai ketentuan hukum yang berlaku di Indonesia.",
-                    "en": "Preparation of a company acquisition deed in accordance with applicable legal provisions in Indonesia.",
-                    "zh": "依据印度尼西亚现行法律规定起草公司收购公证书。"
+                    "id": "Pencatatan tanggal dan keberadaan dokumen di hadapan notaris tanpa memeriksa isi dokumen.",
+                    "en": "Recording the date and existence of a document before a notary without examining its contents.",
+                    "zh": "在公证人面前记录文件的日期及存在情况，而不审查文件内容。"
                 },
                 "harga": "Rp 7.000.000",
                 "penjelasan_layanan": {
                     "id": [
-                        "Akta akuisisi merupakan dokumen hukum yang dibuat dan disahkan oleh notaris sebagai bukti autentik atas terjadinya proses pengambilalihan suatu perusahaan oleh pihak perusahaan lain. Dokumen ini memiliki kekuatan hukum yang mengikut serta mengikat dan dalam pelaksanaan transaksi akuisisi. Di dalam akta akuisisi terdapat berbagai ketentuan penting yang mengatur proses pengalihan hak, kewajiban, kepemilikan saham maupun para pihak. Selain itu, akta tersebut juga memuat informasi mengenai perubahan struktur organisasi perseroan, termasuk pengertian direktur, komisaris, dan pihak-pihak yang memiliki kewenangan dalam pengawasan perusahaan setelah proses akuisisi selesai dilaksanakan.",
-                        "Lebih lanjut, akta akuisisi merupakan salah satu hal yang sangat penting bagi kedua belah pihak dalam menjalankan transaksi. Perjalanan ini memuat ketentuan-ketentuan kepastian hukum, melindungi kepentingan para pihak, serta menghindari potensi sengketa di kemudian hari. Oleh karena itu, keberadaan akta akuisisi menjadi elemen penting dalam memastikan bahwa proses pengambilalihan ini berjalan secara transparan, dan sesuai dengan prinsip dan persyaratan perjanjian yang berlaku.",
-                        {
-                            "type": "title",
-                            "text": "Dalam Proses Pembuatan Akta Pengambilalihan ada pihak yang wajib memenuhi persyaratan dari sisi hukum, sebagai berikut:"
-                        },
-                        {
-                            "type": "title",
-                            "text": "Penetapan RUPS"
-                        },
-                        "Melalui RUPS, para pemegang saham diberikan kesempatan untuk memilih, mempertimbangkan, dan memberikan keputusan atas rencana kegiatan yang dilakukan oleh pihak-pihak terkait, termasuk persetujuan atas aksi korporasi yang dilakukan oleh maanagement. Ketentuan mengenai pelaksanaan RUPS bertujuan untuk memastikan perusahaan setiap saat selalu beroperasi dalam tata kelola yang baik (good corporate governance), melindungi hak-hak pemegang saham, serta memastikan pengambilan keputusan korporasi dilakukan secara transparan dan sesuai dengan ketentuan peraturan yang berlaku. Dengan demikian, keputusan akuisisi yang telah memperoleh persetujuan RUPS memiliki dasar hukum yang kuat dan dapat dilaksanakan secara sah.",
-                        {
-                            "type": "title",
-                            "text": "Pemberitahuan Karyawan"
-                        },
-                        "Perusahaan harus menjamin kewajiban korporasi selalu terhadap dengan menginformasikan rencana pengambilalihan melalui media sosial atau surat resmi kepada seluruh karyawan perusahaan yang terdampak dalam jangka waktu paling lambat 30 (tiga puluh) hari sebelum dilaksanakannya keputusan RUPS yang akan membahas rencana pengambilalihan. Ketentuan ini bertujuan untuk memberikan kesempatan kepada para pemangku kepentingan: karyawan, dan pihak lain dalam jangka waktu yang ditentukan, semua termasuk waktu yang tepat untuk melihat kondisi dan perkembangan pengambilalihan, kemampuan itu bertujuan untuk memberikan kesempatan kepada para pemegang saham, karyawan, dan pihak-pihak hukum lainnya untuk membela diri terhadap kepentingan mereka."
+                        "Akta akuisisi merupakan dokumen hukum yang dibuat dan disahkan oleh notaris sebagai bukti autentik atas terjadinya proses pengambilalihan suatu perusahaan oleh pihak perusahaan lain. Dokumen ini memiliki kekuatan hukum yang mengikat serta menjadi dasar legal dalam pelaksanaan transaksi akuisisi. Di dalam akta akuisisi tercantum berbagai ketentuan penting yang mengatur proses pengalihan kepemilikan, baik dalam bentuk saham maupun aset perusahaan. Selain itu, akta tersebut juga memuat informasi mengenai perubahan struktur organisasi perusahaan, termasuk pergantian direksi, komisaris, atau pihak-pihak yang memiliki kewenangan dalam pengelolaan perusahaan setelah proses akuisisi selesai dilaksanakan.",
+                        "Lebih lanjut, akta akuisisi menjelaskan secara rinci hak dan kewajiban masing-masing pihak yang terlibat dalam transaksi. Pengaturan ini bertujuan untuk memberikan kepastian hukum, melindungi kepentingan para pihak, serta menghindari potensi sengketa di kemudian hari. Oleh karena itu, keberadaan akta akuisisi menjadi elemen penting dalam memastikan bahwa proses pengambilalihan perusahaan dilakukan secara sah, transparan, dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.",
+                        "Dalam Proses Pembuatan Akta Pengambilalihan para pihak wajib memenuhi persyaratan administratif dan hukum, sebagai berikut:",
+                        "Persetujuan RUPS - Melalui RUPS, para pemegang saham diberikan kesempatan untuk menilai, mempertimbangkan, dan memberikan keputusan atas rencana transaksi yang dapat memengaruhi kondisi keuangan, kepemilikan, serta arah kebijakan perusahaan di masa mendatang. Ketentuan mengenai persetujuan RUPS bertujuan untuk menjamin penerapan prinsip tata kelola perusahaan yang baik (good corporate governance), melindungi hak-hak pemegang saham, serta memastikan bahwa proses pengambilalihan dilakukan secara transparan dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku. Dengan demikian, keputusan akuisisi yang telah memperoleh persetujuan RUPS memiliki dasar hukum yang kuat dan dapat dilaksanakan secara sah.",
+                        "Pemberitahuan Karyawan - Salah satu bentuk pemenuhan kewajiban tersebut adalah dengan mengumumkan rencana pengambilalihan melalui media surat kabar serta memberikan pemberitahuan secara tertulis kepada seluruh karyawan perusahaan yang harus dilakukan dalam jangka waktu paling lambat 30 (tiga puluh) hari sebelum dilaksanakannya pemanggilan Rapat Umum Pemegang Saham (RUPS) yang akan membahas dan memutuskan rencana pengambilalihan. Ketentuan ini bertujuan untuk memberikan kesempatan kepada para pemegang saham, karyawan, dan pihak terkait lainnya untuk memperoleh informasi yang memadai mengenai transaksi yang akan dilakukan."
                     ],
                     "en": [
-                        "An acquisition deed is a legal document made and ratified by a notary as authentic proof of the acquisition of one company by another company. This document has binding legal force in the implementation of the acquisition transaction. The acquisition deed contains various important provisions governing the transfer of rights, obligations, share ownership, and the parties involved. In addition, the deed also contains information on changes to the company's organizational structure, including the roles of directors, commissioners, and parties with authority over company supervision after the acquisition process has been completed.",
-                        "Furthermore, the acquisition deed is a very important matter for both parties in carrying out the transaction. It contains provisions that provide legal certainty, protect the interests of the parties, and avoid potential disputes in the future. Therefore, the existence of the acquisition deed is an important element in ensuring that this acquisition process runs transparently and in accordance with applicable principles and agreement requirements.",
-                        {
-                            "type": "title",
-                            "text": "In the process of preparing the Acquisition Deed, there are parties who must fulfill legal requirements, as follows:"
-                        },
-                        {
-                            "type": "title",
-                            "text": "RUPS Resolution"
-                        },
-                        "Through the RUPS, shareholders are given the opportunity to choose, consider, and make decisions on the plans carried out by the relevant parties, including approval of corporate actions taken by management. The provisions on holding the RUPS aim to ensure that the company always operates under good corporate governance, protect shareholder rights, and ensure that corporate decision-making is carried out transparently and in accordance with applicable regulatory provisions. Accordingly, an acquisition decision that has obtained RUPS approval has a strong legal basis and can be legally implemented.",
-                        {
-                            "type": "title",
-                            "text": "Employee Notification"
-                        },
-                        "The company must ensure its corporate obligations are always fulfilled by informing all affected employees of the acquisition plan through social media or an official letter no later than 30 (thirty) days before the RUPS resolution discussing the acquisition plan is held. This provision aims to give stakeholders — employees and other parties — the opportunity, within the specified period, to observe the conditions and developments of the acquisition, thereby giving shareholders, employees, and other legal parties the opportunity to protect their interests."
+                        "A deed of acquisition is a legal document drawn up and legalized by a notary as authentic evidence of the takeover process of a company by another company. This document has binding legal force and serves as the legal basis for carrying out the acquisition transaction. The deed of acquisition contains various important provisions governing the process of ownership transfer, whether in the form of shares or company assets. In addition, the deed also contains information regarding changes to the company's organizational structure, including the replacement of directors, commissioners, or other parties holding authority in the management of the company after the acquisition process has been completed.",
+                        "Furthermore, the deed of acquisition explains in detail the rights and obligations of each party involved in the transaction. This arrangement aims to provide legal certainty, protect the interests of the parties, and avoid potential disputes in the future. Therefore, the existence of a deed of acquisition is an important element in ensuring that the company takeover process is carried out legally, transparently, and in accordance with applicable laws and regulations.",
+                        "In the process of drawing up a deed of takeover, the parties are required to fulfill the following administrative and legal requirements:",
+                        "GMS Approval - Through the General Meeting of Shareholders (GMS), shareholders are given the opportunity to assess, consider, and issue a decision on the proposed transaction that may affect the company's financial condition, ownership, and future policy direction. The requirement for GMS approval is intended to ensure the implementation of good corporate governance principles, protect shareholders' rights, and ensure that the takeover process is carried out transparently and in accordance with applicable laws and regulations. As such, an acquisition decision that has obtained GMS approval has a strong legal basis and may be lawfully implemented.",
+                        "Notification to Employees - One form of fulfilling this obligation is to announce the takeover plan through newspaper media and provide written notification to all company employees, which must be carried out no later than 30 (thirty) days before the summons for the General Meeting of Shareholders (GMS) that will discuss and decide on the takeover plan. This provision aims to give shareholders, employees, and other related parties the opportunity to obtain adequate information regarding the transaction to be carried out."
                     ],
                     "zh": [
-                        "收购公证书是由公证人制作并核准的法律文件，作为一家公司被另一家公司收购的真实证明。该文件在收购交易的实施中具有约束性法律效力。收购公证书包含规范权利、义务、股权及各方转让流程的各项重要条款。此外，该公证书还载明公司组织结构变更信息，包括收购完成后负责公司监督的董事、监事及相关方的角色。",
-                        "此外，收购公证书对交易双方而言均是极为重要的事项。其载明的条款为双方提供法律确定性，保护各方利益，并避免日后潜在的纠纷。因此，收购公证书的存在是确保此收购流程透明进行，并符合现行原则及协议要求的重要因素。",
-                        {
-                            "type": "title",
-                            "text": "在收购公证书制作过程中，有关方须满足以下法律要求："
-                        },
-                        {
-                            "type": "title",
-                            "text": "股东大会决议"
-                        },
-                        "通过股东大会，股东有机会对相关方所实施的计划进行选择、考量并作出决议，包括对管理层所采取公司行为的批准。举行股东大会的相关规定旨在确保公司始终依照良好公司治理原则运营，保护股东权利，并确保公司决策以透明方式进行，且符合现行法规规定。因此，已获得股东大会批准的收购决议具有坚实的法律依据，可合法实施。",
-                        {
-                            "type": "title",
-                            "text": "员工通知"
-                        },
-                        "公司须确保始终履行其公司义务，须在讨论收购计划的股东大会决议举行前至少30（三十）天，通过社交媒体或正式函件将收购计划告知全体受影响员工。此规定旨在使利益相关方——员工及其他各方——在规定期限内有机会观察收购的状况及进展，从而使股东、员工及其他法律相关方有机会维护自身利益。"
+                        "收购文书（Akta Akuisisi）是由公证人制作并核准的法律文件，作为一家公司被另一家公司收购这一过程的具有法律效力的真实证明。该文件具有约束性法律效力，是收购交易实施的法律依据。收购文书中载明了规范股权或公司资产转让过程的各项重要条款。此外，该文书还载明公司组织结构的变更信息，包括收购完成后董事、监事或其他拥有公司管理权限人员的更替情况。",
+                        "此外，收购文书还详细说明了交易各方的权利与义务。此项安排旨在提供法律确定性、保障各方利益，并避免日后可能产生的纠纷。因此，收购文书的存在是确保公司收购过程依法、透明并符合现行法律法规规定的重要要素。",
+                        "在制作收购文书（Akta Pengambilalihan）的过程中，各方须履行以下行政及法律要求：",
+                        "股东大会（RUPS）批准——通过股东大会，股东有机会对可能影响公司财务状况、股权结构及未来政策方向的拟议交易进行评估、审议并作出决议。股东大会批准的规定旨在确保良好公司治理原则（good corporate governance）的落实、保障股东权利，并确保收购过程以透明方式、依照现行法律法规进行。因此，经股东大会批准的收购决议具有充分的法律依据，可依法执行。",
+                        "员工通知——履行该义务的方式之一，是通过报纸媒体公告收购计划，并以书面形式通知公司全体员工，该通知须于讨论并决定收购计划的股东大会（RUPS）召集通知发出之日起至迟30（三十）天前完成。此项规定旨在使股东、员工及其他相关方有机会获得关于拟进行交易的充分信息。"
                     ]
                 },
                 "penjelasan_layanan_items": {
                     "id": [
                         {
-                            "id": "akta-akuisisi-item",
+                            "id": "akta-pengambilalihan-akuisisi",
                             "paket_harga": {
-                                "nama": "AKTA PENGAMBILALIHAN (AKUISISI)",
+                                "nama": "Akta Pengambilalihan (Akuisisi)",
                                 "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
                                 "harga": "Rp 7.000.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "Salinan Akta Pernyataan Keputusan Para Pemegang Saham Tahunan.",
-                                    "Surat Pengambilalihan.",
-                                    "Surat Keterangan Laporan Pembeitahuan dari Kementerian Hukum RI"
+                                    "Salinan Akta Pernyataan Keputusan Para Pemegang Saham Tahunan",
+                                    "Salinan Akta Pengambilalihan",
+                                    "Surat Keterangan Laporan Pemberitahuan dari Kementerian Hukum RI"
                                 ],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
@@ -3214,7 +3236,7 @@
                                     "judul": "Data Para Pemegang Saham",
                                     "items": [
                                         "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta  rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
                                         "Data: Nomor telepon, Alamat email"
                                     ]
                                 },
@@ -3223,26 +3245,28 @@
                                     "judul": "Legalitas Perusahaan Yang Dimiliki",
                                     "items": [
                                         "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
-                                        "Seluruh Akta Perusahaan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                        "Seluruh Akta Perubahan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
                                         "Nomor Poko Wajib Pajak Perseroan;",
-                                        "Nomor Induk Perusahaan"
+                                        "Nomor Induk Perusahaan."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                    "judul": "Notulen/Sirkular Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
                                     "items": [
-                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "Dokumen Lainnya Yang Menjadi Objek Perubahan",
-                                    "items": []
+                                    "judul": "Identitas Kepala Cabang",
+                                    "items": [
+                                        "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP)"
+                                    ]
                                 },
                                 {
                                     "nomor": 5,
-                                    "judul": "Pengumuman Koran",
+                                    "judul": "Alamat Kantor Cabang",
                                     "items": []
                                 }
                             ]
@@ -3250,16 +3274,16 @@
                     ],
                     "en": [
                         {
-                            "id": "akta-akuisisi-item",
+                            "id": "akta-pengambilalihan-akuisisi",
                             "paket_harga": {
-                                "nama": "ACQUISITION DEED",
+                                "nama": "Deed of Takeover (Acquisition)",
                                 "modal_note": "*Capital up to IDR 1 Billion",
                                 "harga": "Rp 7.000.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "Copy of the Annual Shareholders' Resolution Deed.",
-                                    "Acquisition Letter.",
-                                    "Notification Report Certificate from the Indonesian Ministry of Law"
+                                    "Copy of Deed of Statement of Annual Shareholders' Resolution",
+                                    "Copy of Deed of Takeover",
+                                    "Notification Report Certificate from the Ministry of Law of the Republic of Indonesia"
                                 ],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
@@ -3272,36 +3296,38 @@
                                     "nomor": 1,
                                     "judul": "Shareholders' Data",
                                     "items": [
-                                        "For Indonesian individuals, please attach a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
-                                        "For Indonesian legal entities, please attach a color scan of the Deed of Establishment and all its amendments, complete with the approval/notification from the Ministry of Law and Human Rights, along with the company's Taxpayer Identification Number (NPWP) and a copy of the Director's ID Card.",
+                                        "Indonesian individuals must attach a valid colored scan copy of their Identity Card (e-KTP) and Tax Identification Number (NPWP), and/or;",
+                                        "Indonesian legal entities must attach a colored scan copy of the Company's Deed of Establishment and all its amendments, complete with the ratification and approval/notification from the Ministry of Law and Human Rights, along with the company's Tax Identification Number (NPWP) and a copy of the Director's Identity Card.",
                                         "Data: Phone number, Email address"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "Company Legal Documents Held",
+                                    "judul": "Legality of Existing Company",
                                     "items": [
-                                        "Deed of Establishment and Ratification from the Indonesian Ministry of Law;",
-                                        "All company deeds held, along with the Approval/Notification from the Indonesian Ministry of Law;",
-                                        "Company Taxpayer Identification Number;",
-                                        "Company Registration Number"
+                                        "Deed of Establishment and its ratification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "All Deeds of Amendment held, together with the Approval/Notification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "Company's Tax Identification Number (NPWP);",
+                                        "Company Registration Number (NIB)."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
                                     "judul": "Minutes/Circular Resolution of Shareholders/Forms/Letters Completed and Signed by All Parties",
                                     "items": [
-                                        "All drafts and content will be prepared by us after the order is placed and all required documents and information have been received."
+                                        "The complete draft and content will be prepared by us after the order is placed and all required documents and information have been received"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "Other Documents That Are the Subject of the Amendment",
-                                    "items": []
+                                    "judul": "Branch Head's Identity",
+                                    "items": [
+                                        "Colored scan copy of a valid Identity Card (e-KTP) and Tax Identification Number (NPWP)"
+                                    ]
                                 },
                                 {
                                     "nomor": 5,
-                                    "judul": "Newspaper Announcement",
+                                    "judul": "Branch Office Address",
                                     "items": []
                                 }
                             ]
@@ -3309,21 +3335,21 @@
                     ],
                     "zh": [
                         {
-                            "id": "akta-akuisisi-item",
+                            "id": "akta-pengambilalihan-akuisisi",
                             "paket_harga": {
-                                "nama": "收购公证书",
-                                "modal_note": "*资本最高10亿印尼盾",
+                                "nama": "收购（并购）文书",
+                                "modal_note": "*注册资本最高至10亿印尼盾",
                                 "harga": "Rp 7.000.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "年度股东决议声明书公证书复印件。",
-                                    "收购函。",
-                                    "印尼法律部出具的通知报告证明"
+                                    "年度股东决议声明文书副本",
+                                    "收购文书副本",
+                                    "印尼法律与人权部通知报告证明书"
                                 ],
                                 "termasuk": [
-                                    "Fasttrack 文件快递服务",
-                                    "Fasttrack 数字文件安全存储",
-                                    "Fasttrack 套件"
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
                                 ]
                             },
                             "dokumen_diperlukan": [
@@ -3331,36 +3357,38 @@
                                     "nomor": 1,
                                     "judul": "股东资料",
                                     "items": [
-                                        "印尼籍个人，请附上有效的身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件；及/或",
-                                        "印尼法人实体，请附上公司设立公证书及其全部变更文件的彩色扫描件，须包含法律与人权部的批准/通知函，以及公司的纳税人识别号（NPWP）和董事身份证复印件。",
+                                        "印尼籍自然人股东须附上有效的彩色电子身份证（e-KTP）扫描件及纳税人识别号（NPWP）复印件，及/或；",
+                                        "印尼法人实体股东须附上公司设立文书及其全部修订文件的彩色扫描件（须附有法律与人权部的批准/核准通知），以及公司纳税人识别号（NPWP）复印件和董事身份证复印件。",
                                         "资料：电话号码、电子邮箱地址"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "所持有的公司合法性文件",
+                                    "judul": "现有公司合法文件",
                                     "items": [
-                                        "印尼法律部出具的设立公证书及批准文件；",
-                                        "所持有的全部公司公证书及印尼法律部的批准/通知函；",
-                                        "公司纳税人识别号；",
-                                        "公司注册号"
+                                        "公司设立文书及印尼法律与人权部核准文件；",
+                                        "所持有的全部变更文书及印尼法律与人权部的批准/核准通知；",
+                                        "公司纳税人识别号（NPWP）；",
+                                        "公司注册号（NIB）。"
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "股东会议纪要/循环决议/由各方填写并签署的表格/函件",
+                                    "judul": "股东会议记录/循环决议/表格/文件（须由各方填妥并签署）",
                                     "items": [
-                                        "所有草案及内容将在下单且收到所有文件与信息要求后由我方准备。"
+                                        "全部草案及内容将在您下单并且我方收到所有所需文件与资料后由我方准备"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "作为变更对象的其他文件",
-                                    "items": []
+                                    "judul": "分公司负责人身份资料",
+                                    "items": [
+                                        "有效的彩色电子身份证（e-KTP）扫描件及纳税人识别号（NPWP）复印件"
+                                    ]
                                 },
                                 {
                                     "nomor": 5,
-                                    "judul": "报纸公告",
+                                    "judul": "分公司办公地址",
                                     "items": []
                                 }
                             ]
@@ -3374,40 +3402,54 @@
                 }
             },
             {
-                "id": "akta-penggabungan-merger",
+                "id": "akta-penggabungan",
                 "nama": {
                     "id": "Akta Penggabungan (Merger)",
-                    "en": "Merger Deed",
-                    "zh": "合并公证书"
+                    "en": "Deed of Merger",
+                    "zh": "合并契据"
                 },
                 "deskripsi": {
-                    "id": "Pembuatan akta penggabungan dua perusahaan atau lebih menjadi satu entitas hukum yang baru.",
-                    "en": "Preparation of a deed for the merger of two or more companies into a single new legal entity.",
-                    "zh": "起草将两家或以上公司合并为一个新法人实体的公证书。"
+                    "id": "Pencatatan tanggal dan keberadaan dokumen di hadapan notaris tanpa memeriksa isi dokumen.",
+                    "en": "Recording the date and existence of a document before a notary without examining its contents.",
+                    "zh": "在公证人面前记录文件的日期及存在情况，而不审查文件内容。"
                 },
                 "harga": "Rp 750.000",
                 "penjelasan_layanan": {
                     "id": [
-                        "Akta Penggabungan (Merger) adalah akta notaris yang dibuat untuk mendokumentasikan proses penggabungan dua atau lebih perusahaan menjadi satu entitas hukum yang baru atau yang sudah ada."
+                        "Akta akuisisi merupakan dokumen hukum yang dibuat dan disahkan oleh notaris sebagai bukti autentik atas terjadinya proses pengambilalihan suatu perusahaan oleh pihak perusahaan lain. Dokumen ini memiliki kekuatan hukum yang mengikat serta menjadi dasar legal dalam pelaksanaan transaksi akuisisi. Di dalam akta akuisisi tercantum berbagai ketentuan penting yang mengatur proses pengalihan kepemilikan, baik dalam bentuk saham maupun aset perusahaan. Selain itu, akta tersebut juga memuat informasi mengenai perubahan struktur organisasi perusahaan, termasuk pergantian direksi, komisaris, atau pihak-pihak yang memiliki kewenangan dalam pengelolaan perusahaan setelah proses akuisisi selesai dilaksanakan.",
+                        "Lebih lanjut, akta akuisisi menjelaskan secara rinci hak dan kewajiban masing-masing pihak yang terlibat dalam transaksi. Pengaturan ini bertujuan untuk memberikan kepastian hukum, melindungi kepentingan para pihak, serta menghindari potensi sengketa di kemudian hari. Oleh karena itu, keberadaan akta akuisisi menjadi elemen penting dalam memastikan bahwa proses pengambilalihan perusahaan dilakukan secara sah, transparan, dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.",
+                        "Dalam Proses Pembuatan Akta Pengambilalihan para pihak wajib memenuhi persyaratan administratif dan hukum, sebagai berikut:",
+                        "Persetujuan RUPS - Melalui RUPS, para pemegang saham diberikan kesempatan untuk menilai, mempertimbangkan, dan memberikan keputusan atas rencana transaksi yang dapat memengaruhi kondisi keuangan, kepemilikan, serta arah kebijakan perusahaan di masa mendatang. Ketentuan mengenai persetujuan RUPS bertujuan untuk menjamin penerapan prinsip tata kelola perusahaan yang baik (good corporate governance), melindungi hak-hak pemegang saham, serta memastikan bahwa proses pengambilalihan dilakukan secara transparan dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku. Dengan demikian, keputusan akuisisi yang telah memperoleh persetujuan RUPS memiliki dasar hukum yang kuat dan dapat dilaksanakan secara sah.",
+                        "Pemberitahuan Karyawan - Salah satu bentuk pemenuhan kewajiban tersebut adalah dengan mengumumkan rencana pengambilalihan melalui media surat kabar serta memberikan pemberitahuan secara tertulis kepada seluruh karyawan perusahaan yang harus dilakukan dalam jangka waktu paling lambat 30 (tiga puluh) hari sebelum dilaksanakannya pemanggilan Rapat Umum Pemegang Saham (RUPS) yang akan membahas dan memutuskan rencana pengambilalihan. Ketentuan ini bertujuan untuk memberikan kesempatan kepada para pemegang saham, karyawan, dan pihak terkait lainnya untuk memperoleh informasi yang memadai mengenai transaksi yang akan dilakukan."
                     ],
                     "en": [
-                        "A Merger Deed is a notarial deed made to document the process of merging two or more companies into a new or existing single legal entity."
+                        "A deed of acquisition is a legal document drawn up and legalized by a notary as authentic evidence of the takeover process of a company by another company. This document has binding legal force and serves as the legal basis for carrying out the acquisition transaction. The deed of acquisition contains various important provisions governing the process of ownership transfer, whether in the form of shares or company assets. In addition, the deed also contains information regarding changes to the company's organizational structure, including the replacement of directors, commissioners, or other parties holding authority in the management of the company after the acquisition process has been completed.",
+                        "Furthermore, the deed of acquisition explains in detail the rights and obligations of each party involved in the transaction. This arrangement aims to provide legal certainty, protect the interests of the parties, and avoid potential disputes in the future. Therefore, the existence of a deed of acquisition is an important element in ensuring that the company takeover process is carried out legally, transparently, and in accordance with applicable laws and regulations.",
+                        "In the process of drawing up a deed of takeover, the parties are required to fulfill the following administrative and legal requirements:",
+                        "GMS Approval - Through the General Meeting of Shareholders (GMS), shareholders are given the opportunity to assess, consider, and issue a decision on the proposed transaction that may affect the company's financial condition, ownership, and future policy direction. The requirement for GMS approval is intended to ensure the implementation of good corporate governance principles, protect shareholders' rights, and ensure that the takeover process is carried out transparently and in accordance with applicable laws and regulations. As such, an acquisition decision that has obtained GMS approval has a strong legal basis and may be lawfully implemented.",
+                        "Notification to Employees - One form of fulfilling this obligation is to announce the takeover plan through newspaper media and provide written notification to all company employees, which must be carried out no later than 30 (thirty) days before the summons for the General Meeting of Shareholders (GMS) that will discuss and decide on the takeover plan. This provision aims to give shareholders, employees, and other related parties the opportunity to obtain adequate information regarding the transaction to be carried out."
                     ],
                     "zh": [
-                        "合并公证书是为记录将两家或以上公司合并为一个新的或既有法人实体过程而制作的公证书。"
+                        "收购文书（Akta Akuisisi）是由公证人制作并核准的法律文件，作为一家公司被另一家公司收购这一过程的具有法律效力的真实证明。该文件具有约束性法律效力，是收购交易实施的法律依据。收购文书中载明了规范股权或公司资产转让过程的各项重要条款。此外，该文书还载明公司组织结构的变更信息，包括收购完成后董事、监事或其他拥有公司管理权限人员的更替情况。",
+                        "此外，收购文书还详细说明了交易各方的权利与义务。此项安排旨在提供法律确定性、保障各方利益，并避免日后可能产生的纠纷。因此，收购文书的存在是确保公司收购过程依法、透明并符合现行法律法规规定的重要要素。",
+                        "在制作收购文书（Akta Pengambilalihan）的过程中，各方须履行以下行政及法律要求：",
+                        "股东大会（RUPS）批准——通过股东大会，股东有机会对可能影响公司财务状况、股权结构及未来政策方向的拟议交易进行评估、审议并作出决议。股东大会批准的规定旨在确保良好公司治理原则（good corporate governance）的落实、保障股东权利，并确保收购过程以透明方式、依照现行法律法规进行。因此，经股东大会批准的收购决议具有充分的法律依据，可依法执行。",
+                        "员工通知——履行该义务的方式之一，是通过报纸媒体公告收购计划，并以书面形式通知公司全体员工，该通知须于讨论并决定收购计划的股东大会（RUPS）召集通知发出之日起至迟30（三十）天前完成。此项规定旨在使股东、员工及其他相关方有机会获得关于拟进行交易的充分信息。"
                     ]
                 },
                 "penjelasan_layanan_items": {
                     "id": [
                         {
-                            "id": "akta-merger-item",
+                            "id": "akta-pengambilalihan-akuisisi",
                             "paket_harga": {
-                                "nama": "AKTA PENGGABUNGAN (MERGER)",
+                                "nama": "Akta Pengambilalihan (Akuisisi)",
                                 "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
                                 "harga": "Rp 750.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "Salinan Akta Penggabungan"
+                                    "Salinan Akta Pernyataan Keputusan Para Pemegang Saham Tahunan",
+                                    "Salinan Akta Pengambilalihan",
+                                    "Surat Keterangan Laporan Pemberitahuan dari Kementerian Hukum RI"
                                 ],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
@@ -3421,7 +3463,7 @@
                                     "judul": "Data Para Pemegang Saham",
                                     "items": [
                                         "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya.",
+                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta  rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
                                         "Data: Nomor telepon, Alamat email"
                                     ]
                                 },
@@ -3430,20 +3472,28 @@
                                     "judul": "Legalitas Perusahaan Yang Dimiliki",
                                     "items": [
                                         "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
+                                        "Seluruh Akta Perubahan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
                                         "Nomor Poko Wajib Pajak Perseroan;",
-                                        "Nomor Induk Perusahaan"
+                                        "Nomor Induk Perusahaan."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "Notulen/Sirkuler Keputusan Para Pemegang Saham",
+                                    "judul": "Notulen/Sirkular Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
                                     "items": [
-                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan."
+                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "Dokumen Lainnya Yang Menjadi Objek Perubahan",
+                                    "judul": "Identitas Kepala Cabang",
+                                    "items": [
+                                        "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP)"
+                                    ]
+                                },
+                                {
+                                    "nomor": 5,
+                                    "judul": "Alamat Kantor Cabang",
                                     "items": []
                                 }
                             ]
@@ -3451,14 +3501,16 @@
                     ],
                     "en": [
                         {
-                            "id": "akta-merger-item",
+                            "id": "akta-pengambilalihan-akuisisi",
                             "paket_harga": {
-                                "nama": "MERGER DEED",
+                                "nama": "Deed of Takeover (Acquisition)",
                                 "modal_note": "*Capital up to IDR 1 Billion",
                                 "harga": "Rp 750.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "Copy of the Merger Deed"
+                                    "Copy of Deed of Statement of Annual Shareholders' Resolution",
+                                    "Copy of Deed of Takeover",
+                                    "Notification Report Certificate from the Ministry of Law of the Republic of Indonesia"
                                 ],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
@@ -3471,30 +3523,38 @@
                                     "nomor": 1,
                                     "judul": "Shareholders' Data",
                                     "items": [
-                                        "For Indonesian individuals, please attach a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
-                                        "For Indonesian legal entities, please attach a color scan of the Deed of Establishment and all its amendments.",
+                                        "Indonesian individuals must attach a valid colored scan copy of their Identity Card (e-KTP) and Tax Identification Number (NPWP), and/or;",
+                                        "Indonesian legal entities must attach a colored scan copy of the Company's Deed of Establishment and all its amendments, complete with the ratification and approval/notification from the Ministry of Law and Human Rights, along with the company's Tax Identification Number (NPWP) and a copy of the Director's Identity Card.",
                                         "Data: Phone number, Email address"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "Company Legal Documents Held",
+                                    "judul": "Legality of Existing Company",
                                     "items": [
-                                        "Deed of Establishment and Ratification from the Indonesian Ministry of Law;",
-                                        "Company Taxpayer Identification Number;",
-                                        "Company Registration Number"
+                                        "Deed of Establishment and its ratification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "All Deeds of Amendment held, together with the Approval/Notification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "Company's Tax Identification Number (NPWP);",
+                                        "Company Registration Number (NIB)."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "Minutes/Circular Resolution of Shareholders",
+                                    "judul": "Minutes/Circular Resolution of Shareholders/Forms/Letters Completed and Signed by All Parties",
                                     "items": [
-                                        "All drafts and content will be prepared by us after the order is placed."
+                                        "The complete draft and content will be prepared by us after the order is placed and all required documents and information have been received"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "Other Documents That Are the Subject of the Amendment",
+                                    "judul": "Branch Head's Identity",
+                                    "items": [
+                                        "Colored scan copy of a valid Identity Card (e-KTP) and Tax Identification Number (NPWP)"
+                                    ]
+                                },
+                                {
+                                    "nomor": 5,
+                                    "judul": "Branch Office Address",
                                     "items": []
                                 }
                             ]
@@ -3502,19 +3562,21 @@
                     ],
                     "zh": [
                         {
-                            "id": "akta-merger-item",
+                            "id": "akta-pengambilalihan-akuisisi",
                             "paket_harga": {
-                                "nama": "合并公证书",
-                                "modal_note": "*资本最高10亿印尼盾",
+                                "nama": "收购（并购）文书",
+                                "modal_note": "*注册资本最高至10亿印尼盾",
                                 "harga": "Rp 750.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "合并公证书复印件"
+                                    "年度股东决议声明文书副本",
+                                    "收购文书副本",
+                                    "印尼法律与人权部通知报告证明书"
                                 ],
                                 "termasuk": [
-                                    "Fasttrack 文件快递服务",
-                                    "Fasttrack 数字文件安全存储",
-                                    "Fasttrack 套件"
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
                                 ]
                             },
                             "dokumen_diperlukan": [
@@ -3522,30 +3584,38 @@
                                     "nomor": 1,
                                     "judul": "股东资料",
                                     "items": [
-                                        "印尼籍个人，请附上有效的身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件；及/或",
-                                        "印尼法人实体，请附上公司设立公证书及其全部变更文件的彩色扫描件。",
+                                        "印尼籍自然人股东须附上有效的彩色电子身份证（e-KTP）扫描件及纳税人识别号（NPWP）复印件，及/或；",
+                                        "印尼法人实体股东须附上公司设立文书及其全部修订文件的彩色扫描件（须附有法律与人权部的批准/核准通知），以及公司纳税人识别号（NPWP）复印件和董事身份证复印件。",
                                         "资料：电话号码、电子邮箱地址"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "所持有的公司合法性文件",
+                                    "judul": "现有公司合法文件",
                                     "items": [
-                                        "印尼法律部出具的设立公证书及批准文件；",
-                                        "公司纳税人识别号；",
-                                        "公司注册号"
+                                        "公司设立文书及印尼法律与人权部核准文件；",
+                                        "所持有的全部变更文书及印尼法律与人权部的批准/核准通知；",
+                                        "公司纳税人识别号（NPWP）；",
+                                        "公司注册号（NIB）。"
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "股东会议纪要/循环决议",
+                                    "judul": "股东会议记录/循环决议/表格/文件（须由各方填妥并签署）",
                                     "items": [
-                                        "所有草案及内容将在下单后由我方准备。"
+                                        "全部草案及内容将在您下单并且我方收到所有所需文件与资料后由我方准备"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "作为变更对象的其他文件",
+                                    "judul": "分公司负责人身份资料",
+                                    "items": [
+                                        "有效的彩色电子身份证（e-KTP）扫描件及纳税人识别号（NPWP）复印件"
+                                    ]
+                                },
+                                {
+                                    "nomor": 5,
+                                    "judul": "分公司办公地址",
                                     "items": []
                                 }
                             ]
@@ -3562,44 +3632,42 @@
                 "id": "akta-kuasa",
                 "nama": {
                     "id": "Akta Kuasa",
-                    "en": "Power of Attorney Deed",
-                    "zh": "授权委托书公证书"
+                    "en": "Power of Attorney",
+                    "zh": "授权委托书"
                 },
                 "deskripsi": {
-                    "id": "Pembuatan surat kuasa notaril yang memberikan wewenang resmi kepada pihak lain untuk bertindak atas nama pemberi kuasa.",
-                    "en": "Preparation of a notarial power of attorney that officially authorizes another party to act on behalf of the grantor.",
-                    "zh": "起草公证授权书，正式授权另一方代表授权人行事。"
+                    "id": "Pembuatan surat kuasa notariil yang memberikan wewenang resmi kepada pihak lain untuk bertindak atas nama pemberi kuasa.",
+                    "en": "The creation of a notarized power of attorney that grants official authority to another party to act on behalf of the grantor.",
+                    "zh": "制作经公证的授权委托书，授予另一方代表授予人行事的正式权力。"
                 },
                 "harga": "Rp 750.000",
                 "penjelasan_layanan": {
                     "id": [
-                        "Akta Kuasa merupakan dokumen hukum yang dibuat untuk memberikan kewenangan dari satu pihak kepada pihak lain guna mewakili dan atas namanya dalam melakukan perbuatan hukum tertentu, sehingga pihak yang diberi kuasa memiliki kapasitas dan kewenangan yang sama untuk bertindak atas nama pemberi kuasa.",
-                        "Akta Kuasa berfungsi sebagai legalitas bagi penerima kuasa dalam menjalankan tindakan hukum atas nama pemberi kuasa dalam batasan kuasa yang diberikan yang dianggap memiliki akibat hukum yang mengikat dan membebani pemberi kuasa. Oleh karena itu, ia akta kuasa menjadi instrumen penting bagi setiap pihak, serta lebih bertanggung jawab, semua tindakan dan tujuan pemberi kuasa tersebut.",
-                        "Dengan adanya Akta Kuasa, proses pelaksanaan tindakan hukum dapat dilakukan secara lebih efektif dan memiliki kepastian hukum, terutama ketika pemberi kuasa tidak dapat hadir secara langsung untuk menyelesaikan urusannya."
+                        "Akta Kuasa merupakan dokumen hukum yang dibuat untuk memberikan kewenangan dari satu pihak kepada pihak lainnya guna mewakili dan bertindak atas nama pemberi kuasa dalam melakukan perbuatan hukum tertentu. Melalui akta ini, penerima kuasa memperoleh hak untuk menjalankan tindakan yang telah ditentukan sesuai dengan ruang lingkup wewenang yang diberikan.",
+                        "Akta Kuasa berfungsi sebagai bukti sah adanya pelimpahan kewenangan, sehingga setiap tindakan yang dilakukan oleh penerima kuasa dalam batas kuasa yang diberikan dianggap memiliki akibat hukum yang mengikat bagi pemberi kuasa. Oleh karena itu, isi akta biasanya memuat identitas para pihak, jenis kewenangan yang diberikan, serta batasan dan tujuan penggunaan kuasa tersebut.",
+                        "Dengan adanya Akta Kuasa, proses pelaksanaan tindakan hukum dapat dilakukan secara lebih efektif dan memiliki kepastian hukum, terutama ketika pemberi kuasa tidak dapat bertindak secara langsung untuk mengurus"
                     ],
                     "en": [
-                        "A Power of Attorney Deed is a legal document made to grant authority from one party to another to represent and act on their behalf in performing certain legal acts, so that the authorized party has the same capacity and authority to act on behalf of the grantor.",
-                        "The Power of Attorney Deed serves as legality for the attorney-in-fact to carry out legal actions on behalf of the grantor within the limits of the authority granted, which is deemed to have binding legal effects on and impose obligations upon the grantor. Therefore, the power of attorney deed becomes an important instrument for each party, making them more accountable for all actions and the grantor's purposes.",
-                        "With a Power of Attorney Deed, the implementation of legal actions can be carried out more effectively and with legal certainty, especially when the grantor cannot be present in person to settle their affairs."
+                        "A Deed of Power of Attorney is a legal document made to grant authority from one party to another to represent and act on behalf of the grantor in carrying out certain legal actions. Through this deed, the recipient of the power of attorney obtains the right to carry out the actions that have been specified in accordance with the scope of authority granted.",
+                        "The Deed of Power of Attorney serves as valid evidence of the delegation of authority, so that any action taken by the recipient of the power of attorney within the limits of the authority granted is deemed to have binding legal consequences for the grantor. Therefore, the contents of the deed usually include the identities of the parties, the type of authority granted, as well as the limitations and purpose of the use of such power of attorney.",
+                        "With the existence of a Deed of Power of Attorney, the implementation of legal actions can be carried out more effectively and with legal certainty, particularly when the grantor is unable to act directly to attend to"
                     ],
                     "zh": [
-                        "授权委托书公证书是一种法律文件，用于将一方的权力授予另一方，使其代表并以其名义履行特定法律行为，从而使受托方拥有与授权人相同的行为能力及权限，代表授权人行事。",
-                        "授权委托书公证书为受托方在授予权限范围内代表授权人行使法律行为提供合法性，该行为被视为对授权人具有约束性法律效力并使其承担义务。因此，授权委托书公证书对各方而言均是重要工具，使各方对授权人的所有行为及目的承担更大责任。",
-                        "有了授权委托书公证书，法律行为的实施可以更有效地进行并具有法律确定性，尤其是在授权人无法亲自到场处理事务的情况下。"
+                        "授权书（Akta Kuasa）是一种法律文件，用于将一方的权限授予另一方，使其代表并以授权人的名义实施特定的法律行为。通过此文书，受托人获得依据所授予权限范围行使既定行为的权利。",
+                        "授权书作为权限授予的合法证明，凡受托人在所授权限范围内实施的行为，均被视为对授权人具有约束性法律效力。因此，该文书内容通常包括各方身份信息、所授权限的种类，以及使用该授权的限制与目的。",
+                        "有了授权书，法律行为的实施可以更有效地进行并具有法律确定性，尤其是在授权人无法亲自处理相关事务以办理"
                     ]
                 },
                 "penjelasan_layanan_items": {
                     "id": [
                         {
-                            "id": "akta-kuasa-item",
+                            "id": "akta-kuasa",
                             "paket_harga": {
-                                "nama": "AKTA KUASA",
+                                "nama": "Akta Kuasa",
                                 "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
                                 "harga": "Rp 750.000",
                                 "gratis_konsultasi": true,
-                                "dokumen_legalitas": [
-                                    "Salinan Akta Kuasa"
-                                ],
+                                "dokumen_legalitas": ["Salinan Akta Kuasa"],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
                                     "Fasttrack Digital Files Secure Storage",
@@ -3609,10 +3677,10 @@
                             "dokumen_diperlukan": [
                                 {
                                     "nomor": 1,
-                                    "judul": "Data Para Pihak",
+                                    "judul": "Data Para Pemegang Saham",
                                     "items": [
                                         "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta  rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
                                         "Data: Nomor telepon, Alamat email"
                                     ]
                                 },
@@ -3621,16 +3689,16 @@
                                     "judul": "Legalitas Perusahaan Yang Dimiliki",
                                     "items": [
                                         "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
-                                        "Seluruh Akta Perusahaan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                        "Seluruh Akta Perubahan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
                                         "Nomor Poko Wajib Pajak Perseroan;",
-                                        "Nomor Induk Perusahaan"
+                                        "Nomor Induk Perusahaan."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "Formulir/Surat Yang Telah Dilengkapi Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                    "judul": "Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
                                     "items": [
-                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima"
                                     ]
                                 },
                                 {
@@ -3643,14 +3711,14 @@
                     ],
                     "en": [
                         {
-                            "id": "akta-kuasa-item",
+                            "id": "akta-kuasa",
                             "paket_harga": {
-                                "nama": "POWER OF ATTORNEY DEED",
+                                "nama": "Deed of Power of Attorney",
                                 "modal_note": "*Capital up to IDR 1 Billion",
                                 "harga": "Rp 750.000",
                                 "gratis_konsultasi": true,
                                 "dokumen_legalitas": [
-                                    "Copy of the Power of Attorney Deed"
+                                    "Copy of Deed of Power of Attorney"
                                 ],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
@@ -3661,33 +3729,33 @@
                             "dokumen_diperlukan": [
                                 {
                                     "nomor": 1,
-                                    "judul": "Data of the Parties",
+                                    "judul": "Shareholders' Data",
                                     "items": [
-                                        "For Indonesian individuals, please attach a color scan of a valid Identity Card (e-KTP) and Taxpayer Identification Number (NPWP), and/or;",
-                                        "For Indonesian legal entities, please attach a color scan of the Deed of Establishment and all its amendments, complete with the approval/notification from the Ministry of Law and Human Rights, along with the company's Taxpayer Identification Number (NPWP) and a copy of the Director's ID Card.",
+                                        "Indonesian individuals must attach a valid colored scan copy of their Identity Card (e-KTP) and Tax Identification Number (NPWP), and/or;",
+                                        "Indonesian legal entities must attach a colored scan copy of the Company's Deed of Establishment and all its amendments, complete with the ratification and approval/notification from the Ministry of Law and Human Rights, along with the company's Tax Identification Number (NPWP) and a copy of the Director's Identity Card.",
                                         "Data: Phone number, Email address"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "Company Legal Documents Held",
+                                    "judul": "Legality of Existing Company",
                                     "items": [
-                                        "Deed of Establishment and Ratification from the Indonesian Ministry of Law;",
-                                        "All company deeds held, along with the Approval/Notification from the Indonesian Ministry of Law;",
-                                        "Company Taxpayer Identification Number;",
-                                        "Company Registration Number"
+                                        "Deed of Establishment and its ratification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "All Deeds of Amendment held, together with the Approval/Notification from the Ministry of Law and Human Rights of the Republic of Indonesia;",
+                                        "Company's Tax Identification Number (NPWP);",
+                                        "Company Registration Number (NIB)."
                                     ]
                                 },
                                 {
                                     "nomor": 3,
                                     "judul": "Forms/Letters Completed and Signed by All Parties",
                                     "items": [
-                                        "All drafts and content will be prepared by us after the order is placed and all required documents and information have been received."
+                                        "The complete draft and content will be prepared by us after the order is placed and all required documents and information have been received"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "Other Documents That Are the Subject of the Authorization",
+                                    "judul": "Other Documents That Are the Object of the Power of Attorney",
                                     "items": []
                                 }
                             ]
@@ -3695,51 +3763,49 @@
                     ],
                     "zh": [
                         {
-                            "id": "akta-kuasa-item",
+                            "id": "akta-kuasa",
                             "paket_harga": {
-                                "nama": "授权委托书公证书",
-                                "modal_note": "*资本最高10亿印尼盾",
+                                "nama": "授权书",
+                                "modal_note": "*注册资本最高至10亿印尼盾",
                                 "harga": "Rp 750.000",
                                 "gratis_konsultasi": true,
-                                "dokumen_legalitas": [
-                                    "授权委托书公证书复印件"
-                                ],
+                                "dokumen_legalitas": ["授权书副本"],
                                 "termasuk": [
-                                    "Fasttrack 文件快递服务",
-                                    "Fasttrack 数字文件安全存储",
-                                    "Fasttrack 套件"
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
                                 ]
                             },
                             "dokumen_diperlukan": [
                                 {
                                     "nomor": 1,
-                                    "judul": "各方资料",
+                                    "judul": "股东资料",
                                     "items": [
-                                        "印尼籍个人，请附上有效的身份证（e-KTP）彩色扫描件及纳税人识别号（NPWP）复印件；及/或",
-                                        "印尼法人实体，请附上公司设立公证书及其全部变更文件的彩色扫描件，须包含法律与人权部的批准/通知函，以及公司的纳税人识别号（NPWP）和董事身份证复印件。",
+                                        "印尼籍自然人股东须附上有效的彩色电子身份证（e-KTP）扫描件及纳税人识别号（NPWP）复印件，及/或；",
+                                        "印尼法人实体股东须附上公司设立文书及其全部修订文件的彩色扫描件（须附有法律与人权部的批准/核准通知），以及公司纳税人识别号（NPWP）复印件和董事身份证复印件。",
                                         "资料：电话号码、电子邮箱地址"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "所持有的公司合法性文件",
+                                    "judul": "现有公司合法文件",
                                     "items": [
-                                        "印尼法律部出具的设立公证书及批准文件；",
-                                        "所持有的全部公司公证书及印尼法律部的批准/通知函；",
-                                        "公司纳税人识别号；",
-                                        "公司注册号"
+                                        "公司设立文书及印尼法律与人权部核准文件；",
+                                        "所持有的全部变更文书及印尼法律与人权部的批准/核准通知；",
+                                        "公司纳税人识别号（NPWP）；",
+                                        "公司注册号（NIB）。"
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "由各方填写并签署的表格/函件",
+                                    "judul": "由各方填妥并签署的表格/文件",
                                     "items": [
-                                        "所有草案及内容将在下单且收到所有文件与信息要求后由我方准备。"
+                                        "全部草案及内容将在您下单并且我方收到所有所需文件与资料后由我方准备"
                                     ]
                                 },
                                 {
                                     "nomor": 4,
-                                    "judul": "作为授权对象的其他文件",
+                                    "judul": "作为授权标的的其他文件",
                                     "items": []
                                 }
                             ]
@@ -3753,50 +3819,48 @@
                 }
             },
             {
-                "id": "perjanjian-kawin-prenup",
+                "id": "akta-perjanjian-kawin-prenup",
                 "nama": {
                     "id": "Perjanjian Kawin/Pisah Harta – Prenup",
-                    "en": "Marriage/Property Separation Agreement – Prenup",
-                    "zh": "婚姻/财产分割协议 – 婚前协议"
+                    "en": "Pre-nuptial Agreement",
+                    "zh": "婚前协议"
                 },
                 "deskripsi": {
-                    "id": "Penyusunan perjanjian pisah harta yang dibuat sebelum perkawinan secara resmi.",
-                    "en": "Preparation of a property separation agreement made officially before marriage.",
-                    "zh": "在婚前正式起草财产分割协议。"
+                    "id": "Penyusunan perjanjian pisah harta yang dibuat sebelum perkawinan  secara resmi.",
+                    "en": "The creation of a notarized pre-nuptial agreement that establishes the terms for property division in the event of divorce.",
+                    "zh": "制作经公证的婚前协议，规定离婚时财产分割的条款。"
                 },
                 "harga": "Rp 2.500.000",
                 "penjelasan_layanan": {
                     "id": [
-                        "Perjanjian Kawin merupakan perjanjian tertulis yang dibuat oleh calon suami dan istri sebelum melangsungkan perkawinan untuk mengatur berbagai aspek hukum dari harta bersama dalam rumah tangga, termasuk pengaturan harta, tanggung jawab atas utang, serta hak dan kewajiban masing-masing pihak.",
-                        "Perjanjian ini memberikan kepastian hukum terhadap kepentingan pribadi dan harta kekayaan yang dimiliki oleh masing-masing pihak sebelum ataupun yang diperoleh melalui warisan atau hibah selama perkawinan. Dalam pelaksanaannya, perjanjian ini juga berfungsi untuk menjaga kelancaran urusan bisnis yang tetap transparan setelah perkawinan selesai.",
-                        "Dengan adanya Perjanjian Kawin, pasangan dapat membangun hubungan rumah tangga yang lebih transparan sekaligus memberikan perlindungan hukum yang jelas terhadap aset dan tanggung jawab masing-masing pihak. Dengan demikian, perjanjian ini sekaligus menjadi landasan yang kuat bagi kedua belah pihak dalam menjalani kehidupan rumah tangga.",
-                        "Dalam Proses Pembuatan Akta Perjanjian Kawin/ Pisah Harta – Prenup memiliki syarat dan ketentuan dibuat sebelum perkawinan."
+                        "Perjanjian Pranikah merupakan perjanjian tertulis yang dibuat oleh calon suami dan istri sebelum melangsungkan perkawinan untuk mengatur berbagai aspek hukum dalam rumah tangga, termasuk pengelolaan harta, tanggung jawab atas utang, serta hak dan kewajiban masing-masing pihak.",
+                        "Perjanjian ini bertujuan memberikan kepastian hukum dan perlindungan terhadap kepentingan kedua belah pihak. Melalui Perjanjian Pranikah, harta yang dimiliki sebelum menikah maupun yang diperoleh melalui warisan atau hibah dapat tetap menjadi hak pribadi pemiliknya. Selain itu, perjanjian ini juga membantu mengatur tanggung jawab atas kewajiban finansial masing-masing pasangan sehingga tidak saling membebani apabila terjadi masalah keuangan, seperti kredit bermasalah atau kepailitan.",
+                        "Dengan adanya Perjanjian Pranikah, pasangan dapat membangun hubungan rumah tangga yang lebih transparan serta memiliki kejelasan mengenai pengelolaan aset dan tanggung jawab keuangan sejak awal perkawinan.",
+                        "Dalam Proses Pembuatan Akta Perjanjian Kawin/ Pisah Harta – Prenup memilikian syarat dan ketentuan dibuat sebelum perkawinan."
                     ],
                     "en": [
-                        "A Prenuptial Agreement is a written agreement made by a prospective husband and wife before marriage to regulate various legal aspects of joint marital property, including the arrangement of assets, responsibility for debts, and the rights and obligations of each party.",
-                        "This agreement provides legal certainty regarding the personal interests and assets owned by each party before marriage or obtained through inheritance or grants during the marriage. In practice, this agreement also serves to maintain the smooth and transparent conduct of business affairs after the marriage is concluded.",
-                        "With a Prenuptial Agreement, couples can build a more transparent household relationship while providing clear legal protection over the assets and responsibilities of each party. Accordingly, this agreement also serves as a strong foundation for both parties in living their married life.",
-                        "In the process of preparing the Marriage/Property Separation Agreement Deed – Prenup, the terms and conditions require that it be made before marriage."
+                        "A Prenuptial Agreement is a written agreement made by a prospective husband and wife prior to marriage to regulate various legal aspects of the household, including asset management, responsibility for debts, and the rights and obligations of each party.",
+                        "This agreement aims to provide legal certainty and protection for the interests of both parties. Through a Prenuptial Agreement, assets owned prior to marriage or acquired through inheritance or grants can remain the personal right of their owner. In addition, this agreement also helps regulate each spouse's responsibility for financial obligations so that neither party is burdened by the other in the event of financial issues, such as problematic loans or bankruptcy.",
+                        "With a Prenuptial Agreement in place, couples can build a more transparent household relationship and have clarity regarding asset management and financial responsibility from the outset of the marriage.",
+                        "In the process of drawing up a Marriage/Separate Property Agreement Deed – a Prenup has terms and conditions requiring it to be made prior to marriage."
                     ],
                     "zh": [
-                        "婚前协议是准夫妻在结婚前订立的书面协议，用于规范婚姻共同财产的各项法律事宜，包括财产安排、债务责任，以及各方的权利和义务。",
-                        "该协议为婚前各方所拥有，或婚姻期间通过继承或赠与所获得的个人利益及财产提供法律确定性。在实践中，该协议也有助于维持婚姻结束后业务事务的顺利及透明进行。",
-                        "通过婚前协议，夫妻能够建立更透明的家庭关系，同时为各方的资产及责任提供明确的法律保护。因此，该协议也成为双方共同生活的坚实基础。",
-                        "在起草婚姻/财产分割协议公证书（婚前协议）的过程中，须符合须在婚前订立的条款与条件。"
+                        "婚前协议（Perjanjian Pranikah）是准新郎与准新娘在结婚前签订的书面协议，用于规范家庭生活中的各项法律事宜，包括财产管理、债务责任以及双方各自的权利与义务。",
+                        "该协议旨在为双方利益提供法律确定性与保障。通过婚前协议，婚前所拥有的财产，或通过继承、赠与所获得的财产，可继续归属于其原所有人个人所有。此外，该协议亦有助于明确夫妻双方各自对财务义务的责任，从而在发生财务问题（如贷款违约或破产）时，双方不致互相承担责任。",
+                        "订立婚前协议后，夫妻双方能够建立更为透明的家庭关系，并自婚姻之初即对财产管理与财务责任拥有清晰的认知。",
+                        "在制作婚姻财产协议书（分别财产制）文书（Akta Perjanjian Kawin/Pisah Harta）——即Prenup——的过程中，须符合须于婚前订立的相关条件与规定。"
                     ]
                 },
                 "penjelasan_layanan_items": {
                     "id": [
                         {
-                            "id": "prenup-item",
+                            "id": "akta-perjanjian-kawin-prenup",
                             "paket_harga": {
-                                "nama": "PERJANJIAN KAWIN/PISAH HARTA – PRENUP",
+                                "nama": "Akta Perjanjian Kawin/Pisah Harta – Prenup",
                                 "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
                                 "harga": "Rp 2.500.000",
                                 "gratis_konsultasi": true,
-                                "dokumen_legalitas": [
-                                    "Salinan Akta Prenup"
-                                ],
+                                "dokumen_legalitas": ["Salinan Akta Prenup"],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
                                     "Fasttrack Digital Files Secure Storage",
@@ -3808,14 +3872,14 @@
                                     "nomor": 1,
                                     "judul": "Data Para Pihak",
                                     "items": [
-                                        "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan Kartu Keluarga (KK)"
+                                        "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP) dan Kartu Keluarga (KK)"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "Dokumen Pemikahan",
+                                    "judul": "Dokumen Pernikahan",
                                     "items": [
-                                        "scancopy bewarna Akta Kelahiran, Surat Pengantar Nikah, CN (Bagi WNA)"
+                                        "scancopy bewarna (Akta Kelahiran, Surat Pengantar Nikah, CNI [Bagi WNA])"
                                     ]
                                 },
                                 {
@@ -3830,15 +3894,13 @@
                     ],
                     "en": [
                         {
-                            "id": "prenup-item",
+                            "id": "akta-perjanjian-kawin-prenup",
                             "paket_harga": {
-                                "nama": "MARRIAGE/PROPERTY SEPARATION AGREEMENT – PRENUP",
+                                "nama": "Marriage/Separate Property Agreement Deed – Prenup",
                                 "modal_note": "*Capital up to IDR 1 Billion",
                                 "harga": "Rp 2.500.000",
                                 "gratis_konsultasi": true,
-                                "dokumen_legalitas": [
-                                    "Copy of the Prenuptial Agreement Deed"
-                                ],
+                                "dokumen_legalitas": ["Copy of Prenup Deed"],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
                                     "Fasttrack Digital Files Secure Storage",
@@ -3848,23 +3910,23 @@
                             "dokumen_diperlukan": [
                                 {
                                     "nomor": 1,
-                                    "judul": "Data of the Parties",
+                                    "judul": "Parties' Data",
                                     "items": [
-                                        "a color scan of a valid Identity Card (e-KTP) and Family Card (KK)"
+                                        "Colored scan copy of a valid Identity Card (e-KTP), Tax Identification Number (NPWP), and Family Card (KK)"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
                                     "judul": "Marriage Documents",
                                     "items": [
-                                        "a color scan of the Birth Certificate, Marriage Referral Letter, CN (for Foreign Nationals)"
+                                        "Colored scan copy (Birth Certificate, Marriage Certificate of No Impediment, CNI [for Foreign Nationals])"
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "Other Documents That Are the Subject of the Agreement",
+                                    "judul": "Other Documents That Are the Object of the Agreement",
                                     "items": [
-                                        "a color scan of Proof of Asset Ownership to be listed as premarital property (Land and Building Certificate, Vehicle Ownership Certificate (BPKB), Savings Book, other Securities)"
+                                        "Colored scan copy of Proof of Asset Ownership intended to be listed as premarital assets (Land and Building Certificates, Vehicle Ownership Certificate/BPKB, Bank Passbook, other Securities)"
                                     ]
                                 }
                             ]
@@ -3872,41 +3934,39 @@
                     ],
                     "zh": [
                         {
-                            "id": "prenup-item",
+                            "id": "akta-perjanjian-kawin-prenup",
                             "paket_harga": {
-                                "nama": "婚姻/财产分割协议 – 婚前协议",
-                                "modal_note": "*资本最高10亿印尼盾",
+                                "nama": "婚姻财产协议书（分别财产制）——Prenup",
+                                "modal_note": "*注册资本最高至10亿印尼盾",
                                 "harga": "Rp 2.500.000",
                                 "gratis_konsultasi": true,
-                                "dokumen_legalitas": [
-                                    "婚前协议公证书复印件"
-                                ],
+                                "dokumen_legalitas": ["婚前协议文书副本"],
                                 "termasuk": [
-                                    "Fasttrack 文件快递服务",
-                                    "Fasttrack 数字文件安全存储",
-                                    "Fasttrack 套件"
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
                                 ]
                             },
                             "dokumen_diperlukan": [
                                 {
                                     "nomor": 1,
-                                    "judul": "各方资料",
+                                    "judul": "双方资料",
                                     "items": [
-                                        "有效身份证（e-KTP）及户口簿（KK）彩色扫描件"
+                                        "有效的彩色电子身份证（e-KTP）扫描件、纳税人识别号（NPWP）及户口卡（KK）复印件"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "婚姻文件",
+                                    "judul": "婚姻相关文件",
                                     "items": [
-                                        "出生证明、结婚介绍信、CN（外籍人士适用）彩色扫描件"
+                                        "彩色扫描件（出生证明、结婚介绍信、无婚姻障碍证明CNI[外籍人士适用]）"
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "作为协议对象的其他文件",
+                                    "judul": "作为协议标的的其他文件",
                                     "items": [
-                                        "拟列为婚前个人财产的资产所有权证明彩色扫描件（土地及建筑物证书、机动车所有权证明（BPKB）、存折、其他有价证券）"
+                                        "拟列为婚前财产的资产所有权证明彩色扫描件（土地及建筑物证书、机动车登记证BPKB、银行存折、其他有价证券）"
                                     ]
                                 }
                             ]
@@ -3920,81 +3980,54 @@
                 }
             },
             {
-                "id": "perjanjian-kawin-postnup",
+                "id": "akta-perjanjian-kawin-postnup",
                 "nama": {
                     "id": "Perjanjian Kawin/Pisah Harta – Postnup",
-                    "en": "Marriage/Property Separation Agreement – Postnup",
-                    "zh": "婚姻/财产分割协议 – 婚后协议"
+                    "en": "Post-nuptial Agreement",
+                    "zh": "婚后协议"
                 },
                 "deskripsi": {
-                    "id": "Penyusunan perjanjian pisah harta yang dibuat setelah perkawinan sesuai ketentuan hukum.",
-                    "en": "Preparation of a property separation agreement made after marriage in accordance with legal provisions.",
-                    "zh": "依据法律规定，在婚后起草财产分割协议。"
+                    "id": "Penyusunan perjanjian pisah harta yang dibuat setelah perkawinan  secara resmi.",
+                    "en": "The creation of a notarized post-nuptial agreement that establishes the terms for property division in the event of divorce.",
+                    "zh": "制作经公证的婚后协议，规定离婚时财产分割的条款。"
                 },
                 "harga": "Rp 3.500.000",
                 "penjelasan_layanan": {
                     "id": [
-                        "Perjanjian postnup, atau lebih dikenal sebagai perjanjian perkawinan yang dibuat setelah perkawinan berlangsung, merupakan salah satu kesepakatan tertulis antara suami dan istri yang dibuat setelah perkawinan berlangsung untuk mengatur pemisahan harta kekayaan, tanggung jawab utang, serta hak-hak finansial masing-masing pihak.",
-                        "Manfaat dari perjanjian ini antara lain memberikan perlindungan aset pribadi dan aset bersama, mencegah potensi konflik harta di kemudian hari. Selain itu, perjanjian ini juga berfungsi untuk mempertegas kejelesan atas pembagian harta bagi kedua belah pihak apabila terjadi perpisahan, perceraian, atau kematian. Dengan demikian, perjanjian ini sekaligus menjadi landasan yang kuat bagi kedua belah pihak untuk menjaga kelancaran hubungan finansial maupun aset dan tanggung jawab masing-masing pihak dalam menjalani rumah tangga.",
-                        "Di samping itu, perjanjian ini membantu menciptakan kejelasan dalam pembagian harta bersama sehingga dapat mempertegas kejelesan atas pembagian harta bagi kedua belah pihak apabila terjadi pemisahan. Dengan demikian, perjanjian ini sekaligus menjadi landasan yang kuat bagi kedua belah pihak dalam menjalani kehidupan rumah tangga.",
-                        "Dalam proses pembuatan Akta Post Nuptial terdapat syarat dan ketentuan hukum yang harus dipenuhi oleh para pihak sebagai berikut:",
-                        {
-                            "type": "title",
-                            "text": "Kesepakatan"
-                        },
-                        "Kesepakatan antara kedua belah pihak harus dipenuhi. Dibuat secara tertulis, serta disahkan oleh Notaris.",
-                        {
-                            "type": "title",
-                            "text": "Isi Perjanjian"
-                        },
-                        "Isi perjanjian tidak bertentangan dengan hukum, norma kesusilaan, dan ketertiban umum. Selain itu, perjanjian ini disusun setelah pernikahan berlangsung."
+                        "Perjanjian pasca nikah merupakan kesepakatan tertulis antara suami dan istri yang dibuat setelah perkawinan berlangsung untuk mengatur pemisahan atau pengelolaan harta serta urusan keuangan dalam rumah tangga. Perjanjian ini menjadi dasar hukum bagi pasangan dalam menentukan pembagian aset dan tanggung jawab finansial masing-masing pihak.",
+                        "Manfaat dari perjanjian ini antara lain memberikan perlindungan terhadap aset pribadi dari risiko keuangan seperti kredit bermasalah atau kebangkrutan yang mungkin dialami salah satu pihak. Selain itu, perjanjian pasca nikah juga berfungsi untuk memperjelas tanggung jawab atas utang, serta memastikan bahwa harta bawaan maupun warisan tetap menjadi milik pribadi masing-masing pasangan.",
+                        "Di samping itu, perjanjian ini membantu menciptakan kejelasan dalam pembagian harta bersama sehingga dapat meminimalkan potensi sengketa harta gono-gini apabila terjadi perceraian di kemudian hari. Dengan demikian, perjanjian pasca nikah memberikan kepastian hukum serta perlindungan finansial bagi kedua belah pihak dalam menjalani kehidupan rumah tangga.",
+                        "Dalam proses pembuatan Akta Post Nup ini terdapat syarat dan ketentuan untuk dipenuhi oleh para pihak sebagai berikut:",
+                        "Kesepakatan - Kesepakatan antara kedua belah pihak tanpa paksaan. Dibuat secara tertulis, serta disahkan oleh Notaris.",
+                        "Isi Perjanjian - Isi perjanjian tidak bertentangan dengan hukum, norma kesusilaan, dan ketertiban umum. Selain itu, perjanjian ini disusun setelah perkawinan."
                     ],
                     "en": [
-                        "A postnuptial agreement, better known as a marriage agreement made after the marriage has taken place, is a written agreement between husband and wife made after the marriage to regulate the separation of assets, debt responsibility, and the financial rights of each party.",
-                        "The benefits of this agreement include providing protection for personal and joint assets, and preventing potential property disputes in the future. In addition, this agreement also serves to clarify the division of assets for both parties in the event of separation, divorce, or death. Accordingly, this agreement also serves as a strong foundation for both parties to maintain smooth financial relations as well as the assets and responsibilities of each party in their married life.",
-                        "In addition, this agreement helps create clarity in the division of joint assets, thereby clarifying the division of assets for both parties in the event of separation. Accordingly, this agreement also serves as a strong foundation for both parties in living their married life.",
-                        "In the process of preparing the Postnuptial Deed, there are legal terms and conditions that must be fulfilled by the parties, as follows:",
-                        {
-                            "type": "title",
-                            "text": "Agreement"
-                        },
-                        "The agreement between both parties must be fulfilled. It must be made in writing and ratified by a Notary.",
-                        {
-                            "type": "title",
-                            "text": "Content of the Agreement"
-                        },
-                        "The content of the agreement must not conflict with the law, moral norms, and public order. In addition, this agreement is drawn up after the marriage has taken place."
+                        "A Postnuptial Agreement is a written agreement between husband and wife made after marriage has taken place to regulate the separation or management of assets and financial matters within the household. This agreement serves as the legal basis for the couple in determining the division of assets and financial responsibility of each party.",
+                        "The benefits of this agreement include providing protection for personal assets from financial risks such as problematic loans or bankruptcy that either party may experience. In addition, a postnuptial agreement also serves to clarify responsibility for debts, as well as ensure that premarital assets and inheritances remain the personal property of each spouse.",
+                        "In addition, this agreement helps create clarity in the division of joint assets, thereby minimizing the potential for disputes over marital property in the event of a future divorce. As such, a postnuptial agreement provides legal certainty and financial protection for both parties throughout their household life.",
+                        "In the process of drawing up this Post Nup Deed, there are terms and conditions to be fulfilled by the parties as follows:",
+                        "Agreement - An agreement between both parties without coercion. Made in writing, and legalized by a Notary.",
+                        "Content of the Agreement - The content of the agreement must not contravene the law, moral norms, and public order. In addition, this agreement is drawn up after marriage."
                     ],
                     "zh": [
-                        "婚后协议，即通常所称在婚姻缔结后订立的婚姻协议，是夫妻在婚姻缔结后订立的书面协议，用于规范财产分割、债务责任及各方的财务权利。",
-                        "该协议的益处包括保护个人及共同财产，并预防日后潜在的财产纠纷。此外，该协议还有助于在分居、离婚或死亡情况下明确双方的财产分割。因此，该协议也成为双方在婚姻生活中维持财务关系顺畅及各自资产与责任的坚实基础。",
-                        "此外，该协议有助于明确共同财产的分割，从而在发生分居时明确双方的财产分割。因此，该协议也成为双方共同生活的坚实基础。",
-                        "在起草婚后协议公证书的过程中，各方须满足以下法律条款与条件：",
-                        {
-                            "type": "title",
-                            "text": "协议"
-                        },
-                        "双方之间的协议须予以满足。须以书面形式作成，并经公证人核准。",
-                        {
-                            "type": "title",
-                            "text": "协议内容"
-                        },
-                        "协议内容不得违反法律、道德规范及公共秩序。此外，该协议须在婚姻缔结后订立。"
+                        "婚后协议（Perjanjian Pasca Nikah）是夫妻双方在婚姻关系存续期间签订的书面协议，用于规范家庭财产的分离或管理以及财务事宜。该协议是夫妻双方确定资产分配及各自财务责任的法律依据。",
+                        "该协议的益处包括：为个人资产提供保护，使其免受任何一方可能面临的贷款违约或破产等财务风险的影响。此外，婚后协议还有助于明确债务责任，并确保婚前财产及继承所得财产仍归各自个人所有。",
+                        "此外，该协议有助于明确共同财产的分配，从而在日后若发生离婚时，最大限度地减少共同财产（harta gono-gini）纠纷的可能性。因此，婚后协议为夫妻双方在共同生活中提供了法律确定性与财务保障。",
+                        "在制作本婚后协议文书（Akta Post Nup）的过程中，各方须满足以下条件与规定：",
+                        "协议达成 - 双方在无胁迫的情况下达成协议。须以书面形式作成，并经公证人核准。",
+                        "协议内容 - 协议内容不得违反法律、善良风俗及公共秩序。此外，该协议须于婚姻关系成立后订立。"
                     ]
                 },
                 "penjelasan_layanan_items": {
                     "id": [
                         {
-                            "id": "postnup-item",
+                            "id": "akta-perjanjian-kawin-postnup",
                             "paket_harga": {
-                                "nama": "PERJANJIAN KAWIN/PISAH HARTA – POSTNUP",
+                                "nama": "Akta Perjanjian Kawin/Pisah Harta – Postnup",
                                 "modal_note": "*Modal sampai dengan Rp. 1 Miliar",
                                 "harga": "Rp 3.500.000",
                                 "gratis_konsultasi": true,
-                                "dokumen_legalitas": [
-                                    "Salinan Akta Postnup",
-                                    "Pendaftaran KUA selayaknya (dikoordinasikan)"
-                                ],
+                                "dokumen_legalitas": ["Salinan Akta Postnup"],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
                                     "Fasttrack Digital Files Secure Storage",
@@ -4006,15 +4039,13 @@
                                     "nomor": 1,
                                     "judul": "Data Para Pihak",
                                     "items": [
-                                        "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan Kartu Keluarga (KK)"
+                                        "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP) dan Kartu Keluarga (KK)"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "Dokumen Pemikahan",
-                                    "items": [
-                                        "scancopy bewarna Buku Nikah"
-                                    ]
+                                    "judul": "Dokumen Pernikahan",
+                                    "items": ["scancopy bewarna Buku Nikah"]
                                 },
                                 {
                                     "nomor": 3,
@@ -4028,16 +4059,13 @@
                     ],
                     "en": [
                         {
-                            "id": "postnup-item",
+                            "id": "akta-perjanjian-kawin-postnup",
                             "paket_harga": {
-                                "nama": "MARRIAGE/PROPERTY SEPARATION AGREEMENT – POSTNUP",
+                                "nama": "Marriage/Separate Property Agreement Deed – Postnup",
                                 "modal_note": "*Capital up to IDR 1 Billion",
                                 "harga": "Rp 3.500.000",
                                 "gratis_konsultasi": true,
-                                "dokumen_legalitas": [
-                                    "Copy of the Postnuptial Agreement Deed",
-                                    "Appropriate KUA Registration (to be coordinated)"
-                                ],
+                                "dokumen_legalitas": ["Copy of Postnup Deed"],
                                 "termasuk": [
                                     "Fasttrack Document Delivery Service",
                                     "Fasttrack Digital Files Secure Storage",
@@ -4047,23 +4075,23 @@
                             "dokumen_diperlukan": [
                                 {
                                     "nomor": 1,
-                                    "judul": "Data of the Parties",
+                                    "judul": "Parties' Data",
                                     "items": [
-                                        "a color scan of a valid Identity Card (e-KTP) and Family Card (KK)"
+                                        "Colored scan copy of a valid Identity Card (e-KTP), Tax Identification Number (NPWP), and Family Card (KK)"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
                                     "judul": "Marriage Documents",
                                     "items": [
-                                        "a color scan of the Marriage Certificate Book"
+                                        "Colored scan copy of Marriage Certificate (Buku Nikah)"
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "Other Documents That Are the Subject of the Agreement",
+                                    "judul": "Other Documents That Are the Object of the Agreement",
                                     "items": [
-                                        "a color scan of Proof of Asset Ownership to be listed as premarital property (Land and Building Certificate, Vehicle Ownership Certificate (BPKB), Savings Book, other Securities)"
+                                        "Colored scan copy of Proof of Asset Ownership intended to be listed as premarital assets (Land and Building Certificates, Vehicle Ownership Certificate/BPKB, Bank Passbook, other Securities)"
                                     ]
                                 }
                             ]
@@ -4071,42 +4099,39 @@
                     ],
                     "zh": [
                         {
-                            "id": "postnup-item",
+                            "id": "akta-perjanjian-kawin-postnup",
                             "paket_harga": {
-                                "nama": "婚姻/财产分割协议 – 婚后协议",
-                                "modal_note": "*资本最高10亿印尼盾",
+                                "nama": "婚姻财产协议书（分别财产制）——Postnup",
+                                "modal_note": "*注册资本最高至10亿印尼盾",
                                 "harga": "Rp 3.500.000",
                                 "gratis_konsultasi": true,
-                                "dokumen_legalitas": [
-                                    "婚后协议公证书复印件",
-                                    "适当的宗教事务局（KUA）登记（协调办理）"
-                                ],
+                                "dokumen_legalitas": ["婚后协议文书副本"],
                                 "termasuk": [
-                                    "Fasttrack 文件快递服务",
-                                    "Fasttrack 数字文件安全存储",
-                                    "Fasttrack 套件"
+                                    "Fasttrack Document Delivery Service",
+                                    "Fasttrack Digital Files Secure Storage",
+                                    "Fasttrack Kit"
                                 ]
                             },
                             "dokumen_diperlukan": [
                                 {
                                     "nomor": 1,
-                                    "judul": "各方资料",
+                                    "judul": "双方资料",
                                     "items": [
-                                        "有效身份证（e-KTP）及户口簿（KK）彩色扫描件"
+                                        "有效的彩色电子身份证（e-KTP）扫描件、纳税人识别号（NPWP）及户口卡（KK）复印件"
                                     ]
                                 },
                                 {
                                     "nomor": 2,
-                                    "judul": "婚姻文件",
+                                    "judul": "婚姻相关文件",
                                     "items": [
-                                        "结婚证书彩色扫描件"
+                                        "结婚证书（Buku Nikah）彩色扫描件"
                                     ]
                                 },
                                 {
                                     "nomor": 3,
-                                    "judul": "作为协议对象的其他文件",
+                                    "judul": "作为协议标的的其他文件",
                                     "items": [
-                                        "拟列为婚前个人财产的资产所有权证明彩色扫描件（土地及建筑物证书、机动车所有权证明（BPKB）、存折、其他有价证券）"
+                                        "拟列为婚前财产的资产所有权证明彩色扫描件（土地及建筑物证书、机动车登记证BPKB、银行存折、其他有价证券）"
                                     ]
                                 }
                             ]
@@ -4118,57 +4143,7 @@
                     "en": [],
                     "zh": []
                 }
-            }
-        ],
-        "dasar_hukum": {
-            "id": [],
-            "en": [],
-            "zh": []
-        },
-        "faq": {
-            "id": [],
-            "en": [],
-            "zh": []
-        }
-    },
-    {
-        "id": 3,
-        "name": {
-            "id": "Layanan Notaris Lainnya",
-            "en": "Other Notary Services",
-            "zh": "其他公证服务"
-        },
-        "tag": {
-            "id": "Profesional",
-            "en": "Professional",
-            "zh": "专业级"
-        },
-        "price": "250000",
-        "price_label": "Rp 250.000",
-        "duration": {
-            "id": "Estimasi 1-3 hari kerja",
-            "en": "Estimated 1-3 working days",
-            "zh": "预计1-3个工作日"
-        },
-        "image": "",
-        "excerpt": {
-            "id": "Pengesahan dokumen melalui waarmerking, legalisir, dan legalisasi, serta pengambilan profil lengkap perseroan terbatas dari Kementerian Hukum.",
-            "en": "Document authentication through waarmerking, certified copying, and legalization, as well as obtaining a complete company profile of a limited liability company from the Ministry of Law.",
-            "zh": "通过备案登记（waarmerking）、核证副本及公证认证进行文件认证，以及从法律部获取有限责任公司完整档案。"
-        },
-        "detail_path": "/notaris-virtual-dan-akta/3",
-        "penjelasan_umum": {
-            "id": [
-                "Layanan pengurusan berbagai kebutuhan notaril di luar pembuatan akta, mencakup pengesahan dokumen melalui waarmerking, legalisir, dan legalisasi, serta pengambilan profil lengkap perseroan terbatas dari Kementerian Hukum. Seluruh layanan dilakukan secara resmi dan sesuai ketentuan hukum yang berlaku."
-            ],
-            "en": [
-                "A service for handling various notarial needs outside of deed preparation, including document authentication through waarmerking, certified copying, and legalization, as well as obtaining a complete company profile of a limited liability company from the Ministry of Law. All services are carried out officially and in accordance with applicable legal provisions."
-            ],
-            "zh": [
-                "为公证书制作以外的各类公证需求提供办理服务，包括通过备案登记（waarmerking）、核证副本及公证认证进行文件认证，以及从法律部获取有限责任公司完整档案。所有服务均以正式方式进行，并符合现行法律规定。"
-            ]
-        },
-        "paket": [
+            },
             {
                 "id": "waarmerking",
                 "nama": {
@@ -4221,9 +4196,7 @@
                                 {
                                     "nomor": 1,
                                     "judul": "KTP/Identitas Para Pihak Yang Dibutuhkan Dalam Waarmerking",
-                                    "items": [
-                                        "scancopy bewarna"
-                                    ]
+                                    "items": ["scancopy bewarna"]
                                 },
                                 {
                                     "nomor": 2,
@@ -4256,9 +4229,7 @@
                                 {
                                     "nomor": 1,
                                     "judul": "ID Card/Identity of the Parties Required for Waarmerking",
-                                    "items": [
-                                        "color scan copy"
-                                    ]
+                                    "items": ["color scan copy"]
                                 },
                                 {
                                     "nomor": 2,
@@ -4291,16 +4262,12 @@
                                 {
                                     "nomor": 1,
                                     "judul": "备案登记所需的各方身份证/身份证明",
-                                    "items": [
-                                        "彩色扫描件"
-                                    ]
+                                    "items": ["彩色扫描件"]
                                 },
                                 {
                                     "nomor": 2,
                                     "judul": "原件文件",
-                                    "items": [
-                                        "待办理备案登记的原件文件"
-                                    ]
+                                    "items": ["待办理备案登记的原件文件"]
                                 }
                             ]
                         }
@@ -4367,9 +4334,7 @@
                                 {
                                     "nomor": 1,
                                     "judul": "KTP/Identitas Para Pihak Yang Dibutuhkan Dalam Waarmerking",
-                                    "items": [
-                                        "scancopy bewarna"
-                                    ]
+                                    "items": ["scancopy bewarna"]
                                 },
                                 {
                                     "nomor": 2,
@@ -4402,9 +4367,7 @@
                                 {
                                     "nomor": 1,
                                     "judul": "ID Card/Identity of the Parties Required for Waarmerking",
-                                    "items": [
-                                        "color scan copy"
-                                    ]
+                                    "items": ["color scan copy"]
                                 },
                                 {
                                     "nomor": 2,
@@ -4437,16 +4400,12 @@
                                 {
                                     "nomor": 1,
                                     "judul": "备案登记所需的各方身份证/身份证明",
-                                    "items": [
-                                        "彩色扫描件"
-                                    ]
+                                    "items": ["彩色扫描件"]
                                 },
                                 {
                                     "nomor": 2,
                                     "judul": "原件文件",
-                                    "items": [
-                                        "待核证的原件文件"
-                                    ]
+                                    "items": ["待核证的原件文件"]
                                 }
                             ]
                         }
@@ -4513,9 +4472,7 @@
                                 {
                                     "nomor": 1,
                                     "judul": "KTP/Identitas Para Pihak Yang Dibutuhkan Dalam Waarmerking",
-                                    "items": [
-                                        "scancopy bewarna"
-                                    ]
+                                    "items": ["scancopy bewarna"]
                                 },
                                 {
                                     "nomor": 2,
@@ -4548,9 +4505,7 @@
                                 {
                                     "nomor": 1,
                                     "judul": "ID Card/Identity of the Parties Required for Waarmerking",
-                                    "items": [
-                                        "color scan copy"
-                                    ]
+                                    "items": ["color scan copy"]
                                 },
                                 {
                                     "nomor": 2,
@@ -4583,16 +4538,12 @@
                                 {
                                     "nomor": 1,
                                     "judul": "备案登记所需的各方身份证/身份证明",
-                                    "items": [
-                                        "彩色扫描件"
-                                    ]
+                                    "items": ["彩色扫描件"]
                                 },
                                 {
                                     "nomor": 2,
                                     "judul": "原件文件",
-                                    "items": [
-                                        "待公证认证的原件文件"
-                                    ]
+                                    "items": ["待公证认证的原件文件"]
                                 }
                             ]
                         }
@@ -4663,9 +4614,7 @@
                                 {
                                     "nomor": 2,
                                     "judul": "Alamat",
-                                    "items": [
-                                        "Alamat Lengkap Perseroan"
-                                    ]
+                                    "items": ["Alamat Lengkap Perseroan"]
                                 }
                             ]
                         }
@@ -4698,9 +4647,7 @@
                                 {
                                     "nomor": 2,
                                     "judul": "Address",
-                                    "items": [
-                                        "Complete Company Address"
-                                    ]
+                                    "items": ["Complete Company Address"]
                                 }
                             ]
                         }
@@ -4726,16 +4673,12 @@
                                 {
                                     "nomor": 1,
                                     "judul": "公司名称",
-                                    "items": [
-                                        "拟申请的公司名称"
-                                    ]
+                                    "items": ["拟申请的公司名称"]
                                 },
                                 {
                                     "nomor": 2,
                                     "judul": "地址",
-                                    "items": [
-                                        "公司完整地址"
-                                    ]
+                                    "items": ["公司完整地址"]
                                 }
                             ]
                         }
