@@ -91,7 +91,7 @@ export function useServiceCategories() {
                 ],
             },
             {
-                title: "PERIZINAN BERUSAHA",
+                title: "PERIZINAN DASAR & PERIZINAN LAINNYA",
                 path: "/perizinan-berusaha",
                 items: [
                     {
@@ -121,6 +121,15 @@ export function useServiceCategories() {
                         path: "/perizinan-berusaha/3",
                         icon: "/icons/ic-card-4.svg",
                     },
+                    {
+                        title: "Nomor Pokok Wajib Pajak (NPWP)",
+                        description:
+                            "Pengurusan pendaftaran NPWP badan usaha sebagai identitas wajib pajak secara resmi.",
+                        price: "Rp. 1.250.000",
+                        packages: "1 Paket",
+                        path: "/perizinan-lainnya/1",
+                        icon: "/icons/ic-card-4.svg",
+                    },
                 ],
             },
             {
@@ -128,30 +137,39 @@ export function useServiceCategories() {
                 path: "/",
                 items: [
                     {
-                        title: "Akta Notaris – PT (Perseroan Terbatas)",
+                        title: "Perubahan Anggaran Dasar Perseroan Terbatas (PT)",
                         description:
-                            "Pengurusan akta perubahan anggaran dasar, pengurus, saham, dan RUPS Tahunan PT secara resmi.",
-                        price: "Rp 3.000.000",
+                            "Lorem Ipsum",
+                        price: "Rp ###.###",
                         packages: "3 Paket",
-                        path: "/notaris-virtual-dan-akta/1",
+                        path: "/",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
-                        title: "Akta Lainnya",
+                        title: "Perubahan Data Perseroan",
                         description:
-                            "Penerbitan akta cabang, akuisisi, kuasa, jual beli saham, hingga perjanjian pranikah dan pisah harta.Perubahan Anggaran Dasar Perseroan Pasal 1-4",
-                        price: "Rp 750.000",
-                        packages: "7 Paket",
-                        path: "/notaris-virtual-dan-akta/2",
+                            "Lorem Ipsum",
+                        price: "Rp ###.###",
+                        packages: "3 Paket",
+                        path: "/",
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
-                        title: "Layanan Notaris Lainnya",
+                        title: "Rapat Umum Pemegang Saham (RUPS) Tahunan",
                         description:
-                            "Pengesahan dokumen melalui waarmerking, legalisir, legalisasi, dan penerbitan profil perseroan dari AHU.",
-                        price: "Rp 250.000",
-                        packages: "4 Paket",
-                        path: "/notaris-virtual-dan-akta/3",
+                            "Lorem Ipsum",
+                        price: "Rp ###.###",
+                        packages: "3 Paket",
+                        path: "/",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Akta Notaris Lainnya",
+                        description:
+                            "Lorem Ipsum",
+                        price: "Rp ###.###",
+                        packages: "3 Paket",
+                        path: "/",
                         icon: "/icons/ic-card-4.svg",
                     },
                 ],

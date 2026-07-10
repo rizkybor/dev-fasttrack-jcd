@@ -729,25 +729,6 @@ onUnmounted(() => {
                     >
                         {{ t("home.promo.title") }}
                     </h2>
-                    <a
-                        href="/promo"
-                        class="hidden sm:inline-flex items-center gap-2 border border-[#F9F9F9] rounded-lg px-[11px] py-[11px] h-[44px] text-[14px] font-semibold text-[#F9F9F9] hover:bg-white/10 transition-colors"
-                    >
-                        {{ t("home.promo.seeAll") }}
-                        <svg
-                            class="w-6 h-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            />
-                        </svg>
-                    </a>
                 </div>
 
                 <div

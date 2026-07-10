@@ -14,72 +14,90 @@ const mobileServicesOpen = ref(false);
 const mobileInformasiOpen = ref(false);
 
 const serviceCategories = [
-    {
-        title: "Pendirian & Struktur Badan Usaha",
-        path: "/badan-usaha",
-        icon: "building",
-        items: [
-            "Pendirian PT, CV & Yayasan",
-            "Kantor Perwakilan",
-            "Restrukturisasi, Penutupan & Sertifikasi Badan Usaha",
-            "Badan Usaha Luar Negeri",
-        ],
-    },
-    {
-        title: "Perizinan & OSS",
-        path: "/one-single-submission",
-        icon: "license",
-        items: ["NIB & OSS", "Perizinan Lainnya"],
-    },
-    {
-        title: "Notaris & Legalisasi Dokumen",
-        path: "/notaris-virtual-dan-akta",
-        icon: "document",
-        items: [
-            "Notaris Virtual & Akta",
-            "Penyusunan & Peninjauan Perjanjian",
-            "Legalisasi Kedutaan & Apostille",
-            "Penerjemah Tersumpah",
-        ],
-    },
-    {
-        title: "Kekayaan Intelektual & Kepatuhan",
-        path: "/kekayaan-intelektual",
-        icon: "document-check",
-        items: [
-            "Merek & Hak Cipta (HAKI)",
-            "Uji Tuntas Hukum",
-            "Kewajiban Pelaporan Perusahaan",
-        ],
-    },
-    {
-        title: "Keimigrasian & Izin Tinggal",
-        path: "/izin-tinggal-terbatas",
-        icon: "doc-stack",
-        items: [
-            "KITAS & KITAP",
-            "Keimigrasian WNI & WNA",
-            "Naturalisasi & Kewarganegaraan",
-        ],
-    },
-    {
-        title: "Visa",
-        path: "/visa-indonesia",
-        icon: "globe",
-        items: ["Visa Indonesia", "Visa Mancanegara"],
-    },
-    {
-        title: "Virtual Office & Digital Marketing",
-        path: "/virtual-office",
-        icon: "pin",
-        items: ["Virtual Office Jakarta", "Digital Marketing"],
-    },
-    {
-        title: "Perpajakan & Retainer",
-        path: "/perpajakan-dan-pembukuan",
-        icon: "grid",
-        items: ["Perpajakan & Pembukuan", "Retainer / Berlangganan"],
-    },
+  {
+    title: "Pendirian & Struktur Badan Usaha",
+    path: "/badan-usaha",
+    icon: "building",
+    items: [
+      { label: "Pendirian PT, CV & Yayasan", path: "/badan-usaha" },
+      { label: "Kantor Perwakilan", path: "/kantor-perwakilan" },
+      { label: "Restrukturisasi Perseroan Terbatas", path: "/restrukturisasi-perseroan-terbatas" },
+      { label: "Penutupan Badan Usaha", path: "/penutupan-badan-usaha" },
+      { label: "Sertifikasi Badan Usaha", path: "/sertifikasi-badan-usaha" },
+      { label: "Badan Usaha Luar Negeri", path: "/badan-usaha-luar-negeri" },
+    ],
+  },
+  {
+    title: "Perizinan & OSS",
+    path: "/one-single-submission",
+    icon: "license",
+    items: [
+      { label: "NIB & OSS", path: "/one-single-submission" },
+      { label: "Perizinan Dasar", path: "/perizinan-dasar" },
+      { label: "Perizinan Berusaha (PB UMKU)", path: "/perizinan-berusaha" },
+      { label: "Perizinan Lainnya", path: "/perizinan-lainnya" },
+    ],
+  },
+  {
+    title: "Notaris & Legalisasi Dokumen",
+    path: "/notaris-virtual-dan-akta",
+    icon: "document",
+    items: [
+      { label: "Notaris Virtual & Akta", path: "/notaris-virtual-dan-akta" },
+      { label: "Penyusunan & Peninjauan Perjanjian", path: "/penyusunan-peninjauan" },
+      { label: "Legalisasi Kedutaan & Apostille", path: "/legalisasi-kedutaan" },
+      { label: "Penerjemah Tersumpah", path: "/penerjemah" },
+    ],
+  },
+  {
+    title: "Kekayaan Intelektual & Kepatuhan",
+    path: "/kekayaan-intelektual",
+    icon: "document-check",
+    items: [
+      { label: "Merek & Hak Cipta (HAKI)", path: "/kekayaan-intelektual" },
+      { label: "Uji Tuntas Hukum", path: "/uji-tuntas-hukum" },
+      { label: "Kewajiban Pelaporan Perusahaan", path: "/kewajiban-pelaporan-perusahaan" },
+    ],
+  },
+  {
+    title: "Keimigrasian & Izin Tinggal",
+    path: "/izin-tinggal-terbatas",
+    icon: "doc-stack",
+    items: [
+      { label: "KITAS (Izin Tinggal Terbatas)", path: "/izin-tinggal-terbatas" },
+      { label: "KITAP (Izin Tinggal Tetap)", path: "/izin-tinggal-tetap" },
+      { label: "Keimigrasian WNI & WNA", path: "/keimigrasian-wni-wna" },
+      { label: "Naturalisasi & Kewarganegaraan", path: "/naturalisasi" },
+    ],
+  },
+  {
+    title: "Visa",
+    path: "/visa-indonesia",
+    icon: "globe",
+    items: [
+      { label: "Visa Indonesia", path: "/visa-indonesia" },
+      { label: "Visa Mancanegara", path: "/visa-mancanegara" },
+    ],
+  },
+  {
+    title: "Virtual Office & Digital Marketing",
+    path: "/virtual-office",
+    icon: "pin",
+    items: [
+      { label: "Virtual Office Jakarta", path: "/virtual-office" },
+      { label: "Design (Logo, Company Profile & Annual Report)", path: "/digital-marketing" },
+      { label: "Digital Marketing (SEO, Web Development & Ads)", path: "/digital-marketing" },
+    ],
+  },
+  {
+    title: "Perpajakan & Retainer",
+    path: "/perpajakan-dan-pembukuan",
+    icon: "grid",
+    items: [
+      { label: "Perpajakan & Pembukuan", path: "/perpajakan-dan-pembukuan" },
+      { label: "Retainer / Berlangganan (termasuk Corporate Secretary)", path: "/retainer-berlangganan" },
+    ],
+  },
 ];
 
 const serviceTools = [
@@ -839,17 +857,15 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                 </div>
                 <div class="max-w-7xl mx-auto px-6 py-6">
                     <div class="grid grid-cols-3 lg:grid-cols-4 gap-3">
-                        <a
+                        <div
                             v-for="group in serviceCategories"
                             :key="group.title"
-                            :href="group.path"
-                            class="group rounded-xl border border-[#D9DAD8] bg-white p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md"
-                            @click="closeAllMenus"
+                            class="rounded-xl border border-[#D9DAD8] bg-white p-3.5"
                         >
                             <template v-if="!group.isLogo">
                                 <div class="flex items-start gap-2.5">
                                     <div
-                                        class="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] text-[#1A1B18] transition group-hover:border-primary/30 group-hover:bg-[#9e1f16]/5"
+                                        class="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] text-[#1A1B18]"
                                     >
                                         <span
                                             class="absolute -right-1 -top-1 h-2.5 w-2.5 rounded-full bg-green-500"
@@ -985,28 +1001,34 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                                             />
                                         </svg>
                                     </div>
-                                    <div>
+                                    <div class="min-w-0 flex-1">
                                         <h3
-                                            class="text-sm font-bold text-[#1A1B18] group-hover:text-primary transition-colors leading-tight"
+                                            class="text-sm font-bold text-[#1A1B18] leading-tight"
                                         >
                                             {{ group.title }}
                                         </h3>
-                                        <ul
-                                            class="mt-1 space-y-0.5 text-xs text-[#42443D]"
-                                        >
+                                        <ul class="mt-1.5 space-y-0.5">
                                             <li
                                                 v-for="item in group.items"
-                                                :key="item"
+                                                :key="item.label"
                                             >
-                                                {{ item }}
+                                                <a
+                                                    :href="item.path"
+                                                    class="-mx-1.5 block rounded px-1.5 py-1 text-xs text-[#42443D] transition-colors hover:bg-[#9e1f16]/5 hover:text-primary"
+                                                    @click="closeAllMenus"
+                                                >
+                                                    {{ item.label }}
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </template>
                             <template v-else>
-                                <div
+                                <a
+                                    :href="group.path"
                                     class="h-full min-h-[60px] flex flex-col justify-center"
+                                    @click="closeAllMenus"
                                 >
                                     <div
                                         class="text-lg font-bold mb-1"
@@ -1017,9 +1039,9 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                                     >
                                         {{ group.desc }}
                                     </p>
-                                </div>
+                                </a>
                             </template>
-                        </a>
+                        </div>
                     </div>
 
                     <!-- Tools section -->
