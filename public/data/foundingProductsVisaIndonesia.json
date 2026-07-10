@@ -2,439 +2,131 @@
     {
         "id": 1,
         "name": {
-            "id": "Visa Kunjungan Wisata (B211A)",
-            "en": "Tourist Visit Visa (B211A)",
-            "zh": "旅游访问签证（B211A）"
-        },
-        "tag": {
-            "id": "Populer",
-            "en": "Popular",
-            "zh": "热门"
-        },
-        "price": "2500000",
-        "price_label": "Rp 2.500.000",
-        "duration": {
-            "id": "Estimasi 3-5 hari kerja",
-            "en": "Estimated 3-5 business days",
-            "zh": "预计3-5个工作日"
-        },
-        "image": "",
-        "excerpt": {
-            "id": "Pengurusan visa kunjungan wisata bagi warga negara asing yang ingin berlibur atau mengunjungi keluarga di Indonesia.",
-            "en": "Tourist visit visa processing for foreign nationals wishing to vacation or visit family in Indonesia.",
-            "zh": "为希望在印度尼西亚度假或探亲的外国公民办理旅游访问签证。"
-        },
-        "detail_path": "/visa-indonesia/1",
-        "sections": {
-            "id": [
-                {
-                    "id": "penjelasan-umum",
-                    "type": "penjelasan",
-                    "title": "Penjelasan Umum",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "Visa Kunjungan Wisata (B211A) adalah izin masuk yang diberikan kepada warga negara asing untuk melakukan kunjungan wisata, keluarga, atau kegiatan sosial di Indonesia dalam jangka waktu terbatas."
-                        },
-                        {
-                            "type": "paragraph",
-                            "text": "Visa ini dapat diperpanjang beberapa kali sesuai dengan ketentuan keimigrasian yang berlaku, dan tidak diperuntukkan bagi kegiatan yang menghasilkan penghasilan di Indonesia."
-                        }
-                    ]
-                },
-                {
-                    "id": "syarat-dokumen",
-                    "type": "numbered_detail",
-                    "title": "Syarat dan Dokumen",
-                    "intro": "Berikut dokumen yang perlu disiapkan untuk pengajuan Visa Kunjungan Wisata:",
-                    "items": [
-                        {
-                            "title": "Paspor",
-                            "desc": "Paspor asli dengan masa berlaku minimal 6 bulan sejak tanggal kedatangan."
-                        },
-                        {
-                            "title": "Bukti Keuangan",
-                            "desc": "Rekening koran atau bukti keuangan yang menunjukkan kemampuan membiayai kunjungan."
-                        },
-                        {
-                            "title": "Tiket Pulang Pergi",
-                            "desc": "Bukti tiket keberangkatan dan kepulangan dari Indonesia."
-                        }
-                    ]
-                }
-            ],
-            "en": [
-                {
-                    "id": "penjelasan-umum",
-                    "type": "penjelasan",
-                    "title": "General Explanation",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "The Tourist Visit Visa (B211A) is an entry permit granted to foreign nationals for tourism, family visits, or social activities in Indonesia for a limited period."
-                        },
-                        {
-                            "type": "paragraph",
-                            "text": "This visa can be extended several times in accordance with applicable immigration regulations, and is not intended for income-generating activities in Indonesia."
-                        }
-                    ]
-                },
-                {
-                    "id": "syarat-dokumen",
-                    "type": "numbered_detail",
-                    "title": "Requirements and Documents",
-                    "intro": "The following documents need to be prepared for a Tourist Visit Visa application:",
-                    "items": [
-                        {
-                            "title": "Passport",
-                            "desc": "Original passport valid for at least 6 months from the date of arrival."
-                        },
-                        {
-                            "title": "Proof of Finances",
-                            "desc": "Bank statement or proof of finances showing the ability to fund the visit."
-                        },
-                        {
-                            "title": "Round-Trip Ticket",
-                            "desc": "Proof of departure and return tickets from Indonesia."
-                        }
-                    ]
-                }
-            ],
-            "zh": [
-                {
-                    "id": "penjelasan-umum",
-                    "type": "penjelasan",
-                    "title": "一般说明",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "旅游访问签证（B211A）是颁发给外国公民在印度尼西亚境内进行旅游、探亲或社会活动的限期入境许可。"
-                        },
-                        {
-                            "type": "paragraph",
-                            "text": "该签证可依据现行移民规定多次延期，但不适用于在印度尼西亚从事产生收入的活动。"
-                        }
-                    ]
-                },
-                {
-                    "id": "syarat-dokumen",
-                    "type": "numbered_detail",
-                    "title": "要求与文件",
-                    "intro": "申请旅游访问签证需准备以下文件：",
-                    "items": [
-                        {
-                            "title": "护照",
-                            "desc": "原件护照，自入境之日起有效期至少6个月。"
-                        },
-                        {
-                            "title": "财力证明",
-                            "desc": "银行对账单或能够证明有能力支付访问费用的财力证明。"
-                        },
-                        {
-                            "title": "往返机票",
-                            "desc": "离境及返程印度尼西亚的机票证明。"
-                        }
-                    ]
-                }
-            ]
-        },
-        "faq": []
-    },
-    {
-        "id": 2,
-        "name": {
-            "id": "Visa Kunjungan Bisnis",
-            "en": "Business Visit Visa",
-            "zh": "商务访问签证"
+            "id": "Visa Kunjungan Satu Kali Perjalanan",
+            "en": "Single-Entry Visa",
+            "zh": "单次入境签证"
         },
         "tag": {
             "id": "Profesional",
             "en": "Professional",
-            "zh": "专业"
+            "zh": "专业级"
         },
         "price": "3000000",
         "price_label": "Rp 3.000.000",
         "duration": {
-            "id": "Estimasi 3-5 hari kerja",
-            "en": "Estimated 3-5 business days",
-            "zh": "预计3-5个工作日"
+            "id": "Estimasi 1-3 hari kerja",
+            "en": "Estimated 1-3 working days",
+            "zh": "预计1-3个工作日"
         },
         "image": "",
         "excerpt": {
-            "id": "Pengurusan visa kunjungan bisnis bagi warga negara asing yang melakukan kegiatan bisnis non-produktif di Indonesia.",
-            "en": "Business visit visa processing for foreign nationals conducting non-productive business activities in Indonesia.",
-            "zh": "为在印度尼西亚从事非生产性商务活动的外国公民办理商务访问签证。"
+            "id": "Visa untuk kunjungan wisata, bisnis, atau keperluan lain dengan satu kali masuk ke Indonesia.",
+            "en": "A visa for tourism, business, or other purposes allowing a single entry into Indonesia.",
+            "zh": "允许单次入境印度尼西亚的旅游、商务或其他目的签证。"
         },
-        "detail_path": "/visa-indonesia/2",
-        "sections": {
+        "detail_path": "/visa-indonesia/1",
+        "penjelasan_umum": {
             "id": [
-                {
-                    "id": "penjelasan-umum",
-                    "type": "penjelasan",
-                    "title": "Penjelasan Umum",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "Visa Kunjungan Bisnis diberikan kepada warga negara asing yang melakukan kegiatan bisnis non-produktif di Indonesia, seperti rapat, negosiasi kontrak, atau kunjungan ke mitra usaha."
-                        },
-                        {
-                            "type": "title",
-                            "text": "Cakupan Kegiatan yang Diperbolehkan"
-                        },
-                        {
-                            "type": "bullets",
-                            "items": [
-                                "Menghadiri rapat dengan mitra bisnis;",
-                                "Melakukan survei atau studi kelayakan bisnis;",
-                                "Mengikuti pameran atau konferensi bisnis."
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "syarat-dokumen",
-                    "type": "numbered_detail",
-                    "title": "Syarat dan Dokumen",
-                    "intro": "Berikut dokumen yang perlu disiapkan untuk pengajuan Visa Kunjungan Bisnis:",
-                    "items": [
-                        {
-                            "title": "Paspor",
-                            "desc": "Paspor asli dengan masa berlaku minimal 6 bulan sejak tanggal kedatangan."
-                        },
-                        {
-                            "title": "Surat Sponsor Perusahaan",
-                            "desc": "Surat undangan atau sponsor dari perusahaan di Indonesia yang dikunjungi.",
-                            "bullets": [
-                                "Nama dan tujuan kunjungan;",
-                                "Durasi kunjungan yang direncanakan."
-                            ],
-                            "after_bullets": "Surat harus dikeluarkan di atas kop resmi perusahaan."
-                        }
-                    ]
-                }
+                "Visa Kunjungan Satu Kali Perjalanan (single-entry) memberikan izin satu kali masuk ke wilayah Indonesia dengan izin tinggal awal 60 hingga 180 hari, sesuai indeks dan tujuan kunjungan. Fasttrack mendampingi seluruh proses pengajuan — dari pemeriksaan dokumen hingga visa terbit — untuk 11 indeks visa di bawah ini."
             ],
             "en": [
-                {
-                    "id": "penjelasan-umum",
-                    "type": "penjelasan",
-                    "title": "General Explanation",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "The Business Visit Visa is granted to foreign nationals conducting non-productive business activities in Indonesia, such as meetings, contract negotiations, or visits to business partners."
-                        },
-                        {
-                            "type": "title",
-                            "text": "Scope of Permitted Activities"
-                        },
-                        {
-                            "type": "bullets",
-                            "items": [
-                                "Attending meetings with business partners;",
-                                "Conducting business surveys or feasibility studies;",
-                                "Attending business exhibitions or conferences."
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "syarat-dokumen",
-                    "type": "numbered_detail",
-                    "title": "Requirements and Documents",
-                    "intro": "The following documents need to be prepared for a Business Visit Visa application:",
-                    "items": [
-                        {
-                            "title": "Passport",
-                            "desc": "Original passport valid for at least 6 months from the date of arrival."
-                        },
-                        {
-                            "title": "Company Sponsor Letter",
-                            "desc": "Invitation or sponsor letter from the company in Indonesia being visited.",
-                            "bullets": [
-                                "Name and purpose of the visit;",
-                                "Planned duration of the visit."
-                            ],
-                            "after_bullets": "The letter must be issued on the company's official letterhead."
-                        }
-                    ]
-                }
+                "The Single-Entry Visit Visa grants permission for a one-time entry into Indonesia with an initial stay of 60 to 180 days, depending on the visa index and purpose of the visit. Fasttrack assists with the entire application process—from document review to visa issuance—for the 11 visa indices listed below."
             ],
             "zh": [
-                {
-                    "id": "penjelasan-umum",
-                    "type": "penjelasan",
-                    "title": "一般说明",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "商务访问签证颁发给在印度尼西亚从事非生产性商务活动的外国公民，例如会议、合同谈判或拜访商业伙伴。"
-                        },
-                        {
-                            "type": "title",
-                            "text": "允许活动范围"
-                        },
-                        {
-                            "type": "bullets",
-                            "items": [
-                                "参加与商业伙伴的会议；",
-                                "进行商业调研或可行性研究；",
-                                "参加商业展览或会议。"
-                            ]
-                        }
+                "单次入境访问签证允许持有人进入印度尼西亚一次，初始停留期限为60至180天，具体时长取决于签证类别及访问目的。Fasttrack 协助处理下文列出的11类签证的整个申请流程，涵盖从材料审核到签证签发的各个环节。"
+            ]
+        },
+        "paket": [
+            {
+                "id": "c1-visa-kunjungan-wisata",
+                "nama": {
+                    "id": "C1 VISA Kunjungan Wisata",
+                    "en": "C1 Visa for Tourism Visit",
+                    "zh": "C1旅游访问签证"
+                },
+                "deskripsi": {
+                    "id": "Untuk berwisata, perjalanan kapal pesiar, hingga mengunjungi keluarga & teman di Indonesia.",
+                    "en": "For tourism, cruise travel, and visiting family & friends in Indonesia.",
+                    "zh": "用于旅游、邮轮旅行以及探访印度尼西亚的家人和朋友。"
+                },
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": {
+                    "id": [
+                        "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan seperti berwisata, pengembangan pribadi, atau mempelajari keunikan daya tarik wisata, juga melakukan perjalanan dengan kapal pesiar, negosiasi bisnis, menandatangani perjanjian bisnis, pengecekan barang di kantor, pabrik atau tempat produksi barang dan berwisata serta mengunjungi teman dan keluarga.  memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C1, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                        "Visa C1 merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku serta dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai kebutuhan dan persyaratan keimigrasian."
+                    ],
+                    "en": [
+                        "If you plan to visit Indonesia for purposes such as tourism, personal development, exploring unique tourist attractions, cruise travel, business negotiations, signing business agreements, inspecting goods at offices, factories, or production sites, or visiting friends and family, it is crucial to ensure the visa application process complies with applicable immigration regulations. Through our C1 Visa processing service, we provide professional assistance to facilitate an accurate, efficient visa application process that adheres to current regulations.",
+                        "The C1 Visa is a single-entry visit visa for Indonesia, granting an initial stay of up to 60 days from the date of arrival. This stay permit may be extended in accordance with applicable regulations and can be converted into a Limited Stay Permit, subject to specific needs and immigration requirements."
+                    ],
+                    "zh": [
+                        "如果您计划前往印度尼西亚，无论是出于旅游、个人发展、探索特色景点、邮轮旅行、商务洽谈、签署商业协议、在办公室或生产现场验货，还是探亲访友等目的，确保签证申请流程符合相关移民法规至关重要。我们提供 C1 签证办理服务，协助您按照最新法规要求，准确、高效地完成签证申请。",
+                        "C1 签证属于印度尼西亚单次入境访问签证，允许持有人自入境之日起停留最长 60 天。该停留许可可在符合相关法规的前提下申请延期，并可根据具体需求及移民局规定转换为有限居留许可。"
                     ]
                 },
-                {
-                    "id": "syarat-dokumen",
-                    "type": "numbered_detail",
-                    "title": "要求与文件",
-                    "intro": "申请商务访问签证需准备以下文件：",
-                    "items": [
+                "penjelasan_layanan_items": {
+                    "id": [
                         {
-                            "title": "护照",
-                            "desc": "原件护照，自入境之日起有效期至少6个月。"
-                        },
-                        {
-                            "title": "公司担保函",
-                            "desc": "来自所拜访的印度尼西亚公司的邀请函或担保函。",
-                            "bullets": [
-                                "姓名及访问目的；",
-                                "计划访问时长。"
+                            "id": "c1-visa-kunjungan-wisata",
+                            "dokumen_yang_didapatkan": [
+                                {
+                                    "nomor": 1,
+                                    "judul": "Data Para Pemegang Saham",
+                                    "items": [
+                                        "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
+                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta  rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
+                                        "Data: Nomor telepon, Alamat email"
+                                    ]
+                                },
+                                {
+                                    "nomor": 2,
+                                    "judul": "Legalitas Perusahaan Yang Dimiliki",
+                                    "items": [
+                                        "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
+                                        "Seluruh Akta Perubahan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
+                                        "Nomor Poko Wajib Pajak Perseroan;",
+                                        "Nomor Induk Perusahaan."
+                                    ]
+                                },
+                                {
+                                    "nomor": 3,
+                                    "judul": "Notulen/Sirkular Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
+                                    "items": [
+                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima"
+                                    ]
+                                },
+                                {
+                                    "nomor": 4,
+                                    "judul": "Identitas Kepala Cabang",
+                                    "items": [
+                                        "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP)"
+                                    ]
+                                },
+                                {
+                                    "nomor": 5,
+                                    "judul": "Alamat Kantor Cabang",
+                                    "items": []
+                                }
                             ],
-                            "after_bullets": "该函件须以公司正式信头出具。"
+                            "persyaratan_dokumen":[],
+                            "paket_harga": {},
+                            "dasar_hukum":[]
                         }
-                    ]
+                    ],
+                    "en": [],
+                    "zh": []
                 }
-            ]
+            }
+        ],
+        "dasar_hukum": {
+            "id": [],
+            "en": [],
+            "zh": []
         },
-        "faq": []
-    },
-    {
-        "id": 3,
-        "name": {
-            "id": "Perpanjangan Visa on Arrival (VOA)",
-            "en": "Visa on Arrival (VOA) Extension",
-            "zh": "落地签证（VOA）延期"
-        },
-        "tag": {
-            "id": "Cepat",
-            "en": "Fast",
-            "zh": "快速"
-        },
-        "price": "1000000",
-        "price_label": "Rp 1.000.000",
-        "duration": {
-            "id": "Estimasi 1-2 hari kerja",
-            "en": "Estimated 1-2 business days",
-            "zh": "预计1-2个工作日"
-        },
-        "image": "",
-        "excerpt": {
-            "id": "Pengurusan perpanjangan Visa on Arrival (VOA) bagi warga negara asing yang membutuhkan tambahan waktu tinggal di Indonesia.",
-            "en": "Visa on Arrival (VOA) extension processing for foreign nationals needing additional time to stay in Indonesia.",
-            "zh": "为需要延长在印度尼西亚停留时间的外国公民办理落地签证（VOA）延期。"
-        },
-        "detail_path": "/visa-indonesia/3",
-        "sections": {
-            "id": [
-                {
-                    "id": "penjelasan-umum",
-                    "type": "penjelasan",
-                    "title": "Penjelasan Umum",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "Visa on Arrival (VOA) adalah visa yang diberikan langsung pada saat kedatangan di pintu masuk Indonesia, berlaku selama 30 hari dan dapat diperpanjang satu kali."
-                        },
-                        {
-                            "type": "paragraph",
-                            "text": "Perpanjangan VOA harus diajukan sebelum masa berlaku visa berakhir melalui kantor imigrasi setempat."
-                        }
-                    ]
-                },
-                {
-                    "id": "syarat-dokumen",
-                    "type": "numbered_detail",
-                    "title": "Syarat dan Dokumen",
-                    "intro": "Berikut dokumen yang perlu disiapkan untuk perpanjangan VOA:",
-                    "items": [
-                        {
-                            "title": "Paspor & VOA Asli",
-                            "desc": "Paspor asli beserta stiker atau cap VOA yang diterima saat kedatangan."
-                        },
-                        {
-                            "title": "Foto",
-                            "desc": "Pas foto terbaru sesuai ketentuan keimigrasian."
-                        }
-                    ]
-                }
-            ],
-            "en": [
-                {
-                    "id": "penjelasan-umum",
-                    "type": "penjelasan",
-                    "title": "General Explanation",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "Visa on Arrival (VOA) is a visa granted directly upon arrival at Indonesia's entry points, valid for 30 days and can be extended once."
-                        },
-                        {
-                            "type": "paragraph",
-                            "text": "VOA extension must be applied for before the visa expires through the local immigration office."
-                        }
-                    ]
-                },
-                {
-                    "id": "syarat-dokumen",
-                    "type": "numbered_detail",
-                    "title": "Requirements and Documents",
-                    "intro": "The following documents need to be prepared for a VOA extension:",
-                    "items": [
-                        {
-                            "title": "Passport & Original VOA",
-                            "desc": "Original passport along with the VOA sticker or stamp received upon arrival."
-                        },
-                        {
-                            "title": "Photograph",
-                            "desc": "Recent passport photo in accordance with immigration requirements."
-                        }
-                    ]
-                }
-            ],
-            "zh": [
-                {
-                    "id": "penjelasan-umum",
-                    "type": "penjelasan",
-                    "title": "一般说明",
-                    "content": [
-                        {
-                            "type": "paragraph",
-                            "text": "落地签证（VOA）是抵达印度尼西亚入境口岸时直接颁发的签证，有效期30天，可延期一次。"
-                        },
-                        {
-                            "type": "paragraph",
-                            "text": "VOA延期须在签证到期前通过当地移民局提出申请。"
-                        }
-                    ]
-                },
-                {
-                    "id": "syarat-dokumen",
-                    "type": "numbered_detail",
-                    "title": "要求与文件",
-                    "intro": "申请VOA延期需准备以下文件：",
-                    "items": [
-                        {
-                            "title": "护照及VOA原件",
-                            "desc": "原件护照及入境时获得的VOA贴纸或印章。"
-                        },
-                        {
-                            "title": "照片",
-                            "desc": "符合移民要求的近期护照照片。"
-                        }
-                    ]
-                }
-            ]
-        },
-        "faq": []
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     }
 ]
