@@ -4,9 +4,9 @@ export default {
             layanan: 'Layanan',
             current: 'Badan Usaha',
         },
-        title: 'Layanan Legalitas dan Perizinan',
-        titleSub: 'Untuk Bisnis yang Siap Bertumbuh',
-        desc: 'membantu pendirian PT, CV, virtual office, perizinan usaha, hingga kebutuhan legal perusahaan dengan alur yang rapi, transparan, dan nyaman diakses dari mana saja.',
+        title: 'Pendirian Badan Usaha',
+        titleSub: '',
+        desc: 'Kami membantu pendirian berbagai jenis badan usaha di Indonesia secara legal, cepat, dan efisien — dari usaha mikro perorangan hingga perusahaan dengan investasi asing.',
         back: 'Kembali',
     },
     items: {

@@ -209,7 +209,7 @@ const currentDasarHukum = computed(
                         />
                     </div>
                     <h1
-                        class="font-extrabold leading-tight text-white sm:text-2xl lg:text-4xl max-w-[800px] line-clamp-2"
+                        class="text-3xl font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2"
                     >
                         {{ localizedProduct.name }}
                     </h1>

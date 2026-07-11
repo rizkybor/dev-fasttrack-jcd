@@ -246,8 +246,8 @@ const isLeaf = computed(() => activeNode.value && !hasChildren(activeNode.value)
                                 <span class="text-sm font-medium text-white">Panduan KBLI</span>
                             </div>
                         </nav>
-                        <h1 class="text-2xl font-extrabold leading-tight text-white sm:text-4xl lg:text-4xl">
-                            Klasifikasi Buku Lapangan Usaha<br />Indonesia (KBLI) 2025
+                        <h1 class="text-3xl font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2">
+                            Klasifikasi Buku Lapangan Usaha Indonesia (KBLI) 2025
                         </h1>
                         <p class="mt-5 text-[15px] leading-relaxed text-white/80 max-w-lg">
                             Temukan kode KBLI yang tepat untuk bidang usaha Anda berdasarkan data terbaru.

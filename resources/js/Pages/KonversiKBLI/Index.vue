@@ -176,7 +176,7 @@ onMounted(() => document.addEventListener("click", handleOutsideClick));
                         </nav>
 
                         <h1
-                            class="text-2xl font-extrabold leading-tight text-white sm:text-4xl lg:text-4xl"
+                            class="text-3xl font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2"
                         >
                             Tabel Konversi KBLI 2020 × KBLI 2025
                         </h1>
