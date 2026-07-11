@@ -131,7 +131,7 @@ const whatsappLink = computed(() => {
 
                     <!-- Heading -->
                     <h1
-                        class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl"
+                        class="text-3xl font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2"
                     >
                         Wawasan Hukum & Bisnis Terkini
                     </h1>

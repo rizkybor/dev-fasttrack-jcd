@@ -4,9 +4,9 @@ export default {
             layanan: 'Services',
             current: 'Business Entity',
         },
-        title: 'Legal and Licensing Services',
-        titleSub: 'For Businesses Ready to Grow',
-        desc: 'helps with PT, CV establishment, virtual office, business licensing, and all company legal needs with a neat, transparent, and easily accessible process from anywhere.',
+        title: 'Establishment of a Business Entity',
+        titleSub: '',
+        desc: 'We assist in the legal, fast, and efficient establishment of various types of business entities in Indonesia—ranging from individual micro-enterprises to foreign-invested companies.',
         back: 'Back',
     },
     items: {

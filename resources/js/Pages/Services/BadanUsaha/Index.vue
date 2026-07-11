@@ -136,7 +136,6 @@ const buildWhatsappLink = (productName) => {
                     <p
                         class="mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base sm:leading-7"
                     >
-                        <span class="font-semibold text-white">FASTTRACK</span>
                         {{ t("services.badanUsaha.hero.desc") }}
                     </p>
                     <div class="mt-6">
