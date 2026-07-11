@@ -42,7 +42,7 @@ export default {
             description:
                 "Visa for foreign investors investing capital or establishing a business in Indonesia.",
             price: "Rp 3.000.000",
-            packages: "8 Packages",
+            packages: "6 Packages",
         },
         {
             id: "4",
@@ -58,7 +58,7 @@ export default {
             description:
                 "Visa for former Indonesian citizens and their descendants who wish to return to or reside in Indonesia.",
             price: "Rp 4.500.000",
-            packages: "9 Packages",
+            packages: "2 Packages",
         },
         {
             id: "6",
@@ -66,7 +66,7 @@ export default {
             description:
                 "Visa for foreign nationals who wish to have a second, long-term residence in Indonesia.",
             price: "Rp 3.500.000",
-            packages: "9 Packages",
+            packages: "5 Packages",
         },
     ],
 };

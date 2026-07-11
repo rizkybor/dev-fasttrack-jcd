@@ -1,97 +1,436 @@
 [
     {
-    "id": 1,
-    "name": "Perizinan Dasar",
-    "price": null,
-    "price_label": "Hubungi Kami",
-    "excerpt": "Pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional di Indonesia.",
-    "detail_path": "/perizinan-dasar-dan-perizinan-berusaha/1",
-    "image": "",
-    "penjelasan_umum": [
-        "Layanan pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional, mencakup kesesuaian tata ruang, perizinan lingkungan, persetujuan bangunan gedung, hingga sertifikat laik fungsi. Seluruh proses dilakukan sesuai ketentuan Perizinan Berusaha Berbasis Risiko melalui sistem OSS."
-    ],
-    "jenis_layanan": [
-        {
-            "kode": "kkpr",
-            "nama": "Kesesuaian Kegiatan Pemanfaatan Ruang (KKPR)",
-            "excerpt": "Pengurusan konfirmasi/persetujuan kesesuaian lokasi usaha dengan rencana tata ruang wilayah.",
-            "harga": "Hubungi Kami",
-            "penjelasan_layanan": [
-                "Konfirmasi Kegiatan Pemanfaatan Ruang (KKPR) adalah kesesuaian antara rencana kegiatan pemanfaatan ruang dengan rencana tata ruang yang harus dimiliki oleh Pelaku Usaha untuk dapat memperoleh Perizinan Berusaha (kecuali diatur lain oleh Pemerintah), pelaksanaan pemeriksaan lokasi dapat dilakukan di darat, meliputi:"
-            ],
-            "sub_layanan": [
-                {
-                    "label": "A. Konfirmasi KKPR",
-                    "desc": "Diberikan berdasarkan kesesuaian rencana lokasi kegiatan pemanfaatan ruang dengan RDTR yang telah terintegrasi dengan Sistem OSS dan diterbitkan secara otomatis oleh Lembaga OSS melalui Sistem OSS."
+        "id": 1,
+        "name": "Perizinan Dasar",
+        "price": null,
+        "price_label": "Hubungi Kami",
+        "excerpt": "Pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional di Indonesia.",
+        "detail_path": "/perizinan-dasar-dan-perizinan-berusaha/1",
+        "image": "",
+        "penjelasan_umum": [
+            "Layanan pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional, mencakup kesesuaian tata ruang, perizinan lingkungan, persetujuan bangunan gedung, hingga sertifikat laik fungsi. Seluruh proses dilakukan sesuai ketentuan Perizinan Berusaha Berbasis Risiko melalui sistem OSS."
+        ],
+        "jenis_layanan": [
+            {
+                "kode": "kkpr",
+                "nama": "Kesesuaian Kegiatan Pemanfaatan Ruang (KKPR)",
+                "excerpt": "Pengurusan konfirmasi/persetujuan kesesuaian lokasi usaha dengan rencana tata ruang wilayah.",
+                "harga": "Hubungi Kami",
+                "penjelasan_layanan": [
+                    "Konfirmasi Kegiatan Pemanfaatan Ruang (KKPR) adalah kesesuaian antara rencana kegiatan pemanfaatan ruang dengan rencana tata ruang yang harus dimiliki oleh Pelaku Usaha untuk dapat memperoleh Perizinan Berusaha (kecuali diatur lain oleh Pemerintah), pelaksanaan pemeriksaan lokasi dapat dilakukan di darat, meliputi:"
+                ],
+                "sub_layanan": [
+                    {
+                        "label": "A. Konfirmasi KKPR",
+                        "desc": "Diberikan berdasarkan kesesuaian rencana lokasi kegiatan pemanfaatan ruang dengan RDTR yang telah terintegrasi dengan Sistem OSS dan diterbitkan secara otomatis oleh Lembaga OSS melalui Sistem OSS."
+                    },
+                    {
+                        "label": "B. Persetujuan KKPR",
+                        "desc": "Diberikan dalam hal RDTR belum tersedia, dilakukan dengan tahapan:",
+                        "steps": [
+                            "Pendaftaran",
+                            "Pemeriksaan dokumen usulan kegiatan pemanfaatan ruang",
+                            "Penilaian dokumen usulan kegiatan pemanfaatan ruang",
+                            "Penerbitan persetujuan KKPR"
+                        ]
+                    }
+                ],
+                "penjelasan_penutup": [
+                    "Dengan pengalaman dalam layanan hukum, perizinan, dan kepatuhan korporasi, Fasttrack membantu usaha memperoleh KKPR secara efektif, tepat waktu, dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku."
+                ],
+                "rincian_biaya": {
+                    "label": "Biaya Layanan",
+                    "biaya_penanganan": "Hubungi Kami"
                 },
-                {
-                    "label": "B. Persetujuan KKPR",
-                    "desc": "Diberikan dalam hal RDTR belum tersedia, dilakukan dengan tahapan:",
-                    "steps": [
-                        "Pendaftaran",
-                        "Pemeriksaan dokumen usulan kegiatan pemanfaatan ruang",
-                        "Penilaian dokumen usulan kegiatan pemanfaatan ruang",
-                        "Penerbitan persetujuan KKPR"
+                "dasar_hukum": [
+                    "Undang-Undang Nomor 26 Tahun 2007 tentang Penataan Ruang sebagaimana telah diubah",
+                    "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
+                    "Peraturan Pemerintah Nomor 21 Tahun 2021 tentang Penyelenggaraan Penataan Ruang",
+                    "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko"
+                ]
+            },
+            {
+                "kode": "lingkungan",
+                "nama": "Perizinan Lingkungan",
+                "excerpt": "Pengurusan dokumen lingkungan hidup sebagai syarat perizinan usaha sesuai dampak kegiatan dan skala usaha.",
+                "harga": "Hubungi Kami",
+                "judul_layanan": "Perizinan Lingkungan: Fondasi Penting bagi Kepatuhan dan Keberlanjutan Usaha",
+                "penjelasan_layanan": [
+                    "Dalam menjalankan kegiatan usaha di Indonesia, pemenuhan aspek lingkungan hidup bukan hanya merupakan kewajiban hukum, tetapi juga menjadi bagian penting dalam membangun bisnis yang berkelanjutan, bertanggung jawab, dan memiliki kepastian operasional. Oleh karena itu, setiap pelaku usaha perlu memastikan bahwa kegiatan usahanya telah memenuhi ketentuan Persetujuan Lingkungan sesuai dengan tingkat risiko dan karakteristik usahanya.",
+                    "Seiring berlakunya Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, Persetujuan Lingkungan tetap menjadi salah satu Persyaratan Dasar Perizinan Berusaha yang wajib dipenuhi oleh pelaku usaha sebelum menjalankan kegiatan tertentu. Regulasi ini memperkuat integrasi proses perizinan lingkungan melalui sistem OSS serta memberikan kepastian mekanisme, kewenangan, dan jangka waktu pelayanan bagi dunia usaha."
+                ],
+                "sub_layanan": [
+                    {
+                        "label": "Apa itu Persetujuan Lingkungan?",
+                        "desc": "Persetujuan Lingkungan merupakan keputusan atau persetujuan dari pemerintah yang menjadi dasar bagi pelaku usaha untuk melaksanakan kegiatan usaha yang berpotensi menimbulkan dampak terhadap lingkungan hidup. Bentuk dokumen lingkungan yang diperlukan akan disesuaikan dengan tingkat dampak dan risiko kegiatan usaha, antara lain:",
+                        "items": [
+                            "Analisis Mengenai Dampak Lingkungan (AMDAL)",
+                            "Upaya Pengelolaan Lingkungan Hidup dan Upaya Pemantauan Lingkungan Hidup (UKL-UPL)",
+                            "Surat Pernyataan Kesanggupan Pengelolaan dan Pemantauan Lingkungan Hidup (SPPL)"
+                        ]
+                    }
+                ],
+                "keunggulan": {
+                    "title": "Mengapa Perizinan Lingkungan Penting?",
+                    "intro": "Persetujuan Lingkungan tidak hanya menjadi persyaratan administratif dalam proses perizinan berusaha, tetapi juga berfungsi untuk:",
+                    "items": [
+                        "Memastikan kegiatan usaha sesuai dengan ketentuan perlindungan lingkungan hidup",
+                        "Mengurangi risiko hukum dan sanksi administratif",
+                        "Mendukung kelancaran penerbitan perizinan usaha melalui OSS",
+                        "Meningkatkan kepercayaan investor, mitra bisnis, dan pemangku kepentingan",
+                        "Mewujudkan operasional usaha yang berkelanjutan dan bertanggung jawab"
                     ]
-                }
-            ],
-            "penjelasan_penutup": [
-                "Dengan pengalaman dalam layanan hukum, perizinan, dan kepatuhan korporasi, Fasttrack membantu usaha memperoleh KKPR secara efektif, tepat waktu, dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku."
-            ],
-            "rincian_biaya": {
-                "label": "Biaya Layanan",
-                "biaya_penanganan": "Hubungi Kami"
+                },
+                "tahapan_layanan": {
+                    "title": "Jenis Layanan Persetujuan Lingkungan",
+                    "items": [
+                        "Identifikasi kebutuhan dokumen lingkungan berdasarkan KBLI dan tingkat risiko usaha",
+                        "Penyusunan dan pengurusan UKL-UPL",
+                        "Pendampingan proses AMDAL",
+                        "Pengurusan SPPL",
+                        "Koordinasi dengan instansi teknis terkait",
+                        "Pendampingan integrasi Persetujuan Lingkungan dalam sistem OSS",
+                        "Konsultasi kepatuhan lingkungan untuk perusahaan baru maupun perusahaan yang telah beroperasi"
+                    ]
+                },
+                "penjelasan_penutup": [],
+                "rincian_biaya": {
+                    "label": "Biaya Layanan",
+                    "biaya_penanganan": "Hubungi Kami"
+                },
+                "dasar_hukum": [
+                    "Undang-Undang Nomor 32 Tahun 2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup sebagaimana telah diubah",
+                    "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
+                    "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko"
+                ]
             },
-            "dasar_hukum": [
-                "Undang-Undang Nomor 26 Tahun 2007 tentang Penataan Ruang sebagaimana telah diubah",
-                "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
-                "Peraturan Pemerintah Nomor 21 Tahun 2021 tentang Penyelenggaraan Penataan Ruang",
-                "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko"
-            ]
+            {
+                "kode": "pbg",
+                "nama": "Persetujuan Bangunan Gedung (PBG)",
+                "excerpt": "Pengurusan persetujuan pembangunan atau renovasi gedung sesuai standar teknis dan tata ruang yang berlaku.",
+                "harga": "Hubungi Kami",
+                "judul_layanan": "Pastikan Bangunan Anda Memenuhi Ketentuan Hukum Sebelum Dibangun atau Dimanfaatkan",
+                "penjelasan_layanan": [
+                    "Persetujuan Bangunan Gedung (PBG) merupakan perizinan yang wajib dimiliki sebelum pelaksanaan pembangunan, perubahan, perluasan, pengurangan, maupun perawatan bangunan gedung. PBG berfungsi sebagai persetujuan dari pemerintah terhadap rencana teknis bangunan agar sesuai dengan ketentuan tata ruang, standar keselamatan, kesehatan, kenyamanan, dan kemudahan bangunan.",
+                    "Dalam sistem Perizinan Berusaha Berbasis Risiko, PBG menjadi salah satu Persyaratan Dasar Perizinan Berusaha yang wajib dipenuhi oleh pelaku usaha yang melakukan pembangunan atau pemanfaatan bangunan untuk kegiatan usahanya. Ketentuan ini diperkuat melalui Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, yang menempatkan PBG sebagai bagian integral dari proses legalitas usaha melalui sistem OSS.",
+                    "PBG merupakan pengganti dari izin Mendirikan Bangunan (IMB) yang sebelumnya berlaku. Berbeda dengan IMB yang berfokus pada izin mendirikan bangunan, PBG menitikberatkan pada persetujuan atas standar teknis bangunan yang akan dibangun atau dimanfaatkan sesuai peruntukannya."
+                ],
+                "jenis_bangunan": {
+                    "intro": "PBG diperlukan untuk berbagai jenis bangunan, antara lain:",
+                    "items": [
+                        "Gedung perkantoran",
+                        "Bangunan industri dan pabrik",
+                        "Gudang dan fasilitas logistik",
+                        "Ruko dan bangunan komersial",
+                        "Hotel, restoran, dan pusat usaha",
+                        "Bangunan pendidikan, kesehatan, dan fasilitas umum lainnya"
+                    ]
+                },
+                "sub_layanan": [],
+                "keunggulan": {
+                    "title": "Mengapa Sertifikat Laik Fungsi Penting?",
+                    "intro": "Kepemilikan PBG memberikan kepastian hukum atas bangunan yang digunakan dalam kegiatan usaha sekaligus menjadi dasar untuk memperoleh dokumen lanjutan seperti Sertifikat Laik Fungsi (SLF) yang menyatakan bahwa bangunan telah layak digunakan sesuai fungsinya. Selain itu, PBG membantu pelaku usaha:",
+                    "items": [
+                        "Memenuhi persyaratan legalitas usaha",
+                        "Menghindari sanksi administratif",
+                        "Memastikan kesesuaian bangunan dengan ketentuan tata ruang",
+                        "Mendukung proses investasi dan pembiayaan",
+                        "Memberikan kepastian dalam operasional usaha"
+                    ]
+                },
+                "tahapan_layanan": {
+                    "title": "Jenis Layanan Pengurusan PBG",
+                    "items": [
+                        "Analisis kebutuhan dan kewajiban PBG",
+                        "Pemeriksaan kelengkapan dokumen teknis",
+                        "Pendampingan penyusunan dokumen persyaratan",
+                        "Koordinasi dengan instansi teknis terkait",
+                        "Pendampingan proses pengajuan melalui sistem yang berlaku",
+                        "Pengurusan perubahan dan pembaruan PBG"
+                    ]
+                },
+                "penjelasan_penutup": [],
+                "rincian_biaya": {
+                    "label": "Biaya Layanan",
+                    "biaya_penanganan": "Hubungi Kami"
+                },
+                "dasar_hukum": [
+                    "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
+                    "Peraturan Pemerintah Nomor 16 Tahun 2021 tentang Peraturan Pelaksanaan Undang-Undang Bangunan Gedung",
+                    "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko",
+                    "Peraturan teknis terkait bangunan gedung yang berlaku"
+                ]
+            },
+            {
+                "kode": "slf",
+                "nama": "Sertifikat Laik Fungsi (SLF)",
+                "excerpt": "Pengurusan sertifikat yang menyatakan bangunan gedung telah memenuhi persyaratan laik fungsi secara teknis dan administratif.",
+                "harga": "Hubungi Kami",
+                "judul_layanan": "Pastikan Bangunan Anda Layak Digunakan dan Memenuhi Ketentuan Hukum",
+                "penjelasan_layanan": [
+                    "Sertifikat Laik Fungsi (SLF) merupakan dokumen resmi yang menyatakan bahwa suatu bangunan gedung telah memenuhi persyaratan teknis dan layak digunakan sesuai fungsi yang telah ditetapkan. SLF menjadi bukti bahwa bangunan telah memenuhi aspek keselamatan, kesehatan, kenyamanan, kemudahan, serta kesesuaian pemanfaatan bangunan berdasarkan ketentuan peraturan perundang-undangan yang berlaku.",
+                    "Dalam sistem Perizinan Berusaha Berbasis Risiko (PBBR), SLF menjadi salah satu dokumen penting yang berkaitan dengan legalitas operasional bangunan untuk mendukung kegiatan usaha. Melalui Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, pemerintah menegaskan pentingnya pemenuhan persyaratan dasar perizinan, termasuk aspek bangunan gedung, guna memberikan kepastian hukum dan perlindungan bagi pelaku usaha.",
+                    "SLF adalah sertifikat yang diterbitkan oleh pemerintah daerah atau instansi yang berwenang sebagai bukti bahwa bangunan telah selesai dibangun dan dapat digunakan sesuai dengan fungsi yang direncanakan. Sertifikat ini umumnya diperlukan untuk berbagai jenis bangunan, antara lain:"
+                ],
+                "jenis_bangunan": {
+                    "intro": "",
+                    "items": [
+                        "Gedung perkantoran",
+                        "Bangunan industri dan pabrik",
+                        "Gudang dan fasilitas logistik",
+                        "Hotel dan penginapan",
+                        "Pusat perdagangan dan pertokoan",
+                        "Rumah sakit, klinik, dan fasilitas kesehatan",
+                        "Bangunan komersial dan fasilitas usaha lainnya"
+                    ]
+                },
+                "sub_layanan": [],
+                "keunggulan": {
+                    "title": "Manfaat Kepemilikan SLF",
+                    "intro": "Kepemilikan SLF memberikan berbagai manfaat bagi pelaku usaha, antara lain:",
+                    "items": [
+                        "Menunjukkan bahwa bangunan telah memenuhi standar teknis yang dipersyaratkan",
+                        "Mendukung kepatuhan terhadap regulasi bangunan gedung",
+                        "Mengurangi risiko sanksi administratif",
+                        "Memberikan kepastian hukum dalam penggunaan bangunan",
+                        "Mendukung proses investasi, pembiayaan, dan kerja sama",
+                        "Menjadi bukti bahwa bangunan aman dan layak digunakan"
+                    ]
+                },
+                "tahapan_layanan": {
+                    "title": "Jenis Layanan Pengurusan SLF",
+                    "items": [
+                        "Analisis kebutuhan dan kewajiban SLF",
+                        "Pemeriksaan dokumen teknis bangunan",
+                        "Pendampingan pemenuhan persyaratan administrasi",
+                        "Koordinasi dengan instansi teknis terkait",
+                        "Pendampingan proses pemeriksaan dan verifikasi bangunan",
+                        "Pengurusan penerbitan dan perpanjangan SLF",
+                        "Konsultasi kepatuhan bangunan gedung dan perizinan usaha"
+                    ]
+                },
+                "penjelasan_penutup": [],
+                "rincian_biaya": {
+                    "label": "Biaya Layanan",
+                    "biaya_penanganan": "Hubungi Kami"
+                },
+                "dasar_hukum": [
+                    "Undang-Undang Nomor 28 Tahun 2002 tentang Bangunan Gedung sebagaimana telah diubah",
+                    "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
+                    "Peraturan Pemerintah Nomor 16 Tahun 2021 tentang Peraturan Pelaksanaan Undang-Undang Bangunan Gedung",
+                    "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko"
+                ]
+            }
+        ],
+        "faq": []
+    },
+    {
+        "id": 2,
+        "name": "Perizinan Berusaha (Sertifikat Standar/Izin)",
+        "price": null,
+        "price_label": "Hubungi Kami",
+        "excerpt": "Pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional di Indonesia.",
+        "detail_path": "/perizinan-dasar-dan-perizinan-berusaha/2",
+        "image": "",
+        "penjelasan_umum_label": "Penjelasan Layanan",
+        "penjelasan_umum": [
+            "Dalam sistem Perizinan Berusaha Berbasis Risiko yang berlaku di Indonesia, tidak seluruh pelaku usaha dapat langsung menjalankan kegiatan usahanya hanya dengan memperoleh Nomor Induk Berusaha (NIB). Untuk bidang usaha tertentu yang memiliki tingkat risiko Menengah Tinggi dan Tinggi, pelaku usaha diwajibkan memenuhi persyaratan tambahan berupa Sertifikat Standar Terverifikasi dan/atau Izin Terverifikasi yang diterbitkan oleh kementerian atau lembaga teknis sesuai sektor usahanya.",
+            "Kewajiban tersebut berlaku bagi berbagai sektor usaha strategis seperti Industri, Perdagangan, Kesehatan, Energi dan Sumber Daya Mineral, Konstruksi, Lingkungan Hidup, Transportasi, Pariwisata, Pendidikan, Telekomunikasi dan Digital (Komdigi), Jasa Keuangan, Pertanian, Kelautan dan Perikanan, serta sektor lainnya yang diatur dalam ketentuan Perizinan Berusaha Berbasis Risiko. Tanpa terpenuhinya persyaratan verifikasi tersebut, pelaku usaha berpotensi mengalami kendala dalam menjalankan operasional, mengikuti tender, melakukan kerja sama bisnis, memperoleh sertifikasi lanjutan, maupun menghadapi pengawasan dari instansi pemerintah."
+        ],
+        "sektor_perizinan": [
+            "Industri",
+            "Perdagangan",
+            "Konstruksi",
+            "Komunikasi dan Digital",
+            "Transportasi",
+            "Teknologi",
+            "Pariwisata",
+            "Pendidikan",
+            "Ketenagakerjaan",
+            "Perikanan dan Kelautan",
+            "Kesehatan"
+        ],
+        "rincian_biaya": {
+            "label": "Biaya Penanganan",
+            "biaya_penanganan": "Hubungi Kami"
         },
-        {
-            "kode": "lingkungan",
-            "nama": "Perizinan Lingkungan",
-            "excerpt": "Pengurusan dokumen lingkungan hidup sebagai syarat perizinan usaha sesuai dampak kegiatan dan skala usaha.",
-            "harga": "Hubungi Kami",
-            "penjelasan_layanan": [],
-            "sub_layanan": [],
-            "penjelasan_penutup": [],
-            "rincian_biaya": {
-                "label": "Biaya Layanan",
-                "biaya_penanganan": "Hubungi Kami"
+        "mengapa_kami": [
+            "Analisa KBLI dan tingkat risiko secara akurat",
+            "Pendampingan penuh hingga izin terbit",
+            "Tim profesional berpengalaman di berbagai sektor usaha",
+            "Proses yang cepat, transparan, dan sesuai kebutuhan hukum yang berlaku",
+            "Solusi perizinan terpadu untuk perusahaan nasional maupun PMA"
+        ],
+        "dasar_hukum": [
+            "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang.",
+            "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko.",
+            "Peraturan perundang-undangan sektoral yang diterbitkan oleh kementerian dan lembaga teknis terkait sesuai bidang usaha masing-masing."
+        ],
+        "jenis_layanan": [],
+        "faq": []
+    },
+    {
+        "id": 3,
+        "name": "Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU)",
+        "price": 2000000,
+        "price_label": "Rp. 2.000.000",
+        "excerpt": "Pengurusan izin tambahan yang dibutuhkan untuk menunjang kegiatan usaha utama sesuai regulasi yang berlaku.",
+        "detail_path": "/perizinan-dasar-dan-perizinan-berusaha/3",
+        "image": "",
+        "penjelasan_umum": [
+            "Layanan pengurusan perizinan tambahan yang dibutuhkan pelaku usaha untuk menunjang kegiatan usaha utamanya, mencakup pendaftaran sistem elektronik lingkup privat domestik, pendaftaran buku panduan dan kartu garansi, serta tanda daftar gudang. Seluruh proses dilakukan sesuai ketentuan Perizinan Berusaha Berbasis Risiko melalui sistem OSS."
+        ],
+        "jenis_layanan": [
+            {
+                "kode": "pendaftaran-sistem-elektronik",
+                "nama": "Pendaftaran Sistem Elektronik Lingkup Privat Domestik",
+                "excerpt": "Pendaftaran sistem elektronik yang dikelola oleh pelaku usaha domestik sesuai ketentuan Kominfo yang berlaku.",
+                "harga": "Rp. 2.000.000",
+                "penjelasan_layanan": [
+                    "Penyelenggara Sistem Elektronik (PSE) adalah setiap orang, penyelenggara negara, badan usaha, dan masyarakat yang menyediakan, mengelola, dan/atau mengoperasikan Sistem Elektronik secara sendiri-sendiri maupun bersama-sama kepada Pengguna Sistem Elektronik untuk keperluan dirinya dan/atau keperluan pihak lain."
+                ],
+                "sub_layanan": [],
+                "penjelasan_penutup": [
+                    "PSE Lingkup Privat diantaranya mencakup perusahaan, badan usaha, orang, dan masyarakat asing yang menyediakan, mengelola, atau mengoperasikan sistem elektronik kepada pengguna di wilayah Indonesia diantaranya layanan streaming, media sosial, hingga lokapasar (e-commerce)."
+                ],
+                "rincian_biaya": {
+                    "label": "Biaya Penanganan",
+                    "biaya_penanganan": "Hubungi Kami"
+                },
+                "paket_harga": {
+                    "harga": "Rp. 2.000.000",
+                    "benefit": "GRATIS Konsultasi/Pengajuan dan Pasca Selesai",
+                    "dokumen_legalitas": [
+                        "Tanda Daftar Penyelenggara Sistem Elektronik (PSE) Lingkup Privat"
+                    ],
+                    "termasuk": [
+                        "Fastrack Document Delivery Service",
+                        "Fastrack Digital Files Secure Storage",
+                        "Fastrack Kit"
+                    ]
+                },
+                "dokumen_dibutuhkan": [
+                    {
+                        "text": "Pelaku Usaha Sudah Terdaftar Pada OSS Dan Memiliki NIB"
+                    },
+                    { "text": "Data Sistem Elektronik" },
+                    {
+                        "text": "Formulir/Surat Yang Telah Dilengkapi Dan Ditanda Tangani Oleh Seluruh Pihak",
+                        "desc": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                    }
+                ],
+                "dasar_hukum": [
+                    "Undang-Undang No. 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang.",
+                    "Peraturan Pemerintah Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik.",
+                    "Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggara Sistem Elektronik Lingkup Privat.",
+                    "Peraturan Menteri Komunikasi Dan Informatika Republik Indonesia Nomor 10 Tahun 2021 tentang Perubahan Atas Peraturan Menteri Komunikasi Dan Informatika Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggaraan Sistem Elektronik Lingkup Privat.",
+                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                ]
             },
-            "dasar_hukum": []
-        },
-        {
-            "kode": "pbg",
-            "nama": "Persetujuan Bangunan Gedung (PBG)",
-            "excerpt": "Pengurusan persetujuan pembangunan atau renovasi gedung sesuai standar teknis dan tata ruang yang berlaku.",
-            "harga": "Hubungi Kami",
-            "penjelasan_layanan": [],
-            "sub_layanan": [],
-            "penjelasan_penutup": [],
-            "rincian_biaya": {
-                "label": "Biaya Layanan",
-                "biaya_penanganan": "Hubungi Kami"
+            {
+                "kode": "pendaftaran-buku-panduan-dan-kartu-garansi",
+                "nama": "Pendaftaran Buku Panduan Dan Kartu Garansi",
+                "excerpt": "Pendaftaran buku panduan penggunaan dan kartu garansi produk sesuai ketentuan perlindungan konsumen.",
+                "harga": "Rp. 6.500.000",
+                "penjelasan_layanan": [
+                    "Pendaftaran Petunjuk Penggunaan (Manual) dan Kartu Jaminan Purna Jual (MKG) dalam Bahasa Indonesia wajib dilakukan oleh produsen atau importir sebelum produk elektronika dan telematika diedarkan di pasar Indonesia. Tujuannya adalah untuk melindungi konsumen dan menjamin hak atas informasi produk yang benar, jelas, dan jujur. Permendag No. 26 Tahun 2021 mengatur tentang Penetapan Standar Kegiatan Usaha dan Produk Pada Penyelenggaraan Perizinan Berusaha Berbasis Risiko Sektor Perdagangan."
+                ],
+                "sub_layanan": [],
+                "penjelasan_penutup": [],
+                "rincian_biaya": {
+                    "label": "Biaya Penanganan",
+                    "biaya_penanganan": "Rp. 6.500.000"
+                },
+                "paket_harga": {
+                    "harga": "Rp. 6.500.000",
+                    "benefit": "GRATIS Konsultasi/Pengajuan dan Pasca Selesai",
+                    "dokumen_legalitas": [
+                        "Tanda Pendaftaran Petunjuk Penggunaan dan Kartu Jaminan Purna Jual Dalam Bahasa Indonesia Bagi Produk Elektronika Dan Produk Telematika"
+                    ],
+                    "termasuk": [
+                        "Fastrack Document Delivery Service",
+                        "Fastrack Digital Files Secure Storage",
+                        "Fastrack Kit"
+                    ]
+                },
+                "dokumen_dibutuhkan_label": "Syarat",
+                "dokumen_dibutuhkan": [
+                    {
+                        "text": "Daftar Pusat Layanan Purna Jual",
+                        "desc": "Menyampaikan minimal 6 (enam) daftar pusat servis (service center) resmi yang dilengkapi alamat lengkap serta jaminan ketersediaan suku cadang (spare parts)."
+                    },
+                    {
+                        "text": "Petunjuk Penggunaan (Manual Book)",
+                        "desc": "Dokumen petunjuk penggunaan operasional produk yang telah diterjemahkan atau ditulis dalam Bahasa Indonesia dan benar."
+                    },
+                    {
+                        "text": "Kartu Jaminan/Garansi",
+                        "desc": "Kartu jaminan tertulis dalam Bahasa Indonesia yang mencantumkan masa jaminan, hak konsumen, kewajiban produsen, serta klausul purna jual/aftersales."
+                    },
+                    {
+                        "text": "Legalitas Perusahaan",
+                        "desc": "Nomor Induk Berusaha (NIB) serta izin usaha industri (untuk produsen dalam negeri) atau izin usaha perdagangan/keagenan (untuk importir/distributor resmi)."
+                    },
+                    {
+                        "text": "Surat/Formulir permohonan yang telah dilengkapi oleh Perusahaan."
+                    }
+                ],
+                "dasar_hukum": []
             },
-            "dasar_hukum": []
-        },
-        {
-            "kode": "slf",
-            "nama": "Sertifikat Laik Fungsi (SLF)",
-            "excerpt": "Pengurusan sertifikat yang menyatakan bangunan gedung telah memenuhi persyaratan laik fungsi secara teknis dan administratif.",
-            "harga": "Hubungi Kami",
-            "penjelasan_layanan": [],
-            "sub_layanan": [],
-            "penjelasan_penutup": [],
-            "rincian_biaya": {
-                "label": "Biaya Layanan",
-                "biaya_penanganan": "Hubungi Kami"
-            },
-            "dasar_hukum": []
-        }
-    ],
-    "faq": []
-}
+            {
+                "kode": "tanda-daftar-gudang",
+                "nama": "Tanda Daftar Gudang",
+                "excerpt": "Pengurusan tanda daftar gudang sebagai bukti pencatatan resmi tempat penyimpanan barang sesuai regulasi perdagangan.",
+                "harga": "Rp. 6.500.000",
+                "penjelasan_layanan": [
+                    "Tanda Daftar Gudang (TDG) adalah bukti pendaftaran resmi yang diberikan kepada pemilik atau pengelola gudang sebagai legalitas bahwa gudangnya telah terdaftar untuk melakukan kegiatan distribusi barang. Berdasarkan regulasi berbasis risiko saat ini, pengajuan TDG dikategorikan sebagai Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU) dan diproses secara daring melalui sistem Online Single Submission (OSS) Indonesia."
+                ],
+                "sub_layanan": [],
+                "penjelasan_penutup": [],
+                "rincian_biaya": {
+                    "label": "Biaya Penanganan",
+                    "biaya_penanganan": "Rp. 6.500.000"
+                },
+                "paket_harga": {
+                    "harga": "Rp. 6.500.000",
+                    "benefit": "GRATIS Konsultasi/Pengajuan dan Pasca Selesai",
+                    "dokumen_legalitas": ["Tanda Daftar Gudang"],
+                    "termasuk": [
+                        "Fastrack Document Delivery Service",
+                        "Fastrack Digital Files Secure Storage",
+                        "Fastrack Kit"
+                    ]
+                },
+                "dokumen_dibutuhkan_label": "Syarat",
+                "dokumen_dibutuhkan": [
+                    {
+                        "text": "Nomor Induk Berusaha (NIB) dengan kode KBLI pergudangan yang sesuai (misalnya KBLI 52101)."
+                    },
+                    {
+                        "text": "Akta Pendirian Perusahaan beserta Surat Keputusan (SK) pengesahan dari Kemenkumham (untuk badan hukum seperti PT/CV)."
+                    },
+                    { "text": "NPWP Badan (atau NPWP perorangan)." },
+                    {
+                        "text": "Bukti kepemilikan gudang (Sertifikat Hak Milik/SHM) atau Surat Perjanjian Sewa-Menyewa jika berstatus sewa."
+                    },
+                    {
+                        "text": "Sertifikat Laik Fungsi (SLF) atau Persetujuan Bangunan Gedung (PBG/IMB) yang sesuai peruntukan sebagai bangunan gudang."
+                    },
+                    {
+                        "text": "Data Teknis Gudang",
+                        "desc": "Alamat lengkap gudang beserta koordinat lokasi (latitude dan longitude) dan luas."
+                    },
+                    {
+                        "text": "Dokumentasi foto gudang yang lengkap",
+                        "desc": "Wajib mencakup: tampak depan, sisi samping kanan dan kiri, tampak belakang, serta bagian dalam gudang."
+                    },
+                    {
+                        "text": "Surat/Formulir permohonan yang telah dilengkapi oleh Perusahaan."
+                    }
+                ],
+                "dasar_hukum": []
+            }
+        ],
+        "faq": []
+    }
 ]

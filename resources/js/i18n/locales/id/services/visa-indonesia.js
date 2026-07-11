@@ -39,7 +39,7 @@ export default {
             title: 'Visa Investor',
             description: 'Visa bagi investor asing yang menanamkan modal atau mendirikan usaha di Indonesia.',
             price: 'Rp 3.000.000',
-            packages: '8 Paket',
+            packages: '6 Paket',
         },
         {
             id: '4',
@@ -53,14 +53,14 @@ export default {
             title: 'Visa Repatriasi dan Keturunan Eks-WNI',
             description: 'Visa bagi eks-WNI dan keturunannya yang ingin kembali atau menetap di Indonesia.',
             price: 'Rp 4.500.000',
-            packages: '9 Paket',
+            packages: '2 Paket',
         },
         {
             id: '6',
             title: 'Visa Rumah Kedua',
             description: 'Visa bagi warga asing yang ingin memiliki tempat tinggal kedua di Indonesia dalam jangka panjang.',
             price: 'Rp 3.500.000',
-            packages: '9 Paket',
+            packages: '5 Paket',
         },
     ]
 }

@@ -40,7 +40,7 @@ export default {
             title: "投资者签证",
             description: "供在印尼投资或设立企业的外国投资者使用的签证。",
             price: "Rp 3.000.000",
-            packages: "8个套餐",
+            packages: "6个套餐",
         },
         {
             id: "4",
@@ -56,14 +56,14 @@ export default {
             description:
                 "供希望返回或定居印尼的原印尼籍人士及其后裔使用的签证。",
             price: "Rp 4.500.000",
-            packages: "9个套餐",
+            packages: "2个套餐",
         },
         {
             id: "6",
             title: "第二居所签证",
             description: "供希望在印尼长期拥有第二居所的外籍人士使用的签证。",
             price: "Rp 3.500.000",
-            packages: "9个套餐",
+            packages: "5个套餐",
         },
     ],
 };

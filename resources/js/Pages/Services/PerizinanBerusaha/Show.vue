@@ -4,31 +4,81 @@ import { ref, computed, watch } from "vue";
 import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 import { useI18n } from "vue-i18n";
 
-const { t, locale } = useI18n();
-
-// Tambah di script setup
-const activeBiayaTahun = ref(0);
+const { t } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
     relatedProducts: { type: Array, default: () => [] },
+    relatedTitle: { type: String, default: "Layanan Lainnya" },
 });
 
 const { buildWhatsappLink } = useWhatsapp("visa");
 
 const activeIndex = ref(0);
-const currentItem = computed(() => props.product.jenis_layanan[activeIndex.value]);
+// Dasar Hukum & Dokumen Informasi bisa terbuka bersamaan, jadi disimpan
+// sebagai object per-id, bukan satu ref tunggal.
+const openSections = ref({ "dasar-hukum": true, "dokumen-informasi": true });
+const activeBiayaTahun = ref(0);
 
-const openSectionId = ref(null);
+const currentItem = computed(() => props.product.jenis_layanan?.[activeIndex.value] ?? null);
+
+// Kalau jenis_layanan cuma 3 (atau kurang), tampilkan kartu lebih besar & full-width
+// (3 kolom), bukan grid rapat 4 kolom yang dipakai saat item-nya banyak.
+const isLargeJenisLayananCard = computed(() => (props.product.jenis_layanan?.length ?? 0) <= 3);
+const jenisLayananGridClass = computed(() =>
+    isLargeJenisLayananCard.value
+        ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+);
+
+// Kalau produk TIDAK punya jenis_layanan (mis. "Perizinan Berusaha"),
+// semua section di bawah ini pakai data langsung dari level product.
+const activeContent = computed(() => currentItem.value ?? props.product);
+
+// nama/kode item aktif dipakai untuk sidebar & link WA
+const activeNama = computed(() => currentItem.value?.nama ?? props.product.name);
+const activeKode = computed(() => currentItem.value?.kode ?? "");
+
 const toggleSection = (id) => {
-    openSectionId.value = openSectionId.value === id ? null : id;
+    openSections.value[id] = !openSections.value[id];
 };
 
 watch(activeIndex, () => {
-    openSectionId.value = null;
+    openSections.value = { "dasar-hukum": true, "dokumen-informasi": true };
     activeBiayaTahun.value = 0;
 });
 
+const rincianBiaya = computed(() => {
+    const rincian = activeContent.value?.rincian_biaya;
+    if (!rincian) return null;
+
+    if (rincian.tabs?.length) {
+        return {
+            label: rincian.tabs[activeBiayaTahun.value]?.penanganan_label ?? "Biaya Penanganan",
+            harga: rincian.tabs[activeBiayaTahun.value]?.biaya_penanganan ?? "Hubungi Kami",
+            tabs: rincian.tabs,
+        };
+    }
+
+    return {
+        label: rincian.label ?? "Biaya Penanganan",
+        harga: rincian.biaya_penanganan ?? "Hubungi Kami",
+        tabs: null,
+    };
+});
+
+// "Paket & Harga" - kartu paket yang lebih lengkap (harga, dokumen legalitas, termasuk).
+// Kalau item punya `paket_harga`, section ini dipakai MENGGANTIKAN bar "Biaya Layanan" biasa.
+const paketHarga = computed(() => activeContent.value?.paket_harga ?? null);
+
+// "Sektor Perizinan" - list angka 2 kolom (mis. produk Perizinan Berusaha)
+const sektorPerizinan = computed(() => activeContent.value?.sektor_perizinan ?? []);
+
+// "Mengapa Menggunakan Layanan Kami" - checklist 2 kolom
+const mengapaKami = computed(() => activeContent.value?.mengapa_kami ?? []);
+
+// "Dokumen dan Informasi yang Diperlukan" - accordion bernomor
+const dokumenDibutuhkan = computed(() => activeContent.value?.dokumen_dibutuhkan ?? []);
 </script>
 
 <template>
@@ -52,22 +102,14 @@ watch(activeIndex, () => {
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                         <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">
-                            {{
-                                t(
-                                    "services.perizinanBerusahaDetail.breadcrumb.layanan",
-                                )
-                            }}
+                            {{ t("services.perizinanBerusahaDetail.breadcrumb.layanan") }}
                         </a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                         <a href="/perizinan-berusaha" class="text-sm font-medium text-[#9e1f16] hover:underline">
-                            {{
-                                t(
-                                    "services.perizinanBerusahaDetail.breadcrumb.current",
-                                )
-                            }}
+                            {{ t("services.perizinanBerusahaDetail.breadcrumb.current") }}
                         </a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
@@ -92,11 +134,7 @@ watch(activeIndex, () => {
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        {{
-                            t(
-                                "services.perizinanBerusahaDetail.back",
-                            )
-                        }}
+                        {{ t("services.perizinanBerusahaDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -111,7 +149,9 @@ watch(activeIndex, () => {
                     class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan Umum</h2>
+                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
+                            {{ product.penjelasan_umum_label ?? "Penjelasan Umum" }}
+                        </h2>
                     </div>
                     <div class="space-y-4">
                         <p v-for="(p, i) in product.penjelasan_umum" :key="`pu-${i}`"
@@ -119,50 +159,64 @@ watch(activeIndex, () => {
                     </div>
                 </div>
 
-                <!-- ===== FULL WIDTH: Pilih Index Visa Kunjungan ===== -->
-                <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
+                <!-- ===== FULL WIDTH: Pilih Jenis Layanan (hanya tampil jika produk punya jenis_layanan) ===== -->
+                <div v-if="product.jenis_layanan?.length"
+                    class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Pilih Index Visa
-                            Kunjungan</h2>
+                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Pilih Jenis Layanan</h2>
                     </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="grid gap-4" :class="jenisLayananGridClass">
                         <button v-for="(item, i) in product.jenis_layanan" :key="`idx-${i}`" @click="activeIndex = i"
-                            class="text-left rounded-2xl p-5 transition-all flex flex-col"
-                            :class="activeIndex === i
-                                ? 'bg-primary text-white shadow-lg'
-                                : 'border border-[#E8E8E6] bg-white text-[#1A1B18] hover:border-primary/40 hover:shadow-sm'">
+                            class="text-left rounded-2xl transition-all flex flex-col"
+                            :class="[
+                                isLargeJenisLayananCard ? 'p-6 sm:p-7' : 'p-5',
+                                activeIndex === i
+                                    ? 'bg-primary text-white shadow-lg'
+                                    : 'border border-[#E8E8E6] bg-white text-[#1A1B18] hover:border-primary/40 hover:shadow-sm'
+                            ]">
 
-                            <!-- Icon box -->
-                            <div class="flex h-12 w-12 items-center justify-center rounded-xl mb-4"
-                                :class="activeIndex === i ? 'bg-white' : 'bg-[#F7F7F5]'">
-                                <img src="/icons/ft-persons.svg" class="w-6 h-6"
-                                    :class="activeIndex === i ? '' : 'opacity-70'"
+                            <div class="flex items-center justify-center rounded-xl mb-4"
+                                :class="[
+                                    isLargeJenisLayananCard ? 'h-14 w-14' : 'h-12 w-12',
+                                    activeIndex === i ? 'bg-white' : 'bg-[#F7F7F5]'
+                                ]">
+                                <img src="/icons/ft-persons.svg"
+                                    :class="[
+                                        isLargeJenisLayananCard ? 'w-7 h-7' : 'w-6 h-6',
+                                        activeIndex === i ? '' : 'opacity-70'
+                                    ]"
                                     :style="activeIndex === i ? 'filter: invert(20%) sepia(60%) saturate(2000%) hue-rotate(340deg);' : ''"
                                     alt="" />
                             </div>
 
-                            <!-- Title -->
-                            <p class="text-[14px] font-bold leading-snug mb-2">
-                                {{ item.kode }} {{ item.nama }}
+                            <p class="font-bold leading-snug mb-2"
+                                :class="isLargeJenisLayananCard ? 'text-[16px]' : 'text-[13px] font-semibold'">
+                                {{ item.nama }}
                             </p>
 
-                            <!-- Excerpt -->
-                            <p class="text-[12px] leading-[1.6] mb-4 flex-1"
-                                :class="activeIndex === i ? 'text-white/85' : 'text-[#686964]'">
+                            <p class="leading-[1.6] mb-4 flex-1"
+                                :class="[
+                                    isLargeJenisLayananCard ? 'text-[13px] sm:text-[14px]' : 'text-[12px]',
+                                    activeIndex === i ? 'text-white/85' : 'text-[#686964]'
+                                ]">
                                 {{ item.excerpt }}
                             </p>
 
-                            <!-- Divider -->
                             <hr class="mb-3" :class="activeIndex === i ? 'border-white/25' : 'border-[#E8E8E6]'" />
 
-                            <!-- Price -->
-                            <p class="text-[11px] mb-0.5"
-                                :class="activeIndex === i ? 'text-white/70' : 'text-[#686964]'">
+                            <p class="mb-0.5"
+                                :class="[
+                                    isLargeJenisLayananCard ? 'text-[13px]' : 'text-[11px]',
+                                    activeIndex === i ? 'text-white/70' : 'text-[#686964]'
+                                ]">
                                 Mulai dari
                             </p>
-                            <p class="text-[18px] font-bold leading-tight"
-                                :class="activeIndex === i ? 'text-white' : 'text-primary'">
+                            <p class="font-bold leading-tight"
+                                :class="[
+                                    isLargeJenisLayananCard ? 'text-[24px] sm:text-[26px]' : 'text-[18px]',
+                                    activeIndex === i ? 'text-white' : 'text-primary'
+                                ]">
                                 {{ item.harga }}
                             </p>
                         </button>
@@ -175,137 +229,217 @@ watch(activeIndex, () => {
                     <!-- ===== KIRI ===== -->
                     <div class="flex flex-col gap-5">
 
-                        <!-- 3. Penjelasan Layanan -->
-                        <div v-if="currentItem?.penjelasan_layanan?.length"
+                        <!-- Penjelasan Layanan (currentItem, atau fallback ke product jika tanpa jenis_layanan) -->
+                        <div v-if="activeContent?.penjelasan_layanan?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan
-                                    Layanan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
+                                    Penjelasan Layanan
+                                </h2>
                             </div>
                             <div class="space-y-4">
-                                <p v-for="(p, i) in currentItem.penjelasan_layanan" :key="`pl-${i}`"
+                                <p v-for="(p, i) in activeContent.penjelasan_layanan" :key="`pl-${i}`"
+                                    class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">{{ p }}</p>
+                            </div>
+
+                            <div v-if="activeContent.sub_layanan?.length" class="mt-6 space-y-5">
+                                <div v-for="(sub, si) in activeContent.sub_layanan" :key="`sub-${si}`">
+                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-1.5">{{ sub.label }}</p>
+                                    <p class="text-[13px] leading-[1.7] text-[#3D3D3A] text-justify mb-2">{{ sub.desc }}</p>
+                                    <ol v-if="sub.steps?.length" class="ml-5 list-decimal space-y-1">
+                                        <li v-for="(step, sti) in sub.steps" :key="`step-${si}-${sti}`"
+                                            class="text-[13px] leading-[1.7] text-[#3D3D3A]">{{ step }}</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div v-if="activeContent.penjelasan_penutup?.length" class="mt-6 space-y-3">
+                                <p v-for="(p, i) in activeContent.penjelasan_penutup" :key="`pp-${i}`"
                                     class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">{{ p }}</p>
                             </div>
                         </div>
 
-                        <!-- 4. Dokumen Yang Anda Dapatkan -->
-                        <div v-if="currentItem?.dokumen_diperlukan?.length"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
+                        <!-- Sektor Perizinan (list angka 2 kolom, khusus produk seperti Perizinan Berusaha) -->
+                        <div v-if="sektorPerizinan.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Jenis Dokumen
-                                    yang Akan Anda Dapatkan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Sektor Perizinan</h2>
                             </div>
-                            <div class="space-y-5">
-                                <div v-for="(grp, gi) in currentItem.dokumen_diperlukan" :key="`dg-${gi}`">
-                                    <p class="text-[12px] font-bold text-[#1A1B18] mb-2">{{ grp.label }}</p>
-                                    <ul class="space-y-1.5">
-                                        <li v-for="(item, ii) in grp.items" :key="`dgi-${gi}-${ii}`"
-                                            class="flex items-start gap-2 text-[13px] leading-[1.6] text-[#3D3D3A]">
-                                            <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                            <span>{{ item }}</span>
-                                        </li>
-                                    </ul>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-6 sm:grid-flow-col gap-x-8 gap-y-4">
+                                <div v-for="(sektor, i) in sektorPerizinan" :key="`sektor-${i}`"
+                                    class="flex items-center gap-4">
+                                    <span
+                                        class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-primary text-white text-[13px] font-bold">
+                                        {{ i + 1 }}
+                                    </span>
+                                    <span class="text-[13px] font-semibold text-[#1A1B18]">{{ sektor }}</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 5. Persyaratan Dokumen -->
-                        <div v-if="currentItem?.persyaratan_dokumen?.length"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
+                        <!-- Paket & Harga (kartu lengkap: harga, dokumen legalitas, termasuk) -->
+                        <div v-if="paketHarga" class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Persyaratan
-                                    Dokumen</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Paket &amp; Harga</h2>
                             </div>
-                            <div class="space-y-6">
-                                <div v-for="(group, gi) in currentItem.persyaratan_dokumen" :key="`pg-${gi}`">
-                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-3">{{ group.label }}</p>
-                                    <ol class="space-y-2 pl-1">
-                                        <li v-for="(item, ii) in group.items" :key="`pi-${gi}-${ii}`"
-                                            class="flex gap-2 text-[13px] leading-[1.6] text-[#3D3D3A]">
-                                            <span class="flex-shrink-0 font-medium">{{ ii + 1 }}.</span>
-                                            <span>{{ item }}</span>
-                                        </li>
-                                    </ol>
+
+                            <div class="rounded-xl border border-[#E8E8E6] p-5">
+                                <p class="text-[13px] font-bold uppercase text-[#1A1B18] mb-3">{{ activeNama }}</p>
+
+                                <p class="text-[12px] text-[#686964] mb-1">Mulai dari</p>
+                                <p class="text-[24px] font-bold text-primary leading-tight mb-3">{{ paketHarga.harga }}</p>
+
+                                <div v-if="paketHarga.benefit" class="flex items-center gap-2 mb-5">
+                                    <svg class="w-4 h-4 flex-shrink-0 text-[#22A94D]" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-[13px] font-medium text-[#1A1B18]">{{ paketHarga.benefit }}</span>
+                                </div>
+
+                                <div v-if="paketHarga.dokumen_legalitas?.length" class="mb-5">
+                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-2">Dokumen Legalitas</p>
+                                    <div class="space-y-1.5">
+                                        <div v-for="(dok, i) in paketHarga.dokumen_legalitas" :key="`dok-legal-${i}`"
+                                            class="flex items-center gap-2">
+                                            <svg class="w-4 h-4 flex-shrink-0 text-[#22A94D]" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" stroke-width="3">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            <span class="text-[13px] text-[#3D3D3A]">{{ dok }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div v-if="paketHarga.termasuk?.length" class="mb-5">
+                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-2">Termasuk</p>
+                                    <div class="space-y-1.5">
+                                        <div v-for="(item, i) in paketHarga.termasuk" :key="`termasuk-${i}`"
+                                            class="flex items-center gap-2">
+                                            <svg class="w-4 h-4 flex-shrink-0 text-[#22A94D]" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor" stroke-width="3">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            <span class="text-[13px] text-[#3D3D3A]">{{ item }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a :href="buildWhatsappLink(`${activeKode} ${activeNama}`.trim())" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
+                                    Pesan Sekarang
+                                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Biaya Layanan (bar sederhana, hanya tampil jika produk TIDAK punya paket_harga) -->
+                        <div v-else-if="rincianBiaya" class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
+                            <div class="flex items-center gap-3 mb-5">
+                                <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Biaya Layanan</h2>
+                            </div>
+
+                            <div v-if="rincianBiaya.tabs?.length" class="flex flex-wrap gap-2 mb-4">
+                                <button v-for="(tab, ti) in rincianBiaya.tabs" :key="`tab-${ti}`"
+                                    @click="activeBiayaTahun = ti"
+                                    class="rounded-lg px-3 py-1.5 text-[12px] font-semibold transition-colors"
+                                    :class="activeBiayaTahun === ti
+                                        ? 'bg-primary text-white'
+                                        : 'border border-[#E8E8E6] text-[#686964] hover:border-primary/40'">
+                                    {{ tab.tahun ?? `Tahun ${ti + 1}` }}
+                                </button>
+                            </div>
+
+                            <div class="flex items-center justify-between rounded-xl px-5 py-4"
+                                style="background-image: url('/images/card-arrow-item-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                <div class="flex items-center gap-4 min-w-0">
+                                    <div
+                                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white/20">
+                                        <img src="/icons/ft-persons.svg" class="w-5 h-5" alt="" />
+                                    </div>
+                                    <div class="min-w-0">
+                                        <p class="text-[12px] text-white/80 truncate">{{ activeNama }}</p>
+                                        <p class="text-[20px] font-bold text-white leading-tight">
+                                            {{ rincianBiaya.harga }}
+                                        </p>
+                                    </div>
+                                </div>
+                                <a :href="buildWhatsappLink(product.name, activeNama)"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-1.5 rounded-lg bg-white px-4 py-2 text-[12px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors">
+                                    Hubungi Kami
+                                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Mengapa Menggunakan Layanan Kami (checklist 2 kolom) -->
+                        <div v-if="mengapaKami.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
+                            <div class="flex items-center gap-3 mb-5">
+                                <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
+                                    Mengapa Menggunakan Layanan Kami
+                                </h2>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col gap-x-8 gap-y-4">
+                                <div v-for="(poin, i) in mengapaKami" :key="`mengapa-${i}`" class="flex items-start gap-3">
+                                    <span
+                                        class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#ddffe3] mt-0.5">
+                                        <svg class="w-3.5 h-3.5 text-[#22A94D]" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" stroke-width="3">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </span>
+                                    <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ poin }}</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 6. Rincian Biaya -->
-                        <div v-if="currentItem?.rincian_biaya"
+                        <!-- Dokumen dan Informasi yang Diperlukan (accordion bernomor) -->
+                        <div v-if="dokumenDibutuhkan.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
-                            <div class="flex items-center justify-between mb-5">
+                            <button @click="toggleSection('dokumen-informasi')"
+                                class="w-full flex items-center justify-between gap-3 text-left">
                                 <div class="flex items-center gap-3">
                                     <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Rincian Biaya
+                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
+                                        Dokumen dan Informasi yang Diperlukan
                                     </h2>
                                 </div>
-                                <!-- Tab tahun (opsional) -->
-                                <div v-if="currentItem.rincian_biaya.tabs?.length"
-                                    class="inline-flex rounded-lg border border-[#E8E8E6] overflow-hidden">
-                                    <button v-for="(tab, ti) in currentItem.rincian_biaya.tabs" :key="`tahun-${ti}`"
-                                        @click="activeBiayaTahun = ti"
-                                        class="px-4 py-1.5 text-[12px] font-bold transition-colors" :class="activeBiayaTahun === ti
-                                            ? 'bg-primary text-white'
-                                            : 'bg-white text-[#686964] hover:bg-[#F7F7F5]'">
-                                        {{ tab.label }}
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Data biaya: dari tab aktif atau langsung -->
-                            <div class="flex flex-col sm:flex-row gap-4 items-stretch">
-                                <div class="flex-1">
-                                    <p v-if="(currentItem.rincian_biaya.tabs?.[activeBiayaTahun]?.label_biaya) ?? currentItem.rincian_biaya.label"
-                                        class="text-[13px] font-bold text-[#1A1B18] mb-3 uppercase tracking-wide">
-                                        {{ currentItem.rincian_biaya.tabs?.[activeBiayaTahun]?.label_biaya ??
-                                            currentItem.rincian_biaya.label }}
-                                    </p>
-                                    <div v-for="(item, ri) in (currentItem.rincian_biaya.tabs?.[activeBiayaTahun]?.items ?? currentItem.rincian_biaya.items)"
-                                        :key="`rb-${ri}`" class="flex items-center justify-between gap-4 py-2.5">
-                                        <span class="text-[13px] leading-[1.5] text-[#3D3D3A]">{{ item.label }}</span>
-                                        <span class="text-[14px] font-bold text-black whitespace-nowrap">{{ item.amount
-                                        }}</span>
+                                <svg class="h-5 w-5 flex-shrink-0 text-[#686964] transition-transform duration-200"
+                                    :class="openSections['dokumen-informasi'] ? 'rotate-180' : ''" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul v-if="openSections['dokumen-informasi']" class="mt-5 space-y-4">
+                                <li v-for="(dok, i) in dokumenDibutuhkan" :key="`dok-${i}`"
+                                    class="flex items-start gap-4">
+                                    <span
+                                        class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-primary text-white text-[13px] font-bold">
+                                        {{ i + 1 }}
+                                    </span>
+                                    <div>
+                                        <p class="text-[13px] font-semibold leading-[1.7] text-[#1A1B18]">{{ dok.text }}</p>
+                                        <p v-if="dok.desc" class="text-[13px] leading-[1.7] text-[#686964] mt-1">{{ dok.desc }}</p>
                                     </div>
-                                    <hr class="border-t border-dashed border-[#D9DAD8] my-1" />
-                                    <p v-if="currentItem.rincian_biaya.note" class="text-[11px] text-[#9A9A97] mt-3">
-                                        {{ currentItem.rincian_biaya.note }}
-                                    </p>
-                                </div>
-
-                                <div class="sm:w-[420px] flex-shrink-0 rounded-xl overflow-hidden"
-                                    style="background-image: url('/images/card-arrow-item-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                                    <div class="flex items-center justify-between h-full px-5 py-4 gap-4">
-                                        <div>
-                                            <div class="text-[13px] text-white/80 mb-0.5">
-                                                {{ currentItem.rincian_biaya.tabs?.[activeBiayaTahun]?.penanganan_label
-                                                    ?? "Biaya Penanganan" }}
-                                            </div>
-                                            <div
-                                                class="text-[22px] font-bold text-white leading-tight whitespace-nowrap">
-                                                {{ currentItem.rincian_biaya.tabs?.[activeBiayaTahun]?.biaya_penanganan
-                                                    ?? currentItem.rincian_biaya.biaya_penanganan }}
-                                            </div>
-                                        </div>
-                                        <a :href="buildWhatsappLink(`${currentItem.kode} ${currentItem.nama}`)"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="flex items-center justify-center gap-1.5 rounded-lg bg-white px-4 py-2.5 text-[13px] font-semibold text-primary hover:bg-white/90 transition-colors whitespace-nowrap flex-shrink-0">
-                                            Pesan Sekarang
-                                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
-                                                stroke="currentColor" stroke-width="2.5">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
 
-                        <!-- 7. Dasar Hukum (accordion) -->
-                        <div v-if="currentItem?.dasar_hukum?.length"
+                        <!-- Dasar Hukum (accordion, default terbuka) -->
+                        <div v-if="activeContent?.dasar_hukum?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <button @click="toggleSection('dasar-hukum')"
                                 class="w-full flex items-center justify-between gap-3 text-left">
@@ -315,13 +449,13 @@ watch(activeIndex, () => {
                                     </h2>
                                 </div>
                                 <svg class="h-5 w-5 flex-shrink-0 text-[#686964] transition-transform duration-200"
-                                    :class="openSectionId === 'dasar-hukum' ? 'rotate-180' : ''" fill="none"
+                                    :class="openSections['dasar-hukum'] ? 'rotate-180' : ''" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
-                            <ul v-if="openSectionId === 'dasar-hukum'" class="mt-5 space-y-4">
-                                <li v-for="(hukum, i) in currentItem.dasar_hukum" :key="`hukum-${i}`"
+                            <ul v-if="openSections['dasar-hukum']" class="mt-5 space-y-4">
+                                <li v-for="(hukum, i) in activeContent.dasar_hukum" :key="`hukum-${i}`"
                                     class="flex items-start gap-4">
                                     <span
                                         class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#ddffe3]">
@@ -331,8 +465,7 @@ watch(activeIndex, () => {
                                                 d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                         </svg>
                                     </span>
-                                    <span class="text-[13px] leading-[1.7] text-[#3D3D3A] text-justify">{{ hukum
-                                    }}</span>
+                                    <span class="text-[13px] leading-[1.7] text-[#3D3D3A] text-justify">{{ hukum }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -343,23 +476,22 @@ watch(activeIndex, () => {
                     <!-- ===== KANAN: Sidebar ===== -->
                     <div class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start">
 
-                        <!-- Price Card (reaktif ke index aktif) -->
+                        <!-- Price Card (fallback ke product jika tanpa jenis_layanan) -->
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <div class="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFF0EF] px-3 py-1">
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
                                 <span class="text-[11px] font-semibold text-primary">Free Konsultasi</span>
                             </div>
                             <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mt-2 mb-3">
-                                {{ currentItem?.kode }} {{ currentItem?.nama }}
+                                {{ activeNama }}
                             </p>
                             <div class="text-[12px] text-[#686964] mb-1">
-                                {{ currentItem?.rincian_biaya?.tabs?.[activeBiayaTahun]?.penanganan_label ?? "Biaya Penanganan" }}
+                                {{ rincianBiaya?.label ?? "Biaya Penanganan" }}
                             </div>
                             <div class="text-[26px] font-bold leading-none text-primary mb-4">
-                                {{ currentItem?.rincian_biaya?.tabs?.[activeBiayaTahun]?.biaya_penanganan ??
-                                    currentItem?.rincian_biaya?.biaya_penanganan }}
+                                {{ rincianBiaya?.harga ?? "Hubungi Kami" }}
                             </div>
-                            <a :href="buildWhatsappLink(`${currentItem?.kode} ${currentItem?.nama}`)" target="_blank"
+                            <a :href="buildWhatsappLink(`${activeKode} ${activeNama}`.trim())" target="_blank"
                                 rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors mb-2">
                                 Pesan Sekarang
@@ -368,7 +500,7 @@ watch(activeIndex, () => {
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
                             </a>
-                            <a :href="buildWhatsappLink(`${currentItem?.kode} ${currentItem?.nama}`)" target="_blank"
+                            <a :href="buildWhatsappLink(`${activeKode} ${activeNama}`.trim())" target="_blank"
                                 rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
@@ -381,9 +513,9 @@ watch(activeIndex, () => {
                             style="background-image: url('/images/card-arrow-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
-                                    <span
-                                        class="text-[14px] font-extrabold uppercase tracking-widest text-white">FASTRACK
-                                        – VIP LINE</span>
+                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">
+                                        FASTRACK – VIP LINE
+                                    </span>
                                 </div>
                             </div>
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
@@ -397,9 +529,9 @@ watch(activeIndex, () => {
                             <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
                         </div>
 
-                        <!-- Index Visa Lainnya -->
+                        <!-- Layanan lainnya -->
                         <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Index Visa Lainnya</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ relatedTitle }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -413,8 +545,9 @@ watch(activeIndex, () => {
                                             class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug line-clamp-2">
                                             {{ related.name }}
                                         </p>
-                                        <p class="text-[11px] text-[#686964] mt-0.5">Mulai dari {{ related.price_label
-                                            }}</p>
+                                        <p class="text-[11px] text-[#686964] mt-0.5">
+                                            Mulai dari {{ related.price_label }}
+                                        </p>
                                     </div>
                                     <svg class="h-4 w-4 flex-shrink-0 text-[#686964] group-hover:text-primary transition-colors"
                                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
