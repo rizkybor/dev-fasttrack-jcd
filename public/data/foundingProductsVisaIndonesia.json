@@ -1,132 +1,2397 @@
 [
     {
         "id": 1,
-        "name": {
-            "id": "Visa Kunjungan Satu Kali Perjalanan",
-            "en": "Single-Entry Visa",
-            "zh": "单次入境签证"
-        },
-        "tag": {
-            "id": "Profesional",
-            "en": "Professional",
-            "zh": "专业级"
-        },
-        "price": "3000000",
-        "price_label": "Rp 3.000.000",
-        "duration": {
-            "id": "Estimasi 1-3 hari kerja",
-            "en": "Estimated 1-3 working days",
-            "zh": "预计1-3个工作日"
-        },
-        "image": "",
-        "excerpt": {
-            "id": "Visa untuk kunjungan wisata, bisnis, atau keperluan lain dengan satu kali masuk ke Indonesia.",
-            "en": "A visa for tourism, business, or other purposes allowing a single entry into Indonesia.",
-            "zh": "允许单次入境印度尼西亚的旅游、商务或其他目的签证。"
-        },
+        "name": "Visa Kunjungan Satu Kali Perjalanan",
+        "price": "2000000",
+        "price_label": "Rp 2.000.000",
+        "excerpt": "Pengurusan visa kunjungan single-entry untuk berbagai keperluan kunjungan ke Indonesia sesuai indeks yang berlaku.",
         "detail_path": "/visa-indonesia/1",
-        "penjelasan_umum": {
-            "id": [
-                "Visa Kunjungan Satu Kali Perjalanan (single-entry) memberikan izin satu kali masuk ke wilayah Indonesia dengan izin tinggal awal 60 hingga 180 hari, sesuai indeks dan tujuan kunjungan. Fasttrack mendampingi seluruh proses pengajuan — dari pemeriksaan dokumen hingga visa terbit — untuk 11 indeks visa di bawah ini."
-            ],
-            "en": [
-                "The Single-Entry Visit Visa grants permission for a one-time entry into Indonesia with an initial stay of 60 to 180 days, depending on the visa index and purpose of the visit. Fasttrack assists with the entire application process—from document review to visa issuance—for the 11 visa indices listed below."
-            ],
-            "zh": [
-                "单次入境访问签证允许持有人进入印度尼西亚一次，初始停留期限为60至180天，具体时长取决于签证类别及访问目的。Fasttrack 协助处理下文列出的11类签证的整个申请流程，涵盖从材料审核到签证签发的各个环节。"
-            ]
-        },
-        "paket": [
+        "image": "",
+        "penjelasan_umum": [
+            "Visa Kunjungan Satu Kali Perjalanan (single-entry) memberikan izin masuk ke wilayah Indonesia dengan izin tinggal awal 60 (enam puluh) hari sesuai indeks dan tujuan kunjungan. Fasttrack mendampingi seluruh proses pengajuan — dari pemilihan dokumen hingga visa terbit — untuk 11 indeks visa di bawah ini."
+        ],
+        "index_list": [
             {
-                "id": "c1-visa-kunjungan-wisata",
-                "nama": {
-                    "id": "C1 VISA Kunjungan Wisata",
-                    "en": "C1 Visa for Tourism Visit",
-                    "zh": "C1旅游访问签证"
-                },
-                "deskripsi": {
-                    "id": "Untuk berwisata, perjalanan kapal pesiar, hingga mengunjungi keluarga & teman di Indonesia.",
-                    "en": "For tourism, cruise travel, and visiting family & friends in Indonesia.",
-                    "zh": "用于旅游、邮轮旅行以及探访印度尼西亚的家人和朋友。"
-                },
+                "kode": "C1",
+                "nama": "VISA Kunjungan Wisata",
+                "excerpt": "Untuk berwisata, perjalanan bersama keluarga, sosial, silaturahmi kunjungan keluarga di Indonesia.",
                 "harga": "Rp 2.000.000",
-                "penjelasan_layanan": {
-                    "id": [
-                        "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan seperti berwisata, pengembangan pribadi, atau mempelajari keunikan daya tarik wisata, juga melakukan perjalanan dengan kapal pesiar, negosiasi bisnis, menandatangani perjanjian bisnis, pengecekan barang di kantor, pabrik atau tempat produksi barang dan berwisata serta mengunjungi teman dan keluarga.  memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C1, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
-                        "Visa C1 merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku serta dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai kebutuhan dan persyaratan keimigrasian."
-                    ],
-                    "en": [
-                        "If you plan to visit Indonesia for purposes such as tourism, personal development, exploring unique tourist attractions, cruise travel, business negotiations, signing business agreements, inspecting goods at offices, factories, or production sites, or visiting friends and family, it is crucial to ensure the visa application process complies with applicable immigration regulations. Through our C1 Visa processing service, we provide professional assistance to facilitate an accurate, efficient visa application process that adheres to current regulations.",
-                        "The C1 Visa is a single-entry visit visa for Indonesia, granting an initial stay of up to 60 days from the date of arrival. This stay permit may be extended in accordance with applicable regulations and can be converted into a Limited Stay Permit, subject to specific needs and immigration requirements."
-                    ],
-                    "zh": [
-                        "如果您计划前往印度尼西亚，无论是出于旅游、个人发展、探索特色景点、邮轮旅行、商务洽谈、签署商业协议、在办公室或生产现场验货，还是探亲访友等目的，确保签证申请流程符合相关移民法规至关重要。我们提供 C1 签证办理服务，协助您按照最新法规要求，准确、高效地完成签证申请。",
-                        "C1 签证属于印度尼西亚单次入境访问签证，允许持有人自入境之日起停留最长 60 天。该停留许可可在符合相关法规的前提下申请延期，并可根据具体需求及移民局规定转换为有限居留许可。"
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan wisata, perjalanan bersama keluarga, kunjungan sosial, atau silaturahmi keluarga di Indonesia, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa Kunjungan Indeks C1, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C1 merupakan visa kunjungan sekali perjalanan (single-entry) dengan izin tinggal awal paling lama 60 (enam puluh) hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN WISATA",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
                     ]
                 },
-                "penjelasan_layanan_items": {
-                    "id": [
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan C1",
+                        "items": [
+                            "Scancopy seluruh halaman paspor dengan masa berlaku minimal 6 (enam) bulan",
+                            "Softcopy Pas Photo ukuran minimal 20 (dua puluh) kali 20 (dua puluh) piksel",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat / Formulir permohonan yang telah dilengkapi dan Tanda Tangan Terdigitalisasi"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        { "label": "PNBP Visa C1", "amount": "Rp. 2.000.000" }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-05.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "C2",
+                "nama": "VISA Kunjungan Bisnis",
+                "excerpt": "Untuk rapat, pembelian barang, negosiasi, dan penandatanganan perjanjian bisnis.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan bisnis seperti rapat, pembelian barang, negosiasi, pengecekan barang di kantor, pabrik atau tempat produksi barang dan bekerjasama serta menghungungi rekan kerja, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C2, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C2 merupakan Visa Kunjungan yang untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku dan dikenakan sesuai kebutuhan dari perjalanan dan kepentingan."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN BISNIS",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C2",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        { "label": "PNBP Visa C2", "amount": "Rp. 2.000.000" }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-05.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK-445.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
+            },
+            {
+                "kode": "C10",
+                "nama": "VISA Kunjungan Narasumber Kegiatan Bisnis",
+                "excerpt": "Untuk tampil sebagai narasumber, pencermah, atau penyaji dalam kegiatan MICE.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan tampil sebagai narasumber, pencermah, atau penyaji dalam kegiatan Meeting, Incentive, Convention, and Exhibition (MICE) seperti seminar, konferensi, workshop, atau kegiatan sejenis lainnya, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C10, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C10 merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku serta dikenakan sesuai kebutuhan dari penyelenggaraan kegiatan."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN NARASUMBER KEGIATAN BISNIS",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C10",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        { "label": "PNBP Visa C10", "amount": "Rp. 2.000.000" }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-05.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK-445.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
+            },
+            {
+                "kode": "C10A",
+                "nama": "VISA Kunjungan Penceramah Agama",
+                "excerpt": "Untuk memberikan ceramah/kotbah mengikuti seminar keagamaan di Indonesia.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan memberikan ceramah/kotbah, mengikuti seminar keagamaan, atau kegiatan keagamaan lainnya yang bersifat sementara, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C10A, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C10A merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku serta dikenakan sesuai kebutuhan dari penyelenggaraan kegiatan keagamaan."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN PENCERAMAH AGAMA",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C10A",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        { "label": "PNBP Visa C10A", "amount": "Rp. 2.000.000" }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-05.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK-445.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
+            },
+            {
+                "kode": "C11",
+                "nama": "VISA Kunjungan Promosi Produk Dan Jasa",
+                "excerpt": "Untuk exhibisi yang menawarkan barang atau jasa dalam kegiatan MICE.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan mengikuti exhibisi yang menawarkan barang atau jasa dalam kegiatan Meeting, Incentive, Convention, and Exhibition (MICE), memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C11, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C11 merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku serta dikenakan sesuai kebutuhan dari penyelenggaraan kegiatan promosi produk dan jasa."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN PROMOSI PRODUK DAN JASA",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C11",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat undangan/keterangan dari instansi penyelenggara atau perusahaan sponsor di Indonesia",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        { "label": "PNBP Visa C11", "amount": "Rp. 2.000.000" }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-05.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK-445.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
+            },
+            {
+                "kode": "C12",
+                "nama": "VISA Kunjungan Pra-Investasi",
+                "excerpt": "Untuk survei/persiapan usaha dalam rangka rencana penanaman modal atau investasi di Indonesia.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan kegiatan yang berkaitan melakukan survei atau persiapan sebelum melakukan investasi atau penanaman modal di Indonesia, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C12, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C12 merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku dan dapat diberikan masa berlaku hingga 180 hari sesuai kebutuhan kegiatan pra-investasi."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN PRA-INVESTASI",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C12",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat undangan, rekomendasi, atau korespondensi dari instansi pemerintah atau lembaga swasta yang menyatakan hubungan dengan rencana investasi/penanaman modal di Indonesia",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
                         {
-                            "id": "c1-visa-kunjungan-wisata",
-                            "dokumen_yang_didapatkan": [
-                                {
-                                    "nomor": 1,
-                                    "judul": "Data Para Pemegang Saham",
-                                    "items": [
-                                        "Perseorangan Indonesia, agar melampirkan scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP), dan/atau;",
-                                        "Badan Hukum Indonesia agar melampirkan scancopy bewarna Akta Pendirian Perusahaan dan seluruh perubahannya lengkap dengan pengesahan dan persetujuan/pemberitahuan Dari Menteri Hukum dan Hak Asasi Manusia serta  rekaman Nomor Pokok Wajib Pajak (NPWP) perusahaan dan copy KTP Direktur.",
-                                        "Data: Nomor telepon, Alamat email"
-                                    ]
-                                },
-                                {
-                                    "nomor": 2,
-                                    "judul": "Legalitas Perusahaan Yang Dimiliki",
-                                    "items": [
-                                        "Akta Pendirian dan Pengesahan dari Kementerian Hukum RI;",
-                                        "Seluruh Akta Perubahan yang dimiliki beserta Persetujuan/Pemberitahuan dari Kementerian Hukum RI;",
-                                        "Nomor Poko Wajib Pajak Perseroan;",
-                                        "Nomor Induk Perusahaan."
-                                    ]
-                                },
-                                {
-                                    "nomor": 3,
-                                    "judul": "Notulen/Sirkular Keputusan Para Pemegang Saham/Formulir/Surat Yang Telah Dilengkapin Dan Ditanda Tanganai Oleh Seluruh Pihak",
-                                    "items": [
-                                        "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima"
-                                    ]
-                                },
-                                {
-                                    "nomor": 4,
-                                    "judul": "Identitas Kepala Cabang",
-                                    "items": [
-                                        "scancopy bewarna Kartu Tanda Penduduk (e-KTP) yang masih berlaku dan rekaman Nomor Pokok Wajib Pajak (NPWP)"
-                                    ]
-                                },
-                                {
-                                    "nomor": 5,
-                                    "judul": "Alamat Kantor Cabang",
-                                    "items": []
-                                }
-                            ],
-                            "persyaratan_dokumen":[],
-                            "paket_harga": {},
-                            "dasar_hukum":[]
+                            "label": "PNBP Visa C12 (60 hari)",
+                            "amount": "Rp. 3.000.000"
+                        },
+                        {
+                            "label": "PNBP Visa C12 (180 hari)",
+                            "amount": "Rp. 4.000.000"
                         }
                     ],
-                    "en": [],
-                    "zh": []
-                }
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK.443.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
+            },
+            {
+                "kode": "C16",
+                "nama": "VISA Kunjungan Instruktur Pengembangan Industri",
+                "excerpt": "Untuk memberikan pelatihan, penyuluhan, dan pelatihan teknologi industri.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan kegiatan yang berkaitan memberikan pelatihan, penyuluhan, dan pelatihan teknologi industri kepada perusahaan atau instansi terkait di Indonesia, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C16, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C16 merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku dan dikenakan sesuai kebutuhan kegiatan pengembangan industri."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN INSTRUKTUR PENGEMBANGAN INDUSTRI",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C16",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat undangan/kerjasama dari instansi pemerintah atau lembaga swasta yang menyelenggarakan kegiatan pelatihan/pengembangan industri",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        { "label": "PNBP Visa C16", "amount": "Rp. 3.000.000" }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK.443.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
+            },
+            {
+                "kode": "C17",
+                "nama": "VISA Kunjungan Audit, Kendali Mutu, Dan Inspeksi Perusahaan",
+                "excerpt": "Untuk audit, kendali mutu produksi, atau inspeksi pada cabang perusahaan di Indonesia.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan audit, kendali mutu produksi, atau inspeksi pada cabang perusahaan di Indonesia, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C17, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C17 merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku dan dikenakan sesuai kebutuhan dari kegiatan audit atau inspeksi perusahaan."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN AUDIT, KENDALI MUTU, DAN INSPEKSI PERUSAHAAN",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C17",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat undangan dari perusahaan di Indonesia sebagai penanggung jawab kegiatan audit/inspeksi",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        { "label": "PNBP Visa C17", "amount": "Rp. 3.000.000" }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK.443.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
+            },
+            {
+                "kode": "C18",
+                "nama": "VISA Kunjungan Uji Kemampuan Tenaga Kerja Asing",
+                "excerpt": "Untuk mengikuti uji kompetensi Tenaga Kerja Asing sebelum dipekerjakan.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan mengikuti uji kompetensi Tenaga Kerja Asing (TKA) sebelum dipekerjakan, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C18, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C18 merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku dan dikenakan sesuai kebutuhan dari pelaksanaan uji kompetensi."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN UJI KEMAMPUAN TENAGA KERJA ASING",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C18",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat undangan/keterangan dari lembaga penyelenggara uji kompetensi atau perusahaan sponsor di Indonesia",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        { "label": "PNBP Visa C18", "amount": "Rp. 4.000.000" }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK.443.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
+            },
+            {
+                "kode": "C20",
+                "nama": "VISA Kunjungan Pemasangan dan Perbaikan Mesin",
+                "excerpt": "Untuk jasa pemasangan dan perbaikan mesin sebagai bagian dari perjanjian mesin.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan kegiatan yang berkaitan dengan jasa pemasangan dan perbaikan mesin di tempat usaha sebagai bagian dari pembelian mesin di luar negeri, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C20, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C20 merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku serta dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai kebutuhan dan penyesuaian mesin."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN PEMASANGAN DAN PERBAIKAN MESIN",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C20",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat kontrak pembelian mesin atau kontrak kerja pemasangan dan perbaikan mesin dari perusahaan penerima di Indonesia atau perusahaan pengirim TKA yang berada di negara asal, disahkan oleh pihak berwenang setempat sesuai perundang-undangan yang berlaku",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        { "label": "PNBP Visa C20", "amount": "Rp. 4.000.000" }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK.443.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
+            },
+            {
+                "kode": "C22B",
+                "nama": "VISA Kunjungan Pemagangan",
+                "excerpt": "Untuk pemagangan dan pengembangan kompetensi pada perusahaan atau tempat kerja.",
+                "harga": "Rp 2.000.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan mengikuti program pemagangan atau pengembangan kompetensi pada suatu perusahaan atau tempat kerja di Indonesia, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa C22B, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa C22B merupakan Visa Kunjungan untuk satu kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 180 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku serta disesuaikan dengan jangka waktu penyelenggaraan pemagangan."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN PEMAGANGAN",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa C22B",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran minimal 4x6 dengan latar belakang putih",
+                            "Softcopy Rekening Koran dengan minimal saldo USD 2.000",
+                            "Surat kontrak pemagangan dari instansi pemerintah atau lembaga swasta yang menyelenggarakan pemagangan atau perlindungan hukum diakukan oleh Warga Negara Asing yang bersangkutan dan dapat dikeluarkan/dipulangkan kembali oleh negara asal",
+                            "Surat / Formulir permohonan yang telah dilengkapi Tanda Tangan sponsor dan materai Rp 10.000"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP Visa C22B (60 hari)",
+                            "amount": "Rp. 3.000.000"
+                        },
+                        {
+                            "label": "PNBP Visa C22B (180 hari)",
+                            "amount": "Rp. 4.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 3.000.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Kementerian Hukum",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI",
+                    "Keputusan Direktur Jenderal Imigrasi Nomor IMI-PK.443.GR.01.01 Tahun 2024 tentang Besaran Biaya Hidup Bagi Orang Asing Dan/Atau Keluarganya Selama Berada Di Wilayah Indonesia Sebagai Syarat Permohonan Visa Kunjungan Dan Visa Tinggal Terbatas"
+                ]
             }
         ],
-        "dasar_hukum": {
-            "id": [],
-            "en": [],
-            "zh": []
-        },
-        "faq": {
-            "id": [],
-            "en": [],
-            "zh": []
-        }
+        "faq": []
+    },
+    {
+        "id": 2,
+        "name": "Visa Kunjungan Beberapa Kali Perjalanan",
+        "price": "3500000",
+        "price_label": "Rp 3.500.000",
+        "excerpt": "Pengurusan Visa Kunjungan Beberapa Kali Perjalanan (Multiple Entry Visa) untuk keperluan rutin ke Indonesia.",
+        "detail_path": "/visa-indonesia/2",
+        "image": "",
+        "penjelasan_umum": [
+            "Visa Kunjungan Beberapa Kali Perjalanan (Multiple Entry Visa) adalah visa yang memungkinkan pemegangnya melakukan kunjungan berulang ke Indonesia dalam periode tertentu tanpa perlu mengajukan visa baru di setiap kedatangan. Visa ini cocok bagi warga negara asing yang memiliki keperluan rutin di Indonesia, baik untuk kegiatan wisata, bisnis, pra-investasi, maupun audit dan inspeksi perusahaan, sehingga proses keluar-masuk Indonesia menjadi lebih efisien dan praktis selama masa berlaku visa masih berjalan."
+        ],
+        "index_list": [
+            {
+                "kode": "D1",
+                "nama": "Visa Kunjungan Wisata",
+                "excerpt": "Visa untuk keperluan wisata berulang ke Indonesia tanpa perlu pengajuan ulang setiap kedatangan.",
+                "harga": "Rp 3.500.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan wisata seperti mengunjungi keluarga, menghadiri pertemuan, insentif, konvensi, dan pameran atau acara sejenis lainnya (sebagai peserta), serta transit di Indonesia untuk ke negara lain, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa D1, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa D1 merupakan Visa Kunjungan untuk setiap kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku dan tidak dapat dikonversikan menjadi Izin Tinggal Terbatas."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN WISATA",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa D1",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Rekening koran dengan minimal saldo USD 2.000",
+                            "Softcopy Curriculum Vitae",
+                            "Softcopy travel itinerary",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "tabs": [
+                        {
+                            "label": "1 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D1 - 1 Tahun",
+                                    "amount": "Rp. 4.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 3.500.000",
+                            "penanganan_label": "Biaya Penanganan - 1 Tahun"
+                        },
+                        {
+                            "label": "2 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D1 - 2 Tahun",
+                                    "amount": "Rp. 6.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 4.000.000",
+                            "penanganan_label": "Biaya Penanganan - 2 Tahun"
+                        },
+                        {
+                            "label": "5 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D1 - 5 Tahun",
+                                    "amount": "Rp. 10.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 5.500.000",
+                            "penanganan_label": "Biaya Penanganan - 5 Tahun"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku."
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Keluarahan Mendapat atau Pelayanan Golden Visa yang Berlaku pada Kemenkumham RI"
+                ]
+            },
+            {
+                "kode": "D2",
+                "nama": "Visa Kunjungan Bisnis",
+                "excerpt": "Visa untuk keperluan bisnis berulang seperti rapat, negosiasi, atau kunjungan kerja sama perusahaan.",
+                "harga": "Rp 3.500.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan bisnis seperti rapat, negosiasi, pembelian barang, pengecekan barang di kantor, pabrik, atau tempat produksi barang, serta menjalin kerjasama dengan rekan bisnis, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa D2, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa D2 merupakan Visa Kunjungan untuk setiap kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku dan tidak dapat dikonversikan menjadi Izin Tinggal Terbatas."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN BISNIS",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa D2",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Rekening koran dengan minimal saldo USD 2.000",
+                            "Softcopy Curriculum Vitae",
+                            "Softcopy travel itinerary",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "tabs": [
+                        {
+                            "label": "1 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D2 - 1 Tahun",
+                                    "amount": "Rp. 4.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 3.500.000",
+                            "penanganan_label": "Biaya Penanganan - 1 Tahun"
+                        },
+                        {
+                            "label": "2 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D2 - 2 Tahun",
+                                    "amount": "Rp. 6.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 4.000.000",
+                            "penanganan_label": "Biaya Penanganan - 2 Tahun"
+                        },
+                        {
+                            "label": "5 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D2 - 5 Tahun",
+                                    "amount": "Rp. 10.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 5.500.000",
+                            "penanganan_label": "Biaya Penanganan - 5 Tahun"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku."
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Keluarahan Mendapat atau Pelayanan Golden Visa yang Berlaku pada Kemenkumham RI"
+                ]
+            },
+            {
+                "kode": "D12",
+                "nama": "Visa Kunjungan Pra-Investasi",
+                "excerpt": "Visa bagi calon investor yang melakukan survei dan persiapan investasi secara berulang di Indonesia.",
+                "harga": "Rp 3.500.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan survei atau persiapan investasi secara berulang seperti mengunjungi calon lokasi usaha, bertemu mitra bisnis, atau menyusun kajian kelayakan investasi, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa D12, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa D12 merupakan Visa Kunjungan untuk setiap kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku dan tidak dapat dikonversikan menjadi Izin Tinggal Terbatas."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN PRA-INVESTASI",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa D12",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Rekening koran dengan minimal saldo USD 2.000",
+                            "Softcopy Curriculum Vitae",
+                            "Softcopy travel itinerary",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-",
+                            "Softcopy surat undangan, rekomendasi, atau korespondensi dari instansi pemerintah atau lembaga swasta yang menjelaskan hubungan dengan Orang Asing bersangkutan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "tabs": [
+                        {
+                            "label": "1 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D12 - 1 Tahun",
+                                    "amount": "Rp. 6.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 3.500.000",
+                            "penanganan_label": "Biaya Penanganan - 1 Tahun"
+                        },
+                        {
+                            "label": "2 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D12 - 2 Tahun",
+                                    "amount": "Rp. 8.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 4.500.000",
+                            "penanganan_label": "Biaya Penanganan - 2 Tahun"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku."
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Keluarahan Mendapat atau Pelayanan Golden Visa yang Berlaku pada Kemenkumham RI"
+                ]
+            },
+            {
+                "kode": "D17",
+                "nama": "Visa Kunjungan Audit, Kendali Mutu, Dan Inspeksi Perusahaan",
+                "excerpt": "Visa untuk kegiatan audit, kontrol kualitas, atau inspeksi perusahaan yang dilakukan secara berkala.",
+                "harga": "Rp 3.500.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan kunjungan ke Indonesia untuk keperluan melakukan audit, kendali mutu produksi, atau inspeksi pada cabang perusahaan di Indonesia. Termasuk pada kegiatan yang dilakukan secara berkala dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa D17, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa D17 merupakan Visa Kunjungan untuk setiap kali masuk ke wilayah Indonesia dengan izin tinggal awal paling lama 60 hari, terhitung sejak tanggal kedatangan. Izin tinggal tersebut dapat diperpanjang sesuai dengan ketentuan yang berlaku dan tidak dapat dikonversikan menjadi Izin Tinggal Terbatas."
+                ],
+                "dokumen_didapat": {
+                    "nama": "VISA KUNJUNGAN AUDIT, KENDALI MUTU, DAN INSPEKSI PERUSAHAAN",
+                    "termasuk": [
+                        "Fasttrack Document Delivery Service",
+                        "Fasttrack Digital Files Secure Storage",
+                        "Fasttrack Kit"
+                    ]
+                },
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Persyaratan Visa D17",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Rekening koran dengan minimal saldo USD 2.000",
+                            "Softcopy Curriculum Vitae",
+                            "Softcopy travel itinerary",
+                            "Softcopy surat undangan dari perusahaan atau lembaga sebagai penanggung jawab kegiatan",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "tabs": [
+                        {
+                            "label": "1 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D17 - 1 Tahun",
+                                    "amount": "Rp. 5.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 3.500.000",
+                            "penanganan_label": "Biaya Penanganan - 1 Tahun"
+                        },
+                        {
+                            "label": "2 TAHUN",
+                            "label_biaya": "PNBP (Biaya Negara)",
+                            "items": [
+                                {
+                                    "label": "PNBP Visa D17 - 2 Tahun",
+                                    "amount": "Rp. 7.000.000"
+                                }
+                            ],
+                            "biaya_penanganan": "Rp. 4.500.000",
+                            "penanganan_label": "Biaya Penanganan - 2 Tahun"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku."
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Keluarahan Mendapat atau Pelayanan Golden Visa yang Berlaku pada Kemenkumham RI"
+                ]
+            }
+        ],
+        "faq": []
+    },
+    {
+        "id": 3,
+        "name": "Visa Investor",
+        "price": "12750000",
+        "price_label": "Rp 12.750.000",
+        "excerpt": "Pengurusan visa investor untuk warga negara asing yang menanamkan modal di Indonesia.",
+        "detail_path": "/visa-indonesia/3",
+        "image": "",
+        "penjelasan_umum": [
+            "Indonesia menetapkan berbagai jenis visa yang dirancang khusus bagi kalangan investor untuk mendukung kegiatan investasi di Indonesia — baik dari perorangan asing maupun badan hukum, dengan tujuan mempermudah proses masuk dan tinggal di wilayah Indonesia bagi para investor. Visa investor pada dasarnya diperuntukkan bagi Warga Negara Asing yang akan melakukan penanaman modal atau investasi di Indonesia, baik dalam bentuk pendirian perusahaan baru, penyertaan saham, maupun bentuk investasi lainnya sesuai dengan ketentuan perundang-undangan yang berlaku."
+        ],
+        "index_list": [
+            {
+                "kode": "E28",
+                "nama": "VISA Investor",
+                "excerpt": "Visa bagi Orang Asing yang akan melakukan penanaman modal atau investasi di Indonesia.",
+                "harga": "Rp 12.750.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan investasi atau penanaman modal di Indonesia baik dengan mendirikan perusahaan baru, melakukan penyertaan saham, maupun bentuk investasi lainnya, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa E28, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa E28 merupakan Visa Tinggal Terbatas yang diberikan kepada Orang Asing yang berkedudukan sebagai investor pada suatu perusahaan penanaman modal di Indonesia dengan izin tinggal yang dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai dengan ketentuan yang berlaku."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Surat Edaran Kelayakan Penerimaan Negara Bukan Pajak Untuk Izin Tinggal Terbatas, Izin Tinggal Terbatas Elektronik",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas – Multiple Entry/Exit Re-entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Melaporkan Orang Asing (TTKOA)"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "A. Dokumen Perusahaan/Sponsor",
+                        "items": [
+                            "Akta Pendirian dan seluruh perubahan yang telah disahkan oleh Kementerian Hukum RI",
+                            "Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                            "Nomor Induk Berusaha (NIB) berbasis Risiko",
+                            "Softcopy Rekening Koran Perusahaan minimal saldo Rp 10.000.000",
+                            "Bukti kepemilikan saham/penyertaan modal Orang Asing pada perusahaan sponsor"
+                        ]
+                    },
+                    {
+                        "label": "B. Dokumen Individu Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 18 (delapan belas) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Curriculum Vitae",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP Visa E28 (ITAS 2 Tahun)",
+                            "amount": "Rp. 9.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Golden Visa yang Berlaku pada Kemenkumham RI"
+                ]
+            },
+            {
+                "kode": "E28B",
+                "nama": "VISA Investor Pendirian Perusahaan Golden Visa",
+                "excerpt": "Golden Visa bagi Orang Asing yang melakukan penanaman modal melalui pendirian perusahaan baru di Indonesia.",
+                "harga": "Rp 12.750.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan investasi atau penanaman modal di Indonesia melalui pendirian perusahaan baru dengan besaran investasi tertentu, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa E28B, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa E28B merupakan Golden Visa yang diberikan kepada Orang Asing yang berkedudukan sebagai investor pendiri perusahaan baru di Indonesia dengan izin tinggal yang dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai dengan ketentuan yang berlaku."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Surat Edaran Kelayakan Penerimaan Negara Bukan Pajak Untuk Izin Tinggal Terbatas, Izin Tinggal Terbatas Elektronik",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas – Multiple Entry/Exit Re-entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Melaporkan Orang Asing (TTKOA)"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "A. Dokumen Perusahaan/Sponsor",
+                        "items": [
+                            "Akta Pendirian dan seluruh perubahan yang telah disahkan oleh Kementerian Hukum RI",
+                            "Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                            "Nomor Induk Berusaha (NIB) berbasis Risiko",
+                            "Softcopy Rekening Koran Perusahaan minimal saldo Rp 10.000.000",
+                            "Bukti penyertaan modal pendirian perusahaan sesuai ketentuan Golden Visa"
+                        ]
+                    },
+                    {
+                        "label": "B. Dokumen Individu Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 18 (delapan belas) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Curriculum Vitae",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP Visa E28B (ITAS 2 Tahun)",
+                            "amount": "Rp. 9.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Golden Visa yang Berlaku pada Kemenkumham RI"
+                ]
+            },
+            {
+                "kode": "E28C",
+                "nama": "VISA Investor Pasar Modal Golden Visa",
+                "excerpt": "Golden Visa bagi Orang Asing yang melakukan investasi melalui pasar modal Indonesia.",
+                "harga": "Rp 12.750.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan investasi melalui pasar modal Indonesia dengan besaran investasi tertentu sebagai investor pasar modal, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa E28C, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa E28C merupakan Golden Visa yang diberikan kepada Orang Asing yang berkedudukan sebagai investor pasar modal di Indonesia dengan izin tinggal yang dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai dengan ketentuan yang berlaku."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Surat Edaran Kelayakan Penerimaan Negara Bukan Pajak Untuk Izin Tinggal Terbatas, Izin Tinggal Terbatas Elektronik",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas – Multiple Entry/Exit Re-entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Melaporkan Orang Asing (TTKOA)"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "A. Dokumen Perusahaan/Sponsor",
+                        "items": [
+                            "Akta Pendirian dan seluruh perubahan yang telah disahkan oleh Kementerian Hukum RI",
+                            "Nomor Pokok Wajib Pajak (NPWP) Perusahaan Sekuritas/Sponsor",
+                            "Nomor Induk Berusaha (NIB) berbasis Risiko",
+                            "Bukti kepemilikan efek/instrumen pasar modal sesuai ketentuan Golden Visa"
+                        ]
+                    },
+                    {
+                        "label": "B. Dokumen Individu/Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 18 (delapan belas) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Curriculum Vitae",
+                            "Softcopy bukti kepemilikan portofolio investasi pasar modal (KSEI)",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP Visa E28C (ITAS 2 Tahun)",
+                            "amount": "Rp. 9.500.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 12.790.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Golden Visa yang Berlaku pada Kemenkumham RI"
+                ]
+            },
+            {
+                "kode": "E28D",
+                "nama": "Visa Investor Pendirian Cabang atau Anak Perusahaan Golden Visa",
+                "excerpt": "Golden Visa bagi Orang Asing yang melakukan investasi melalui pendirian cabang atau anak perusahaan di Indonesia.",
+                "harga": "Rp 12.750.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan investasi melalui pendirian cabang atau anak perusahaan dari perusahaan induk di luar negeri untuk beroperasi di Indonesia, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa E28D, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa E28D merupakan Golden Visa yang diberikan kepada Orang Asing yang berkedudukan sebagai investor pendiri cabang atau anak perusahaan di Indonesia dengan izin tinggal yang dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai dengan ketentuan yang berlaku."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Surat Edaran Kelayakan Penerimaan Negara Bukan Pajak Untuk Izin Tinggal Terbatas, Izin Tinggal Terbatas Elektronik",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas – Multiple Entry/Exit Re-entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Melaporkan Orang Asing (TTKOA)"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "A. Dokumen Perusahaan/Sponsor",
+                        "items": [
+                            "Akta Pendirian dan seluruh perubahan yang telah disahkan oleh Kementerian Hukum RI",
+                            "Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                            "Nomor Induk Berusaha (NIB) berbasis Risiko",
+                            "Softcopy Rekening Koran Perusahaan minimal saldo Rp 10.000.000",
+                            "Bukti keterkaitan/hubungan afiliasi dengan perusahaan induk di luar negeri"
+                        ]
+                    },
+                    {
+                        "label": "B. Dokumen Individu/Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 18 (delapan belas) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Curriculum Vitae",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP Visa E28D (ITAS 2 Tahun)",
+                            "amount": "Rp. 9.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 62 Tahun 2023 tentang Jenis dan Tarif PNBP Keimigrasian yang Berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E28E",
+                "nama": "Visa Investor Kawasan Ekonomi Khusus",
+                "excerpt": "Golden Visa bagi Orang Asing yang melakukan investasi menanam modal di Kawasan Ekonomi Khusus (KEK) Indonesia.",
+                "harga": "Rp 12.750.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan investasi atau penanaman modal di Kawasan Ekonomi Khusus (KEK) yang telah ditetapkan pemerintah Indonesia, memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa E28E, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa E28E merupakan Golden Visa yang diberikan kepada Orang Asing yang berkedudukan sebagai investor pada Kawasan Ekonomi Khusus di Indonesia dengan izin tinggal yang dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai dengan ketentuan yang berlaku."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Surat Edaran Kelayakan Penerimaan Negara Bukan Pajak Untuk Izin Tinggal Terbatas, Izin Tinggal Terbatas Elektronik",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas – Multiple Entry/Exit Re-entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Melaporkan Orang Asing (TTKOA)"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "A. Dokumen Perusahaan/Sponsor",
+                        "items": [
+                            "Akta Pendirian dan seluruh perubahan yang telah disahkan oleh Kementerian Hukum RI",
+                            "Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                            "Nomor Induk Berusaha (NIB) berbasis Risiko",
+                            "Softcopy Rekening Koran Perusahaan minimal saldo Rp 10.000.000",
+                            "Bukti izin/penetapan usaha di Kawasan Ekonomi Khusus (KEK) sesuai ketentuan"
+                        ]
+                    },
+                    {
+                        "label": "B. Dokumen Individu/Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 18 (delapan belas) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Curriculum Vitae",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP Visa E28E (ITAS 2 Tahun)",
+                            "amount": "Rp. 9.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Golden Visa yang Berlaku pada Kemenkumham RI"
+                ]
+            },
+            {
+                "kode": "E28F",
+                "nama": "Visa Investor Pendirian Cabang atau Anak Perusahaan di Ibu Kota Nusantara Golden Visa",
+                "excerpt": "Golden Visa bagi Orang Asing yang melakukan investasi melalui pendirian cabang atau anak perusahaan di Ibu Kota Nusantara.",
+                "harga": "Rp 12.750.000",
+                "penjelasan_layanan": [
+                    "Apabila Anda berencana melakukan investasi melalui pendirian cabang atau anak perusahaan yang berlokasi di kawasan Ibu Kota Nusantara (IKN), memastikan proses pengurusan visa dilakukan sesuai dengan ketentuan keimigrasian yang berlaku merupakan hal yang penting. Melalui layanan pengurusan Visa E28F, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa E28F merupakan Golden Visa yang diberikan kepada Orang Asing yang berkedudukan sebagai investor pendiri cabang atau anak perusahaan di kawasan Ibu Kota Nusantara dengan izin tinggal yang dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai dengan ketentuan yang berlaku."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Surat Edaran Kelayakan Penerimaan Negara Bukan Pajak Untuk Izin Tinggal Terbatas, Izin Tinggal Terbatas Elektronik",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas – Multiple Entry/Exit Re-entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Melaporkan Orang Asing (TTKOA)"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "A. Dokumen Perusahaan/Sponsor",
+                        "items": [
+                            "Akta Pendirian dan seluruh perubahan yang telah disahkan oleh Kementerian Hukum RI",
+                            "Nomor Pokok Wajib Pajak (NPWP) Perusahaan",
+                            "Nomor Induk Berusaha (NIB) berbasis Risiko",
+                            "Softcopy Rekening Koran Perusahaan minimal saldo Rp 10.000.000",
+                            "Bukti lokasi usaha/kegiatan operasional di kawasan Ibu Kota Nusantara (IKN)"
+                        ]
+                    },
+                    {
+                        "label": "B. Dokumen Individu/Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 18 (delapan belas) bulan",
+                            "Softcopy Pas Photo ukuran 4x6 dengan latar belakang bebas",
+                            "Softcopy Curriculum Vitae",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan sponsor dan materai Rp 10.000,-"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP Visa E28F (ITAS 2 Tahun)",
+                            "amount": "Rp. 9.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Keimigrasian yang Berlaku pada Kemenkumham RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif PNBP Keluarahan Mendapat atau Pelayanan Golden Visa yang Berlaku pada Kemenkumham RI"
+                ]
+            }
+        ],
+        "faq": []
+    },
+    {
+        "id": 4,
+        "name": "Visa Keluarga",
+        "price": "9050000",
+        "price_label": "Rp 9.050.000",
+        "excerpt": "Pengurusan visa keluarga bagi anggota keluarga WNA yang ingin menetap bersama keluarga di Indonesia.",
+        "detail_path": "/visa-indonesia/4",
+        "image": "",
+        "penjelasan_umum": [
+            "Memiliki keluarga yang tinggal di Indonesia seharusnya tidak terhalang oleh kerumitan administrasi keimigrasian. Pemerintah Indonesia menyediakan berbagai jalur visa keluarga yang mengakomodasi beragam kondisi — mulai dari pasangan WNA yang menikah dengan WNI, anak dari perkawinan campuran, hingga orang tua atau saudara kandung yang ingin bergabung dengan anggota keluarga yang telah menetap secara sah di Indonesia. Setiap jenis visa keluarga memiliki persyaratan, penjamin, dan dasar hukum yang berbeda sesuai dengan hubungan kekeluargaan dan status kekimigrasian pihak yang menjadi acuan tinggal. Kesalahan dalam memilih jenis visa atau kelengkapan dokumen dapat berakibat pada penolakan permohonan atau kendala administratif di kemudian hari."
+        ],
+        "index_list": [
+            {
+                "kode": "E31",
+                "nama": "VISA Keluarga",
+                "excerpt": "Visa tinggal terbatas bagi anggota keluarga WNA yang ingin menetap di Indonesia untuk bergabung bersama keluarga.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh proses perizinan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan berkas secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait tenaga kerja asing berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan latar belakang bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP ITAS, ITAS dan MERPI",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E31A",
+                "nama": "VISA Keluarga Suami/Istri WNI",
+                "excerpt": "Visa tinggal terbatas bagi WNA yang menikah sah dengan WNI dan ingin menetap di Indonesia.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP)",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E31B",
+                "nama": "VISA Keluarga Suami/Istri Pemegang ITAS/ITAP",
+                "excerpt": "Visa tinggal terbatas bagi suami atau istri WNA yang mengikuti pasangan pemegang ITAS atau ITAP di Indonesia.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran.",
+                    "Sebagai penyedia layanan yang menekankan aspek legalitas serta kepatuhan hukum, kami memahami bahwa pengurusan izin Tinggal Keluarga Tenaga Kerja Asing, melibatkan berbagai tahap persiapan dokumen, proses verifikasi, penerbitan izin tinggal, hingga penerbitan izin akhir. Dengan mempercayakan proses ini kepada kami, Anda dapat menghindari kendala administratif serta memastikan bahwa keluarga tenaga kerja asing dapat tinggal di Indonesia secara resmi tanpa kendala.",
+                    "Layanan kami dirancang untuk memberikan solusi lengkap, profesional, dan terpercaya bagi perusahaan maupun individu yang memerlukan pendampingan dalam pengurusan Izin Tinggal Keluarga Tenaga Kerja Asing Baru."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP)",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E31C",
+                "nama": "VISA Keluarga Anak Hasil Perkawinan Sah WNA–WNI",
+                "excerpt": "Visa tinggal terbatas bagi anak yang lahir dari perkawinan sah antara WNA dan WNI.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP)",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E31D",
+                "nama": "VISA Keluarga Anak Bawaan WNA Perkawinan Sah WNA–WNI",
+                "excerpt": "Visa tinggal terbatas bagi anak bawaan WNA dalam perkawinan sah WNA yang ikut menetap di Indonesia.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP)",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E31E",
+                "nama": "VISA Keluarga Anak Pemegang ITAS/ITAP",
+                "excerpt": "Visa tinggal terbatas bagi anak WNA yang mengikuti orang tua pemegang ITAS atau ITAP di Indonesia.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP)",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E31F",
+                "nama": "VISA Keluarga Anak dengan Orang Tua WNI",
+                "excerpt": "Visa tinggal terbatas bagi anak WNA yang memiliki orang tua berkewarganegaraan Indonesia.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP)",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E31G",
+                "nama": "VISA Keluarga Orang Tua dari Anak WNI",
+                "excerpt": "Visa tinggal terbatas bagi orang tua WNA yang memiliki anak berkewarganegaraan Indonesia.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP)",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E31H",
+                "nama": "VISA Keluarga Orang Tua dari Anak Pemegang ITAS/ITAP",
+                "excerpt": "Visa tinggal terbatas bagi orang tua WNA yang mengikuti anak pemegang ITAS atau ITAP di Indonesia.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan mulai dari persiapan dokumen hingga penerbitan izin dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP)",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E31I",
+                "nama": "VISA Keluarga Anak yang Bergabung dengan Saudara Kandung Pemegang ITAS/ITAP",
+                "excerpt": "Visa tinggal terbatas bagi anak WNA yang bergabung bersama saudara kandung pemegang ITAS atau ITAP di Indonesia.",
+                "harga": "Rp 9.050.000",
+                "penjelasan_layanan": [
+                    "Jika Tenaga Kerja Asing (TKA) memiliki rencana untuk membawa keluarga ke Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan Perizinan Izin Tinggal Keluarga Tenaga Kerja Asing Baru, kami siap memberikan pendampingan mulai dari penyusunan Visa Izin Tinggal Terbatas hingga pengurusan Izin Tinggal Terbatas (ITAS).",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai TKA yang akan berencana untuk membawa keluarga ke Indonesia. Dengan dukungan tim profesional berpengalaman, setiap tahapan — mulai dari persiapan dokumen hingga penerbitan izin — dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait izin tenaga kerja asing berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit",
+                            "Surat Keterangan Tempat Tinggal (SKTT)",
+                            "Tanda Terima Keterangan Orang Asing"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu Keluarga Tenaga Kerja Asing",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Akta Perkawinan (dalam bahasa Inggris)",
+                            "Akta Lahir Anak (dalam bahasa Inggris)",
+                            "Asuransi Kesehatan yang masih berlaku dan aktif",
+                            "Surat/Formulir permohonan yang telah dilengkapi oleh Tanda Tangan, Materai Rp 10.000, Cap stample perusahaan"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP)",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 9.050.000"
+                },
+                "dasar_hukum": [
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            }
+        ],
+        "faq": []
+    },
+    {
+        "id": 5,
+        "name": "Visa Repatriasi Dan Keturunan EX-WNI",
+        "price": "12750000",
+        "price_label": "Rp 12.750.000",
+        "excerpt": "Pengurusan visa repatriasi bagi eks-Warga Negara Indonesia (WNI) yang ingin kembali tinggal atau menetap di Indonesia.",
+        "detail_path": "/visa-indonesia/5",
+        "image": "",
+        "penjelasan_umum": [
+            "Kehilangan status kewarganegaraan Indonesia tidak selalu berkorelasi dengan hilangnya keterikatan seseorang terhadap tanah air. Pemerintah Indonesia membuka jalur visa repatriasi sebagai bentuk pengakuan atas hubungan historis eks-WNI dengan Indonesia, memberikan kemudahan bagi mereka yang ingin kembali tinggal maupun menetap kembali di tanah kelahirannya. Visa ini memberikan status keimigrasian yang jelas bagi pemohon dengan pilihan masa tinggal 1 hingga 2 tahun yang dapat berlanjut ke jenjang izin tinggal lain sesuai kebutuhan dan preferensi masing-masing individu."
+        ],
+        "index_list": [
+            {
+                "kode": "E32C",
+                "nama": "VISA Repatriasi 2 Tahun",
+                "excerpt": "Visa tinggal terbatas 2 tahun bagi eks-WNI yang ingin kembali menetap di Indonesia.",
+                "harga": "Rp 8.500.000",
+                "penjelasan_layanan": [
+                    "Bila Anda adalah eks-Warga Negara Indonesia (WNI) dan berencana untuk tinggal di Indonesia untuk jangka waktu tertentu, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan pengurusan Visa Repatriasi, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa Repatriasi 2 Tahun merupakan Visa Tinggal Terbatas yang diberikan kepada eks-WNI dengan izin tinggal yang dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai dengan ketentuan yang berlaku."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit 2 Tahun"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu EKS-WNI",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Daftar Riwayat Hidup/Curriculum Vitae (CV) dilengkapi dengan materai Rp 10.000 dan ditandatangani",
+                            "Softcopy Rekaman Perjalanan",
+                            "Softcopy Pas Photo dengan latar belakang bebas",
+                            "Softcopy pernyataan komitmen bahwa pemohon akan membuat perencanaan investasi, saham perusahaan patuh di Indonesia, atau menyetorkan dana wajib di bank minimal setara dengan US$25.000 (dua puluh lima ribu dollar AS)",
+                            "Dokumen yang menerangkan bahwa pemohon pernah menjadi warga negara Indonesia, antara lain: Kartu Tanda Penduduk, Kartu Keluarga, Akta Kelahiran, Paspor Republik Indonesia, Surat Keterangan Lahir/Ijazah"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP) 2 Tahun",
+                            "amount": "Rp. 8.500.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 12.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E32D",
+                "nama": "VISA Repatriasi 1 Tahun",
+                "excerpt": "Visa tinggal terbatas 1 tahun bagi eks-WNI yang ingin sementara menetap di Indonesia.",
+                "harga": "Rp 6.000.000",
+                "penjelasan_layanan": [
+                    "Bila Anda adalah eks-Warga Negara Indonesia (WNI) dan berencana untuk tinggal di Indonesia untuk jangka waktu tertentu, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan pengurusan Visa Repatriasi, kami menyediakan pendampingan profesional guna mendukung proses pengajuan visa secara tepat, efisien, dan sesuai dengan regulasi terkini.",
+                    "Visa Repatriasi 1 Tahun merupakan Visa Tinggal Terbatas yang diberikan kepada eks-WNI dengan izin tinggal yang dapat dikonversikan menjadi Izin Tinggal Terbatas sesuai dengan ketentuan yang berlaku."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit 1 Tahun"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu EKS-WNI",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Daftar Riwayat Hidup/Curriculum Vitae (CV) dilengkapi dengan materai Rp 10.000 dan ditandatangani",
+                            "Softcopy Rekaman Perjalanan",
+                            "Softcopy Pas Photo dengan latar belakang bebas",
+                            "Softcopy pernyataan komitmen bahwa pemohon akan membuat perencanaan investasi, saham perusahaan patuh di Indonesia, atau menyetorkan dana wajib di bank minimal setara dengan US$25.000 (dua puluh lima ribu dollar AS)",
+                            "Dokumen yang menerangkan bahwa pemohon pernah menjadi warga negara Indonesia, antara lain: Kartu Tanda Penduduk, Kartu Keluarga, Akta Kelahiran, Paspor Republik Indonesia, Surat Keterangan Lahir/Ijazah"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (ITAS, ITAS dan MERP) 1 Tahun",
+                            "amount": "Rp. 6.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 10.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013",
+                    "Peraturan Pemerintah Nomor 45 Tahun 2024 tentang Tarif PNBP di Lingkungan Kementerian Hukum dan HAM RI",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 11 Tahun 2024 tentang Visa dan Izin Tinggal",
+                    "Peraturan Menteri Hukum dan HAM RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan Nomor M-IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 9/PMK.02/2022 tentang Jenis dan Tarif PNBP Kebutuhan Mendesak atas Pelayanan Keimigrasian yang berlaku pada Kementerian Hukum RI",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            }
+        ],
+        "faq": []
+    },
+    {
+        "id": 6,
+        "name": "Visa Rumah Kedua",
+        "price": "19750000",
+        "price_label": "Rp 19.750.000",
+        "excerpt": "Pengurusan Visa Rumah Kedua (Golden Visa) bagi WNA berkualifikasi tinggi yang ingin menetap jangka panjang di Indonesia.",
+        "detail_path": "/visa-indonesia/6",
+        "image": "",
+        "penjelasan_umum": [
+            "Indonesia semakin menjadi pilihan WNA untuk menetap jangka panjang — baik karena alasan gaya hidup, iklim usaha, maupun kolaborasi budaya. Program Visa Rumah Kedua hadir sebagai jalur tinggal jangka panjang yang dirancang khusus bagi WNA berkualifikasi tinggi, mulai dari lansia yang ingin beraktivitas hingga investor dari sektor properti di Indonesia. Dengan masa tinggal yang lebih panjang dibanding visa pada umumnya, program ini memberikan fleksibilitas dan kepastian hukum bagi pemegangnya untuk beraktivitas, menetap, dan berkarya di Indonesia."
+        ],
+        "index_list": [
+            {
+                "kode": "E33",
+                "nama": "VISA Rumah Kedua Golden Visa",
+                "excerpt": "Visa tinggal jangka panjang bagi WNA yang ingin memiliki kontribusi terhadap sektor properti di Indonesia.",
+                "harga": "Rp 19.750.000",
+                "penjelasan_layanan": [
+                    "Jika Anda berencana tinggal dan menetap dalam jangka panjang di Indonesia, baik perorangan maupun keluarga, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan pengurusan Visa Rumah Kedua, kami siap memberikan pendampingan mulai dari penyusunan hingga penerbitan izin tinggal jangka panjang.",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai izin tinggal jangka panjang bagi WNA. Dengan dukungan tim profesional berpengalaman, setiap tahapan — mulai dari persiapan dokumen hingga penerbitan izin — dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait Visa Rumah Kedua berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit 5 Tahun"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Daftar Riwayat Hidup/Curriculum Vitae (CV) dilengkapi dengan materai Rp 10.000 dan ditandatangani",
+                            "Softcopy Rekaman Perjalanan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Softcopy pernyataan komitmen bahwa pemohon akan menempatkan dana investasi sebesar USD 350.000 (tiga ratus lima puluh ribu dollar Amerika Serikat) dalam bentuk deposito perbankan di Indonesia",
+                            "Dokumen pendukung lainnya sesuai ketentuan yang berlaku"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (VITAS, ITAS dan MERP) 5 Tahun",
+                            "amount": "Rp. 13.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 19.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah terakhir dengan Undang-Undang Nomor 63 Tahun 2024 tentang Perubahan Ketiga Atas Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah beberapa kali terakhir dengan Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Perubahan Keempat Atas Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Republik Indonesia Nomor 45 Tahun 2024 tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Kementerian Hukum dan Hak Asasi Manusia",
+                    "Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal sebagaimana telah diubah dengan Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 11 Tahun 2024 tentang Perubahan Atas Peraturan Menteri Hukum dan Hak Asasi Manusia Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E33A",
+                "nama": "VISA Rumah Kedua Tenaga Ahli Undangan Pemerintah Golden Visa",
+                "excerpt": "Visa jangka panjang bagi tenaga ahli WNA yang diundang secara resmi oleh pemerintah Indonesia.",
+                "harga": "Rp 19.750.000",
+                "penjelasan_layanan": [
+                    "Jika Anda adalah tenaga ahli WNA yang diundang secara resmi oleh Instansi Pemerintah Indonesia untuk berkontribusi dalam jangka panjang, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan pengurusan Visa Rumah Kedua, kami siap memberikan pendampingan mulai dari penyusunan hingga penerbitan izin tinggal jangka panjang.",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai izin tinggal jangka panjang bagi WNA. Dengan dukungan tim profesional berpengalaman, setiap tahapan — mulai dari persiapan dokumen hingga penerbitan izin — dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait Visa Rumah Kedua berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit 5 Tahun"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Daftar Riwayat Hidup/Curriculum Vitae (CV) dilengkapi dengan materai Rp 10.000 dan ditandatangani",
+                            "Softcopy Rekaman Perjalanan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Softcopy pernyataan komitmen bahwa pemohon merupakan tenaga ahli yang diundang secara resmi oleh Instansi Pemerintah Indonesia",
+                            "Surat Undangan resmi dari Instansi/Kementerian/Lembaga Pemerintah Indonesia"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (VITAS, ITAS dan MERP) 5 Tahun",
+                            "amount": "Rp. 15.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 19.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah terakhir dengan Undang-Undang Nomor 63 Tahun 2024 tentang Perubahan Ketiga Atas Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah beberapa kali terakhir dengan Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Perubahan Keempat Atas Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Republik Indonesia Nomor 45 Tahun 2024 tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Kementerian Hukum dan Hak Asasi Manusia",
+                    "Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal sebagaimana telah diubah dengan Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 11 Tahun 2024 tentang Perubahan Atas Peraturan Menteri Hukum dan Hak Asasi Manusia Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E33C",
+                "nama": "VISA Rumah Kedua Tokoh Dunia Undangan Pemerintah Golden Visa",
+                "excerpt": "Visa jangka panjang bagi tokoh dunia yang berkontribusi secara global bagi Indonesia dan diundang oleh pemerintah.",
+                "harga": "Rp 19.750.000",
+                "penjelasan_layanan": [
+                    "Jika Anda adalah tokoh dunia yang diundang secara resmi oleh Instansi Pemerintah Indonesia atas kontribusi global Anda, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan pengurusan Visa Rumah Kedua, kami siap memberikan pendampingan mulai dari penyusunan hingga penerbitan izin tinggal jangka panjang.",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai izin tinggal jangka panjang bagi WNA. Dengan dukungan tim profesional berpengalaman, setiap tahapan — mulai dari persiapan dokumen hingga penerbitan izin — dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait Visa Rumah Kedua berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit 5 Tahun"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Daftar Riwayat Hidup/Curriculum Vitae (CV) dilengkapi dengan materai Rp 10.000 dan ditandatangani",
+                            "Softcopy Rekaman Perjalanan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Softcopy bukti reputasi dan kontribusi global (penghargaan, publikasi, atau rekam jejak internasional)",
+                            "Surat Undangan resmi dari Instansi/Kementerian/Lembaga Pemerintah Indonesia"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (VITAS, ITAS dan MERP) 5 Tahun",
+                            "amount": "Rp. 15.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 19.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah terakhir dengan Undang-Undang Nomor 63 Tahun 2024 tentang Perubahan Ketiga Atas Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah beberapa kali terakhir dengan Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Perubahan Keempat Atas Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Republik Indonesia Nomor 45 Tahun 2024 tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Kementerian Hukum dan Hak Asasi Manusia",
+                    "Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal sebagaimana telah diubah dengan Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 11 Tahun 2024 tentang Perubahan Atas Peraturan Menteri Hukum dan Hak Asasi Manusia Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E33D",
+                "nama": "VISA Rumah Kedua Tokoh Dunia Pendirian Perusahaan",
+                "excerpt": "Visa jangka panjang bagi tokoh dunia yang memiliki kontribusi bagi pendirian perusahaan di Indonesia.",
+                "harga": "Rp 19.750.000",
+                "penjelasan_layanan": [
+                    "Jika Anda adalah tokoh dunia yang berencana mendirikan perusahaan di Indonesia sebagai bentuk kontribusi jangka panjang, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan pengurusan Visa Rumah Kedua, kami siap memberikan pendampingan mulai dari penyusunan hingga penerbitan izin tinggal jangka panjang.",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai izin tinggal jangka panjang bagi WNA. Dengan dukungan tim profesional berpengalaman, setiap tahapan — mulai dari persiapan dokumen hingga penerbitan izin — dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait Visa Rumah Kedua berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit 5 Tahun"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Daftar Riwayat Hidup/Curriculum Vitae (CV) dilengkapi dengan materai Rp 10.000 dan ditandatangani",
+                            "Softcopy Rekaman Perjalanan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Softcopy bukti reputasi dan kontribusi global (penghargaan, publikasi, atau rekam jejak internasional)",
+                            "Akta Pendirian Perusahaan di Indonesia beserta bukti penyertaan modal"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (VITAS, ITAS dan MERP) 5 Tahun",
+                            "amount": "Rp. 15.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 19.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah terakhir dengan Undang-Undang Nomor 63 Tahun 2024 tentang Perubahan Ketiga Atas Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah beberapa kali terakhir dengan Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Perubahan Keempat Atas Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Republik Indonesia Nomor 45 Tahun 2024 tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Kementerian Hukum dan Hak Asasi Manusia",
+                    "Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal sebagaimana telah diubah dengan Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 11 Tahun 2024 tentang Perubahan Atas Peraturan Menteri Hukum dan Hak Asasi Manusia Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            },
+            {
+                "kode": "E33E",
+                "nama": "VISA Rumah Kedua Lansia untuk 5 Tahun Golden Visa",
+                "excerpt": "Visa jangka panjang bagi lansia WNA untuk 5 tahun yang ingin menetap dan beraktivitas di Indonesia.",
+                "harga": "Rp 19.750.000",
+                "penjelasan_layanan": [
+                    "Jika Anda adalah lansia WNA yang berencana menetap dan beraktivitas dalam jangka panjang di Indonesia, memastikan seluruh perizinan berjalan sesuai ketentuan adalah hal yang krusial. Melalui layanan pengurusan Visa Rumah Kedua, kami siap memberikan pendampingan mulai dari penyusunan hingga penerbitan izin tinggal jangka panjang.",
+                    "Proses pengajuan izin ini membutuhkan tenaga ahli yang memahami regulasi dan kebijakan terkini mengenai izin tinggal jangka panjang bagi WNA. Dengan dukungan tim profesional berpengalaman, setiap tahapan — mulai dari persiapan dokumen hingga penerbitan izin — dapat diselesaikan secara legal, aman, dan sesuai peraturan yang berlaku. Hal ini memastikan seluruh administrasi terkait Visa Rumah Kedua berjalan lebih efisien dan tepat sasaran."
+                ],
+                "dokumen_diperlukan": [
+                    {
+                        "label": "Dokumen Legalitas",
+                        "items": [
+                            "Kode Billing Pembayaran Penerimaan Negara Bukan Pajak Untuk Visa Izin Tinggal Terbatas, Izin Tinggal Terbatas Dan Multiple Exit Re-Entry Permit",
+                            "Visa Tinggal Terbatas - Elektronik",
+                            "Izin Tinggal Terbatas + Multiple Exit Re-Entry Permit 5 Tahun"
+                        ]
+                    },
+                    {
+                        "label": "Termasuk",
+                        "items": [
+                            "Fasttrack Document Delivery Service",
+                            "Fasttrack Digital Files Secure Storage",
+                            "Fasttrack Kit"
+                        ]
+                    }
+                ],
+                "persyaratan_dokumen": [
+                    {
+                        "label": "Dokumen Individu",
+                        "items": [
+                            "Scancopy seluruh halaman Paspor dengan masa berlaku minimal 20 (dua puluh) bulan",
+                            "Daftar Riwayat Hidup/Curriculum Vitae (CV) dilengkapi dengan materai Rp 10.000 dan ditandatangani",
+                            "Softcopy Rekaman Perjalanan",
+                            "Softcopy Pas Photo dengan background bebas",
+                            "Softcopy pernyataan komitmen bahwa pemohon akan menempatkan dana investasi sebesar USD 350.000 (tiga ratus lima puluh ribu dollar Amerika Serikat) dalam bentuk deposito perbankan di Indonesia",
+                            "Bukti usia minimal 60 (enam puluh) tahun"
+                        ]
+                    }
+                ],
+                "rincian_biaya": {
+                    "label": "PNBP (Biaya Negara)",
+                    "items": [
+                        {
+                            "label": "PNBP (VITAS, ITAS dan MERP) 5 Tahun",
+                            "amount": "Rp. 13.000.000"
+                        }
+                    ],
+                    "note": "*Pungutan resmi negara, dibayarkan sesuai tarif yang berlaku.",
+                    "biaya_penanganan": "Rp. 19.750.000"
+                },
+                "dasar_hukum": [
+                    "Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah terakhir dengan Undang-Undang Nomor 63 Tahun 2024 tentang Perubahan Ketiga Atas Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian sebagaimana telah diubah beberapa kali terakhir dengan Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Perubahan Keempat Atas Peraturan Pemerintah Nomor 31 Tahun 2013 tentang Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2011 tentang Keimigrasian",
+                    "Peraturan Pemerintah Republik Indonesia Nomor 45 Tahun 2024 tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Kementerian Hukum dan Hak Asasi Manusia",
+                    "Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal sebagaimana telah diubah dengan Peraturan Menteri Hukum dan Hak Asasi Manusia RI Nomor 11 Tahun 2024 tentang Perubahan Atas Peraturan Menteri Hukum dan Hak Asasi Manusia Nomor 22 Tahun 2023 tentang Visa dan Izin Tinggal",
+                    "Keputusan Menteri Imigrasi dan Pemasyarakatan RI Nomor M.IP-08.GR.01.01 Tahun 2025 tentang Klasifikasi Visa",
+                    "Peraturan Menteri Keuangan RI Nomor 82 Tahun 2023 tentang Jenis dan Tarif atas Jenis PNBP Kebutuhan Mendesak atas Pelayanan Golden Visa yang berlaku pada Kementerian Hukum RI"
+                ]
+            }
+        ],
+        "faq": []
     }
 ]

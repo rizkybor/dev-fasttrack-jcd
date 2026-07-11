@@ -38,14 +38,6 @@ export default {
         },
         {
             id: "3",
-            title: "Work Visa",
-            description:
-                "Visa for foreign workers who will officially work at a company or project in Indonesia.",
-            price: "Rp 3.500.000",
-            packages: "18 Packages",
-        },
-        {
-            id: "4",
             title: "Investor Visa",
             description:
                 "Visa for foreign investors investing capital or establishing a business in Indonesia.",
@@ -53,7 +45,7 @@ export default {
             packages: "8 Packages",
         },
         {
-            id: "5",
+            id: "4",
             title: "Family Visa",
             description:
                 "Visa for family members accompanying a husband, wife, or parent who holds a stay permit in Indonesia.",
@@ -61,7 +53,7 @@ export default {
             packages: "10 Packages",
         },
         {
-            id: "6",
+            id: "5",
             title: "Repatriation Visa for Former Indonesian Citizens and Their Descendants",
             description:
                 "Visa for former Indonesian citizens and their descendants who wish to return to or reside in Indonesia.",
@@ -69,7 +61,7 @@ export default {
             packages: "9 Packages",
         },
         {
-            id: "7",
+            id: "6",
             title: "Second Home Visa",
             description:
                 "Visa for foreign nationals who wish to have a second, long-term residence in Indonesia.",

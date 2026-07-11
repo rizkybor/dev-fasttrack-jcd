@@ -239,20 +239,20 @@ export function useServiceCategories() {
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
-                        title: "Visa Kerja",
-                        description:
-                            "Visa bagi tenaga kerja asing yang akan bekerja secara resmi di perusahaan atau proyek di Indonesia.",
-                        price: "Rp 3.500.000",
-                        packages: "18 Paket",
-                        path: "/visa-indonesia/3",
-                        icon: "/icons/ic-card-4.svg",
-                    },
-                    {
                         title: "Visa Investor",
                         description:
                             "Visa bagi investor asing yang menanamkan modal atau mendirikan usaha di Indonesia.",
                         price: "Rp 3.000.000",
                         packages: "8 Paket",
+                        path: "/visa-indonesia/3",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Visa Keluarga",
+                        description:
+                            "Visa bagi anggota keluarga yang mengikuti suami, istri, atau orang tua pemegang izin tinggal di Indonesia.",
+                        price: "Rp 750.000",
+                        packages: "10 Paket",
                         path: "/visa-indonesia/4",
                         icon: "/icons/ic-card-4.svg",
                     },
@@ -577,20 +577,20 @@ export function useServiceCategories() {
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
-                        title: "Work Visa",
-                        description:
-                            "Visa for foreign workers who will officially work at a company or project in Indonesia.",
-                        price: "Rp 3.500.000",
-                        packages: "18 Packages",
-                        path: "/visa-indonesia/3",
-                        icon: "/icons/ic-card-4.svg",
-                    },
-                    {
                         title: "Investor Visa",
                         description:
                             "Visa for foreign investors investing capital or establishing a business in Indonesia.",
                         price: "Rp 3.000.000",
                         packages: "8 Packages",
+                        path: "/visa-indonesia/3",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "Family Visa",
+                        description:
+                            "VA visa for family members accompanying a spouse or parent who holds a residence permit in Indonesia.",
+                        price: "Rp 750.000",
+                        packages: "10 Packages",
                         path: "/visa-indonesia/4",
                         icon: "/icons/ic-card-4.svg",
                     },
@@ -909,20 +909,20 @@ export function useServiceCategories() {
                         icon: "/icons/ic-card-4.svg",
                     },
                     {
-                        title: "工作签证",
-                        description:
-                            "供将在印尼公司或项目正式工作的外籍劳工使用的签证。",
-                        price: "Rp 3.500.000",
-                        packages: "18个套餐",
-                        path: "/visa-indonesia/3",
-                        icon: "/icons/ic-card-4.svg",
-                    },
-                    {
-                        title: "投资者签证",
+                       title: "投资者签证",
                         description:
                             "供在印尼投资或设立企业的外国投资者使用的签证。",
                         price: "Rp 3.000.000",
                         packages: "8个套餐",
+                        path: "/visa-indonesia/3",
+                        icon: "/icons/ic-card-4.svg",
+                    },
+                    {
+                        title: "家庭签证",
+                        description:
+                            "供陪同在印尼持有居留许可的配偶或父母的家庭成员使用的签证。",
+                        price: "Rp 750.000",
+                        packages: "10个套餐",
                         path: "/visa-indonesia/4",
                         icon: "/icons/ic-card-4.svg",
                     },
