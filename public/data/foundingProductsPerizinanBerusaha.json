@@ -1,470 +1,97 @@
 [
     {
-        "id": 1,
-        "name": {
-            "id": "Kesesuaian Kegiatan Pemanfaatan Ruang",
-            "en": "Spatial Utilization Activity Conformity",
-            "zh": "空间利用活动符合性"
-        },
-        "tag": {
-            "id": "Perizinan Dasar",
-            "en": "Basic Licensing",
-            "zh": "基础许可"
-        },
-        "price": "0",
-        "price_label": "Hubungi Kami",
-        "excerpt": {
-            "id": "Perizinan dasar sebagai syarat awal operasional usaha, mencakup kesesuaian tata ruang, lingkungan, dan bangunan.",
-            "en": "Basic licensing as an initial requirement for business operations, covering spatial planning, environmental, and building conformity.",
-            "zh": "作为经营运作初始条件的基础许可，涵盖空间规划、环境及建筑符合性。"
-        },
-        "detail_path": "/perizinan-berusaha/1",
-        "image": "",
-        "penjelasan_umum": {
-            "id": [
-                "Kesesuaian Kegiatan Pemanfaatan Ruang (KKPR) adalah dokumen yang membuktikan bahwa rencana kegiatan usaha telah sesuai dengan rencana tata ruang wilayah yang berlaku. KKPR menjadi salah satu syarat dasar sebelum Pelaku Usaha dapat melanjutkan proses perizinan berusaha lainnya melalui sistem OSS.",
-                "Catatan: konten pada halaman ini masih berupa data dummy/placeholder dan akan diperbarui dengan materi final."
+    "id": 1,
+    "name": "Perizinan Dasar",
+    "price": null,
+    "price_label": "Hubungi Kami",
+    "excerpt": "Pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional di Indonesia.",
+    "detail_path": "/perizinan-dasar-dan-perizinan-berusaha/1",
+    "image": "",
+    "penjelasan_umum": [
+        "Layanan pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional, mencakup kesesuaian tata ruang, perizinan lingkungan, persetujuan bangunan gedung, hingga sertifikat laik fungsi. Seluruh proses dilakukan sesuai ketentuan Perizinan Berusaha Berbasis Risiko melalui sistem OSS."
+    ],
+    "jenis_layanan": [
+        {
+            "kode": "kkpr",
+            "nama": "Kesesuaian Kegiatan Pemanfaatan Ruang (KKPR)",
+            "excerpt": "Pengurusan konfirmasi/persetujuan kesesuaian lokasi usaha dengan rencana tata ruang wilayah.",
+            "harga": "Hubungi Kami",
+            "penjelasan_layanan": [
+                "Konfirmasi Kegiatan Pemanfaatan Ruang (KKPR) adalah kesesuaian antara rencana kegiatan pemanfaatan ruang dengan rencana tata ruang yang harus dimiliki oleh Pelaku Usaha untuk dapat memperoleh Perizinan Berusaha (kecuali diatur lain oleh Pemerintah), pelaksanaan pemeriksaan lokasi dapat dilakukan di darat, meliputi:"
             ],
-            "en": [
-                "Spatial Utilization Activity Conformity (KKPR) is a document proving that a planned business activity conforms to the applicable regional spatial plan. KKPR is a basic requirement before a Business Actor can proceed with other business licensing processes through the OSS system.",
-                "Note: the content on this page is still dummy/placeholder data and will be updated with final material."
-            ],
-            "zh": [
-                "空间利用活动符合性（KKPR）是证明拟议经营活动符合现行区域空间规划的文件。在经营者通过OSS系统办理其他营业许可之前，KKPR是必须满足的基本条件之一。",
-                "备注：本页面内容目前仍为占位示例数据，后续将更新为正式内容。"
-            ]
-        },
-        "fungsi_strategis": {
-            "title": {
-                "id": "FUNGSI KKPR",
-                "en": "FUNCTIONS OF KKPR",
-                "zh": "KKPR的功能"
-            },
-            "items": {
-                "id": [
-                    "Dasar kesesuaian lokasi usaha dengan tata ruang wilayah;",
-                    "Syarat penerbitan Persetujuan Lingkungan;",
-                    "Syarat pengurusan Persetujuan Bangunan Gedung (PBG)."
-                ],
-                "en": [
-                    "Basis for the conformity of the business location with the regional spatial plan;",
-                    "Requirement for the issuance of Environmental Approval;",
-                    "Requirement for processing the Building Approval (PBG)."
-                ],
-                "zh": [
-                    "作为经营场所与区域空间规划相符的依据；",
-                    "颁发环境批准的必要条件；",
-                    "办理建筑批准（PBG）的必要条件。"
-                ]
-            },
-            "note": {
-                "id": "Data di atas merupakan contoh sementara dan dapat berubah menyesuaikan regulasi terbaru.",
-                "en": "The information above is a temporary example and may change according to the latest regulations.",
-                "zh": "以上信息为临时示例，可能根据最新法规而变化。"
-            }
-        },
-        "dokumen_didapat": {
-            "id": [
-                "Dokumen Konfirmasi KKPR",
-                "Peta Kesesuaian Pemanfaatan Ruang"
-            ],
-            "en": [
-                "KKPR Confirmation Document",
-                "Spatial Utilization Conformity Map"
-            ],
-            "zh": [
-                "KKPR确认文件",
-                "空间利用符合性地图"
-            ]
-        },
-        "syarat": {
-            "sections": [
+            "sub_layanan": [
                 {
-                    "label": {
-                        "id": "A. Dokumen Perusahaan",
-                        "en": "A. Company Documents",
-                        "zh": "甲、公司文件"
-                    },
-                    "groups": [
-                        {
-                            "notes": {
-                                "id": [
-                                    "Nomor Induk Berusaha (NIB).",
-                                    "Titik koordinat lokasi usaha.",
-                                    "Bukti penguasaan lahan/bangunan."
-                                ],
-                                "en": [
-                                    "Business Identification Number (NIB).",
-                                    "Coordinates of the business location.",
-                                    "Proof of land/building ownership or control."
-                                ],
-                                "zh": [
-                                    "营业识别码（NIB）。",
-                                    "经营场所坐标点。",
-                                    "土地/建筑物权属或使用证明。"
-                                ]
-                            }
-                        }
+                    "label": "A. Konfirmasi KKPR",
+                    "desc": "Diberikan berdasarkan kesesuaian rencana lokasi kegiatan pemanfaatan ruang dengan RDTR yang telah terintegrasi dengan Sistem OSS dan diterbitkan secara otomatis oleh Lembaga OSS melalui Sistem OSS."
+                },
+                {
+                    "label": "B. Persetujuan KKPR",
+                    "desc": "Diberikan dalam hal RDTR belum tersedia, dilakukan dengan tahapan:",
+                    "steps": [
+                        "Pendaftaran",
+                        "Pemeriksaan dokumen usulan kegiatan pemanfaatan ruang",
+                        "Penilaian dokumen usulan kegiatan pemanfaatan ruang",
+                        "Penerbitan persetujuan KKPR"
                     ]
                 }
-            ]
-        },
-        "rincian_biaya": {
-            "items": {
-                "id": [{ "label": "Biaya layanan konsultasi & pengurusan", "amount": "Hubungi Kami" }],
-                "en": [{ "label": "Consultation & processing service fee", "amount": "Contact Us" }],
-                "zh": [{ "label": "咨询及办理服务费", "amount": "请联系我们" }]
+            ],
+            "penjelasan_penutup": [
+                "Dengan pengalaman dalam layanan hukum, perizinan, dan kepatuhan korporasi, Fasttrack membantu usaha memperoleh KKPR secara efektif, tepat waktu, dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku."
+            ],
+            "rincian_biaya": {
+                "label": "Biaya Layanan",
+                "biaya_penanganan": "Hubungi Kami"
             },
-            "total_label": {
-                "id": "Kesesuaian Kegiatan Pemanfaatan Ruang",
-                "en": "Spatial Utilization Activity Conformity",
-                "zh": "空间利用活动符合性"
+            "dasar_hukum": [
+                "Undang-Undang Nomor 26 Tahun 2007 tentang Penataan Ruang sebagaimana telah diubah",
+                "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
+                "Peraturan Pemerintah Nomor 21 Tahun 2021 tentang Penyelenggaraan Penataan Ruang",
+                "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko"
+            ]
+        },
+        {
+            "kode": "lingkungan",
+            "nama": "Perizinan Lingkungan",
+            "excerpt": "Pengurusan dokumen lingkungan hidup sebagai syarat perizinan usaha sesuai dampak kegiatan dan skala usaha.",
+            "harga": "Hubungi Kami",
+            "penjelasan_layanan": [],
+            "sub_layanan": [],
+            "penjelasan_penutup": [],
+            "rincian_biaya": {
+                "label": "Biaya Layanan",
+                "biaya_penanganan": "Hubungi Kami"
             },
-            "total_amount": "Hubungi Kami"
+            "dasar_hukum": []
         },
-        "dasar_hukum": {
-            "id": [
-                "Peraturan Pemerintah Nomor 21 Tahun 2021 tentang Penyelenggaraan Penataan Ruang.",
-                "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko."
-            ],
-            "en": [
-                "Government Regulation Number 21 of 2021 concerning the Implementation of Spatial Planning.",
-                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing."
-            ],
-            "zh": [
-                "《2021年第21号政府条例》——关于空间规划的实施。",
-                "《2025年第28号政府条例》——关于基于风险的营业许可实施。"
-            ]
+        {
+            "kode": "pbg",
+            "nama": "Persetujuan Bangunan Gedung (PBG)",
+            "excerpt": "Pengurusan persetujuan pembangunan atau renovasi gedung sesuai standar teknis dan tata ruang yang berlaku.",
+            "harga": "Hubungi Kami",
+            "penjelasan_layanan": [],
+            "sub_layanan": [],
+            "penjelasan_penutup": [],
+            "rincian_biaya": {
+                "label": "Biaya Layanan",
+                "biaya_penanganan": "Hubungi Kami"
+            },
+            "dasar_hukum": []
         },
-        "faq": {
-            "id": [
-                {
-                    "question": "Apakah KKPR wajib untuk semua jenis usaha?",
-                    "answer": "Pada umumnya wajib, namun ketentuan detail bergantung pada lokasi dan jenis kegiatan usaha. Konsultasikan dengan tim kami untuk kepastian lebih lanjut."
-                }
-            ],
-            "en": [
-                {
-                    "question": "Is KKPR mandatory for all types of businesses?",
-                    "answer": "Generally mandatory, but the detailed requirements depend on the location and type of business activity. Consult our team for further certainty."
-                }
-            ],
-            "zh": [
-                {
-                    "question": "所有类型的企业都必须办理KKPR吗？",
-                    "answer": "通常是必须的，但具体要求取决于经营场所及业务类型。请咨询我们的团队以获取进一步确认。"
-                }
-            ]
+        {
+            "kode": "slf",
+            "nama": "Sertifikat Laik Fungsi (SLF)",
+            "excerpt": "Pengurusan sertifikat yang menyatakan bangunan gedung telah memenuhi persyaratan laik fungsi secara teknis dan administratif.",
+            "harga": "Hubungi Kami",
+            "penjelasan_layanan": [],
+            "sub_layanan": [],
+            "penjelasan_penutup": [],
+            "rincian_biaya": {
+                "label": "Biaya Layanan",
+                "biaya_penanganan": "Hubungi Kami"
+            },
+            "dasar_hukum": []
         }
-    },
-    {
-        "id": 2,
-        "name": {
-            "id": "Perizinan Berusaha (Sertifikat Standar/Izin)",
-            "en": "Business Licensing (Standard Certificate/Permit)",
-            "zh": "营业许可（标准证书/许可证）"
-        },
-        "tag": {
-            "id": "Paling Diminati",
-            "en": "Most Popular",
-            "zh": "最受欢迎"
-        },
-        "price": "0",
-        "price_label": "Hubungi Kami",
-        "excerpt": {
-            "id": "Pengurusan sertifikat standar atau izin berusaha sesuai tingkat risiko kegiatan usaha melalui sistem OSS.",
-            "en": "Processing of standard certificates or business permits according to the risk level of business activities through the OSS system.",
-            "zh": "根据经营活动风险等级，通过OSS系统办理标准证书或营业许可。"
-        },
-        "detail_path": "/perizinan-berusaha/2",
-        "image": "",
-        "penjelasan_umum": {
-            "id": [
-                "Sertifikat Standar dan Izin merupakan bentuk perizinan berusaha yang diterbitkan berdasarkan tingkat risiko kegiatan usaha — menengah rendah, menengah tinggi, hingga tinggi — sesuai klasifikasi KBLI yang dipilih Pelaku Usaha pada sistem OSS.",
-                "Catatan: konten pada halaman ini masih berupa data dummy/placeholder dan akan diperbarui dengan materi final sesuai paket layanan yang tersedia."
-            ],
-            "en": [
-                "Standard Certificates and Permits are forms of business licensing issued based on the risk level of business activities — medium-low, medium-high, up to high — according to the KBLI classification selected by the Business Actor in the OSS system.",
-                "Note: the content on this page is still dummy/placeholder data and will be updated with final material according to the available service packages."
-            ],
-            "zh": [
-                "标准证书及许可证是依据经营活动风险等级——中低、中高至高风险——并根据经营者在OSS系统中所选择的KBLI分类而颁发的营业许可形式。",
-                "备注：本页面内容目前仍为占位示例数据，后续将根据可用服务套餐更新为正式内容。"
-            ]
-        },
-        "fungsi_strategis": {
-            "title": {
-                "id": "JENIS PERIZINAN BERUSAHA",
-                "en": "TYPES OF BUSINESS LICENSING",
-                "zh": "营业许可类型"
-            },
-            "items": {
-                "id": [
-                    "Sertifikat Standar (Risiko Menengah Rendah/Menengah Tinggi);",
-                    "Izin (Risiko Tinggi);",
-                    "Verifikasi/Pemenuhan Standar oleh Kementerian/Lembaga terkait (bila diperlukan)."
-                ],
-                "en": [
-                    "Standard Certificate (Medium-Low/Medium-High Risk);",
-                    "Permit (High Risk);",
-                    "Verification/Fulfillment of Standards by relevant Ministries/Institutions (if required)."
-                ],
-                "zh": [
-                    "标准证书（中低/中高风险）；",
-                    "许可证（高风险）；",
-                    "相关部委机构的验证/标准符合性审核（如需要）。"
-                ]
-            },
-            "note": {
-                "id": "11 paket layanan tersedia menyesuaikan bidang usaha dan tingkat risiko masing-masing Pelaku Usaha.",
-                "en": "11 service packages are available, adjusted to the business sector and risk level of each Business Actor.",
-                "zh": "提供11种服务套餐，可根据各经营者的行业及风险等级进行调整。"
-            }
-        },
-        "dokumen_didapat": {
-            "id": [
-                "Sertifikat Standar dan/atau Izin",
-                "NIB Terupdate dengan Perizinan Berusaha"
-            ],
-            "en": [
-                "Standard Certificate and/or Permit",
-                "Updated NIB with Business Licensing"
-            ],
-            "zh": [
-                "标准证书及/或许可证",
-                "更新后含营业许可的NIB"
-            ]
-        },
-        "syarat": {
-            "sections": [
-                {
-                    "label": {
-                        "id": "A. Dokumen Perusahaan",
-                        "en": "A. Company Documents",
-                        "zh": "甲、公司文件"
-                    },
-                    "groups": [
-                        {
-                            "notes": {
-                                "id": [
-                                    "Nomor Induk Berusaha (NIB) yang telah terverifikasi.",
-                                    "Dokumen KKPR/Persetujuan Lingkungan (sesuai tingkat risiko).",
-                                    "Data teknis kegiatan usaha sesuai KBLI terpilih."
-                                ],
-                                "en": [
-                                    "Verified Business Identification Number (NIB).",
-                                    "KKPR/Environmental Approval documents (according to risk level).",
-                                    "Technical data of the business activity according to the selected KBLI."
-                                ],
-                                "zh": [
-                                    "已验证的营业识别码（NIB）。",
-                                    "KKPR/环境批准文件（依风险等级而定）。",
-                                    "依所选KBLI分类的经营活动技术资料。"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        "rincian_biaya": {
-            "items": {
-                "id": [{ "label": "Biaya layanan konsultasi & pengurusan", "amount": "Hubungi Kami" }],
-                "en": [{ "label": "Consultation & processing service fee", "amount": "Contact Us" }],
-                "zh": [{ "label": "咨询及办理服务费", "amount": "请联系我们" }]
-            },
-            "total_label": {
-                "id": "Perizinan Berusaha (Sertifikat Standar/Izin)",
-                "en": "Business Licensing (Standard Certificate/Permit)",
-                "zh": "营业许可（标准证书/许可证）"
-            },
-            "total_amount": "Hubungi Kami"
-        },
-        "dasar_hukum": {
-            "id": [
-                "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko.",
-                "Peraturan Menteri Investasi dan Hilirisasi/Kepala BKPM Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko."
-            ],
-            "en": [
-                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing.",
-                "Regulation of the Minister of Investment and Downstream Industry/Head of BKPM Number 5 of 2025 concerning Guidelines and Procedures for the Implementation of Risk-Based Business Licensing."
-            ],
-            "zh": [
-                "《2025年第28号政府条例》——关于基于风险的营业许可实施。",
-                "《投资与产业下游发展部长/BKPM主席2025年第5号条例》——关于基于风险的营业许可实施指南与程序。"
-            ]
-        },
-        "faq": {
-            "id": [
-                {
-                    "question": "Bagaimana cara mengetahui paket mana yang sesuai untuk usaha saya?",
-                    "answer": "Tim Fasttrack akan membantu mengidentifikasi tingkat risiko dan paket yang sesuai berdasarkan KBLI dan skala usaha Anda melalui sesi konsultasi gratis."
-                }
-            ],
-            "en": [
-                {
-                    "question": "How do I know which package is right for my business?",
-                    "answer": "The Fasttrack team will help identify the risk level and appropriate package based on your KBLI and business scale through a free consultation session."
-                }
-            ],
-            "zh": [
-                {
-                    "question": "如何知道哪个套餐适合我的企业？",
-                    "answer": "Fasttrack团队将通过免费咨询会议，根据您的KBLI分类及经营规模协助确定风险等级及合适的套餐。"
-                }
-            ]
-        }
-    },
-    {
-        "id": 3,
-        "name": {
-            "id": "Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU)",
-            "en": "Business Licensing to Support Business Activities (PB UMKU)",
-            "zh": "支持经营活动的营业许可（PB UMKU）"
-        },
-        "tag": {
-            "id": "Profesional",
-            "en": "Professional",
-            "zh": "专业"
-        },
-        "price": "2000000",
-        "price_label": "Rp 2.000.000",
-        "excerpt": {
-            "id": "Pengurusan izin tambahan yang dibutuhkan untuk menunjang kegiatan usaha utama sesuai regulasi yang berlaku.",
-            "en": "Processing of additional permits required to support the main business activities in accordance with applicable regulations.",
-            "zh": "根据现行规定办理支持主要经营活动所需的附加许可。"
-        },
-        "detail_path": "/perizinan-berusaha/3",
-        "image": "",
-        "penjelasan_umum": {
-            "id": [
-                "Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU) adalah izin tambahan yang diperlukan agar kegiatan usaha dapat berjalan optimal, mencakup antara lain sertifikasi laik operasi, izin edar, hingga sertifikasi produk sesuai bidang usaha.",
-                "Catatan: konten pada halaman ini masih berupa data dummy/placeholder dan akan diperbarui dengan materi final."
-            ],
-            "en": [
-                "Business Licensing to Support Business Activities (PB UMKU) is an additional permit required for business activities to run optimally, including operational readiness certification, distribution permits, and product certification according to the business sector.",
-                "Note: the content on this page is still dummy/placeholder data and will be updated with final material."
-            ],
-            "zh": [
-                "支持经营活动的营业许可（PB UMKU）是使经营活动能够顺利运作所需的附加许可，包括运营合格认证、流通许可及依行业而定的产品认证等。",
-                "备注：本页面内容目前仍为占位示例数据，后续将更新为正式内容。"
-            ]
-        },
-        "fungsi_strategis": {
-            "title": {
-                "id": "CONTOH JENIS PB UMKU",
-                "en": "EXAMPLES OF PB UMKU TYPES",
-                "zh": "PB UMKU类型示例"
-            },
-            "items": {
-                "id": [
-                    "Sertifikat Laik Operasi/Fungsi;",
-                    "Izin Edar Produk;",
-                    "Sertifikasi Standar Nasional Indonesia (SNI), bila dipersyaratkan."
-                ],
-                "en": [
-                    "Operational/Functional Readiness Certificate;",
-                    "Product Distribution Permit;",
-                    "Indonesian National Standard (SNI) Certification, if required."
-                ],
-                "zh": [
-                    "运营/功能合格证书；",
-                    "产品流通许可；",
-                    "印尼国家标准（SNI）认证（如需要）。"
-                ]
-            },
-            "note": {
-                "id": "Jenis PB UMKU yang dibutuhkan berbeda-beda tergantung sektor dan KBLI usaha Anda.",
-                "en": "The type of PB UMKU required varies depending on your business sector and KBLI.",
-                "zh": "所需的PB UMKU类型因行业及KBLI分类而异。"
-            }
-        },
-        "dokumen_didapat": {
-            "id": [
-                "Dokumen/Sertifikat PB UMKU sesuai jenis yang diajukan"
-            ],
-            "en": [
-                "PB UMKU Document/Certificate according to the type applied for"
-            ],
-            "zh": [
-                "依申请类型颁发的PB UMKU文件/证书"
-            ]
-        },
-        "syarat": {
-            "sections": [
-                {
-                    "label": {
-                        "id": "A. Dokumen Perusahaan",
-                        "en": "A. Company Documents",
-                        "zh": "甲、公司文件"
-                    },
-                    "groups": [
-                        {
-                            "notes": {
-                                "id": [
-                                    "NIB dan Perizinan Dasar yang telah terbit.",
-                                    "Data teknis produk/kegiatan usaha yang membutuhkan PB UMKU.",
-                                    "Dokumen pendukung sesuai jenis PB UMKU yang diajukan."
-                                ],
-                                "en": [
-                                    "Issued NIB and Basic Licensing.",
-                                    "Technical data of the product/business activity requiring PB UMKU.",
-                                    "Supporting documents according to the type of PB UMKU applied for."
-                                ],
-                                "zh": [
-                                    "已颁发的NIB及基础许可。",
-                                    "需要PB UMKU的产品/经营活动技术资料。",
-                                    "依所申请PB UMKU类型提供的辅助文件。"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        "rincian_biaya": {
-            "items": {
-                "id": [{ "label": "Biaya layanan konsultasi & pengurusan PB UMKU", "amount": "Rp 2.000.000" }],
-                "en": [{ "label": "PB UMKU consultation & processing service fee", "amount": "Rp 2.000.000" }],
-                "zh": [{ "label": "PB UMKU咨询及办理服务费", "amount": "Rp 2.000.000" }]
-            },
-            "total_label": {
-                "id": "PB UMKU",
-                "en": "PB UMKU",
-                "zh": "PB UMKU"
-            },
-            "total_amount": "Rp 2.000.000"
-        },
-        "dasar_hukum": {
-            "id": [
-                "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko."
-            ],
-            "en": [
-                "Government Regulation Number 28 of 2025 concerning the Implementation of Risk-Based Business Licensing."
-            ],
-            "zh": [
-                "《2025年第28号政府条例》——关于基于风险的营业许可实施。"
-            ]
-        },
-        "faq": {
-            "id": [
-                {
-                    "question": "Apakah semua usaha membutuhkan PB UMKU?",
-                    "answer": "Tidak semua. PB UMKU hanya dibutuhkan untuk kegiatan usaha tertentu yang mempersyaratkan izin penunjang tambahan. Tim kami dapat membantu memastikan kebutuhan usaha Anda."
-                }
-            ],
-            "en": [
-                {
-                    "question": "Do all businesses need PB UMKU?",
-                    "answer": "Not all. PB UMKU is only required for certain business activities that require additional supporting permits. Our team can help confirm your business needs."
-                }
-            ],
-            "zh": [
-                {
-                    "question": "所有企业都需要办理PB UMKU吗？",
-                    "answer": "并非所有企业都需要。PB UMKU仅适用于需要额外支持许可的特定经营活动。我们的团队可协助确认您企业的具体需求。"
-                }
-            ]
-        }
-    }
+    ],
+    "faq": []
+}
 ]
