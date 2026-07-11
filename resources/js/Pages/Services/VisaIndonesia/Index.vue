@@ -12,19 +12,15 @@ const props = defineProps({
 
 const whatsappNumber = "6282298604144";
 
-// Icon & path tidak perlu ditranslasi, tetap di sini
-const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/visa-indonesia" },
-    { icon: "/icons/ft-persons-w.svg", path: "/visa-indonesia" },
-    { icon: "/icons/ft-persons-w.svg", path: "/visa-indonesia" },
-];
+// Icon tidak perlu ditranslasi, sama untuk semua item
+const itemIcon = "/icons/ft-persons-w.svg";
 
-// Merge data locale (title, desc, price, packages) + meta (icon, path)
+// Merge data locale (title, desc, price, packages) + path ke halaman detail
 const serviceList = computed(() =>
-    tm("services.visaIndonesia.list").map((item, i) => ({
+    tm("services.visaIndonesia.list").map((item) => ({
         ...item,
-        icon: itemMeta[i].icon,
-        path: itemMeta[i].path,
+        icon: itemIcon,
+        path: `/visa-indonesia/${item.id}`,
     })),
 );
 

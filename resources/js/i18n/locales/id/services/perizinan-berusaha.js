@@ -25,7 +25,7 @@ export default {
             title: 'Kesesuaian Kegiatan Pemanfaatan Ruang',
             description: 'Perizinan dasar sebagai syarat awal operasional usaha, mencakup kesesuaian tata ruang, lingkungan, dan bangunan.',
             price: 'Hubungi Kami',
-            packages: '3 Paket',
+            packages: '4 Paket',
         },
         {
             id: '2',

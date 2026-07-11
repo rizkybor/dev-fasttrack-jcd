@@ -69,9 +69,10 @@ const selectedPackagePrice = computed(
 
 <template>
     <MainLayout>
+        <div class="w-full max-w-full overflow-x-hidden">
         <!-- Hero Section -->
         <section
-            class="relative overflow-hidden min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] bg-[#9e1f16]"
+            class="relative overflow-hidden min-h-[240px] sm:min-h-[320px] lg:min-h-[360px] bg-[#9e1f16]"
         >
             <div class="ml-5">
                 <img
@@ -82,19 +83,19 @@ const selectedPackagePrice = computed(
             </div>
 
             <div
-                class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]"
+                class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-14 lg:py-16 flex flex-col justify-between gap-6 h-full min-h-[240px] sm:min-h-[320px] lg:min-h-[360px]"
             >
                 <!-- Breadcrumb -->
-                <nav aria-label="Breadcrumb">
+                <nav aria-label="Breadcrumb" class="overflow-hidden">
                     <div
-                        class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2"
+                        class="inline-flex max-w-full items-center gap-1.5 sm:gap-2 rounded-md bg-white px-3 py-1.5 sm:px-4 sm:py-2"
                     >
                         <a
                             href="/"
-                            class="text-[#9e1f16] hover:text-black transition"
+                            class="flex-shrink-0 text-[#9e1f16] hover:text-black transition"
                         >
                             <svg
-                                class="h-4 w-4"
+                                class="h-3.5 w-3.5 sm:h-4 sm:w-4"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -108,7 +109,7 @@ const selectedPackagePrice = computed(
                             </svg>
                         </a>
                         <svg
-                            class="h-3 w-3 text-[#9e1f16]"
+                            class="h-2.5 w-2.5 sm:h-3 sm:w-3 flex-shrink-0 text-[#9e1f16]"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -122,11 +123,11 @@ const selectedPackagePrice = computed(
                         </svg>
                         <a
                             href="/layanan"
-                            class="text-sm font-medium text-[#9e1f16] hover:underline"
+                            class="flex-shrink-0 text-xs sm:text-sm font-medium text-[#9e1f16] hover:underline"
                             >Layanan</a
                         >
                         <svg
-                            class="h-3 w-3 text-[#9e1f16]"
+                            class="h-2.5 w-2.5 sm:h-3 sm:w-3 flex-shrink-0 text-[#9e1f16]"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -138,31 +139,32 @@ const selectedPackagePrice = computed(
                                 d="M9 5l7 7-7 7"
                             />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{
-                            product.name
-                        }}</span>
+                        <span
+                            class="min-w-0 truncate text-xs sm:text-sm font-medium text-[#9e1f16]"
+                            >{{ product.name }}</span
+                        >
                     </div>
                 </nav>
 
                 <!-- Center: Heading -->
-                <div class="flex items-center gap-5">
+                <div class="flex items-center gap-3 sm:gap-5">
                     <div
-                        class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
+                        class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md sm:h-16 sm:w-16 sm:rounded-2xl"
                     >
                         <img
                             src="/icons/ft-building.svg"
-                            class="w-9 h-9"
+                            class="h-6 w-6 sm:h-9 sm:w-9"
                             alt=""
                         />
                     </div>
-                    <div>
+                    <div class="min-w-0">
                         <h1
-                            class="text-3xl font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2"
+                            class="text-lg font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2"
                         >
                             {{ product.name }}
                         </h1>
                         <p
-                            class="mt-2 max-w-2xl text-sm leading-relaxed text-white/80 hidden sm:block"
+                            class="mt-1.5 sm:mt-2 max-w-2xl text-xs sm:text-sm leading-relaxed text-white/80 line-clamp-2 sm:line-clamp-none"
                         >
                             {{ product.excerpt }}
                         </p>
@@ -173,10 +175,10 @@ const selectedPackagePrice = computed(
                 <div>
                     <a
                         href="/virtual-office"
-                        class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition"
+                        class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-white hover:text-white/70 transition"
                     >
                         <svg
-                            class="h-4 w-4"
+                            class="h-3.5 w-3.5 sm:h-4 sm:w-4"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -195,35 +197,35 @@ const selectedPackagePrice = computed(
         </section>
 
         <!-- CONTENT SECTION -->
-        <section id="edukasi" class="bg-[#F7F7F5] py-12 sm:py-16">
+        <section id="edukasi" class="bg-[#F7F7F5] py-8 sm:py-12 lg:py-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div
-                    class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]"
+                    class="grid w-full min-w-0 gap-4 sm:gap-6 lg:grid-cols-[1fr_280px] lg:gap-8 xl:grid-cols-[1fr_300px]"
                 >
                     <!-- ===== KIRI: Konten Utama ===== -->
-                    <div class="flex flex-col gap-6">
+                    <div class="flex min-w-0 flex-col gap-4 sm:gap-6">
                         <!-- 1. Intro -->
                         <div
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
+                            class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-6 md:p-8"
                         >
-                            <div class="flex items-center gap-3 mb-5">
+                            <div class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
                                 <img
                                     src="/icons/ic-menu-arrow.svg"
-                                    class="w-6 h-6"
+                                    class="h-5 w-5 flex-shrink-0 sm:h-6 sm:w-6"
                                     alt=""
                                 />
                                 <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
+                                    class="text-xs font-bold uppercase leading-snug tracking-wide text-black sm:text-[15px] sm:tracking-widest"
                                 >
                                     {{ detail.intro?.heading }}
                                 </h2>
                             </div>
-                            <div class="space-y-4">
+                            <div class="space-y-3 sm:space-y-4">
                                 <p
                                     v-for="(paragraph, index) in detail.intro
                                         ?.paragraphs"
                                     :key="`intro-${index}`"
-                                    class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify"
+                                    class="text-[13px] leading-[1.7] text-[#3D3D3A] text-justify sm:text-[14px] sm:leading-[1.8]"
                                 >
                                     {{ paragraph }}
                                 </p>
@@ -233,20 +235,20 @@ const selectedPackagePrice = computed(
                         <!-- 2. Promo Banner -->
                         <div
                             v-if="detail.promo"
-                            class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-6 sm:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+                            class="relative overflow-hidden rounded-xl bg-[#9e1f16] px-4 py-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between sm:rounded-2xl sm:px-8 sm:py-6"
                         >
                             <div>
-                                <p class="text-[12px] text-white/70">
+                                <p class="text-[11px] text-white/70 sm:text-[12px]">
                                     {{ detail.promo.label }}
                                 </p>
                                 <p
-                                    class="text-[20px] sm:text-[24px] font-extrabold text-white"
+                                    class="text-[17px] font-extrabold text-white sm:text-[20px] lg:text-[24px]"
                                 >
                                     {{ detail.promo.highlight }}
                                 </p>
                             </div>
                             <div
-                                class="inline-flex items-center rounded-lg bg-white px-4 py-2.5 text-[14px] font-bold text-[#9e1f16] whitespace-nowrap self-start sm:self-auto"
+                                class="inline-flex items-center rounded-lg bg-white px-3.5 py-2 text-[12px] font-bold text-[#9e1f16] sm:whitespace-nowrap sm:px-4 sm:py-2.5 sm:text-[14px]"
                             >
                                 {{ detail.promo.badge }}
                             </div>
@@ -255,25 +257,25 @@ const selectedPackagePrice = computed(
                         <!-- 3. Keunggulan -->
                         <div
                             v-if="detail.keunggulan?.length"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
+                            class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-6 md:p-8"
                         >
-                            <div class="flex items-center gap-3 mb-5">
+                            <div class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
                                 <img
                                     src="/icons/ic-menu-arrow.svg"
-                                    class="w-6 h-6"
+                                    class="h-5 w-5 flex-shrink-0 sm:h-6 sm:w-6"
                                     alt=""
                                 />
                                 <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
+                                    class="text-xs font-bold uppercase leading-snug tracking-wide text-black sm:text-[15px] sm:tracking-widest"
                                 >
                                     Keunggulan Virtual Office Fasttrack
                                 </h2>
                             </div>
-                            <div class="grid gap-4 sm:grid-cols-2">
+                            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                                 <div
                                     v-for="(item, index) in detail.keunggulan"
                                     :key="`keunggulan-${index}`"
-                                    class="rounded-xl border border-[#E8E8E6] p-4"
+                                    class="rounded-xl border border-[#E8E8E6] p-3.5 sm:p-4"
                                 >
                                     <div class="flex items-start gap-2.5 mb-2">
                                         <img
@@ -288,7 +290,7 @@ const selectedPackagePrice = computed(
                                         </p>
                                     </div>
                                     <p
-                                        class="text-[12px] leading-[1.7] text-[#686964] text-justify"
+                                        class="text-[12px] leading-[1.6] text-[#686964] text-justify sm:leading-[1.7]"
                                     >
                                         {{ item.desc }}
                                     </p>
@@ -299,127 +301,145 @@ const selectedPackagePrice = computed(
                         <!-- 4. Paket Reguler -->
                         <div
                             v-if="paketReguler.columns?.length"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
+                            class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-6 md:p-8"
                         >
-                            <div class="flex items-center gap-3 mb-5">
+                            <div class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
                                 <img
                                     src="/icons/ic-menu-arrow.svg"
-                                    class="w-6 h-6"
+                                    class="h-5 w-5 flex-shrink-0 sm:h-6 sm:w-6"
                                     alt=""
                                 />
                                 <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
+                                    class="text-xs font-bold uppercase leading-snug tracking-wide text-black sm:text-[15px] sm:tracking-widest"
                                 >
                                     {{ paketReguler.heading }}
                                 </h2>
                             </div>
 
-                            <div class="overflow-x-auto">
-                                <table class="w-full border-collapse text-[13px]">
-                                    <thead>
-                                        <tr>
-                                            <th
-                                                class="text-left font-semibold text-[#686964] p-3 border-b border-[#E8E8E6] whitespace-nowrap"
-                                            >
-                                                {{ paketReguler.jenis_label }}
-                                            </th>
-                                            <th
-                                                v-for="(
-                                                    col, cIndex
-                                                ) in paketReguler.columns"
-                                                :key="`col-${cIndex}`"
-                                                class="cursor-pointer p-3 border-b whitespace-nowrap text-center font-bold uppercase tracking-wide transition-colors"
-                                                :class="
-                                                    selectedPackageIndex ===
-                                                    cIndex
-                                                        ? 'bg-[#9e1f16] text-white border-[#9e1f16]'
-                                                        : 'text-[#1A1B18] border-[#E8E8E6] hover:bg-[#F9F9F9]'
-                                                "
-                                                @click="
-                                                    selectedPackageIndex =
+                            <!-- Scrollable table wrapper (contained, no negative-margin bleed) -->
+                            <div
+                                class="w-full max-w-full overflow-x-auto overscroll-x-contain pb-1 [-webkit-overflow-scrolling:touch] [scrollbar-width:thin]"
+                            >
+                                <table
+                                    class="w-max min-w-full table-fixed border-collapse text-[12px] sm:text-[13px]"
+                                >
+                                    <colgroup>
+                                        <col class="w-[92px] sm:w-[150px]" />
+                                        <col
+                                            v-for="(
+                                                col, cIndex
+                                            ) in paketReguler.columns"
+                                            :key="`colgroup-${cIndex}`"
+                                            class="w-[78px] sm:w-[110px]"
+                                        />
+                                    </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th
+                                                    class="text-left font-semibold text-[#686964] p-2 border-b border-[#E8E8E6] break-words sm:p-3"
+                                                >
+                                                    {{ paketReguler.jenis_label }}
+                                                </th>
+                                                <th
+                                                    v-for="(
+                                                        col, cIndex
+                                                    ) in paketReguler.columns"
+                                                    :key="`col-${cIndex}`"
+                                                    class="cursor-pointer p-2 border-b break-words text-center text-[10.5px] font-bold uppercase leading-tight tracking-normal transition-colors sm:p-3 sm:text-[12px] sm:tracking-wide"
+                                                    :class="
+                                                        selectedPackageIndex ===
                                                         cIndex
-                                                "
-                                            >
-                                                {{ col }}
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr
-                                            v-for="(row, rIndex) in paketReguler.rows"
-                                            :key="`row-${rIndex}`"
-                                        >
-                                            <td
-                                                class="p-3 border-b border-[#E8E8E6] text-[#3D3D3A]"
-                                            >
-                                                {{ row.label }}
-                                            </td>
-                                            <td
-                                                v-for="(
-                                                    val, cIndex
-                                                ) in row.values"
-                                                :key="`val-${rIndex}-${cIndex}`"
-                                                class="p-3 border-b text-center border-[#E8E8E6]"
-                                                :class="
-                                                    selectedPackageIndex ===
-                                                    cIndex
-                                                        ? 'bg-[#FBEAE8]'
-                                                        : ''
-                                                "
-                                            >
-                                                <img
-                                                    v-if="val === true"
-                                                    src="/icons/ft-done.svg"
-                                                    class="inline-block h-4 w-4"
-                                                    alt="ya"
-                                                />
-                                                <span
-                                                    v-else-if="val === false"
-                                                    class="text-[#B7B8B4]"
-                                                    >-</span
+                                                            ? 'bg-[#9e1f16] text-white border-[#9e1f16]'
+                                                            : 'text-[#1A1B18] border-[#E8E8E6] hover:bg-[#F9F9F9]'
+                                                    "
+                                                    @click="
+                                                        selectedPackageIndex =
+                                                            cIndex
+                                                    "
                                                 >
-                                                <span
-                                                    v-else
-                                                    class="text-[#3D3D3A] whitespace-nowrap"
-                                                    >{{ val }}</span
+                                                    {{ col }}
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                v-for="(row, rIndex) in paketReguler.rows"
+                                                :key="`row-${rIndex}`"
+                                            >
+                                                <td
+                                                    class="p-2 border-b border-[#E8E8E6] text-[#3D3D3A] break-words sm:p-3"
                                                 >
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="p-3 font-bold text-[#1A1B18]"
-                                            >
-                                                {{ paketReguler.harga_label }}
-                                            </td>
-                                            <td
-                                                v-for="(
-                                                    harga, hIndex
-                                                ) in paketReguler.harga"
-                                                :key="`harga-${hIndex}`"
-                                                class="p-3 text-center font-bold text-[#9e1f16] whitespace-nowrap"
-                                                :class="
-                                                    selectedPackageIndex ===
-                                                    hIndex
-                                                        ? 'bg-[#FBEAE8]'
-                                                        : ''
-                                                "
-                                            >
-                                                {{ harga }}
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                                    {{ row.label }}
+                                                </td>
+                                                <td
+                                                    v-for="(
+                                                        val, cIndex
+                                                    ) in row.values"
+                                                    :key="`val-${rIndex}-${cIndex}`"
+                                                    class="p-2 border-b text-center border-[#E8E8E6] sm:p-3"
+                                                    :class="
+                                                        selectedPackageIndex ===
+                                                        cIndex
+                                                            ? 'bg-[#FBEAE8]'
+                                                            : ''
+                                                    "
+                                                >
+                                                    <img
+                                                        v-if="val === true"
+                                                        src="/icons/ft-done.svg"
+                                                        class="inline-block h-3.5 w-3.5 sm:h-4 sm:w-4"
+                                                        alt="ya"
+                                                    />
+                                                    <span
+                                                        v-else-if="val === false"
+                                                        class="text-[#B7B8B4]"
+                                                        >-</span
+                                                    >
+                                                    <span
+                                                        v-else
+                                                        class="text-[#3D3D3A] break-words"
+                                                        >{{ val }}</span
+                                                    >
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="p-2 font-bold text-[#1A1B18] break-words sm:p-3"
+                                                >
+                                                    {{ paketReguler.harga_label }}
+                                                </td>
+                                                <td
+                                                    v-for="(
+                                                        harga, hIndex
+                                                    ) in paketReguler.harga"
+                                                    :key="`harga-${hIndex}`"
+                                                    class="p-2 text-center font-bold text-[#9e1f16] break-words sm:p-3"
+                                                    :class="
+                                                        selectedPackageIndex ===
+                                                        hIndex
+                                                            ? 'bg-[#FBEAE8]'
+                                                            : ''
+                                                    "
+                                                >
+                                                    {{ harga }}
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            <p class="mt-2 text-[10px] text-[#B7B8B4] sm:hidden">
+                                Geser tabel untuk melihat paket lainnya →
+                            </p>
 
                             <div
-                                class="mt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 rounded-xl bg-[#E9F9EE] px-5 py-4"
+                                class="mt-4 flex flex-col gap-3 rounded-xl bg-[#E9F9EE] px-4 py-3.5 sm:mt-5 sm:flex-row sm:items-center sm:justify-between sm:px-5 sm:py-4"
                             >
                                 <div>
                                     <p class="text-[11px] text-[#686964]">
                                         {{ paketReguler.selected_label }}
                                     </p>
                                     <p
-                                        class="text-[14px] font-bold text-[#1A1B18]"
+                                        class="text-[13px] font-bold text-[#1A1B18] sm:text-[14px]"
                                     >
                                         {{ selectedPackageName }}
                                         <span class="text-[#9e1f16]"
@@ -437,7 +457,7 @@ const selectedPackagePrice = computed(
                                     "
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    class="inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-4 py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors whitespace-nowrap"
+                                    class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] px-4 py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors sm:inline-flex sm:w-auto sm:whitespace-nowrap"
                                 >
                                     <img
                                         src="/icons/ft-wa.svg"
@@ -452,28 +472,28 @@ const selectedPackagePrice = computed(
                         <!-- 5. Galeri Foto -->
                         <div
                             v-if="detail.gallery?.items?.length"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
+                            class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-6 md:p-8"
                         >
-                            <div class="flex items-center gap-3 mb-5">
+                            <div class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
                                 <img
                                     src="/icons/ic-menu-arrow.svg"
-                                    class="w-6 h-6"
+                                    class="h-5 w-5 flex-shrink-0 sm:h-6 sm:w-6"
                                     alt=""
                                 />
                                 <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
+                                    class="text-xs font-bold uppercase leading-snug tracking-wide text-black sm:text-[15px] sm:tracking-widest"
                                 >
                                     {{ detail.gallery.heading }}
                                 </h2>
                             </div>
                             <div
-                                class="grid grid-cols-2 sm:grid-cols-4 gap-3"
+                                class="grid grid-cols-2 gap-2.5 sm:grid-cols-4 sm:gap-3"
                             >
                                 <div
                                     v-for="(loc, index) in detail.gallery
                                         .items"
                                     :key="`loc-${index}`"
-                                    class="relative overflow-hidden rounded-xl aspect-[3/4]"
+                                    class="relative overflow-hidden rounded-lg aspect-[3/4] sm:rounded-xl"
                                 >
                                     <img
                                         :src="loc.image"
@@ -485,18 +505,18 @@ const selectedPackagePrice = computed(
                                     ></div>
                                     <span
                                         v-if="loc.available"
-                                        class="absolute top-2 right-2 rounded-full bg-[#25D366] px-2 py-0.5 text-[10px] font-semibold text-white"
+                                        class="absolute top-1.5 right-1.5 rounded-full bg-[#25D366] px-1.5 py-0.5 text-[9px] font-semibold text-white sm:top-2 sm:right-2 sm:text-[10px]"
                                     >
                                         {{ detail.gallery.available_badge }}
                                     </span>
-                                    <div class="absolute bottom-2 left-2 right-2">
+                                    <div class="absolute bottom-1.5 left-1.5 right-1.5 sm:bottom-2 sm:left-2 sm:right-2">
                                         <p
-                                            class="text-[13px] font-bold text-white"
+                                            class="text-[12px] font-bold text-white sm:text-[13px]"
                                         >
                                             Lokasi {{ loc.location }}
                                         </p>
                                         <span
-                                            class="mt-1 inline-block rounded bg-white/20 px-1.5 py-0.5 text-[10px] text-white backdrop-blur-sm"
+                                            class="mt-1 inline-block rounded bg-white/20 px-1.5 py-0.5 text-[9px] text-white backdrop-blur-sm sm:text-[10px]"
                                         >
                                             {{ loc.kpp }}
                                         </span>
@@ -508,11 +528,11 @@ const selectedPackagePrice = computed(
 
                     <!-- ===== KANAN: Sidebar ===== -->
                     <div
-                        class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start"
+                        class="flex min-w-0 flex-col gap-4 lg:sticky lg:top-32 lg:self-start"
                     >
                         <!-- VIP Line Banner -->
                         <div
-                            class="rounded-2xl px-5 py-6 text-center overflow-hidden relative"
+                            class="rounded-xl px-4 py-5 text-center overflow-hidden relative sm:rounded-2xl sm:px-5 sm:py-6"
                             style="
                                 background-image: url(&quot;/images/card-arrow-bg.png&quot;);
                                 background-size: cover;
@@ -520,12 +540,12 @@ const selectedPackagePrice = computed(
                                 background-repeat: no-repeat;
                             "
                         >
-                            <div class="relative mb-4">
+                            <div class="relative mb-3 sm:mb-4">
                                 <div
-                                    class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5"
+                                    class="inline-block w-full rounded-xl border border-white/60 px-3 py-2 sm:px-4 sm:py-2.5"
                                 >
                                     <span
-                                        class="text-[14px] font-extrabold uppercase tracking-widest text-white"
+                                        class="text-[12px] font-extrabold uppercase tracking-wide text-white sm:text-[14px] sm:tracking-widest"
                                     >
                                         {{ detail.sidebar?.vip_title }}
                                     </span>
@@ -533,7 +553,7 @@ const selectedPackagePrice = computed(
                             </div>
 
                             <p
-                                class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
+                                class="relative text-[13px] leading-[1.55] text-white/90 mb-4 sm:text-[14px] sm:leading-[1.6] sm:mb-5"
                             >
                                 {{ detail.sidebar?.vip_desc }}
                             </p>
@@ -546,18 +566,18 @@ const selectedPackagePrice = computed(
                                 "
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20"
+                                class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-2.5 text-[12.5px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20 sm:py-3 sm:text-[13px]"
                             >
                                 <img
                                     src="/icons/ft-wa.svg"
-                                    class="mt-0.5 h-5 w-5 flex-shrink-0"
+                                    class="mt-0.5 h-4.5 w-4.5 flex-shrink-0 sm:h-5 sm:w-5"
                                     alt="wa"
                                 />
                                 {{ detail.sidebar?.vip_cta }}
                             </a>
 
                             <div
-                                class="relative mt-3 text-[11px] text-white/60"
+                                class="relative mt-2.5 text-[10px] text-white/60 sm:mt-3 sm:text-[11px]"
                             >
                                 {{ detail.sidebar?.vip_note }}
                             </div>
@@ -565,10 +585,10 @@ const selectedPackagePrice = computed(
 
                         <!-- Price Card -->
                         <div
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-5"
+                            class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-5"
                         >
                             <label
-                                class="mb-4 flex items-center justify-between rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3 py-2.5"
+                                class="mb-3 flex items-center justify-between rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3 py-2.5 sm:mb-4"
                             >
                                 <select
                                     v-model="selectedPackageIndex"
@@ -598,16 +618,16 @@ const selectedPackagePrice = computed(
                                     />
                                 </svg>
                             </label>
-                            <div class="text-[12px] text-[#686964] mb-1">
+                            <div class="text-[11px] text-[#686964] mb-1 sm:text-[12px]">
                                 {{ detail.sidebar?.starting_from }}
                             </div>
                             <div
-                                class="text-[32px] font-bold leading-none text-primary mb-1"
+                                class="text-[26px] font-bold leading-tight text-primary mb-1 break-words sm:text-[32px] sm:leading-none"
                             >
                                 {{ selectedPackagePrice
                                 }}{{ paketReguler.per_tahun }}
                             </div>
-                            <div class="text-[11px] text-[#686964] mb-4">
+                            <div class="text-[10px] text-[#686964] mb-3 sm:text-[11px] sm:mb-4">
                                 *Harga final dikonfirmasi setelah konsultasi
                             </div>
                             <a
@@ -623,25 +643,25 @@ const selectedPackagePrice = computed(
                             >
                                 <img
                                     src="/icons/ft-wa.svg"
-                                    class="mt-0.5 h-6 w-6 flex-shrink-0"
+                                    class="mt-0.5 h-5 w-5 flex-shrink-0 sm:h-6 sm:w-6"
                                     alt="wa"
                                 />
                                 {{ detail.sidebar?.consult_cta }}
                             </a>
-                            <ul class="mt-4 space-y-2">
+                            <ul class="mt-3 space-y-2 sm:mt-4">
                                 <li
                                     v-for="(
                                         item, index
                                     ) in detail.sidebar?.checklist"
                                     :key="`check-${index}`"
-                                    class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
+                                    class="flex items-start gap-2 text-[12px] text-[#3D3D3A]"
                                 >
                                     <img
                                         src="/icons/ft-done.svg"
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    {{ item }}
+                                    <span>{{ item }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -649,10 +669,10 @@ const selectedPackagePrice = computed(
                         <!-- Layanan Terkait -->
                         <div
                             v-if="relatedProducts.length"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-5"
+                            class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-5"
                         >
                             <h3
-                                class="text-[13px] font-bold text-[#1A1B18] mb-4"
+                                class="text-[13px] font-bold text-[#1A1B18] mb-3 sm:mb-4"
                             >
                                 Layanan Terkait
                             </h3>
@@ -663,10 +683,10 @@ const selectedPackagePrice = computed(
                                     ) in relatedProducts.slice(0, 3)"
                                     :key="`related-${index}`"
                                     :href="related.detail_path"
-                                    class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] bg-white p-4 hover:border-primary/30 hover:shadow-sm transition-all"
+                                    class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] bg-white p-3.5 hover:border-primary/30 hover:shadow-sm transition-all sm:p-4"
                                 >
                                     <div
-                                        class="text-[14px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors"
+                                        class="text-[13px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors sm:text-[14px]"
                                     >
                                         {{ related.name }}
                                     </div>
@@ -689,7 +709,7 @@ const selectedPackagePrice = computed(
                                                 Mulai dari
                                             </div>
                                             <div
-                                                class="text-[18px] font-bold text-primary leading-none"
+                                                class="text-[16px] font-bold text-primary leading-none sm:text-[18px]"
                                             >
                                                 {{ related.price_label }}
                                             </div>
@@ -722,26 +742,26 @@ const selectedPackagePrice = computed(
         </section>
 
         <!-- Footer CTA Banner -->
-        <section id="footer" class="bg-[#F7F7F5] mb-12 sm:mb-16">
+        <section id="footer" class="bg-[#F7F7F5] mb-10 sm:mb-12 lg:mb-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div
-                    class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-12 sm:px-10 sm:py-14"
+                    class="relative overflow-hidden rounded-xl bg-[#9e1f16] px-5 py-9 sm:rounded-2xl sm:px-10 sm:py-14"
                 >
                     <img
                         src="/icons/ft-docs.svg"
                         alt=""
-                        class="absolute right-6 top-6 h-16 w-16 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24"
+                        class="absolute right-4 top-4 h-12 w-12 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24"
                     />
                     <div
                         class="relative flex flex-col items-center text-center"
                     >
                         <h3
-                            class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]"
+                            class="max-w-2xl text-[18px] font-bold leading-[26px] text-white sm:text-[28px] sm:leading-[38px]"
                         >
                             Tidak Menemukan Layanan yang Anda Cari?
                         </h3>
                         <p
-                            class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]"
+                            class="mt-3 max-w-lg text-[13px] leading-[20px] text-white/80 sm:mt-4 sm:text-[16px] sm:leading-[24px]"
                         >
                             Tim kami siap membantu Anda menemukan solusi yang
                             tepat untuk kebutuhan legalitas bisnis Anda.
@@ -755,7 +775,7 @@ const selectedPackagePrice = computed(
                             "
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]"
+                            class="mt-6 inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[13px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:mt-8 sm:w-auto sm:px-8 sm:py-3.5 sm:text-[15px]"
                         >
                             Chat Langsung via WhatsApp
                             <img
@@ -768,5 +788,6 @@ const selectedPackagePrice = computed(
                 </div>
             </div>
         </section>
+        </div>
     </MainLayout>
 </template>
