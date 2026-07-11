@@ -3,7 +3,7 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -276,10 +276,10 @@ const toggleSection = (id) => {
                                             )
                                         }}</p>
                                         <ul class="space-y-1.5">
-                                            <li v-for="(t, ti) in card.termasuk" :key="`ct-${ci}-${ti}`"
+                                            <li v-for="(item, ti) in card.termasuk" :key="`ct-${ci}-${ti}`"
                                                 class="flex items-start gap-2">
                                                 <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                                <span class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{ t }}</span>
+                                                <span class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{ item }}</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -337,10 +337,10 @@ const toggleSection = (id) => {
                                         )
                                     }}</p>
                                     <ul class="space-y-2">
-                                        <li v-for="(t, ti) in product.biaya_layanan_single.termasuk" :key="`st-${ti}`"
+                                        <li v-for="(item, ti) in product.biaya_layanan_single.termasuk" :key="`st-${ti}`"
                                             class="flex items-start gap-2">
                                             <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                            <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ t }}</span>
+                                            <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ item }}</span>
                                         </li>
                                     </ul>
                                 </div>
