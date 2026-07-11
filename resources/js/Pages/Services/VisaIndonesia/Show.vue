@@ -16,8 +16,27 @@ const props = defineProps({
 
 const { buildWhatsappLink } = useWhatsapp("visa");
 
+// Recursively resolve setiap field translatable {id,en,zh} sesuai locale aktif
+const pick = (obj) => {
+    if (obj === null || obj === undefined) return obj;
+    if (Array.isArray(obj)) return obj.map(pick);
+    if (typeof obj === "object") {
+        const keys = Object.keys(obj);
+        if (keys.length === 3 && keys.includes("id") && keys.includes("en") && keys.includes("zh")) {
+            return obj[locale.value] ?? obj.id;
+        }
+        const result = {};
+        for (const k in obj) result[k] = pick(obj[k]);
+        return result;
+    }
+    return obj;
+};
+
+const localizedProduct = computed(() => pick(props.product));
+const localizedRelatedProducts = computed(() => props.relatedProducts.map(pick));
+
 const activeIndex = ref(0);
-const currentItem = computed(() => props.product.index_list[activeIndex.value]);
+const currentItem = computed(() => localizedProduct.value.index_list[activeIndex.value]);
 
 const openSectionId = ref(null);
 const toggleSection = (id) => {
@@ -73,7 +92,7 @@ watch(activeIndex, () => {
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{ product.name }}</span>
+                        <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
                 <div class="flex items-center gap-5">
@@ -83,7 +102,7 @@ watch(activeIndex, () => {
                     </div>
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
-                        {{ product.name }}
+                        {{ localizedProduct.name }}
                     </h1>
                 </div>
                 <div>
@@ -107,14 +126,14 @@ watch(activeIndex, () => {
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
                 <!-- ===== FULL WIDTH: Penjelasan Umum ===== -->
-                <div v-if="product.penjelasan_umum?.length"
+                <div v-if="localizedProduct.penjelasan_umum?.length"
                     class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                         <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan Umum</h2>
                     </div>
                     <div class="space-y-4">
-                        <p v-for="(p, i) in product.penjelasan_umum" :key="`pu-${i}`"
+                        <p v-for="(p, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`"
                             class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">{{ p }}</p>
                     </div>
                 </div>
@@ -127,7 +146,7 @@ watch(activeIndex, () => {
                             Kunjungan</h2>
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <button v-for="(item, i) in product.index_list" :key="`idx-${i}`" @click="activeIndex = i"
+                        <button v-for="(item, i) in localizedProduct.index_list" :key="`idx-${i}`" @click="activeIndex = i"
                             class="text-left rounded-2xl p-5 transition-all flex flex-col"
                             :class="activeIndex === i
                                 ? 'bg-primary text-white shadow-lg'
@@ -389,7 +408,7 @@ watch(activeIndex, () => {
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
                                 Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
                             </p>
-                            <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
+                            <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
                                 Pesan Layanan Sekarang
@@ -398,10 +417,10 @@ watch(activeIndex, () => {
                         </div>
 
                         <!-- Index Visa Lainnya -->
-                        <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
+                        <div v-if="localizedRelatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Index Visa Lainnya</h3>
                             <div class="flex flex-col gap-3">
-                                <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
+                                <a v-for="(related, index) in localizedRelatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
                                     class="group flex items-center gap-3 rounded-xl border border-[#E8E8E6] bg-white p-3 hover:border-primary/30 hover:shadow-sm transition-all">
                                     <div

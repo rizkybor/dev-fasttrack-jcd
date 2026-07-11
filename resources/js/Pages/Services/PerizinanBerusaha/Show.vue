@@ -4,7 +4,7 @@ import { ref, computed, watch } from "vue";
 import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 import { useI18n } from "vue-i18n";
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
@@ -14,17 +14,36 @@ const props = defineProps({
 
 const { buildWhatsappLink } = useWhatsapp("visa");
 
+// Recursively resolve setiap field translatable {id,en,zh} sesuai locale aktif
+const pick = (obj) => {
+    if (obj === null || obj === undefined) return obj;
+    if (Array.isArray(obj)) return obj.map(pick);
+    if (typeof obj === "object") {
+        const keys = Object.keys(obj);
+        if (keys.length === 3 && keys.includes("id") && keys.includes("en") && keys.includes("zh")) {
+            return obj[locale.value] ?? obj.id;
+        }
+        const result = {};
+        for (const k in obj) result[k] = pick(obj[k]);
+        return result;
+    }
+    return obj;
+};
+
+const localizedProduct = computed(() => pick(props.product));
+const localizedRelatedProducts = computed(() => props.relatedProducts.map(pick));
+
 const activeIndex = ref(0);
 // Dasar Hukum & Dokumen Informasi bisa terbuka bersamaan, jadi disimpan
 // sebagai object per-id, bukan satu ref tunggal.
 const openSections = ref({ "dasar-hukum": true, "dokumen-informasi": true });
 const activeBiayaTahun = ref(0);
 
-const currentItem = computed(() => props.product.jenis_layanan?.[activeIndex.value] ?? null);
+const currentItem = computed(() => localizedProduct.value.jenis_layanan?.[activeIndex.value] ?? null);
 
 // Kalau jenis_layanan cuma 3 (atau kurang), tampilkan kartu lebih besar & full-width
 // (3 kolom), bukan grid rapat 4 kolom yang dipakai saat item-nya banyak.
-const isLargeJenisLayananCard = computed(() => (props.product.jenis_layanan?.length ?? 0) <= 3);
+const isLargeJenisLayananCard = computed(() => (localizedProduct.value.jenis_layanan?.length ?? 0) <= 3);
 const jenisLayananGridClass = computed(() =>
     isLargeJenisLayananCard.value
         ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
@@ -33,10 +52,10 @@ const jenisLayananGridClass = computed(() =>
 
 // Kalau produk TIDAK punya jenis_layanan (mis. "Perizinan Berusaha"),
 // semua section di bawah ini pakai data langsung dari level product.
-const activeContent = computed(() => currentItem.value ?? props.product);
+const activeContent = computed(() => currentItem.value ?? localizedProduct.value);
 
 // nama/kode item aktif dipakai untuk sidebar & link WA
-const activeNama = computed(() => currentItem.value?.nama ?? props.product.name);
+const activeNama = computed(() => currentItem.value?.nama ?? localizedProduct.value.name);
 const activeKode = computed(() => currentItem.value?.kode ?? "");
 
 const toggleSection = (id) => {
@@ -115,7 +134,7 @@ const dokumenDibutuhkan = computed(() => activeContent.value?.dokumen_dibutuhkan
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{ product.name }}</span>
+                        <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
                 <div class="flex items-center gap-5">
@@ -125,7 +144,7 @@ const dokumenDibutuhkan = computed(() => activeContent.value?.dokumen_dibutuhkan
                     </div>
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
-                        {{ product.name }}
+                        {{ localizedProduct.name }}
                     </h1>
                 </div>
                 <div>
@@ -145,29 +164,29 @@ const dokumenDibutuhkan = computed(() => activeContent.value?.dokumen_dibutuhkan
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
                 <!-- ===== FULL WIDTH: Penjelasan Umum ===== -->
-                <div v-if="product.penjelasan_umum?.length"
+                <div v-if="localizedProduct.penjelasan_umum?.length"
                     class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                         <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                            {{ product.penjelasan_umum_label ?? "Penjelasan Umum" }}
+                            {{ localizedProduct.penjelasan_umum_label ?? "Penjelasan Umum" }}
                         </h2>
                     </div>
                     <div class="space-y-4">
-                        <p v-for="(p, i) in product.penjelasan_umum" :key="`pu-${i}`"
+                        <p v-for="(p, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`"
                             class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify">{{ p }}</p>
                     </div>
                 </div>
 
                 <!-- ===== FULL WIDTH: Pilih Jenis Layanan (hanya tampil jika produk punya jenis_layanan) ===== -->
-                <div v-if="product.jenis_layanan?.length"
+                <div v-if="localizedProduct.jenis_layanan?.length"
                     class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                         <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Pilih Jenis Layanan</h2>
                     </div>
                     <div class="grid gap-4" :class="jenisLayananGridClass">
-                        <button v-for="(item, i) in product.jenis_layanan" :key="`idx-${i}`" @click="activeIndex = i"
+                        <button v-for="(item, i) in localizedProduct.jenis_layanan" :key="`idx-${i}`" @click="activeIndex = i"
                             class="text-left rounded-2xl transition-all flex flex-col"
                             :class="[
                                 isLargeJenisLayananCard ? 'p-6 sm:p-7' : 'p-5',
@@ -371,7 +390,7 @@ const dokumenDibutuhkan = computed(() => activeContent.value?.dokumen_dibutuhkan
                                         </p>
                                     </div>
                                 </div>
-                                <a :href="buildWhatsappLink(product.name, activeNama)"
+                                <a :href="buildWhatsappLink(localizedProduct.name, activeNama)"
                                     target="_blank" rel="noopener noreferrer"
                                     class="flex items-center gap-1.5 rounded-lg bg-white px-4 py-2 text-[12px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors">
                                     Hubungi Kami
@@ -521,7 +540,7 @@ const dokumenDibutuhkan = computed(() => activeContent.value?.dokumen_dibutuhkan
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
                                 Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
                             </p>
-                            <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
+                            <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
                                 Pesan Layanan Sekarang
@@ -530,10 +549,10 @@ const dokumenDibutuhkan = computed(() => activeContent.value?.dokumen_dibutuhkan
                         </div>
 
                         <!-- Layanan lainnya -->
-                        <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
+                        <div v-if="localizedRelatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ relatedTitle }}</h3>
                             <div class="flex flex-col gap-3">
-                                <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
+                                <a v-for="(related, index) in localizedRelatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
                                     class="group flex items-center gap-3 rounded-xl border border-[#E8E8E6] bg-white p-3 hover:border-primary/30 hover:shadow-sm transition-all">
                                     <div

@@ -1,224 +1,724 @@
 [
     {
         "id": 1,
-        "name": "Perizinan Dasar",
+        "name": {
+            "id": "Perizinan Dasar",
+            "en": "Basic Licensing",
+            "zh": "基础许可"
+        },
         "price": null,
-        "price_label": "Hubungi Kami",
-        "excerpt": "Pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional di Indonesia.",
-        "detail_path": "/perizinan-dasar-dan-perizinan-berusaha/1",
+        "price_label": {
+            "id": "Hubungi Kami",
+            "en": "Contact Us",
+            "zh": "请联系我们"
+        },
+        "excerpt": {
+            "id": "Pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional di Indonesia.",
+            "en": "Processing of the basic licenses that must be fulfilled before a business operator carries out operational activities in Indonesia.",
+            "zh": "办理企业在印尼开展运营活动前必须取得的基础许可。"
+        },
+        "detail_path": "/perizinan-berusaha/1",
         "image": "",
         "penjelasan_umum": [
-            "Layanan pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional, mencakup kesesuaian tata ruang, perizinan lingkungan, persetujuan bangunan gedung, hingga sertifikat laik fungsi. Seluruh proses dilakukan sesuai ketentuan Perizinan Berusaha Berbasis Risiko melalui sistem OSS."
+            {
+                "id": "Layanan pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional, mencakup kesesuaian tata ruang, perizinan lingkungan, persetujuan bangunan gedung, hingga sertifikat laik fungsi. Seluruh proses dilakukan sesuai ketentuan Perizinan Berusaha Berbasis Risiko melalui sistem OSS.",
+                "en": "A service for processing the basic licenses that must be fulfilled before a business operator carries out operational activities, covering spatial plan conformity, environmental licensing, building approval, and certificates of function suitability. The entire process is carried out in accordance with the provisions of Risk-Based Business Licensing through the OSS system.",
+                "zh": "为企业开展运营活动前须取得的基础许可提供办理服务，涵盖空间规划符合性、环境许可、建筑物批准直至适用功能证书。整个流程依据基于风险的营业许可（OSS系统）相关规定进行。"
+            }
         ],
         "jenis_layanan": [
             {
                 "kode": "kkpr",
-                "nama": "Kesesuaian Kegiatan Pemanfaatan Ruang (KKPR)",
-                "excerpt": "Pengurusan konfirmasi/persetujuan kesesuaian lokasi usaha dengan rencana tata ruang wilayah.",
-                "harga": "Hubungi Kami",
+                "nama": {
+                    "id": "Kesesuaian Kegiatan Pemanfaatan Ruang (KKPR)",
+                    "en": "Spatial Utilization Activity Conformity (KKPR)",
+                    "zh": "空间利用活动符合性（KKPR）"
+                },
+                "excerpt": {
+                    "id": "Pengurusan konfirmasi/persetujuan kesesuaian lokasi usaha dengan rencana tata ruang wilayah.",
+                    "en": "Processing of confirmation/approval of the conformity of the business location with the regional spatial plan.",
+                    "zh": "办理营业地点与区域空间规划符合性的确认/批准。"
+                },
+                "harga": {
+                    "id": "Hubungi Kami",
+                    "en": "Contact Us",
+                    "zh": "请联系我们"
+                },
                 "penjelasan_layanan": [
-                    "Konfirmasi Kegiatan Pemanfaatan Ruang (KKPR) adalah kesesuaian antara rencana kegiatan pemanfaatan ruang dengan rencana tata ruang yang harus dimiliki oleh Pelaku Usaha untuk dapat memperoleh Perizinan Berusaha (kecuali diatur lain oleh Pemerintah), pelaksanaan pemeriksaan lokasi dapat dilakukan di darat, meliputi:"
+                    {
+                        "id": "Konfirmasi Kegiatan Pemanfaatan Ruang (KKPR) adalah kesesuaian antara rencana kegiatan pemanfaatan ruang dengan rencana tata ruang yang harus dimiliki oleh Pelaku Usaha untuk dapat memperoleh Perizinan Berusaha (kecuali diatur lain oleh Pemerintah), pelaksanaan pemeriksaan lokasi dapat dilakukan di darat, meliputi:",
+                        "en": "Confirmation of Spatial Utilization Activity (KKPR) is the conformity between a planned spatial utilization activity and the spatial plan that a Business Operator must hold in order to obtain Business Licensing (unless otherwise regulated by the Government); the location inspection may be carried out on land, covering:",
+                        "zh": "空间利用活动确认（KKPR）是指企业为取得营业许可（除政府另有规定外）而必须具备的空间利用活动计划与空间规划之间的符合性，选址核查可在陆地进行，包括："
+                    }
                 ],
                 "sub_layanan": [
                     {
-                        "label": "A. Konfirmasi KKPR",
-                        "desc": "Diberikan berdasarkan kesesuaian rencana lokasi kegiatan pemanfaatan ruang dengan RDTR yang telah terintegrasi dengan Sistem OSS dan diterbitkan secara otomatis oleh Lembaga OSS melalui Sistem OSS."
+                        "label": {
+                            "id": "A. Konfirmasi KKPR",
+                            "en": "A. KKPR Confirmation",
+                            "zh": "A. KKPR确认"
+                        },
+                        "desc": {
+                            "id": "Diberikan berdasarkan kesesuaian rencana lokasi kegiatan pemanfaatan ruang dengan RDTR yang telah terintegrasi dengan Sistem OSS dan diterbitkan secara otomatis oleh Lembaga OSS melalui Sistem OSS.",
+                            "en": "Granted based on the conformity of the planned location of the spatial utilization activity with the Detailed Spatial Plan (RDTR) that has been integrated with the OSS System, and issued automatically by the OSS Institution through the OSS System.",
+                            "zh": "根据空间利用活动选址计划与已整合至OSS系统的详细空间规划（RDTR）的符合性授予，并由OSS机构通过OSS系统自动核发。"
+                        }
                     },
                     {
-                        "label": "B. Persetujuan KKPR",
-                        "desc": "Diberikan dalam hal RDTR belum tersedia, dilakukan dengan tahapan:",
+                        "label": {
+                            "id": "B. Persetujuan KKPR",
+                            "en": "B. KKPR Approval",
+                            "zh": "B. KKPR批准"
+                        },
+                        "desc": {
+                            "id": "Diberikan dalam hal RDTR belum tersedia, dilakukan dengan tahapan:",
+                            "en": "Granted in the event the Detailed Spatial Plan (RDTR) is not yet available, carried out through the following stages:",
+                            "zh": "在详细空间规划（RDTR）尚未制定的情况下授予，须经以下阶段："
+                        },
                         "steps": [
-                            "Pendaftaran",
-                            "Pemeriksaan dokumen usulan kegiatan pemanfaatan ruang",
-                            "Penilaian dokumen usulan kegiatan pemanfaatan ruang",
-                            "Penerbitan persetujuan KKPR"
+                            {
+                                "id": "Pendaftaran",
+                                "en": "Registration",
+                                "zh": "登记"
+                            },
+                            {
+                                "id": "Pemeriksaan dokumen usulan kegiatan pemanfaatan ruang",
+                                "en": "Review of the proposed spatial utilization activity documents",
+                                "zh": "空间利用活动提案文件审查"
+                            },
+                            {
+                                "id": "Penilaian dokumen usulan kegiatan pemanfaatan ruang",
+                                "en": "Assessment of the proposed spatial utilization activity documents",
+                                "zh": "空间利用活动提案文件评估"
+                            },
+                            {
+                                "id": "Penerbitan persetujuan KKPR",
+                                "en": "Issuance of the KKPR approval",
+                                "zh": "核发KKPR批准"
+                            }
                         ]
                     }
                 ],
                 "penjelasan_penutup": [
-                    "Dengan pengalaman dalam layanan hukum, perizinan, dan kepatuhan korporasi, Fasttrack membantu usaha memperoleh KKPR secara efektif, tepat waktu, dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku."
+                    {
+                        "id": "Dengan pengalaman dalam layanan hukum, perizinan, dan kepatuhan korporasi, Fasttrack membantu usaha memperoleh KKPR secara efektif, tepat waktu, dan sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.",
+                        "en": "With experience in legal services, licensing, and corporate compliance, Fasttrack helps businesses obtain the KKPR effectively, on time, and in accordance with applicable laws and regulations.",
+                        "zh": "凭借在法律服务、许可及企业合规方面的经验，Fasttrack协助企业高效、及时并依现行法律法规取得KKPR。"
+                    }
                 ],
                 "rincian_biaya": {
-                    "label": "Biaya Layanan",
-                    "biaya_penanganan": "Hubungi Kami"
+                    "label": {
+                        "id": "Biaya Layanan",
+                        "en": "Service Fee",
+                        "zh": "服务费"
+                    },
+                    "biaya_penanganan": {
+                        "id": "Hubungi Kami",
+                        "en": "Contact Us",
+                        "zh": "请联系我们"
+                    }
                 },
                 "dasar_hukum": [
-                    "Undang-Undang Nomor 26 Tahun 2007 tentang Penataan Ruang sebagaimana telah diubah",
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
-                    "Peraturan Pemerintah Nomor 21 Tahun 2021 tentang Penyelenggaraan Penataan Ruang",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko"
+                    {
+                        "id": "Undang-Undang Nomor 26 Tahun 2007 tentang Penataan Ruang sebagaimana telah diubah",
+                        "en": "Law Number 26 of 2007 concerning Spatial Planning, as amended",
+                        "zh": "2007年第26号《空间规划法》（经修订）"
+                    },
+                    {
+                        "id": "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
+                        "en": "Law Number 6 of 2023 concerning Job Creation",
+                        "zh": "2023年第6号《创造就业法》"
+                    },
+                    {
+                        "id": "Peraturan Pemerintah Nomor 21 Tahun 2021 tentang Penyelenggaraan Penataan Ruang",
+                        "en": "Government Regulation Number 21 of 2021 concerning the Administration of Spatial Planning",
+                        "zh": "第21号政府条例（2021年）关于空间规划的实施"
+                    },
+                    {
+                        "id": "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko",
+                        "en": "Government Regulation Number 28 of 2025 concerning the Administration of Risk-Based Business Licensing",
+                        "zh": "第28号政府条例（2025年）关于基于风险的营业许可实施"
+                    }
                 ]
             },
             {
                 "kode": "lingkungan",
-                "nama": "Perizinan Lingkungan",
-                "excerpt": "Pengurusan dokumen lingkungan hidup sebagai syarat perizinan usaha sesuai dampak kegiatan dan skala usaha.",
-                "harga": "Hubungi Kami",
-                "judul_layanan": "Perizinan Lingkungan: Fondasi Penting bagi Kepatuhan dan Keberlanjutan Usaha",
+                "nama": {
+                    "id": "Perizinan Lingkungan",
+                    "en": "Environmental Licensing",
+                    "zh": "环境许可"
+                },
+                "excerpt": {
+                    "id": "Pengurusan dokumen lingkungan hidup sebagai syarat perizinan usaha sesuai dampak kegiatan dan skala usaha.",
+                    "en": "Processing of environmental documents as a business licensing requirement in accordance with the activity's impact and scale of business.",
+                    "zh": "依经营活动影响及规模办理作为营业许可条件的环境文件。"
+                },
+                "harga": {
+                    "id": "Hubungi Kami",
+                    "en": "Contact Us",
+                    "zh": "请联系我们"
+                },
+                "judul_layanan": {
+                    "id": "Perizinan Lingkungan: Fondasi Penting bagi Kepatuhan dan Keberlanjutan Usaha",
+                    "en": "Environmental Licensing: An Essential Foundation for Business Compliance and Sustainability",
+                    "zh": "环境许可：企业合规与可持续发展的重要基石"
+                },
                 "penjelasan_layanan": [
-                    "Dalam menjalankan kegiatan usaha di Indonesia, pemenuhan aspek lingkungan hidup bukan hanya merupakan kewajiban hukum, tetapi juga menjadi bagian penting dalam membangun bisnis yang berkelanjutan, bertanggung jawab, dan memiliki kepastian operasional. Oleh karena itu, setiap pelaku usaha perlu memastikan bahwa kegiatan usahanya telah memenuhi ketentuan Persetujuan Lingkungan sesuai dengan tingkat risiko dan karakteristik usahanya.",
-                    "Seiring berlakunya Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, Persetujuan Lingkungan tetap menjadi salah satu Persyaratan Dasar Perizinan Berusaha yang wajib dipenuhi oleh pelaku usaha sebelum menjalankan kegiatan tertentu. Regulasi ini memperkuat integrasi proses perizinan lingkungan melalui sistem OSS serta memberikan kepastian mekanisme, kewenangan, dan jangka waktu pelayanan bagi dunia usaha."
+                    {
+                        "id": "Dalam menjalankan kegiatan usaha di Indonesia, pemenuhan aspek lingkungan hidup bukan hanya merupakan kewajiban hukum, tetapi juga menjadi bagian penting dalam membangun bisnis yang berkelanjutan, bertanggung jawab, dan memiliki kepastian operasional. Oleh karena itu, setiap pelaku usaha perlu memastikan bahwa kegiatan usahanya telah memenuhi ketentuan Persetujuan Lingkungan sesuai dengan tingkat risiko dan karakteristik usahanya.",
+                        "en": "In carrying out business activities in Indonesia, fulfilling environmental aspects is not merely a legal obligation, but also an essential part of building a sustainable, responsible business with operational certainty. Therefore, every business operator needs to ensure that its business activities have fulfilled the Environmental Approval requirements in accordance with the risk level and characteristics of its business.",
+                        "zh": "在印尼开展经营活动时，履行环境方面的要求不仅是法律义务，更是构建可持续、负责任且具备运营确定性企业的重要环节。因此，每个企业均须确保其经营活动已依其风险等级及业务特性满足环境批准的相关规定。"
+                    },
+                    {
+                        "id": "Seiring berlakunya Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, Persetujuan Lingkungan tetap menjadi salah satu Persyaratan Dasar Perizinan Berusaha yang wajib dipenuhi oleh pelaku usaha sebelum menjalankan kegiatan tertentu. Regulasi ini memperkuat integrasi proses perizinan lingkungan melalui sistem OSS serta memberikan kepastian mekanisme, kewenangan, dan jangka waktu pelayanan bagi dunia usaha.",
+                        "en": "With the enactment of Government Regulation Number 28 of 2025 concerning the Administration of Risk-Based Business Licensing, Environmental Approval remains one of the Basic Business Licensing Requirements that must be fulfilled by business operators before carrying out certain activities. This regulation strengthens the integration of the environmental licensing process through the OSS system and provides certainty regarding the mechanism, authority, and service timeframe for the business community.",
+                        "zh": "随着第28号政府条例（2025年）关于基于风险的营业许可实施生效，环境批准仍是企业在开展特定活动前必须满足的基础营业许可要求之一。该条例通过OSS系统加强环境许可流程的整合，并为企业界在机制、权限及服务时限方面提供确定性。"
+                    }
                 ],
                 "sub_layanan": [
                     {
-                        "label": "Apa itu Persetujuan Lingkungan?",
-                        "desc": "Persetujuan Lingkungan merupakan keputusan atau persetujuan dari pemerintah yang menjadi dasar bagi pelaku usaha untuk melaksanakan kegiatan usaha yang berpotensi menimbulkan dampak terhadap lingkungan hidup. Bentuk dokumen lingkungan yang diperlukan akan disesuaikan dengan tingkat dampak dan risiko kegiatan usaha, antara lain:",
+                        "label": {
+                            "id": "Apa itu Persetujuan Lingkungan?",
+                            "en": "What is an Environmental Approval?",
+                            "zh": "什么是环境批准？"
+                        },
+                        "desc": {
+                            "id": "Persetujuan Lingkungan merupakan keputusan atau persetujuan dari pemerintah yang menjadi dasar bagi pelaku usaha untuk melaksanakan kegiatan usaha yang berpotensi menimbulkan dampak terhadap lingkungan hidup. Bentuk dokumen lingkungan yang diperlukan akan disesuaikan dengan tingkat dampak dan risiko kegiatan usaha, antara lain:",
+                            "en": "An Environmental Approval is a government decision or approval that serves as the basis for a business operator to carry out business activities that have the potential to cause an impact on the environment. The form of environmental document required will be adjusted to the level of impact and risk of the business activity, among others:",
+                            "zh": "环境批准是政府作出的决定或批准，作为企业开展可能对环境造成影响的经营活动的依据。所需环境文件的形式将依经营活动的影响及风险等级调整，包括："
+                        },
                         "items": [
-                            "Analisis Mengenai Dampak Lingkungan (AMDAL)",
-                            "Upaya Pengelolaan Lingkungan Hidup dan Upaya Pemantauan Lingkungan Hidup (UKL-UPL)",
-                            "Surat Pernyataan Kesanggupan Pengelolaan dan Pemantauan Lingkungan Hidup (SPPL)"
+                            {
+                                "id": "Analisis Mengenai Dampak Lingkungan (AMDAL)",
+                                "en": "Environmental Impact Analysis (AMDAL)",
+                                "zh": "环境影响分析（AMDAL）"
+                            },
+                            {
+                                "id": "Upaya Pengelolaan Lingkungan Hidup dan Upaya Pemantauan Lingkungan Hidup (UKL-UPL)",
+                                "en": "Environmental Management Efforts and Environmental Monitoring Efforts (UKL-UPL)",
+                                "zh": "环境管理措施及环境监测措施（UKL-UPL）"
+                            },
+                            {
+                                "id": "Surat Pernyataan Kesanggupan Pengelolaan dan Pemantauan Lingkungan Hidup (SPPL)",
+                                "en": "Statement of Commitment to Environmental Management and Monitoring (SPPL)",
+                                "zh": "环境管理与监测承诺书（SPPL）"
+                            }
                         ]
                     }
                 ],
                 "keunggulan": {
-                    "title": "Mengapa Perizinan Lingkungan Penting?",
-                    "intro": "Persetujuan Lingkungan tidak hanya menjadi persyaratan administratif dalam proses perizinan berusaha, tetapi juga berfungsi untuk:",
+                    "title": {
+                        "id": "Mengapa Perizinan Lingkungan Penting?",
+                        "en": "Why is Environmental Licensing Important?",
+                        "zh": "为什么环境许可如此重要？"
+                    },
+                    "intro": {
+                        "id": "Persetujuan Lingkungan tidak hanya menjadi persyaratan administratif dalam proses perizinan berusaha, tetapi juga berfungsi untuk:",
+                        "en": "An Environmental Approval is not merely an administrative requirement in the business licensing process, but also serves to:",
+                        "zh": "环境批准不仅是营业许可流程中的行政要求，还具有以下作用："
+                    },
                     "items": [
-                        "Memastikan kegiatan usaha sesuai dengan ketentuan perlindungan lingkungan hidup",
-                        "Mengurangi risiko hukum dan sanksi administratif",
-                        "Mendukung kelancaran penerbitan perizinan usaha melalui OSS",
-                        "Meningkatkan kepercayaan investor, mitra bisnis, dan pemangku kepentingan",
-                        "Mewujudkan operasional usaha yang berkelanjutan dan bertanggung jawab"
+                        {
+                            "id": "Memastikan kegiatan usaha sesuai dengan ketentuan perlindungan lingkungan hidup",
+                            "en": "Ensure that business activities comply with environmental protection provisions",
+                            "zh": "确保经营活动符合环境保护相关规定"
+                        },
+                        {
+                            "id": "Mengurangi risiko hukum dan sanksi administratif",
+                            "en": "Reduce legal risks and administrative sanctions",
+                            "zh": "降低法律风险及行政处罚风险"
+                        },
+                        {
+                            "id": "Mendukung kelancaran penerbitan perizinan usaha melalui OSS",
+                            "en": "Support the smooth issuance of business licenses through OSS",
+                            "zh": "支持通过OSS系统顺利核发营业许可"
+                        },
+                        {
+                            "id": "Meningkatkan kepercayaan investor, mitra bisnis, dan pemangku kepentingan",
+                            "en": "Increase the confidence of investors, business partners, and stakeholders",
+                            "zh": "提升投资者、业务伙伴及利益相关方的信任"
+                        },
+                        {
+                            "id": "Mewujudkan operasional usaha yang berkelanjutan dan bertanggung jawab",
+                            "en": "Realize sustainable and responsible business operations",
+                            "zh": "实现可持续且负责任的经营运作"
+                        }
                     ]
                 },
                 "tahapan_layanan": {
-                    "title": "Jenis Layanan Persetujuan Lingkungan",
+                    "title": {
+                        "id": "Jenis Layanan Persetujuan Lingkungan",
+                        "en": "Types of Environmental Approval Services",
+                        "zh": "环境批准服务类型"
+                    },
                     "items": [
-                        "Identifikasi kebutuhan dokumen lingkungan berdasarkan KBLI dan tingkat risiko usaha",
-                        "Penyusunan dan pengurusan UKL-UPL",
-                        "Pendampingan proses AMDAL",
-                        "Pengurusan SPPL",
-                        "Koordinasi dengan instansi teknis terkait",
-                        "Pendampingan integrasi Persetujuan Lingkungan dalam sistem OSS",
-                        "Konsultasi kepatuhan lingkungan untuk perusahaan baru maupun perusahaan yang telah beroperasi"
+                        {
+                            "id": "Identifikasi kebutuhan dokumen lingkungan berdasarkan KBLI dan tingkat risiko usaha",
+                            "en": "Identification of environmental document requirements based on the KBLI business classification and business risk level",
+                            "zh": "根据KBLI行业分类及经营风险等级识别所需环境文件"
+                        },
+                        {
+                            "id": "Penyusunan dan pengurusan UKL-UPL",
+                            "en": "Preparation and processing of UKL-UPL",
+                            "zh": "编制及办理UKL-UPL"
+                        },
+                        {
+                            "id": "Pendampingan proses AMDAL",
+                            "en": "Assistance with the AMDAL process",
+                            "zh": "协助AMDAL流程"
+                        },
+                        {
+                            "id": "Pengurusan SPPL",
+                            "en": "Processing of SPPL",
+                            "zh": "办理SPPL"
+                        },
+                        {
+                            "id": "Koordinasi dengan instansi teknis terkait",
+                            "en": "Coordination with relevant technical agencies",
+                            "zh": "与相关技术机构协调"
+                        },
+                        {
+                            "id": "Pendampingan integrasi Persetujuan Lingkungan dalam sistem OSS",
+                            "en": "Assistance with the integration of Environmental Approval into the OSS system",
+                            "zh": "协助将环境批准整合至OSS系统"
+                        },
+                        {
+                            "id": "Konsultasi kepatuhan lingkungan untuk perusahaan baru maupun perusahaan yang telah beroperasi",
+                            "en": "Environmental compliance consultation for new companies as well as companies already in operation",
+                            "zh": "为新设公司及已运营公司提供环境合规咨询"
+                        }
                     ]
                 },
                 "penjelasan_penutup": [],
                 "rincian_biaya": {
-                    "label": "Biaya Layanan",
-                    "biaya_penanganan": "Hubungi Kami"
+                    "label": {
+                        "id": "Biaya Layanan",
+                        "en": "Service Fee",
+                        "zh": "服务费"
+                    },
+                    "biaya_penanganan": {
+                        "id": "Hubungi Kami",
+                        "en": "Contact Us",
+                        "zh": "请联系我们"
+                    }
                 },
                 "dasar_hukum": [
-                    "Undang-Undang Nomor 32 Tahun 2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup sebagaimana telah diubah",
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko"
+                    {
+                        "id": "Undang-Undang Nomor 32 Tahun 2009 tentang Perlindungan dan Pengelolaan Lingkungan Hidup sebagaimana telah diubah",
+                        "en": "Law Number 32 of 2009 concerning Environmental Protection and Management, as amended",
+                        "zh": "2009年第32号《环境保护与管理法》（经修订）"
+                    },
+                    {
+                        "id": "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
+                        "en": "Law Number 6 of 2023 concerning Job Creation",
+                        "zh": "2023年第6号《创造就业法》"
+                    },
+                    {
+                        "id": "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko",
+                        "en": "Government Regulation Number 28 of 2025 concerning the Administration of Risk-Based Business Licensing",
+                        "zh": "第28号政府条例（2025年）关于基于风险的营业许可实施"
+                    }
                 ]
             },
             {
                 "kode": "pbg",
-                "nama": "Persetujuan Bangunan Gedung (PBG)",
-                "excerpt": "Pengurusan persetujuan pembangunan atau renovasi gedung sesuai standar teknis dan tata ruang yang berlaku.",
-                "harga": "Hubungi Kami",
-                "judul_layanan": "Pastikan Bangunan Anda Memenuhi Ketentuan Hukum Sebelum Dibangun atau Dimanfaatkan",
+                "nama": {
+                    "id": "Persetujuan Bangunan Gedung (PBG)",
+                    "en": "Building Construction Approval (PBG)",
+                    "zh": "建筑物批准（PBG）"
+                },
+                "excerpt": {
+                    "id": "Pengurusan persetujuan pembangunan atau renovasi gedung sesuai standar teknis dan tata ruang yang berlaku.",
+                    "en": "Processing of approval for building construction or renovation in accordance with applicable technical standards and spatial planning.",
+                    "zh": "依现行技术标准及空间规划办理建筑物新建或翻新批准。"
+                },
+                "harga": {
+                    "id": "Hubungi Kami",
+                    "en": "Contact Us",
+                    "zh": "请联系我们"
+                },
+                "judul_layanan": {
+                    "id": "Pastikan Bangunan Anda Memenuhi Ketentuan Hukum Sebelum Dibangun atau Dimanfaatkan",
+                    "en": "Ensure Your Building Complies with Legal Provisions Before Construction or Use",
+                    "zh": "确保您的建筑物在建造或使用前符合法律规定"
+                },
                 "penjelasan_layanan": [
-                    "Persetujuan Bangunan Gedung (PBG) merupakan perizinan yang wajib dimiliki sebelum pelaksanaan pembangunan, perubahan, perluasan, pengurangan, maupun perawatan bangunan gedung. PBG berfungsi sebagai persetujuan dari pemerintah terhadap rencana teknis bangunan agar sesuai dengan ketentuan tata ruang, standar keselamatan, kesehatan, kenyamanan, dan kemudahan bangunan.",
-                    "Dalam sistem Perizinan Berusaha Berbasis Risiko, PBG menjadi salah satu Persyaratan Dasar Perizinan Berusaha yang wajib dipenuhi oleh pelaku usaha yang melakukan pembangunan atau pemanfaatan bangunan untuk kegiatan usahanya. Ketentuan ini diperkuat melalui Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, yang menempatkan PBG sebagai bagian integral dari proses legalitas usaha melalui sistem OSS.",
-                    "PBG merupakan pengganti dari izin Mendirikan Bangunan (IMB) yang sebelumnya berlaku. Berbeda dengan IMB yang berfokus pada izin mendirikan bangunan, PBG menitikberatkan pada persetujuan atas standar teknis bangunan yang akan dibangun atau dimanfaatkan sesuai peruntukannya."
+                    {
+                        "id": "Persetujuan Bangunan Gedung (PBG) merupakan perizinan yang wajib dimiliki sebelum pelaksanaan pembangunan, perubahan, perluasan, pengurangan, maupun perawatan bangunan gedung. PBG berfungsi sebagai persetujuan dari pemerintah terhadap rencana teknis bangunan agar sesuai dengan ketentuan tata ruang, standar keselamatan, kesehatan, kenyamanan, dan kemudahan bangunan.",
+                        "en": "Building Construction Approval (PBG) is a license that must be held before the construction, alteration, expansion, reduction, or maintenance of a building is carried out. PBG functions as government approval of the building's technical plan to ensure it complies with spatial planning provisions and standards of safety, health, comfort, and accessibility.",
+                        "zh": "建筑物批准（PBG）是在建筑物新建、改建、扩建、缩建或维护前必须取得的许可。PBG作为政府对建筑物技术方案的批准，以确保其符合空间规划规定及安全、健康、舒适与便利标准。"
+                    },
+                    {
+                        "id": "Dalam sistem Perizinan Berusaha Berbasis Risiko, PBG menjadi salah satu Persyaratan Dasar Perizinan Berusaha yang wajib dipenuhi oleh pelaku usaha yang melakukan pembangunan atau pemanfaatan bangunan untuk kegiatan usahanya. Ketentuan ini diperkuat melalui Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, yang menempatkan PBG sebagai bagian integral dari proses legalitas usaha melalui sistem OSS.",
+                        "en": "Under the Risk-Based Business Licensing system, PBG is one of the Basic Business Licensing Requirements that must be fulfilled by business operators constructing or utilizing a building for their business activities. This provision is reinforced by Government Regulation Number 28 of 2025 concerning the Administration of Risk-Based Business Licensing, which places PBG as an integral part of the business legality process through the OSS system.",
+                        "zh": "在基于风险的营业许可体系中，PBG是从事建筑物新建或利用以开展经营活动的企业必须满足的基础营业许可要求之一。该规定通过第28号政府条例（2025年）关于基于风险的营业许可实施得到强化，将PBG确立为通过OSS系统办理企业合法性流程不可或缺的一环。"
+                    },
+                    {
+                        "id": "PBG merupakan pengganti dari izin Mendirikan Bangunan (IMB) yang sebelumnya berlaku. Berbeda dengan IMB yang berfokus pada izin mendirikan bangunan, PBG menitikberatkan pada persetujuan atas standar teknis bangunan yang akan dibangun atau dimanfaatkan sesuai peruntukannya.",
+                        "en": "PBG replaces the previously applicable Building Construction Permit (IMB). Unlike the IMB, which focused on the permit to construct a building, PBG emphasizes approval of the technical standards of the building to be constructed or utilized in accordance with its designated purpose.",
+                        "zh": "PBG取代了此前适用的建筑物建造许可（IMB）。与侧重于建筑物建造许可的IMB不同，PBG着重于对拟建造或利用建筑物依其用途所应符合技术标准的批准。"
+                    }
                 ],
                 "jenis_bangunan": {
-                    "intro": "PBG diperlukan untuk berbagai jenis bangunan, antara lain:",
+                    "intro": {
+                        "id": "PBG diperlukan untuk berbagai jenis bangunan, antara lain:",
+                        "en": "PBG is required for various types of buildings, including:",
+                        "zh": "PBG适用于多种类型的建筑物，包括："
+                    },
                     "items": [
-                        "Gedung perkantoran",
-                        "Bangunan industri dan pabrik",
-                        "Gudang dan fasilitas logistik",
-                        "Ruko dan bangunan komersial",
-                        "Hotel, restoran, dan pusat usaha",
-                        "Bangunan pendidikan, kesehatan, dan fasilitas umum lainnya"
+                        {
+                            "id": "Gedung perkantoran",
+                            "en": "Office buildings",
+                            "zh": "办公楼"
+                        },
+                        {
+                            "id": "Bangunan industri dan pabrik",
+                            "en": "Industrial buildings and factories",
+                            "zh": "工业建筑及工厂"
+                        },
+                        {
+                            "id": "Gudang dan fasilitas logistik",
+                            "en": "Warehouses and logistics facilities",
+                            "zh": "仓库及物流设施"
+                        },
+                        {
+                            "id": "Ruko dan bangunan komersial",
+                            "en": "Shophouses and commercial buildings",
+                            "zh": "店屋及商业建筑"
+                        },
+                        {
+                            "id": "Hotel, restoran, dan pusat usaha",
+                            "en": "Hotels, restaurants, and business centers",
+                            "zh": "酒店、餐厅及商务中心"
+                        },
+                        {
+                            "id": "Bangunan pendidikan, kesehatan, dan fasilitas umum lainnya",
+                            "en": "Educational, healthcare, and other public facility buildings",
+                            "zh": "教育、医疗及其他公共设施建筑"
+                        }
                     ]
                 },
                 "sub_layanan": [],
                 "keunggulan": {
-                    "title": "Mengapa Sertifikat Laik Fungsi Penting?",
-                    "intro": "Kepemilikan PBG memberikan kepastian hukum atas bangunan yang digunakan dalam kegiatan usaha sekaligus menjadi dasar untuk memperoleh dokumen lanjutan seperti Sertifikat Laik Fungsi (SLF) yang menyatakan bahwa bangunan telah layak digunakan sesuai fungsinya. Selain itu, PBG membantu pelaku usaha:",
+                    "title": {
+                        "id": "Mengapa Sertifikat Laik Fungsi Penting?",
+                        "en": "Why is a Certificate of Function Suitability Important?",
+                        "zh": "为什么适用功能证书如此重要？"
+                    },
+                    "intro": {
+                        "id": "Kepemilikan PBG memberikan kepastian hukum atas bangunan yang digunakan dalam kegiatan usaha sekaligus menjadi dasar untuk memperoleh dokumen lanjutan seperti Sertifikat Laik Fungsi (SLF) yang menyatakan bahwa bangunan telah layak digunakan sesuai fungsinya. Selain itu, PBG membantu pelaku usaha:",
+                        "en": "Holding a PBG provides legal certainty for the building used in business activities and also serves as the basis for obtaining follow-up documents such as the Certificate of Function Suitability (SLF), which states that the building is fit for use in accordance with its function. In addition, PBG helps business operators:",
+                        "zh": "持有PBG可为用于经营活动的建筑物提供法律确定性，同时也是取得后续文件（如适用功能证书SLF，证明该建筑物已适合按其功能使用）的依据。此外，PBG还可协助企业："
+                    },
                     "items": [
-                        "Memenuhi persyaratan legalitas usaha",
-                        "Menghindari sanksi administratif",
-                        "Memastikan kesesuaian bangunan dengan ketentuan tata ruang",
-                        "Mendukung proses investasi dan pembiayaan",
-                        "Memberikan kepastian dalam operasional usaha"
+                        {
+                            "id": "Memenuhi persyaratan legalitas usaha",
+                            "en": "Fulfill business legality requirements",
+                            "zh": "满足经营合法性要求"
+                        },
+                        {
+                            "id": "Menghindari sanksi administratif",
+                            "en": "Avoid administrative sanctions",
+                            "zh": "避免行政处罚"
+                        },
+                        {
+                            "id": "Memastikan kesesuaian bangunan dengan ketentuan tata ruang",
+                            "en": "Ensure the building's conformity with spatial planning provisions",
+                            "zh": "确保建筑物符合空间规划规定"
+                        },
+                        {
+                            "id": "Mendukung proses investasi dan pembiayaan",
+                            "en": "Support the investment and financing process",
+                            "zh": "支持投资与融资流程"
+                        },
+                        {
+                            "id": "Memberikan kepastian dalam operasional usaha",
+                            "en": "Provide certainty in business operations",
+                            "zh": "为经营运作提供确定性"
+                        }
                     ]
                 },
                 "tahapan_layanan": {
-                    "title": "Jenis Layanan Pengurusan PBG",
+                    "title": {
+                        "id": "Jenis Layanan Pengurusan PBG",
+                        "en": "Types of PBG Processing Services",
+                        "zh": "PBG办理服务类型"
+                    },
                     "items": [
-                        "Analisis kebutuhan dan kewajiban PBG",
-                        "Pemeriksaan kelengkapan dokumen teknis",
-                        "Pendampingan penyusunan dokumen persyaratan",
-                        "Koordinasi dengan instansi teknis terkait",
-                        "Pendampingan proses pengajuan melalui sistem yang berlaku",
-                        "Pengurusan perubahan dan pembaruan PBG"
+                        {
+                            "id": "Analisis kebutuhan dan kewajiban PBG",
+                            "en": "Analysis of PBG requirements and obligations",
+                            "zh": "分析PBG需求及义务"
+                        },
+                        {
+                            "id": "Pemeriksaan kelengkapan dokumen teknis",
+                            "en": "Review of the completeness of technical documents",
+                            "zh": "审查技术文件完整性"
+                        },
+                        {
+                            "id": "Pendampingan penyusunan dokumen persyaratan",
+                            "en": "Assistance with the preparation of requirement documents",
+                            "zh": "协助编制要求文件"
+                        },
+                        {
+                            "id": "Koordinasi dengan instansi teknis terkait",
+                            "en": "Coordination with relevant technical agencies",
+                            "zh": "与相关技术机构协调"
+                        },
+                        {
+                            "id": "Pendampingan proses pengajuan melalui sistem yang berlaku",
+                            "en": "Assistance with the application process through the applicable system",
+                            "zh": "协助通过现行系统办理申请流程"
+                        },
+                        {
+                            "id": "Pengurusan perubahan dan pembaruan PBG",
+                            "en": "Processing of PBG changes and renewals",
+                            "zh": "办理PBG变更及更新"
+                        }
                     ]
                 },
                 "penjelasan_penutup": [],
                 "rincian_biaya": {
-                    "label": "Biaya Layanan",
-                    "biaya_penanganan": "Hubungi Kami"
+                    "label": {
+                        "id": "Biaya Layanan",
+                        "en": "Service Fee",
+                        "zh": "服务费"
+                    },
+                    "biaya_penanganan": {
+                        "id": "Hubungi Kami",
+                        "en": "Contact Us",
+                        "zh": "请联系我们"
+                    }
                 },
                 "dasar_hukum": [
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
-                    "Peraturan Pemerintah Nomor 16 Tahun 2021 tentang Peraturan Pelaksanaan Undang-Undang Bangunan Gedung",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko",
-                    "Peraturan teknis terkait bangunan gedung yang berlaku"
+                    {
+                        "id": "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
+                        "en": "Law Number 6 of 2023 concerning Job Creation",
+                        "zh": "2023年第6号《创造就业法》"
+                    },
+                    {
+                        "id": "Peraturan Pemerintah Nomor 16 Tahun 2021 tentang Peraturan Pelaksanaan Undang-Undang Bangunan Gedung",
+                        "en": "Government Regulation Number 16 of 2021 concerning the Implementing Regulation of the Building Law",
+                        "zh": "第16号政府条例（2021年）关于建筑物法实施条例"
+                    },
+                    {
+                        "id": "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko",
+                        "en": "Government Regulation Number 28 of 2025 concerning the Administration of Risk-Based Business Licensing",
+                        "zh": "第28号政府条例（2025年）关于基于风险的营业许可实施"
+                    },
+                    {
+                        "id": "Peraturan teknis terkait bangunan gedung yang berlaku",
+                        "en": "Applicable technical regulations relating to buildings",
+                        "zh": "现行建筑物相关技术条例"
+                    }
                 ]
             },
             {
                 "kode": "slf",
-                "nama": "Sertifikat Laik Fungsi (SLF)",
-                "excerpt": "Pengurusan sertifikat yang menyatakan bangunan gedung telah memenuhi persyaratan laik fungsi secara teknis dan administratif.",
-                "harga": "Hubungi Kami",
-                "judul_layanan": "Pastikan Bangunan Anda Layak Digunakan dan Memenuhi Ketentuan Hukum",
+                "nama": {
+                    "id": "Sertifikat Laik Fungsi (SLF)",
+                    "en": "Certificate of Function Suitability (SLF)",
+                    "zh": "适用功能证书（SLF）"
+                },
+                "excerpt": {
+                    "id": "Pengurusan sertifikat yang menyatakan bangunan gedung telah memenuhi persyaratan laik fungsi secara teknis dan administratif.",
+                    "en": "Processing of the certificate stating that a building has fulfilled the technical and administrative requirements for function suitability.",
+                    "zh": "办理证明建筑物已满足技术及行政层面适用功能要求的证书。"
+                },
+                "harga": {
+                    "id": "Hubungi Kami",
+                    "en": "Contact Us",
+                    "zh": "请联系我们"
+                },
+                "judul_layanan": {
+                    "id": "Pastikan Bangunan Anda Layak Digunakan dan Memenuhi Ketentuan Hukum",
+                    "en": "Ensure Your Building is Fit for Use and Complies with Legal Provisions",
+                    "zh": "确保您的建筑物适合使用并符合法律规定"
+                },
                 "penjelasan_layanan": [
-                    "Sertifikat Laik Fungsi (SLF) merupakan dokumen resmi yang menyatakan bahwa suatu bangunan gedung telah memenuhi persyaratan teknis dan layak digunakan sesuai fungsi yang telah ditetapkan. SLF menjadi bukti bahwa bangunan telah memenuhi aspek keselamatan, kesehatan, kenyamanan, kemudahan, serta kesesuaian pemanfaatan bangunan berdasarkan ketentuan peraturan perundang-undangan yang berlaku.",
-                    "Dalam sistem Perizinan Berusaha Berbasis Risiko (PBBR), SLF menjadi salah satu dokumen penting yang berkaitan dengan legalitas operasional bangunan untuk mendukung kegiatan usaha. Melalui Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, pemerintah menegaskan pentingnya pemenuhan persyaratan dasar perizinan, termasuk aspek bangunan gedung, guna memberikan kepastian hukum dan perlindungan bagi pelaku usaha.",
-                    "SLF adalah sertifikat yang diterbitkan oleh pemerintah daerah atau instansi yang berwenang sebagai bukti bahwa bangunan telah selesai dibangun dan dapat digunakan sesuai dengan fungsi yang direncanakan. Sertifikat ini umumnya diperlukan untuk berbagai jenis bangunan, antara lain:"
+                    {
+                        "id": "Sertifikat Laik Fungsi (SLF) merupakan dokumen resmi yang menyatakan bahwa suatu bangunan gedung telah memenuhi persyaratan teknis dan layak digunakan sesuai fungsi yang telah ditetapkan. SLF menjadi bukti bahwa bangunan telah memenuhi aspek keselamatan, kesehatan, kenyamanan, kemudahan, serta kesesuaian pemanfaatan bangunan berdasarkan ketentuan peraturan perundang-undangan yang berlaku.",
+                        "en": "The Certificate of Function Suitability (SLF) is an official document stating that a building has fulfilled the technical requirements and is fit for use in accordance with its designated function. SLF serves as proof that the building has fulfilled the aspects of safety, health, comfort, accessibility, and conformity of building use based on applicable laws and regulations.",
+                        "zh": "适用功能证书（SLF）是证明建筑物已满足技术要求并适合按既定功能使用的正式文件。SLF可证明该建筑物已依现行法律法规满足安全、健康、舒适、便利及使用符合性等方面要求。"
+                    },
+                    {
+                        "id": "Dalam sistem Perizinan Berusaha Berbasis Risiko (PBBR), SLF menjadi salah satu dokumen penting yang berkaitan dengan legalitas operasional bangunan untuk mendukung kegiatan usaha. Melalui Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko, pemerintah menegaskan pentingnya pemenuhan persyaratan dasar perizinan, termasuk aspek bangunan gedung, guna memberikan kepastian hukum dan perlindungan bagi pelaku usaha.",
+                        "en": "Under the Risk-Based Business Licensing (PBBR) system, SLF is one of the important documents relating to the operational legality of a building in support of business activities. Through Government Regulation Number 28 of 2025 concerning the Administration of Risk-Based Business Licensing, the government affirms the importance of fulfilling basic licensing requirements, including building aspects, in order to provide legal certainty and protection for business operators.",
+                        "zh": "在基于风险的营业许可（PBBR）体系中，SLF是与建筑物运营合法性相关、支持经营活动开展的重要文件之一。政府通过第28号政府条例（2025年）关于基于风险的营业许可实施，强调履行基础许可要求（包括建筑物方面）的重要性，以为企业提供法律确定性及保障。"
+                    },
+                    {
+                        "id": "SLF adalah sertifikat yang diterbitkan oleh pemerintah daerah atau instansi yang berwenang sebagai bukti bahwa bangunan telah selesai dibangun dan dapat digunakan sesuai dengan fungsi yang direncanakan. Sertifikat ini umumnya diperlukan untuk berbagai jenis bangunan, antara lain:",
+                        "en": "SLF is a certificate issued by the local government or competent authority as proof that a building has been completed and can be used in accordance with its planned function. This certificate is generally required for various types of buildings, including:",
+                        "zh": "SLF是由地方政府或主管机关核发的证书，用以证明建筑物已建造完成并可依计划功能使用。该证书通常适用于多种类型的建筑物，包括："
+                    }
                 ],
                 "jenis_bangunan": {
-                    "intro": "",
+                    "intro": {
+                        "id": "",
+                        "en": "",
+                        "zh": ""
+                    },
                     "items": [
-                        "Gedung perkantoran",
-                        "Bangunan industri dan pabrik",
-                        "Gudang dan fasilitas logistik",
-                        "Hotel dan penginapan",
-                        "Pusat perdagangan dan pertokoan",
-                        "Rumah sakit, klinik, dan fasilitas kesehatan",
-                        "Bangunan komersial dan fasilitas usaha lainnya"
+                        {
+                            "id": "Gedung perkantoran",
+                            "en": "Office buildings",
+                            "zh": "办公楼"
+                        },
+                        {
+                            "id": "Bangunan industri dan pabrik",
+                            "en": "Industrial buildings and factories",
+                            "zh": "工业建筑及工厂"
+                        },
+                        {
+                            "id": "Gudang dan fasilitas logistik",
+                            "en": "Warehouses and logistics facilities",
+                            "zh": "仓库及物流设施"
+                        },
+                        {
+                            "id": "Hotel dan penginapan",
+                            "en": "Hotels and lodgings",
+                            "zh": "酒店及旅馆"
+                        },
+                        {
+                            "id": "Pusat perdagangan dan pertokoan",
+                            "en": "Trade centers and shops",
+                            "zh": "商贸中心及店铺"
+                        },
+                        {
+                            "id": "Rumah sakit, klinik, dan fasilitas kesehatan",
+                            "en": "Hospitals, clinics, and healthcare facilities",
+                            "zh": "医院、诊所及医疗设施"
+                        },
+                        {
+                            "id": "Bangunan komersial dan fasilitas usaha lainnya",
+                            "en": "Commercial buildings and other business facilities",
+                            "zh": "商业建筑及其他经营设施"
+                        }
                     ]
                 },
                 "sub_layanan": [],
                 "keunggulan": {
-                    "title": "Manfaat Kepemilikan SLF",
-                    "intro": "Kepemilikan SLF memberikan berbagai manfaat bagi pelaku usaha, antara lain:",
+                    "title": {
+                        "id": "Manfaat Kepemilikan SLF",
+                        "en": "Benefits of Holding an SLF",
+                        "zh": "持有SLF的益处"
+                    },
+                    "intro": {
+                        "id": "Kepemilikan SLF memberikan berbagai manfaat bagi pelaku usaha, antara lain:",
+                        "en": "Holding an SLF provides various benefits for business operators, including:",
+                        "zh": "持有SLF可为企业带来多项益处，包括："
+                    },
                     "items": [
-                        "Menunjukkan bahwa bangunan telah memenuhi standar teknis yang dipersyaratkan",
-                        "Mendukung kepatuhan terhadap regulasi bangunan gedung",
-                        "Mengurangi risiko sanksi administratif",
-                        "Memberikan kepastian hukum dalam penggunaan bangunan",
-                        "Mendukung proses investasi, pembiayaan, dan kerja sama",
-                        "Menjadi bukti bahwa bangunan aman dan layak digunakan"
+                        {
+                            "id": "Menunjukkan bahwa bangunan telah memenuhi standar teknis yang dipersyaratkan",
+                            "en": "Demonstrating that the building has fulfilled the required technical standards",
+                            "zh": "证明建筑物已满足所要求的技术标准"
+                        },
+                        {
+                            "id": "Mendukung kepatuhan terhadap regulasi bangunan gedung",
+                            "en": "Supporting compliance with building regulations",
+                            "zh": "支持遵守建筑物相关法规"
+                        },
+                        {
+                            "id": "Mengurangi risiko sanksi administratif",
+                            "en": "Reducing the risk of administrative sanctions",
+                            "zh": "降低行政处罚风险"
+                        },
+                        {
+                            "id": "Memberikan kepastian hukum dalam penggunaan bangunan",
+                            "en": "Providing legal certainty in the use of the building",
+                            "zh": "为建筑物使用提供法律确定性"
+                        },
+                        {
+                            "id": "Mendukung proses investasi, pembiayaan, dan kerja sama",
+                            "en": "Supporting investment, financing, and cooperation processes",
+                            "zh": "支持投资、融资及合作流程"
+                        },
+                        {
+                            "id": "Menjadi bukti bahwa bangunan aman dan layak digunakan",
+                            "en": "Serving as proof that the building is safe and fit for use",
+                            "zh": "证明建筑物安全且适合使用"
+                        }
                     ]
                 },
                 "tahapan_layanan": {
-                    "title": "Jenis Layanan Pengurusan SLF",
+                    "title": {
+                        "id": "Jenis Layanan Pengurusan SLF",
+                        "en": "Types of SLF Processing Services",
+                        "zh": "SLF办理服务类型"
+                    },
                     "items": [
-                        "Analisis kebutuhan dan kewajiban SLF",
-                        "Pemeriksaan dokumen teknis bangunan",
-                        "Pendampingan pemenuhan persyaratan administrasi",
-                        "Koordinasi dengan instansi teknis terkait",
-                        "Pendampingan proses pemeriksaan dan verifikasi bangunan",
-                        "Pengurusan penerbitan dan perpanjangan SLF",
-                        "Konsultasi kepatuhan bangunan gedung dan perizinan usaha"
+                        {
+                            "id": "Analisis kebutuhan dan kewajiban SLF",
+                            "en": "Analysis of SLF requirements and obligations",
+                            "zh": "分析SLF需求及义务"
+                        },
+                        {
+                            "id": "Pemeriksaan dokumen teknis bangunan",
+                            "en": "Review of the building's technical documents",
+                            "zh": "审查建筑物技术文件"
+                        },
+                        {
+                            "id": "Pendampingan pemenuhan persyaratan administrasi",
+                            "en": "Assistance with fulfilling administrative requirements",
+                            "zh": "协助满足行政要求"
+                        },
+                        {
+                            "id": "Koordinasi dengan instansi teknis terkait",
+                            "en": "Coordination with relevant technical agencies",
+                            "zh": "与相关技术机构协调"
+                        },
+                        {
+                            "id": "Pendampingan proses pemeriksaan dan verifikasi bangunan",
+                            "en": "Assistance with the building inspection and verification process",
+                            "zh": "协助建筑物检查及核验流程"
+                        },
+                        {
+                            "id": "Pengurusan penerbitan dan perpanjangan SLF",
+                            "en": "Processing of SLF issuance and renewal",
+                            "zh": "办理SLF核发及延期"
+                        },
+                        {
+                            "id": "Konsultasi kepatuhan bangunan gedung dan perizinan usaha",
+                            "en": "Consultation on building compliance and business licensing",
+                            "zh": "提供建筑物合规及营业许可咨询"
+                        }
                     ]
                 },
                 "penjelasan_penutup": [],
                 "rincian_biaya": {
-                    "label": "Biaya Layanan",
-                    "biaya_penanganan": "Hubungi Kami"
+                    "label": {
+                        "id": "Biaya Layanan",
+                        "en": "Service Fee",
+                        "zh": "服务费"
+                    },
+                    "biaya_penanganan": {
+                        "id": "Hubungi Kami",
+                        "en": "Contact Us",
+                        "zh": "请联系我们"
+                    }
                 },
                 "dasar_hukum": [
-                    "Undang-Undang Nomor 28 Tahun 2002 tentang Bangunan Gedung sebagaimana telah diubah",
-                    "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
-                    "Peraturan Pemerintah Nomor 16 Tahun 2021 tentang Peraturan Pelaksanaan Undang-Undang Bangunan Gedung",
-                    "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko"
+                    {
+                        "id": "Undang-Undang Nomor 28 Tahun 2002 tentang Bangunan Gedung sebagaimana telah diubah",
+                        "en": "Law Number 28 of 2002 concerning Buildings, as amended",
+                        "zh": "2002年第28号《建筑物法》（经修订）"
+                    },
+                    {
+                        "id": "Undang-Undang Nomor 6 Tahun 2023 tentang Cipta Kerja",
+                        "en": "Law Number 6 of 2023 concerning Job Creation",
+                        "zh": "2023年第6号《创造就业法》"
+                    },
+                    {
+                        "id": "Peraturan Pemerintah Nomor 16 Tahun 2021 tentang Peraturan Pelaksanaan Undang-Undang Bangunan Gedung",
+                        "en": "Government Regulation Number 16 of 2021 concerning the Implementing Regulation of the Building Law",
+                        "zh": "第16号政府条例（2021年）关于建筑物法实施条例"
+                    },
+                    {
+                        "id": "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko",
+                        "en": "Government Regulation Number 28 of 2025 concerning the Administration of Risk-Based Business Licensing",
+                        "zh": "第28号政府条例（2025年）关于基于风险的营业许可实施"
+                    }
                 ]
             }
         ],
@@ -226,206 +726,604 @@
     },
     {
         "id": 2,
-        "name": "Perizinan Berusaha (Sertifikat Standar/Izin)",
+        "name": {
+            "id": "Perizinan Berusaha (Sertifikat Standar/Izin)",
+            "en": "Business Licensing (Standard Certificate/License)",
+            "zh": "营业许可（标准证书/许可证）"
+        },
         "price": null,
-        "price_label": "Hubungi Kami",
-        "excerpt": "Pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional di Indonesia.",
-        "detail_path": "/perizinan-dasar-dan-perizinan-berusaha/2",
+        "price_label": {
+            "id": "Hubungi Kami",
+            "en": "Contact Us",
+            "zh": "请联系我们"
+        },
+        "excerpt": {
+            "id": "Pengurusan perizinan dasar yang wajib dipenuhi sebelum pelaku usaha menjalankan kegiatan operasional di Indonesia.",
+            "en": "Processing of the basic licenses that must be fulfilled before a business operator carries out operational activities in Indonesia.",
+            "zh": "办理企业在印尼开展运营活动前必须取得的基础许可。"
+        },
+        "detail_path": "/perizinan-berusaha/2",
         "image": "",
-        "penjelasan_umum_label": "Penjelasan Layanan",
+        "penjelasan_umum_label": {
+            "id": "Penjelasan Layanan",
+            "en": "Service Explanation",
+            "zh": "服务说明"
+        },
         "penjelasan_umum": [
-            "Dalam sistem Perizinan Berusaha Berbasis Risiko yang berlaku di Indonesia, tidak seluruh pelaku usaha dapat langsung menjalankan kegiatan usahanya hanya dengan memperoleh Nomor Induk Berusaha (NIB). Untuk bidang usaha tertentu yang memiliki tingkat risiko Menengah Tinggi dan Tinggi, pelaku usaha diwajibkan memenuhi persyaratan tambahan berupa Sertifikat Standar Terverifikasi dan/atau Izin Terverifikasi yang diterbitkan oleh kementerian atau lembaga teknis sesuai sektor usahanya.",
-            "Kewajiban tersebut berlaku bagi berbagai sektor usaha strategis seperti Industri, Perdagangan, Kesehatan, Energi dan Sumber Daya Mineral, Konstruksi, Lingkungan Hidup, Transportasi, Pariwisata, Pendidikan, Telekomunikasi dan Digital (Komdigi), Jasa Keuangan, Pertanian, Kelautan dan Perikanan, serta sektor lainnya yang diatur dalam ketentuan Perizinan Berusaha Berbasis Risiko. Tanpa terpenuhinya persyaratan verifikasi tersebut, pelaku usaha berpotensi mengalami kendala dalam menjalankan operasional, mengikuti tender, melakukan kerja sama bisnis, memperoleh sertifikasi lanjutan, maupun menghadapi pengawasan dari instansi pemerintah."
+            {
+                "id": "Dalam sistem Perizinan Berusaha Berbasis Risiko yang berlaku di Indonesia, tidak seluruh pelaku usaha dapat langsung menjalankan kegiatan usahanya hanya dengan memperoleh Nomor Induk Berusaha (NIB). Untuk bidang usaha tertentu yang memiliki tingkat risiko Menengah Tinggi dan Tinggi, pelaku usaha diwajibkan memenuhi persyaratan tambahan berupa Sertifikat Standar Terverifikasi dan/atau Izin Terverifikasi yang diterbitkan oleh kementerian atau lembaga teknis sesuai sektor usahanya.",
+                "en": "Under Indonesia's Risk-Based Business Licensing system, not all business operators can immediately carry out their business activities simply by obtaining a Business Identification Number (NIB). For certain business fields with a Medium-High and High risk level, business operators are required to fulfill additional requirements in the form of a Verified Standard Certificate and/or a Verified License issued by the relevant ministry or technical agency according to their business sector.",
+                "zh": "在印尼现行的基于风险的营业许可体系中，并非所有企业仅凭取得营业识别号（NIB）即可直接开展经营活动。对于风险等级为中高及高的特定行业，企业须额外满足由相关部委或技术机构依其行业领域核发的经核实标准证书及/或经核实许可证要求。"
+            },
+            {
+                "id": "Kewajiban tersebut berlaku bagi berbagai sektor usaha strategis seperti Industri, Perdagangan, Kesehatan, Energi dan Sumber Daya Mineral, Konstruksi, Lingkungan Hidup, Transportasi, Pariwisata, Pendidikan, Telekomunikasi dan Digital (Komdigi), Jasa Keuangan, Pertanian, Kelautan dan Perikanan, serta sektor lainnya yang diatur dalam ketentuan Perizinan Berusaha Berbasis Risiko. Tanpa terpenuhinya persyaratan verifikasi tersebut, pelaku usaha berpotensi mengalami kendala dalam menjalankan operasional, mengikuti tender, melakukan kerja sama bisnis, memperoleh sertifikasi lanjutan, maupun menghadapi pengawasan dari instansi pemerintah.",
+                "en": "This obligation applies to various strategic business sectors such as Industry, Trade, Health, Energy and Mineral Resources, Construction, Environment, Transportation, Tourism, Education, Telecommunications and Digital (Komdigi), Financial Services, Agriculture, Marine Affairs and Fisheries, and other sectors regulated under the Risk-Based Business Licensing provisions. Without fulfilling these verification requirements, business operators may face obstacles in carrying out operations, participating in tenders, engaging in business cooperation, obtaining further certification, or facing supervision from government agencies.",
+                "zh": "该义务适用于工业、贸易、卫生、能源与矿产资源、建筑、环境、交通运输、旅游、教育、通信与数字（Komdigi）、金融服务、农业、海洋与渔业等多个战略性行业，以及基于风险的营业许可规定中涉及的其他行业。若未满足上述核实要求，企业可能在运营、参与招标、开展业务合作、取得后续认证，乃至面临政府机构监管等方面遇到障碍。"
+            }
         ],
         "sektor_perizinan": [
-            "Industri",
-            "Perdagangan",
-            "Konstruksi",
-            "Komunikasi dan Digital",
-            "Transportasi",
-            "Teknologi",
-            "Pariwisata",
-            "Pendidikan",
-            "Ketenagakerjaan",
-            "Perikanan dan Kelautan",
-            "Kesehatan"
+            {
+                "id": "Industri",
+                "en": "Industry",
+                "zh": "工业"
+            },
+            {
+                "id": "Perdagangan",
+                "en": "Trade",
+                "zh": "贸易"
+            },
+            {
+                "id": "Konstruksi",
+                "en": "Construction",
+                "zh": "建筑"
+            },
+            {
+                "id": "Komunikasi dan Digital",
+                "en": "Communication and Digital",
+                "zh": "通信与数字"
+            },
+            {
+                "id": "Transportasi",
+                "en": "Transportation",
+                "zh": "交通运输"
+            },
+            {
+                "id": "Teknologi",
+                "en": "Technology",
+                "zh": "科技"
+            },
+            {
+                "id": "Pariwisata",
+                "en": "Tourism",
+                "zh": "旅游"
+            },
+            {
+                "id": "Pendidikan",
+                "en": "Education",
+                "zh": "教育"
+            },
+            {
+                "id": "Ketenagakerjaan",
+                "en": "Manpower",
+                "zh": "劳动就业"
+            },
+            {
+                "id": "Perikanan dan Kelautan",
+                "en": "Fisheries and Marine Affairs",
+                "zh": "渔业与海洋"
+            },
+            {
+                "id": "Kesehatan",
+                "en": "Health",
+                "zh": "卫生"
+            }
         ],
         "rincian_biaya": {
-            "label": "Biaya Penanganan",
-            "biaya_penanganan": "Hubungi Kami"
+            "label": {
+                "id": "Biaya Penanganan",
+                "en": "Handling Fee",
+                "zh": "手续费"
+            },
+            "biaya_penanganan": {
+                "id": "Hubungi Kami",
+                "en": "Contact Us",
+                "zh": "请联系我们"
+            }
         },
         "mengapa_kami": [
-            "Analisa KBLI dan tingkat risiko secara akurat",
-            "Pendampingan penuh hingga izin terbit",
-            "Tim profesional berpengalaman di berbagai sektor usaha",
-            "Proses yang cepat, transparan, dan sesuai kebutuhan hukum yang berlaku",
-            "Solusi perizinan terpadu untuk perusahaan nasional maupun PMA"
+            {
+                "id": "Analisa KBLI dan tingkat risiko secara akurat",
+                "en": "Accurate analysis of the KBLI business classification and risk level",
+                "zh": "精准分析KBLI行业分类及风险等级"
+            },
+            {
+                "id": "Pendampingan penuh hingga izin terbit",
+                "en": "Full assistance until the license is issued",
+                "zh": "全程协助直至许可证核发"
+            },
+            {
+                "id": "Tim profesional berpengalaman di berbagai sektor usaha",
+                "en": "An experienced professional team across various business sectors",
+                "zh": "在各行业领域经验丰富的专业团队"
+            },
+            {
+                "id": "Proses yang cepat, transparan, dan sesuai kebutuhan hukum yang berlaku",
+                "en": "A fast, transparent process that complies with applicable legal requirements",
+                "zh": "快速、透明并符合现行法律要求的流程"
+            },
+            {
+                "id": "Solusi perizinan terpadu untuk perusahaan nasional maupun PMA",
+                "en": "Integrated licensing solutions for both domestic companies and foreign investment companies (PMA)",
+                "zh": "为本地企业及外资企业（PMA）提供一体化许可解决方案"
+            }
         ],
         "dasar_hukum": [
-            "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang.",
-            "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko.",
-            "Peraturan perundang-undangan sektoral yang diterbitkan oleh kementerian dan lembaga teknis terkait sesuai bidang usaha masing-masing."
+            {
+                "id": "Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang.",
+                "en": "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law.",
+                "zh": "2023年第6号法律关于将2022年第2号《创造就业政府代法条例》确立为法律。"
+            },
+            {
+                "id": "Peraturan Pemerintah Nomor 28 Tahun 2025 tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko.",
+                "en": "Government Regulation Number 28 of 2025 concerning the Administration of Risk-Based Business Licensing.",
+                "zh": "第28号政府条例（2025年）关于基于风险的营业许可实施。"
+            },
+            {
+                "id": "Peraturan perundang-undangan sektoral yang diterbitkan oleh kementerian dan lembaga teknis terkait sesuai bidang usaha masing-masing.",
+                "en": "Sectoral laws and regulations issued by the relevant ministries and technical agencies according to their respective business fields.",
+                "zh": "由相关部委及技术机构依各自行业领域颁布的部门法规。"
+            }
         ],
         "jenis_layanan": [],
         "faq": []
     },
     {
         "id": 3,
-        "name": "Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU)",
+        "name": {
+            "id": "Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU)",
+            "en": "Business Licensing to Support Business Activities (PB UMKU)",
+            "zh": "支持经营活动的营业许可（PB UMKU）"
+        },
         "price": 2000000,
-        "price_label": "Rp. 2.000.000",
-        "excerpt": "Pengurusan izin tambahan yang dibutuhkan untuk menunjang kegiatan usaha utama sesuai regulasi yang berlaku.",
-        "detail_path": "/perizinan-dasar-dan-perizinan-berusaha/3",
+        "price_label": {
+            "id": "Rp. 2.000.000",
+            "en": "Rp. 2.000.000",
+            "zh": "Rp. 2.000.000"
+        },
+        "excerpt": {
+            "id": "Pengurusan izin tambahan yang dibutuhkan untuk menunjang kegiatan usaha utama sesuai regulasi yang berlaku.",
+            "en": "Processing of additional licenses required to support the main business activity in accordance with applicable regulations.",
+            "zh": "依现行法规办理支持主要经营活动所需的附加许可。"
+        },
+        "detail_path": "/perizinan-berusaha/3",
         "image": "",
         "penjelasan_umum": [
-            "Layanan pengurusan perizinan tambahan yang dibutuhkan pelaku usaha untuk menunjang kegiatan usaha utamanya, mencakup pendaftaran sistem elektronik lingkup privat domestik, pendaftaran buku panduan dan kartu garansi, serta tanda daftar gudang. Seluruh proses dilakukan sesuai ketentuan Perizinan Berusaha Berbasis Risiko melalui sistem OSS."
+            {
+                "id": "Layanan pengurusan perizinan tambahan yang dibutuhkan pelaku usaha untuk menunjang kegiatan usaha utamanya, mencakup pendaftaran sistem elektronik lingkup privat domestik, pendaftaran buku panduan dan kartu garansi, serta tanda daftar gudang. Seluruh proses dilakukan sesuai ketentuan Perizinan Berusaha Berbasis Risiko melalui sistem OSS.",
+                "en": "A service for processing the additional licenses required by business operators to support their main business activities, covering registration of domestic private electronic systems, registration of user manuals and warranty cards, and warehouse registration certificates. The entire process is carried out in accordance with the provisions of Risk-Based Business Licensing through the OSS system.",
+                "zh": "为企业支持其主要经营活动所需的附加许可提供办理服务，涵盖国内私营电子系统登记、使用手册及保修卡登记，以及仓库登记证。整个流程依据基于风险的营业许可（OSS系统）相关规定进行。"
+            }
         ],
         "jenis_layanan": [
             {
                 "kode": "pendaftaran-sistem-elektronik",
-                "nama": "Pendaftaran Sistem Elektronik Lingkup Privat Domestik",
-                "excerpt": "Pendaftaran sistem elektronik yang dikelola oleh pelaku usaha domestik sesuai ketentuan Kominfo yang berlaku.",
-                "harga": "Rp. 2.000.000",
+                "nama": {
+                    "id": "Pendaftaran Sistem Elektronik Lingkup Privat Domestik",
+                    "en": "Registration of Domestic Private Electronic Systems",
+                    "zh": "国内私营电子系统登记"
+                },
+                "excerpt": {
+                    "id": "Pendaftaran sistem elektronik yang dikelola oleh pelaku usaha domestik sesuai ketentuan Kominfo yang berlaku.",
+                    "en": "Registration of electronic systems managed by domestic business operators in accordance with applicable Ministry of Communication and Informatics (Kominfo) provisions.",
+                    "zh": "依现行通信与信息部（Kominfo）规定，为国内企业运营的电子系统办理登记。"
+                },
+                "harga": {
+                    "id": "Rp. 2.000.000",
+                    "en": "Rp. 2.000.000",
+                    "zh": "Rp. 2.000.000"
+                },
                 "penjelasan_layanan": [
-                    "Penyelenggara Sistem Elektronik (PSE) adalah setiap orang, penyelenggara negara, badan usaha, dan masyarakat yang menyediakan, mengelola, dan/atau mengoperasikan Sistem Elektronik secara sendiri-sendiri maupun bersama-sama kepada Pengguna Sistem Elektronik untuk keperluan dirinya dan/atau keperluan pihak lain."
+                    {
+                        "id": "Penyelenggara Sistem Elektronik (PSE) adalah setiap orang, penyelenggara negara, badan usaha, dan masyarakat yang menyediakan, mengelola, dan/atau mengoperasikan Sistem Elektronik secara sendiri-sendiri maupun bersama-sama kepada Pengguna Sistem Elektronik untuk keperluan dirinya dan/atau keperluan pihak lain.",
+                        "en": "An Electronic System Operator (PSE) is any person, state administrator, business entity, or member of the public that provides, manages, and/or operates an Electronic System, whether individually or jointly, for Electronic System Users for its own purposes and/or the purposes of other parties.",
+                        "zh": "电子系统运营商（PSE）是指为电子系统用户提供、管理及/或运营电子系统（无论单独或共同进行），以供自身及/或他方使用的任何个人、国家行政机关、企业实体或公众。"
+                    }
                 ],
                 "sub_layanan": [],
                 "penjelasan_penutup": [
-                    "PSE Lingkup Privat diantaranya mencakup perusahaan, badan usaha, orang, dan masyarakat asing yang menyediakan, mengelola, atau mengoperasikan sistem elektronik kepada pengguna di wilayah Indonesia diantaranya layanan streaming, media sosial, hingga lokapasar (e-commerce)."
+                    {
+                        "id": "PSE Lingkup Privat diantaranya mencakup perusahaan, badan usaha, orang, dan masyarakat asing yang menyediakan, mengelola, atau mengoperasikan sistem elektronik kepada pengguna di wilayah Indonesia diantaranya layanan streaming, media sosial, hingga lokapasar (e-commerce).",
+                        "en": "Private-scope PSE includes foreign companies, business entities, persons, and members of the public that provide, manage, or operate electronic systems for users within Indonesian territory, including streaming services, social media, and e-commerce marketplaces.",
+                        "zh": "私营领域PSE包括向印尼境内用户提供、管理或运营电子系统的外国公司、企业实体、个人及公众，涵盖流媒体服务、社交媒体乃至电商平台。"
+                    }
                 ],
                 "rincian_biaya": {
-                    "label": "Biaya Penanganan",
-                    "biaya_penanganan": "Hubungi Kami"
+                    "label": {
+                        "id": "Biaya Penanganan",
+                        "en": "Handling Fee",
+                        "zh": "手续费"
+                    },
+                    "biaya_penanganan": {
+                        "id": "Hubungi Kami",
+                        "en": "Contact Us",
+                        "zh": "请联系我们"
+                    }
                 },
                 "paket_harga": {
-                    "harga": "Rp. 2.000.000",
-                    "benefit": "GRATIS Konsultasi/Pengajuan dan Pasca Selesai",
+                    "harga": {
+                        "id": "Rp. 2.000.000",
+                        "en": "Rp. 2.000.000",
+                        "zh": "Rp. 2.000.000"
+                    },
+                    "benefit": {
+                        "id": "GRATIS Konsultasi/Pengajuan dan Pasca Selesai",
+                        "en": "FREE Consultation/Application and Post-Completion Support",
+                        "zh": "免费咨询/申请及完成后跟进"
+                    },
                     "dokumen_legalitas": [
-                        "Tanda Daftar Penyelenggara Sistem Elektronik (PSE) Lingkup Privat"
+                        {
+                            "id": "Tanda Daftar Penyelenggara Sistem Elektronik (PSE) Lingkup Privat",
+                            "en": "Registration Certificate of Private-Scope Electronic System Operator (PSE)",
+                            "zh": "私营领域电子系统运营商（PSE）登记证"
+                        }
                     ],
                     "termasuk": [
-                        "Fastrack Document Delivery Service",
-                        "Fastrack Digital Files Secure Storage",
-                        "Fastrack Kit"
+                        {
+                            "id": "Fastrack Document Delivery Service",
+                            "en": "Fastrack Document Delivery Service",
+                            "zh": "Fastrack Document Delivery Service"
+                        },
+                        {
+                            "id": "Fastrack Digital Files Secure Storage",
+                            "en": "Fastrack Digital Files Secure Storage",
+                            "zh": "Fastrack Digital Files Secure Storage"
+                        },
+                        {
+                            "id": "Fastrack Kit",
+                            "en": "Fastrack Kit",
+                            "zh": "Fastrack Kit"
+                        }
                     ]
                 },
                 "dokumen_dibutuhkan": [
                     {
-                        "text": "Pelaku Usaha Sudah Terdaftar Pada OSS Dan Memiliki NIB"
+                        "text": {
+                            "id": "Pelaku Usaha Sudah Terdaftar Pada OSS Dan Memiliki NIB",
+                            "en": "The Business Operator is already registered with OSS and holds an NIB",
+                            "zh": "企业已在OSS登记并持有NIB"
+                        }
                     },
-                    { "text": "Data Sistem Elektronik" },
                     {
-                        "text": "Formulir/Surat Yang Telah Dilengkapi Dan Ditanda Tangani Oleh Seluruh Pihak",
-                        "desc": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima."
+                        "text": {
+                            "id": "Data Sistem Elektronik",
+                            "en": "Electronic System Data",
+                            "zh": "电子系统资料"
+                        }
+                    },
+                    {
+                        "text": {
+                            "id": "Formulir/Surat Yang Telah Dilengkapi Dan Ditanda Tangani Oleh Seluruh Pihak",
+                            "en": "Form/Letter completed and signed by all parties",
+                            "zh": "已由各方填写并签署的表格/函件"
+                        },
+                        "desc": {
+                            "id": "Seluruh rancangan dan isi akan kami siapkan setelah pemesanan dan seluruh persyaratan dokumen dan informasi kami terima.",
+                            "en": "All drafts and content will be prepared by us after the order is placed and all required documents and information have been received.",
+                            "zh": "所有草案及内容将在下单且收到所有文件与信息要求后由我方准备。"
+                        }
                     }
                 ],
                 "dasar_hukum": [
-                    "Undang-Undang No. 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang.",
-                    "Peraturan Pemerintah Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik.",
-                    "Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggara Sistem Elektronik Lingkup Privat.",
-                    "Peraturan Menteri Komunikasi Dan Informatika Republik Indonesia Nomor 10 Tahun 2021 tentang Perubahan Atas Peraturan Menteri Komunikasi Dan Informatika Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggaraan Sistem Elektronik Lingkup Privat.",
-                    "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission)."
+                    {
+                        "id": "Undang-Undang No. 6 Tahun 2023 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang Cipta Kerja menjadi Undang-Undang.",
+                        "en": "Law Number 6 of 2023 concerning the Stipulation of Government Regulation in Lieu of Law Number 2 of 2022 concerning Job Creation into Law.",
+                        "zh": "2023年第6号法律关于将2022年第2号《创造就业政府代法条例》确立为法律。"
+                    },
+                    {
+                        "id": "Peraturan Pemerintah Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik.",
+                        "en": "Government Regulation Number 71 of 2019 concerning the Administration of Electronic Systems and Transactions.",
+                        "zh": "第71号政府条例（2019年）关于电子系统与交易的实施。"
+                    },
+                    {
+                        "id": "Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggara Sistem Elektronik Lingkup Privat.",
+                        "en": "Regulation of the Minister of Communication and Informatics Number 5 of 2020 concerning Private-Scope Electronic System Operators.",
+                        "zh": "通信与信息部长第5号条例（2020年）关于私营领域电子系统运营商。"
+                    },
+                    {
+                        "id": "Peraturan Menteri Komunikasi Dan Informatika Republik Indonesia Nomor 10 Tahun 2021 tentang Perubahan Atas Peraturan Menteri Komunikasi Dan Informatika Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggaraan Sistem Elektronik Lingkup Privat.",
+                        "en": "Regulation of the Minister of Communication and Informatics of the Republic of Indonesia Number 10 of 2021 concerning Amendment to the Regulation of the Minister of Communication and Informatics Number 5 of 2020 concerning the Administration of Private-Scope Electronic Systems.",
+                        "zh": "印度尼西亚共和国通信与信息部长第10号条例（2021年）关于修订通信与信息部长第5号条例（2020年）关于私营领域电子系统的实施。"
+                    },
+                    {
+                        "id": "Peraturan Menteri Investasi dan Hilirisasi/Kepala Badan Koordinasi Penanaman Modal Nomor 5 Tahun 2025 tentang Pedoman dan Tata Cara Penyelenggaraan Perizinan Berusaha Berbasis Risiko dan Fasilitas Penanaman Modal Melalui Sistem Perizinan Berusaha Terintegrasi Secara Elektronik (Online Single Submission).",
+                        "en": "Regulation of the Minister of Investment and Downstreaming/Head of the Investment Coordinating Board Number 5 of 2025 concerning Guidelines and Procedures for the Administration of Risk-Based Business Licensing and Investment Facilities through the Online Single Submission (OSS) Integrated Business Licensing System.",
+                        "zh": "投资与下游产业部长/投资协调委员会主席第5号条例（2025年）关于基于风险的营业许可及投资便利通过在线单一提交（OSS）综合营业许可系统实施的指南与程序。"
+                    }
                 ]
             },
             {
                 "kode": "pendaftaran-buku-panduan-dan-kartu-garansi",
-                "nama": "Pendaftaran Buku Panduan Dan Kartu Garansi",
-                "excerpt": "Pendaftaran buku panduan penggunaan dan kartu garansi produk sesuai ketentuan perlindungan konsumen.",
-                "harga": "Rp. 6.500.000",
+                "nama": {
+                    "id": "Pendaftaran Buku Panduan Dan Kartu Garansi",
+                    "en": "Registration of User Manual and Warranty Card",
+                    "zh": "使用手册及保修卡登记"
+                },
+                "excerpt": {
+                    "id": "Pendaftaran buku panduan penggunaan dan kartu garansi produk sesuai ketentuan perlindungan konsumen.",
+                    "en": "Registration of the product user manual and warranty card in accordance with consumer protection provisions.",
+                    "zh": "依消费者保护规定办理产品使用手册及保修卡登记。"
+                },
+                "harga": {
+                    "id": "Rp. 6.500.000",
+                    "en": "Rp. 6.500.000",
+                    "zh": "Rp. 6.500.000"
+                },
                 "penjelasan_layanan": [
-                    "Pendaftaran Petunjuk Penggunaan (Manual) dan Kartu Jaminan Purna Jual (MKG) dalam Bahasa Indonesia wajib dilakukan oleh produsen atau importir sebelum produk elektronika dan telematika diedarkan di pasar Indonesia. Tujuannya adalah untuk melindungi konsumen dan menjamin hak atas informasi produk yang benar, jelas, dan jujur. Permendag No. 26 Tahun 2021 mengatur tentang Penetapan Standar Kegiatan Usaha dan Produk Pada Penyelenggaraan Perizinan Berusaha Berbasis Risiko Sektor Perdagangan."
+                    {
+                        "id": "Pendaftaran Petunjuk Penggunaan (Manual) dan Kartu Jaminan Purna Jual (MKG) dalam Bahasa Indonesia wajib dilakukan oleh produsen atau importir sebelum produk elektronika dan telematika diedarkan di pasar Indonesia. Tujuannya adalah untuk melindungi konsumen dan menjamin hak atas informasi produk yang benar, jelas, dan jujur. Permendag No. 26 Tahun 2021 mengatur tentang Penetapan Standar Kegiatan Usaha dan Produk Pada Penyelenggaraan Perizinan Berusaha Berbasis Risiko Sektor Perdagangan.",
+                        "en": "Registration of the User Manual and After-Sales Warranty Card (MKG) in Bahasa Indonesia must be carried out by the manufacturer or importer before electronic and telematics products are distributed in the Indonesian market. The purpose is to protect consumers and guarantee their right to accurate, clear, and honest product information. Ministry of Trade Regulation No. 26 of 2021 governs the Stipulation of Business Activity and Product Standards in the Administration of Risk-Based Business Licensing in the Trade Sector.",
+                        "zh": "使用手册及售后保修卡（MKG）须由生产商或进口商在电子及通讯产品于印尼市场流通前，以印尼语完成登记。其目的在于保护消费者，并保障其获得准确、清晰、真实产品信息的权利。2021年第26号贸易部条例规定了贸易领域基于风险的营业许可实施中的经营活动及产品标准。"
+                    }
                 ],
                 "sub_layanan": [],
                 "penjelasan_penutup": [],
                 "rincian_biaya": {
-                    "label": "Biaya Penanganan",
-                    "biaya_penanganan": "Rp. 6.500.000"
+                    "label": {
+                        "id": "Biaya Penanganan",
+                        "en": "Handling Fee",
+                        "zh": "手续费"
+                    },
+                    "biaya_penanganan": {
+                        "id": "Rp. 6.500.000",
+                        "en": "Rp. 6.500.000",
+                        "zh": "Rp. 6.500.000"
+                    }
                 },
                 "paket_harga": {
-                    "harga": "Rp. 6.500.000",
-                    "benefit": "GRATIS Konsultasi/Pengajuan dan Pasca Selesai",
+                    "harga": {
+                        "id": "Rp. 6.500.000",
+                        "en": "Rp. 6.500.000",
+                        "zh": "Rp. 6.500.000"
+                    },
+                    "benefit": {
+                        "id": "GRATIS Konsultasi/Pengajuan dan Pasca Selesai",
+                        "en": "FREE Consultation/Application and Post-Completion Support",
+                        "zh": "免费咨询/申请及完成后跟进"
+                    },
                     "dokumen_legalitas": [
-                        "Tanda Pendaftaran Petunjuk Penggunaan dan Kartu Jaminan Purna Jual Dalam Bahasa Indonesia Bagi Produk Elektronika Dan Produk Telematika"
+                        {
+                            "id": "Tanda Pendaftaran Petunjuk Penggunaan dan Kartu Jaminan Purna Jual Dalam Bahasa Indonesia Bagi Produk Elektronika Dan Produk Telematika",
+                            "en": "Registration Certificate for the Indonesian-Language User Manual and After-Sales Warranty Card for Electronic and Telematics Products",
+                            "zh": "电子及通讯产品印尼语使用手册及售后保修卡登记证"
+                        }
                     ],
                     "termasuk": [
-                        "Fastrack Document Delivery Service",
-                        "Fastrack Digital Files Secure Storage",
-                        "Fastrack Kit"
+                        {
+                            "id": "Fastrack Document Delivery Service",
+                            "en": "Fastrack Document Delivery Service",
+                            "zh": "Fastrack Document Delivery Service"
+                        },
+                        {
+                            "id": "Fastrack Digital Files Secure Storage",
+                            "en": "Fastrack Digital Files Secure Storage",
+                            "zh": "Fastrack Digital Files Secure Storage"
+                        },
+                        {
+                            "id": "Fastrack Kit",
+                            "en": "Fastrack Kit",
+                            "zh": "Fastrack Kit"
+                        }
                     ]
                 },
-                "dokumen_dibutuhkan_label": "Syarat",
+                "dokumen_dibutuhkan_label": {
+                    "id": "Syarat",
+                    "en": "Requirements",
+                    "zh": "要求"
+                },
                 "dokumen_dibutuhkan": [
                     {
-                        "text": "Daftar Pusat Layanan Purna Jual",
-                        "desc": "Menyampaikan minimal 6 (enam) daftar pusat servis (service center) resmi yang dilengkapi alamat lengkap serta jaminan ketersediaan suku cadang (spare parts)."
+                        "text": {
+                            "id": "Daftar Pusat Layanan Purna Jual",
+                            "en": "List of After-Sales Service Centers",
+                            "zh": "售后服务中心清单"
+                        },
+                        "desc": {
+                            "id": "Menyampaikan minimal 6 (enam) daftar pusat servis (service center) resmi yang dilengkapi alamat lengkap serta jaminan ketersediaan suku cadang (spare parts).",
+                            "en": "Submitting a list of at least 6 (six) official service centers complete with full addresses and a guarantee of spare parts availability.",
+                            "zh": "提交至少6（六）个官方服务中心清单，须附完整地址并保证备件供应。"
+                        }
                     },
                     {
-                        "text": "Petunjuk Penggunaan (Manual Book)",
-                        "desc": "Dokumen petunjuk penggunaan operasional produk yang telah diterjemahkan atau ditulis dalam Bahasa Indonesia dan benar."
+                        "text": {
+                            "id": "Petunjuk Penggunaan (Manual Book)",
+                            "en": "User Manual (Manual Book)",
+                            "zh": "使用说明书（Manual Book）"
+                        },
+                        "desc": {
+                            "id": "Dokumen petunjuk penggunaan operasional produk yang telah diterjemahkan atau ditulis dalam Bahasa Indonesia dan benar.",
+                            "en": "The product operating instruction document translated or written correctly in Bahasa Indonesia.",
+                            "zh": "已正确翻译或以印尼语撰写的产品操作说明文件。"
+                        }
                     },
                     {
-                        "text": "Kartu Jaminan/Garansi",
-                        "desc": "Kartu jaminan tertulis dalam Bahasa Indonesia yang mencantumkan masa jaminan, hak konsumen, kewajiban produsen, serta klausul purna jual/aftersales."
+                        "text": {
+                            "id": "Kartu Jaminan/Garansi",
+                            "en": "Warranty/Guarantee Card",
+                            "zh": "保修/担保卡"
+                        },
+                        "desc": {
+                            "id": "Kartu jaminan tertulis dalam Bahasa Indonesia yang mencantumkan masa jaminan, hak konsumen, kewajiban produsen, serta klausul purna jual/aftersales.",
+                            "en": "A warranty card written in Bahasa Indonesia that states the warranty period, consumer rights, manufacturer obligations, and after-sales clauses.",
+                            "zh": "以印尼语撰写的保修卡，须载明保修期限、消费者权利、生产商义务及售后条款。"
+                        }
                     },
                     {
-                        "text": "Legalitas Perusahaan",
-                        "desc": "Nomor Induk Berusaha (NIB) serta izin usaha industri (untuk produsen dalam negeri) atau izin usaha perdagangan/keagenan (untuk importir/distributor resmi)."
+                        "text": {
+                            "id": "Legalitas Perusahaan",
+                            "en": "Company Legality",
+                            "zh": "公司合法性文件"
+                        },
+                        "desc": {
+                            "id": "Nomor Induk Berusaha (NIB) serta izin usaha industri (untuk produsen dalam negeri) atau izin usaha perdagangan/keagenan (untuk importir/distributor resmi).",
+                            "en": "Business Identification Number (NIB) and industrial business license (for domestic manufacturers) or trading/agency business license (for official importers/distributors).",
+                            "zh": "营业识别号（NIB）及工业营业许可（供国内生产商）或贸易/代理营业许可（供正式进口商/经销商）。"
+                        }
                     },
                     {
-                        "text": "Surat/Formulir permohonan yang telah dilengkapi oleh Perusahaan."
+                        "text": {
+                            "id": "Surat/Formulir permohonan yang telah dilengkapi oleh Perusahaan.",
+                            "en": "Application letter/form completed by the Company.",
+                            "zh": "由公司填妥的申请函/表格。"
+                        }
                     }
                 ],
                 "dasar_hukum": []
             },
             {
                 "kode": "tanda-daftar-gudang",
-                "nama": "Tanda Daftar Gudang",
-                "excerpt": "Pengurusan tanda daftar gudang sebagai bukti pencatatan resmi tempat penyimpanan barang sesuai regulasi perdagangan.",
-                "harga": "Rp. 6.500.000",
+                "nama": {
+                    "id": "Tanda Daftar Gudang",
+                    "en": "Warehouse Registration Certificate",
+                    "zh": "仓库登记证"
+                },
+                "excerpt": {
+                    "id": "Pengurusan tanda daftar gudang sebagai bukti pencatatan resmi tempat penyimpanan barang sesuai regulasi perdagangan.",
+                    "en": "Processing of the warehouse registration certificate as official proof of registration of a storage facility in accordance with trade regulations.",
+                    "zh": "依贸易法规办理仓库登记证，作为储存场所正式登记的证明。"
+                },
+                "harga": {
+                    "id": "Rp. 6.500.000",
+                    "en": "Rp. 6.500.000",
+                    "zh": "Rp. 6.500.000"
+                },
                 "penjelasan_layanan": [
-                    "Tanda Daftar Gudang (TDG) adalah bukti pendaftaran resmi yang diberikan kepada pemilik atau pengelola gudang sebagai legalitas bahwa gudangnya telah terdaftar untuk melakukan kegiatan distribusi barang. Berdasarkan regulasi berbasis risiko saat ini, pengajuan TDG dikategorikan sebagai Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU) dan diproses secara daring melalui sistem Online Single Submission (OSS) Indonesia."
+                    {
+                        "id": "Tanda Daftar Gudang (TDG) adalah bukti pendaftaran resmi yang diberikan kepada pemilik atau pengelola gudang sebagai legalitas bahwa gudangnya telah terdaftar untuk melakukan kegiatan distribusi barang. Berdasarkan regulasi berbasis risiko saat ini, pengajuan TDG dikategorikan sebagai Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB UMKU) dan diproses secara daring melalui sistem Online Single Submission (OSS) Indonesia.",
+                        "en": "The Warehouse Registration Certificate (TDG) is official proof of registration granted to a warehouse owner or manager as legal confirmation that the warehouse is registered to carry out goods distribution activities. Under the current risk-based regulations, the TDG application is categorized as Business Licensing to Support Business Activities (PB UMKU) and is processed online through Indonesia's Online Single Submission (OSS) system.",
+                        "zh": "仓库登记证（TDG）是授予仓库所有人或管理者的正式登记证明，用以证明该仓库已合法登记以开展货物分销活动。根据现行基于风险的法规，TDG申请被归类为支持经营活动的营业许可（PB UMKU），并通过印尼在线单一提交（OSS）系统在线办理。"
+                    }
                 ],
                 "sub_layanan": [],
                 "penjelasan_penutup": [],
                 "rincian_biaya": {
-                    "label": "Biaya Penanganan",
-                    "biaya_penanganan": "Rp. 6.500.000"
+                    "label": {
+                        "id": "Biaya Penanganan",
+                        "en": "Handling Fee",
+                        "zh": "手续费"
+                    },
+                    "biaya_penanganan": {
+                        "id": "Rp. 6.500.000",
+                        "en": "Rp. 6.500.000",
+                        "zh": "Rp. 6.500.000"
+                    }
                 },
                 "paket_harga": {
-                    "harga": "Rp. 6.500.000",
-                    "benefit": "GRATIS Konsultasi/Pengajuan dan Pasca Selesai",
-                    "dokumen_legalitas": ["Tanda Daftar Gudang"],
+                    "harga": {
+                        "id": "Rp. 6.500.000",
+                        "en": "Rp. 6.500.000",
+                        "zh": "Rp. 6.500.000"
+                    },
+                    "benefit": {
+                        "id": "GRATIS Konsultasi/Pengajuan dan Pasca Selesai",
+                        "en": "FREE Consultation/Application and Post-Completion Support",
+                        "zh": "免费咨询/申请及完成后跟进"
+                    },
+                    "dokumen_legalitas": [
+                        {
+                            "id": "Tanda Daftar Gudang",
+                            "en": "Warehouse Registration Certificate",
+                            "zh": "仓库登记证"
+                        }
+                    ],
                     "termasuk": [
-                        "Fastrack Document Delivery Service",
-                        "Fastrack Digital Files Secure Storage",
-                        "Fastrack Kit"
+                        {
+                            "id": "Fastrack Document Delivery Service",
+                            "en": "Fastrack Document Delivery Service",
+                            "zh": "Fastrack Document Delivery Service"
+                        },
+                        {
+                            "id": "Fastrack Digital Files Secure Storage",
+                            "en": "Fastrack Digital Files Secure Storage",
+                            "zh": "Fastrack Digital Files Secure Storage"
+                        },
+                        {
+                            "id": "Fastrack Kit",
+                            "en": "Fastrack Kit",
+                            "zh": "Fastrack Kit"
+                        }
                     ]
                 },
-                "dokumen_dibutuhkan_label": "Syarat",
+                "dokumen_dibutuhkan_label": {
+                    "id": "Syarat",
+                    "en": "Requirements",
+                    "zh": "要求"
+                },
                 "dokumen_dibutuhkan": [
                     {
-                        "text": "Nomor Induk Berusaha (NIB) dengan kode KBLI pergudangan yang sesuai (misalnya KBLI 52101)."
+                        "text": {
+                            "id": "Nomor Induk Berusaha (NIB) dengan kode KBLI pergudangan yang sesuai (misalnya KBLI 52101).",
+                            "en": "Business Identification Number (NIB) with the appropriate warehousing KBLI code (e.g., KBLI 52101).",
+                            "zh": "带有相应仓储KBLI代码（例如KBLI 52101）的营业识别号（NIB）。"
+                        }
                     },
                     {
-                        "text": "Akta Pendirian Perusahaan beserta Surat Keputusan (SK) pengesahan dari Kemenkumham (untuk badan hukum seperti PT/CV)."
-                    },
-                    { "text": "NPWP Badan (atau NPWP perorangan)." },
-                    {
-                        "text": "Bukti kepemilikan gudang (Sertifikat Hak Milik/SHM) atau Surat Perjanjian Sewa-Menyewa jika berstatus sewa."
-                    },
-                    {
-                        "text": "Sertifikat Laik Fungsi (SLF) atau Persetujuan Bangunan Gedung (PBG/IMB) yang sesuai peruntukan sebagai bangunan gudang."
+                        "text": {
+                            "id": "Akta Pendirian Perusahaan beserta Surat Keputusan (SK) pengesahan dari Kemenkumham (untuk badan hukum seperti PT/CV).",
+                            "en": "Deed of Company Establishment along with the Ratification Decree (SK) from the Ministry of Law (for legal entities such as PT/CV).",
+                            "zh": "公司设立公证书及法律部批准决定书（SK）（适用于PT/CV等法人实体）。"
+                        }
                     },
                     {
-                        "text": "Data Teknis Gudang",
-                        "desc": "Alamat lengkap gudang beserta koordinat lokasi (latitude dan longitude) dan luas."
+                        "text": {
+                            "id": "NPWP Badan (atau NPWP perorangan).",
+                            "en": "Corporate Taxpayer Identification Number (NPWP) (or individual NPWP).",
+                            "zh": "公司纳税人识别号（NPWP）（或个人NPWP）。"
+                        }
                     },
                     {
-                        "text": "Dokumentasi foto gudang yang lengkap",
-                        "desc": "Wajib mencakup: tampak depan, sisi samping kanan dan kiri, tampak belakang, serta bagian dalam gudang."
+                        "text": {
+                            "id": "Bukti kepemilikan gudang (Sertifikat Hak Milik/SHM) atau Surat Perjanjian Sewa-Menyewa jika berstatus sewa.",
+                            "en": "Proof of warehouse ownership (Certificate of Ownership/SHM) or a Lease Agreement if the warehouse is leased.",
+                            "zh": "仓库所有权证明（产权证/SHM），如为租赁则提供租赁协议。"
+                        }
                     },
                     {
-                        "text": "Surat/Formulir permohonan yang telah dilengkapi oleh Perusahaan."
+                        "text": {
+                            "id": "Sertifikat Laik Fungsi (SLF) atau Persetujuan Bangunan Gedung (PBG/IMB) yang sesuai peruntukan sebagai bangunan gudang.",
+                            "en": "Certificate of Function Suitability (SLF) or Building Construction Approval (PBG/IMB) appropriate to the building's designation as a warehouse.",
+                            "zh": "与仓库用途相符的适用功能证书（SLF）或建筑物批准（PBG/IMB）。"
+                        }
+                    },
+                    {
+                        "text": {
+                            "id": "Data Teknis Gudang",
+                            "en": "Warehouse Technical Data",
+                            "zh": "仓库技术资料"
+                        },
+                        "desc": {
+                            "id": "Alamat lengkap gudang beserta koordinat lokasi (latitude dan longitude) dan luas.",
+                            "en": "The warehouse's full address along with location coordinates (latitude and longitude) and area.",
+                            "zh": "仓库完整地址及位置坐标（经纬度）与面积。"
+                        }
+                    },
+                    {
+                        "text": {
+                            "id": "Dokumentasi foto gudang yang lengkap",
+                            "en": "Complete photographic documentation of the warehouse",
+                            "zh": "仓库完整照片资料"
+                        },
+                        "desc": {
+                            "id": "Wajib mencakup: tampak depan, sisi samping kanan dan kiri, tampak belakang, serta bagian dalam gudang.",
+                            "en": "Must include: front view, right and left side views, rear view, and the interior of the warehouse.",
+                            "zh": "须包括：正面、左右两侧、背面及仓库内部照片。"
+                        }
+                    },
+                    {
+                        "text": {
+                            "id": "Surat/Formulir permohonan yang telah dilengkapi oleh Perusahaan.",
+                            "en": "Application letter/form completed by the Company.",
+                            "zh": "由公司填妥的申请函/表格。"
+                        }
                     }
                 ],
                 "dasar_hukum": []
