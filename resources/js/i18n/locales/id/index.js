@@ -4,6 +4,7 @@ import home from './home'
 import faq from './faq'
 import kerjasama from './kerjasama'
 import mintaPenawaran from './minta-penawaran'
+import simulasiAkta from './simulasi-akta'
 import badanUsaha from './services/badan-usaha'
 import kantorPerwakilan from './services/kantor-perwakilan'
 import izinTinggalTerbatas from './services/izin-tinggal-terbatas'
@@ -52,6 +53,7 @@ export default {
     faq,
     kerjasama,
     mintaPenawaran,
+    simulasiAkta,
     services: {
         layanan,
         badanUsaha,

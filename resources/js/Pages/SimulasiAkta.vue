@@ -1,9 +1,13 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed, watch, nextTick } from "vue";
+import { useI18n } from "vue-i18n";
 import { useAktaPDF } from "@/Composables/useAktaPdf.js";
 
 const { generateAktaPDF } = useAktaPDF();
+const { t, locale } = useI18n();
+
+const numberLocale = computed(() => ({ id: "id-ID", en: "en-US", zh: "zh-CN" }[locale.value] || "id-ID"));
 
 const whatsappNumber = "6282298604144";
 const buildWhatsappLink = () => {
@@ -185,51 +189,51 @@ const validate = () => {
 
     // 1. Nama Perseroan
     if (!namaPerseroan.value.trim()) {
-        e.namaPerseroan = "Nama perseroan wajib diisi.";
+        e.namaPerseroan = t("simulasiAkta.errors.nama_perseroan_required");
     } else if (namaPerseroan.value.trim().split(/\s+/).length < 3) {
-        e.namaPerseroan = "Nama perseroan minimal terdiri dari 3 suku kata.";
+        e.namaPerseroan = t("simulasiAkta.errors.nama_perseroan_min_words");
     }
 
     // 2. Kedudukan
-    if (!kotaKedudukan.value) e.kotaKedudukan = "Kota kedudukan wajib dipilih.";
-    if (!provinsi.value.trim()) e.provinsi = "Provinsi wajib diisi.";
+    if (!kotaKedudukan.value) e.kotaKedudukan = t("simulasiAkta.errors.kota_required");
+    if (!provinsi.value.trim()) e.provinsi = t("simulasiAkta.errors.provinsi_required");
 
     // 3. Bidang Usaha
-    if (!selectedKBLI.value.length) e.selectedKBLI = "Pilih minimal 1 bidang usaha.";
-    else if (selectedKBLI.value.length > MAX_KBLI) e.selectedKBLI = `Maksimal ${MAX_KBLI} bidang usaha.`;
+    if (!selectedKBLI.value.length) e.selectedKBLI = t("simulasiAkta.errors.kbli_required");
+    else if (selectedKBLI.value.length > MAX_KBLI) e.selectedKBLI = t("simulasiAkta.errors.kbli_max", { max: MAX_KBLI });
 
     // 4. Modal
     const mD = parseNum(modalDasar.value);
     const mT = parseNum(modalDitempatkan.value);
     const mS = parseNum(modalDisetor.value);
-    if (!mD) e.modalDasar = "Modal dasar wajib diisi.";
-    if (!mT) e.modalDitempatkan = "Modal ditempatkan wajib diisi.";
-    else if (mT > mD) e.modalDitempatkan = "Modal ditempatkan tidak boleh melebihi modal dasar.";
-    else if (mT < mD * 0.25) e.modalDitempatkan = "Modal ditempatkan minimal 25% dari modal dasar.";
-    if (!mS) e.modalDisetor = "Modal disetor wajib diisi.";
-    else if (mS > mT) e.modalDisetor = "Modal disetor tidak boleh melebihi modal ditempatkan.";
+    if (!mD) e.modalDasar = t("simulasiAkta.errors.modal_dasar_required");
+    if (!mT) e.modalDitempatkan = t("simulasiAkta.errors.modal_ditempatkan_required");
+    else if (mT > mD) e.modalDitempatkan = t("simulasiAkta.errors.modal_ditempatkan_exceeds");
+    else if (mT < mD * 0.25) e.modalDitempatkan = t("simulasiAkta.errors.modal_ditempatkan_min");
+    if (!mS) e.modalDisetor = t("simulasiAkta.errors.modal_disetor_required");
+    else if (mS > mT) e.modalDisetor = t("simulasiAkta.errors.modal_disetor_exceeds");
 
     // 5. Pemegang Saham
     const psErrors = [];
     let totalPct = 0;
     pemegangSaham.value.forEach((ps, idx) => {
         const pe = {};
-        if (!ps.nama.trim()) pe.nama = "Nama wajib diisi.";
-        if (!ps.kepemilikan) pe.kepemilikan = "Persentase wajib diisi.";
-        else if (parseFloat(ps.kepemilikan) <= 0) pe.kepemilikan = "Persentase harus lebih dari 0.";
+        if (!ps.nama.trim()) pe.nama = t("simulasiAkta.errors.nama_wajib_diisi");
+        if (!ps.kepemilikan) pe.kepemilikan = t("simulasiAkta.errors.kepemilikan_required");
+        else if (parseFloat(ps.kepemilikan) <= 0) pe.kepemilikan = t("simulasiAkta.errors.kepemilikan_positive");
         totalPct += parseFloat(ps.kepemilikan) || 0;
         psErrors[idx] = pe;
     });
     if (psErrors.some((pe) => Object.keys(pe).length)) e.pemegangSaham = psErrors;
     if (Math.round(totalPct) !== 100)
-        e.totalPct = `Total kepemilikan harus 100%. Saat ini: ${totalPct.toFixed(1)}%.`;
+        e.totalPct = t("simulasiAkta.errors.total_pct", { pct: totalPct.toFixed(1) });
 
     // 6. Direksi
     const dErrors = [];
     direksi.value.forEach((d, idx) => {
         const de = {};
-        if (!d.jabatan) de.jabatan = "Jabatan wajib dipilih.";
-        if (!d.nama.trim()) de.nama = "Nama wajib diisi.";
+        if (!d.jabatan) de.jabatan = t("simulasiAkta.errors.jabatan_required");
+        if (!d.nama.trim()) de.nama = t("simulasiAkta.errors.nama_wajib_diisi");
         dErrors[idx] = de;
     });
     if (dErrors.some((de) => Object.keys(de).length)) e.direksi = dErrors;
@@ -238,8 +242,8 @@ const validate = () => {
     const kErrors = [];
     komisaris.value.forEach((k, idx) => {
         const ke = {};
-        if (!k.jabatan) ke.jabatan = "Jabatan wajib dipilih.";
-        if (!k.nama.trim()) ke.nama = "Nama wajib diisi.";
+        if (!k.jabatan) ke.jabatan = t("simulasiAkta.errors.jabatan_required");
+        if (!k.nama.trim()) ke.nama = t("simulasiAkta.errors.nama_wajib_diisi");
         kErrors[idx] = ke;
     });
     if (kErrors.some((ke) => Object.keys(ke).length)) e.komisaris = kErrors;
@@ -314,12 +318,12 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <span class="text-[12px] font-medium text-[#9e1f16]">Simulasi Akta Pendirian</span>
+                        <span class="text-[12px] font-medium text-[#9e1f16]">{{ t("simulasiAkta.hero.breadcrumb") }}</span>
                     </div>
                 </nav>
-                <h1 class="text-[28px] font-extrabold text-white leading-tight">Simulasi Akta Pendirian</h1>
+                <h1 class="text-[28px] font-extrabold text-white leading-tight">{{ t("simulasiAkta.hero.title") }}</h1>
                 <p class="mt-2 text-[14px] text-white/80">
-                    Simulasikan dokumen akta pendirian perusahaan Anda melalui proses yang mudah dilakukan.
+                    {{ t("simulasiAkta.hero.desc") }}
                 </p>
             </div>
         </section>
@@ -336,15 +340,15 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <span
                                 class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.namaPerseroan ? 'bg-red-400' : 'bg-primary'">1</span>
-                            <h2 class="text-[15px] font-bold text-black">Nama Perseroan</h2>
+                            <h2 class="text-[15px] font-bold text-black">{{ t("simulasiAkta.steps.nama.title") }}</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Masukan nama PT yang akan didirikan</p>
+                        <p class="text-[12px] text-[#686964] mb-5 pl-10">{{ t("simulasiAkta.steps.nama.desc") }}</p>
                         <div>
                             <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
-                                Nama Perseroan <span class="text-red-500">*</span>
+                                {{ t("simulasiAkta.steps.nama.label") }} <span class="text-red-500">*</span>
                             </label>
-                            <input v-model="namaPerseroan" type="text" placeholder="Contoh: Fasttrack Bisnis Indonesia"
+                            <input v-model="namaPerseroan" type="text" :placeholder="t('simulasiAkta.steps.nama.placeholder')"
                                 class="w-full rounded-lg border px-3.5 py-2.5 text-[13px] text-[#1A1B18] placeholder-[#B0B0AE] focus:outline-none focus:ring-1 transition"
                                 :class="errors.namaPerseroan
                                     ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
@@ -357,7 +361,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 {{ errors.namaPerseroan }}
                             </p>
                             <p v-else class="text-[11px] text-[#686964] mt-1.5">
-                                Nama perseroan minimal terdiri dari 3 suku kata. Contoh: Fasttrack Bisnis Indonesia
+                                {{ t("simulasiAkta.steps.nama.help") }}
                             </p>
                         </div>
                     </div>
@@ -369,22 +373,22 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <span
                                 class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.kotaKedudukan || errors.provinsi ? 'bg-red-400' : 'bg-primary'">2</span>
-                            <h2 class="text-[15px] font-bold text-black">Tempat & Kedudukan</h2>
+                            <h2 class="text-[15px] font-bold text-black">{{ t("simulasiAkta.steps.kedudukan.title") }}</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Masukan kota/kabupaten tempat usaha didirikan
+                        <p class="text-[12px] text-[#686964] mb-5 pl-10">{{ t("simulasiAkta.steps.kedudukan.desc") }}
                         </p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
-                                    Kota Kedudukan <span class="text-red-500">*</span>
+                                    {{ t("simulasiAkta.steps.kedudukan.kota_label") }} <span class="text-red-500">*</span>
                                 </label>
                                 <select v-model="kotaKedudukan"
                                     class="w-full rounded-lg border px-3.5 py-2.5 text-[13px] text-[#1A1B18] focus:outline-none focus:ring-1 transition"
                                     :class="errors.kotaKedudukan
                                         ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
                                         : 'border-[#D9DAD8] focus:border-primary focus:ring-primary bg-white'">
-                                    <option value="">Pilih Kota/Kabupaten</option>
+                                    <option value="">{{ t("simulasiAkta.steps.kedudukan.kota_placeholder") }}</option>
                                     <option v-for="kota in daftarKota" :key="kota" :value="kota">{{ kota }}</option>
                                 </select>
                                 <p v-if="errors.kotaKedudukan"
@@ -397,9 +401,9 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             </div>
                             <div>
                                 <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
-                                    Provinsi <span class="text-red-500">*</span>
+                                    {{ t("simulasiAkta.steps.kedudukan.provinsi_label") }} <span class="text-red-500">*</span>
                                 </label>
-                                <input v-model="provinsi" type="text" placeholder="Contoh: DKI Jakarta"
+                                <input v-model="provinsi" type="text" :placeholder="t('simulasiAkta.steps.kedudukan.provinsi_placeholder')"
                                     class="w-full rounded-lg border px-3.5 py-2.5 text-[13px] text-[#1A1B18] placeholder-[#B0B0AE] focus:outline-none focus:ring-1 transition"
                                     :class="errors.provinsi
                                         ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
@@ -414,9 +418,9 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             </div>
                         </div>
                         <div>
-                            <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">Alamat Lengkap</label>
+                            <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">{{ t("simulasiAkta.steps.kedudukan.alamat_label") }}</label>
                             <textarea v-model="alamatLengkap" rows="3"
-                                placeholder="Jalan, RT/RW, Kelurahan, Kecamatan, Kota, Kode Pos"
+                                :placeholder="t('simulasiAkta.steps.kedudukan.alamat_placeholder')"
                                 class="w-full rounded-lg border border-[#D9DAD8] bg-white px-3.5 py-2.5 text-[13px] text-[#1A1B18] placeholder-[#B0B0AE] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition resize-none"></textarea>
                         </div>
                     </div>
@@ -428,11 +432,10 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <span
                                 class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.selectedKBLI ? 'bg-red-400' : 'bg-primary'">3</span>
-                            <h2 class="text-[15px] font-bold text-black">Bidang Usaha</h2>
+                            <h2 class="text-[15px] font-bold text-black">{{ t("simulasiAkta.steps.bidang_usaha.title") }}</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-4 pl-10">Pilih bidang usaha yang akan dijalankan
-                            perseroan</p>
+                        <p class="text-[12px] text-[#686964] mb-4 pl-10">{{ t("simulasiAkta.steps.bidang_usaha.desc") }}</p>
 
                         <!-- Selected tags -->
                         <div v-if="selectedKBLI.length" class="flex flex-wrap items-center gap-2 mb-4">
@@ -469,19 +472,18 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                             <input v-model="searchKBLI" type="text"
-                                placeholder="Cari kode atau nama bidang usaha KBLI..."
+                                :placeholder="t('simulasiAkta.steps.bidang_usaha.search_placeholder')"
                                 class="w-full rounded-lg border border-[#D9DAD8] bg-white pl-9 pr-3.5 py-2.5 text-[13px] text-[#1A1B18] placeholder-[#B0B0AE] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition" />
                         </div>
 
                         <!-- Info -->
                         <p class="text-[11px] text-[#686964] mb-3">
-                            <template v-if="isLoadingKBLI">Memuat data KBLI...</template>
+                            <template v-if="isLoadingKBLI">{{ t("simulasiAkta.steps.bidang_usaha.loading_short") }}</template>
                             <template v-else-if="searchKBLI">
-                                {{ filteredKBLI.length.toLocaleString("id-ID") }} hasil untuk "{{ searchKBLI }}"
+                                {{ t("simulasiAkta.steps.bidang_usaha.result_count", { count: filteredKBLI.length.toLocaleString(numberLocale), query: searchKBLI }) }}
                             </template>
                             <template v-else>
-                                {{ daftarKBLI.length.toLocaleString("id-ID") }} kode KBLI 5 digit tersedia. Ketik untuk
-                                mencari.
+                                {{ t("simulasiAkta.steps.bidang_usaha.available_count", { count: daftarKBLI.length.toLocaleString(numberLocale) }) }}
                             </template>
                         </p>
 
@@ -495,15 +497,15 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     <path class="opacity-75" fill="currentColor"
                                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                                 </svg>
-                                Memuat data KBLI 2025...
+                                {{ t("simulasiAkta.steps.bidang_usaha.loading_full") }}
                             </div>
                             <table v-else class="w-full text-[12px]">
                                 <thead class="bg-[#F7F7F5] border-b border-[#E8E8E6]">
                                     <tr>
-                                        <th class="text-left px-4 py-3 font-bold text-[#1A1B18] w-20">Kode</th>
-                                        <th class="text-left px-4 py-3 font-bold text-[#1A1B18] w-44">Kegiatan</th>
-                                        <th class="text-left px-4 py-3 font-bold text-[#1A1B18]">Deskripsi</th>
-                                        <th class="text-center px-4 py-3 font-bold text-[#1A1B18] w-20">Aksi</th>
+                                        <th class="text-left px-4 py-3 font-bold text-[#1A1B18] w-20">{{ t("simulasiAkta.steps.bidang_usaha.table_kode") }}</th>
+                                        <th class="text-left px-4 py-3 font-bold text-[#1A1B18] w-44">{{ t("simulasiAkta.steps.bidang_usaha.table_kegiatan") }}</th>
+                                        <th class="text-left px-4 py-3 font-bold text-[#1A1B18]">{{ t("simulasiAkta.steps.bidang_usaha.table_deskripsi") }}</th>
+                                        <th class="text-center px-4 py-3 font-bold text-[#1A1B18] w-20">{{ t("simulasiAkta.steps.bidang_usaha.table_aksi") }}</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-[#F0F0EE]">
@@ -523,7 +525,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                                 :class="isKBLISelected(item.kode)
                                                     ? 'bg-primary/10 text-primary'
                                                     : 'bg-[#F7F7F5] text-[#686964] hover:bg-primary/10 hover:text-primary'">
-                                                {{ isKBLISelected(item.kode) ? "✓ Dipilih" : "Pilih" }}
+                                                {{ isKBLISelected(item.kode) ? t("simulasiAkta.steps.bidang_usaha.selected_label") : t("simulasiAkta.steps.bidang_usaha.select_btn") }}
                                             </button>
                                         </td>
                                     </tr>
@@ -534,7 +536,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                             </svg>
-                                            Tidak ada hasil untuk "<strong>{{ searchKBLI }}</strong>"
+                                            {{ t("simulasiAkta.steps.bidang_usaha.no_result") }} "<strong>{{ searchKBLI }}</strong>"
                                         </td>
                                     </tr>
                                 </tbody>
@@ -545,12 +547,12 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                         <div v-if="!isLoadingKBLI && totalPages > 1"
                             class="mt-3 flex items-center justify-between gap-4">
                             <p class="text-[11px] text-[#686964] whitespace-nowrap">
-                                Hal. {{ currentPage }} / {{ totalPages.toLocaleString("id-ID") }}
+                                {{ t("simulasiAkta.steps.bidang_usaha.page_label") }} {{ currentPage }} / {{ totalPages.toLocaleString(numberLocale) }}
                                 &nbsp;·&nbsp;
-                                {{ ((currentPage - 1) * perPage + 1).toLocaleString("id-ID") }}–{{ Math.min(currentPage
+                                {{ ((currentPage - 1) * perPage + 1).toLocaleString(numberLocale) }}–{{ Math.min(currentPage
                                     * perPage,
-                                    filteredKBLI.length).toLocaleString("id-ID") }}
-                                dari {{ filteredKBLI.length.toLocaleString("id-ID") }}
+                                    filteredKBLI.length).toLocaleString(numberLocale) }}
+                                {{ t("simulasiAkta.steps.bidang_usaha.of_label") }} {{ filteredKBLI.length.toLocaleString(numberLocale) }}
                             </p>
                             <div class="flex items-center gap-1">
                                 <button @click="currentPage--" :disabled="currentPage === 1"
@@ -589,17 +591,17 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <span
                                 class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.modalDasar || errors.modalDitempatkan || errors.modalDisetor ? 'bg-red-400' : 'bg-primary'">4</span>
-                            <h2 class="text-[15px] font-bold text-black">Struktur Permodalan</h2>
+                            <h2 class="text-[15px] font-bold text-black">{{ t("simulasiAkta.steps.modal.title") }}</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Tentukan modal dasar, ditempatkan dan disetor
+                        <p class="text-[12px] text-[#686964] mb-5 pl-10">{{ t("simulasiAkta.steps.modal.desc") }}
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
                             <!-- Modal Dasar -->
                             <div>
                                 <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
-                                    Modal Dasar <span class="text-red-500">*</span>
+                                    {{ t("simulasiAkta.steps.modal.dasar_label") }} <span class="text-red-500">*</span>
                                 </label>
                                 <div class="relative">
                                     <span
@@ -622,7 +624,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <!-- Modal Ditempatkan -->
                             <div>
                                 <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
-                                    Modal Ditempatkan <span class="text-red-500">*</span>
+                                    {{ t("simulasiAkta.steps.modal.ditempatkan_label") }} <span class="text-red-500">*</span>
                                 </label>
                                 <div class="relative">
                                     <span
@@ -645,7 +647,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <!-- Modal Disetor -->
                             <div>
                                 <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
-                                    Modal Disetor <span class="text-red-500">*</span>
+                                    {{ t("simulasiAkta.steps.modal.disetor_label") }} <span class="text-red-500">*</span>
                                 </label>
                                 <div class="relative">
                                     <span
@@ -668,8 +670,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-[13px] font-semibold text-[#1A1B18] mb-2">Saham per
-                                    Pendiri</label>
+                                <label class="block text-[13px] font-semibold text-[#1A1B18] mb-2">{{ t("simulasiAkta.steps.modal.saham_per_pendiri_label") }}</label>
                                 <div class="flex gap-4">
                                     <label v-for="opt in ['WNI', 'WNA', 'Campuran']" :key="opt"
                                         class="flex items-center gap-2 cursor-pointer">
@@ -680,7 +681,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-[13px] font-semibold text-[#1A1B18] mb-2">Jenis Saham</label>
+                                <label class="block text-[13px] font-semibold text-[#1A1B18] mb-2">{{ t("simulasiAkta.steps.modal.jenis_saham_label") }}</label>
                                 <div class="flex flex-col gap-2">
                                     <label v-for="opt in ['Ya - Hanya Saham Biasa', 'Ya - Ada Saham Preferen']"
                                         :key="opt" class="flex items-center gap-2 cursor-pointer">
@@ -695,14 +696,14 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                         <div v-if="parseNum(modalDasar) && parseNum(modalDitempatkan)"
                             class="mt-4 rounded-lg bg-blue-50 border border-blue-200 px-4 py-3">
                             <p class="text-[12px] text-blue-700">
-                                Modal ditempatkan:
+                                {{ t("simulasiAkta.steps.modal.info_prefix") }}
                                 <strong>{{ ((parseNum(modalDitempatkan) / parseNum(modalDasar)) * 100).toFixed(1)
                                     }}%</strong>
-                                dari modal dasar
+                                {{ t("simulasiAkta.steps.modal.info_suffix") }}
                                 <span v-if="parseNum(modalDitempatkan) / parseNum(modalDasar) >= 0.25"
                                     class="text-green-600 font-semibold">
-                                    ✓ Memenuhi syarat</span>
-                                <span v-else class="text-red-500 font-semibold"> ✗ Minimal 25%</span>
+                                    {{ t("simulasiAkta.steps.modal.info_ok") }}</span>
+                                <span v-else class="text-red-500 font-semibold"> {{ t("simulasiAkta.steps.modal.info_fail") }}</span>
                             </p>
                         </div>
                     </div>
@@ -714,10 +715,10 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <span
                                 class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.pemegangSaham || errors.totalPct ? 'bg-red-400' : 'bg-primary'">5</span>
-                            <h2 class="text-[15px] font-bold text-black">Pemegang Saham</h2>
+                            <h2 class="text-[15px] font-bold text-black">{{ t("simulasiAkta.steps.pemegang_saham.title") }}</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Tentukan susunan pemegang saham</p>
+                        <p class="text-[12px] text-[#686964] mb-5 pl-10">{{ t("simulasiAkta.steps.pemegang_saham.desc") }}</p>
 
                         <!-- Error total -->
                         <div v-if="errors.totalPct"
@@ -734,17 +735,17 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     ? 'border-red-200 bg-red-50/30'
                                     : 'border-[#E8E8E6]'">
                                 <div class="flex items-center justify-between mb-3">
-                                    <span class="text-[13px] font-bold text-[#1A1B18]">Pemegang Saham {{ idx + 1
+                                    <span class="text-[13px] font-bold text-[#1A1B18]">{{ t("simulasiAkta.steps.pemegang_saham.item_label") }} {{ idx + 1
                                         }}</span>
                                     <button v-if="pemegangSaham.length > 1" @click="hapusPemegangSaham(ps.id)"
-                                        class="text-[12px] font-semibold text-red-400 hover:text-red-500 transition">Hapus</button>
+                                        class="text-[12px] font-semibold text-red-400 hover:text-red-500 transition">{{ t("simulasiAkta.steps.pemegang_saham.hapus") }}</button>
                                 </div>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
                                     <div>
                                         <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">
-                                            Nama <span class="text-red-500">*</span>
+                                            {{ t("simulasiAkta.steps.pemegang_saham.nama_label") }} <span class="text-red-500">*</span>
                                         </label>
-                                        <input v-model="ps.nama" type="text" placeholder="Nama lengkap"
+                                        <input v-model="ps.nama" type="text" :placeholder="t('simulasiAkta.steps.pemegang_saham.nama_placeholder')"
                                             class="w-full rounded-lg border px-3 py-2 text-[13px] focus:outline-none focus:ring-1 transition"
                                             :class="errors.pemegangSaham?.[idx]?.nama
                                                 ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
@@ -759,7 +760,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     </div>
                                     <div>
                                         <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">
-                                            Kepemilikan <span class="text-red-500">*</span>
+                                            {{ t("simulasiAkta.steps.pemegang_saham.kepemilikan_label") }} <span class="text-red-500">*</span>
                                         </label>
                                         <div class="relative">
                                             <input v-model="ps.kepemilikan" type="number" min="0" max="100"
@@ -783,7 +784,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     <div>
                                         <label
-                                            class="block text-[12px] font-semibold text-[#1A1B18] mb-1">Domisili</label>
+                                            class="block text-[12px] font-semibold text-[#1A1B18] mb-1">{{ t("simulasiAkta.steps.pemegang_saham.domisili_label") }}</label>
                                         <div class="flex gap-4">
                                             <label v-for="opt in ['WNI', 'WNA']" :key="opt"
                                                 class="flex items-center gap-1.5 cursor-pointer">
@@ -794,18 +795,17 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                         </div>
                                     </div>
                                     <div>
-                                        <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">Juga Menjabat
-                                            Sebagai</label>
+                                        <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">{{ t("simulasiAkta.steps.pemegang_saham.juga_menjabat_label") }}</label>
                                         <div class="flex gap-4">
                                             <label class="flex items-center gap-1.5 cursor-pointer">
                                                 <input type="checkbox" v-model="ps.direksi"
                                                     class="accent-primary rounded" />
-                                                <span class="text-[12px] text-[#1A1B18]">Direksi</span>
+                                                <span class="text-[12px] text-[#1A1B18]">{{ t("simulasiAkta.steps.pemegang_saham.direksi_label") }}</span>
                                             </label>
                                             <label class="flex items-center gap-1.5 cursor-pointer">
                                                 <input type="checkbox" v-model="ps.komisaris"
                                                     class="accent-primary rounded" />
-                                                <span class="text-[12px] text-[#1A1B18]">Komisaris</span>
+                                                <span class="text-[12px] text-[#1A1B18]">{{ t("simulasiAkta.steps.pemegang_saham.komisaris_label") }}</span>
                                             </label>
                                         </div>
                                     </div>
@@ -815,7 +815,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                         <!-- Counter pemegang saham -->
                         <div class="mt-3 flex items-center justify-between text-[12px]">
-                            <span class="text-[#686964]">Jumlah pemegang saham:</span>
+                            <span class="text-[#686964]">{{ t("simulasiAkta.steps.pemegang_saham.jumlah_label") }}</span>
                             <span class="font-bold"
                                 :class="pemegangSaham.length >= MAX_PEMEGANG_SAHAM ? 'text-amber-600' : 'text-[#686964]'">
                                 {{ pemegangSaham.length }}/{{ MAX_PEMEGANG_SAHAM }}
@@ -824,14 +824,14 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
 
                         <!-- Total persentase indicator -->
                         <div class="mt-3 flex items-center justify-between text-[12px]">
-                            <span class="text-[#686964]">Total kepemilikan:</span>
+                            <span class="text-[#686964]">{{ t("simulasiAkta.steps.pemegang_saham.total_label") }}</span>
                             <span class="font-bold" :class="Math.round(pemegangSaham.reduce((s, p) => s + (parseFloat(p.kepemilikan) || 0), 0)) === 100
                                 ? 'text-green-600' : 'text-red-500'">
                                 {{pemegangSaham.reduce((s, p) => s + (parseFloat(p.kepemilikan) || 0), 0).toFixed(1)
                                 }}%
                                 {{Math.round(pemegangSaham.reduce((s, p) => s + (parseFloat(p.kepemilikan) || 0), 0))
-                                    === 100 ? "✓" :
-                                    "(harus 100%)"}}
+                                    === 100 ? t("simulasiAkta.steps.pemegang_saham.total_ok") :
+                                    t("simulasiAkta.steps.pemegang_saham.total_fail")}}
                             </span>
                         </div>
 
@@ -841,7 +841,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
                             </svg>
-                            Tambah Pemegang Saham
+                            {{ t("simulasiAkta.steps.pemegang_saham.tambah_btn") }}
                         </button>
                     </div>
 
@@ -852,10 +852,10 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <span
                                 class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.direksi ? 'bg-red-400' : 'bg-primary'">6</span>
-                            <h2 class="text-[15px] font-bold text-black">Direksi/Direktur</h2>
+                            <h2 class="text-[15px] font-bold text-black">{{ t("simulasiAkta.steps.direksi.title") }}</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Tentukan susunan direksi perusahaan</p>
+                        <p class="text-[12px] text-[#686964] mb-5 pl-10">{{ t("simulasiAkta.steps.direksi.desc") }}</p>
 
                         <div class="flex flex-col gap-3">
                             <div v-for="(d, idx) in direksi" :key="d.id" class="rounded-xl border p-4 transition-colors"
@@ -863,21 +863,21 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     ? 'border-red-200 bg-red-50/30'
                                     : 'border-[#E8E8E6]'">
                                 <div class="flex items-center justify-between mb-3">
-                                    <span class="text-[13px] font-bold text-[#1A1B18]">Direktur {{ idx + 1 }}</span>
+                                    <span class="text-[13px] font-bold text-[#1A1B18]">{{ t("simulasiAkta.steps.direksi.item_label") }} {{ idx + 1 }}</span>
                                     <button v-if="direksi.length > 1" @click="hapusDireksi(d.id)"
-                                        class="text-[12px] font-semibold text-red-400 hover:text-red-500 transition">Hapus</button>
+                                        class="text-[12px] font-semibold text-red-400 hover:text-red-500 transition">{{ t("simulasiAkta.steps.direksi.hapus") }}</button>
                                 </div>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     <div>
                                         <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">
-                                            Jabatan <span class="text-red-500">*</span>
+                                            {{ t("simulasiAkta.steps.direksi.jabatan_label") }} <span class="text-red-500">*</span>
                                         </label>
                                         <select v-model="d.jabatan"
                                             class="w-full rounded-lg border px-3 py-2 text-[13px] focus:outline-none focus:ring-1 transition"
                                             :class="errors.direksi?.[idx]?.jabatan
                                                 ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
                                                 : 'border-[#D9DAD8] focus:border-primary focus:ring-primary bg-white'">
-                                            <option value="">Pilih Jabatan</option>
+                                            <option value="">{{ t("simulasiAkta.steps.direksi.jabatan_placeholder") }}</option>
                                             <option>Direktur Utama</option>
                                             <option>Direktur</option>
                                         </select>
@@ -891,9 +891,9 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     </div>
                                     <div>
                                         <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">
-                                            Nama Direktur <span class="text-red-500">*</span>
+                                            {{ t("simulasiAkta.steps.direksi.nama_label") }} <span class="text-red-500">*</span>
                                         </label>
-                                        <input v-model="d.nama" type="text" placeholder="Nama lengkap"
+                                        <input v-model="d.nama" type="text" :placeholder="t('simulasiAkta.steps.direksi.nama_placeholder')"
                                             class="w-full rounded-lg border px-3 py-2 text-[13px] focus:outline-none focus:ring-1 transition"
                                             :class="errors.direksi?.[idx]?.nama
                                                 ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
@@ -916,7 +916,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
                             </svg>
-                            Tambah Direksi
+                            {{ t("simulasiAkta.steps.direksi.tambah_btn") }}
                         </button>
                     </div>
 
@@ -927,10 +927,10 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                             <span
                                 class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-white text-[13px] font-bold"
                                 :class="errors.komisaris ? 'bg-red-400' : 'bg-primary'">7</span>
-                            <h2 class="text-[15px] font-bold text-black">Dewan Komisaris</h2>
+                            <h2 class="text-[15px] font-bold text-black">{{ t("simulasiAkta.steps.komisaris.title") }}</h2>
                             <span class="text-red-500 text-[13px]">*</span>
                         </div>
-                        <p class="text-[12px] text-[#686964] mb-5 pl-10">Tentukan susunan dewan komisaris perusahaan</p>
+                        <p class="text-[12px] text-[#686964] mb-5 pl-10">{{ t("simulasiAkta.steps.komisaris.desc") }}</p>
 
                         <div class="flex flex-col gap-3">
                             <div v-for="(k, idx) in komisaris" :key="k.id"
@@ -938,21 +938,21 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     ? 'border-red-200 bg-red-50/30'
                                     : 'border-[#E8E8E6]'">
                                 <div class="flex items-center justify-between mb-3">
-                                    <span class="text-[13px] font-bold text-[#1A1B18]">Komisaris {{ idx + 1 }}</span>
+                                    <span class="text-[13px] font-bold text-[#1A1B18]">{{ t("simulasiAkta.steps.komisaris.item_label") }} {{ idx + 1 }}</span>
                                     <button v-if="komisaris.length > 1" @click="hapusKomisaris(k.id)"
-                                        class="text-[12px] font-semibold text-red-400 hover:text-red-500 transition">Hapus</button>
+                                        class="text-[12px] font-semibold text-red-400 hover:text-red-500 transition">{{ t("simulasiAkta.steps.komisaris.hapus") }}</button>
                                 </div>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     <div>
                                         <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">
-                                            Jabatan <span class="text-red-500">*</span>
+                                            {{ t("simulasiAkta.steps.komisaris.jabatan_label") }} <span class="text-red-500">*</span>
                                         </label>
                                         <select v-model="k.jabatan"
                                             class="w-full rounded-lg border px-3 py-2 text-[13px] focus:outline-none focus:ring-1 transition"
                                             :class="errors.komisaris?.[idx]?.jabatan
                                                 ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
                                                 : 'border-[#D9DAD8] focus:border-primary focus:ring-primary bg-white'">
-                                            <option value="">Pilih Jabatan</option>
+                                            <option value="">{{ t("simulasiAkta.steps.komisaris.jabatan_placeholder") }}</option>
                                             <option>Komisaris Utama</option>
                                             <option>Komisaris</option>
                                         </select>
@@ -966,9 +966,9 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                     </div>
                                     <div>
                                         <label class="block text-[12px] font-semibold text-[#1A1B18] mb-1">
-                                            Nama Komisaris <span class="text-red-500">*</span>
+                                            {{ t("simulasiAkta.steps.komisaris.nama_label") }} <span class="text-red-500">*</span>
                                         </label>
-                                        <input v-model="k.nama" type="text" placeholder="Nama lengkap"
+                                        <input v-model="k.nama" type="text" :placeholder="t('simulasiAkta.steps.komisaris.nama_placeholder')"
                                             class="w-full rounded-lg border px-3 py-2 text-[13px] focus:outline-none focus:ring-1 transition"
                                             :class="errors.komisaris?.[idx]?.nama
                                                 ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
@@ -991,7 +991,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 stroke-width="2.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
                             </svg>
-                            Tambah Komisaris
+                            {{ t("simulasiAkta.steps.komisaris.tambah_btn") }}
                         </button>
                     </div>
 
@@ -1005,9 +1005,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 <path fill-rule="evenodd" :d="errorIconPath" clip-rule="evenodd" />
                             </svg>
                             <div>
-                                <p class="text-[13px] font-bold text-red-600 mb-1">Terdapat {{
-                                    Object.keys(errors).length }} kesalahan yang
-                                    perlu diperbaiki:</p>
+                                <p class="text-[13px] font-bold text-red-600 mb-1">{{ t("simulasiAkta.errors.summary_title", { count: Object.keys(errors).length }) }}</p>
                                 <ul class="space-y-0.5">
                                     <li v-if="errors.namaPerseroan" class="text-[12px] text-red-500">• {{
                                         errors.namaPerseroan }}</li>
@@ -1025,13 +1023,10 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                         errors.modalDisetor }}</li>
                                     <li v-if="errors.totalPct" class="text-[12px] text-red-500">• {{ errors.totalPct }}
                                     </li>
-                                    <li v-if="errors.pemegangSaham" class="text-[12px] text-red-500">• Data pemegang
-                                        saham belum lengkap.
+                                    <li v-if="errors.pemegangSaham" class="text-[12px] text-red-500">• {{ t("simulasiAkta.errors.pemegang_saham_incomplete") }}
                                     </li>
-                                    <li v-if="errors.direksi" class="text-[12px] text-red-500">• Data direksi belum
-                                        lengkap.</li>
-                                    <li v-if="errors.komisaris" class="text-[12px] text-red-500">• Data komisaris belum
-                                        lengkap.</li>
+                                    <li v-if="errors.direksi" class="text-[12px] text-red-500">• {{ t("simulasiAkta.errors.direksi_incomplete") }}</li>
+                                    <li v-if="errors.komisaris" class="text-[12px] text-red-500">• {{ t("simulasiAkta.errors.komisaris_incomplete") }}</li>
                                 </ul>
                             </div>
                         </div>
@@ -1045,7 +1040,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
-                            Simulasikan & Lihat PDF
+                            {{ t("simulasiAkta.submit_cta") }}
                         </button>
                     </div>
 
@@ -1059,14 +1054,14 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                 <div class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-10 sm:px-10">
                     <div class="relative flex flex-col items-center text-center">
                         <h3 class="text-[20px] font-bold text-white sm:text-[24px]">
-                            Butuh Penjelasan Lebih Spesifik?
+                            {{ t("simulasiAkta.cta.title") }}
                         </h3>
                         <p class="mt-3 text-[13px] leading-[1.6] text-white/80 max-w-md">
-                            Tim kami siap membantu Anda melalui proses pendirian perusahaan dengan panduan yang tepat.
+                            {{ t("simulasiAkta.cta.desc") }}
                         </p>
                         <a :href="buildWhatsappLink()" target="_blank" rel="noopener noreferrer"
                             class="mt-6 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg hover:-translate-y-0.5 hover:bg-[#20BD5A] transition-all">
-                            Chat Langsung via WhatsApp
+                            {{ t("simulasiAkta.cta.whatsapp") }}
                             <img src="/icons/ft-wa.svg" alt="wa" class="h-5 w-5" />
                         </a>
                     </div>
@@ -1087,7 +1082,7 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
                         <div>
-                            <p class="text-[14px] font-bold text-[#1A1B18]">Simulasi Akta Pendirian</p>
+                            <p class="text-[14px] font-bold text-[#1A1B18]">{{ t("simulasiAkta.modal_pdf.title") }}</p>
                             <p class="text-[11px] text-[#686964]">{{ pdfFilename }}</p>
                         </div>
                     </div>
@@ -1121,12 +1116,12 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                 <div
                     class="flex items-center justify-center gap-4 bg-white px-5 py-3 shadow-[0_-1px_0_0_#E8E8E6] flex-shrink-0">
                     <p class="text-[12px] text-[#686964]">
-                        Dokumen ini adalah simulasi dan bukan merupakan akta notaris yang sah.
+                        {{ t("simulasiAkta.modal_pdf.disclaimer") }}
                     </p>
                     <a :href="buildWhatsappLink()" target="_blank" rel="noopener noreferrer"
                         class="flex items-center gap-1.5 rounded-lg bg-[#25D366] px-4 py-2 text-[12px] font-semibold text-white hover:bg-[#20BD5A] transition-colors whitespace-nowrap">
                         <img src="/icons/ft-wa.svg" class="h-4 w-4" alt="wa" />
-                        Konsultasi dengan Notaris
+                        {{ t("simulasiAkta.modal_pdf.consult_cta") }}
                     </a>
                 </div>
             </div>
