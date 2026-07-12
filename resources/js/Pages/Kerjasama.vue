@@ -839,7 +839,7 @@ const submit = () => {
                     </div>
 
                     <!-- SIDEBAR -->
-                    <aside class="lg:sticky lg:top-24">
+                    <aside class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start">
                         <div class="rounded-xl bg-[#9e1f16] p-6 text-white">
                             <h3 class="text-[15px] font-bold mb-2">
                                 {{ t("kerjasama.sidebar.title") }}

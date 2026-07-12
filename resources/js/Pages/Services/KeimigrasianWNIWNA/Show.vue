@@ -82,7 +82,7 @@ const currentSidebarPrice = computed(() =>
                 class="absolute right-0 -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block" alt="" />
             <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]">
                 <nav aria-label="Breadcrumb">
-                    <div class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
+                    <div class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
                         <a href="/" class="text-[#9e1f16] hover:text-black transition">
                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
@@ -125,10 +125,10 @@ const currentSidebarPrice = computed(() =>
         <!-- CONTENT -->
         <section class="bg-[#F7F7F5] py-12 sm:py-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-8 lg:grid-cols-[1fr_300px] xl:grid-cols-[1fr_320px]">
+                <div class="grid gap-8 lg:grid-cols-[1fr_300px] xl:grid-cols-[1fr_320px] min-w-0">
 
                     <!-- ===== KIRI ===== -->
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 min-w-0">
 
                         <!-- 1. Tab Jenis Pengajuan (opsional) -->
                         <div v-if="hasTabs"
@@ -214,9 +214,9 @@ const currentSidebarPrice = computed(() =>
                             </div>
                             <div class="rounded-xl border border-[#E8E8E6] p-5">
                                 <div class="flex items-start justify-between gap-2 mb-1">
-                                    <p class="text-[13px] font-bold text-[#1A1B18]">{{ currentBiaya.nama }}</p>
+                                    <p class="text-[13px] font-bold text-[#1A1B18] min-w-0 flex-1">{{ currentBiaya.nama }}</p>
                                     <span v-if="currentBiaya.harga_note"
-                                        class="text-[11px] text-[#686964] whitespace-nowrap flex-shrink-0">
+                                        class="text-[11px] text-[#686964] text-right flex-shrink-0 max-w-[45%]">
                                         {{ currentBiaya.harga_note }}
                                     </span>
                                 </div>
@@ -262,7 +262,7 @@ const currentSidebarPrice = computed(() =>
                     <!-- ===== END KIRI ===== -->
 
                     <!-- ===== KANAN: Sidebar ===== -->
-                    <div class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start">
+                    <div class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start min-w-0">
 
                         <!-- VIP Line Banner -->
                         <div class="rounded-2xl px-5 py-6 text-center overflow-hidden relative"
@@ -311,10 +311,10 @@ const currentSidebarPrice = computed(() =>
                                     :href="related.detail_path"
                                     class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] bg-white p-4 hover:border-primary/30 hover:shadow-sm transition-all">
                                     <p class="text-[13px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug">
-                                        {{ related.name }}
+                                        {{ pick(related.name) }}
                                     </p>
                                     <p class="text-[12px] leading-[1.5] text-[#686964] line-clamp-3">
-                                        {{ related.excerpt }}
+                                        {{ pick(related.excerpt) }}
                                     </p>
                                     <div class="flex items-center justify-between mt-1">
                                         <div>

@@ -60,7 +60,7 @@ watch(activeIndex, () => {
             <div
                 class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]">
                 <nav aria-label="Breadcrumb">
-                    <div class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
+                    <div class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
                         <a href="/" class="text-[#9e1f16] hover:text-black transition">
                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -190,10 +190,10 @@ watch(activeIndex, () => {
                 </div>
 
                 <!-- ===== GRID 2 KOLOM: mulai dari Penjelasan Layanan ===== -->
-                <div class="grid gap-8 lg:grid-cols-[1fr_300px] xl:grid-cols-[1fr_320px]">
+                <div class="grid gap-8 lg:grid-cols-[1fr_300px] xl:grid-cols-[1fr_320px] min-w-0">
 
                     <!-- ===== KIRI ===== -->
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 min-w-0">
 
                         <!-- 3. Penjelasan Layanan -->
                         <div v-if="currentItem?.penjelasan_layanan?.length"
@@ -361,7 +361,7 @@ watch(activeIndex, () => {
                     <!-- ===== END KIRI ===== -->
 
                     <!-- ===== KANAN: Sidebar ===== -->
-                    <div class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start">
+                    <div class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start min-w-0">
 
                         <!-- Price Card (reaktif ke index aktif) -->
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
@@ -431,7 +431,7 @@ watch(activeIndex, () => {
                                     <div class="flex-1 min-w-0">
                                         <p
                                             class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug line-clamp-2">
-                                            {{ related.name }}
+                                            {{ pick(related.name) }}
                                         </p>
                                         <p class="text-[11px] text-[#686964] mt-0.5">Mulai dari {{ related.price_label
                                             }}</p>

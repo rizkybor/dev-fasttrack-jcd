@@ -88,7 +88,7 @@ const selectedPackagePrice = computed(
                 <!-- Breadcrumb -->
                 <nav aria-label="Breadcrumb" class="overflow-hidden">
                     <div
-                        class="inline-flex max-w-full items-center gap-1.5 sm:gap-2 rounded-md bg-white px-3 py-1.5 sm:px-4 sm:py-2"
+                        class="inline-flex max-w-full items-center gap-1.5 sm:gap-2 sm:rounded-md sm:bg-white sm:px-4 sm:py-2"
                     >
                         <a
                             href="/"
@@ -528,7 +528,7 @@ const selectedPackagePrice = computed(
 
                     <!-- ===== KANAN: Sidebar ===== -->
                     <div
-                        class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start"
+                        class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start min-w-0"
                     >
                         <!-- VIP Line Banner -->
                         <div
@@ -688,14 +688,13 @@ const selectedPackagePrice = computed(
                                     <div
                                         class="text-[13px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors sm:text-[14px]"
                                     >
-                                        {{ related.name }}
+                                        {{ pick(related.name) }}
                                     </div>
                                     <p
                                         class="text-[12px] leading-[1.6] text-[#686964] line-clamp-3"
                                     >
                                         {{
-                                            related.excerpt ??
-                                            related.description
+                                            pick(related.excerpt) ?? pick(related.description)
                                         }}
                                     </p>
                                     <hr class="border-[#E8E8E6]" />

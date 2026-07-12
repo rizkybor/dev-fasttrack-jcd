@@ -85,7 +85,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
             <div
                 class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]">
                 <nav aria-label="Breadcrumb">
-                    <div class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
+                    <div class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
                         <a href="/" class="text-[#9e1f16] hover:text-black transition">
                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -193,10 +193,10 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                 </div>
 
                 <!-- Grid: KIRI + KANAN -->
-                <div class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]">
+                <div class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px] min-w-0">
 
                     <!-- ===== KIRI ===== -->
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 min-w-0">
                         <template v-if="selectedPaket">
 
                             <!-- 3. Penjelasan Layanan -->
@@ -502,7 +502,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                     </div>
 
                     <!-- ===== KANAN: Sidebar ===== -->
-                    <div class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start">
+                    <div class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start min-w-0">
 
                         <!-- Price Card -->
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
@@ -610,10 +610,10 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                     :href="related.detail_path"
                                     class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] bg-white p-4 hover:border-primary/30 hover:shadow-sm transition-all">
                                     <div class="text-[14px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors">
-                                        {{ related.name }}
+                                        {{ pick(related.name) }}
                                     </div>
                                     <p class="text-[12px] leading-[1.6] text-[#686964] line-clamp-3">
-                                        {{ related.excerpt ?? related.description }}
+                                        {{ pick(related.excerpt) ?? pick(related.description) }}
                                     </p>
                                     <hr class="border-[#E8E8E6]" />
                                     <div>
