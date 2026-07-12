@@ -2,11 +2,11 @@ export default {
     hero: {
         breadcrumb: {
             layanan: 'Layanan',
-            current: 'Digital Marketing',
+            current: 'Design and Digital Marketing',
         },
-        title: 'Digital Marketing',
+        title: 'Design and Digital Marketing',
         titleSub: '',
-        desc: 'Layanan digital marketing untuk meningkatkan visibilitas dan pertumbuhan bisnis Anda secara online.',
+        desc: 'Layanan desain profesional dan pemasaran digital untuk membangun identitas merek dan memperluas jangkauan bisnis FastTrack secara online.',
         back: 'Kembali',
     },
     items: {
@@ -22,24 +22,17 @@ export default {
     list: [
         {
             id: '1',
-            title: 'Desain Website & Company Profile',
-            description: 'Pembuatan website profesional dan company profile digital untuk memperkuat citra bisnis Anda secara online.',
-            price: 'Rp 5.000.000',
-            packages: '',
+            title: 'Design',
+            description: 'Layanan desain identitas dan dokumen visual perusahaan – logo, company profile, hingga annual report.',
+            price: 'Hubungi Kami',
+            packages: '4 Paket',
         },
         {
             id: '2',
-            title: 'Pengelolaan Media Sosial',
-            description: 'Pengelolaan konten dan strategi media sosial bulanan untuk meningkatkan engagement dan brand awareness bisnis Anda.',
-            price: 'Rp 3.500.000',
-            packages: '',
-        },
-        {
-            id: '3',
-            title: 'SEO & Google Ads Optimization',
-            description: 'Optimasi mesin pencari dan pengelolaan kampanye iklan digital untuk meningkatkan visibilitas dan konversi bisnis Anda.',
-            price: 'Rp 4.500.000',
-            packages: '',
+            title: 'Digital Marketing',
+            description: 'Layanan pemasaran digital menyeluruh – web development, SEO, hingga pengelolaan iklan di berbagai platform.',
+            price: 'Hubungi Kami',
+            packages: '4 Paket',
         },
     ],
 }

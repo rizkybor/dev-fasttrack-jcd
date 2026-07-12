@@ -1,5 +1,6 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
+import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed, watch } from "vue";
 import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 import { useI18n } from "vue-i18n";
@@ -585,9 +586,11 @@ const dokumenDibutuhkan = computed(() => activeContent.value?.dokumen_dibutuhkan
             </div>
         </section>
 
-        <!-- Footer CTA -->
-        <section class="bg-[#F7F7F5] mb-12 sm:mb-16">
-            <!-- ... tetap sama ... -->
-        </section>
+        <FooterCTA
+            :title="t('services.perizinanBerusahaDetail.footer.title')"
+            :description="t('services.perizinanBerusahaDetail.footer.desc')"
+            :button-text="t('services.perizinanBerusahaDetail.footer.cta')"
+            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar')"
+        />
     </MainLayout>
 </template>

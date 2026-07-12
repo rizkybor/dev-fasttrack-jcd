@@ -134,7 +134,7 @@ const serviceTools = [
 ];
 
 const informasiLinks = [
-    { key: "kbli", path: "/kbli" },
+    { key: "kbli", path: "/panduan-kbli" },
     { key: "faq", path: "/faq" },
 ];
 
@@ -229,7 +229,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                         </svg>
                     </a>
                     <a
-                        href="https://instagram.com/fasttrack"
+                        href="https://www.instagram.com/fasttrack.legal/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram FastTrack"

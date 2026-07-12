@@ -1,11 +1,17 @@
 export default {
     breadcrumb: {
         layanan: "服务",
+        parent: "数字营销",
         current: "数字营销",
     },
     back: "返回",
     sections: {
         penjelasan: "总体说明",
+        penjelasan_umum: "总体说明",
+        pilih_jenis: "选择服务类型",
+        penjelasan_layanan: "服务说明",
+        meliputi: "{name} 服务包含",
+        output: "您将收到的产出类型",
         syarat: "条款与条件",
         keuntungan: "优势与效益",
         alur: "流程说明",
@@ -13,6 +19,10 @@ export default {
         paket: "套餐与价格",
         dasar_hukum: "法律依据",
     },
+    items: {
+        from: "起价",
+    },
+    cta_button: "立即订购",
     plans: {
         mulai_dari: "起价",
         paling_populer: "最受欢迎",

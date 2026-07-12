@@ -1,9 +1,10 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
+import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const docsOpen = ref(false);
 const dasarHukumOpen = ref(false);
@@ -764,28 +765,11 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
             </div>
         </section>
 
-        <!-- Footer CTA Banner -->
-        <section id="footer" class="bg-[#F7F7F5] mb-8 sm:mb-12 lg:mb-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-5 py-10 sm:px-10 sm:py-14">
-                    <img src="/icons/ft-docs.svg" alt=""
-                        class="absolute right-4 top-4 h-12 w-12 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24" />
-                    <div class="relative flex flex-col items-center text-center">
-                        <h3
-                            class="max-w-2xl text-[18px] font-bold leading-[28px] text-white sm:text-[28px] sm:leading-[38px]">
-                            {{ footerCta.title }}
-                        </h3>
-                        <p class="mt-3 sm:mt-4 max-w-lg text-[13px] leading-[20px] text-white/80 sm:text-[16px] sm:leading-[24px]"
-                            v-html="footerCta.subtitle"></p>
-                        <a :href="buildWhatsappLink(footerCta.wa_message, jenisPengajuan)" target="_blank"
-                            rel="noopener noreferrer"
-                            class="mt-6 sm:mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-5 py-3 text-[13px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]">
-                            {{ footerCta.button_text }}
-                            <img src="/icons/ft-wa.svg" alt="WhatsApp" class="h-5 w-5" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <FooterCTA
+            :title="footerCta.title"
+            :description="footerCta.subtitle"
+            :button-text="footerCta.button_text"
+            :whatsapp-link="buildWhatsappLink(footerCta.wa_message, jenisPengajuan)"
+        />
     </MainLayout>
 </template>

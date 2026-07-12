@@ -2760,7 +2760,7 @@ Route::get('/digital-marketing/{id}', function (Request $request, int $id) use (
     $productFaq = $pickLocale($product['faq']) ?? [];
 
     return Inertia::render('Services/DigitalMarketing/Show', [
-        'product' => $product,
+        'service' => $product,
         'relatedProducts' => $relatedProducts,
         'seo' => ['title' => $productName . ' - FastTrack', 'description' => $productExcerpt, 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
         'schemas' => [

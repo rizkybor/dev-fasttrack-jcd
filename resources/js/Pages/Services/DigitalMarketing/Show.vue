@@ -1,26 +1,19 @@
 <script setup>
-import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
+import MainLayout from "@/Layouts/MainLayout.vue";
+import FooterCTA from "@/Components/FooterCTA.vue";
 
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 
 const props = defineProps({
-    product: {
-        type: Object,
-        required: true,
-    },
-    relatedProducts: {
-        type: Array,
-        default: () => [],
-    },
+    service: { type: [Object, Array], required: true },
 });
 
 const whatsappNumber = "6282298604144";
 
-const buildWhatsappLink = (productName, jenis) => {
-    const jenisLabel = jenis === "perpanjangan" ? "Perpanjangan" : "Baru";
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName} (${jenisLabel}).`;
+const buildWhatsappLink = (serviceName) => {
+    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${serviceName}.`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
@@ -37,31 +30,51 @@ const pick = (field) => {
     return field;
 };
 
-const localizedProduct = computed(() => {
-    const p = props.product;
-    if (!p) return p;
+const localizedService = computed(() => {
+    const raw = Array.isArray(props.service) ? props.service[0] : props.service;
+    if (!raw) return null;
+
+    const content = pick(raw.content) ?? {};
 
     return {
-        ...p,
-        name: pick(p.name),
-        tag: pick(p.tag),
-        duration: pick(p.duration),
-        excerpt: pick(p.excerpt),
-        baru: pick(p.baru),
-        perpanjangan: pick(p.perpanjangan),
-        faq: pick(p.faq) ?? [],
+        ...raw,
+        name: pick(raw.name),
+        excerpt: pick(raw.excerpt),
+        penjelasan_umum: content.penjelasan_umum ?? [],
+        sub_services: (raw.sub_services || []).map((sub) => {
+            const detail = pick(sub.detail) ?? {};
+            return {
+                ...sub,
+                name: pick(sub.name),
+                excerpt: pick(sub.excerpt),
+                penjelasan_layanan: detail.penjelasan_layanan ?? [],
+                meliputi: detail.meliputi ?? [],
+                output: detail.output ?? [],
+            };
+        }),
     };
 });
 
-const product = localizedProduct;
+const service = localizedService;
 
-// ===== Toggle Jenis Pengajuan: 'baru' | 'perpanjangan' =====
-const jenisPengajuan = ref("baru");
+// ===== Pilih Jenis Layanan =====
+const rawFirstService = Array.isArray(props.service)
+    ? props.service[0]
+    : props.service;
+const selectedSubId = ref(rawFirstService?.sub_services?.[0]?.id ?? null);
 
-// Toggle hanya tampil jika produk punya data 'perpanjangan'
-const hasToggle = computed(() => !!product.value?.perpanjangan);
+const currentSub = computed(
+    () =>
+        service.value?.sub_services?.find(
+            (s) => s.id === selectedSubId.value,
+        ) ?? service.value?.sub_services?.[0],
+);
 
-const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
+const otherSubServices = computed(() =>
+    (service.value?.sub_services ?? []).filter(
+        (s) => s.id !== currentSub.value?.id,
+    ),
+);
 </script>
 
 <template>
@@ -146,7 +159,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                         >
                             {{
                                 t(
-                                    "services.digitalMarketingDetail.breadcrumb.current",
+                                    "services.digitalMarketingDetail.breadcrumb.parent",
                                 )
                             }}
                         </a>
@@ -163,14 +176,17 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 d="M9 5l7 7-7 7"
                             />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{
-                            product.name
-                        }}</span>
+                        <span
+                            v-if="service"
+                            class="text-sm font-medium text-[#9e1f16]"
+                        >
+                            {{ service.name }}
+                        </span>
                     </div>
                 </nav>
 
                 <!-- Center: Heading -->
-                <div class="flex items-center gap-5">
+                <div v-if="service" class="flex items-center gap-5">
                     <div
                         class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
                     >
@@ -183,7 +199,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2"
                     >
-                        {{ product.name }}
+                        {{ service.name }}
                     </h1>
                 </div>
 
@@ -215,59 +231,146 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
         <!-- CONTENT SECTION -->
         <section id="edukasi" class="bg-[#F7F7F5] py-12 sm:py-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <!-- 1. Penjelasan Umum -->
                 <div
-                    class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]"
+                    class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
+                >
+                    <div class="flex items-center gap-3 mb-5">
+                        <img
+                            src="/icons/ic-menu-arrow.svg"
+                            class="w-6 h-6"
+                            alt=""
+                        />
+                        <h2
+                            class="text-[15px] font-bold uppercase tracking-widest text-black"
+                        >
+                            {{
+                                t(
+                                    "services.digitalMarketingDetail.sections.penjelasan_umum",
+                                )
+                            }}
+                        </h2>
+                    </div>
+                    <div class="space-y-4">
+                        <p
+                            v-for="(
+                                paragraph, index
+                            ) in service.penjelasan_umum"
+                            :key="`penjelasan-umum-${index}`"
+                            class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify"
+                        >
+                            {{ paragraph }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Pilih Jenis Layanan -->
+                <div
+                    class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mt-8"
+                >
+                    <div class="flex items-center gap-3 mb-5">
+                        <img
+                            src="/icons/ic-menu-arrow.svg"
+                            class="w-6 h-6"
+                            alt=""
+                        />
+                        <h2
+                            class="text-[15px] font-bold uppercase tracking-widest text-black"
+                        >
+                            {{
+                                t(
+                                    "services.digitalMarketingDetail.sections.pilih_jenis",
+                                )
+                            }}
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <button
+                            v-for="sub in service.sub_services"
+                            :key="sub.id"
+                            type="button"
+                            @click="selectedSubId = sub.id"
+                            class="flex flex-col rounded-[14px] border p-[15px] text-left transition-all duration-200"
+                            :class="
+                                currentSub?.id === sub.id
+                                    ? 'bg-[#9e1f16] border-[#9e1f16]'
+                                    : 'bg-[#FEFEFE] border-[#D9DAD8] hover:border-primary/30'
+                            "
+                        >
+                            <div
+                                class="flex h-10 w-10 items-center justify-center rounded-lg mb-4"
+                                :class="
+                                    currentSub?.id === sub.id
+                                        ? 'bg-white/15'
+                                        : 'bg-[#9e1f16]'
+                                "
+                            >
+                                <img
+                                    src="/icons/ft-persons-w.svg"
+                                    class="w-5 h-5"
+                                    alt=""
+                                />
+                            </div>
+                            <h4
+                                class="text-[14px] font-bold leading-[20px] mb-1 line-clamp-2"
+                                :class="
+                                    currentSub?.id === sub.id
+                                        ? 'text-white'
+                                        : 'text-[#1A1B18]'
+                                "
+                            >
+                                {{ sub.name }}
+                            </h4>
+                            <p
+                                class="text-[12px] leading-[18px] line-clamp-3 mb-4"
+                                :class="
+                                    currentSub?.id === sub.id
+                                        ? 'text-white/80'
+                                        : 'text-[#282925]'
+                                "
+                            >
+                                {{ sub.excerpt }}
+                            </p>
+                            <div class="mt-auto">
+                                <span
+                                    class="block text-[11px] mb-0.5"
+                                    :class="
+                                        currentSub?.id === sub.id
+                                            ? 'text-white/70'
+                                            : 'text-[#1A1B18]'
+                                    "
+                                >
+                                    {{
+                                        t(
+                                            "services.digitalMarketingDetail.items.from",
+                                        )
+                                    }}
+                                </span>
+                                <span
+                                    class="text-[16px] font-bold"
+                                    :class="
+                                        currentSub?.id === sub.id
+                                            ? 'text-white'
+                                            : 'text-primary'
+                                    "
+                                >
+                                    {{ sub.price_label }}
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    v-if="service"
+                    class="mt-8 grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]"
                 >
                     <!-- ===== KIRI: Konten Utama ===== -->
                     <div class="flex flex-col gap-6">
-                        <!-- 0. Toggle: Pilih Jenis Pengajuan -->
+                        <!-- 3. Penjelasan Layanan -->
                         <div
-                            v-if="hasToggle"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
-                        >
-                            <div class="flex items-center gap-3 mb-5">
-                                <img
-                                    src="/icons/ic-menu-arrow.svg"
-                                    class="w-6 h-6"
-                                    alt=""
-                                />
-                                <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
-                                >
-                                    Pilih Jenis Pengajuan
-                                </h2>
-                            </div>
-
-                            <div
-                                class="inline-flex rounded-full border border-[#E8E8E6] p-1 bg-[#F7F7F5]"
-                            >
-                                <button
-                                    @click="jenisPengajuan = 'baru'"
-                                    class="px-5 py-2 rounded-full text-[13px] font-semibold transition-colors"
-                                    :class="
-                                        jenisPengajuan === 'baru'
-                                            ? 'bg-primary text-white'
-                                            : 'text-[#686964] hover:text-black'
-                                    "
-                                >
-                                    Baru
-                                </button>
-                                <button
-                                    @click="jenisPengajuan = 'perpanjangan'"
-                                    class="px-5 py-2 rounded-full text-[13px] font-semibold transition-colors"
-                                    :class="
-                                        jenisPengajuan === 'perpanjangan'
-                                            ? 'bg-primary text-white'
-                                            : 'text-[#686964] hover:text-black'
-                                    "
-                                >
-                                    Perpanjangan
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- 1. Penjelasan Umum -->
-                        <div
+                            v-if="currentSub"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-5">
@@ -281,7 +384,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 >
                                     {{
                                         t(
-                                            "services.digitalMarketingDetail.sections.penjelasan",
+                                            "services.digitalMarketingDetail.sections.penjelasan_layanan",
                                         )
                                     }}
                                 </h2>
@@ -290,8 +393,8 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 <p
                                     v-for="(
                                         paragraph, index
-                                    ) in currentData.penjelasan_umum"
-                                    :key="`penjelasan-${index}`"
+                                    ) in currentSub.penjelasan_layanan"
+                                    :key="`penjelasan-layanan-${index}`"
                                     class="text-[14px] leading-[1.8] text-[#3D3D3A] text-justify"
                                 >
                                     {{ paragraph }}
@@ -299,9 +402,9 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                             </div>
                         </div>
 
-                        <!-- 2. Jenis Dokumen yang akan Didapatkan -->
+                        <!-- 4. Layanan X Meliputi -->
                         <div
-                            v-if="currentData.dokumen_didapat?.length"
+                            v-if="currentSub?.meliputi?.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
                         >
                             <div class="flex items-center gap-3 mb-5">
@@ -313,15 +416,59 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Jenis Dokumen yang akan Di Dapatkan
+                                    {{
+                                        t(
+                                            "services.digitalMarketingDetail.sections.meliputi",
+                                            { name: currentSub?.name ?? "" },
+                                        )
+                                    }}
+                                </h2>
+                            </div>
+                            <ol class="columns-1 sm:columns-2 gap-x-8">
+                                <li
+                                    v-for="(item, index) in currentSub.meliputi"
+                                    :key="`meliputi-${index}`"
+                                    class="flex items-start gap-2.5 mb-3 break-inside-avoid"
+                                >
+                                    <span
+                                        class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#9e1f16] text-[12px] font-bold text-white"
+                                    >
+                                        {{ index + 1 }}
+                                    </span>
+                                    <span
+                                        class="text-[13px] leading-[1.6] text-[#3D3D3A] pt-0.5"
+                                    >
+                                        {{ item }}
+                                    </span>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <!-- 5. Jenis Output yang akan Diterima -->
+                        <div
+                            v-if="currentSub?.output?.length"
+                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
+                        >
+                            <div class="flex items-center gap-3 mb-5">
+                                <img
+                                    src="/icons/ic-menu-arrow.svg"
+                                    class="w-6 h-6"
+                                    alt=""
+                                />
+                                <h2
+                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
+                                >
+                                    {{
+                                        t(
+                                            "services.digitalMarketingDetail.sections.output",
+                                        )
+                                    }}
                                 </h2>
                             </div>
                             <ul class="space-y-3">
                                 <li
-                                    v-for="(
-                                        doc, index
-                                    ) in currentData.dokumen_didapat"
-                                    :key="`dok-${index}`"
+                                    v-for="(item, index) in currentSub.output"
+                                    :key="`output-${index}`"
                                     class="flex items-start gap-2.5"
                                 >
                                     <img
@@ -332,224 +479,58 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                     <span
                                         class="text-[13px] leading-[1.6] text-[#3D3D3A]"
                                     >
-                                        {{ doc }}
+                                        {{ item }}
                                     </span>
                                 </li>
                             </ul>
                         </div>
 
-                        <!-- 3. Syarat -->
+                        <!-- 6. Biaya Layanan -->
                         <div
-                            v-if="currentData.syarat?.sections?.length"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
+                            v-if="currentSub"
+                            class="rounded-2xl overflow-hidden bg-[#9e1f16] p-6 sm:p-8 flex items-center justify-between gap-4"
                         >
-                            <div class="flex items-center gap-3 mb-5">
-                                <img
-                                    src="/icons/ic-menu-arrow.svg"
-                                    class="w-6 h-6"
-                                    alt=""
-                                />
-                                <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/15"
                                 >
-                                    Syarat
-                                </h2>
-                            </div>
-
-                            <div class="space-y-6">
-                                <div
-                                    v-for="(section, sIndex) in currentData
-                                        .syarat.sections"
-                                    :key="`syarat-section-${sIndex}`"
+                                    <img
+                                        src="/icons/ft-persons-w.svg"
+                                        class="w-5 h-5"
+                                        alt=""
+                                    />
+                                </span>
+                                <span
+                                    class="text-[14px] font-semibold text-white"
                                 >
-                                    <!-- Label section: A. / B. -->
-                                    <p
-                                        class="text-[13px] font-bold text-[#1A1B18] mb-3"
-                                    >
-                                        {{ section.label }}
-                                    </p>
-
-                                    <!-- Groups dalam section -->
-                                    <div
-                                        v-for="(
-                                            group, gIndex
-                                        ) in section.groups"
-                                        :key="`syarat-group-${sIndex}-${gIndex}`"
-                                    >
-                                        <p
-                                            v-if="group.label"
-                                            class="text-[13px] font-semibold text-[#3D3D3A] mb-2"
-                                        >
-                                            {{ group.label }}
-                                        </p>
-
-                                        <ol class="space-y-2.5 pl-1">
-                                            <li
-                                                v-for="(
-                                                    note, nIndex
-                                                ) in group.notes"
-                                                :key="`syarat-note-${sIndex}-${gIndex}-${nIndex}`"
-                                                class="flex gap-2.5 text-[13px] leading-[1.6] text-[#3D3D3A]"
-                                            >
-                                                <span
-                                                    class="flex-shrink-0 font-semibold text-[#1A1B18]"
-                                                >
-                                                    {{ nIndex + 1 }}.
-                                                </span>
-                                                <span>{{ note }}</span>
-                                            </li>
-                                        </ol>
-                                    </div>
-                                </div>
+                                    {{ currentSub.name }}
+                                </span>
                             </div>
-                        </div>
-
-                        <!-- 4. Rincian Biaya -->
-                        <div
-                            v-if="currentData.rincian_biaya"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
-                        >
-                            <div class="flex items-center gap-3 mb-5">
-                                <img
-                                    src="/icons/ic-menu-arrow.svg"
-                                    class="w-6 h-6"
-                                    alt=""
-                                />
-                                <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
-                                >
-                                    Rincian Biaya
-                                </h2>
-                            </div>
-
-                            <div
-                                class="flex flex-col sm:flex-row sm:items-center gap-4"
+                            <a
+                                :href="buildWhatsappLink(currentSub.name)"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-1.5 rounded-lg bg-white px-4 py-2.5 text-[13px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors"
                             >
-                                <!-- Daftar biaya -->
-                                <div class="flex-1 space-y-3">
-                                    <div
-                                        v-for="(item, index) in currentData
-                                            .rincian_biaya.items"
-                                        :key="`biaya-${index}`"
-                                        class="flex items-center justify-between gap-4"
-                                    >
-                                        <span
-                                            class="text-[13px] leading-[1.5] text-[#3D3D3A]"
-                                        >
-                                            {{ item.label }}
-                                        </span>
-                                        <span
-                                            class="text-[13px] font-semibold text-black whitespace-nowrap"
-                                        >
-                                            {{ item.amount }}
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <!-- Card total + CTA -->
-                                <div
-                                    class="rounded-xl px-5 py-4 flex items-center justify-between gap-4 sm:w-[320px]"
-                                    style="
-                                        background-image: url(&quot;/images/card-arrow-item-bg.png&quot;);
-                                        background-size: cover;
-                                        background-position: center;
-                                        background-repeat: no-repeat;
-                                    "
+                                {{
+                                    t(
+                                        "services.digitalMarketingDetail.cta_button",
+                                    )
+                                }}
+                                <svg
+                                    class="h-3.5 w-3.5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
                                 >
-                                    <div>
-                                        <div class="text-[11px] text-white/80">
-                                            {{
-                                                currentData.rincian_biaya
-                                                    .total_label
-                                            }}
-                                        </div>
-                                        <div
-                                            class="text-[18px] font-bold text-white leading-tight"
-                                        >
-                                            {{
-                                                currentData.rincian_biaya
-                                                    .total_amount
-                                            }}
-                                        </div>
-                                    </div>
-                                    <a
-                                        :href="
-                                            buildWhatsappLink(
-                                                product.name,
-                                                jenisPengajuan,
-                                            )
-                                        "
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="flex items-center gap-1.5 rounded-lg bg-white px-3.5 py-2 text-[12px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors"
-                                    >
-                                        {{
-                                            t(
-                                                "services.digitalMarketingDetail.plans.pesan",
-                                            )
-                                        }}
-                                        <svg
-                                            class="h-3.5 w-3.5"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            stroke-width="2.5"
-                                        >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                d="M13 7l5 5m0 0l-5 5m5-5H6"
-                                            />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 5. Dasar Hukum -->
-                        <div
-                            v-if="currentData.dasar_hukum?.length"
-                            class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8"
-                        >
-                            <div class="flex items-center gap-3 mb-5">
-                                <img
-                                    src="/icons/ic-menu-arrow.svg"
-                                    class="w-6 h-6"
-                                    alt=""
-                                />
-                                <h2
-                                    class="text-[15px] font-bold uppercase tracking-widest text-black"
-                                >
-                                    {{
-                                        t(
-                                            "services.digitalMarketingDetail.sections.dasar_hukum",
-                                        )
-                                    }}
-                                </h2>
-                            </div>
-                            <ul class="space-y-4">
-                                <li
-                                    v-for="(
-                                        hukum, index
-                                    ) in currentData.dasar_hukum"
-                                    :key="`hukum-${index}`"
-                                    class="flex items-start gap-4"
-                                >
-                                    <span
-                                        class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#ddffe3]"
-                                    >
-                                        <img
-                                            src="/icons/ft-save.svg"
-                                            class="w-4 h-4"
-                                            alt=""
-                                        />
-                                    </span>
-                                    <span
-                                        class="text-[13px] leading-[1.7] text-[#3D3D3A] text-justify"
-                                        >{{ hukum }}</span
-                                    >
-                                </li>
-                            </ul>
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                                    />
+                                </svg>
+                            </a>
                         </div>
                     </div>
 
@@ -594,8 +575,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                             <a
                                 :href="
                                     buildWhatsappLink(
-                                        product.name,
-                                        jenisPengajuan,
+                                        currentSub?.name ?? service.name,
                                     )
                                 "
                                 target="_blank"
@@ -627,14 +607,15 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
 
                         <!-- Price Card -->
                         <div
+                            v-if="currentSub"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-5"
                         >
                             <div
                                 class="mb-4 flex items-center justify-between rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3 py-2.5"
                             >
-                                <span class="text-[13px] text-[#1A1B18]">{{
-                                    product.name
-                                }}</span>
+                                <span class="text-[13px] text-[#1A1B18]">
+                                    {{ currentSub.name }}
+                                </span>
                                 <svg
                                     class="h-4 w-4 text-[#686964]"
                                     fill="none"
@@ -659,10 +640,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                             <div
                                 class="text-[32px] font-bold leading-none text-primary mb-1"
                             >
-                                {{
-                                    currentData.rincian_biaya?.total_amount ??
-                                    product.price_label
-                                }}
+                                {{ currentSub.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
                                 {{
@@ -672,12 +650,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 }}
                             </div>
                             <a
-                                :href="
-                                    buildWhatsappLink(
-                                        product.name,
-                                        jenisPengajuan,
-                                    )
-                                "
+                                :href="buildWhatsappLink(currentSub.name)"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors"
@@ -693,52 +666,11 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                     )
                                 }}
                             </a>
-                            <ul class="mt-4 space-y-2">
-                                <li
-                                    class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
-                                >
-                                    <img
-                                        src="/icons/ft-done.svg"
-                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
-                                        alt="done"
-                                    />
-                                    Konsultasi pertama gratis
-                                </li>
-                                <li
-                                    class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
-                                >
-                                    <img
-                                        src="/icons/ft-done.svg"
-                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
-                                        alt="done"
-                                    />
-                                    Harga transparan, tanpa biaya tersembunyi
-                                </li>
-                                <li
-                                    class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
-                                >
-                                    <img
-                                        src="/icons/ft-done.svg"
-                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
-                                        alt="done"
-                                    />
-                                    Tim berpengalaman 18+ tahun
-                                </li>
-                                <li
-                                    class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
-                                >
-                                    <img
-                                        src="/icons/ft-done.svg"
-                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
-                                        alt="done"
-                                    />
-                                    Update proses berkala via WhatsApp
-                                </li>
-                            </ul>
                         </div>
 
-                        <!-- Layanan Terkait -->
+                        <!-- Layanan Design Lainnya -->
                         <div
+                            v-if="otherSubServices.length"
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-5"
                         >
                             <h3
@@ -751,79 +683,33 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 }}
                             </h3>
                             <div class="flex flex-col gap-3">
-                                <a
-                                    v-for="(
-                                        related, index
-                                    ) in relatedProducts.slice(0, 3)"
-                                    :key="`related-${index}`"
-                                    :href="related.detail_path"
-                                    class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] bg-white p-4 hover:border-primary/30 hover:shadow-sm transition-all"
+                                <button
+                                    v-for="sub in otherSubServices"
+                                    :key="sub.id"
+                                    type="button"
+                                    @click="selectedSubId = sub.id"
+                                    class="group flex flex-col gap-1 rounded-xl border border-[#E8E8E6] bg-white p-4 text-left hover:border-primary/30 hover:shadow-sm transition-all"
                                 >
-                                    <!-- Name -->
                                     <div
-                                        class="text-[14px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors"
+                                        class="text-[13px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors"
                                     >
-                                        {{ related.name }}
+                                        {{ sub.name }}
                                     </div>
-
-                                    <!-- Description -->
-                                    <p
-                                        class="text-[12px] leading-[1.6] text-[#686964] line-clamp-3"
-                                    >
-                                        {{
-                                            related.excerpt ??
-                                            related.description
-                                        }}
-                                    </p>
-
-                                    <hr class="border-[#E8E8E6]" />
-
-                                    <!-- Price row -->
                                     <div
-                                        class="flex items-center justify-between"
-                                    >
-                                        <div>
-                                            <div
-                                                class="text-[11px] text-[#686964] mb-0.5"
-                                            >
-                                                {{
-                                                    t(
-                                                        "services.digitalMarketingDetail.sidebar.related_from",
-                                                    )
-                                                }}
-                                            </div>
-                                            <div
-                                                class="text-[18px] font-bold text-primary leading-none"
-                                            >
-                                                {{ related.price_label }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- CTA Button -->
-                                    <div
-                                        class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors"
+                                        class="text-[11px] text-[#686964] mb-1"
                                     >
                                         {{
                                             t(
-                                                "services.digitalMarketingDetail.sidebar.related_cta",
+                                                "services.digitalMarketingDetail.sidebar.related_from",
                                             )
                                         }}
-                                        <svg
-                                            class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            stroke-width="2.5"
+                                        <span
+                                            class="font-semibold text-primary"
                                         >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                d="M9 5l7 7-7 7"
-                                            />
-                                        </svg>
+                                            {{ sub.price_label }}
+                                        </span>
                                     </div>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -831,57 +717,11 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
             </div>
         </section>
 
-        <!-- Footer CTA Banner -->
-        <section id="footer" class="bg-[#F7F7F5] mb-12 sm:mb-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div
-                    class="relative overflow-hidden rounded-2xl bg-[#9e1f16] px-6 py-12 sm:px-10 sm:py-14"
-                >
-                    <img
-                        src="/icons/ft-docs.svg"
-                        alt=""
-                        class="absolute right-6 top-6 h-16 w-16 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24"
-                    />
-                    <div
-                        class="relative flex flex-col items-center text-center"
-                    >
-                        <h3
-                            class="max-w-2xl text-[22px] font-bold leading-[32px] text-white sm:text-[28px] sm:leading-[38px]"
-                        >
-                            Butuh Konsultasi Soal Digital Marketing?
-                        </h3>
-                        <p
-                            class="mt-4 max-w-lg text-[14px] leading-[22px] text-white/80 sm:text-[16px] sm:leading-[24px]"
-                        >
-                            Tim Fasttrack siap membantu memilih strategi digital
-                            marketing yang<br class="hidden sm:block" />
-                            tepat dan mendampingi seluruh prosesnya.
-                        </p>
-                        <a
-                            :href="
-                                buildWhatsappLink(
-                                    'layanan yang tidak terdaftar',
-                                    jenisPengajuan,
-                                )
-                            "
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="mt-8 inline-flex items-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:px-8 sm:py-3.5 sm:text-[15px]"
-                        >
-                            {{
-                                t(
-                                    "services.digitalMarketingDetail.footer.cta",
-                                )
-                            }}
-                            <img
-                                src="/icons/ft-wa.svg"
-                                alt="WhatsApp"
-                                class="h-5 w-5"
-                            />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <FooterCTA
+            :title="t('services.digitalMarketingDetail.footer.title')"
+            :description="t('services.digitalMarketingDetail.footer.desc')"
+            :button-text="t('services.digitalMarketingDetail.footer.cta')"
+            :whatsapp-link="buildWhatsappLink(currentSub?.name ?? service.name)"
+        />
     </MainLayout>
 </template>

@@ -29,7 +29,7 @@ const navLinks = [
     { key: "cvSetup", href: "/badan-usaha" },
     { key: "visa", href: "/foreignservice" },
     { key: "virtualOffice", href: "/virtual-office-jakarta" },
-    { key: "tools", href: "/kbli" },
+    { key: "tools", href: "/panduan-kbli" },
     { key: "blog", href: "/artikel" },
     { key: "info", href: "/faq" },
 ];

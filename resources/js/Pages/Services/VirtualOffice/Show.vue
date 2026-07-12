@@ -1,5 +1,6 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
+import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
@@ -69,7 +70,6 @@ const selectedPackagePrice = computed(
 
 <template>
     <MainLayout>
-        <div class="w-full max-w-full overflow-x-hidden">
         <!-- Hero Section -->
         <section
             class="relative overflow-hidden min-h-[240px] sm:min-h-[320px] lg:min-h-[360px] bg-[#9e1f16]"
@@ -528,11 +528,11 @@ const selectedPackagePrice = computed(
 
                     <!-- ===== KANAN: Sidebar ===== -->
                     <div
-                        class="flex min-w-0 flex-col gap-4 lg:sticky lg:top-32 lg:self-start"
+                        class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start"
                     >
                         <!-- VIP Line Banner -->
                         <div
-                            class="rounded-xl px-4 py-5 text-center overflow-hidden relative sm:rounded-2xl sm:px-5 sm:py-6"
+                            class="rounded-2xl px-5 py-6 text-center overflow-hidden relative"
                             style="
                                 background-image: url(&quot;/images/card-arrow-bg.png&quot;);
                                 background-size: cover;
@@ -741,53 +741,10 @@ const selectedPackagePrice = computed(
             </div>
         </section>
 
-        <!-- Footer CTA Banner -->
-        <section id="footer" class="bg-[#F7F7F5] mb-10 sm:mb-12 lg:mb-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div
-                    class="relative overflow-hidden rounded-xl bg-[#9e1f16] px-5 py-9 sm:rounded-2xl sm:px-10 sm:py-14"
-                >
-                    <img
-                        src="/icons/ft-docs.svg"
-                        alt=""
-                        class="absolute right-4 top-4 h-12 w-12 opacity-20 sm:right-10 sm:top-8 sm:h-24 sm:w-24"
-                    />
-                    <div
-                        class="relative flex flex-col items-center text-center"
-                    >
-                        <h3
-                            class="max-w-2xl text-[18px] font-bold leading-[26px] text-white sm:text-[28px] sm:leading-[38px]"
-                        >
-                            Tidak Menemukan Layanan yang Anda Cari?
-                        </h3>
-                        <p
-                            class="mt-3 max-w-lg text-[13px] leading-[20px] text-white/80 sm:mt-4 sm:text-[16px] sm:leading-[24px]"
-                        >
-                            Tim kami siap membantu Anda menemukan solusi yang
-                            tepat untuk kebutuhan legalitas bisnis Anda.
-                        </p>
-                        <a
-                            :href="
-                                buildWhatsappLink(
-                                    'layanan yang tidak terdaftar',
-                                    '',
-                                )
-                            "
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="mt-6 inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-[#25D366] px-6 py-3 text-[13px] font-semibold text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20BD5A] hover:shadow-xl hover:shadow-[#25D366]/40 sm:mt-8 sm:w-auto sm:px-8 sm:py-3.5 sm:text-[15px]"
-                        >
-                            Chat Langsung via WhatsApp
-                            <img
-                                src="/icons/ft-wa.svg"
-                                alt="WhatsApp"
-                                class="h-5 w-5"
-                            />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        </div>
+        <FooterCTA
+            title="Tidak Menemukan Layanan yang Anda Cari?"
+            description="Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda."
+            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar', '')"
+        />
     </MainLayout>
 </template>
