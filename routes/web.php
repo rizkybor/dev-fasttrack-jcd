@@ -639,6 +639,7 @@ $staticPages = [
     '/konversi-kbli',
     '/kebijakan-cookie',
     '/kebijakan-privasi',
+    '/syarat-ketentuan',
     '/simulasi-akta',
     '/faq',
     '/kerjasama',
@@ -3162,8 +3163,8 @@ Route::get('/simulasi-akta', function (Request $request) use ($resolveBaseUrl, $
 
     return Inertia::render('SimulasiAkta', [
         'seo' => [
-            'title' => 'Syarat dan Ketentuan - FastTrack',
-            'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+            'title' => 'Simulasi Akta Pendirian - FastTrack',
+            'description' => 'Simulasikan draf akta pendirian perusahaan Anda secara online sebelum proses resmi bersama FastTrack.',
             'canonical' => $baseUrl . '/simulasi-akta',
             'image' => $defaultImageUrl($baseUrl),
             'type' => 'website',
@@ -3172,13 +3173,13 @@ Route::get('/simulasi-akta', function (Request $request) use ($resolveBaseUrl, $
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'WebPage',
-                'name' => 'Syarat dan Ketentuan - FastTrack',
-                'description' => 'Syarat dan ketentuan penggunaan layanan FastTrack. Baca ketentuan lengkap sebelum menggunakan layanan kami.',
+                'name' => 'Simulasi Akta Pendirian - FastTrack',
+                'description' => 'Simulasikan draf akta pendirian perusahaan Anda secara online sebelum proses resmi bersama FastTrack.',
                 'url' => $baseUrl . '/simulasi-akta',
             ],
             $breadcrumbSchema([
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-                ['name' => 'Syarat dan Ketentuan', 'item' => $baseUrl . '/simulasi-akta'],
+                ['name' => 'Simulasi Akta Pendirian', 'item' => $baseUrl . '/simulasi-akta'],
             ]),
         ],
     ]);
@@ -3240,13 +3241,12 @@ $allServiceProducts = array_merge(
     $digitalMarketingProducts,
     $naturalisasiProducts,
     $perpajakanDanPembukuanProducts,
-    // $perizinanDasarProducts intentionally excluded: Services/PerizinanDasar/Index & Show
-    // Vue components don't exist yet, so those routes 404 client-side. Add it back
-    // to $allServiceProducts (and drop the $customServices filter below) once built.
 );
 
-// Services without a working Vue page yet should not be submitted to search engines.
+// Services without a working Vue page yet should not be submitted to search engines —
+// skip any $customServices entry whose component file doesn't actually exist on disk.
 $sitemapCustomServices = collect($customServices)
+    ->filter(fn($service) => file_exists(resource_path('js/Pages/' . $service['component'] . '.vue')))
     ->values()
     ->all();
 
