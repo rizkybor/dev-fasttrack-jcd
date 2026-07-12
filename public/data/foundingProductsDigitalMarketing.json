@@ -1,353 +1,871 @@
 [
     {
         "id": 1,
-        "name": {
-            "id": "Desain Website & Company Profile",
-            "en": "Website & Company Profile Design",
-            "zh": "网站与公司简介设计"
-        },
-        "tag": {
-            "id": "Populer",
-            "en": "Popular",
-            "zh": "热门"
-        },
-        "price": "5000000",
-        "price_label": "Rp 5.000.000",
-        "duration": {
-            "id": "Estimasi 7-10 hari kerja",
-            "en": "Estimated 7-10 business days",
-            "zh": "预计7-10个工作日"
-        },
+        "price": "9000000",
+        "price_label": "Rp 9.000.000",
         "image": "",
+        "detail_path": "/design",
+        "name": { "id": "Design", "en": "Design", "zh": "设计" },
         "excerpt": {
-            "id": "Pembuatan website profesional dan company profile digital untuk memperkuat citra bisnis Anda secara online.",
-            "en": "Professional website and digital company profile creation to strengthen your business image online.",
-            "zh": "打造专业网站与数字公司简介，提升您企业的线上形象。"
+            "id": "Layanan desain identitas dan dokumen visual perusahaan – logo, company profile, hingga annual report.",
+            "en": "Corporate identity and visual document design services – logos, company profiles, to annual reports.",
+            "zh": "企业形象与视觉文件设计服务——从标志、公司简介到年度报告。"
         },
-        "detail_path": "/digital-marketing/1",
-        "baru": {
+        "content": {
             "id": {
                 "penjelasan_umum": [
-                    "Website menjadi etalase digital pertama yang dilihat calon klien sebelum memutuskan menggunakan layanan Anda. Desain yang profesional dan responsif membantu membangun kepercayaan sejak kunjungan pertama.",
-                    "Layanan ini mencakup desain UI/UX, pengembangan halaman, optimasi tampilan di perangkat mobile, hingga integrasi dasar SEO agar website mudah ditemukan di mesin pencari."
-                ],
-                "dokumen_didapat": [
-                    "Website resmi dengan domain & hosting 1 tahun",
-                    "Company profile digital (PDF & landing page)",
-                    "Panduan pengelolaan konten dasar"
-                ],
-                "rincian_biaya": {
-                    "items": [
-                        {
-                            "label": "Desain & Pengembangan Website",
-                            "amount": "Rp 3.500.000"
-                        },
-                        {
-                            "label": "Domain & Hosting (1 Tahun)",
-                            "amount": "Rp 1.000.000"
-                        },
-                        {
-                            "label": "Company Profile Digital",
-                            "amount": "Rp 500.000"
-                        }
-                    ],
-                    "total_label": "Estimasi Total Biaya",
-                    "total_amount": "Rp 5.000.000"
-                }
+                    "Di era persaingan bisnis yang semakin kompetitif, kualitas produk dan layanan saja tidak cukup. Perusahaan juga perlu memiliki identitas visual yang kuat, komunikasi korporasi yang profesional, dan dokumentasi perusahaan yang mampu membangun kepercayaan investor, mitra bisnis, pelanggan, maupun pemangku kepentingan lainnya. Logo yang tepat mampu menciptakan kesan pertama yang kuat. Company Profile yang profesional dapat meningkatkan kredibilitas perusahaan. Sementara Laporan Tahunan yang disusun dengan baik mencerminkan tata kelola perusahaan yang sehat dan transparan.",
+                    "Fasttrack menyediakan layanan terpadu untuk membantu perusahaan membangun citra korporasi yang modern, profesional, dan relevan dengan kebutuhan bisnis saat ini."
+                ]
             },
             "en": {
                 "penjelasan_umum": [
-                    "A website is the first digital storefront prospective clients see before deciding to use your services. A professional, responsive design helps build trust from the very first visit.",
-                    "This service covers UI/UX design, page development, mobile display optimization, and basic SEO integration so your website is easily found on search engines."
-                ],
-                "dokumen_didapat": [
-                    "Official website with domain & 1-year hosting",
-                    "Digital company profile (PDF & landing page)",
-                    "Basic content management guide"
-                ],
-                "rincian_biaya": {
-                    "items": [
-                        {
-                            "label": "Website Design & Development",
-                            "amount": "Rp 3.500.000"
-                        },
-                        {
-                            "label": "Domain & Hosting (1 Year)",
-                            "amount": "Rp 1.000.000"
-                        },
-                        {
-                            "label": "Digital Company Profile",
-                            "amount": "Rp 500.000"
-                        }
-                    ],
-                    "total_label": "Estimated Total Cost",
-                    "total_amount": "Rp 5.000.000"
-                }
+                    "In an increasingly competitive business landscape, great products and services alone aren't enough. Companies also need a strong visual identity, professional corporate communication, and company documentation that builds trust with investors, business partners, customers, and other stakeholders. The right logo creates a powerful first impression. A professional Company Profile can enhance a company's credibility. Meanwhile, a well-prepared Annual Report reflects healthy and transparent corporate governance.",
+                    "FastTrack provides an integrated service to help companies build a modern, professional corporate image relevant to today's business needs."
+                ]
             },
             "zh": {
                 "penjelasan_umum": [
-                    "网站是潜在客户在决定使用您的服务之前看到的第一个数字展示窗口。专业且响应式的设计有助于从第一次访问起就建立信任。",
-                    "本服务涵盖UI/UX设计、页面开发、移动端显示优化，以及基础SEO整合，使您的网站更容易被搜索引擎收录。"
-                ],
-                "dokumen_didapat": [
-                    "含域名及1年主机的官方网站",
-                    "数字公司简介（PDF及落地页）",
-                    "基础内容管理指南"
-                ],
-                "rincian_biaya": {
-                    "items": [
-                        {
-                            "label": "网站设计与开发",
-                            "amount": "Rp 3.500.000"
-                        },
-                        {
-                            "label": "域名及主机（1年）",
-                            "amount": "Rp 1.000.000"
-                        },
-                        {
-                            "label": "数字公司简介",
-                            "amount": "Rp 500.000"
-                        }
-                    ],
-                    "total_label": "预计总费用",
-                    "total_amount": "Rp 5.000.000"
-                }
+                    "在竞争日益激烈的商业环境中，仅有优质的产品和服务是不够的。企业还需要强大的视觉形象、专业的企业沟通，以及能够建立投资者、合作伙伴、客户及其他利益相关方信任的企业文件。恰当的标志能够营造强烈的第一印象。专业的公司简介能够提升企业的可信度。而完善编制的年度报告则体现了企业健康透明的治理水平。",
+                    "Fasttrack 提供一站式服务，助力企业塑造现代、专业且契合当前业务需求的企业形象。"
+                ]
             }
         },
-        "faq": []
+        "sub_services": [
+            {
+                "id": "desain-logo-perusahaan",
+                "name": {
+                    "id": "Desain Logo Perusahaan",
+                    "en": "Corporate Logo Design",
+                    "zh": "企业标志设计"
+                },
+                "excerpt": {
+                    "id": "Perancangan identitas visual yang mencerminkan karakter dan positioning bisnis perusahaan secara profesional.",
+                    "en": "Visual identity design that reflects your company's character and business positioning professionally.",
+                    "zh": "专业设计能够体现企业特质与业务定位的视觉形象。"
+                },
+                "price_label": "Hubungi Kami",
+                "detail": {
+                    "id": {
+                        "penjelasan_layanan": [
+                            "Logo adalah wajah pertama perusahaan Anda di mata publik, klien, maupun mitra bisnis. Tim desainer FastTrack membantu menerjemahkan visi dan nilai bisnis Anda menjadi identitas visual yang kuat, mudah diingat, dan relevan untuk jangka panjang.",
+                            "Setiap desain logo dikerjakan melalui proses riset, konsep, hingga revisi agar hasil akhir benar-benar merepresentasikan karakter bisnis Anda."
+                        ],
+                        "meliputi": [
+                            "Logo perusahaan (Corporate Logo)",
+                            "Logo startup dan bisnis baru",
+                            "Rebranding logo perusahaan",
+                            "Logo yayasan dan organisasi",
+                            "Logo produk dan merek dagang",
+                            "Logo profesional dan personal branding",
+                            "Brand guideline dan manual logo"
+                        ],
+                        "output": [
+                            "File vector (AI, EPS, SVG)",
+                            "PNG transparent resolusi tinggi",
+                            "JPG siap cetak digital",
+                            "Panduan penggunaan logo",
+                            "Variasi warna dan aplikasi logo"
+                        ]
+                    },
+                    "en": {
+                        "penjelasan_layanan": [
+                            "A logo is the first face of your company in the eyes of the public, clients, and business partners. FastTrack's design team helps translate your business vision and values into a strong, memorable, and long-term relevant visual identity.",
+                            "Every logo design goes through research, concept development, and revision so the final result truly represents your business character."
+                        ],
+                        "meliputi": [
+                            "Corporate logo",
+                            "Startup and new business logo",
+                            "Corporate logo rebranding",
+                            "Foundation and organization logo",
+                            "Product and trademark logo",
+                            "Professional and personal branding logo",
+                            "Brand guideline and logo manual"
+                        ],
+                        "output": [
+                            "Vector files (AI, EPS, SVG)",
+                            "High-resolution transparent PNG",
+                            "Print-ready digital JPG",
+                            "Logo usage guidelines",
+                            "Color variations and logo applications"
+                        ]
+                    },
+                    "zh": {
+                        "penjelasan_layanan": [
+                            "标志是企业在公众、客户及合作伙伴眼中的第一张名片。FastTrack 的设计团队协助将您的企业愿景与价值观转化为强大、易记且具有长期适用性的视觉形象。",
+                            "每个标志设计都经过调研、概念构思到修改的完整流程，确保最终成果真正体现您企业的特质。"
+                        ],
+                        "meliputi": [
+                            "企业标志（Corporate Logo）",
+                            "初创企业与新业务标志",
+                            "企业标志重塑",
+                            "基金会与组织标志",
+                            "产品与商标标志",
+                            "专业及个人品牌标志",
+                            "品牌指南与标志使用手册"
+                        ],
+                        "output": [
+                            "矢量文件（AI、EPS、SVG）",
+                            "高分辨率透明 PNG",
+                            "适用于打印的高清 JPG",
+                            "标志使用指南",
+                            "颜色变体与标志应用示例"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "company-profile-perusahaan",
+                "name": {
+                    "id": "Company Profile Perusahaan",
+                    "en": "Company Profile",
+                    "zh": "公司简介"
+                },
+                "excerpt": {
+                    "id": "Penyusunan dan desain company profile yang merepresentasikan kredibilitas dan keunggulan perusahaan.",
+                    "en": "Company profile development and design that represents your company's credibility and strengths.",
+                    "zh": "策划与设计能够体现企业信誉与优势的公司简介。"
+                },
+                "price_label": "Hubungi Kami",
+                "detail": {
+                    "id": {
+                        "penjelasan_layanan": [
+                            "Company Profile merupakan salah satu alat komunikasi bisnis yang paling penting dalam membangun kepercayaan dan memperkenalkan perusahaan kepada calon klien, investor, lembaga keuangan, pemerintah, maupun mitra strategis. Company Profile yang baik tidak hanya menampilkan informasi perusahaan, tetapi juga mampu menyampaikan nilai, kompetensi, pengalaman, dan keunggulan perusahaan secara menarik dan meyakinkan.",
+                            "Company profile yang dirancang dengan baik menjadi alat komunikasi bisnis yang efektif. Fasttrack membantu menyusun dan mendesain company profile yang merepresentasikan kredibilitas, keunggulan, dan identitas perusahaan secara visual maupun naratif."
+                        ],
+                        "meliputi": [
+                            "Profil perusahaan",
+                            "Sejarah dan perjalanan usaha",
+                            "Visi dan misi perusahaan",
+                            "Struktur organisasi",
+                            "Legalitas dan sertifikasi",
+                            "Bidang usaha dan layanan",
+                            "Portofolio proyek",
+                            "Klien dan mitra usaha",
+                            "Pencapaian perusahaan",
+                            "Informasi kontak"
+                        ],
+                        "output": [
+                            "Company Profile Digital (PDF Interaktif)",
+                            "Company Profile Cetak (Print Ready)",
+                            "Company Profile Presentasi (PowerPoint)",
+                            "Company Profile Website Content",
+                            "Company Profile Bilingual (Indonesia & Inggris)"
+                        ]
+                    },
+                    "en": {
+                        "penjelasan_layanan": [
+                            "A Company Profile is one of the most important business communication tools for building trust and introducing your company to prospective clients, investors, financial institutions, government agencies, and strategic partners. A good Company Profile not only presents company information, but also conveys value, competence, experience, and strengths in a compelling and convincing way.",
+                            "A well-designed company profile becomes an effective business communication tool. FastTrack helps develop and design company profiles that represent your company's credibility, strengths, and identity, both visually and narratively."
+                        ],
+                        "meliputi": [
+                            "Company profile",
+                            "Company history and journey",
+                            "Company vision and mission",
+                            "Organizational structure",
+                            "Legal status and certifications",
+                            "Business fields and services",
+                            "Project portfolio",
+                            "Clients and business partners",
+                            "Company achievements",
+                            "Contact information"
+                        ],
+                        "output": [
+                            "Digital Company Profile (Interactive PDF)",
+                            "Print-Ready Company Profile",
+                            "Company Profile Presentation (PowerPoint)",
+                            "Company Profile Website Content",
+                            "Bilingual Company Profile (Indonesian & English)"
+                        ]
+                    },
+                    "zh": {
+                        "penjelasan_layanan": [
+                            "公司简介是建立信任并向潜在客户、投资者、金融机构、政府机构及战略合作伙伴介绍企业的最重要商业沟通工具之一。优秀的公司简介不仅呈现企业信息，还能以引人入胜且令人信服的方式传达企业的价值、能力、经验与优势。",
+                            "精心设计的公司简介是有效的商业沟通工具。Fasttrack 协助策划与设计能够从视觉与叙事两方面体现企业信誉、优势与形象的公司简介。"
+                        ],
+                        "meliputi": [
+                            "企业简介",
+                            "企业历史与发展历程",
+                            "企业愿景与使命",
+                            "组织架构",
+                            "法律地位与认证",
+                            "业务领域与服务",
+                            "项目作品集",
+                            "客户与合作伙伴",
+                            "企业成就",
+                            "联系方式"
+                        ],
+                        "output": [
+                            "数字公司简介（互动式 PDF）",
+                            "可打印公司简介",
+                            "公司简介演示文稿（PowerPoint）",
+                            "公司简介网站内容",
+                            "双语公司简介（印尼语与英语）"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "laporan-tahunan-perseroan",
+                "name": {
+                    "id": "Laporan Tahunan Perseroan (Annual Report)",
+                    "en": "Annual Report",
+                    "zh": "年度报告"
+                },
+                "excerpt": {
+                    "id": "Penyusunan dan desain annual report yang menyajikan kinerja perusahaan secara profesional dan terstruktur.",
+                    "en": "Annual report preparation and design that presents company performance professionally and systematically.",
+                    "zh": "以专业且系统化的方式编制与设计呈现企业业绩的年度报告。"
+                },
+                "price_label": "Hubungi Kami",
+                "detail": {
+                    "id": {
+                        "penjelasan_layanan": [
+                            "Laporan Tahunan merupakan dokumen penting yang menggambarkan kondisi perusahaan selama satu tahun buku. Selain menjadi sarana pelaporan kepada pemegang saham, laporan tahunan juga menjadi cerminan tata kelola perusahaan dan kinerja manajemen. Bagi perusahaan yang sedang berkembang, laporan tahunan yang profesional dapat meningkatkan kepercayaan investor, mitra bisnis, lembaga pembiayaan, maupun regulator.",
+                            "Fasttrack membantu penyusunan dan desain annual report yang terstruktur, informatif, dan sesuai standar pelaporan yang berlaku."
+                        ],
+                        "meliputi": [
+                            "Profil perusahaan",
+                            "Ikhtisar kinerja perusahaan",
+                            "Laporan Direksi",
+                            "Laporan Dewan Komisaris",
+                            "Tata Kelola Perusahaan (GCG)",
+                            "Struktur organisasi",
+                            "Kinerja operasional",
+                            "Analisis manajemen",
+                            "Informasi pemegang saham",
+                            "Program keberlanjutan perusahaan",
+                            "Laporan keuangan",
+                            "Informasi risiko usaha",
+                            "Informasi kepatuhan dan legalitas"
+                        ],
+                        "output": [
+                            "Penyusunan konten Annual Report",
+                            "Penyuntingan dan penyempurnaan materi",
+                            "Desain dan layout profesional",
+                            "Penyusunan laporan bilingual",
+                            "Annual Report interaktif digital",
+                            "Annual Report untuk kebutuhan investor dan korporasi"
+                        ]
+                    },
+                    "en": {
+                        "penjelasan_layanan": [
+                            "An Annual Report is an important document that describes a company's condition over a fiscal year. Besides serving as a reporting tool for shareholders, an annual report also reflects corporate governance and management performance. For growing companies, a professional annual report can increase trust from investors, business partners, financial institutions, and regulators.",
+                            "FastTrack helps prepare and design annual reports that are structured, informative, and compliant with applicable reporting standards."
+                        ],
+                        "meliputi": [
+                            "Company profile",
+                            "Company performance highlights",
+                            "Board of Directors' report",
+                            "Board of Commissioners' report",
+                            "Good Corporate Governance (GCG)",
+                            "Organizational structure",
+                            "Operational performance",
+                            "Management analysis",
+                            "Shareholder information",
+                            "Corporate sustainability program",
+                            "Financial statements",
+                            "Business risk information",
+                            "Compliance and legal information"
+                        ],
+                        "output": [
+                            "Annual Report content development",
+                            "Material editing and refinement",
+                            "Professional design and layout",
+                            "Bilingual report preparation",
+                            "Interactive digital Annual Report",
+                            "Annual Report for investor and corporate purposes"
+                        ]
+                    },
+                    "zh": {
+                        "penjelasan_layanan": [
+                            "年度报告是描述企业一个会计年度经营状况的重要文件。除了作为向股东报告的工具外，年度报告也是企业治理与管理绩效的体现。对于成长中的企业而言，专业的年度报告能够提升投资者、合作伙伴、金融机构及监管机构的信任度。",
+                            "Fasttrack 协助编制与设计结构清晰、信息完整且符合现行报告标准的年度报告。"
+                        ],
+                        "meliputi": [
+                            "企业简介",
+                            "企业业绩概览",
+                            "董事会报告",
+                            "监事会报告",
+                            "良好公司治理（GCG）",
+                            "组织架构",
+                            "运营绩效",
+                            "管理层分析",
+                            "股东信息",
+                            "企业可持续发展计划",
+                            "财务报表",
+                            "业务风险信息",
+                            "合规与法律信息"
+                        ],
+                        "output": [
+                            "年度报告内容编写",
+                            "内容编辑与完善",
+                            "专业设计与版式排版",
+                            "双语报告编制",
+                            "互动式数字年度报告",
+                            "适用于投资者及企业用途的年度报告"
+                        ]
+                    }
+                }
+            }
+        ],
+        "faq": {
+            "id": [],
+            "en": [],
+            "zh": []
+        }
     },
     {
         "id": 2,
-        "name": {
-            "id": "Pengelolaan Media Sosial",
-            "en": "Social Media Management",
-            "zh": "社交媒体管理"
-        },
-        "tag": {
-            "id": "Berlangganan",
-            "en": "Subscription",
-            "zh": "订阅制"
-        },
         "price": "3500000",
         "price_label": "Rp 3.500.000",
-        "duration": {
-            "id": "Estimasi mulai 3-5 hari kerja",
-            "en": "Starting within 3-5 business days",
-            "zh": "预计3-5个工作日内启动"
-        },
         "image": "",
-        "excerpt": {
-            "id": "Pengelolaan konten dan strategi media sosial bulanan untuk meningkatkan engagement dan brand awareness bisnis Anda.",
-            "en": "Monthly social media content and strategy management to increase engagement and brand awareness for your business.",
-            "zh": "每月社交媒体内容与策略管理，提升您企业的互动度与品牌知名度。"
-        },
-        "detail_path": "/digital-marketing/2",
-        "baru": {
-            "id": {
-                "penjelasan_umum": [
-                    "Kehadiran aktif di media sosial menjadi salah satu faktor penting dalam membangun kedekatan dengan audiens dan memperkuat kepercayaan terhadap brand.",
-                    "Tim kami menangani perencanaan konten, desain visual, penjadwalan posting, hingga laporan performa bulanan yang mudah dipahami."
-                ],
-                "dokumen_didapat": [
-                    "Kalender konten bulanan",
-                    "Desain visual untuk 12-16 postingan/bulan",
-                    "Laporan performa bulanan"
-                ],
-                "rincian_biaya": {
-                    "items": [
-                        {
-                            "label": "Perencanaan & Strategi Konten",
-                            "amount": "Rp 1.500.000"
-                        },
-                        {
-                            "label": "Desain Visual Konten",
-                            "amount": "Rp 1.500.000"
-                        },
-                        {
-                            "label": "Laporan & Monitoring Bulanan",
-                            "amount": "Rp 500.000"
-                        }
-                    ],
-                    "total_label": "Estimasi Total Biaya",
-                    "total_amount": "Rp 3.500.000"
-                }
-            },
-            "en": {
-                "penjelasan_umum": [
-                    "Active presence on social media is one of the key factors in building closeness with the audience and strengthening trust in the brand.",
-                    "Our team handles content planning, visual design, post scheduling, and easy-to-understand monthly performance reports."
-                ],
-                "dokumen_didapat": [
-                    "Monthly content calendar",
-                    "Visual design for 12-16 posts/month",
-                    "Monthly performance report"
-                ],
-                "rincian_biaya": {
-                    "items": [
-                        {
-                            "label": "Content Planning & Strategy",
-                            "amount": "Rp 1.500.000"
-                        },
-                        {
-                            "label": "Content Visual Design",
-                            "amount": "Rp 1.500.000"
-                        },
-                        {
-                            "label": "Monthly Reporting & Monitoring",
-                            "amount": "Rp 500.000"
-                        }
-                    ],
-                    "total_label": "Estimated Total Cost",
-                    "total_amount": "Rp 3.500.000"
-                }
-            },
-            "zh": {
-                "penjelasan_umum": [
-                    "在社交媒体上保持活跃存在，是建立受众亲近感并增强品牌信任度的关键因素之一。",
-                    "我们的团队负责内容规划、视觉设计、发布排程，并提供易于理解的月度效果报告。"
-                ],
-                "dokumen_didapat": [
-                    "每月内容日历",
-                    "每月12-16条帖子的视觉设计",
-                    "月度效果报告"
-                ],
-                "rincian_biaya": {
-                    "items": [
-                        {
-                            "label": "内容规划与策略",
-                            "amount": "Rp 1.500.000"
-                        },
-                        {
-                            "label": "内容视觉设计",
-                            "amount": "Rp 1.500.000"
-                        },
-                        {
-                            "label": "月度报告与监测",
-                            "amount": "Rp 500.000"
-                        }
-                    ],
-                    "total_label": "预计总费用",
-                    "total_amount": "Rp 3.500.000"
-                }
-            }
-        },
-        "faq": []
-    },
-    {
-        "id": 3,
+        "detail_path": "/digital-marketing-category",
         "name": {
-            "id": "SEO & Google Ads Optimization",
-            "en": "SEO & Google Ads Optimization",
-            "zh": "SEO与谷歌广告优化"
+            "id": "Digital Marketing",
+            "en": "Digital Marketing",
+            "zh": "数字营销"
         },
-        "tag": {
-            "id": "Profesional",
-            "en": "Professional",
-            "zh": "专业"
-        },
-        "price": "4500000",
-        "price_label": "Rp 4.500.000",
-        "duration": {
-            "id": "Estimasi mulai 5-7 hari kerja",
-            "en": "Starting within 5-7 business days",
-            "zh": "预计5-7个工作日内启动"
-        },
-        "image": "",
         "excerpt": {
-            "id": "Optimasi mesin pencari dan pengelolaan kampanye iklan digital untuk meningkatkan visibilitas dan konversi bisnis Anda.",
-            "en": "Search engine optimization and digital ad campaign management to increase your business's visibility and conversions.",
-            "zh": "搜索引擎优化及数字广告投放管理，提升您企业的曝光度与转化率。"
+            "id": "Layanan pemasaran digital menyeluruh – web development, SEO, hingga pengelolaan iklan di berbagai platform.",
+            "en": "Comprehensive digital marketing services – web development, SEO, to advertising management across various platforms.",
+            "zh": "全方位数字营销服务——从网站开发、SEO 到各平台广告投放管理。"
         },
-        "detail_path": "/digital-marketing/3",
-        "baru": {
+        "content": {
             "id": {
                 "penjelasan_umum": [
-                    "Visibilitas di halaman pencarian dan platform iklan digital sangat memengaruhi jumlah calon klien yang menemukan bisnis Anda secara organik maupun berbayar.",
-                    "Layanan ini mencakup audit SEO, optimasi kata kunci, hingga pengelolaan kampanye Google Ads yang terukur dan dilaporkan secara berkala."
-                ],
-                "dokumen_didapat": [
-                    "Laporan audit SEO awal",
-                    "Riset & optimasi kata kunci",
-                    "Laporan performa kampanye bulanan"
-                ],
-                "rincian_biaya": {
-                    "items": [
-                        {
-                            "label": "Audit & Optimasi SEO",
-                            "amount": "Rp 2.000.000"
-                        },
-                        {
-                            "label": "Pengelolaan Kampanye Google Ads",
-                            "amount": "Rp 2.000.000"
-                        },
-                        {
-                            "label": "Laporan & Analisis Bulanan",
-                            "amount": "Rp 500.000"
-                        }
-                    ],
-                    "total_label": "Estimasi Total Biaya",
-                    "total_amount": "Rp 4.500.000"
-                }
+                    "Di era digital saat ini, keberadaan bisnis di internet bukan lagi sekadar pilihan, melainkan kebutuhan. Konsumen modern mencari informasi melalui Google, media sosial, marketplace, dan berbagai platform digital sebelum mengambil keputusan untuk menggunakan suatu produk atau layanan. Memiliki website saja tidak cukup. Memiliki akun media sosial saja juga belum menjamin peningkatan penjualan. Dibutuhkan strategi digital yang terintegrasi, terukur, dan berorientasi pada hasil agar bisnis dapat ditemukan oleh calon pelanggan yang tepat pada waktu yang tepat.",
+                    "Fasttrack menyediakan layanan Digital Marketing Terpadu yang dirancang untuk membantu perusahaan meningkatkan eksposur, memperkuat citra merek, menghasilkan prospek (leads), dan mendorong pertumbuhan bisnis secara berkelanjutan."
+                ]
             },
             "en": {
                 "penjelasan_umum": [
-                    "Visibility on search result pages and digital ad platforms greatly influences how many prospective clients find your business, both organically and through paid channels.",
-                    "This service covers SEO audits, keyword optimization, and Google Ads campaign management that is measurable and reported regularly."
-                ],
-                "dokumen_didapat": [
-                    "Initial SEO audit report",
-                    "Keyword research & optimization",
-                    "Monthly campaign performance report"
-                ],
-                "rincian_biaya": {
-                    "items": [
-                        {
-                            "label": "SEO Audit & Optimization",
-                            "amount": "Rp 2.000.000"
-                        },
-                        {
-                            "label": "Google Ads Campaign Management",
-                            "amount": "Rp 2.000.000"
-                        },
-                        {
-                            "label": "Monthly Reporting & Analysis",
-                            "amount": "Rp 500.000"
-                        }
-                    ],
-                    "total_label": "Estimated Total Cost",
-                    "total_amount": "Rp 4.500.000"
-                }
+                    "In today's digital era, having an online presence is no longer just an option — it's a necessity. Modern consumers search for information through Google, social media, marketplaces, and various digital platforms before deciding to use a product or service. Having a website alone isn't enough. Having social media accounts alone doesn't guarantee increased sales either. An integrated, measurable, and results-oriented digital strategy is needed so your business can be found by the right prospective customers at the right time.",
+                    "FastTrack provides Integrated Digital Marketing services designed to help companies increase exposure, strengthen brand image, generate leads, and drive sustainable business growth."
+                ]
             },
             "zh": {
                 "penjelasan_umum": [
-                    "在搜索结果页面及数字广告平台上的曝光度，极大影响潜在客户通过自然或付费渠道发现您企业的数量。",
-                    "本服务涵盖SEO审计、关键词优化，以及可衡量并定期汇报的谷歌广告投放管理。"
-                ],
-                "dokumen_didapat": [
-                    "初步SEO审计报告",
-                    "关键词研究与优化",
-                    "月度广告效果报告"
-                ],
-                "rincian_biaya": {
-                    "items": [
-                        {
-                            "label": "SEO审计与优化",
-                            "amount": "Rp 2.000.000"
-                        },
-                        {
-                            "label": "谷歌广告投放管理",
-                            "amount": "Rp 2.000.000"
-                        },
-                        {
-                            "label": "月度报告与分析",
-                            "amount": "Rp 500.000"
-                        }
-                    ],
-                    "total_label": "预计总费用",
-                    "total_amount": "Rp 4.500.000"
-                }
+                    "在当今数字时代，企业的线上存在已不再是可选项，而是必需品。现代消费者在决定使用某项产品或服务之前，会通过 Google、社交媒体、电商平台及各类数字渠道搜索相关信息。仅拥有网站是不够的，仅拥有社交媒体账号也无法保证销售增长。企业需要一套整合、可衡量且以成果为导向的数字策略，才能在正确的时间被正确的潜在客户找到。",
+                    "Fasttrack 提供一体化数字营销服务，旨在帮助企业提升曝光度、强化品牌形象、获取潜在客户（leads），并推动业务的可持续增长。"
+                ]
             }
         },
-        "faq": []
+        "sub_services": [
+            {
+                "id": "web-development",
+                "name": {
+                    "id": "Web Development",
+                    "en": "Web Development",
+                    "zh": "网站开发"
+                },
+                "excerpt": {
+                    "id": "Pembangunan website profesional yang fungsional, responsif, dan mendukung kebutuhan bisnis pemasaran digital perusahaan.",
+                    "en": "Professional website development that is functional, responsive, and supports your company's digital marketing needs.",
+                    "zh": "打造功能完善、响应迅速的专业网站，满足企业数字营销业务需求。"
+                },
+                "price_label": "Hubungi Kami",
+                "detail": {
+                    "id": {
+                        "penjelasan_layanan": [
+                            "Website menjadi pusat dari seluruh aktivitas digital perusahaan. Selain sebagai sarana informasi, website juga menjadi sarana pemasaran, komunikasi, hingga penjualan, sehingga penting memiliki kredibilitas bisnis.",
+                            "Manfaat Website Profesional:"
+                        ],
+                        "meliputi": [
+                            "Website Company Profile",
+                            "Website Corporate & Holding Company",
+                            "Website Jasa Profesional",
+                            "Website E-Commerce",
+                            "Landing Page Campaign",
+                            "Website Yayasan dan Organisasi",
+                            "Website Portal Informasi",
+                            "Website Multibahasa"
+                        ],
+                        "output": [
+                            "Mobile Friendly",
+                            "SEO Friendly",
+                            "Integrasi WhatsApp Business",
+                            "Integrasi Google Maps",
+                            "Form Lead Generation",
+                            "Keamanan SSL",
+                            "Dashboard Mudah Digunakan",
+                            "Optimasi Kecepatan Website"
+                        ]
+                    },
+                    "en": {
+                        "penjelasan_layanan": [
+                            "A website is the center of a company's entire digital activity. Beyond being an information tool, a website also serves as a marketing, communication, and sales channel — making business credibility essential.",
+                            "Benefits of a Professional Website:"
+                        ],
+                        "meliputi": [
+                            "Company Profile Website",
+                            "Corporate & Holding Company Website",
+                            "Professional Services Website",
+                            "E-Commerce Website",
+                            "Landing Page Campaign",
+                            "Foundation & Organization Website",
+                            "Information Portal Website",
+                            "Multilingual Website"
+                        ],
+                        "output": [
+                            "Mobile Friendly",
+                            "SEO Friendly",
+                            "WhatsApp Business Integration",
+                            "Google Maps Integration",
+                            "Lead Generation Form",
+                            "SSL Security",
+                            "Easy-to-Use Dashboard",
+                            "Website Speed Optimization"
+                        ]
+                    },
+                    "zh": {
+                        "penjelasan_layanan": [
+                            "网站是企业所有数字活动的核心。除作为信息展示工具外，网站还承担营销、沟通乃至销售的功能，因此企业信誉至关重要。",
+                            "专业网站的优势："
+                        ],
+                        "meliputi": [
+                            "公司简介网站",
+                            "企业及控股公司网站",
+                            "专业服务网站",
+                            "电商网站",
+                            "活动落地页",
+                            "基金会及组织网站",
+                            "信息门户网站",
+                            "多语言网站"
+                        ],
+                        "output": [
+                            "移动端友好",
+                            "SEO 友好",
+                            "WhatsApp Business 集成",
+                            "Google 地图集成",
+                            "潜客获取表单",
+                            "SSL 安全防护",
+                            "易用后台管理",
+                            "网站速度优化"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "search-engine-optimization",
+                "name": {
+                    "id": "Search Engine Optimization",
+                    "en": "Search Engine Optimization",
+                    "zh": "搜索引擎优化"
+                },
+                "excerpt": {
+                    "id": "Optimasi website untuk meningkatkan visibilitas di mesin pencari dan mendatangkan traffic organik secara berkelanjutan.",
+                    "en": "Website optimization to improve search engine visibility and drive sustainable organic traffic.",
+                    "zh": "优化网站以提升搜索引擎可见度，持续带来自然流量。"
+                },
+                "price_label": "Hubungi Kami",
+                "detail": {
+                    "id": {
+                        "penjelasan_layanan": [
+                            "Ketika calon pelanggan mencari produk atau layanan melalui Google, besar kemungkinan mereka akan memilih bisnis yang muncul di hasil pencarian teratas. SEO merupakan strategi untuk meningkatkan posisi website secara organik sehingga lebih mudah ditemukan oleh calon pelanggan tanpa mengandalkan iklan berbayar.",
+                            "Fasttrack mengoptimasi website agar tampil di hasil pencarian yang relevan dan mendatangkan traffic secara konsisten dari waktu ke waktu."
+                        ],
+                        "meliputi": [
+                            "SEO Audit Website",
+                            "Keyword Research",
+                            "On-Page SEO",
+                            "Technical SEO",
+                            "Content Optimation",
+                            "Local SEO",
+                            "Google Business Profile Optimization",
+                            "SEO Monitoring & Reporting"
+                        ],
+                        "output": [
+                            "Peningkatan peringkat website",
+                            "Trafik organik yang lebih tinggi",
+                            "Peningkatan jumlah prospek",
+                            "Peningkatan kredibilitas bisnis",
+                            "Efisiensi biaya pemasaran jangka panjang"
+                        ]
+                    },
+                    "en": {
+                        "penjelasan_layanan": [
+                            "When prospective customers search for products or services on Google, they're likely to choose businesses that appear at the top of search results. SEO is a strategy to improve a website's organic ranking so it's easier for prospective customers to find without relying on paid ads.",
+                            "FastTrack optimizes websites to appear in relevant search results and drive consistent traffic over time."
+                        ],
+                        "meliputi": [
+                            "Website SEO Audit",
+                            "Keyword Research",
+                            "On-Page SEO",
+                            "Technical SEO",
+                            "Content Optimization",
+                            "Local SEO",
+                            "Google Business Profile Optimization",
+                            "SEO Monitoring & Reporting"
+                        ],
+                        "output": [
+                            "Improved website ranking",
+                            "Higher organic traffic",
+                            "Increased number of leads",
+                            "Improved business credibility",
+                            "Long-term marketing cost efficiency"
+                        ]
+                    },
+                    "zh": {
+                        "penjelasan_layanan": [
+                            "当潜在客户在 Google 上搜索产品或服务时，他们很可能会选择出现在搜索结果前列的企业。SEO 是一种通过自然方式提升网站排名的策略，使潜在客户无需依赖付费广告即可更容易找到您。",
+                            "Fasttrack 优化网站以出现在相关搜索结果中，并持续带来稳定的流量。"
+                        ],
+                        "meliputi": [
+                            "网站 SEO 审计",
+                            "关键词研究",
+                            "页面内 SEO",
+                            "技术性 SEO",
+                            "内容优化",
+                            "本地 SEO",
+                            "Google 商家资料优化",
+                            "SEO 监测与报告"
+                        ],
+                        "output": [
+                            "网站排名提升",
+                            "自然流量提升",
+                            "潜在客户数量增加",
+                            "企业信誉提升",
+                            "长期营销成本效率提升"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "google-ads",
+                "name": {
+                    "id": "Google Ads",
+                    "en": "Google Ads",
+                    "zh": "谷歌广告"
+                },
+                "excerpt": {
+                    "id": "Pengelolaan iklan berbayar di Google untuk menjangkau calon klien yang aktif mencari layanan sejenis.",
+                    "en": "Paid Google advertising management to reach prospective clients actively searching for similar services.",
+                    "zh": "管理 Google 付费广告，触达正在积极搜索同类服务的潜在客户。"
+                },
+                "price_label": "Hubungi Kami",
+                "detail": {
+                    "id": {
+                        "penjelasan_layanan": [
+                            "Iklan di Google memungkinkan bisnis menjangkau calon klien yang sedang aktif mencari layanan sejenis. Dengan strategi yang tepat, iklan hanya ditampilkan kepada orang yang minat dan kebutuhan yang relevan terhadap bisnis Anda.",
+                            "Fasttrack mengelola kampanye Google Ads secara terukur untuk memaksimalkan relevansi, jangkauan, dan efisiensi anggaran iklan."
+                        ],
+                        "meliputi": [
+                            "Search Campaign",
+                            "Display Campaign",
+                            "Remarketing Campaign",
+                            "Performance Max Campaign",
+                            "YouTube Ads Campaign",
+                            "Conversion Tracking Setup",
+                            "Landing Page Optimization"
+                        ],
+                        "output": [
+                            "Hasil lebih cepat",
+                            "Target berdasarkan kata kunci pencarian",
+                            "Pengukuran hasil yang akurat",
+                            "Anggaran fleksibel",
+                            "Cocok untuk berbagai jenis usaha"
+                        ]
+                    },
+                    "en": {
+                        "penjelasan_layanan": [
+                            "Google Ads allow businesses to reach prospective clients who are actively searching for similar services. With the right strategy, ads are only shown to people with relevant interests and needs for your business.",
+                            "FastTrack manages Google Ads campaigns in a measurable way to maximize relevance, reach, and ad budget efficiency."
+                        ],
+                        "meliputi": [
+                            "Search Campaign",
+                            "Display Campaign",
+                            "Remarketing Campaign",
+                            "Performance Max Campaign",
+                            "YouTube Ads Campaign",
+                            "Conversion Tracking Setup",
+                            "Landing Page Optimization"
+                        ],
+                        "output": [
+                            "Faster results",
+                            "Targeting based on search keywords",
+                            "Accurate result measurement",
+                            "Flexible budget",
+                            "Suitable for various business types"
+                        ]
+                    },
+                    "zh": {
+                        "penjelasan_layanan": [
+                            "Google 广告让企业能够触达正在积极搜索同类服务的潜在客户。通过恰当的策略，广告只会展示给与您业务相关的兴趣及需求人群。",
+                            "Fasttrack 以可衡量的方式管理 Google 广告投放，最大化相关性、覆盖面及广告预算效率。"
+                        ],
+                        "meliputi": [
+                            "搜索广告系列",
+                            "展示广告系列",
+                            "再营销广告系列",
+                            "效果最大化广告系列",
+                            "YouTube 广告系列",
+                            "转化追踪设置",
+                            "落地页优化"
+                        ],
+                        "output": [
+                            "更快见效",
+                            "基于搜索关键词定位",
+                            "精准效果衡量",
+                            "预算灵活",
+                            "适用于各类企业"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "instagram-ads",
+                "name": {
+                    "id": "Instagram Ads",
+                    "en": "Instagram Ads",
+                    "zh": "Instagram 广告"
+                },
+                "excerpt": {
+                    "id": "Pengelolaan iklan di Instagram untuk meningkatkan visibilitas merek kepada audiens yang relevan.",
+                    "en": "Instagram advertising management to increase brand visibility to relevant audiences.",
+                    "zh": "管理 Instagram 广告，向相关受众提升品牌可见度。"
+                },
+                "price_label": "Hubungi Kami",
+                "detail": {
+                    "id": {
+                        "penjelasan_layanan": [
+                            "Instagram telah menjadi salah satu platform yang paling efektif untuk membangun citra merek dan menjangkau calon pelanggan secara visual.",
+                            "Dengan strategi konten dan iklan yang tepat, Instagram dapat menjadi sarana yang efektif untuk meningkatkan ketertarikan audiens sekaligus meningkatkan prospek bisnis."
+                        ],
+                        "meliputi": [
+                            "Campaign Awareness",
+                            "Engagement Campaign",
+                            "Lead Generation Campaign",
+                            "Traffic Campaign",
+                            "Conversion Campaign",
+                            "Remarketing Campaign"
+                        ],
+                        "output": [
+                            "Jasa Profesional",
+                            "Properti",
+                            "Pendidikan",
+                            "Kesehatan",
+                            "Retail",
+                            "Fashion",
+                            "Kuliner",
+                            "Perusahaan B2B dan B2C"
+                        ]
+                    },
+                    "en": {
+                        "penjelasan_layanan": [
+                            "Instagram has become one of the most effective platforms for building brand image and visually reaching prospective customers.",
+                            "With the right content and advertising strategy, Instagram can be an effective tool to boost audience interest while generating business leads."
+                        ],
+                        "meliputi": [
+                            "Awareness Campaign",
+                            "Engagement Campaign",
+                            "Lead Generation Campaign",
+                            "Traffic Campaign",
+                            "Conversion Campaign",
+                            "Remarketing Campaign"
+                        ],
+                        "output": [
+                            "Professional Services",
+                            "Property",
+                            "Education",
+                            "Healthcare",
+                            "Retail",
+                            "Fashion",
+                            "Culinary",
+                            "B2B & B2C Companies"
+                        ]
+                    },
+                    "zh": {
+                        "penjelasan_layanan": [
+                            "Instagram 已成为塑造品牌形象、以视觉方式触达潜在客户最有效的平台之一。",
+                            "借助恰当的内容与广告策略，Instagram 能有效提升受众兴趣，同时为业务带来更多潜在客户。"
+                        ],
+                        "meliputi": [
+                            "品牌认知广告系列",
+                            "互动广告系列",
+                            "潜客获取广告系列",
+                            "流量广告系列",
+                            "转化广告系列",
+                            "再营销广告系列"
+                        ],
+                        "output": [
+                            "专业服务",
+                            "房地产",
+                            "教育",
+                            "医疗健康",
+                            "零售",
+                            "时尚",
+                            "餐饮",
+                            "B2B 及 B2C 企业"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "facebook-ads",
+                "name": {
+                    "id": "Facebook Ads",
+                    "en": "Facebook Ads",
+                    "zh": "Facebook 广告"
+                },
+                "excerpt": {
+                    "id": "Pengelolaan iklan di Facebook untuk memperluas jangkauan dan mendorong konversi dari segmen yang ditargetkan.",
+                    "en": "Facebook advertising management to expand reach and drive conversions from targeted segments.",
+                    "zh": "管理 Facebook 广告，扩大覆盖面并推动目标客群的转化。"
+                },
+                "price_label": "Hubungi Kami",
+                "detail": {
+                    "id": {
+                        "penjelasan_layanan": [
+                            "Dengan basis pengguna yang luas dan sistem penargetan yang detail, Facebook Ads menjadi salah satu cara efektif untuk membangun jangkauan dan mendorong konversi.",
+                            "Fasttrack mengelola kampanye secara strategis untuk memaksimalkan target audiens dari bisnis Anda."
+                        ],
+                        "meliputi": [
+                            "Brand Awareness Campaign",
+                            "Lead Generation Campaign",
+                            "Website Traffic Campaign",
+                            "Conversion Campaign",
+                            "Messenger Campaign",
+                            "Remarketing Campaign"
+                        ],
+                        "output": [
+                            "Lokasi",
+                            "Usia",
+                            "Minat",
+                            "Perilaku",
+                            "Profesi",
+                            "Pendidikan",
+                            "Aktivitas Digital"
+                        ]
+                    },
+                    "en": {
+                        "penjelasan_layanan": [
+                            "With a broad user base and detailed targeting system, Facebook Ads is one of the effective ways to build reach and drive conversions.",
+                            "FastTrack manages campaigns strategically to maximize your business's target audience."
+                        ],
+                        "meliputi": [
+                            "Brand Awareness Campaign",
+                            "Lead Generation Campaign",
+                            "Website Traffic Campaign",
+                            "Conversion Campaign",
+                            "Messenger Campaign",
+                            "Remarketing Campaign"
+                        ],
+                        "output": [
+                            "Location",
+                            "Age",
+                            "Interests",
+                            "Behavior",
+                            "Occupation",
+                            "Education",
+                            "Digital Activity"
+                        ]
+                    },
+                    "zh": {
+                        "penjelasan_layanan": [
+                            "凭借庞大的用户基础与精细的定位系统，Facebook 广告是扩大覆盖面、推动转化的有效方式之一。",
+                            "Fasttrack 以策略性方式管理广告投放，最大化触达您业务的目标受众。"
+                        ],
+                        "meliputi": [
+                            "品牌认知广告系列",
+                            "潜客获取广告系列",
+                            "网站流量广告系列",
+                            "转化广告系列",
+                            "Messenger 广告系列",
+                            "再营销广告系列"
+                        ],
+                        "output": [
+                            "地理位置",
+                            "年龄",
+                            "兴趣",
+                            "行为",
+                            "职业",
+                            "教育程度",
+                            "数字活动"
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "tiktok-ads",
+                "name": {
+                    "id": "TikTok Ads",
+                    "en": "TikTok Ads",
+                    "zh": "TikTok 广告"
+                },
+                "excerpt": {
+                    "id": "Pengelolaan iklan di TikTok untuk menjangkau audiens lebih luas melalui format konten video.",
+                    "en": "TikTok advertising management to reach a wider audience through video content format.",
+                    "zh": "管理 TikTok 广告，通过视频内容形式触达更广泛的受众。"
+                },
+                "price_label": "Hubungi Kami",
+                "detail": {
+                    "id": {
+                        "penjelasan_layanan": [
+                            "TikTok menghadirkan peluang pemasaran digital yang lebih muda dan lebih luas melalui video yang engaging. TikTok telah berkembang pesat sebagai platform digital dengan pertumbuhan pengguna yang sangat cepat.",
+                            "Karakteristik konten yang kreatif dan interaktif menjadikan TikTok sebagai media yang efektif untuk membangun awareness maupun meningkatkan interaksi bisnis."
+                        ],
+                        "meliputi": [
+                            "Video Awareness Campaign",
+                            "Traffic Campaign",
+                            "Lead Generation Campaign",
+                            "Conversion Campaign",
+                            "TikTok Pixel Setup",
+                            "Remarketing Campaign"
+                        ],
+                        "output": [
+                            "Jangkauan luas",
+                            "Tingkat engagement tinggi",
+                            "Cocok untuk menjangkau audiens muda",
+                            "Efektif untuk produk dengan visual menarik",
+                            "Mendukung pertumbuhan komunitas digital"
+                        ]
+                    },
+                    "en": {
+                        "penjelasan_layanan": [
+                            "TikTok offers a younger and broader digital marketing opportunity through engaging video content. TikTok has grown rapidly as a digital platform with an extremely fast-growing user base.",
+                            "Its creative and interactive content characteristics make TikTok an effective medium for building awareness and increasing business engagement."
+                        ],
+                        "meliputi": [
+                            "Video Awareness Campaign",
+                            "Traffic Campaign",
+                            "Lead Generation Campaign",
+                            "Conversion Campaign",
+                            "TikTok Pixel Setup",
+                            "Remarketing Campaign"
+                        ],
+                        "output": [
+                            "Wide reach",
+                            "High engagement rate",
+                            "Ideal for reaching younger audiences",
+                            "Effective for visually appealing products",
+                            "Supports digital community growth"
+                        ]
+                    },
+                    "zh": {
+                        "penjelasan_layanan": [
+                            "TikTok 通过引人入胜的视频内容，带来更年轻、更广泛的数字营销机会。TikTok 作为数字平台已迅速发展，用户增长速度极快。",
+                            "富有创意与互动性的内容特点，使 TikTok 成为建立品牌认知、提升业务互动的有效媒介。"
+                        ],
+                        "meliputi": [
+                            "视频认知广告系列",
+                            "流量广告系列",
+                            "潜客获取广告系列",
+                            "转化广告系列",
+                            "TikTok 像素设置",
+                            "再营销广告系列"
+                        ],
+                        "output": [
+                            "覆盖面广",
+                            "互动率高",
+                            "适合触达年轻受众",
+                            "对视觉吸引力强的产品效果显著",
+                            "助力数字社群成长"
+                        ]
+                    }
+                }
+            }
+        ],
+        "faq": { "id": [], "en": [], "zh": [] }
     }
 ]

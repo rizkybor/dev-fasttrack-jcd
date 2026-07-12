@@ -1,11 +1,17 @@
 export default {
     breadcrumb: {
         layanan: "Services",
+        parent: "Digital Marketing",
         current: "Digital Marketing",
     },
     back: "Back",
     sections: {
         penjelasan: "General Overview",
+        penjelasan_umum: "General Overview",
+        pilih_jenis: "Choose Service Type",
+        penjelasan_layanan: "Service Description",
+        meliputi: "{name} Service Includes",
+        output: "Types of Output You Will Receive",
         syarat: "Terms & Conditions",
         keuntungan: "Benefits & Advantages",
         alur: "Process Flow",
@@ -13,6 +19,10 @@ export default {
         paket: "Packages & Pricing",
         dasar_hukum: "Legal Basis",
     },
+    items: {
+        from: "Starting from",
+    },
+    cta_button: "Order Now",
     plans: {
         mulai_dari: "Starting from",
         paling_populer: "Most Popular",

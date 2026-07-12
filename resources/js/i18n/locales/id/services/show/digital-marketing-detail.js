@@ -1,11 +1,17 @@
 export default {
     breadcrumb: {
         layanan: "Layanan",
+        parent: "Digital Marketing",
         current: "Digital Marketing",
     },
     back: "Kembali",
     sections: {
         penjelasan: "Penjelasan Umum",
+        penjelasan_umum: "Penjelasan Umum",
+        pilih_jenis: "Pilih Jenis Layanan",
+        penjelasan_layanan: "Penjelasan Layanan",
+        meliputi: "Layanan {name} Meliputi",
+        output: "Jenis Output yang akan Diterima",
         syarat: "Syarat dan Ketentuan",
         keuntungan: "Keuntungan & Manfaat",
         alur: "Alur Proses",
@@ -13,6 +19,10 @@ export default {
         paket: "Paket & Harga",
         dasar_hukum: "Dasar Hukum",
     },
+    items: {
+        from: "Mulai dari",
+    },
+    cta_button: "Pesan Sekarang",
     plans: {
         mulai_dari: "Mulai dari",
         paling_populer: "Paling Populer",

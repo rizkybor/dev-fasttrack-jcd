@@ -15,8 +15,7 @@ const whatsappNumber = "6282298604144";
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/digital-marketing" },
-    { icon: "/icons/ft-persons-w.svg", path: "/digital-marketing" },
+    { icon: "/icons/ft-persons-w.svg", path: "/design" },
     { icon: "/icons/ft-persons-w.svg", path: "/digital-marketing" },
 ];
 
