@@ -172,12 +172,11 @@ $customServices = [
     ['component' => 'Services/VirtualOffice/Index', 'title' => 'Virtual Office', 'path' => '/virtual-office', 'description' => 'Layanan virtual office dengan alamat prestisius untuk mendukung operasional bisnis Anda secara profesional.'],
     ['component' => 'Services/DigitalMarketing/Index', 'title' => 'Digital Marketing', 'path' => '/digital-marketing', 'description' => 'Layanan digital marketing untuk meningkatkan visibilitas dan pertumbuhan bisnis Anda secara online.'],
     ['component' => 'Services/Naturalisasi/Index', 'title' => 'Naturalisasi', 'path' => '/naturalisasi', 'description' => 'Layanan pengurusan naturalisasi dan kewarganegaraan sesuai ketentuan hukum yang berlaku di Indonesia.'],
-    ['component' => 'Services/PerpajakanDanPembukuan/Index', 'title' => 'Perpajakan & Pembukuan', 'path' => '/perpajakan-dan-pembukuan', 'description' => 'Layanan pengurusan perpajakan dan pembukuan untuk memastikan kepatuhan fiskal bisnis Anda.'],
-    ['component' => 'Services/PerizinanDasar/Index', 'title' => 'Perizinan Dasar', 'path' => '/perizinan-dasar', 'description' => 'Layanan pengurusan perizinan dasar usaha termasuk NIB, izin lokasi, dan izin lingkungan sesuai regulasi yang berlaku.'],
+    ['component' => 'Services/PerpajakanDanPembukuan/Index', 'title' => 'Perpajakan & Pembukuan', 'path' => '/perpajakan-dan-pembukuan', 'description' => 'Layanan pengurusan perpajakan dan pembukuan untuk memastikan kepatuhan fiskal bisnis Anda.']
 ];
 
 // BADAN USAHA 
-$foundingProducts = (static function (): array{
+$foundingProducts = (static function (): array {
     $path = public_path('data/foundingProductsBadanUsaha.json');
 
     if (!file_exists($path)) {
@@ -198,7 +197,7 @@ $foundingProducts = collect($foundingProducts)
     ->all();
 
 // KANTOR PERWAKILAN 
-$kantorPerwakilanProducts = (static function (): array{
+$kantorPerwakilanProducts = (static function (): array {
     $path = public_path('data/foundingProductsKantorPerwakilan.json');
 
     if (!file_exists($path)) {
@@ -219,7 +218,7 @@ $kantorPerwakilanProducts = collect($kantorPerwakilanProducts)
     ->all();
 
 // PENYUSUNAN PENINJAUAN 
-$penyusunanDanPeninjauanProducts = (static function (): array{
+$penyusunanDanPeninjauanProducts = (static function (): array {
     $path = public_path('data/foundingProductsPenyusunanPeninjauan.json');
 
     if (!file_exists($path)) {
@@ -240,7 +239,7 @@ $penyusunanDanPeninjauanProducts = collect($penyusunanDanPeninjauanProducts)
     ->all();
 
 // RETAINER BERLANGGANAN 
-$retainerBerlanggananProducts = (static function (): array{
+$retainerBerlanggananProducts = (static function (): array {
     $path = public_path('data/foundingRetainerBerlangganan.json');
 
     if (!file_exists($path)) {
@@ -261,7 +260,7 @@ $retainerBerlanggananProducts = collect($retainerBerlanggananProducts)
     ->all();
 
 // IZIN TINGGAL TERBATAS
-$izinTinggalTerbatasProducts = (static function (): array{
+$izinTinggalTerbatasProducts = (static function (): array {
     $path = public_path('data/foundingProductsIzinTinggalTerbatas.json');
 
     if (!file_exists($path)) {
@@ -282,7 +281,7 @@ $izinTinggalTerbatasProducts = collect($izinTinggalTerbatasProducts)
     ->all();
 
 // IZIN TINGGAL TETAP
-$izinTinggalTetapProducts = (static function (): array{
+$izinTinggalTetapProducts = (static function (): array {
     $path = public_path('data/foundingProductsIzinTinggalTetap.json');
 
     if (!file_exists($path)) {
@@ -303,7 +302,7 @@ $izinTinggalTetapProducts = collect($izinTinggalTetapProducts)
     ->all();
 
 // BADAN HUKUM LUAR NEGERI
-$badanUsahaLuarNegeriProducts = (static function (): array{
+$badanUsahaLuarNegeriProducts = (static function (): array {
     $path = public_path('data/foundingProductsBadanUsahaLuarNegeri.json');
     if (!file_exists($path))
         return [];
@@ -319,7 +318,7 @@ $badanUsahaLuarNegeriProducts = collect($badanUsahaLuarNegeriProducts)
     ->all();
 
 // ONE SINGLE SUBMISSION
-$oneSingleSubmissionProducts = (static function (): array{
+$oneSingleSubmissionProducts = (static function (): array {
     $path = public_path('data/foundingProductsOneSingleSubmission.json');
     if (!file_exists($path))
         return [];
@@ -335,7 +334,7 @@ $oneSingleSubmissionProducts = collect($oneSingleSubmissionProducts)
     ->all();
 
 // KEWAJIBAN PELAPORAN PERUSAHAAN
-$kewajibanPelaporanPerusahaanProducts = (static function (): array{
+$kewajibanPelaporanPerusahaanProducts = (static function (): array {
     $path = public_path('data/foundingProductsKewajibanPelaporanPerusahaan.json');
     if (!file_exists($path))
         return [];
@@ -351,7 +350,7 @@ $kewajibanPelaporanPerusahaanProducts = collect($kewajibanPelaporanPerusahaanPro
     ->all();
 
 // LEGALISASI KEDUTAAN
-$legalisasiKedutaanProducts = (static function (): array{
+$legalisasiKedutaanProducts = (static function (): array {
     $path = public_path('data/foundingProductsLegalisasiKedutaan.json');
     if (!file_exists($path))
         return [];
@@ -367,7 +366,7 @@ $legalisasiKedutaanProducts = collect($legalisasiKedutaanProducts)
     ->all();
 
 // KEKAYAAN INTELEKTUAL
-$kekayaanIntelektualProducts = (static function (): array{
+$kekayaanIntelektualProducts = (static function (): array {
     $path = public_path('data/foundingProductsKekayaanIntelektual.json');
     if (!file_exists($path))
         return [];
@@ -383,7 +382,7 @@ $kekayaanIntelektualProducts = collect($kekayaanIntelektualProducts)
     ->all();
 
 // PENTERJEMAH 
-$penerjemahProducts = (static function (): array{
+$penerjemahProducts = (static function (): array {
     $path = public_path('data/foundingProductsPenerjemah.json');
 
     if (!file_exists($path)) {
@@ -404,7 +403,7 @@ $penerjemahProducts = collect($penerjemahProducts)
     ->all();
 
 // UJI TUNTAS HUKUM 
-$ujiTuntasHukumProducts = (static function (): array{
+$ujiTuntasHukumProducts = (static function (): array {
     $path = public_path('data/foundingProductsUjiTuntasHukum.json');
 
     if (!file_exists($path)) {
@@ -425,7 +424,7 @@ $ujiTuntasHukumProducts = collect($ujiTuntasHukumProducts)
     ->all();
 
 // PERIZINAN LAINNYA
-$perizinanLainnyaProducts = (static function (): array{
+$perizinanLainnyaProducts = (static function (): array {
     $path = public_path('data/foundingProductsPerizinanLainnya.json');
     if (!file_exists($path))
         return [];
@@ -441,7 +440,7 @@ $perizinanLainnyaProducts = collect($perizinanLainnyaProducts)
     ->all();
 
 // PERIZINAN BERUSAHA
-$perizinanBerusahaProducts = (static function (): array{
+$perizinanBerusahaProducts = (static function (): array {
     $path = public_path('data/foundingProductsPerizinanBerusaha.json');
     if (!file_exists($path))
         return [];
@@ -457,7 +456,7 @@ $perizinanBerusahaProducts = collect($perizinanBerusahaProducts)
     ->all();
 
 // NOTARIS VIRTUAL DAN AKTA
-$notarisVirtualDanAktaProducts = (static function (): array{
+$notarisVirtualDanAktaProducts = (static function (): array {
     $path = public_path('data/foundingProductsNotarisVirtualDanAkta.json');
     if (!file_exists($path))
         return [];
@@ -473,7 +472,7 @@ $notarisVirtualDanAktaProducts = collect($notarisVirtualDanAktaProducts)
     ->all();
 
 // RESTRUKTURISASI PERSEROAN TERBATAS
-$restrukturisasiPerseroanTerbatasProducts = (static function (): array{
+$restrukturisasiPerseroanTerbatasProducts = (static function (): array {
     $path = public_path('data/foundingProductsRestrukturisasiPerseroanTerbatas.json');
     if (!file_exists($path))
         return [];
@@ -489,7 +488,7 @@ $restrukturisasiPerseroanTerbatasProducts = collect($restrukturisasiPerseroanTer
     ->all();
 
 // PENUTUPAN BADAN USAHA
-$penutupanBadanUsahaProducts = (static function (): array{
+$penutupanBadanUsahaProducts = (static function (): array {
     $path = public_path('data/foundingProductsPenutupanBadanUsaha.json');
     if (!file_exists($path))
         return [];
@@ -505,7 +504,7 @@ $penutupanBadanUsahaProducts = collect($penutupanBadanUsahaProducts)
     ->all();
 
 // KEIMIGRASIAN WNI WNA
-$keimigrasianWniWnaProducts = (static function (): array{
+$keimigrasianWniWnaProducts = (static function (): array {
     $path = public_path('data/foundingProductsKeimigrasianWniWna.json');
     if (!file_exists($path))
         return [];
@@ -521,7 +520,7 @@ $keimigrasianWniWnaProducts = collect($keimigrasianWniWnaProducts)
     ->all();
 
 // SERTIFIKASI BADAN USAHA
-$sertifikasiBadanUsahaProducts = (static function (): array{
+$sertifikasiBadanUsahaProducts = (static function (): array {
     $path = public_path('data/foundingProductsSertifikasiBadanUsaha.json');
     if (!file_exists($path))
         return [];
@@ -537,7 +536,7 @@ $sertifikasiBadanUsahaProducts = collect($sertifikasiBadanUsahaProducts)
     ->all();
 
 // VISA MANCANEGARA
-$visaMancanegaraProducts = (static function (): array{
+$visaMancanegaraProducts = (static function (): array {
     $path = public_path('data/foundingProductsVisaMancanegara.json');
     if (!file_exists($path))
         return [];
@@ -553,7 +552,7 @@ $visaMancanegaraProducts = collect($visaMancanegaraProducts)
     ->all();
 
 // VISA INDONESIA
-$visaIndonesiaProducts = (static function (): array{
+$visaIndonesiaProducts = (static function (): array {
     $path = public_path('data/foundingProductsVisaIndonesia.json');
     if (!file_exists($path))
         return [];
@@ -569,7 +568,7 @@ $visaIndonesiaProducts = collect($visaIndonesiaProducts)
     ->all();
 
 // VIRTUAL OFFICE
-$virtualOfficeProducts = (static function (): array{
+$virtualOfficeProducts = (static function (): array {
     $path = public_path('data/foundingProductsVirtualOffice.json');
     if (!file_exists($path))
         return [];
@@ -585,7 +584,7 @@ $virtualOfficeProducts = collect($virtualOfficeProducts)
     ->all();
 
 // DIGITAL MARKETING
-$digitalMarketingProducts = (static function (): array{
+$digitalMarketingProducts = (static function (): array {
     $path = public_path('data/foundingProductsDigitalMarketing.json');
     if (!file_exists($path))
         return [];
@@ -601,7 +600,7 @@ $digitalMarketingProducts = collect($digitalMarketingProducts)
     ->all();
 
 // NATURALISASI
-$naturalisasiProducts = (static function (): array{
+$naturalisasiProducts = (static function (): array {
     $path = public_path('data/foundingProductsNaturalisasi.json');
     if (!file_exists($path))
         return [];
@@ -617,7 +616,7 @@ $naturalisasiProducts = collect($naturalisasiProducts)
     ->all();
 
 // PERPAJAKAN DAN PEMBUKUAN
-$perpajakanDanPembukuanProducts = (static function (): array{
+$perpajakanDanPembukuanProducts = (static function (): array {
     $path = public_path('data/foundingProductsPerpajakanDanPembukuan.json');
     if (!file_exists($path))
         return [];
@@ -628,22 +627,6 @@ $perpajakanDanPembukuanProducts = (static function (): array{
 $perpajakanDanPembukuanProducts = collect($perpajakanDanPembukuanProducts)
     ->map(static function (array $product): array {
         $product['detail_path'] = '/perpajakan-dan-pembukuan/' . $product['id'];
-        return $product;
-    })
-    ->all();
-
-// PERIZINAN DASAR
-$perizinanDasarProducts = (static function (): array{
-    $path = public_path('data/foundingProductsPerizinanDasar.json');
-    if (!file_exists($path))
-        return [];
-    $decoded = json_decode(file_get_contents($path), true);
-    return is_array($decoded) ? $decoded : [];
-})();
-
-$perizinanDasarProducts = collect($perizinanDasarProducts)
-    ->map(static function (array $product): array {
-        $product['detail_path'] = '/perizinan-dasar/' . $product['id'];
         return $product;
     })
     ->all();
@@ -666,7 +649,7 @@ $staticPages = [
 // once every *Products collection and $articles has been defined above.
 
 foreach ($customServices as $service) {
-    Route::get($service['path'], function (Request $request) use ($sertifikasiBadanUsahaProducts, $visaMancanegaraProducts, $visaIndonesiaProducts, $virtualOfficeProducts, $naturalisasiProducts, $digitalMarketingProducts, $perpajakanDanPembukuanProducts, $perizinanDasarProducts, $perizinanBerusahaProducts, $keimigrasianWniWnaProducts, $notarisVirtualDanAktaProducts, $perizinanLainnyaProducts, $restrukturisasiPerseroanTerbatasProducts, $penutupanBadanUsahaProducts, $penerjemahProducts, $ujiTuntasHukumProducts, $kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanUsahaLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
+    Route::get($service['path'], function (Request $request) use ($sertifikasiBadanUsahaProducts, $visaMancanegaraProducts, $visaIndonesiaProducts, $virtualOfficeProducts, $naturalisasiProducts, $digitalMarketingProducts, $perpajakanDanPembukuanProducts, $perizinanBerusahaProducts, $keimigrasianWniWnaProducts, $notarisVirtualDanAktaProducts, $perizinanLainnyaProducts, $restrukturisasiPerseroanTerbatasProducts, $penutupanBadanUsahaProducts, $penerjemahProducts, $ujiTuntasHukumProducts, $kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanUsahaLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
         $baseUrl = $resolveBaseUrl($request);
         $props = [
             'service' => $service,
@@ -1270,29 +1253,6 @@ foreach ($customServices as $service) {
                 'mainEntity' => [
                     '@type' => 'ItemList',
                     'itemListElement' => collect($perizinanBerusahaProducts)->values()->map(
-                        static fn(array $product, int $index): array => [
-                            '@type' => 'ListItem',
-                            'position' => $index + 1,
-                            'name' => $product['name'],
-                            'url' => $baseUrl . $product['detail_path'],
-                        ]
-                    )->all(),
-                ],
-            ];
-        }
-
-        // PERIZINAN DASAR
-        if ($service['path'] === '/perizinan-dasar') {
-            $props['products'] = $perizinanDasarProducts;
-            $props['schemas'][] = [
-                '@context' => 'https://schema.org',
-                '@type' => 'CollectionPage',
-                'name' => 'Perizinan Dasar - FastTrack',
-                'description' => 'Daftar produk perizinan dasar FastTrack.',
-                'url' => $baseUrl . '/perizinan-dasar',
-                'mainEntity' => [
-                    '@type' => 'ItemList',
-                    'itemListElement' => collect($perizinanDasarProducts)->values()->map(
                         static fn(array $product, int $index): array => [
                             '@type' => 'ListItem',
                             'position' => $index + 1,
@@ -2758,29 +2718,6 @@ Route::get('/perpajakan-dan-pembukuan/{id}', function (Request $request, int $id
     ]);
 })->whereNumber('id');
 
-// PERIZINAN DASAR
-Route::get('/perizinan-dasar/{id}', function (Request $request, int $id) use ($perizinanDasarProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
-    $baseUrl = $resolveBaseUrl($request);
-    $product = collect($perizinanDasarProducts)->firstWhere('id', $id);
-    abort_if($product === null, 404);
-    $relatedProducts = collect($perizinanDasarProducts)->where('id', '!=', $id)->take(3)->values()->all();
-
-    $productName = $pickLocale($product['name']);
-    $productExcerpt = $pickLocale($product['excerpt']);
-    $productFaq = $pickLocale($product['faq']) ?? [];
-
-    return Inertia::render('Services/PerizinanDasar/Show', [
-        'product' => $product,
-        'relatedProducts' => $relatedProducts,
-        'seo' => ['title' => $productName . ' - FastTrack', 'description' => $productExcerpt, 'canonical' => $baseUrl . $product['detail_path'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl)],
-        'schemas' => [
-            ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $productName, 'description' => $productExcerpt, 'serviceType' => $productName, 'provider' => $organizationReference($baseUrl), 'areaServed' => ['@type' => 'Country', 'name' => 'Indonesia'], 'image' => $product['image'] ?: $defaultImageUrl($baseUrl), 'url' => $baseUrl . $product['detail_path'], 'offers' => ['@type' => 'Offer', 'priceCurrency' => 'IDR', 'price' => $product['price'], 'availability' => 'https://schema.org/InStock', 'url' => $baseUrl . $product['detail_path']]],
-            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => collect($productFaq)->map(static fn(array $faq): array => ['@type' => 'Question', 'name' => $faq['question'], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $faq['answer']]])->all()],
-            $breadcrumbSchema([['name' => 'Beranda', 'item' => $baseUrl . '/'], ['name' => 'Perizinan Dasar', 'item' => $baseUrl . '/perizinan-dasar'], ['name' => $productName, 'item' => $baseUrl . $product['detail_path']]]),
-        ],
-    ]);
-})->whereNumber('id');
-
 
 
 // ====== BATAS LAYANAN ======
@@ -2932,7 +2869,7 @@ Route::get('/artikel', function (Request $request) use ($articles, $resolveBaseU
                 'mainEntity' => [
                     '@type' => 'ItemList',
                     'itemListElement' => collect($articles)->values()->map(
-                        static fn (array $article, int $index): array => [
+                        static fn(array $article, int $index): array => [
                             '@type' => 'ListItem',
                             'position' => $index + 1,
                             'name' => $article['title'],
@@ -3309,9 +3246,7 @@ $allServiceProducts = array_merge(
 );
 
 // Services without a working Vue page yet should not be submitted to search engines.
-$sitemapExcludedPaths = ['/perizinan-dasar'];
 $sitemapCustomServices = collect($customServices)
-    ->reject(fn ($service) => in_array($service['path'], $sitemapExcludedPaths, true))
     ->values()
     ->all();
 
@@ -3332,14 +3267,14 @@ Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $sitem
     $baseUrl = $resolveBaseUrl($request);
 
     $urls = collect($staticPages)
-        ->map(fn ($path) => [
+        ->map(fn($path) => [
             'loc' => $baseUrl . $path,
             'lastmod' => now()->toDateString(),
             'changefreq' => 'weekly',
             'priority' => $path === '/' ? '1.0' : '0.8',
         ])
         ->merge(
-            collect($sitemapCustomServices)->map(fn ($service) => [
+            collect($sitemapCustomServices)->map(fn($service) => [
                 'loc' => $baseUrl . $service['path'],
                 'lastmod' => now()->toDateString(),
                 'changefreq' => 'weekly',
@@ -3347,7 +3282,7 @@ Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $sitem
             ])
         )
         ->merge(
-            Service::query()->get()->map(fn ($service) => [
+            Service::query()->get()->map(fn($service) => [
                 'loc' => $baseUrl . '/layanan/' . $service->slug,
                 'lastmod' => $service->updated_at?->toDateString() ?? now()->toDateString(),
                 'changefreq' => 'monthly',
@@ -3355,7 +3290,7 @@ Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $sitem
             ])
         )
         ->merge(
-            collect($articles)->map(fn ($article) => [
+            collect($articles)->map(fn($article) => [
                 'loc' => $baseUrl . $article['detail_path'],
                 'lastmod' => now()->toDateString(),
                 'changefreq' => 'monthly',
@@ -3363,7 +3298,7 @@ Route::get('/sitemap.xml', function (Request $request) use ($staticPages, $sitem
             ])
         )
         ->merge(
-            collect($allServiceProducts)->map(fn ($product) => [
+            collect($allServiceProducts)->map(fn($product) => [
                 'loc' => $baseUrl . $product['detail_path'],
                 'lastmod' => now()->toDateString(),
                 'changefreq' => 'monthly',
