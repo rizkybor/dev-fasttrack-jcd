@@ -3,6 +3,7 @@ import { ref, computed, watch } from "vue";
 import { useForm } from "@inertiajs/vue3";
 import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
+import FooterCTA from "@/Components/FooterCTA.vue";
 
 /**
  * Halaman "Minta Penawaran" — Penawaran Fasttrack
@@ -550,51 +551,15 @@ const whatsappLink = computed(() => {
             </div>
         </section>
 
-        <!-- CTA BANNER -->
         <section class="pb-[52px] bg-[#F9F9F9]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <div
-                    class="relative overflow-hidden rounded-xl bg-[#9e1f16] px-6 py-12 sm:py-14 text-center"
-                >
-                    <svg
-                        class="pointer-events-none absolute right-6 top-1/2 hidden h-24 w-24 -translate-y-1/2 text-white/10 sm:block"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="1"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        />
-                    </svg>
-
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-white">
-                        {{ t("mintaPenawaran.cta.title") }}
-                    </h2>
-                    <p class="mt-2 text-[13px] text-white/80 max-w-md mx-auto">
-                        {{ t("mintaPenawaran.cta.desc") }}
-                    </p>
-
-                    <a
-                        :href="whatsappLink"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 text-[13px] font-semibold text-white transition hover:bg-[#1fb955]"
-                    >
-                        {{ t("mintaPenawaran.cta.whatsapp") }}
-                        <svg
-                            class="h-4 w-4"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.51 3.61 1.4 5.11L2 22l5.13-1.5a9.87 9.87 0 004.91 1.3h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2zm5.79 14.05c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.14.11-1.84-.12-.42-.14-.97-.31-1.66-.61-2.93-1.27-4.84-4.22-4.99-4.42-.15-.2-1.19-1.58-1.19-3.02 0-1.44.75-2.15 1.02-2.44.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2.01.89 2.16.07.15.12.32.02.51-.09.2-.14.32-.28.5-.14.17-.29.38-.42.51-.14.14-.29.29-.12.57.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.45.29.14.46.12.63-.07.17-.2.72-.84.92-1.13.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.92.29.14.48.21.55.33.07.12.07.68-.17 1.36z"
-                            />
-                        </svg>
-                    </a>
-                </div>
+                <FooterCTA
+                    bare
+                    :title="t('mintaPenawaran.cta.title')"
+                    :description="t('mintaPenawaran.cta.desc')"
+                    :button-text="t('mintaPenawaran.cta.whatsapp')"
+                    :whatsapp-link="whatsappLink"
+                />
             </div>
         </section>
     </MainLayout>

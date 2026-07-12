@@ -134,7 +134,7 @@ const serviceTools = [
 ];
 
 const informasiLinks = [
-    { key: "kbli", path: "/kbli" },
+    { key: "kbli", path: "/panduan-kbli" },
     { key: "faq", path: "/faq" },
 ];
 
