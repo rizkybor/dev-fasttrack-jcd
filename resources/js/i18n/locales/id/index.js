@@ -46,6 +46,7 @@ import layanan from './services/layanan'
 import virtualOffice from './services/virtual-office'
 import digitalMarketing from './services/digital-marketing'
 import visaIndonesia from './services/visa-indonesia'
+import megaMenu from './services/mega-menu'
 
 export default {
     common,
@@ -56,6 +57,7 @@ export default {
     simulasiAkta,
     services: {
         layanan,
+        megaMenu,
         badanUsaha,
         badanUsahaDetail,
         kantorPerwakilan,

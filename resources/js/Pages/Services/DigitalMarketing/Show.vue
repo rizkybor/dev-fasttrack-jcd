@@ -97,7 +97,7 @@ const otherSubServices = computed(() =>
                 <!-- Breadcrumb -->
                 <nav aria-label="Breadcrumb">
                     <div
-                        class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2"
+                        class="inline-flex items-center gap-2 sm:rounded-md sm:bg-white sm:px-4 sm:py-2"
                     >
                         <a
                             href="/"
@@ -364,10 +364,10 @@ const otherSubServices = computed(() =>
 
                 <div
                     v-if="service"
-                    class="mt-8 grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]"
+                    class="mt-8 grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px] min-w-0"
                 >
                     <!-- ===== KIRI: Konten Utama ===== -->
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-6 min-w-0">
                         <!-- 3. Penjelasan Layanan -->
                         <div
                             v-if="currentSub"
@@ -536,7 +536,7 @@ const otherSubServices = computed(() =>
 
                     <!-- ===== KANAN: Sidebar ===== -->
                     <div
-                        class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start"
+                        class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start min-w-0"
                     >
                         <!-- VIP Line Banner -->
                         <div

@@ -128,7 +128,7 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                 class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]">
                 <!-- Breadcrumb -->
                 <nav aria-label="Breadcrumb">
-                    <div class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
+                    <div class="inline-flex items-center gap-2 sm:rounded-md sm:bg-white sm:px-4 sm:py-2">
                         <a href="/" class="text-[#9e1f16] hover:text-black transition">
                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -190,9 +190,9 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
         <!-- CONTENT SECTION -->
         <section id="edukasi" class="bg-[#F7F7F5] py-12 sm:py-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]">
+                <div class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px] min-w-0">
                     <!-- ===== KIRI: Konten Utama ===== -->
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-6 min-w-0">
 
                         <!-- 1. Penjelasan Umum -->
                         <div v-if="product.content?.length"
@@ -630,7 +630,7 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                     </div>
 
                     <!-- ===== KANAN: Sidebar ===== -->
-                    <div class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start">
+                    <div class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start min-w-0">
                         <!-- VIP Line Banner -->
                         <div class="rounded-2xl px-5 py-6 text-center overflow-hidden relative"
                             style="background-image: url('/images/card-arrow-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -731,10 +731,10 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                                     class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] bg-white p-4 hover:border-primary/30 hover:shadow-sm transition-all">
                                     <div
                                         class="text-[14px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors">
-                                        {{ related.name }}
+                                        {{ pick(related.name) }}
                                     </div>
                                     <p class="text-[12px] leading-[1.6] text-[#686964] line-clamp-3">
-                                        {{ related.excerpt ?? related.description }}
+                                        {{ pick(related.excerpt) ?? pick(related.description) }}
                                     </p>
                                     <hr class="border-[#E8E8E6]" />
                                     <div class="flex items-center justify-between">

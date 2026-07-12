@@ -162,7 +162,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                 class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[240px] sm:min-h-[320px] lg:min-h-[360px] min-w-0">
                 <!-- Breadcrumb -->
                 <nav aria-label="Breadcrumb">
-                    <div class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
+                    <div class="inline-flex items-center gap-2 sm:rounded-md sm:bg-white sm:px-4 sm:py-2">
                         <a href="/" class="text-[#9e1f16] hover:text-black transition flex-shrink-0">
                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -218,7 +218,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
         <!-- CONTENT SECTION -->
         <section id="edukasi" class="bg-[#F7F7F5] py-8 sm:py-12 lg:py-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-6 lg:gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]">
+                <div class="grid gap-6 lg:gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px] min-w-0">
 
                     <!-- ===== KIRI: Konten Utama ===== -->
                     <div class="flex flex-col gap-4 sm:gap-6 min-w-0">
@@ -827,11 +827,11 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                     class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] bg-white p-4 hover:border-primary/30 hover:shadow-sm transition-all min-w-0">
                                     <div
                                         class="text-[13px] sm:text-[14px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors break-words">
-                                        {{ related.name }}
+                                        {{ pick(related.name) }}
                                     </div>
                                     <p
                                         class="text-[11px] sm:text-[12px] leading-[1.6] text-[#686964] line-clamp-3 break-words">
-                                        {{ related.excerpt ?? related.description }}
+                                        {{ pick(related.excerpt) ?? pick(related.description) }}
                                     </p>
                                     <hr class="border-[#E8E8E6]" />
                                     <div class="flex items-center justify-between min-w-0">

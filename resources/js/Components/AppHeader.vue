@@ -1,9 +1,9 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useLocale } from "@/Composables/useLocale";
 
-const { t } = useI18n();
+const { t, tm } = useI18n();
 const { languages, current, setLocale } = useLocale();
 const langOpen = ref(false);
 
@@ -17,271 +17,19 @@ const mobileInformasiOpen = ref(false);
 const mobileActiveCategory = ref(null);
 const mobileActiveService = ref(null);
 
-// Title > Layanan > Sub Layanan, each level with its own link
-const serviceCategories = [
-    {
-        title: "Pendirian Badan Usaha Indonesia",
-        icon: "building",
-        services: [
-            {
-                title: "Badan Usaha",
-                path: "/badan-usaha",
-                items: [
-                    { label: "PT Perorangan", path: "/badan-usaha/1" },
-                    { label: "Pendirian PT PMDN", path: "/badan-usaha/2" },
-                    { label: "PT Pendirian PMA", path: "/badan-usaha/3" },
-                    { label: "Pendirian CV", path: "/badan-usaha/4" },
-                    { label: "Pendirian Yayasan", path: "/badan-usaha/5" },
-                    { label: "Pendirian Koperasi", path: "/badan-usaha/6" },
-                    { label: "Persekutuan Perdata", path: "/badan-usaha/7" },
-                    { label: "Persekutuan Firma", path: "/badan-usaha/8" },
-                ],
-            }
-        ],
-    },
-    {
-        title: "Kantor Perwakilan & Badan Usaha Asing",
-        icon: "license",
-        services: [
-            {
-                title: "Kantor Perwakilan",
-                path: "/kantor-perwakilan",
-                items: [
-                    { label: "Kantor Perwakilan Perusahaan Asing (KPPA)", path: "/kantor-perwakilan/1" },
-                    { label: "Kantor Perwakilan Perusahaan Perdagangan Asing", path: "/kantor-perwakilan/2" },
-                    { label: "KP3A Perdagangan Melalui Sistem Elektronik", path: "/kantor-perwakilan/3" },
-                    { label: "Kantor Perwakilan Badan Usaha Jasa Konstruksi Asing", path: "/kantor-perwakilan/4" },
-                ],
-            },
-            {
-                title: "Badan Usaha Luar Negeri",
-                path: "/badan-usaha-luar-negeri",
-                items: [
-                    { label: "Pemberi Waralaba (Surat Tanda Pendaftaran Waralaba)", path: "/badan-usaha-luar-negeri/1" },
-                    { label: "Penyelenggara Sistem Elektronik Asing", path: "/badan-usaha-luar-negeri/2" },
-                ],
-            },
-        ],
-    },
-    {
-        title: "OSS & NOMOR INDUK BERUSAHA (NIB)",
-        icon: "document",
-        services: [
-            {
-                title: "Pendaftaran Nomor Induk Berusaha (NIB)",
-                path: "/one-single-submission",
-                items: [
-                    { label: "NIB Perorangan", path: "/one-single-submission/1" },
-                    { label: "NIB – UMK & selain PT", path: "/one-single-submission/1" },
-                    { label: "NIB – NON UMK (PMDN/PMA)", path: "/one-single-submission/1" },
-                    { label: "NIB Cabang", path: "/one-single-submission/1" },
-                ],
-            },
-            {
-                title: "Perubahan/Pemutakhiran NIB",
-                path: "/one-single-submission",
-                items: [
-                    { label: "Perubahan Data Pelaku Usaha", path: "/one-single-submission/2" },
-                    { label: "Penambahan Data Usaha", path: "/one-single-submission/2" },
-                    { label: "Pencabutan Data Usaha", path: "/one-single-submission/2" },
-                    { label: "Kendala dan Permasalahan OSS", path: "/one-single-submission/2" },
-                ],
-            }
-        ],
-    },
-    {
-        title: "Perizinan Dasar dan Perizinan Berusaha",
-        icon: "document-check",
-        services: [
-            {
-                title: "Perizinan Dasar",
-                path: "/perizinan-berusaha",
-                items: [
-                    { label: "Kesesuaian Kegiatan Pemanfaatan Ruang", path: "/perizinan-berusaha/1" },
-                    { label: "Perizinan Lingkungan", path: "/perizinan-berusaha/1" },
-                    { label: "Persetujuan Bangunan Gedung", path: "/perizinan-berusaha/1" },
-                    { label: "Sertifikat Laik Fungsi", path: "/perizinan-berusaha/4" },
-                ],
-            },
-            {
-                title: "Perizinan Berusaha",
-                path: "/perizinan-berusaha",
-                items: [
-                    { label: "Pendaftaran Sistem Elektronik Lingkup Privat Domestik", path: "/perizinan-berusaha/2" },
-                    { label: "Pendaftaran Buku Panduan dan Kartu Garansi", path: "/perizinan-berusaha/2" },
-                    { label: "Tanda Daftar Gudang", path: "/perizinan-berusaha/2" },
-                ],
-            },
-            {
-                title: "Perizinan Lainnya",
-                path: "/perizinan-berusaha",
-                items: [
-                    { label: "Nomor Pokok Wajib Pajak", path: "/perizinan-berusaha/3" },
-                    { label: "Surat Pengukuhan Pengusaha Kena Pajak (SP PKP)", path: "/perizinan-berusaha/3" },
-                    { label: "Tanda Daftar Kesejahteraan Sosial (LKS)", path: "/perizinan-berusaha/3" },
-                    { label: "Izin Kegiatan Lembaga Kesejahteraan Sosial Daerah/Lokal – DKI Jakarta", path: "/perizinan-berusaha/3" },
-                    { label: "Tanda Daftar Yayasan", path: "/perizinan-berusaha/3" },
-                    { label: "Peraturan Perusahaan", path: "/perizinan-berusaha/3" }
-                ],
-            },
-        ],
-    },
-    {
-        title: "Notaris - Akta Perusahaan/Perorangan",
-        icon: "doc-stack",
-        services: [
-            {
-                title: "Akta Notaris – PT (Perseroan Terbatas)",
-                path: "/notaris-virtual-dan-akta",
-                items: [
-                    { label: "Perubahan Anggaran Dasar Perseroan", path: "/notaris-virtual-dan-akta/1" },
-                    { label: "Perubahan Data Perseroan", path: "/notaris-virtual-dan-akta/2" },
-                    { label: "Rapat Umum Pemegang Saham Tahunan", path: "/notaris-virtual-dan-akta/3" }
-                ],
-            },
-            {
-                title: "Akta Lainnya",
-                path: "/notaris-virtual-dan-akta",
-                items: [
-                    { label: "Akta Cabang", path: "/notaris-virtual-dan-akta/4" },
-                    { label: "Akta Jual Beli Saham", path: "/notaris-virtual-dan-akta/4" },
-                    { label: "Akta Pengambilalihan (Akuisisi)", path: "/notaris-virtual-dan-akta/4" },
-                    { label: "Akta Penggabungan (Merger)", path: "/notaris-virtual-dan-akta/4" },
-                    { label: "Akta Kuasa", path: "/notaris-virtual-dan-akta/4" },
-                    { label: "Perjanjian Kawin/Pisah Harta – PRENUP", path: "/notaris-virtual-dan-akta/4" },
-                    { label: "Perjanjian Kawin/Pisah HARTA – POSTNUP", path: "/notaris-virtual-dan-akta/4" }
-                ],
-            },
-            {
-                title: "Layanan Notaris Lainnya",
-                path: "/notaris-virtual-dan-akta",
-                items: [
-                    { label: "Waameking", path: "/notaris-virtual-dan-akta/4" },
-                    { label: "Legalisir", path: "/notaris-virtual-dan-akta/4" },
-                    { label: "Legalisasi", path: "/notaris-virtual-dan-akta/4" },
-                    { label: "Profil Lengkap Perseroan Terbatas Dari Kementerian Hukum", path: "/notaris-virtual-dan-akta/4" }
-                ],
-            }
-        ],
-    },
-    {
-        title: "Layanan Hukum Korporasi",
-        icon: "globe",
-        services: [
-            {
-                title: "Restrukturisasi Perseroan Terbatas",
-                path: "/restrukturisasi-perseroan-terbatas",
-                items: [
-                    { label: "Pengambilalihan Perseroan (Akuisisi)", path: "/restrukturisasi-perseroan-terbatas/1" },
-                    { label: "Penggabungan Perseroan (Merger)", path: "/restrukturisasi-perseroan-terbatas/2" },
-                    { label: "Alih Status Perseroan", path: "/restrukturisasi-perseroan-terbatas/3" }
-                ],
-            },
-            {
-                title: "Penyusunan dan Peninjauan Perjanjian/Kontrak",
-                path: "/restrukturisasi-perseroan-terbatas",
-                items: [
-                    { label: "Perjanjian/Kontrak", path: "/restrukturisasi-perseroan-terbatas/2" }
-                ],
-            },
-            {
-                title: "Retainer / Berlangganan",
-                path: "/retainer-berlangganan/1",
-                items: [
-                    { label: "Paket Regular", path: "/retainer-berlangganan/1" },
-                    { label: "Berlangganan Corporate Secretary", path: "/retainer-berlangganan/1" }
-                ],
-            },
-            {
-                title: "Uji Tuntas Hukum",
-                path: "/uji-tuntas-hukum/1",
-                items: [],
-            },
-        ],
-    },
-    {
-        title: "Pembubaran Badan Usaha",
-        icon: "pin",
-        services: [
-            {
-                title: "Pembubaran Perseroan/Penutupan Badan Usaha",
-                path: "/penutupan-badan-usaha",
-                items: [
-                    { label: "Pembubaran Perseroan - PMDN/PMA", path: "/penutupan-badan-usaha/1" },
-                    { label: "Penutupan CV", path: "/penutupan-badan-usaha/2" },
-                    { label: "Penutupan Kantor Perwakilan", path: "/penutupan-badan-usaha/3" }
-                ],
-            }
-        ],
-    },
-    {
-        title: "Legalisasi, Apostille & Terjemahan",
-        icon: "grid",
-        services: [
-            {
-                title: "Penterjemah / Translator",
-                path: "/penerjemah/1",
-                items: [],
-            },
-            {
-                title: "Legalisasi Kedutaan / Apostille",
-                path: "/legalisasi-kedutaan",
-                items: [
-                    { label: "Legalisasi Kedutaan", path: "/legalisasi-kedutaan/1" },
-                    { label: "Apostille", path: "/legalisasi-kedutaan/2" }
-                ],
-            },
-        ],
-    },
-    {
-        title: "Hak Kekayaan Intelektual",
-        icon: "grid",
-        services: [
-            {
-                title: "Kekayaan Intelektual",
-                path: "/kekayaan-intelektual",
-                items: [
-                    { label: "Pendaftaran Merek", path: "/kekayaan-intelektual/1" },
-                    { label: "Perpanjangan Merek", path: "/kekayaan-intelektual/2" },
-                    { label: "Hak Cipta", path: "/kekayaan-intelektual/3" }
-                ],
-            },
-        ],
-    },
-];
+// Desktop mega-menu: which services have their sub layanan expanded (hidden by default)
+const expandedServices = ref(new Set());
+const serviceKey = (category, service) => `${category.title}::${service.title}`;
+const toggleDesktopService = (key) => {
+    if (expandedServices.value.has(key)) {
+        expandedServices.value.delete(key);
+    } else {
+        expandedServices.value.add(key);
+    }
+};
 
-const serviceTools = [
-    {
-        title: "Cek Ketersediaan Nama PT",
-        path: "/",
-        icon: "/icons/ic-tools-sedianamapt.svg",
-        items: [],
-    },
-    {
-        title: "Panduan KBLI 2025",
-        path: "/panduan-kbli",
-        icon: "/icons/ic-tools-panduankbli.svg",
-        items: [],
-    },
-    {
-        title: "Tabel Konversi KBLI 2020 x KBLI 2025",
-        path: "/konversi-kbli",
-        icon: "/icons/ic-tools-tablekonversi.svg",
-        desc: "",
-    },
-    {
-        title: "Simulasi Akta Pendirian",
-        path: "",
-        icon: "/icons/ic-tools-simulasiakta.svg",
-        desc: "",
-    },
-    {
-        title: "Generator Nama",
-        path: "/",
-        icon: "/icons/ic-tools-gennama.svg",
-        items: [],
-    },
-];
+const serviceCategories = computed(() => tm("services.megaMenu.categories"));
+const serviceTools = computed(() => tm("services.megaMenu.tools"));
 
 const informasiLinks = [
     { key: "kbli", path: "/panduan-kbli" },
@@ -296,6 +44,7 @@ const closeAllMenus = () => {
     mobileInformasiOpen.value = false;
     mobileActiveCategory.value = null;
     mobileActiveService.value = null;
+    expandedServices.value.clear();
 };
 
 const toggleServices = () => {
@@ -490,7 +239,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                             leave-from-class="opacity-100 scale-100 translate-y-0"
                             leave-to-class="opacity-0 scale-95 -translate-y-2">
                             <div v-if="langOpen"
-                                class="absolute right-0 top-full mt-1.5 w-44 rounded-xl border border-[#D9DAD8] bg-white p-1.5 shadow-xl origin-top-right z-50">
+                                class="absolute right-0 top-full mt-1.5 w-44 rounded-xl border border-[#D9DAD8] bg-white p-1.5 shadow-xl origin-top-right z-[60]">
                                 <button v-for="lang in languages" :key="lang.code" type="button"
                                     class="flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors"
                                     :class="current.code === lang.code
@@ -841,12 +590,24 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                                     </h3>
                                     <div class="mt-1.5 space-y-2">
                                         <div v-for="service in category.services" :key="service.title">
-                                            <a :href="service.path"
-                                                class="-mx-1.5 block rounded px-1.5 py-0.5 text-xs font-bold text-[#1A1B18] transition-colors hover:bg-[#9e1f16]/5 hover:text-primary"
-                                                @click="closeAllMenus">
-                                                {{ service.title }}
-                                            </a>
-                                            <ul v-if="service.items && service.items.length"
+                                            <div class="-mx-1.5 flex items-center gap-1">
+                                                <a :href="service.path"
+                                                    class="block flex-1 rounded px-1.5 py-0.5 text-xs font-bold text-[#1A1B18] transition-colors hover:bg-[#9e1f16]/5 hover:text-primary"
+                                                    @click="closeAllMenus">
+                                                    {{ service.title }}
+                                                </a>
+                                                <button v-if="service.items && service.items.length" type="button"
+                                                    class="flex-shrink-0 p-1 text-[#999] hover:text-primary transition-colors"
+                                                    :aria-expanded="expandedServices.has(serviceKey(category, service))"
+                                                    @click="toggleDesktopService(serviceKey(category, service))">
+                                                    <svg class="h-3 w-3 transition-transform duration-200"
+                                                        :class="expandedServices.has(serviceKey(category, service)) ? 'rotate-180' : ''"
+                                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul v-if="service.items && service.items.length && expandedServices.has(serviceKey(category, service))"
                                                 class="mt-0.5 ml-1.5 space-y-0.5 border-l border-[#EFEFEF] pl-2">
                                                 <li v-for="item in service.items" :key="item.path">
                                                     <a :href="item.path"

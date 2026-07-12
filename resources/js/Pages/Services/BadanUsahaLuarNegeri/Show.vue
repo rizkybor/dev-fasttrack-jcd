@@ -113,7 +113,7 @@ const currentDasarHukum = computed(
                 <!-- Breadcrumb -->
                 <nav aria-label="Breadcrumb">
                     <div
-                        class="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2"
+                        class="inline-flex items-center gap-2 sm:rounded-md sm:bg-white sm:px-4 sm:py-2"
                     >
                         <a
                             href="/"
@@ -245,10 +245,10 @@ const currentDasarHukum = computed(
         <section id="edukasi" class="bg-[#F7F7F5] py-12 sm:py-16">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div
-                    class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px]"
+                    class="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_300px] min-w-0"
                 >
                     <!-- ===== KIRI: Konten Utama ===== -->
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-6 min-w-0">
 
                         <!-- 1. Penjelasan Umum -->
                         <div
@@ -782,7 +782,7 @@ const currentDasarHukum = computed(
 
                     <!-- ===== KANAN: Sidebar ===== -->
                     <div
-                        class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start"
+                        class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start min-w-0"
                     >
                         <!-- VIP Line Banner -->
                         <div
@@ -976,12 +976,12 @@ const currentDasarHukum = computed(
                                     <div
                                         class="text-[14px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors"
                                     >
-                                        {{ related.name }}
+                                        {{ pick(related.name) }}
                                     </div>
                                     <p
                                         class="text-[12px] leading-[1.6] text-[#686964] line-clamp-3"
                                     >
-                                        {{ related.excerpt ?? related.description }}
+                                        {{ pick(related.excerpt) ?? pick(related.description) }}
                                     </p>
                                     <hr class="border-[#E8E8E6]" />
                                     <div class="flex items-center justify-between">
