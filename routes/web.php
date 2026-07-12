@@ -110,60 +110,6 @@ Route::get('/', function (Request $request) use ($resolveBaseUrl, $defaultImageU
     ]);
 });
 
-// Route::get('/promo', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
-//     $baseUrl = $resolveBaseUrl($request);
-
-//     $promoItems = [
-//         'Promo Pendirian PT Hemat 30%',
-//         'Bundling PT + Virtual Office',
-//         'Diskon Pendirian CV Untuk UMKM',
-//         'Promo Pendaftaran Merek',
-//         'Paket Perubahan Akta Cepat',
-//         'Paket Perizinan OSS & NIB',
-//         'Promo Konsultasi Hukum Perusahaan',
-//         'Promo Launching Website Bisnis',
-//         'Promo Virtual Office Premium',
-//         'Promo Laporan LKPM',
-//         'Promo Investor Asing',
-//         'Promo Pengurusan Izin Properti',
-//     ];
-
-//     return Inertia::render('Promo', [
-//         'seo' => [
-//             'title' => 'Promo Legalitas Bisnis - FastTrack',
-//             'description' => 'Temukan promo legalitas bisnis FastTrack untuk pendirian PT, CV, HAKI, virtual office, perizinan usaha, dan layanan profesional lainnya.',
-//             'canonical' => $baseUrl . '/promo',
-//             'image' => $defaultImageUrl($baseUrl),
-//         ],
-//         'schemas' => [
-//             [
-//                 '@context' => 'https://schema.org',
-//                 '@type' => 'CollectionPage',
-//                 'name' => 'Promo Legalitas Bisnis - FastTrack',
-//                 'description' => 'Halaman promo FastTrack berisi penawaran legalitas bisnis, virtual office, HAKI, dan layanan profesional lainnya.',
-//                 'url' => $baseUrl . '/promo',
-//                 'mainEntity' => [
-//                     '@type' => 'ItemList',
-//                     'itemListOrder' => 'https://schema.org/ItemListOrderAscending',
-//                     'numberOfItems' => count($promoItems),
-//                     'itemListElement' => collect($promoItems)->values()->map(
-//                         static fn (string $name, int $index): array => [
-//                             '@type' => 'ListItem',
-//                             'position' => $index + 1,
-//                             'name' => $name,
-//                             'url' => $baseUrl . '/promo',
-//                         ]
-//                     )->all(),
-//                 ],
-//             ],
-//             $breadcrumbSchema([
-//                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
-//                 ['name' => 'Promo', 'item' => $baseUrl . '/promo'],
-//             ]),
-//         ],
-//     ]);
-// });
-
 
 Route::get('/layanan', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
     $baseUrl = $resolveBaseUrl($request);
@@ -704,7 +650,6 @@ $perizinanDasarProducts = collect($perizinanDasarProducts)
 
 $staticPages = [
     '/',
-    // '/promo',
     '/layanan',
     '/artikel',
     '/panduan-kbli',
