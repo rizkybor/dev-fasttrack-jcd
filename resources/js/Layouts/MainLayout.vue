@@ -40,9 +40,9 @@ const globalSchemas = computed(() => {
                 addressCountry: 'ID',
             },
             sameAs: [
-                'https://facebook.com/fasttrack',
-                'https://instagram.com/fasttrack',
-                'https://youtube.com/fasttrack',
+                'https://www.facebook.com/profile.php?id=61580157707276',
+                'https://www.instagram.com/fasttrack.legal/',
+                'https://www.youtube.com/c/FastTrackLegal',
             ],
         },
         {

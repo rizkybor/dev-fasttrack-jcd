@@ -229,7 +229,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                         </svg>
                     </a>
                     <a
-                        href="https://instagram.com/fasttrack"
+                        href="https://www.instagram.com/fasttrack.legal/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram FastTrack"
