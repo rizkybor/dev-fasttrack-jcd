@@ -85,7 +85,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
             <div
                 class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]">
                 <nav aria-label="Breadcrumb">
-                    <div class="inline-flex items-center gap-2 sm:rounded-md sm:bg-white sm:px-4 sm:py-2">
+                    <div class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
                         <a href="/" class="text-[#9e1f16] hover:text-black transition">
                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"

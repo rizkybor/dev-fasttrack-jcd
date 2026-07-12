@@ -85,7 +85,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                 <!-- Breadcrumb -->
                 <nav aria-label="Breadcrumb">
                     <div
-                        class="inline-flex items-center gap-2 sm:rounded-md sm:bg-white sm:px-4 sm:py-2"
+                        class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2"
                     >
                         <a
                             href="/"
