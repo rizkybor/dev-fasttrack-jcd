@@ -35,9 +35,9 @@ export default {
                     packages: '2 Services',
                 },
                 {
-                    title: 'Licensing',
+                    title: 'Basic Licenses & Business Licenses',
                     description: 'Basic permits, sectoral business licenses, and supporting business permits.',
-                    packages: '6 Services',
+                    packages: '3 Services',
                 },
                 {
                     title: 'Other Licenses',
@@ -45,7 +45,7 @@ export default {
                     packages: '6 Services',
                 },
                 {
-                    title: 'Virtual Notary',
+                    title: 'Digitally Integrated Notary',
                     description: 'Establishment deeds, articles of association amendments, GMS, sale and purchase, and prenuptial agreements.',
                     packages: '6 Services',
                 },

@@ -93,18 +93,17 @@ const submit = () => {
 <template>
     <MainLayout>
         <!-- Hero Section -->
-        <section class="relative overflow-hidden bg-[#9e1f16]">
-            <img
-                src="/images/kerjasama-hero.jpg"
-                class="absolute inset-0 h-full w-full object-cover opacity-30"
-                alt=""
-            />
-            <div class="ml-5">
+        <section class="relative overflow-hidden">
+            <!-- Background image + overlay -->
+            <div class="absolute inset-0">
                 <img
-                    src="/icons/left-arrow.svg"
-                    class="absolute right-[0%] -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block"
+                    src="/images/layanan-hero/ft-hero-badan-usaha.png"
+                    class="h-full w-full object-cover object-center"
                     alt=""
                 />
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"
+                ></div>
             </div>
 
             <div

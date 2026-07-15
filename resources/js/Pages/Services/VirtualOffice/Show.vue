@@ -72,14 +72,18 @@ const selectedPackagePrice = computed(
     <MainLayout>
         <!-- Hero Section -->
         <section
-            class="relative overflow-hidden min-h-[240px] sm:min-h-[320px] lg:min-h-[360px] bg-[#9e1f16]"
+            class="relative overflow-hidden min-h-[240px] sm:min-h-[320px] lg:min-h-[360px]"
         >
-            <div class="ml-5">
+            <!-- Background image + overlay -->
+            <div class="absolute inset-0">
                 <img
-                    src="/icons/left-arrow.svg"
-                    class="absolute right-[0%] -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block"
+                    src="/images/layanan-hero/ft-hero-badan-usaha.png"
+                    class="h-full w-full object-cover object-center"
                     alt=""
                 />
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"
+                ></div>
             </div>
 
             <div
@@ -174,7 +178,7 @@ const selectedPackagePrice = computed(
                 <!-- Bottom: Back button -->
                 <div>
                     <a
-                        href="/virtual-office"
+                        href="/layanan"
                         class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-white hover:text-white/70 transition"
                     >
                         <svg

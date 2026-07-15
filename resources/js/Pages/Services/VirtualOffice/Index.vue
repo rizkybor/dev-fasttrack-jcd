@@ -14,7 +14,7 @@ const props = defineProps({
 const whatsappNumber = "6282298604144";
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
-const itemMeta = [{ icon: "/icons/ft-building.svg", path: "/virtual-office" }];
+const itemMeta = [{ icon: "/icons/ft-building.svg", path: "/virtual-office/1" }];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
 const serviceList = computed(() =>

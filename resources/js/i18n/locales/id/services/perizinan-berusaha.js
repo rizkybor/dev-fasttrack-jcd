@@ -2,9 +2,9 @@ export default {
     hero: {
         breadcrumb: {
             layanan: 'Layanan',
-            current: 'Perizinan Berusaha',
+            current: 'Perizinan Dasar dan Perizinan Berusaha',
         },
-        title: 'Perizinan Berusaha',
+        title: 'Perizinan Dasar dan Perizinan Berusaha',
         titleSub: '',
         desc: 'Pengurusan perizinan berusaha berbasis risiko melalui sistem OSS — mulai dari kesesuaian tata ruang hingga izin penunjang kegiatan usaha.',
         back: 'Kembali',

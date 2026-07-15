@@ -255,7 +255,6 @@ const buildWhatsappLink = (productName) => {
                     </div>
 
                     <FooterCTA
-                        bare
                         :title="t('services.badanUsaha.cta.title')"
                         :description="t('services.badanUsaha.cta.desc')"
                         :button-text="t('services.badanUsaha.cta.whatsapp')"

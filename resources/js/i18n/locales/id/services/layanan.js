@@ -35,9 +35,9 @@ export default {
                     packages: '2 Layanan',
                 },
                 {
-                    title: 'Perizinan',
+                    title: 'Perizinan Dasar & Perizinan Berusaha',
                     description: 'Izin dasar, izin berusaha sektoral, dan perizinan berusaha penunjang.',
-                    packages: '6 Layanan',
+                    packages: '3 Layanan',
                 },
                 {
                     title: 'Perizinan Lainnya',
@@ -45,7 +45,7 @@ export default {
                     packages: '6 Layanan',
                 },
                 {
-                    title: 'Notaris Virtual',
+                    title: 'Notaris Terintegrasi Digital',
                     description: 'Akta pendirian, perubahan AD, RUPS, jual beli, hingga perjanjian kawin.',
                     packages: '6 Layanan',
                 },

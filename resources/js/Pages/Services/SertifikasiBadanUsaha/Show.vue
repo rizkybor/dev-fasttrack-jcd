@@ -68,10 +68,10 @@ const localizedProduct = computed(() => {
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/sertifikasi-badan-usaha" class="text-sm font-medium text-[#9e1f16] hover:underline">Sertifikasi Badan Usaha</a>
+                        <!-- <a href="/sertifikasi-badan-usaha" class="text-sm font-medium text-[#9e1f16] hover:underline">Sertifikasi Badan Usaha</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
+                        </svg> -->
                         <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>

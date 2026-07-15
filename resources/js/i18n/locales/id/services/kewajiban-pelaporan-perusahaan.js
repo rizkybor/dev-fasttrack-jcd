@@ -6,7 +6,7 @@ export default {
         },
         title: 'Kewajiban Pelaporan Perusahaan',
         titleSub: '',
-        desc: '',
+        desc: 'Pendampingan pemenuhan kewajiban pelaporan rutin perusahaan — LKPM, SIINas, WLKP, dan fasilitas kesejahteraan pekerja.',
         back: 'Kembali',
     },
     items: {
