@@ -6,7 +6,7 @@ export default {
         },
         title: 'Corporate Reporting Obligations',
         titleSub: '',
-        desc: '',
+        desc: 'Assistance with fulfilling routine corporate reporting obligations—LKPM, SIINas, WLKP, and worker welfare facilities.',
         back: 'Back',
     },
     items: {

@@ -35,9 +35,9 @@ export default {
                     packages: '2项服务',
                 },
                 {
-                    title: '许可',
+                    title: '基础许可证与营业执照',
                     description: '基础许可、行业经营许可及配套经营许可。',
-                    packages: '6项服务',
+                    packages: '3项服务',
                 },
                 {
                     title: '其他许可',
@@ -45,7 +45,7 @@ export default {
                     packages: '6项服务',
                 },
                 {
-                    title: '虚拟公证',
+                    title: '数字化集成公证',
                     description: '设立公证书、章程变更、股东大会、买卖及婚前协议等。',
                     packages: '6项服务',
                 },

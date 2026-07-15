@@ -93,7 +93,7 @@
         "category": "Kepatuhan Perusahaan",
         "date": "12 Mei 2025",
         "read_time": "5 Min",
-        "image": "",
+        "image": "/images/artikel/artikel-img-1.jpeg",
         "author": {
             "name": "Jhon Doe",
             "role": "Editor Hukum Fasttrack"
@@ -145,6 +145,11 @@
             {
                 "type": "paragraph",
                 "text": "Laporan tahunan tersebut wajib disampaikan kepada Menteri melalui notaris paling lama 30 (tiga puluh) hari sejak tanggal akta notaris mengenai persetujuan laporan tahunan ditandatangani."
+            },
+            {
+                "type": "image",
+                "src": "/images/artikel/artikel-img-2.jpeg",
+                "alt": "Ilustrasi laporan tahunan Perseroan"
             },
             {
                 "type": "heading",

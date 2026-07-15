@@ -2,9 +2,9 @@ export default {
     hero: {
         breadcrumb: {
             layanan: '服务',
-            current: '营业许可',
+            current: '基础许可证与营业执照',
         },
-        title: '营业许可',
+        title: '基础许可证与营业执照',
         titleSub: '',
         desc: '通过OSS系统办理基于风险的营业许可——从空间利用符合性到经营支持许可。',
         back: '返回',

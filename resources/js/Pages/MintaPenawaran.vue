@@ -18,7 +18,9 @@ const { t, tm } = useI18n();
 /* ------------------------------------------------------------------ */
 
 const kategoriOptions = computed(() => tm("mintaPenawaran.kategori_options"));
-const layananByKategori = computed(() => tm("mintaPenawaran.layanan_by_kategori"));
+const layananByKategori = computed(() =>
+    tm("mintaPenawaran.layanan_by_kategori"),
+);
 const detailByLayanan = computed(() => tm("mintaPenawaran.detail_by_layanan"));
 
 /* ------------------------------------------------------------------ */
@@ -47,11 +49,17 @@ watch(selectedLayanan, () => {
 });
 
 const selectedDetailData = computed(() => {
-    return detailOptions.value.find((d) => d.value === selectedDetail.value) ?? null;
+    return (
+        detailOptions.value.find((d) => d.value === selectedDetail.value) ??
+        null
+    );
 });
 
 const selectedLayananLabel = computed(() => {
-    return layananOptions.value.find((l) => l.value === selectedLayanan.value)?.label ?? "";
+    return (
+        layananOptions.value.find((l) => l.value === selectedLayanan.value)
+            ?.label ?? ""
+    );
 });
 
 /* ------------------------------------------------------------------ */
@@ -135,7 +143,10 @@ const whatsappLink = computed(() => {
                         <div
                             class="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-sm px-4 py-2"
                         >
-                            <a href="/" class="text-white/90 hover:text-white transition">
+                            <a
+                                href="/"
+                                class="text-white/90 hover:text-white transition"
+                            >
                                 <svg
                                     class="h-4 w-4"
                                     fill="none"
@@ -163,9 +174,9 @@ const whatsappLink = computed(() => {
                                     d="M9 5l7 7-7 7"
                                 />
                             </svg>
-                            <span class="text-sm font-medium text-white"
-                                >{{ t("mintaPenawaran.hero.breadcrumb") }}</span
-                            >
+                            <span class="text-sm font-medium text-white">{{
+                                t("mintaPenawaran.hero.breadcrumb")
+                            }}</span>
                         </div>
                     </nav>
 
@@ -217,7 +228,11 @@ const whatsappLink = computed(() => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        {{ t("mintaPenawaran.pilih_layanan.kategori_label") }}
+                                        {{
+                                            t(
+                                                "mintaPenawaran.pilih_layanan.kategori_label",
+                                            )
+                                        }}
                                     </label>
                                     <div class="relative">
                                         <select
@@ -225,7 +240,11 @@ const whatsappLink = computed(() => {
                                             class="w-full appearance-none rounded-lg border border-[#D9DAD8] px-3 py-2.5 pr-9 text-[12px] text-[#1A1B18] focus:border-[#9e1f16] focus:outline-none"
                                         >
                                             <option value="" disabled>
-                                                {{ t("mintaPenawaran.pilih_layanan.kategori_placeholder") }}
+                                                {{
+                                                    t(
+                                                        "mintaPenawaran.pilih_layanan.kategori_placeholder",
+                                                    )
+                                                }}
                                             </option>
                                             <option
                                                 v-for="opt in kategoriOptions"
@@ -255,7 +274,11 @@ const whatsappLink = computed(() => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        {{ t("mintaPenawaran.pilih_layanan.layanan_label") }}
+                                        {{
+                                            t(
+                                                "mintaPenawaran.pilih_layanan.layanan_label",
+                                            )
+                                        }}
                                     </label>
                                     <div class="relative">
                                         <select
@@ -264,7 +287,11 @@ const whatsappLink = computed(() => {
                                             class="w-full appearance-none rounded-lg border border-[#D9DAD8] px-3 py-2.5 pr-9 text-[12px] text-[#1A1B18] focus:border-[#9e1f16] focus:outline-none disabled:bg-[#F5F5F4] disabled:text-[#B0B1AE]"
                                         >
                                             <option value="" disabled>
-                                                {{ t("mintaPenawaran.pilih_layanan.layanan_placeholder") }}
+                                                {{
+                                                    t(
+                                                        "mintaPenawaran.pilih_layanan.layanan_placeholder",
+                                                    )
+                                                }}
                                             </option>
                                             <option
                                                 v-for="opt in layananOptions"
@@ -294,7 +321,11 @@ const whatsappLink = computed(() => {
                                     <label
                                         class="text-[12px] font-medium text-[#1A1B18]"
                                     >
-                                        {{ t("mintaPenawaran.pilih_layanan.detail_label") }}
+                                        {{
+                                            t(
+                                                "mintaPenawaran.pilih_layanan.detail_label",
+                                            )
+                                        }}
                                     </label>
                                     <div class="relative">
                                         <select
@@ -303,7 +334,11 @@ const whatsappLink = computed(() => {
                                             class="w-full appearance-none rounded-lg border border-[#D9DAD8] px-3 py-2.5 pr-9 text-[12px] text-[#1A1B18] focus:border-[#9e1f16] focus:outline-none disabled:bg-[#F5F5F4] disabled:text-[#B0B1AE]"
                                         >
                                             <option value="" disabled>
-                                                {{ t("mintaPenawaran.pilih_layanan.detail_placeholder") }}
+                                                {{
+                                                    t(
+                                                        "mintaPenawaran.pilih_layanan.detail_placeholder",
+                                                    )
+                                                }}
                                             </option>
                                             <option
                                                 v-for="opt in detailOptions"
@@ -345,7 +380,13 @@ const whatsappLink = computed(() => {
                                 >
                                     {{ selectedDetailData.label }}
                                 </p>
-                                <p class="mt-4 text-[11px] text-white/70">{{ t("mintaPenawaran.pilih_layanan.starting_from") }}</p>
+                                <p class="mt-4 text-[11px] text-white/70">
+                                    {{
+                                        t(
+                                            "mintaPenawaran.pilih_layanan.starting_from",
+                                        )
+                                    }}
+                                </p>
                                 <p class="text-xl font-extrabold text-white">
                                     {{ formatRupiah(selectedDetailData.harga) }}
                                 </p>
@@ -357,7 +398,11 @@ const whatsappLink = computed(() => {
                                 class="mt-6 flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-[#D9DAD8] px-6 py-12 text-center"
                             >
                                 <p class="text-[12px] text-[#7A7B78]">
-                                    {{ t("mintaPenawaran.pilih_layanan.empty_state") }}
+                                    {{
+                                        t(
+                                            "mintaPenawaran.pilih_layanan.empty_state",
+                                        )
+                                    }}
                                 </p>
                             </div>
                         </div>
@@ -377,42 +422,76 @@ const whatsappLink = computed(() => {
                                     {{ t("mintaPenawaran.biaya.title") }}
                                 </h3>
 
-                                <div v-if="selectedDetailData" class="flex flex-col gap-2">
+                                <div
+                                    v-if="selectedDetailData"
+                                    class="flex flex-col gap-2"
+                                >
                                     <p
                                         class="text-[11px] font-semibold uppercase text-[#7A7B78]"
                                     >
                                         {{ selectedLayananLabel }}
                                     </p>
 
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-[11px] text-[#4A4B47]"
-                                            >{{ t("mintaPenawaran.biaya.biaya_label") }}</span
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <span
+                                            class="text-[11px] text-[#4A4B47]"
+                                            >{{
+                                                t(
+                                                    "mintaPenawaran.biaya.biaya_label",
+                                                )
+                                            }}</span
                                         >
-                                        <span class="text-[11px] font-medium text-[#1A1B18]">
+                                        <span
+                                            class="text-[11px] font-medium text-[#1A1B18]"
+                                        >
                                             {{ formatRupiah(biayaLayanan) }}
                                         </span>
                                     </div>
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-[11px] text-[#4A4B47]"
-                                            >{{ t("mintaPenawaran.biaya.ppn_label") }}</span
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <span
+                                            class="text-[11px] text-[#4A4B47]"
+                                            >{{
+                                                t(
+                                                    "mintaPenawaran.biaya.ppn_label",
+                                                )
+                                            }}</span
                                         >
-                                        <span class="text-[11px] font-medium text-[#1A1B18]">
+                                        <span
+                                            class="text-[11px] font-medium text-[#1A1B18]"
+                                        >
                                             {{ formatRupiah(ppn) }}
                                         </span>
                                     </div>
 
-                                    <div class="h-px w-full bg-[#E0E0E0] my-1"></div>
+                                    <div
+                                        class="h-px w-full bg-[#E0E0E0] my-1"
+                                    ></div>
 
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-[12px] font-semibold text-[#1A1B18]"
-                                            >{{ t("mintaPenawaran.biaya.subtotal_label") }}</span
+                                    <div
+                                        class="flex items-center justify-between"
+                                    >
+                                        <span
+                                            class="text-[12px] font-semibold text-[#1A1B18]"
+                                            >{{
+                                                t(
+                                                    "mintaPenawaran.biaya.subtotal_label",
+                                                )
+                                            }}</span
                                         >
-                                        <span class="text-[13px] font-bold text-[#9e1f16]">
+                                        <span
+                                            class="text-[13px] font-bold text-[#9e1f16]"
+                                        >
                                             {{ formatRupiah(subtotal) }}
                                         </span>
                                     </div>
 
-                                    <p class="text-[10px] leading-[15px] text-[#B0B1AE] mt-1">
+                                    <p
+                                        class="text-[10px] leading-[15px] text-[#B0B1AE] mt-1"
+                                    >
                                         {{ t("mintaPenawaran.biaya.note") }}
                                     </p>
                                 </div>
@@ -433,49 +512,85 @@ const whatsappLink = computed(() => {
                                 </h3>
 
                                 <div class="flex flex-col gap-1.5">
-                                    <label class="text-[11px] font-medium text-[#1A1B18]"
-                                        >{{ t("mintaPenawaran.pemohon.nama_label") }}</label
+                                    <label
+                                        class="text-[11px] font-medium text-[#1A1B18]"
+                                        >{{
+                                            t(
+                                                "mintaPenawaran.pemohon.nama_label",
+                                            )
+                                        }}</label
                                     >
                                     <input
                                         v-model="form.nama"
                                         type="text"
-                                        :placeholder="t('mintaPenawaran.pemohon.nama_placeholder')"
+                                        :placeholder="
+                                            t(
+                                                'mintaPenawaran.pemohon.nama_placeholder',
+                                            )
+                                        "
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
 
                                 <div class="flex flex-col gap-1.5">
-                                    <label class="text-[11px] font-medium text-[#1A1B18]"
-                                        >{{ t("mintaPenawaran.pemohon.perusahaan_label") }}</label
+                                    <label
+                                        class="text-[11px] font-medium text-[#1A1B18]"
+                                        >{{
+                                            t(
+                                                "mintaPenawaran.pemohon.perusahaan_label",
+                                            )
+                                        }}</label
                                     >
                                     <input
                                         v-model="form.perusahaan"
                                         type="text"
-                                        :placeholder="t('mintaPenawaran.pemohon.perusahaan_placeholder')"
+                                        :placeholder="
+                                            t(
+                                                'mintaPenawaran.pemohon.perusahaan_placeholder',
+                                            )
+                                        "
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
 
                                 <div class="flex flex-col gap-1.5">
-                                    <label class="text-[11px] font-medium text-[#1A1B18]"
-                                        >{{ t("mintaPenawaran.pemohon.whatsapp_label") }}</label
+                                    <label
+                                        class="text-[11px] font-medium text-[#1A1B18]"
+                                        >{{
+                                            t(
+                                                "mintaPenawaran.pemohon.whatsapp_label",
+                                            )
+                                        }}</label
                                     >
                                     <input
                                         v-model="form.no_whatsapp"
                                         type="text"
-                                        :placeholder="t('mintaPenawaran.pemohon.whatsapp_placeholder')"
+                                        :placeholder="
+                                            t(
+                                                'mintaPenawaran.pemohon.whatsapp_placeholder',
+                                            )
+                                        "
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
 
                                 <div class="flex flex-col gap-1.5">
-                                    <label class="text-[11px] font-medium text-[#1A1B18]"
-                                        >{{ t("mintaPenawaran.pemohon.email_label") }}</label
+                                    <label
+                                        class="text-[11px] font-medium text-[#1A1B18]"
+                                        >{{
+                                            t(
+                                                "mintaPenawaran.pemohon.email_label",
+                                            )
+                                        }}</label
                                     >
                                     <input
                                         v-model="form.email"
                                         type="email"
-                                        :placeholder="t('mintaPenawaran.pemohon.email_placeholder')"
+                                        :placeholder="
+                                            t(
+                                                'mintaPenawaran.pemohon.email_placeholder',
+                                            )
+                                        "
                                         class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                     />
                                 </div>
@@ -491,9 +606,9 @@ const whatsappLink = computed(() => {
                                         type="checkbox"
                                         class="h-4 w-4 rounded border-[#D9DAD8] text-[#9e1f16] focus:ring-[#9e1f16]"
                                     />
-                                    <span class="text-[11px] text-[#1A1B18]"
-                                        >{{ t("mintaPenawaran.captcha_label") }}</span
-                                    >
+                                    <span class="text-[11px] text-[#1A1B18]">{{
+                                        t("mintaPenawaran.captcha_label")
+                                    }}</span>
                                 </span>
                                 <span
                                     class="text-[8px] leading-tight text-[#B0B1AE] text-right"
@@ -542,7 +657,9 @@ const whatsappLink = computed(() => {
                                     d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                 />
                             </svg>
-                            <p class="text-[11px] leading-[17px] text-[#2E6A96]">
+                            <p
+                                class="text-[11px] leading-[17px] text-[#2E6A96]"
+                            >
                                 {{ t("mintaPenawaran.info_box") }}
                             </p>
                         </div>
@@ -551,16 +668,11 @@ const whatsappLink = computed(() => {
             </div>
         </section>
 
-        <section class="pb-[52px] bg-[#F9F9F9]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <FooterCTA
-                    bare
-                    :title="t('mintaPenawaran.cta.title')"
-                    :description="t('mintaPenawaran.cta.desc')"
-                    :button-text="t('mintaPenawaran.cta.whatsapp')"
-                    :whatsapp-link="whatsappLink"
-                />
-            </div>
-        </section>
+        <FooterCTA
+            :title="t('mintaPenawaran.cta.title')"
+            :description="t('mintaPenawaran.cta.desc')"
+            :button-text="t('mintaPenawaran.cta.whatsapp')"
+            :whatsapp-link="whatsappLink"
+        />
     </MainLayout>
 </template>

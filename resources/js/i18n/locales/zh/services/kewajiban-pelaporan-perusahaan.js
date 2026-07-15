@@ -6,7 +6,7 @@ export default {
         },
         title: '企业申报义务',
         titleSub: '',
-        desc: '',
+        desc: '协助履行常规企业报告义务——包括 LKPM、SIINas、WLKP 及员工福利设施相关报告。',
         back: '返回',
     },
     items: {

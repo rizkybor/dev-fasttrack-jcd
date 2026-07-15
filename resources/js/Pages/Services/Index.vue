@@ -50,7 +50,7 @@ const categoryMeta = [
         { price: "Rp 750.000", path: "/kewajiban-pelaporan-perusahaan", image: "/images/layanan-card/layanan-kewajiban-pelaporan-perusahaan.png" },
         { price: "Rp 750.000", path: "/sertifikasi-badan-usaha/1", image: "/images/layanan-card/layanan-sertifikasi-badan-usaha.png" },
         { price: "Rp 750.000", path: "/retainer-berlangganan/1", image: "/images/layanan-card/layanan-retainer-berlangganan.png" },
-        { price: "Rp 750.000", path: "/virtual-office", image: "/images/layanan-card/layanan-virtual-office.png" },
+        { price: "Rp 750.000", path: "/virtual-office/1", image: "/images/layanan-card/layanan-virtual-office.png" },
         { price: "Rp 750.000", path: "/digital-marketing", image: "/images/layanan-card/layanan-design-digmart.png" },
         { price: "Rp 750.000", path: "/perpajakan-dan-pembukuan", image: "/images/layanan-card/layanan-design-digmart.png" },
     ],
