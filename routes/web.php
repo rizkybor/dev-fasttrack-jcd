@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Service;
+use App\Mail\ContactFormSubmitted;
 
 $resolveBaseUrl = static function (Request $request): string {
     $configuredUrl = rtrim((string) config('app.url'), '/');
@@ -3065,6 +3067,23 @@ Route::post('/kerjasama', function (Request $request) {
 
     return back()->with('success', 'Pendaftaran mitra referral Anda berhasil dikirim. Tim kami akan segera menghubungi Anda.');
 })->name('kerjasama.store');
+
+// FORMULIR KONTAK (Home) — dipanggil via axios/fetch dari form kontak di beranda,
+// dikirim bersamaan dengan redirect WhatsApp di sisi client.
+Route::post('/kontak', function (Request $request) {
+    $data = $request->validate([
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'email', 'max:255'],
+        'whatsapp' => ['required', 'string', 'max:30'],
+        'business' => ['nullable', 'string', 'max:255'],
+        'message' => ['required', 'string', 'max:2000'],
+    ]);
+
+    Mail::to(config('mail.contact_recipient'))
+        ->send(new ContactFormSubmitted($data));
+
+    return response()->json(['message' => 'Pesan berhasil dikirim.']);
+})->name('kontak.store');
 
 // MINTA PENAWARAN
 Route::get('/minta-penawaran', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
