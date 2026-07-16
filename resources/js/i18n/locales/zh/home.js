@@ -189,7 +189,6 @@ export default {
         whatsapp: "WhatsApp 号码",
         business: "业务领域",
         message: "留言 / 服务需求",
-        robot: "我不是机器人",
         agree: "我已阅读并同意",
         terms: "法律条款*",
         submit: "提交",
@@ -205,9 +204,8 @@ export default {
             email_required: "请填写电子邮件地址。",
             email_invalid: "电子邮件地址格式无效。",
             whatsapp_required: "请填写 WhatsApp 号码。",
-            whatsapp_invalid: "WhatsApp 号码格式无效。",
+            whatsapp_invalid: "WhatsApp 号码必须为数字，长度在 10 到 13 位之间。",
             message_required: "请填写留言/服务需求。",
-            robot_required: "请确认您不是机器人。",
             agree_required: "您必须同意法律条款。",
         },
         email_status: {

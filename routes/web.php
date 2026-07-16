@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Service;
 use App\Mail\ContactFormSubmitted;
+use App\Mail\QuoteRequestSubmitted;
+use App\Mail\PartnerReferralSubmitted;
 
 $resolveBaseUrl = static function (Request $request): string {
     $configuredUrl = rtrim((string) config('app.url'), '/');
@@ -3035,15 +3037,18 @@ Route::get('/kerjasama', function (Request $request) use ($resolveBaseUrl, $defa
     ]);
 });
 
+// Anti-spam: honeypot field 'website' (harus selalu kosong, bot biasanya mengisinya)
+// + rate limiting (throttle) sebagai pengganti reCAPTCHA. Submit hanya mengirim email,
+// tidak ada redirect WhatsApp otomatis.
 Route::post('/kerjasama', function (Request $request) {
-    $request->validate([
+    $data = $request->validate([
         'nama_lengkap' => ['required', 'string', 'max:255'],
         'nama_pic' => ['nullable', 'string', 'max:255'],
         'jenis_peserta' => ['required', 'string', 'max:100'],
         'jenis_peserta_lainnya' => ['nullable', 'string', 'max:255'],
         'bidang_usaha' => ['required', 'string', 'max:255'],
         'nomor_identitas' => ['nullable', 'string', 'max:100'],
-        'no_whatsapp' => ['required', 'string', 'max:30'],
+        'no_whatsapp' => ['required', 'regex:/^[0-9]{10,13}$/'],
         'email' => ['required', 'email', 'max:255'],
         'alamat_domisili' => ['required', 'string', 'max:1000'],
         'media_sosial' => ['nullable', 'string', 'max:255'],
@@ -3052,24 +3057,32 @@ Route::post('/kerjasama', function (Request $request) {
         'atas_nama' => ['required', 'string', 'max:255'],
         'nama_klien' => ['required', 'string', 'max:255'],
         'nama_pic_klien' => ['required', 'string', 'max:255'],
-        'nomor_kontak_klien' => ['required', 'string', 'max:30'],
+        'nomor_kontak_klien' => ['required', 'regex:/^[0-9]{10,13}$/'],
         'email_klien' => ['nullable', 'email', 'max:255'],
         'layanan_dibutuhkan' => ['nullable', 'array'],
         'layanan_dibutuhkan.*' => ['string', 'max:255'],
         'keterangan_tambahan' => ['nullable', 'string', 'max:2000'],
         'skema_insentif' => ['required', 'string', 'max:100'],
         'setuju_pernyataan' => ['accepted'],
+        'website' => ['nullable', 'string', 'max:255'],
     ]);
 
-    // TODO: belum ada persistensi (DB/email) — saat ini submission hanya divalidasi
-    // dan dikonfirmasi kembali ke pengguna. Tambahkan model/migration/notifikasi
-    // di sini kalau data pendaftaran mitra referral perlu disimpan/ditindaklanjuti.
+    // Honeypot terisi -> kemungkinan besar bot. Balas seolah sukses tanpa
+    // benar-benar mengirim email, supaya bot tidak tahu bahwa ia terdeteksi.
+    if (!empty($data['website'])) {
+        return back()->with('success', 'Pendaftaran mitra referral Anda berhasil dikirim.');
+    }
+
+    Mail::to(config('mail.contact_recipient'))
+        ->send(new PartnerReferralSubmitted(collect($data)->except('website')->toArray()));
 
     return back()->with('success', 'Pendaftaran mitra referral Anda berhasil dikirim. Tim kami akan segera menghubungi Anda.');
-})->name('kerjasama.store');
+})->middleware('throttle:5,1')->name('kerjasama.store');
 
 // FORMULIR KONTAK (Home) — dipanggil via axios/fetch dari form kontak di beranda,
 // dikirim bersamaan dengan redirect WhatsApp di sisi client.
+// Anti-spam: honeypot field 'website' (harus selalu kosong, bot biasanya mengisinya)
+// + rate limiting (throttle) sebagai pengganti reCAPTCHA.
 Route::post('/kontak', function (Request $request) {
     $data = $request->validate([
         'name' => ['required', 'string', 'max:255'],
@@ -3077,13 +3090,20 @@ Route::post('/kontak', function (Request $request) {
         'whatsapp' => ['required', 'string', 'max:30'],
         'business' => ['nullable', 'string', 'max:255'],
         'message' => ['required', 'string', 'max:2000'],
+        'website' => ['nullable', 'string', 'max:255'],
     ]);
 
+    // Honeypot terisi -> kemungkinan besar bot. Balas seolah sukses tanpa
+    // benar-benar mengirim email, supaya bot tidak tahu bahwa ia terdeteksi.
+    if (!empty($data['website'])) {
+        return response()->json(['message' => 'Pesan berhasil dikirim.']);
+    }
+
     Mail::to(config('mail.contact_recipient'))
-        ->send(new ContactFormSubmitted($data));
+        ->send(new ContactFormSubmitted(collect($data)->except('website')->toArray()));
 
     return response()->json(['message' => 'Pesan berhasil dikirim.']);
-})->name('kontak.store');
+})->middleware('throttle:5,1')->name('kontak.store');
 
 // MINTA PENAWARAN
 Route::get('/minta-penawaran', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
@@ -3112,6 +3132,37 @@ Route::get('/minta-penawaran', function (Request $request) use ($resolveBaseUrl,
         ],
     ]);
 });
+
+// Anti-spam: honeypot field 'website' (harus selalu kosong, bot biasanya mengisinya)
+// + rate limiting (throttle) sebagai pengganti reCAPTCHA. Submit hanya mengirim email,
+// tidak ada redirect WhatsApp otomatis.
+Route::post('/minta-penawaran', function (Request $request) {
+    $data = $request->validate([
+        'kategori' => ['required', 'string', 'max:255'],
+        'layanan' => ['required', 'string', 'max:255'],
+        'detail_layanan' => ['required', 'string', 'max:255'],
+        'kategori_label' => ['required', 'string', 'max:255'],
+        'layanan_label' => ['required', 'string', 'max:255'],
+        'detail_label' => ['required', 'string', 'max:255'],
+        'harga_label' => ['nullable', 'string', 'max:100'],
+        'nama' => ['required', 'string', 'max:255'],
+        'perusahaan' => ['nullable', 'string', 'max:255'],
+        'no_whatsapp' => ['required', 'regex:/^[0-9]{10,13}$/'],
+        'email' => ['required', 'email', 'max:255'],
+        'website' => ['nullable', 'string', 'max:255'],
+    ]);
+
+    // Honeypot terisi -> kemungkinan besar bot. Balas seolah sukses tanpa
+    // benar-benar mengirim email, supaya bot tidak tahu bahwa ia terdeteksi.
+    if (!empty($data['website'])) {
+        return back()->with('success', 'Permintaan penawaran Anda berhasil dikirim.');
+    }
+
+    Mail::to(config('mail.contact_recipient'))
+        ->send(new QuoteRequestSubmitted(collect($data)->except('website')->toArray()));
+
+    return back()->with('success', 'Permintaan penawaran Anda berhasil dikirim.');
+})->middleware('throttle:5,1')->name('minta-penawaran.store');
 
 // PENAWARAN KHUSUS
 Route::get('/penawaran-khusus', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
