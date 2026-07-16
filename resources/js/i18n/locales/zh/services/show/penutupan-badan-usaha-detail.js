@@ -12,6 +12,7 @@ export default {
         dokumen: "所需文件与信息",
         paket: "套餐与价格",
         dasar_hukum: "法律依据",
+        biaya_layanan: "服务费用",
     },
     plans: {
         mulai_dari: "起价",
@@ -20,6 +21,8 @@ export default {
         termasuk: "包含",
         bonus: "赠品",
         pesan: "立即订购",
+        gratis_konsultasi: "免费售前售后咨询",
+        mendapatkan: "您将获得",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP 通道",

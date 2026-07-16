@@ -12,6 +12,7 @@ export default {
         dokumen: "Required Documents & Information",
         paket: "Packages & Pricing",
         dasar_hukum: "Legal Basis",
+        ruang_lingkup: "Our Scope of Service",
     },
     plans: {
         mulai_dari: "Starting from",
@@ -33,6 +34,10 @@ export default {
         related_from: "Starting from",
         related_packages: "Packages",
         related_cta: "See More",
+        benefit_1: "Free first consultation",
+        benefit_2: "Transparent pricing, no hidden fees",
+        benefit_3: "18+ years of experienced team",
+        benefit_4: "Regular process updates via WhatsApp",
     },
     footer: {
         title: "Can't Find the Service You're Looking For?",

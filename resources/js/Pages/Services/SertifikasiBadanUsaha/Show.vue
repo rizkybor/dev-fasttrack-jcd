@@ -4,19 +4,15 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
     relatedProducts: { type: Array, default: () => [] },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -64,7 +60,7 @@ const localizedProduct = computed(() => {
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">Layanan</a>
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{ t("services.sertifikasiBadanUsahaDetail.breadcrumb.layanan") }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
@@ -89,7 +85,7 @@ const localizedProduct = computed(() => {
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{ t("services.sertifikasiBadanUsahaDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -109,7 +105,7 @@ const localizedProduct = computed(() => {
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    {{ localizedProduct.penjelasan_title ?? 'Penjelasan Umum' }}
+                                    {{ localizedProduct.penjelasan_title ?? t("services.sertifikasiBadanUsahaDetail.sections.penjelasan") }}
                                 </h2>
                             </div>
                             <div class="space-y-4">
@@ -137,7 +133,7 @@ const localizedProduct = computed(() => {
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Biaya Layanan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.sertifikasiBadanUsahaDetail.sections.biaya_layanan") }}</h2>
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -146,18 +142,18 @@ const localizedProduct = computed(() => {
 
                                     <!-- Nama & Harga -->
                                     <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-1">{{ card.nama }}</p>
-                                    <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+                                    <p class="text-[11px] text-[#686964] mb-0.5">{{ t("services.sertifikasiBadanUsahaDetail.plans.mulai_dari") }}</p>
                                     <p class="text-[22px] font-bold text-primary leading-tight mb-2">{{ card.harga }}</p>
                                     <div v-if="card.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
                                         <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
-                                        <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Pra dan Pasca Seleksi</span>
+                                        <span class="text-[11px] text-[#3D3D3A]">{{ t("services.sertifikasiBadanUsahaDetail.plans.gratis_konsultasi") }}</span>
                                     </div>
 
                                     <hr class="border-[#E8E8E6] mb-4" />
 
                                     <!-- Mendapatkan -->
                                     <div v-if="card.mendapatkan?.length" class="mb-4">
-                                        <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">Mendapatkan</p>
+                                        <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">{{ t("services.sertifikasiBadanUsahaDetail.plans.mendapatkan") }}</p>
                                         <ul class="space-y-2">
                                             <li v-for="(m, mi) in card.mendapatkan" :key="`m-${ci}-${mi}`"
                                                 class="flex items-start gap-2">
@@ -169,7 +165,7 @@ const localizedProduct = computed(() => {
 
                                     <!-- Syarat -->
                                     <div v-if="card.syarat?.length" class="mb-4">
-                                        <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">Syarat</p>
+                                        <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">{{ t("services.sertifikasiBadanUsahaDetail.plans.syarat") }}</p>
                                         <div class="space-y-3">
                                             <div v-for="(s, si) in card.syarat" :key="`s-${ci}-${si}`">
                                                 <p v-if="s.label"
@@ -194,7 +190,7 @@ const localizedProduct = computed(() => {
 
                                     <!-- Termasuk -->
                                     <div v-if="card.termasuk?.length" class="mb-5">
-                                        <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">Termasuk</p>
+                                        <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">{{ t("services.sertifikasiBadanUsahaDetail.plans.termasuk") }}</p>
                                         <ul class="space-y-2">
                                             <li v-for="(t, ti) in card.termasuk" :key="`t-${ci}-${ti}`"
                                                 class="flex items-start gap-2">
@@ -209,7 +205,7 @@ const localizedProduct = computed(() => {
                                         <a :href="buildWhatsappLink(card.nama)"
                                             target="_blank" rel="noopener noreferrer"
                                             class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                                            Pesan Sekarang
+                                            {{ t("services.sertifikasiBadanUsahaDetail.plans.pesan") }}
                                             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                             </svg>
@@ -230,18 +226,18 @@ const localizedProduct = computed(() => {
                             style="background-image: url('/images/card-arrow-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
-                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">FASTRACK – VIP LINE</span>
+                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">{{ t("services.sertifikasiBadanUsahaDetail.sidebar.vip_title") }}</span>
                                 </div>
                             </div>
-                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
+                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
+                                v-html="t('services.sertifikasiBadanUsahaDetail.sidebar.vip_desc')">
                             </p>
                             <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{ t("services.sertifikasiBadanUsahaDetail.sidebar.vip_cta") }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{ t("services.sertifikasiBadanUsahaDetail.sidebar.vip_note") }}</div>
                         </div>
 
                         <!-- Price Card -->
@@ -252,20 +248,20 @@ const localizedProduct = computed(() => {
                                     {{ localizedProduct.name }}
                                 </span>
                             </div>
-                            <div class="text-[12px] text-[#686964] mb-1 mt-2">Start From</div>
+                            <div class="text-[12px] text-[#686964] mb-1 mt-2">{{ t("services.sertifikasiBadanUsahaDetail.plans.mulai_dari") }}</div>
                             <div class="text-[28px] font-bold leading-none text-primary mb-4">
                                 {{ localizedProduct.price_label }}
                             </div>
                             <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.sertifikasiBadanUsahaDetail.sidebar.konsultasi_cta") }}
                             </a>
                         </div>
 
                         <!-- Layanan Terkait -->
                         <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Terkait</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.sertifikasiBadanUsahaDetail.sidebar.related_title") }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -277,7 +273,7 @@ const localizedProduct = computed(() => {
                                         <p class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug line-clamp-2">
                                             {{ pick(related.name) }}
                                         </p>
-                                        <p class="text-[11px] text-[#686964] mt-0.5">Mulai dari {{ related.price_label }}</p>
+                                        <p class="text-[11px] text-[#686964] mt-0.5">{{ t("services.sertifikasiBadanUsahaDetail.sidebar.related_from") }} {{ related.price_label }}</p>
                                     </div>
                                     <svg class="h-4 w-4 flex-shrink-0 text-[#686964] group-hover:text-primary transition-colors"
                                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -295,8 +291,9 @@ const localizedProduct = computed(() => {
         </section>
 
         <FooterCTA
-            title="Butuh Konsultasi Sertifikasi Badan Usaha?"
-            description="Tim kami siap membantu memilih jenis sertifikasi yang tepat<br class='hidden sm:block' /> dan mendampingi seluruh prosesnya."
+            :title="t('services.sertifikasiBadanUsahaDetail.footer.title')"
+            :description="t('services.sertifikasiBadanUsahaDetail.footer.desc')"
+            :button-text="t('services.sertifikasiBadanUsahaDetail.footer.cta')"
             :whatsapp-link="buildWhatsappLink(localizedProduct.name)"
         />
     </MainLayout>

@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const props = defineProps({
@@ -11,12 +12,7 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("perizinan");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -210,7 +206,7 @@ const localizedProduct = computed(() => {
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Dokumen yang Akan di Dapatkan
+                                    {{ t("services.perizinanLainnyaDetail.sections.dokumen_didapat") }}
                                 </h2>
                             </div>
                             <ul class="space-y-3">
@@ -263,7 +259,7 @@ const localizedProduct = computed(() => {
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Peraturan Perusahaan
+                                    {{ t("services.perizinanLainnyaDetail.sections.peraturan_perusahaan") }}
                                 </h2>
                             </div>
 
@@ -309,7 +305,7 @@ const localizedProduct = computed(() => {
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Biaya Layanan
+                                    {{ t("services.perizinanLainnyaDetail.sections.biaya_layanan") }}
                                 </h2>
                             </div>
 
@@ -358,7 +354,7 @@ const localizedProduct = computed(() => {
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Dasar Hukum
+                                    {{ t("services.perizinanLainnyaDetail.sections.dasar_hukum") }}
                                 </h2>
                             </div>
                             <ul class="space-y-4">
@@ -386,20 +382,20 @@ const localizedProduct = computed(() => {
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
                                     <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">
-                                        FASTTRACK – VIP LINE
+                                        {{ t("services.perizinanLainnyaDetail.sidebar.vip_title") }}
                                     </span>
                                 </div>
                             </div>
-                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
+                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
+                                v-html="t('services.perizinanLainnyaDetail.sidebar.vip_desc')">
                             </p>
                             <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{ t("services.perizinanLainnyaDetail.sidebar.vip_cta") }}
                             </a>
                             <div class="relative mt-3 text-[11px] text-white/60">
-                                * (S&amp;K BERLAKU)
+                                {{ t("services.perizinanLainnyaDetail.sidebar.vip_note") }}
                             </div>
                         </div>
 
@@ -413,41 +409,41 @@ const localizedProduct = computed(() => {
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
-                            <div class="text-[12px] text-[#686964] mb-1">Estimasi total biaya</div>
+                            <div class="text-[12px] text-[#686964] mb-1">{{ t("services.perizinanLainnyaDetail.sidebar.price_label") }}</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
                                 {{ localizedProduct.rincian_biaya?.total_amount ?? localizedProduct.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
-                                *Harga final dikonfirmasi setelah konsultasi
+                                {{ t("services.perizinanLainnyaDetail.sidebar.price_note") }}
                             </div>
                             <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-6 w-6 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.perizinanLainnyaDetail.sidebar.konsultasi_cta") }}
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Konsultasi pertama gratis
+                                    {{ t("services.perizinanLainnyaDetail.sidebar.benefit_1") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Harga transparan, tanpa biaya tersembunyi
+                                    {{ t("services.perizinanLainnyaDetail.sidebar.benefit_2") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Tim berpengalaman 18+ tahun
+                                    {{ t("services.perizinanLainnyaDetail.sidebar.benefit_3") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Update proses berkala via WhatsApp
+                                    {{ t("services.perizinanLainnyaDetail.sidebar.benefit_4") }}
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Layanan Terkait -->
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Terkait</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.perizinanLainnyaDetail.sidebar.related_title") }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -462,7 +458,7 @@ const localizedProduct = computed(() => {
                                     <hr class="border-[#E8E8E6]" />
                                     <div class="flex items-center justify-between">
                                         <div>
-                                            <div class="text-[11px] text-[#686964] mb-0.5">Mulai dari</div>
+                                            <div class="text-[11px] text-[#686964] mb-0.5">{{ t("services.perizinanLainnyaDetail.sidebar.related_from") }}</div>
                                             <div class="text-[18px] font-bold text-primary leading-none">
                                                 {{ related.price_label }}
                                             </div>
@@ -470,7 +466,7 @@ const localizedProduct = computed(() => {
                                     </div>
                                     <div
                                         class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors">
-                                        Selengkapnya
+                                        {{ t("services.perizinanLainnyaDetail.sidebar.related_cta") }}
                                         <svg class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -488,9 +484,10 @@ const localizedProduct = computed(() => {
         </section>
 
         <FooterCTA
-            title="Butuh Konsultasi Soal Izin Tinggal Orang Asing?"
-            description="Tim Fasttrack siap membantu memilih kategori ITAS yang<br class='hidden sm:block' /> tepat dan mendampingi seluruh prosesnya."
-            :whatsapp-link="buildWhatsappLink('Izin Tinggal Terbatas')"
+            :title="t('services.perizinanLainnyaDetail.footer.title')"
+            :description="t('services.perizinanLainnyaDetail.footer.desc')"
+            :button-text="t('services.perizinanLainnyaDetail.footer.cta')"
+            :whatsapp-link="buildWhatsappLink(t('services.perizinanLainnyaDetail.footer.wa_subject'))"
         />
     </MainLayout>
 </template>

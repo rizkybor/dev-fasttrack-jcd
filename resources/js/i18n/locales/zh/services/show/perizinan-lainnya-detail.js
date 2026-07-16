@@ -10,7 +10,10 @@ export default {
         keuntungan: "优势与效益",
         alur: "流程说明",
         dokumen: "所需文件与信息",
+        dokumen_didapat: "您将获得的文件",
+        peraturan_perusahaan: "公司规章制度",
         paket: "套餐与价格",
+        biaya_layanan: "服务费用",
         dasar_hukum: "法律依据",
     },
     plans: {
@@ -33,6 +36,10 @@ export default {
         related_from: "起价",
         related_packages: "套餐",
         related_cta: "查看更多",
+        benefit_1: "首次咨询免费",
+        benefit_2: "价格透明，无隐藏费用",
+        benefit_3: "18年以上经验团队",
+        benefit_4: "通过 WhatsApp 定期更新进度",
     },
     footer: {
         title: "没有找到您需要的服务？",

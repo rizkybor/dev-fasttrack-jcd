@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const docsOpen = ref(false);
@@ -25,12 +26,7 @@ const parseBold = (text) => {
     return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 };
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -94,20 +90,20 @@ const toggleDoc = (key) => {
 // Footer CTA dinamis
 const defaultFooterCta = computed(() => pick({
     id: {
-        title: "Butuh Konsultasi Soal Legalisasi Dokumen?",
-        subtitle: "Tim Fasttrack siap membantu Anda menyelesaikan proses legalisasi dokumen dengan cepat dan tepat.",
+        title: "Butuh Konsultasi Soal Kewajiban Pelaporan Perusahaan?",
+        subtitle: "Tim Fasttrack siap membantu Anda memenuhi kewajiban pelaporan perusahaan dengan cepat dan tepat.",
         button_text: "Chat Langsung via WhatsApp",
         wa_message: "layanan yang tidak terdaftar",
     },
     en: {
-        title: "Need Consultation on Document Legalization?",
-        subtitle: "The Fasttrack team is ready to help you complete the document legalization process quickly and accurately.",
+        title: "Need Consultation on Corporate Reporting Obligations?",
+        subtitle: "The Fasttrack team is ready to help you fulfill your corporate reporting obligations quickly and accurately.",
         button_text: "Chat Directly via WhatsApp",
         wa_message: "an unlisted service",
     },
     zh: {
-        title: "需要文件认证方面的咨询吗？",
-        subtitle: "Fasttrack团队随时准备协助您快速且准确地完成文件认证流程。",
+        title: "需要企业申报义务方面的咨询吗？",
+        subtitle: "Fasttrack团队随时准备协助您快速且准确地履行企业申报义务。",
         button_text: "直接通过WhatsApp聊天",
         wa_message: "未列出的服务",
     },
@@ -305,7 +301,7 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                             <div class="flex items-center gap-3 mb-6">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    MENGAPA PENYAMPAIAN LKPM PENTING?
+                                    {{ t("services.kewajibanPelaporanUsahaDetail.sections.keuntungan") }}
                                 </h2>
                             </div>
                             <div :class="product.benefits.length < 4
@@ -344,7 +340,7 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Ruang Lingkup Layanan Kami
+                                    {{ t("services.kewajibanPelaporanUsahaDetail.sections.ruang_lingkup") }}
                                 </h2>
                             </div>
                             <div class="space-y-5">
@@ -705,26 +701,26 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                             <ul class="mt-4 space-y-2">
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Konsultasi pertama gratis
+                                    {{ t("services.kewajibanPelaporanUsahaDetail.sidebar.benefit_1") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Harga transparan, tanpa biaya tersembunyi
+                                    {{ t("services.kewajibanPelaporanUsahaDetail.sidebar.benefit_2") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Tim berpengalaman 18+ tahun
+                                    {{ t("services.kewajibanPelaporanUsahaDetail.sidebar.benefit_3") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Update proses berkala via WhatsApp
+                                    {{ t("services.kewajibanPelaporanUsahaDetail.sidebar.benefit_4") }}
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Layanan Terkait -->
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Terkait</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.kewajibanPelaporanUsahaDetail.sidebar.related_title") }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -739,19 +735,19 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                                     <hr class="border-[#E8E8E6]" />
                                     <div class="flex items-center justify-between">
                                         <div>
-                                            <div class="text-[11px] text-[#686964] mb-0.5">Mulai dari</div>
+                                            <div class="text-[11px] text-[#686964] mb-0.5">{{ t("services.kewajibanPelaporanUsahaDetail.sidebar.related_from") }}</div>
                                             <div class="text-[18px] font-bold text-primary leading-none">
                                                 {{ related.price_label }}
                                             </div>
                                         </div>
                                         <span
                                             class="text-[11px] font-medium text-[#3D3D3A] border border-[#E8E8E6] rounded-md px-2 py-1">
-                                            {{ related.plans ? related.plans.length : 0 }} Paket
+                                            {{ related.plans ? related.plans.length : 0 }} {{ t("services.kewajibanPelaporanUsahaDetail.sidebar.related_packages") }}
                                         </span>
                                     </div>
                                     <div
                                         class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors">
-                                        Selengkapnya
+                                        {{ t("services.kewajibanPelaporanUsahaDetail.sidebar.related_cta") }}
                                         <svg class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -769,7 +765,7 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
             :title="footerCta.title"
             :description="footerCta.subtitle"
             :button-text="footerCta.button_text"
-            :whatsapp-link="buildWhatsappLink(footerCta.wa_message, jenisPengajuan)"
+            :whatsapp-link="buildWhatsappLink(footerCta.wa_message)"
         />
     </MainLayout>
 </template>

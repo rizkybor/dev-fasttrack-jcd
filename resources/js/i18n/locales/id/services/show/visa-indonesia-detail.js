@@ -12,6 +12,11 @@ export default {
         dokumen: "Dokumen dan Informasi yang Diperlukan",
         paket: "Paket & Harga",
         dasar_hukum: "Dasar Hukum",
+        index_visa: "Pilih Index Visa Kunjungan",
+        penjelasan_layanan: "Penjelasan Layanan",
+        dokumen_didapat: "Jenis Dokumen yang Akan Anda Dapatkan",
+        persyaratan_dokumen: "Persyaratan Dokumen",
+        rincian_biaya: "Rincian Biaya",
     },
     plans: {
         mulai_dari: "Mulai dari",
@@ -20,6 +25,7 @@ export default {
         termasuk: "Termasuk",
         bonus: "Bonus",
         pesan: "Pesan Sekarang",
+        biaya_penanganan: "Biaya Penanganan",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
@@ -33,10 +39,14 @@ export default {
         related_from: "Mulai dari",
         related_packages: "Paket",
         related_cta: "Selengkapnya",
+        free_konsultasi_badge: "Free Konsultasi",
+        index_lainnya_title: "Index Visa Lainnya",
     },
     footer: {
         title: "Tidak Menemukan Layanan yang Anda Cari?",
         desc: "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
         cta: "Chat Langsung via WhatsApp",
+        wa_subject: "layanan yang tidak terdaftar",
     },
+    wa_message: "Halo FastTrack, saya ingin konsultasi mengenai",
 }

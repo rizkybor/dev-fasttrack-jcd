@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const props = defineProps({
@@ -17,12 +18,10 @@ const props = defineProps({
     },
 });
 
-const whatsappNumber = "6282298604144";
-
+const { buildWhatsappLink: waLink } = useWhatsapp("imigrasi");
 const buildWhatsappLink = (productName, jenis) => {
     const jenisLabel = jenis === "perpanjangan" ? "Perpanjangan" : "Baru";
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName} (${jenisLabel}).`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    return waLink(`${productName} (${jenisLabel})`);
 };
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -235,7 +234,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Pilih Jenis Pengajuan
+                                    {{ t("services.izinTinggalTetapDetail.sections.toggle_title") }}
                                 </h2>
                             </div>
 
@@ -251,7 +250,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                             : 'text-[#686964] hover:text-black'
                                     "
                                 >
-                                    Baru
+                                    {{ t("services.izinTinggalTetapDetail.toggle.baru") }}
                                 </button>
                                 <button
                                     @click="jenisPengajuan = 'perpanjangan'"
@@ -262,7 +261,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                             : 'text-[#686964] hover:text-black'
                                     "
                                 >
-                                    Perpanjangan
+                                    {{ t("services.izinTinggalTetapDetail.toggle.perpanjangan") }}
                                 </button>
                             </div>
                         </div>
@@ -314,7 +313,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Jenis Dokumen yang akan Di Dapatkan
+                                    {{ t("services.izinTinggalTetapDetail.sections.dokumen_didapat") }}
                                 </h2>
                             </div>
                             <ul class="space-y-3">
@@ -353,7 +352,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Syarat
+                                    {{ t("services.izinTinggalTetapDetail.sections.syarat") }}
                                 </h2>
                             </div>
 
@@ -419,7 +418,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Rincian Biaya
+                                    {{ t("services.izinTinggalTetapDetail.sections.rincian_biaya") }}
                                 </h2>
                             </div>
 
@@ -703,7 +702,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Konsultasi pertama gratis
+                                    {{ t("services.izinTinggalTetapDetail.sidebar.benefit_1") }}
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -713,7 +712,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Harga transparan, tanpa biaya tersembunyi
+                                    {{ t("services.izinTinggalTetapDetail.sidebar.benefit_2") }}
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -723,7 +722,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Tim berpengalaman 18+ tahun
+                                    {{ t("services.izinTinggalTetapDetail.sidebar.benefit_3") }}
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -733,7 +732,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Update proses berkala via WhatsApp
+                                    {{ t("services.izinTinggalTetapDetail.sidebar.benefit_4") }}
                                 </li>
                             </ul>
                         </div>
@@ -745,7 +744,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                             <h3
                                 class="text-[13px] font-bold text-[#1A1B18] mb-4"
                             >
-                                Layanan Terkait
+                                {{ t("services.izinTinggalTetapDetail.sidebar.related_title") }}
                             </h3>
                             <div class="flex flex-col gap-3">
                                 <a
@@ -782,7 +781,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                             <div
                                                 class="text-[11px] text-[#686964] mb-0.5"
                                             >
-                                                Mulai dari
+                                                {{ t("services.izinTinggalTetapDetail.sidebar.related_from") }}
                                             </div>
                                             <div
                                                 class="text-[18px] font-bold text-primary leading-none"
@@ -796,7 +795,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                     <div
                                         class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors"
                                     >
-                                        Selengkapnya
+                                        {{ t("services.izinTinggalTetapDetail.sidebar.related_cta") }}
                                         <svg
                                             class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
                                             fill="none"
@@ -820,9 +819,10 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
         </section>
 
         <FooterCTA
-            title="Butuh Konsultasi Soal izin Tinggal Orang Asing?"
-            description="Tim Fasttrack siap membantu memilih kategori ITAS yang<br class='hidden sm:block' /> tepat dan mendampingi seluruh prosesnya."
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar', jenisPengajuan)"
+            :title="t('services.izinTinggalTetapDetail.footer.title')"
+            :description="t('services.izinTinggalTetapDetail.footer.desc')"
+            :button-text="t('services.izinTinggalTetapDetail.footer.cta')"
+            :whatsapp-link="buildWhatsappLink(t('services.izinTinggalTetapDetail.footer.wa_subject'), jenisPengajuan)"
         />
     </MainLayout>
 </template>

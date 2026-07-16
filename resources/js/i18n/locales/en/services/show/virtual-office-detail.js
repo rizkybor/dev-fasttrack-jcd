@@ -12,6 +12,14 @@ export default {
         dokumen: "Required Documents & Information",
         paket: "Packages & Pricing",
         dasar_hukum: "Legal Basis",
+        keunggulan_heading: "Fasttrack Virtual Office Advantages",
+    },
+    table: {
+        swipe_hint: "Swipe the table to see other packages →",
+        konsultasi_cta: "Consult via WhatsApp",
+    },
+    gallery: {
+        lokasi_prefix: "Location",
     },
     plans: {
         mulai_dari: "Starting from",

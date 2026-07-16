@@ -12,6 +12,9 @@ export default {
         dokumen: "所需文件与信息",
         paket: "套餐与价格",
         dasar_hukum: "法律依据",
+        tab_title: "选择申请类型",
+        dokumen_persyaratan: "文件要求",
+        biaya_layanan: "服务费用",
     },
     plans: {
         mulai_dari: "起价",
@@ -20,6 +23,8 @@ export default {
         termasuk: "包含",
         bonus: "赠品",
         pesan: "立即订购",
+        gratis_konsultasi: "免费售前及完成后咨询",
+        mendapatkan: "您将获得",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP 通道",
@@ -33,10 +38,12 @@ export default {
         related_from: "起价",
         related_packages: "套餐",
         related_cta: "查看更多",
+        free_konsultasi_badge: "免费咨询",
+        biaya_penanganan: "手续费",
     },
     footer: {
-        title: "没有找到您需要的服务？",
-        desc: "我们的团队随时准备帮助您找到适合您企业法律需求的解决方案。",
+        title: "需要移民相关的咨询吗？",
+        desc: "我们的团队随时准备以专业且符合现行规定的方式协助您处理移民事务。",
         cta: "通过 WhatsApp 直接联系",
         wa_subject: "未列出的服务",
     },

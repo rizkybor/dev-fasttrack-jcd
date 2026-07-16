@@ -1,8 +1,11 @@
 <script setup>
 import { ref, computed, watch } from "vue";
 import { Link, router } from "@inertiajs/vue3";
+import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
+
+const { t } = useI18n();
 
 /**
  * Halaman "Artikel" — Wawasan Hukum & Bisnis Terkini
@@ -126,7 +129,7 @@ const whatsappLink = computed(() => {
                                     d="M9 5l7 7-7 7"
                                 />
                             </svg>
-                            <span class="text-sm font-medium text-white">Artikel</span>
+                            <span class="text-sm font-medium text-white">{{ t("articles.hero.breadcrumb") }}</span>
                         </div>
                     </nav>
 
@@ -134,12 +137,10 @@ const whatsappLink = computed(() => {
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2"
                     >
-                        Wawasan Hukum & Bisnis Terkini
+                        {{ t("articles.hero.title") }}
                     </h1>
                     <p class="mt-3 text-sm sm:text-base text-white/85">
-                        Artikel, panduan, dan informasi terbaru seputar hukum bisnis,
-                        perizinan, dan regulasi di Indonesia — langsung dari tim
-                        konsultan FastTrack Legal.
+                        {{ t("articles.hero.desc") }}
                     </p>
                 </div>
             </div>

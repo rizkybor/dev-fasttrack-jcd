@@ -4,6 +4,7 @@ import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, tm } = useI18n();
 
 const props = defineProps({
@@ -11,28 +12,24 @@ const props = defineProps({
     products: { type: Array, default: () => [] },
 });
 
-const whatsappNumber = "6282298604144";
-
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/one-single-submission" },
-    { icon: "/icons/ft-persons-w.svg", path: "/one-single-submission" },
-    { icon: "/icons/ft-persons-w.svg", path: "/one-single-submission" },
-    { icon: "/icons/ft-persons-w.svg", path: "/one-single-submission" },
+    { icon: "/icons/ft-persons-w.svg", path: "/naturalisasi" },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
 const serviceList = computed(() =>
-    tm("services.oneSingleSubmission.list").map((item, i) => ({
+    tm("services.naturalisasi.list").map((item, i) => ({
         ...item,
         icon: itemMeta[i].icon,
         path: itemMeta[i].path,
     })),
 );
 
+const { buildWhatsappLink: waLink } = useWhatsapp("imigrasi");
 const buildWhatsappLink = (productName) => {
-    const message = `${t("services.oneSingleSubmission.cta.waMessage")} ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    const greeting = `${t("services.naturalisasi.cta.waMessage")} ${productName}.`;
+    return waLink(productName, { greeting });
 };
 </script>
 
@@ -95,7 +92,7 @@ const buildWhatsappLink = (productName) => {
                             class="text-sm font-medium text-[#9e1f16] hover:underline"
                         >
                             {{
-                                t("services.oneSingleSubmission.hero.breadcrumb.layanan")
+                                t("services.naturalisasi.hero.breadcrumb.layanan")
                             }}
                         </a>
                         <svg
@@ -113,7 +110,7 @@ const buildWhatsappLink = (productName) => {
                         </svg>
                         <span class="text-sm font-medium text-[#9e1f16]">
                             {{
-                                t("services.oneSingleSubmission.hero.breadcrumb.current")
+                                t("services.naturalisasi.hero.breadcrumb.current")
                             }}
                         </span>
                     </div>
@@ -124,16 +121,16 @@ const buildWhatsappLink = (productName) => {
                     <h1
                         class="text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl"
                     >
-                        {{ t("services.oneSingleSubmission.hero.title")
+                        {{ t("services.naturalisasi.hero.title")
                         }}<br class="hidden sm:block" />
                         <span class="text-white/90">{{
-                            t("services.oneSingleSubmission.hero.titleSub")
+                            t("services.naturalisasi.hero.titleSub")
                         }}</span>
                     </h1>
                     <p
                         class="mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base sm:leading-7"
                     >
-                        {{ t("services.oneSingleSubmission.hero.desc") }}
+                        {{ t("services.naturalisasi.hero.desc") }}
                     </p>
                     <div class="mt-6">
                         <a
@@ -153,7 +150,7 @@ const buildWhatsappLink = (productName) => {
                                     d="M10 19l-7-7m0 0l7-7m-7 7h18"
                                 />
                             </svg>
-                            {{ t("services.oneSingleSubmission.hero.back") }}
+                            {{ t("services.naturalisasi.hero.back") }}
                         </a>
                     </div>
                 </div>
@@ -171,7 +168,7 @@ const buildWhatsappLink = (productName) => {
                         <a
                             v-for="(item, idx) in serviceList"
                             :key="idx"
-                            :href="`/one-single-submission/${item.id}`"
+                            :href="`/naturalisasi/${item.id}`"
                             class="group flex flex-col rounded-[14px] border border-[#D9DAD8] bg-[#FEFEFE] p-[15px] backdrop-blur-[13px] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-primary/30"
                         >
                             <div class="flex flex-col gap-4 flex-grow">
@@ -213,7 +210,7 @@ const buildWhatsappLink = (productName) => {
                                         class="text-[11px] leading-[18px] text-[#1A1B18]"
                                     >
                                         {{
-                                            t("services.oneSingleSubmission.items.from")
+                                            t("services.naturalisasi.items.from")
                                         }}
                                     </span>
                                     <span
@@ -233,7 +230,7 @@ const buildWhatsappLink = (productName) => {
                             <div
                                 class="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[13px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors whitespace-nowrap"
                             >
-                                {{ t("services.oneSingleSubmission.items.cta") }}
+                                {{ t("services.naturalisasi.items.cta") }}
                                 <svg
                                     class="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0"
                                     fill="none"
@@ -252,11 +249,10 @@ const buildWhatsappLink = (productName) => {
                     </div>
 
                     <FooterCTA
-                        bare
-                        :title="t('services.oneSingleSubmission.cta.title')"
-                        :description="t('services.oneSingleSubmission.cta.desc')"
-                        :button-text="t('services.oneSingleSubmission.cta.whatsapp')"
-                        :whatsapp-link="buildWhatsappLink(t('services.oneSingleSubmission.hero.breadcrumb.current'))"
+                        :title="t('services.naturalisasi.cta.title')"
+                        :description="t('services.naturalisasi.cta.desc')"
+                        :button-text="t('services.naturalisasi.cta.whatsapp')"
+                        :whatsapp-link="buildWhatsappLink(t('services.naturalisasi.hero.breadcrumb.current'))"
                     />
                 </div>
             </div>

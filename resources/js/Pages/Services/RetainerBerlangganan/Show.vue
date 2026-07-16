@@ -4,7 +4,8 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
+const { t, locale } = useI18n();
 
 const docsOpen = ref(false);
 const dasarHukumOpen = ref(false);
@@ -25,12 +26,7 @@ const parseBold = (text) => {
     return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 };
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -189,7 +185,7 @@ const currentCorporatePackages = computed(
                         <a
                             href="/layanan"
                             class="text-sm font-medium text-[#9e1f16] hover:underline"
-                            >Layanan</a
+                            >{{ t("services.retainerBerlanggananDetail.breadcrumb.layanan") }}</a
                         >
                         <svg
                             class="h-3 w-3 text-[#9e1f16]"
@@ -243,7 +239,7 @@ const currentCorporatePackages = computed(
                                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
                             />
                         </svg>
-                        Kembali
+                        {{ t("services.retainerBerlanggananDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -270,7 +266,7 @@ const currentCorporatePackages = computed(
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Informasi Umum
+                                    {{ t("services.retainerBerlanggananDetail.sections.informasi_umum") }}
                                 </h2>
                             </div>
                             <div class="space-y-4">
@@ -302,7 +298,7 @@ const currentCorporatePackages = computed(
                                 <h2
                                     class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Paket Regular
+                                    {{ t("services.retainerBerlanggananDetail.sections.paket_regular") }}
                                 </h2>
                             </div>
 
@@ -318,7 +314,7 @@ const currentCorporatePackages = computed(
                                             <th
                                                 class="sticky left-0 z-20 text-left font-semibold text-[#1A1B18] px-1 sm:px-1.5 py-4 sm:py-5 border-b-2 border-r border-[#E8E8E6] bg-[#F9F9F9] whitespace-nowrap"
                                             >
-                                                Jenis Layanan (per bulan)
+                                                {{ t("services.retainerBerlanggananDetail.table.jenis_layanan") }}
                                             </th>
                                             <th
                                                 v-for="scale in regularPackages.scales"
@@ -463,7 +459,7 @@ const currentCorporatePackages = computed(
                                     <div
                                         class="text-[11px] sm:text-[12px] text-[#686964]"
                                     >
-                                        Skala terpilih
+                                        {{ t("services.retainerBerlanggananDetail.table.skala_terpilih") }}
                                     </div>
                                     <div
                                         class="text-[14px] sm:text-[15px] font-bold text-[#1A1B18]"
@@ -489,7 +485,7 @@ const currentCorporatePackages = computed(
                                         class="h-4 w-4"
                                         alt="wa"
                                     />
-                                    Konsultasi via Whatsapp
+                                    {{ t("services.retainerBerlanggananDetail.table.konsultasi_cta") }}
                                 </a>
                             </div>
                         </div>
@@ -511,7 +507,7 @@ const currentCorporatePackages = computed(
                                     <h2
                                         class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black"
                                     >
-                                        Berlangganan Corporate Secretary
+                                        {{ t("services.retainerBerlanggananDetail.sections.corporate_secretary") }}
                                     </h2>
                                 </div>
 
@@ -565,7 +561,7 @@ const currentCorporatePackages = computed(
                                         <span
                                             class="inline-flex items-center rounded-full border border-primary bg-white px-3 py-0.5 text-[11px] font-semibold text-primary whitespace-nowrap"
                                         >
-                                            Paling Populer
+                                            {{ t("services.retainerBerlanggananDetail.plans.paling_populer") }}
                                         </span>
                                     </div>
 
@@ -578,7 +574,7 @@ const currentCorporatePackages = computed(
 
                                     <div class="mb-4">
                                         <div class="text-[11px] text-[#686964]">
-                                            Mulai dari
+                                            {{ t("services.retainerBerlanggananDetail.plans.mulai_dari") }}
                                         </div>
                                         <div
                                             class="text-[20px] sm:text-[24px] font-bold leading-tight text-primary"
@@ -653,7 +649,7 @@ const currentCorporatePackages = computed(
                                                 : 'border border-primary text-primary hover:bg-primary hover:text-white'
                                         "
                                     >
-                                        Berlangganan Sekarang
+                                        {{ t("services.retainerBerlanggananDetail.plans.berlangganan") }}
                                         <svg
                                             class="h-3.5 w-3.5"
                                             fill="none"
@@ -694,17 +690,15 @@ const currentCorporatePackages = computed(
                                     <span
                                         class="text-[14px] font-extrabold uppercase tracking-widest text-white"
                                     >
-                                        FASTTRACK – VIP LINE
+                                        {{ t("services.retainerBerlanggananDetail.sidebar.vip_title") }}
                                     </span>
                                 </div>
                             </div>
 
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                            >
-                                Pendirian Badan Usaha Selesai dalam<br />1
-                                (Satu) Hari
-                            </p>
+                                v-html="t('services.retainerBerlanggananDetail.sidebar.vip_desc')"
+                            ></p>
                             <a
                                 :href="buildWhatsappLink(product.name)"
                                 target="_blank"
@@ -716,13 +710,13 @@ const currentCorporatePackages = computed(
                                     class="mt-0.5 h-5 w-5 flex-shrink-0"
                                     alt="wa"
                                 />
-                                Pesan Layanan Sekarang
+                                {{ t("services.retainerBerlanggananDetail.sidebar.vip_cta") }}
                             </a>
 
                             <div
                                 class="relative mt-3 text-[11px] text-white/60"
                             >
-                                * (S&amp;K BERLAKU)
+                                {{ t("services.retainerBerlanggananDetail.sidebar.vip_note") }}
                             </div>
                         </div>
 
@@ -751,7 +745,7 @@ const currentCorporatePackages = computed(
                                 </svg>
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1">
-                                Estimasi total biaya
+                                {{ t("services.retainerBerlanggananDetail.sidebar.price_label") }}
                             </div>
                             <div
                                 class="text-[32px] font-bold leading-none text-primary mb-1"
@@ -759,7 +753,7 @@ const currentCorporatePackages = computed(
                                 {{ product.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
-                                *Harga final dikonfirmasi setelah konsultasi
+                                {{ t("services.retainerBerlanggananDetail.sidebar.price_note") }}
                             </div>
                             <a
                                 :href="buildWhatsappLink(product.name)"
@@ -772,7 +766,7 @@ const currentCorporatePackages = computed(
                                     class="mt-0.5 h-6 w-6 flex-shrink-0"
                                     alt="wa"
                                 />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.retainerBerlanggananDetail.sidebar.konsultasi_cta") }}
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li
@@ -783,7 +777,7 @@ const currentCorporatePackages = computed(
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Konsultasi pertama gratis
+                                    {{ t("services.retainerBerlanggananDetail.sidebar.benefit_1") }}
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -793,7 +787,7 @@ const currentCorporatePackages = computed(
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Harga transparan, tanpa biaya tersembunyi
+                                    {{ t("services.retainerBerlanggananDetail.sidebar.benefit_2") }}
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -803,7 +797,7 @@ const currentCorporatePackages = computed(
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Tim berpengalaman 18+ tahun
+                                    {{ t("services.retainerBerlanggananDetail.sidebar.benefit_3") }}
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -813,7 +807,7 @@ const currentCorporatePackages = computed(
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Update proses berkala via WhatsApp
+                                    {{ t("services.retainerBerlanggananDetail.sidebar.benefit_4") }}
                                 </li>
                             </ul>
                         </div>
@@ -823,9 +817,10 @@ const currentCorporatePackages = computed(
         </section>
 
         <FooterCTA
-            title="Tidak Menemukan Layanan yang Anda Cari?"
-            description="Tim kami siap membantu Anda menemukan solusi yang tepat<br class='hidden sm:block' /> untuk kebutuhan legalitas bisnis Anda."
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar')"
+            :title="t('services.retainerBerlanggananDetail.footer.title')"
+            :description="t('services.retainerBerlanggananDetail.footer.desc')"
+            :button-text="t('services.retainerBerlanggananDetail.footer.cta')"
+            :whatsapp-link="buildWhatsappLink(t('services.retainerBerlanggananDetail.footer.wa_subject'))"
         />
     </MainLayout>
 </template>

@@ -6,6 +6,7 @@ export default {
     back: "Back",
     sections: {
         penjelasan: "General Overview",
+        kriteria: "Criteria",
         syarat: "Terms & Conditions",
         keuntungan: "Benefits & Advantages",
         alur: "Process Flow",

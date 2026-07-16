@@ -4,19 +4,15 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: { type: Object, required: true },
     relatedProducts: { type: Array, default: () => [] },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("imigrasi");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -64,11 +60,11 @@ const product = localizedProduct;
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">Layanan</a>
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{ t("services.naturalisasiDetail.breadcrumb.layanan") }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/naturalisasi" class="text-sm font-medium text-[#9e1f16] hover:underline">Naturalisasi</a>
+                        <a href="/naturalisasi" class="text-sm font-medium text-[#9e1f16] hover:underline">{{ t("services.naturalisasiDetail.breadcrumb.current") }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
@@ -89,7 +85,7 @@ const product = localizedProduct;
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{ t("services.naturalisasiDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -180,7 +176,7 @@ const product = localizedProduct;
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Biaya Layanan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.naturalisasiDetail.sections.biaya_layanan") }}</h2>
                             </div>
                             <div
                                 class="rounded-xl overflow-hidden"
@@ -194,13 +190,13 @@ const product = localizedProduct;
                                             {{ product.name }}
                                         </div>
                                         <div class="text-[22px] font-bold text-white leading-tight">
-                                            Hubungi Kami
+                                            {{ t("services.naturalisasiDetail.hubungi_kami") }}
                                         </div>
                                     </div>
                                     <a :href="buildWhatsappLink(product.name)"
                                         target="_blank" rel="noopener noreferrer"
                                         class="flex items-center gap-2 rounded-lg border border-white px-5 py-2.5 text-[13px] font-semibold text-white whitespace-nowrap hover:bg-white/10 transition-colors flex-shrink-0">
-                                        Hubungi Kami
+                                        {{ t("services.naturalisasiDetail.hubungi_kami") }}
                                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                         </svg>
@@ -220,46 +216,45 @@ const product = localizedProduct;
                             style="background-image: url('/images/card-arrow-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
-                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">FASTRACK – VIP LINE</span>
+                                    <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">{{ t("services.naturalisasiDetail.sidebar.vip_title") }}</span>
                                 </div>
                             </div>
-                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Draft Perjanjian Membuat Selesai<br />dalam 1 (Satu) Hari
-                            </p>
+                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
+                                v-html="t('services.naturalisasiDetail.sidebar.vip_desc')"></p>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{ t("services.naturalisasiDetail.sidebar.vip_cta") }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{ t("services.naturalisasiDetail.sidebar.vip_note") }}</div>
                         </div>
 
                         <!-- Price Card -->
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <div class="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFF0EF] px-3 py-1">
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                                <span class="text-[11px] font-semibold text-primary">Free Konsultasi</span>
+                                <span class="text-[11px] font-semibold text-primary">{{ t("services.naturalisasiDetail.sidebar.free_konsultasi_badge") }}</span>
                             </div>
                             <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-3 mt-1">
                                 {{ product.name }}
                             </p>
-                            <div class="text-[12px] text-[#686964] mb-1">Start From</div>
+                            <div class="text-[12px] text-[#686964] mb-1">{{ t("services.naturalisasiDetail.sidebar.price_label") }}</div>
                             <div class="text-[28px] font-bold leading-none text-primary mb-1">
                                 {{ product.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
-                                *Harga final dikonfirmasi setelah konsultasi
+                                {{ t("services.naturalisasiDetail.sidebar.price_note") }}
                             </div>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.naturalisasiDetail.sidebar.konsultasi_cta") }}
                             </a>
                         </div>
 
                         <!-- Layanan Terkait -->
                         <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Terkait</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.naturalisasiDetail.sidebar.related_title") }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -271,7 +266,7 @@ const product = localizedProduct;
                                         <p class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug line-clamp-2">
                                             {{ pick(related.name) }}
                                         </p>
-                                        <p class="text-[11px] text-[#686964] mt-0.5">Mulai dari {{ related.price_label }}</p>
+                                        <p class="text-[11px] text-[#686964] mt-0.5">{{ t("services.naturalisasiDetail.sidebar.related_from") }} {{ related.price_label }}</p>
                                     </div>
                                     <svg class="h-4 w-4 flex-shrink-0 text-[#686964] group-hover:text-primary transition-colors"
                                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -289,8 +284,9 @@ const product = localizedProduct;
         </section>
 
         <FooterCTA
-            title="Butuh Konsultasi Naturalisasi?"
-            description="Tim kami siap membantu proses naturalisasi dan alih kewarganegaraan<br class='hidden sm:block' /> sesuai ketentuan hukum yang berlaku."
+            :title="t('services.naturalisasiDetail.footer.title')"
+            :description="t('services.naturalisasiDetail.footer.desc')"
+            :button-text="t('services.naturalisasiDetail.footer.cta')"
             :whatsapp-link="buildWhatsappLink(product.name)"
         />
     </MainLayout>

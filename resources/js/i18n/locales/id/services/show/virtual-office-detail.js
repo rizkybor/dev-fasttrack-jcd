@@ -12,6 +12,14 @@ export default {
         dokumen: "Dokumen dan Informasi yang Diperlukan",
         paket: "Paket & Harga",
         dasar_hukum: "Dasar Hukum",
+        keunggulan_heading: "Keunggulan Virtual Office Fasttrack",
+    },
+    table: {
+        swipe_hint: "Geser tabel untuk melihat paket lainnya →",
+        konsultasi_cta: "Konsultasi via Whatsapp",
+    },
+    gallery: {
+        lokasi_prefix: "Lokasi",
     },
     plans: {
         mulai_dari: "Mulai dari",
@@ -38,5 +46,7 @@ export default {
         title: "Tidak Menemukan Layanan yang Anda Cari?",
         desc: "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
         cta: "Chat Langsung via WhatsApp",
+        wa_subject: "layanan yang tidak terdaftar",
     },
+    wa_message: "Halo FastTrack, saya ingin konsultasi mengenai",
 }

@@ -2,6 +2,7 @@
 import common from './common'
 import home from './home'
 import faq from './faq'
+import articles from './articles'
 import kerjasama from './kerjasama'
 import mintaPenawaran from './minta-penawaran'
 import simulasiAkta from './simulasi-akta'
@@ -31,6 +32,13 @@ import perizinanBerusahaDetail from './services/show/perizinan-berusaha-detail'
 import perizinanLainnyaDetail from './services/show/perizinan-lainnya-detail'
 import perpajakanDanPembukuanDetail from './services/show/perpajakan-dan-pembukuan-detail'
 import restrukturisasiPerseroanTerbatasDetail from './services/show/restrukturisasi-perseroan-terbatas-detail'
+import sertifikasiBadanUsahaDetail from './services/show/sertifikasi-badan-usaha-detail'
+import retainerBerlanggananDetail from './services/show/retainer-berlangganan-detail'
+import penyusunanDanPeninjauanPerjanjianDetail from './services/show/penyusunan-dan-peninjauan-perjanjian-detail'
+import penerjemahDetail from './services/show/penerjemah-detail'
+import ujiTuntasHukumDetail from './services/show/uji-tuntas-hukum-detail'
+import layananDetail from './services/show/layanan-detail'
+import naturalisasiDetail from './services/show/naturalisasi-detail'
 import virtualOfficeDetail from './services/show/virtual-office-detail'
 import visaIndonesiaDetail from './services/show/visa-indonesia-detail'
 import visaMancanegaraDetail from './services/show/visa-mancanegara-detail'
@@ -46,12 +54,17 @@ import layanan from './services/layanan'
 import virtualOffice from './services/virtual-office'
 import digitalMarketing from './services/digital-marketing'
 import visaIndonesia from './services/visa-indonesia'
+import naturalisasi from './services/naturalisasi'
+import penyusunanDanPeninjauanPerjanjian from './services/penyusunan-dan-peninjauan-perjanjian'
+import retainerBerlangganan from './services/retainer-berlangganan'
+import sertifikasiBadanUsaha from './services/sertifikasi-badan-usaha'
 import megaMenu from './services/mega-menu'
 
 export default {
     common,
     home,
     faq,
+    articles,
     kerjasama,
     mintaPenawaran,
     simulasiAkta,
@@ -84,6 +97,17 @@ export default {
         notarisVirtualDanAktaDetail,
         restrukturisasiPerseroanTerbatas,
         restrukturisasiPerseroanTerbatasDetail,
+        sertifikasiBadanUsaha,
+        sertifikasiBadanUsahaDetail,
+        retainerBerlangganan,
+        retainerBerlanggananDetail,
+        penyusunanDanPeninjauanPerjanjian,
+        penyusunanDanPeninjauanPerjanjianDetail,
+        penerjemahDetail,
+        ujiTuntasHukumDetail,
+        layananDetail,
+        naturalisasi,
+        naturalisasiDetail,
         penutupanBadanUsaha,
         penutupanBadanUsahaDetail,
         keimigrasianWniWna,

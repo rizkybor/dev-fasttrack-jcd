@@ -4,18 +4,14 @@ import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const props = defineProps({
     service: { type: [Object, Array], required: true },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (serviceName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${serviceName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("digital");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {

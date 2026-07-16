@@ -12,6 +12,7 @@ export default {
         dokumen: "所需文件与信息",
         paket: "套餐与价格",
         dasar_hukum: "法律依据",
+        biaya_layanan: "服务费用",
     },
     plans: {
         mulai_dari: "起价",
@@ -20,6 +21,8 @@ export default {
         termasuk: "包含",
         bonus: "赠品",
         pesan: "立即订购",
+        gratis_konsultasi: "免费售前及完成后咨询",
+        mendapatkan: "您将获得",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP 通道",
@@ -33,10 +36,14 @@ export default {
         related_from: "起价",
         related_packages: "套餐",
         related_cta: "查看更多",
+        benefit_1: "首次咨询免费",
+        benefit_2: "价格透明，无隐藏费用",
+        benefit_3: "18年以上经验团队",
+        benefit_4: "通过 WhatsApp 定期更新进度",
     },
     footer: {
-        title: "没有找到您需要的服务？",
-        desc: "我们的团队随时准备帮助您找到适合您企业法律需求的解决方案。",
+        title: "与 Fasttrack 一起更好地管理公司财务",
+        desc: "井然有序的簿记和准确的财务报告是公司可持续发展和成长的重要投资。在良好的财务管理系统支持下，企业能够做出更精准的决策、保持合规，并建立更稳固的业务基础。",
         cta: "通过 WhatsApp 直接联系",
         wa_subject: "未列出的服务",
     },

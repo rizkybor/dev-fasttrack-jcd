@@ -5,6 +5,7 @@ import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, tm } = useI18n();
 
 const props = defineProps({
@@ -12,32 +13,24 @@ const props = defineProps({
     products: { type: Array, default: () => [] },
 });
 
-const whatsappNumber = "6282298604144";
-
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-person.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-persons.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-person-check.svg", path: "/foreignservice" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/foreignservice" },
+    { icon: "/icons/ft-building.svg", path: "/sertifikasi-badan-usaha" },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
 const serviceList = computed(() =>
-    tm("services.badanUsaha.list").map((item, i) => ({
+    tm("services.sertifikasiBadanUsaha.list").map((item, i) => ({
         ...item,
         icon: itemMeta[i].icon,
         path: itemMeta[i].path,
     })),
 );
 
+const { buildWhatsappLink: waLink } = useWhatsapp("default");
 const buildWhatsappLink = (productName) => {
-    const message = `${t("services.badanUsaha.cta.waMessage")} ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    const greeting = `${t("services.sertifikasiBadanUsaha.cta.waMessage")} ${productName}.`;
+    return waLink(productName, { greeting });
 };
 </script>
 
@@ -100,7 +93,7 @@ const buildWhatsappLink = (productName) => {
                             class="text-sm font-medium text-[#9e1f16] hover:underline"
                         >
                             {{
-                                t("services.badanUsaha.hero.breadcrumb.layanan")
+                                t("services.sertifikasiBadanUsaha.hero.breadcrumb.layanan")
                             }}
                         </a>
                         <svg
@@ -118,7 +111,7 @@ const buildWhatsappLink = (productName) => {
                         </svg>
                         <span class="text-sm font-medium text-[#9e1f16]">
                             {{
-                                t("services.badanUsaha.hero.breadcrumb.current")
+                                t("services.sertifikasiBadanUsaha.hero.breadcrumb.current")
                             }}
                         </span>
                     </div>
@@ -129,17 +122,17 @@ const buildWhatsappLink = (productName) => {
                     <h1
                         class="text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl"
                     >
-                        {{ t("services.badanUsaha.hero.title")
+                        {{ t("services.sertifikasiBadanUsaha.hero.title")
                         }}<br class="hidden sm:block" />
                         <span class="text-white/90">{{
-                            t("services.badanUsaha.hero.titleSub")
+                            t("services.sertifikasiBadanUsaha.hero.titleSub")
                         }}</span>
                     </h1>
                     <p
                         class="mt-4 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base sm:leading-7"
                     >
                         <span class="font-semibold text-white">FASTTRACK</span>
-                        {{ t("services.badanUsaha.hero.desc") }}
+                        {{ t("services.sertifikasiBadanUsaha.hero.desc") }}
                     </p>
                     <div class="mt-6">
                         <a
@@ -159,7 +152,7 @@ const buildWhatsappLink = (productName) => {
                                     d="M10 19l-7-7m0 0l7-7m-7 7h18"
                                 />
                             </svg>
-                            {{ t("services.badanUsaha.hero.back") }}
+                            {{ t("services.sertifikasiBadanUsaha.hero.back") }}
                         </a>
                     </div>
                 </div>
@@ -177,7 +170,7 @@ const buildWhatsappLink = (productName) => {
                         <a
                             v-for="(item, idx) in serviceList"
                             :key="idx"
-                            :href="`/badan-usaha/${item.id}`"
+                            :href="`/sertifikasi-badan-usaha/${item.id}`"
                             class="group flex flex-col rounded-[14px] border border-[#D9DAD8] bg-[#FEFEFE] p-[15px] backdrop-blur-[13px] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-primary/30"
                         >
                             <div class="flex flex-col gap-4 flex-grow">
@@ -219,7 +212,7 @@ const buildWhatsappLink = (productName) => {
                                         class="text-[11px] leading-[18px] text-[#1A1B18]"
                                     >
                                         {{
-                                            t("services.badanUsaha.items.from")
+                                            t("services.sertifikasiBadanUsaha.items.from")
                                         }}
                                     </span>
                                     <span
@@ -238,7 +231,7 @@ const buildWhatsappLink = (productName) => {
                             <div
                                 class="mt-4 flex items-center justify-center gap-2 rounded-lg border border-primary px-[15px] py-[11px] h-[44px] text-[13px] font-semibold text-primary group-hover:bg-[#9e1f16] group-hover:text-white transition-colors whitespace-nowrap"
                             >
-                                {{ t("services.badanUsaha.items.cta") }}
+                                {{ t("services.sertifikasiBadanUsaha.items.cta") }}
                                 <svg
                                     class="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0"
                                     fill="none"
@@ -257,11 +250,10 @@ const buildWhatsappLink = (productName) => {
                     </div>
 
                     <FooterCTA
-                        bare
-                        :title="t('services.badanUsaha.cta.title')"
-                        :description="t('services.badanUsaha.cta.desc')"
-                        :button-text="t('services.badanUsaha.cta.whatsapp')"
-                        :whatsapp-link="buildWhatsappLink(t('services.badanUsaha.hero.breadcrumb.current'))"
+                        :title="t('services.sertifikasiBadanUsaha.cta.title')"
+                        :description="t('services.sertifikasiBadanUsaha.cta.desc')"
+                        :button-text="t('services.sertifikasiBadanUsaha.cta.whatsapp')"
+                        :whatsapp-link="buildWhatsappLink(t('services.sertifikasiBadanUsaha.hero.breadcrumb.current'))"
                     />
                 </div>
             </div>

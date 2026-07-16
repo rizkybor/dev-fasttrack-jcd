@@ -12,6 +12,9 @@ export default {
         dokumen: "Required Documents & Information",
         paket: "Packages & Pricing",
         dasar_hukum: "Legal Basis",
+        tab_title: "Select Application Type",
+        dokumen_persyaratan: "Document Requirements",
+        biaya_layanan: "Service Fee",
     },
     plans: {
         mulai_dari: "Starting from",
@@ -20,6 +23,8 @@ export default {
         termasuk: "Included",
         bonus: "Bonus",
         pesan: "Order Now",
+        gratis_konsultasi: "FREE Preparation and Post-Completion Consultation",
+        mendapatkan: "You Will Receive",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
@@ -33,10 +38,12 @@ export default {
         related_from: "Starting from",
         related_packages: "Packages",
         related_cta: "See More",
+        free_konsultasi_badge: "Free Consultation",
+        biaya_penanganan: "Handling Fee",
     },
     footer: {
-        title: "Can't Find the Service You're Looking For?",
-        desc: "Our team is ready to help you find the right solution for your business legal needs.",
+        title: "Need Consultation on Immigration Matters?",
+        desc: "Our team is ready to help with your immigration needs professionally and in accordance with applicable regulations.",
         cta: "Chat Directly via WhatsApp",
         wa_subject: "an unlisted service",
     },

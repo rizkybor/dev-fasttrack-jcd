@@ -12,6 +12,11 @@ export default {
         dokumen: "所需文件与信息",
         paket: "套餐与价格",
         dasar_hukum: "法律依据",
+        index_visa: "选择访问签证类别",
+        penjelasan_layanan: "服务说明",
+        dokumen_didapat: "您将获得的文件类型",
+        persyaratan_dokumen: "文件要求",
+        rincian_biaya: "费用明细",
     },
     plans: {
         mulai_dari: "起价",
@@ -20,6 +25,7 @@ export default {
         termasuk: "包含",
         bonus: "赠品",
         pesan: "立即订购",
+        biaya_penanganan: "手续费",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP 通道",
@@ -33,6 +39,8 @@ export default {
         related_from: "起价",
         related_packages: "套餐",
         related_cta: "查看更多",
+        free_konsultasi_badge: "免费咨询",
+        index_lainnya_title: "其他签证类别",
     },
     footer: {
         title: "没有找到您需要的服务？",

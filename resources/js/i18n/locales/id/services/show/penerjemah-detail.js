@@ -1,0 +1,42 @@
+export default {
+    breadcrumb: {
+        layanan: "Layanan",
+    },
+    back: "Kembali",
+    sections: {
+        informasi: "Informasi",
+        mengapa_fasttrack: "Mengapa Memilih FastTrack?",
+    },
+    table: {
+        search_placeholder: "Cari bahasa... mis. Jepang, Arab, Jerman",
+        search_placeholder_mobile: "Cari bahasa...",
+        column_bahasa: "Bahasa / Wilayah",
+        empty_search: "Tidak ada bahasa yang cocok dengan",
+        empty_mobile: "Tidak ada bahasa ditemukan",
+        row_count: "{count} Baris",
+        page_info: "Halaman {page} dari {total}",
+        rows_per_page: "Baris per halaman",
+        bahasa_count: "{count} Bahasa",
+        per_page_mobile: "Per hal.",
+    },
+    hubungi_kami: "Hubungi Kami",
+    sidebar: {
+        vip_title: "FASTTRACK – VIP LINE",
+        vip_desc: "Penerjemahan Dokumen Selesai dalam<br />1 (Satu) Hari",
+        vip_cta: "Pesan Layanan Sekarang",
+        vip_note: "* (S&K BERLAKU)",
+        price_label: "Harga",
+        price_note: "*Harga final dikonfirmasi setelah konsultasi",
+        konsultasi_cta: "Konsultasi Gratis via Whatsapp",
+        benefit_1: "Biaya Awal Terjamin Transparan",
+        benefit_2: "Mudah Mempercayai Hasil Terjemahan",
+        benefit_3: "Gratis Revisi",
+    },
+    footer: {
+        title: "Tidak Menemukan Layanan yang Anda Cari?",
+        desc: "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
+        cta: "Chat Langsung via WhatsApp",
+        wa_subject: "layanan yang tidak terdaftar",
+    },
+    wa_message: "Halo FastTrack, saya ingin konsultasi mengenai",
+}

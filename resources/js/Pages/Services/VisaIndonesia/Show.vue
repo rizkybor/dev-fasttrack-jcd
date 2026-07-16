@@ -131,7 +131,7 @@ watch(activeIndex, () => {
                     class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan Umum</h2>
+                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.visaIndonesiaDetail.sections.penjelasan") }}</h2>
                     </div>
                     <div class="space-y-4">
                         <p v-for="(p, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`"
@@ -143,8 +143,7 @@ watch(activeIndex, () => {
                 <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Pilih Index Visa
-                            Kunjungan</h2>
+                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.visaIndonesiaDetail.sections.index_visa") }}</h2>
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                         <button v-for="(item, i) in localizedProduct.index_list" :key="`idx-${i}`" @click="activeIndex = i"
@@ -179,7 +178,7 @@ watch(activeIndex, () => {
                             <!-- Price -->
                             <p class="text-[11px] mb-0.5"
                                 :class="activeIndex === i ? 'text-white/70' : 'text-[#686964]'">
-                                Mulai dari
+                                {{ t("services.visaIndonesiaDetail.plans.mulai_dari") }}
                             </p>
                             <p class="text-[18px] font-bold leading-tight"
                                 :class="activeIndex === i ? 'text-white' : 'text-primary'">
@@ -200,8 +199,7 @@ watch(activeIndex, () => {
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Penjelasan
-                                    Layanan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.visaIndonesiaDetail.sections.penjelasan_layanan") }}</h2>
                             </div>
                             <div class="space-y-4">
                                 <p v-for="(p, i) in currentItem.penjelasan_layanan" :key="`pl-${i}`"
@@ -214,8 +212,7 @@ watch(activeIndex, () => {
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Jenis Dokumen
-                                    yang Akan Anda Dapatkan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.visaIndonesiaDetail.sections.dokumen_didapat") }}</h2>
                             </div>
                             <div class="space-y-5">
                                 <div v-for="(grp, gi) in currentItem.dokumen_diperlukan" :key="`dg-${gi}`">
@@ -236,8 +233,7 @@ watch(activeIndex, () => {
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Persyaratan
-                                    Dokumen</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.visaIndonesiaDetail.sections.persyaratan_dokumen") }}</h2>
                             </div>
                             <div class="space-y-6">
                                 <div v-for="(group, gi) in currentItem.persyaratan_dokumen" :key="`pg-${gi}`">
@@ -259,7 +255,7 @@ watch(activeIndex, () => {
                             <div class="flex items-center justify-between mb-5">
                                 <div class="flex items-center gap-3">
                                     <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Rincian Biaya
+                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.visaIndonesiaDetail.sections.rincian_biaya") }}
                                     </h2>
                                 </div>
                                 <!-- Tab tahun (opsional) -->
@@ -301,7 +297,7 @@ watch(activeIndex, () => {
                                         <div>
                                             <div class="text-[13px] text-white/80 mb-0.5">
                                                 {{ currentItem.rincian_biaya.tabs?.[activeBiayaTahun]?.penanganan_label
-                                                    ?? "Biaya Penanganan" }}
+                                                    ?? t("services.visaIndonesiaDetail.plans.biaya_penanganan") }}
                                             </div>
                                             <div
                                                 class="text-[22px] font-bold text-white leading-tight whitespace-nowrap">
@@ -312,7 +308,7 @@ watch(activeIndex, () => {
                                         <a :href="buildWhatsappLink(`${currentItem.kode} ${currentItem.nama}`)"
                                             target="_blank" rel="noopener noreferrer"
                                             class="flex items-center justify-center gap-1.5 rounded-lg bg-white px-4 py-2.5 text-[13px] font-semibold text-primary hover:bg-white/90 transition-colors whitespace-nowrap flex-shrink-0">
-                                            Pesan Sekarang
+                                            {{ t("services.visaIndonesiaDetail.plans.pesan") }}
                                             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
                                                 stroke="currentColor" stroke-width="2.5">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -331,7 +327,7 @@ watch(activeIndex, () => {
                                 class="w-full flex items-center justify-between gap-3 text-left">
                                 <div class="flex items-center gap-3">
                                     <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Dasar Hukum
+                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.visaIndonesiaDetail.sections.dasar_hukum") }}
                                     </h2>
                                 </div>
                                 <svg class="h-5 w-5 flex-shrink-0 text-[#686964] transition-transform duration-200"
@@ -367,13 +363,13 @@ watch(activeIndex, () => {
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <div class="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFF0EF] px-3 py-1">
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                                <span class="text-[11px] font-semibold text-primary">Free Konsultasi</span>
+                                <span class="text-[11px] font-semibold text-primary">{{ t("services.visaIndonesiaDetail.sidebar.free_konsultasi_badge") }}</span>
                             </div>
                             <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mt-2 mb-3">
                                 {{ currentItem?.kode }} {{ currentItem?.nama }}
                             </p>
                             <div class="text-[12px] text-[#686964] mb-1">
-                                {{ currentItem?.rincian_biaya?.tabs?.[activeBiayaTahun]?.penanganan_label ?? "Biaya Penanganan" }}
+                                {{ currentItem?.rincian_biaya?.tabs?.[activeBiayaTahun]?.penanganan_label ?? t("services.visaIndonesiaDetail.plans.biaya_penanganan") }}
                             </div>
                             <div class="text-[26px] font-bold leading-none text-primary mb-4">
                                 {{ currentItem?.rincian_biaya?.tabs?.[activeBiayaTahun]?.biaya_penanganan ??
@@ -382,7 +378,7 @@ watch(activeIndex, () => {
                             <a :href="buildWhatsappLink(`${currentItem?.kode} ${currentItem?.nama}`)" target="_blank"
                                 rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors mb-2">
-                                Pesan Sekarang
+                                {{ t("services.visaIndonesiaDetail.plans.pesan") }}
                                 <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                     stroke-width="2.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -392,7 +388,7 @@ watch(activeIndex, () => {
                                 rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.visaIndonesiaDetail.sidebar.konsultasi_cta") }}
                             </a>
                         </div>
 
@@ -402,24 +398,22 @@ watch(activeIndex, () => {
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
                                     <span
-                                        class="text-[14px] font-extrabold uppercase tracking-widest text-white">FASTRACK
-                                        – VIP LINE</span>
+                                        class="text-[14px] font-extrabold uppercase tracking-widest text-white">{{ t("services.visaIndonesiaDetail.sidebar.vip_title") }}</span>
                                 </div>
                             </div>
-                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
-                            </p>
+                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
+                                v-html="t('services.visaIndonesiaDetail.sidebar.vip_desc')"></p>
                             <a :href="buildWhatsappLink(localizedProduct.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{ t("services.visaIndonesiaDetail.sidebar.vip_cta") }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{ t("services.visaIndonesiaDetail.sidebar.vip_note") }}</div>
                         </div>
 
                         <!-- Index Visa Lainnya -->
                         <div v-if="localizedRelatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Index Visa Lainnya</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.visaIndonesiaDetail.sidebar.index_lainnya_title") }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in localizedRelatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -433,7 +427,7 @@ watch(activeIndex, () => {
                                             class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug line-clamp-2">
                                             {{ pick(related.name) }}
                                         </p>
-                                        <p class="text-[11px] text-[#686964] mt-0.5">Mulai dari {{ related.price_label
+                                        <p class="text-[11px] text-[#686964] mt-0.5">{{ t("services.visaIndonesiaDetail.sidebar.related_from") }} {{ related.price_label
                                             }}</p>
                                     </div>
                                     <svg class="h-4 w-4 flex-shrink-0 text-[#686964] group-hover:text-primary transition-colors"
@@ -457,7 +451,7 @@ watch(activeIndex, () => {
             :title="t('services.visaIndonesiaDetail.footer.title')"
             :description="t('services.visaIndonesiaDetail.footer.desc')"
             :button-text="t('services.visaIndonesiaDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar')"
+            :whatsapp-link="buildWhatsappLink(t('services.visaIndonesiaDetail.footer.wa_subject'))"
         />
     </MainLayout>
 </template>

@@ -12,6 +12,14 @@ export default {
         dokumen: "所需文件与信息",
         paket: "套餐与价格",
         dasar_hukum: "法律依据",
+        keunggulan_heading: "Fasttrack 虚拟办公室优势",
+    },
+    table: {
+        swipe_hint: "滑动表格查看其他套餐 →",
+        konsultasi_cta: "通过 WhatsApp 咨询",
+    },
+    gallery: {
+        lokasi_prefix: "地点",
     },
     plans: {
         mulai_dari: "起价",

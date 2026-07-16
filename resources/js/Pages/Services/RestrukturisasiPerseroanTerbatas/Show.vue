@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const props = defineProps({
@@ -11,12 +12,7 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -287,7 +283,7 @@ const toggleSection = (id) => {
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Biaya Layanan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.restrukturisasiPerseroanTerbatasDetail.sections.biaya_layanan") }}</h2>
                             </div>
                             <div
                                 class="rounded-xl overflow-hidden"
@@ -304,7 +300,7 @@ const toggleSection = (id) => {
                                     <a :href="buildWhatsappLink(localizedProduct.name)"
                                         target="_blank" rel="noopener noreferrer"
                                         class="flex items-center gap-2 rounded-lg border border-white px-5 py-2.5 text-[13px] font-semibold text-white whitespace-nowrap hover:bg-white/10 transition-colors flex-shrink-0">
-                                        Hubungi Kami
+                                        {{ t("services.restrukturisasiPerseroanTerbatasDetail.plans.hubungi_kami") }}
                                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                         </svg>
@@ -390,7 +386,7 @@ const toggleSection = (id) => {
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <div class="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFF0EF] px-3 py-1">
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                                <span class="text-[11px] font-semibold text-primary">Free Konsultasi</span>
+                                <span class="text-[11px] font-semibold text-primary">{{ t("services.restrukturisasiPerseroanTerbatasDetail.sidebar.free_konsultasi_badge") }}</span>
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1 mt-2">{{
                                 t(
