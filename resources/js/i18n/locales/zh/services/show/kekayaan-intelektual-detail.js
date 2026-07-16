@@ -12,6 +12,9 @@ export default {
         dokumen: "所需文件与信息",
         paket: "套餐与价格",
         dasar_hukum: "法律依据",
+        manfaat_title: "{name}的优势",
+        kriteria_title: "可注册{name}的标准",
+        biaya_layanan: "服务费用",
     },
     plans: {
         mulai_dari: "起价",
@@ -20,6 +23,7 @@ export default {
         termasuk: "包含",
         bonus: "赠品",
         pesan: "立即订购",
+        hubungi_kami: "联系我们",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP 通道",
@@ -33,6 +37,10 @@ export default {
         related_from: "起价",
         related_packages: "套餐",
         related_cta: "查看更多",
+        benefit_1: "首次咨询免费",
+        benefit_2: "价格透明，无隐藏费用",
+        benefit_3: "18年以上经验团队",
+        benefit_4: "通过 WhatsApp 定期更新进度",
     },
     footer: {
         title: "没有找到您需要的服务？",

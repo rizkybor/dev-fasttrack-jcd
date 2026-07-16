@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const docsOpen = ref(false);
@@ -25,12 +26,7 @@ const parseBold = (text) => {
     return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 };
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("akta");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {

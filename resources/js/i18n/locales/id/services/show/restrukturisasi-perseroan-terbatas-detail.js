@@ -12,6 +12,7 @@ export default {
         dokumen: "Dokumen dan Informasi yang Diperlukan",
         paket: "Paket & Harga",
         dasar_hukum: "Dasar Hukum",
+        biaya_layanan: "Biaya Layanan",
     },
     plans: {
         mulai_dari: "Mulai dari",
@@ -20,6 +21,7 @@ export default {
         termasuk: "Termasuk",
         bonus: "Bonus",
         pesan: "Pesan Sekarang",
+        hubungi_kami: "Hubungi Kami",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
@@ -33,10 +35,13 @@ export default {
         related_from: "Mulai dari",
         related_packages: "Paket",
         related_cta: "Selengkapnya",
+        free_konsultasi_badge: "Free Konsultasi",
     },
     footer: {
         title: "Tidak Menemukan Layanan yang Anda Cari?",
         desc: "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
         cta: "Chat Langsung via WhatsApp",
+        wa_subject: "layanan restrukturisasi perseroan terbatas",
     },
+    wa_message: "Halo FastTrack, saya ingin konsultasi mengenai",
 }

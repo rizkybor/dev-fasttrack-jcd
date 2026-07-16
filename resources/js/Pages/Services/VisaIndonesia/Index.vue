@@ -4,14 +4,13 @@ import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, tm } = useI18n();
 
 const props = defineProps({
     service: { type: Object, required: true },
     products: { type: Array, default: () => [] },
 });
-
-const whatsappNumber = "6282298604144";
 
 // Icon tidak perlu ditranslasi, sama untuk semua item
 const itemIcon = "/icons/ft-persons-w.svg";
@@ -25,9 +24,10 @@ const serviceList = computed(() =>
     })),
 );
 
+const { buildWhatsappLink: waLink } = useWhatsapp("visa");
 const buildWhatsappLink = (productName) => {
-    const message = `${t("services.visaIndonesia.cta.waMessage")} ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    const greeting = `${t("services.visaIndonesia.cta.waMessage")} ${productName}.`;
+    return waLink(productName, { greeting });
 };
 </script>
 
@@ -247,7 +247,6 @@ const buildWhatsappLink = (productName) => {
                     </div>
 
                     <FooterCTA
-                        bare
                         :title="t('services.visaIndonesia.cta.title')"
                         :description="t('services.visaIndonesia.cta.desc')"
                         :button-text="t('services.visaIndonesia.cta.whatsapp')"

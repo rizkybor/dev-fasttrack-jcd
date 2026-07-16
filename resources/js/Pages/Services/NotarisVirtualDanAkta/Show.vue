@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const props = defineProps({
@@ -11,12 +12,9 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
-const whatsappNumber = "6282298604144";
-
+const { buildWhatsappLink: waLink } = useWhatsapp("akta");
 const buildWhatsappLink = (productName, paketNama = "") => {
-    const suffix = paketNama ? ` - ${paketNama}` : "";
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}${suffix}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    return waLink(paketNama ? `${productName} - ${paketNama}` : productName);
 };
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -159,7 +157,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                 <div v-if="hasMultiplePaket" class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Pilih Jenis Layanan</h2>
+                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.notarisVirtualDanAktaDetail.sections.pilih_layanan") }}</h2>
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                         <button v-for="paket in localizedProduct.paket" :key="paket.id"
@@ -205,7 +203,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                 <div class="flex items-center gap-3 mb-5">
                                     <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                     <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                        Penjelasan Layanan
+                                        {{ t("services.notarisVirtualDanAktaDetail.sections.penjelasan_layanan") }}
                                     </h2>
                                 </div>
 
@@ -243,7 +241,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                 </div>
                                                 <div class="flex items-center gap-1.5 flex-shrink-0">
                                                     <span class="text-[12px] font-medium text-primary">
-                                                        {{ openItemId === item.id ? 'Tutup' : 'Selengkapnya' }}
+                                                        {{ openItemId === item.id ? t("services.notarisVirtualDanAktaDetail.toggle.tutup") : t("services.notarisVirtualDanAktaDetail.toggle.selengkapnya") }}
                                                     </span>
                                                     <svg class="h-4 w-4 text-primary transition-transform duration-200"
                                                         :class="openItemId === item.id ? 'rotate-90' : ''"
@@ -260,7 +258,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                     <div class="flex items-center gap-2 mb-4">
                                                         <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
                                                         <h3 class="text-[13px] font-bold uppercase tracking-widest text-black">
-                                                            Penjelasan Detail
+                                                            {{ t("services.notarisVirtualDanAktaDetail.sections.penjelasan_detail") }}
                                                         </h3>
                                                     </div>
                                                     <div class="space-y-2">
@@ -298,7 +296,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                         <div v-if="item.paket_harga.gratis_konsultasi"
                                                             class="flex items-center gap-1.5 mb-4">
                                                             <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
-                                                            <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Pra dan Pasca Seleksi</span>
+                                                            <span class="text-[11px] text-[#3D3D3A]">{{ t("services.notarisVirtualDanAktaDetail.plans.gratis_konsultasi") }}</span>
                                                         </div>
                                                         <hr class="border-[#E8E8E6] mb-4" />
                                                         <div v-if="item.paket_harga.dokumen_legalitas?.length" class="mb-4">
@@ -388,7 +386,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                             <div class="flex items-center gap-2 mb-4">
                                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                                 <h3 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                                    Paket & Harga
+                                                    {{ t("services.notarisVirtualDanAktaDetail.sections.paket") }}
                                                 </h3>
                                             </div>
                                             <div class="rounded-xl border border-[#E8E8E6] p-5">
@@ -399,18 +397,18 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                         {{ item.paket_harga.modal_note }}
                                                     </span>
                                                 </div>
-                                                <p class="text-[11px] text-[#686964] mb-0.5">Mulai dari</p>
+                                                <p class="text-[11px] text-[#686964] mb-0.5">{{ t("services.notarisVirtualDanAktaDetail.plans.mulai_dari") }}</p>
                                                 <p class="text-[24px] font-bold text-primary leading-tight mb-2">
                                                     {{ item.paket_harga.harga }}
                                                 </p>
                                                 <div v-if="item.paket_harga.gratis_konsultasi"
                                                     class="flex items-center gap-1.5 mb-4">
                                                     <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
-                                                    <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Pra dan Pasca Seleksi</span>
+                                                    <span class="text-[11px] text-[#3D3D3A]">{{ t("services.notarisVirtualDanAktaDetail.plans.gratis_konsultasi") }}</span>
                                                 </div>
                                                 <hr class="border-[#E8E8E6] mb-4" />
                                                 <div v-if="item.paket_harga.dokumen_legalitas?.length" class="mb-4">
-                                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">Dokumen Legalitas</p>
+                                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">{{ t("services.notarisVirtualDanAktaDetail.plans.dokumen_legalitas") }}</p>
                                                     <ul class="space-y-2">
                                                         <li v-for="(dok, di) in item.paket_harga.dokumen_legalitas"
                                                             :key="`fdok-${di}`" class="flex items-start gap-2">
@@ -420,7 +418,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                     </ul>
                                                 </div>
                                                 <div v-if="item.paket_harga.termasuk?.length" class="mb-5">
-                                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">Termasuk</p>
+                                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">{{ t("services.notarisVirtualDanAktaDetail.plans.termasuk") }}</p>
                                                     <ul class="space-y-2">
                                                         <li v-for="(tmsk, ti) in item.paket_harga.termasuk"
                                                             :key="`ftmsk-${ti}`" class="flex items-start gap-2">
@@ -432,7 +430,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                 <a :href="buildWhatsappLink(localizedProduct.name, item.paket_harga.nama)"
                                                     target="_blank" rel="noopener noreferrer"
                                                     class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors">
-                                                    Pesan Sekarang
+                                                    {{ t("services.notarisVirtualDanAktaDetail.plans.pesan") }}
                                                     <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
                                                         stroke="currentColor" stroke-width="2.5">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -446,7 +444,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                             <div class="flex items-center gap-2 mb-4">
                                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                                 <h3 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                                    Dokumen dan Informasi yang Diperlukan
+                                                    {{ t("services.notarisVirtualDanAktaDetail.sections.dokumen") }}
                                                 </h3>
                                             </div>
                                             <div class="space-y-5">
@@ -484,7 +482,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                 class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                                 <div class="flex items-center gap-3 mb-5">
                                     <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Dasar Hukum</h2>
+                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.notarisVirtualDanAktaDetail.sections.dasar_hukum") }}</h2>
                                 </div>
                                 <ul class="space-y-4">
                                     <li v-for="(hukum, i) in selectedPaket.dasar_hukum" :key="`hukum-${i}`"
@@ -512,15 +510,15 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                     {{ selectedPaket?.nama ?? localizedProduct.name }}
                                 </span>
                             </div>
-                            <div class="text-[12px] text-[#686964] mb-1 mt-2">Start From</div>
+                            <div class="text-[12px] text-[#686964] mb-1 mt-2">{{ t("services.notarisVirtualDanAktaDetail.plans.mulai_dari") }}</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
                                 {{ selectedPaket?.harga ?? localizedProduct.price_label }}
                             </div>
-                            <div class="text-[11px] text-[#686964] mb-4">*Harga final dikonfirmasi setelah konsultasi</div>
+                            <div class="text-[11px] text-[#686964] mb-4">{{ t("services.notarisVirtualDanAktaDetail.sidebar.price_note") }}</div>
                             <a :href="buildWhatsappLink(localizedProduct.name, selectedPaket?.nama ?? '')"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors mb-2">
-                                Pesan Sekarang
+                                {{ t("services.notarisVirtualDanAktaDetail.plans.pesan") }}
                                 <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
@@ -529,24 +527,24 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg border border-[#E8E8E6] py-2.5 text-[13px] font-semibold text-[#3D3D3A] hover:bg-[#F7F7F5] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.notarisVirtualDanAktaDetail.sidebar.konsultasi_cta") }}
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                    Konsultasi pertama gratis
+                                    {{ t("services.notarisVirtualDanAktaDetail.sidebar.benefit_1") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                    Harga transparan, tanpa biaya tersembunyi
+                                    {{ t("services.notarisVirtualDanAktaDetail.sidebar.benefit_2") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                    Tim berpengalaman 18+ tahun
+                                    {{ t("services.notarisVirtualDanAktaDetail.sidebar.benefit_3") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                    Update proses berkala via WhatsApp
+                                    {{ t("services.notarisVirtualDanAktaDetail.sidebar.benefit_4") }}
                                 </li>
                             </ul>
                         </div>
@@ -557,25 +555,25 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
                                     <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">
-                                        FASTTRACK – VIP LINE
+                                        {{ t("services.notarisVirtualDanAktaDetail.sidebar.vip_title") }}
                                     </span>
                                 </div>
                             </div>
-                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
+                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
+                                v-html="t('services.notarisVirtualDanAktaDetail.sidebar.vip_desc')">
                             </p>
                             <a :href="buildWhatsappLink(localizedProduct.name, selectedPaket?.nama ?? '')"
                                 target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{ t("services.notarisVirtualDanAktaDetail.sidebar.vip_cta") }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{ t("services.notarisVirtualDanAktaDetail.sidebar.vip_note") }}</div>
                         </div>
 
                         <!-- Layanan Akta Notaris Lainnya -->
                         <div v-if="localizedProduct.paket?.length > 1" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Akta Notaris Lainnya</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.notarisVirtualDanAktaDetail.sidebar.other_paket_title") }}</h3>
                             <div class="flex flex-col gap-2">
                                 <button
                                     v-for="paket in localizedProduct.paket.filter(p => p.id !== selectedPaketId)"
@@ -591,7 +589,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                             <p class="text-[12px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug">
                                                 {{ paket.nama }}
                                             </p>
-                                            <p class="text-[11px] font-bold text-primary">Mulai dari {{ paket.harga }}</p>
+                                            <p class="text-[11px] font-bold text-primary">{{ t("services.notarisVirtualDanAktaDetail.plans.mulai_dari") }} {{ paket.harga }}</p>
                                         </div>
                                     </div>
                                     <svg class="h-4 w-4 flex-shrink-0 text-[#686964] group-hover:text-primary transition-colors"
@@ -604,7 +602,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
 
                         <!-- Layanan Terkait -->
                         <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">Layanan Terkait</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.notarisVirtualDanAktaDetail.sidebar.related_title") }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
@@ -617,12 +615,12 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                     </p>
                                     <hr class="border-[#E8E8E6]" />
                                     <div>
-                                        <div class="text-[11px] text-[#686964] mb-0.5">Mulai dari</div>
+                                        <div class="text-[11px] text-[#686964] mb-0.5">{{ t("services.notarisVirtualDanAktaDetail.sidebar.related_from") }}</div>
                                         <div class="text-[18px] font-bold text-primary leading-none">{{ related.price_label }}</div>
                                     </div>
                                     <div
                                         class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors">
-                                        Selengkapnya
+                                        {{ t("services.notarisVirtualDanAktaDetail.sidebar.related_cta") }}
                                         <svg class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -638,9 +636,10 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
         </section>
 
         <FooterCTA
-            title="Tidak Menemukan Layanan yang Anda Cari?"
-            description="Tim kami siap membantu Anda menemukan solusi yang tepat<br class='hidden sm:block' /> untuk kebutuhan legalitas bisnis Anda."
-            :whatsapp-link="buildWhatsappLink('layanan akta notaris')"
+            :title="t('services.notarisVirtualDanAktaDetail.footer.title')"
+            :description="t('services.notarisVirtualDanAktaDetail.footer.desc')"
+            :button-text="t('services.notarisVirtualDanAktaDetail.footer.cta')"
+            :whatsapp-link="buildWhatsappLink(t('services.notarisVirtualDanAktaDetail.footer.wa_subject'))"
         />
     </MainLayout>
 </template>

@@ -6,6 +6,10 @@ export default {
     back: "Kembali",
     sections: {
         penjelasan: "Penjelasan Umum",
+        penjelasan_layanan: "Penjelasan Layanan",
+        legalitas_didapatkan: "Dokumen Legalitas yang Anda Dapatkan",
+        paket_layanan: "Paket Layanan",
+        biaya_layanan: "Biaya Layanan",
         syarat: "Syarat dan Ketentuan",
         keuntungan: "Keuntungan & Manfaat",
         alur: "Alur Proses",

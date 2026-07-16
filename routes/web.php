@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Service;
+use App\Mail\ContactFormSubmitted;
 
 $resolveBaseUrl = static function (Request $request): string {
     $configuredUrl = rtrim((string) config('app.url'), '/');
@@ -70,6 +72,25 @@ $serviceSchema = static function (string $baseUrl, array $service, ?string $pric
 };
 
 // ARTIKEL / BLOG
+$parseIndonesianArticleDate = static function (?string $date): int {
+    $months = [
+        'januari' => 1, 'februari' => 2, 'maret' => 3, 'april' => 4,
+        'mei' => 5, 'juni' => 6, 'juli' => 7, 'agustus' => 8,
+        'september' => 9, 'oktober' => 10, 'november' => 11, 'desember' => 12,
+    ];
+
+    if (!$date || !preg_match('/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/u', trim($date), $matches)) {
+        return 0;
+    }
+
+    $month = $months[strtolower($matches[2])] ?? 0;
+    if ($month === 0) {
+        return 0;
+    }
+
+    return mktime(0, 0, 0, $month, (int) $matches[1], (int) $matches[3]);
+};
+
 $articles = (static function (): array {
     $path = public_path('data/articles.json');
     if (!file_exists($path)) {
@@ -84,6 +105,8 @@ $articles = collect($articles)
         $article['detail_path'] = '/artikel/' . $article['id'];
         return $article;
     })
+    ->sortByDesc(fn(array $article): int => $parseIndonesianArticleDate($article['date'] ?? null))
+    ->values()
     ->all();
 
 Route::get('/', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $articles) {
@@ -3044,6 +3067,23 @@ Route::post('/kerjasama', function (Request $request) {
 
     return back()->with('success', 'Pendaftaran mitra referral Anda berhasil dikirim. Tim kami akan segera menghubungi Anda.');
 })->name('kerjasama.store');
+
+// FORMULIR KONTAK (Home) — dipanggil via axios/fetch dari form kontak di beranda,
+// dikirim bersamaan dengan redirect WhatsApp di sisi client.
+Route::post('/kontak', function (Request $request) {
+    $data = $request->validate([
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'email', 'max:255'],
+        'whatsapp' => ['required', 'string', 'max:30'],
+        'business' => ['nullable', 'string', 'max:255'],
+        'message' => ['required', 'string', 'max:2000'],
+    ]);
+
+    Mail::to(config('mail.contact_recipient'))
+        ->send(new ContactFormSubmitted($data));
+
+    return response()->json(['message' => 'Pesan berhasil dikirim.']);
+})->name('kontak.store');
 
 // MINTA PENAWARAN
 Route::get('/minta-penawaran', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {

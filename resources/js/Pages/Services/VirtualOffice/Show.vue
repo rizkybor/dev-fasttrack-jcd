@@ -4,7 +4,8 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -17,11 +18,9 @@ const props = defineProps({
     },
 });
 
-const whatsappNumber = "6282298604144";
-
+const { buildWhatsappLink: waLink } = useWhatsapp("virtual_office");
 const buildWhatsappLink = (productName, packageName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName} (${packageName}).`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    return waLink(packageName ? `${productName} - ${packageName}` : productName);
 };
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -128,7 +127,7 @@ const selectedPackagePrice = computed(
                         <a
                             href="/layanan"
                             class="flex-shrink-0 text-xs sm:text-sm font-medium text-[#9e1f16] hover:underline"
-                            >Layanan</a
+                            >{{ t("services.virtualOfficeDetail.breadcrumb.layanan") }}</a
                         >
                         <svg
                             class="h-2.5 w-2.5 sm:h-3 sm:w-3 flex-shrink-0 text-[#9e1f16]"
@@ -194,7 +193,7 @@ const selectedPackagePrice = computed(
                                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
                             />
                         </svg>
-                        Kembali
+                        {{ t("services.virtualOfficeDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -272,7 +271,7 @@ const selectedPackagePrice = computed(
                                 <h2
                                     class="text-xs font-bold uppercase leading-snug tracking-wide text-black sm:text-[15px] sm:tracking-widest"
                                 >
-                                    Keunggulan Virtual Office Fasttrack
+                                    {{ t("services.virtualOfficeDetail.sections.keunggulan_heading") }}
                                 </h2>
                             </div>
                             <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
@@ -432,7 +431,7 @@ const selectedPackagePrice = computed(
                                     </table>
                                 </div>
                             <p class="mt-2 text-[10px] text-[#B7B8B4] sm:hidden">
-                                Geser tabel untuk melihat paket lainnya →
+                                {{ t("services.virtualOfficeDetail.table.swipe_hint") }}
                             </p>
 
                             <div
@@ -468,7 +467,7 @@ const selectedPackagePrice = computed(
                                         class="h-4 w-4"
                                         alt="wa"
                                     />
-                                    Konsultasi via Whatsapp
+                                    {{ t("services.virtualOfficeDetail.table.konsultasi_cta") }}
                                 </a>
                             </div>
                         </div>
@@ -517,7 +516,7 @@ const selectedPackagePrice = computed(
                                         <p
                                             class="text-[12px] font-bold text-white sm:text-[13px]"
                                         >
-                                            Lokasi {{ loc.location }}
+                                            {{ t("services.virtualOfficeDetail.gallery.lokasi_prefix") }} {{ loc.location }}
                                         </p>
                                         <span
                                             class="mt-1 inline-block rounded bg-white/20 px-1.5 py-0.5 text-[9px] text-white backdrop-blur-sm sm:text-[10px]"
@@ -632,7 +631,7 @@ const selectedPackagePrice = computed(
                                 }}{{ paketReguler.per_tahun }}
                             </div>
                             <div class="text-[10px] text-[#686964] mb-3 sm:text-[11px] sm:mb-4">
-                                *Harga final dikonfirmasi setelah konsultasi
+                                {{ t("services.virtualOfficeDetail.sidebar.price_note") }}
                             </div>
                             <a
                                 :href="
@@ -678,7 +677,7 @@ const selectedPackagePrice = computed(
                             <h3
                                 class="text-[13px] font-bold text-[#1A1B18] mb-3 sm:mb-4"
                             >
-                                Layanan Terkait
+                                {{ t("services.virtualOfficeDetail.sidebar.related_title") }}
                             </h3>
                             <div class="flex flex-col gap-3">
                                 <a
@@ -709,7 +708,7 @@ const selectedPackagePrice = computed(
                                             <div
                                                 class="text-[11px] text-[#686964] mb-0.5"
                                             >
-                                                Mulai dari
+                                                {{ t("services.virtualOfficeDetail.sidebar.related_from") }}
                                             </div>
                                             <div
                                                 class="text-[16px] font-bold text-primary leading-none sm:text-[18px]"
@@ -721,7 +720,7 @@ const selectedPackagePrice = computed(
                                     <div
                                         class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors"
                                     >
-                                        Selengkapnya
+                                        {{ t("services.virtualOfficeDetail.sidebar.related_cta") }}
                                         <svg
                                             class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
                                             fill="none"
@@ -745,9 +744,10 @@ const selectedPackagePrice = computed(
         </section>
 
         <FooterCTA
-            title="Tidak Menemukan Layanan yang Anda Cari?"
-            description="Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda."
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar', '')"
+            :title="t('services.virtualOfficeDetail.footer.title')"
+            :description="t('services.virtualOfficeDetail.footer.desc')"
+            :button-text="t('services.virtualOfficeDetail.footer.cta')"
+            :whatsapp-link="buildWhatsappLink(t('services.virtualOfficeDetail.footer.wa_subject'), '')"
         />
     </MainLayout>
 </template>

@@ -12,6 +12,11 @@ export default {
         dokumen: "Required Documents & Information",
         paket: "Packages & Pricing",
         dasar_hukum: "Legal Basis",
+        index_visa: "Select Visit Visa Index",
+        penjelasan_layanan: "Service Explanation",
+        dokumen_didapat: "Documents You Will Receive",
+        persyaratan_dokumen: "Document Requirements",
+        rincian_biaya: "Cost Details",
     },
     plans: {
         mulai_dari: "Starting from",
@@ -20,6 +25,7 @@ export default {
         termasuk: "Included",
         bonus: "Bonus",
         pesan: "Order Now",
+        biaya_penanganan: "Handling Fee",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
@@ -33,6 +39,8 @@ export default {
         related_from: "Starting from",
         related_packages: "Packages",
         related_cta: "See More",
+        free_konsultasi_badge: "Free Consultation",
+        index_lainnya_title: "Other Visa Indexes",
     },
     footer: {
         title: "Can't Find the Service You're Looking For?",

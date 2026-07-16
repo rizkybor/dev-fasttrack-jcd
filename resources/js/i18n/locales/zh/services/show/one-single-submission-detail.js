@@ -6,6 +6,10 @@ export default {
     back: "返回",
     sections: {
         penjelasan: "总体说明",
+        penjelasan_layanan: "服务说明",
+        legalitas_didapatkan: "您将收到的法律文件",
+        paket_layanan: "服务套餐",
+        biaya_layanan: "服务费",
         syarat: "条款与条件",
         keuntungan: "优势与效益",
         alur: "流程说明",

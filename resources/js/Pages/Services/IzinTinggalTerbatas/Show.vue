@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const props = defineProps({
@@ -17,12 +18,10 @@ const props = defineProps({
     },
 });
 
-const whatsappNumber = "6282298604144";
-
+const { buildWhatsappLink: waLink } = useWhatsapp("imigrasi");
 const buildWhatsappLink = (productName, jenis) => {
     const jenisLabel = jenis === "perpanjangan" ? "Perpanjangan" : "Baru";
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName} (${jenisLabel}).`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    return waLink(`${productName} (${jenisLabel})`);
 };
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -63,30 +62,6 @@ const jenisPengajuan = ref("baru");
 const hasToggle = computed(() => !!product.value?.perpanjangan);
 
 const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
-
-const sidebarFeatures = computed(() => {
-    const data = {
-        id: [
-            "Konsultasi pertama gratis",
-            "Harga transparan, tanpa biaya tersembunyi",
-            "Tim berpengalaman 18+ tahun",
-            "Update proses berkala via WhatsApp",
-        ],
-        en: [
-            "First consultation free",
-            "Transparent pricing, no hidden fees",
-            "Team with 18+ years of experience",
-            "Regular process updates via WhatsApp",
-        ],
-        zh: [
-            "首次咨询免费",
-            "价格透明，无隐藏费用",
-            "18年以上经验团队",
-            "通过 WhatsApp 定期更新进度",
-        ],
-    };
-    return data[locale.value] ?? data.id;
-});
 </script>
 
 <template>
@@ -259,7 +234,7 @@ const sidebarFeatures = computed(() => {
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Pilih Jenis Pengajuan
+                                    {{ t("services.izinTinggalTerbatasDetail.sections.toggle_title") }}
                                 </h2>
                             </div>
 
@@ -275,7 +250,7 @@ const sidebarFeatures = computed(() => {
                                             : 'text-[#686964] hover:text-black'
                                     "
                                 >
-                                    Baru
+                                    {{ t("services.izinTinggalTerbatasDetail.toggle.baru") }}
                                 </button>
                                 <button
                                     @click="jenisPengajuan = 'perpanjangan'"
@@ -286,7 +261,7 @@ const sidebarFeatures = computed(() => {
                                             : 'text-[#686964] hover:text-black'
                                     "
                                 >
-                                    Perpanjangan
+                                    {{ t("services.izinTinggalTerbatasDetail.toggle.perpanjangan") }}
                                 </button>
                             </div>
                         </div>
@@ -338,7 +313,7 @@ const sidebarFeatures = computed(() => {
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Jenis Dokumen yang akan Di Dapatkan
+                                    {{ t("services.izinTinggalTerbatasDetail.sections.dokumen_didapat") }}
                                 </h2>
                             </div>
                             <ul class="space-y-3">
@@ -447,7 +422,7 @@ const sidebarFeatures = computed(() => {
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Rincian Biaya
+                                    {{ t("services.izinTinggalTerbatasDetail.sections.rincian_biaya") }}
                                 </h2>
                             </div>
 
@@ -724,8 +699,6 @@ const sidebarFeatures = computed(() => {
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li
-                                    v-for="(feat, fi) in sidebarFeatures"
-                                    :key="`feat-${fi}`"
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
                                 >
                                     <img
@@ -733,7 +706,37 @@ const sidebarFeatures = computed(() => {
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    {{ feat }}
+                                    {{ t("services.izinTinggalTerbatasDetail.sidebar.benefit_1") }}
+                                </li>
+                                <li
+                                    class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
+                                >
+                                    <img
+                                        src="/icons/ft-done.svg"
+                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
+                                        alt="done"
+                                    />
+                                    {{ t("services.izinTinggalTerbatasDetail.sidebar.benefit_2") }}
+                                </li>
+                                <li
+                                    class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
+                                >
+                                    <img
+                                        src="/icons/ft-done.svg"
+                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
+                                        alt="done"
+                                    />
+                                    {{ t("services.izinTinggalTerbatasDetail.sidebar.benefit_3") }}
+                                </li>
+                                <li
+                                    class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
+                                >
+                                    <img
+                                        src="/icons/ft-done.svg"
+                                        class="mt-0.5 h-4 w-4 flex-shrink-0"
+                                        alt="done"
+                                    />
+                                    {{ t("services.izinTinggalTerbatasDetail.sidebar.benefit_4") }}
                                 </li>
                             </ul>
                         </div>
@@ -835,7 +838,7 @@ const sidebarFeatures = computed(() => {
             :title="t('services.izinTinggalTerbatasDetail.footer.title')"
             :description="t('services.izinTinggalTerbatasDetail.footer.desc')"
             :button-text="t('services.izinTinggalTerbatasDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar', jenisPengajuan)"
+            :whatsapp-link="buildWhatsappLink(t('services.izinTinggalTerbatasDetail.footer.wa_subject'), jenisPengajuan)"
         />
     </MainLayout>
 </template>

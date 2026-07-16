@@ -4,7 +4,8 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed, watch } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -17,12 +18,7 @@ const props = defineProps({
     },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -132,7 +128,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">Layanan</a>
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{ t("services.penerjemahDetail.breadcrumb.layanan") }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -158,7 +154,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Kembali
+                        {{ t("services.penerjemahDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -176,7 +172,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Informasi</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.penerjemahDetail.sections.informasi") }}</h2>
                             </div>
                             <div class="space-y-4">
                                 <p v-for="(paragraph, index) in product.content" :key="`content-${index}`"
@@ -208,7 +204,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
                                 <input v-model="bahasaSearch" type="text"
-                                    placeholder="Cari bahasa... mis. Jepang, Arab, Jerman"
+                                    :placeholder="t('services.penerjemahDetail.table.search_placeholder')"
                                     class="w-full border border-[#D9DAD8] rounded-lg pl-8 pr-3 py-2 text-[11px] sm:text-[12px] text-[#3D3D3A] placeholder-[#A8A8A4] focus:outline-none focus:border-[#9e1f16]/40 transition-colors bg-white" />
                             </div>
 
@@ -219,10 +215,10 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                     <div class="grid grid-cols-2 bg-[#F5F5F3]">
                                         <div
                                             class="px-4 py-2.5 text-[11px] font-semibold text-[#686964] uppercase tracking-wider border-r border-[#D9DAD8]">
-                                            Bahasa / Wilayah</div>
+                                            {{ t("services.penerjemahDetail.table.column_bahasa") }}</div>
                                         <div
                                             class="px-4 py-2.5 text-[11px] font-semibold text-[#686964] uppercase tracking-wider">
-                                            Bahasa / Wilayah</div>
+                                            {{ t("services.penerjemahDetail.table.column_bahasa") }}</div>
                                     </div>
                                     <!-- Body -->
                                     <template v-if="bahasaRows.length">
@@ -251,7 +247,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                         </svg>
-                                        <p class="text-[13px] text-[#686964]">Tidak ada bahasa yang cocok dengan "<span
+                                        <p class="text-[13px] text-[#686964]">{{ t("services.penerjemahDetail.table.empty_search") }} "<span
                                                 class="font-semibold text-[#3D3D3A]">{{ bahasaSearch }}</span>"</p>
                                     </div>
                                 </div>
@@ -259,7 +255,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                 <!-- Pagination Bar Desktop -->
                                 <div class="flex items-center justify-between mt-4 min-w-0 gap-3">
                                     <span class="text-[11px] sm:text-[12px] text-[#686964] flex-shrink-0 tabular-nums">
-                                        {{ bahasaDisplayCount }} Row
+                                        {{ t("services.penerjemahDetail.table.row_count", { count: bahasaDisplayCount }) }}
                                     </span>
                                     <div class="flex items-center gap-1.5 flex-shrink-0">
                                         <button @click="bahasaPage = Math.max(1, bahasaPage - 1)"
@@ -273,7 +269,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                         </button>
                                         <span
                                             class="text-[11px] sm:text-[12px] text-[#3D3D3A] whitespace-nowrap px-1.5 tabular-nums">
-                                            Page {{ bahasaPage }} of {{ totalBahasaPages }}
+                                            {{ t("services.penerjemahDetail.table.page_info", { page: bahasaPage, total: totalBahasaPages }) }}
                                         </span>
                                         <button @click="bahasaPage = Math.min(totalBahasaPages, bahasaPage + 1)"
                                             :disabled="bahasaPage >= totalBahasaPages"
@@ -285,8 +281,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                         </button>
                                     </div>
                                     <div class="flex items-center gap-1.5 flex-shrink-0">
-                                        <span class="text-[11px] sm:text-[12px] text-[#686964] whitespace-nowrap">Rows
-                                            per page</span>
+                                        <span class="text-[11px] sm:text-[12px] text-[#686964] whitespace-nowrap">{{ t("services.penerjemahDetail.table.rows_per_page") }}</span>
                                         <select v-model.number="bahasaRowsPerPage"
                                             class="border border-[#D9DAD8] rounded px-2 py-1 text-[11px] sm:text-[12px] text-[#3D3D3A] bg-white focus:outline-none focus:border-[#9e1f16]/40 cursor-pointer appearance-none pr-5"
                                             style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22%23686694%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z%22 clip-rule=%22evenodd%22 /%3E%3C/svg%3E'); background-position: right 4px center; background-repeat: no-repeat; background-size: 14px;">
@@ -307,7 +302,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                     </svg>
-                                    <input v-model="bahasaSearch" type="text" placeholder="Cari bahasa..."
+                                    <input v-model="bahasaSearch" type="text" :placeholder="t('services.penerjemahDetail.table.search_placeholder_mobile')"
                                         class="w-full border border-[#D9DAD8] rounded-lg pl-9 pr-3 py-2.5 text-[13px] text-[#3D3D3A] placeholder-[#A8A8A4] focus:outline-none focus:border-[#9e1f16]/40 transition-colors bg-white" />
                                 </div>
 
@@ -316,7 +311,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                     class="border border-[#D9DAD8] rounded-lg overflow-hidden">
                                     <div
                                         class="bg-[#F5F5F3] px-3 py-2 text-[10px] font-semibold text-[#686964] uppercase tracking-wider border-b border-[#D9DAD8]">
-                                        Bahasa / Wilayah
+                                        {{ t("services.penerjemahDetail.table.column_bahasa") }}
                                     </div>
                                     <div v-for="(item, i) in bahasaMobileRows" :key="`bm-${i}`"
                                         class="flex items-center gap-2.5 px-3 py-2.5"
@@ -334,13 +329,13 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                     </svg>
-                                    <p class="text-[12px] text-[#686964]">Tidak ada bahasa ditemukan</p>
+                                    <p class="text-[12px] text-[#686964]">{{ t("services.penerjemahDetail.table.empty_mobile") }}</p>
                                 </div>
 
                                 <!-- Pagination mobile -->
                                 <div class="flex items-center justify-between mt-3 min-w-0 gap-2">
                                     <span class="text-[10px] text-[#686964] flex-shrink-0 tabular-nums">
-                                        {{ bahasaDisplayCount }} Bahasa
+                                        {{ t("services.penerjemahDetail.table.bahasa_count", { count: bahasaDisplayCount }) }}
                                     </span>
                                     <div class="flex items-center gap-1.5 flex-shrink-0">
                                         <button @click="bahasaPage = Math.max(1, bahasaPage - 1)"
@@ -364,7 +359,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                         </button>
                                     </div>
                                     <div class="flex items-center gap-1 flex-shrink-0">
-                                        <span class="text-[10px] text-[#686964]">Per hal.</span>
+                                        <span class="text-[10px] text-[#686964]">{{ t("services.penerjemahDetail.table.per_page_mobile") }}</span>
                                         <select v-model.number="bahasaRowsPerPage"
                                             class="border border-[#D9DAD8] rounded px-1.5 py-1 text-[10px] text-[#3D3D3A] bg-white focus:outline-none appearance-none pr-3"
                                             style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22%23686694%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z%22 clip-rule=%22evenodd%22 /%3E%3C/svg%3E'); background-position: right 2px center; background-repeat: no-repeat; background-size: 10px;">
@@ -382,7 +377,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Mengapa Memilih FastTrack?
+                                    {{ t("services.penerjemahDetail.sections.mengapa_fasttrack") }}
                                 </h2>
                             </div>
 
@@ -434,7 +429,7 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                             </div>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex-shrink-0 flex items-center justify-center gap-1.5 rounded-lg bg-white px-3 py-2 sm:px-4 sm:py-2.5 text-[11px] sm:text-[13px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors">
-                                Hubungi Kami
+                                {{ t("services.penerjemahDetail.hubungi_kami") }}
                                 <svg class="h-3 w-3 sm:h-3.5 sm:w-3.5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -453,19 +448,18 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                             <div class="relative mb-4">
                                 <div class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5">
                                     <span class="text-[14px] font-extrabold uppercase tracking-widest text-white">
-                                        FASTTRACK – VIP LINE
+                                        {{ t("services.penerjemahDetail.sidebar.vip_title") }}
                                     </span>
                                 </div>
                             </div>
-                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                Pendirian Badan Usaha Selesai dalam<br />1 (Satu) Hari
-                            </p>
+                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
+                                v-html="t('services.penerjemahDetail.sidebar.vip_desc')"></p>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{ t("services.penerjemahDetail.sidebar.vip_cta") }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{ t("services.penerjemahDetail.sidebar.vip_note") }}</div>
                         </div>
 
                         <!-- Price Card -->
@@ -478,29 +472,29 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </div>
-                            <div class="text-[12px] text-[#686964] mb-1">Harga</div>
+                            <div class="text-[12px] text-[#686964] mb-1">{{ t("services.penerjemahDetail.sidebar.price_label") }}</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
                                 {{ product.price_label }}
                             </div>
-                            <div class="text-[11px] text-[#686964] mb-4">*Harga final dikonfirmasi setelah konsultasi
+                            <div class="text-[11px] text-[#686964] mb-4">{{ t("services.penerjemahDetail.sidebar.price_note") }}
                             </div>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-6 w-6 flex-shrink-0" alt="wa" />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.penerjemahDetail.sidebar.konsultasi_cta") }}
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Soft fee Awal Terjamin
+                                    {{ t("services.penerjemahDetail.sidebar.benefit_1") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Mudah Me-Trust Terjemahan
+                                    {{ t("services.penerjemahDetail.sidebar.benefit_2") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Gratis Revisi
+                                    {{ t("services.penerjemahDetail.sidebar.benefit_3") }}
                                 </li>
                             </ul>
                         </div>
@@ -525,15 +519,16 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                 class="flex-shrink-0 inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-4 py-2.5 text-[13px] font-semibold text-white hover:bg-[#20BD5A] transition-colors">
                 <img src="/icons/ft-wa.svg" class="h-5 w-5" alt="wa" />
-                Hubungi Kami
+                {{ t("services.penerjemahDetail.hubungi_kami") }}
             </a>
         </div>
 
         <div class="pb-16 lg:pb-0">
             <FooterCTA
-                title="Tidak Menemukan Layanan yang Anda Cari?"
-                description="Tim kami siap membantu Anda menemukan solusi yang tepat<br class='hidden sm:block' /> untuk kebutuhan legalitas bisnis Anda."
-                :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar')"
+                :title="t('services.penerjemahDetail.footer.title')"
+                :description="t('services.penerjemahDetail.footer.desc')"
+                :button-text="t('services.penerjemahDetail.footer.cta')"
+                :whatsapp-link="buildWhatsappLink(t('services.penerjemahDetail.footer.wa_subject'))"
             />
         </div>
     </MainLayout>

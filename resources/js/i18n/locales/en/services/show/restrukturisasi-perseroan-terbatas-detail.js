@@ -12,6 +12,7 @@ export default {
         dokumen: "Required Documents & Information",
         paket: "Packages & Pricing",
         dasar_hukum: "Legal Basis",
+        biaya_layanan: "Service Fee",
     },
     plans: {
         mulai_dari: "Starting from",
@@ -20,6 +21,7 @@ export default {
         termasuk: "Included",
         bonus: "Bonus",
         pesan: "Order Now",
+        hubungi_kami: "Contact Us",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
@@ -33,12 +35,13 @@ export default {
         related_from: "Starting from",
         related_packages: "Packages",
         related_cta: "See More",
+        free_konsultasi_badge: "Free Consultation",
     },
     footer: {
         title: "Can't Find the Service You're Looking For?",
         desc: "Our team is ready to help you find the right solution for your business legal needs.",
         cta: "Chat Directly via WhatsApp",
-        wa_subject: "an unlisted service",
+        wa_subject: "company restructuring services",
     },
     wa_message: "Hello FastTrack, I would like to consult about",
 }

@@ -12,6 +12,7 @@ export default {
         dokumen: "Dokumen dan Informasi yang Diperlukan",
         paket: "Paket & Harga",
         dasar_hukum: "Dasar Hukum",
+        biaya_layanan: "Biaya Layanan",
     },
     plans: {
         mulai_dari: "Mulai dari",
@@ -20,6 +21,8 @@ export default {
         termasuk: "Termasuk",
         bonus: "Bonus",
         pesan: "Pesan Sekarang",
+        gratis_konsultasi: "GRATIS Konsultasi Pra dan Pasca Seleksi",
+        mendapatkan: "Mendapatkan",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
@@ -38,5 +41,7 @@ export default {
         title: "Tidak Menemukan Layanan yang Anda Cari?",
         desc: "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
         cta: "Chat Langsung via WhatsApp",
+        wa_subject: "layanan penutupan badan usaha",
     },
+    wa_message: "Halo FastTrack, saya ingin konsultasi mengenai",
 }

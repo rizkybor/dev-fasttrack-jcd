@@ -1,7 +1,9 @@
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from "vue";
+import { ref, reactive, onMounted, onUnmounted, computed } from "vue";
 import { useI18n } from "vue-i18n";
+import axios from "axios";
 import MainLayout from "@/Layouts/MainLayout.vue";
+import InputError from "@/Components/InputError.vue";
 import { useModals } from "@/Composables/useModals";
 import GeneratorNamaModal from "@/Components/ModalGenerateName.vue";
 import CekNamaModal from "@/Components/ModalCheckName.vue";
@@ -33,6 +35,114 @@ const props = defineProps({
 const { serviceCategories } = useServiceCategories();
 
 const { t } = useI18n();
+
+/* ------------------------------------------------------------------ */
+/* Kontak (Home) form — validasi, redirect WhatsApp + kirim email      */
+/* ------------------------------------------------------------------ */
+
+const contactForm = reactive({
+    name: "",
+    email: "",
+    whatsapp: "",
+    business: "",
+    message: "",
+});
+const contactNotRobot = ref(false);
+const contactAgreeTerms = ref(false);
+const contactErrors = reactive({});
+const contactSubmitting = ref(false);
+const contactEmailFailed = ref(false);
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const WHATSAPP_PATTERN = /^[0-9+\-\s]{8,20}$/;
+
+const validateContactForm = () => {
+    const errors = {};
+
+    if (!contactForm.name.trim()) {
+        errors.name = t("home.contact.errors.name_required");
+    }
+
+    if (!contactForm.email.trim()) {
+        errors.email = t("home.contact.errors.email_required");
+    } else if (!EMAIL_PATTERN.test(contactForm.email.trim())) {
+        errors.email = t("home.contact.errors.email_invalid");
+    }
+
+    if (!contactForm.whatsapp.trim()) {
+        errors.whatsapp = t("home.contact.errors.whatsapp_required");
+    } else if (!WHATSAPP_PATTERN.test(contactForm.whatsapp.trim())) {
+        errors.whatsapp = t("home.contact.errors.whatsapp_invalid");
+    }
+
+    if (!contactForm.message.trim()) {
+        errors.message = t("home.contact.errors.message_required");
+    }
+
+    if (!contactNotRobot.value) {
+        errors.robot = t("home.contact.errors.robot_required");
+    }
+
+    if (!contactAgreeTerms.value) {
+        errors.agree = t("home.contact.errors.agree_required");
+    }
+
+    Object.keys(contactErrors).forEach((key) => delete contactErrors[key]);
+    Object.assign(contactErrors, errors);
+
+    return Object.keys(errors).length === 0;
+};
+
+const buildContactWhatsappMessage = () => {
+    const lines = [
+        "Halo FastTrack, saya ingin menghubungi tim Anda melalui formulir kontak website.",
+        "",
+        `Nama: ${contactForm.name}`,
+        `Email: ${contactForm.email}`,
+        `WhatsApp: ${contactForm.whatsapp}`,
+    ];
+
+    if (contactForm.business.trim()) {
+        lines.push(`Bidang Usaha: ${contactForm.business}`);
+    }
+
+    lines.push("", "Pesan:", contactForm.message);
+
+    return lines.join("\n");
+};
+
+const submitContactForm = () => {
+    contactEmailFailed.value = false;
+
+    if (!validateContactForm()) return;
+
+    contactSubmitting.value = true;
+
+    // Kirim email di background — tidak memblokir redirect WhatsApp di bawah.
+    axios
+        .post("/kontak", { ...contactForm })
+        .catch((error) => {
+            contactEmailFailed.value = true;
+            console.error("Gagal mengirim email formulir kontak:", error);
+        })
+        .finally(() => {
+            contactSubmitting.value = false;
+        });
+
+    const whatsappHref = waLink("", {
+        greeting: buildContactWhatsappMessage(),
+    });
+    window.open(whatsappHref, "_blank", "noopener,noreferrer");
+
+    // Reset form setelah dikirim
+    contactForm.name = "";
+    contactForm.email = "";
+    contactForm.whatsapp = "";
+    contactForm.business = "";
+    contactForm.message = "";
+    contactNotRobot.value = false;
+    contactAgreeTerms.value = false;
+};
 
 const {
     showGeneratorModal,
@@ -512,7 +622,9 @@ onUnmounted(() => {
 
                     <!-- CTA Button — tampil di semua ukuran -->
                     <a
-                        href="/konsultasi"
+                        :href="waLink(t('home.vip.title'))"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg border border-[#F9F9F9] bg-[#9e1f16] px-[23px] h-[48px] sm:h-[52px] hover:bg-[#d13a3f] transition-colors"
                     >
                         <span
@@ -1588,133 +1700,232 @@ onUnmounted(() => {
                         >
                             {{ t("home.contact.title") }}
                         </h2>
-                        <form @submit.prevent class="flex flex-col gap-4">
+                        <form
+                            @submit.prevent="submitContactForm"
+                            novalidate
+                            class="flex flex-col gap-4"
+                        >
                             <div class="flex flex-col gap-4">
-                                <div
-                                    class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
-                                >
-                                    <input
-                                        type="text"
-                                        :placeholder="t('home.contact.name')"
-                                        class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
-                                        required
-                                    />
-                                </div>
-                                <div
-                                    class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
-                                >
-                                    <input
-                                        type="email"
-                                        :placeholder="t('home.contact.email')"
-                                        class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
-                                        required
-                                    />
-                                </div>
-                                <div
-                                    class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
-                                >
-                                    <input
-                                        type="tel"
-                                        :placeholder="
-                                            t('home.contact.whatsapp')
+                                <div>
+                                    <div
+                                        class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 overflow-hidden"
+                                        :class="
+                                            contactErrors.name
+                                                ? 'outline-red-400'
+                                                : 'outline-[#E9EAEB]'
                                         "
-                                        class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
-                                        required
-                                    />
+                                    >
+                                        <input
+                                            v-model="contactForm.name"
+                                            type="text"
+                                            :placeholder="t('home.contact.name')"
+                                            class="flex-1 px-3 py-3 text-[14px] text-[#1A1B18] bg-transparent outline-none placeholder-[#8E8F8B]"
+                                        />
+                                    </div>
+                                    <InputError :message="contactErrors.name" class="mt-1" />
+                                </div>
+                                <div>
+                                    <div
+                                        class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 overflow-hidden"
+                                        :class="
+                                            contactErrors.email
+                                                ? 'outline-red-400'
+                                                : 'outline-[#E9EAEB]'
+                                        "
+                                    >
+                                        <input
+                                            v-model="contactForm.email"
+                                            type="email"
+                                            :placeholder="t('home.contact.email')"
+                                            class="flex-1 px-3 py-3 text-[14px] text-[#1A1B18] bg-transparent outline-none placeholder-[#8E8F8B]"
+                                        />
+                                    </div>
+                                    <InputError :message="contactErrors.email" class="mt-1" />
+                                </div>
+                                <div>
+                                    <div
+                                        class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 overflow-hidden"
+                                        :class="
+                                            contactErrors.whatsapp
+                                                ? 'outline-red-400'
+                                                : 'outline-[#E9EAEB]'
+                                        "
+                                    >
+                                        <input
+                                            v-model="contactForm.whatsapp"
+                                            type="tel"
+                                            :placeholder="
+                                                t('home.contact.whatsapp')
+                                            "
+                                            class="flex-1 px-3 py-3 text-[14px] text-[#1A1B18] bg-transparent outline-none placeholder-[#8E8F8B]"
+                                        />
+                                    </div>
+                                    <InputError :message="contactErrors.whatsapp" class="mt-1" />
                                 </div>
                                 <div
                                     class="flex items-center h-[44px] rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
                                 >
                                     <input
+                                        v-model="contactForm.business"
                                         type="text"
                                         :placeholder="
                                             t('home.contact.business')
                                         "
-                                        class="flex-1 px-3 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B]"
+                                        class="flex-1 px-3 py-3 text-[14px] text-[#1A1B18] bg-transparent outline-none placeholder-[#8E8F8B]"
                                     />
                                 </div>
-                                <div
-                                    class="relative rounded-lg bg-white outline outline-1 outline-[#E9EAEB] overflow-hidden"
-                                >
-                                    <textarea
-                                        rows="5"
-                                        :placeholder="t('home.contact.message')"
-                                        class="w-full px-4 py-3 text-[14px] text-[#8E8F8B] bg-transparent outline-none placeholder-[#8E8F8B] resize-none"
-                                        required
-                                    ></textarea>
-                                    <svg
-                                        class="absolute right-3 bottom-3 w-2 h-2 text-[#8E8F8B]"
-                                        viewBox="0 0 8 8"
-                                        fill="currentColor"
+                                <div>
+                                    <div
+                                        class="relative rounded-lg bg-white outline outline-1 overflow-hidden"
+                                        :class="
+                                            contactErrors.message
+                                                ? 'outline-red-400'
+                                                : 'outline-[#E9EAEB]'
+                                        "
                                     >
-                                        <path
-                                            d="M6 0L8 2V8H6V0ZM0 6L2 8H8V6H0Z"
-                                        />
-                                    </svg>
+                                        <textarea
+                                            v-model="contactForm.message"
+                                            rows="5"
+                                            :placeholder="t('home.contact.message')"
+                                            class="w-full px-4 py-3 text-[14px] text-[#1A1B18] bg-transparent outline-none placeholder-[#8E8F8B] resize-none"
+                                        ></textarea>
+                                        <svg
+                                            class="absolute right-3 bottom-3 w-2 h-2 text-[#8E8F8B]"
+                                            viewBox="0 0 8 8"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                d="M6 0L8 2V8H6V0ZM0 6L2 8H8V6H0Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <InputError :message="contactErrors.message" class="mt-1" />
                                 </div>
                             </div>
-                            <div
-                                class="flex items-center h-[53px] rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-3"
-                            >
-                                <div class="flex items-center gap-2">
-                                    <div
-                                        class="w-[14px] h-[14px] rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
-                                    ></div>
-                                    <span class="text-[12px] text-[#8E8F8B]">{{
-                                        t("home.contact.robot")
-                                    }}</span>
+                            <div>
+                                <div
+                                    class="flex items-center h-[53px] rounded-lg border bg-[#F9F9F9] px-3"
+                                    :class="
+                                        contactErrors.robot
+                                            ? 'border-red-400'
+                                            : 'border-[#D9DAD8]'
+                                    "
+                                >
+                                    <label
+                                        class="flex items-center gap-2 cursor-pointer"
+                                    >
+                                        <span
+                                            class="relative flex h-[14px] w-[14px] flex-shrink-0 items-center justify-center rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
+                                        >
+                                            <input
+                                                v-model="contactNotRobot"
+                                                type="checkbox"
+                                                class="peer absolute inset-0 h-full w-full cursor-pointer opacity-0"
+                                            />
+                                            <svg
+                                                class="hidden h-2.5 w-2.5 text-[#9e1f16] peer-checked:block pointer-events-none"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="3"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    d="M5 13l4 4L19 7"
+                                                />
+                                            </svg>
+                                        </span>
+                                        <span class="text-[12px] text-[#8E8F8B]">{{
+                                            t("home.contact.robot")
+                                        }}</span>
+                                    </label>
+                                    <div class="ml-auto flex flex-col items-center">
+                                        <svg
+                                            class="w-8 h-8 text-[#4A90D9]"
+                                            viewBox="0 0 38 38"
+                                            fill="none"
+                                        >
+                                            <path
+                                                d="M19 4C10.716 4 4 10.716 4 19C4 27.284 10.716 34 19 34C27.284 34 34 27.284 34 19"
+                                                stroke="currentColor"
+                                                stroke-width="2.5"
+                                                stroke-linecap="round"
+                                            />
+                                            <path
+                                                d="M34 19C34 15.5 32.5 12.3 30 10"
+                                                stroke="#9e1f16"
+                                                stroke-width="2.5"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        <span
+                                            class="text-[8px] text-[#8E8F8B] leading-none"
+                                            >reCAPTCHA</span
+                                        >
+                                        <span
+                                            class="text-[6px] text-[#8E8F8B] leading-none"
+                                            >Privacy - Terms</span
+                                        >
+                                    </div>
                                 </div>
-                                <div class="ml-auto flex flex-col items-center">
-                                    <svg
-                                        class="w-8 h-8 text-[#4A90D9]"
-                                        viewBox="0 0 38 38"
-                                        fill="none"
-                                    >
-                                        <path
-                                            d="M19 4C10.716 4 4 10.716 4 19C4 27.284 10.716 34 19 34C27.284 34 34 27.284 34 19"
-                                            stroke="currentColor"
-                                            stroke-width="2.5"
-                                            stroke-linecap="round"
-                                        />
-                                        <path
-                                            d="M34 19C34 15.5 32.5 12.3 30 10"
-                                            stroke="#9e1f16"
-                                            stroke-width="2.5"
-                                            stroke-linecap="round"
-                                        />
-                                    </svg>
-                                    <span
-                                        class="text-[8px] text-[#8E8F8B] leading-none"
-                                        >reCAPTCHA</span
-                                    >
-                                    <span
-                                        class="text-[6px] text-[#8E8F8B] leading-none"
-                                        >Privacy - Terms</span
-                                    >
-                                </div>
+                                <InputError :message="contactErrors.robot" class="mt-1" />
                             </div>
                             <div class="flex flex-col gap-4">
-                                <label
-                                    class="inline-flex items-center gap-[9px]"
-                                >
-                                    <div
-                                        class="w-[14px] h-[14px] flex-shrink-0 rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
-                                    ></div>
-                                    <span class="text-[12px] text-[#1A1B18]"
-                                        >{{ t("home.contact.agree") }}
-                                    </span>
-                                    <span
-                                        class="text-[12px] text-[#9e1f16] cursor-pointer"
-                                        >{{ t("home.contact.terms") }}</span
+                                <div>
+                                    <label
+                                        class="inline-flex items-center gap-[9px] cursor-pointer"
                                     >
-                                </label>
+                                        <span
+                                            class="relative flex h-[14px] w-[14px] flex-shrink-0 items-center justify-center rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
+                                        >
+                                            <input
+                                                v-model="contactAgreeTerms"
+                                                type="checkbox"
+                                                class="peer absolute inset-0 h-full w-full cursor-pointer opacity-0"
+                                            />
+                                            <svg
+                                                class="hidden h-2.5 w-2.5 text-[#9e1f16] peer-checked:block pointer-events-none"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="3"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    d="M5 13l4 4L19 7"
+                                                />
+                                            </svg>
+                                        </span>
+                                        <span class="text-[12px] text-[#1A1B18]"
+                                            >{{ t("home.contact.agree") }}
+                                        </span>
+                                        <span
+                                            class="text-[12px] text-[#9e1f16] cursor-pointer"
+                                            >{{ t("home.contact.terms") }}</span
+                                        >
+                                    </label>
+                                    <InputError :message="contactErrors.agree" class="mt-1" />
+                                </div>
+                                <p
+                                    v-if="contactEmailFailed"
+                                    class="text-[12px] text-amber-600"
+                                >
+                                    {{ t("home.contact.email_status.failed") }}
+                                </p>
                                 <button
                                     type="submit"
-                                    class="w-full h-[44px] flex items-center justify-center rounded-lg bg-[#9e1f16] hover:bg-red-600 transition-colors"
+                                    :disabled="contactSubmitting"
+                                    class="w-full h-[44px] flex items-center justify-center rounded-lg bg-[#9e1f16] hover:bg-red-600 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                                 >
                                     <span
                                         class="text-[14px] font-semibold leading-[21px] text-[#F9F9F9]"
-                                        >{{ t("home.contact.submit") }}</span
+                                        >{{
+                                            contactSubmitting
+                                                ? t("home.contact.sending")
+                                                : t("home.contact.submit")
+                                        }}</span
                                     >
                                 </button>
                             </div>

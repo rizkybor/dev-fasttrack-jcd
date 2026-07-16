@@ -194,11 +194,25 @@ export default {
         agree: "I have read and agree to the",
         terms: "Legal Terms*",
         submit: "Submit",
+        sending: "Sending...",
         hubungi: "Contact Us",
         address:
             "Grand Bintaro Blok A7, JI. Raya Bintaro Permai, Pesanggrahan, Bintaro, Jakarta Selatan - 12330",
         phone: "0217 3885 036",
         wa: "0822 9860 4144",
         email_addr: "cs{'@'}fasttrack.legal",
+        errors: {
+            name_required: "Full name is required.",
+            email_required: "Email address is required.",
+            email_invalid: "Please enter a valid email address.",
+            whatsapp_required: "WhatsApp number is required.",
+            whatsapp_invalid: "Please enter a valid WhatsApp number.",
+            message_required: "Message / service needs is required.",
+            robot_required: "Please confirm that you're not a robot.",
+            agree_required: "You must agree to the Legal Terms.",
+        },
+        email_status: {
+            failed: "Your WhatsApp message was sent, but the email failed to send. Our team will still reach out to you via WhatsApp.",
+        },
     },
 };

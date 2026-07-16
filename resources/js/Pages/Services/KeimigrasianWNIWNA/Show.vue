@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const props = defineProps({
@@ -11,12 +12,7 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("imigrasi");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -135,7 +131,7 @@ const currentSidebarPrice = computed(() =>
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Pilih Jenis Pengajuan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t('services.keimigrasianWniWnaDetail.sections.tab_title') }}</h2>
                             </div>
                             <div class="inline-flex rounded-lg border border-[#E8E8E6] overflow-hidden">
                                 <button
@@ -169,7 +165,7 @@ const currentSidebarPrice = computed(() =>
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Dokumen Persyaratan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t('services.keimigrasianWniWnaDetail.sections.dokumen_persyaratan') }}</h2>
                             </div>
                             <div class="space-y-5">
                                 <div v-for="(group, gi) in currentDokumen" :key="`dg-${gi}`"
@@ -210,7 +206,7 @@ const currentSidebarPrice = computed(() =>
                             class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Biaya Layanan</h2>
+                                <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t('services.keimigrasianWniWnaDetail.sections.biaya_layanan') }}</h2>
                             </div>
                             <div class="rounded-xl border border-[#E8E8E6] p-5">
                                 <div class="flex items-start justify-between gap-2 mb-1">
@@ -224,11 +220,11 @@ const currentSidebarPrice = computed(() =>
                                 <p class="text-[26px] font-bold text-primary leading-tight mb-2">{{ currentBiaya.harga }}</p>
                                 <div v-if="currentBiaya.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
                                     <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
-                                    <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Persiapan dan Pasca Selesai</span>
+                                    <span class="text-[11px] text-[#3D3D3A]">{{ t('services.keimigrasianWniWnaDetail.plans.gratis_konsultasi') }}</span>
                                 </div>
                                 <hr class="border-[#E8E8E6] mb-4" />
                                 <div v-if="currentBiaya.mendapatkan?.length" class="mb-4">
-                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-3">Mendapatkan</p>
+                                    <p class="text-[13px] font-bold text-[#1A1B18] mb-3">{{ t('services.keimigrasianWniWnaDetail.plans.mendapatkan') }}</p>
                                     <ul class="space-y-2">
                                         <li v-for="(m, mi) in currentBiaya.mendapatkan" :key="`bm-${mi}`"
                                             class="flex items-start gap-2">
@@ -278,21 +274,21 @@ const currentSidebarPrice = computed(() =>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
-                                Pesan Layanan Sekarang
+                                {{ t('services.keimigrasianWniWnaDetail.sidebar.vip_cta') }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">* (S&amp;K BERLAKU)</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{ t('services.keimigrasianWniWnaDetail.sidebar.vip_note') }}</div>
                         </div>
 
                         <!-- Price Card (reaktif ke tab aktif) -->
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <div class="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFF0EF] px-3 py-1">
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                                <span class="text-[11px] font-semibold text-primary">Free Konsultasi</span>
+                                <span class="text-[11px] font-semibold text-primary">{{ t('services.keimigrasianWniWnaDetail.sidebar.free_konsultasi_badge') }}</span>
                             </div>
                             <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-3">
                                 {{ currentSidebarPrice.label }}
                             </p>
-                            <div class="text-[12px] text-[#686964] mb-1">Biaya Penanganan</div>
+                            <div class="text-[12px] text-[#686964] mb-1">{{ t('services.keimigrasianWniWnaDetail.sidebar.biaya_penanganan') }}</div>
                             <div class="text-[28px] font-bold leading-none text-primary mb-4">
                                 {{ currentSidebarPrice.harga }}
                             </div>
@@ -325,7 +321,7 @@ const currentSidebarPrice = computed(() =>
                                         </div>
                                         <span v-if="related.paket_count"
                                             class="text-[11px] text-[#686964] border border-[#E8E8E6] rounded px-2 py-0.5">
-                                            {{ related.paket_count }} Paket
+                                            {{ related.paket_count }} {{ t('services.keimigrasianWniWnaDetail.sidebar.related_packages') }}
                                         </span>
                                     </div>
                                     <div class="flex items-center justify-center gap-2 rounded-xl border border-primary py-2 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors">
@@ -346,8 +342,8 @@ const currentSidebarPrice = computed(() =>
         </section>
 
         <FooterCTA
-            title="Butuh Konsultasi Keimigrasian?"
-            description="Tim kami siap membantu kebutuhan keimigrasian Anda<br class='hidden sm:block' /> secara profesional dan sesuai ketentuan yang berlaku."
+            :title="t('services.keimigrasianWniWnaDetail.footer.title')"
+            :description="t('services.keimigrasianWniWnaDetail.footer.desc')"
             :button-text="t('services.keimigrasianWniWnaDetail.footer.cta')"
             :whatsapp-link="buildWhatsappLink(product.name)"
         />

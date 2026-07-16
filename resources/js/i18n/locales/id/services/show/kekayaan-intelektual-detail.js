@@ -12,6 +12,9 @@ export default {
         dokumen: "Dokumen dan Informasi yang Diperlukan",
         paket: "Paket & Harga",
         dasar_hukum: "Dasar Hukum",
+        manfaat_title: "Manfaat {name}",
+        kriteria_title: "Kriteria {name} yang Dapat Didaftarkan",
+        biaya_layanan: "Biaya Layanan",
     },
     plans: {
         mulai_dari: "Mulai dari",
@@ -20,6 +23,7 @@ export default {
         termasuk: "Termasuk",
         bonus: "Bonus",
         pesan: "Pesan Sekarang",
+        hubungi_kami: "Hubungi Kami",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
@@ -33,10 +37,16 @@ export default {
         related_from: "Mulai dari",
         related_packages: "Paket",
         related_cta: "Selengkapnya",
+        benefit_1: "Konsultasi pertama gratis",
+        benefit_2: "Harga transparan, tanpa biaya tersembunyi",
+        benefit_3: "Tim berpengalaman 18+ tahun",
+        benefit_4: "Update proses berkala via WhatsApp",
     },
     footer: {
         title: "Tidak Menemukan Layanan yang Anda Cari?",
         desc: "Tim kami siap membantu Anda menemukan solusi yang tepat untuk kebutuhan legalitas bisnis Anda.",
         cta: "Chat Langsung via WhatsApp",
+        wa_subject: "layanan yang tidak terdaftar",
     },
+    wa_message: "Halo FastTrack, saya ingin konsultasi mengenai",
 }

@@ -6,6 +6,7 @@ export default {
     back: "返回",
     sections: {
         penjelasan: "总体说明",
+        kriteria: "标准",
         syarat: "条款与条件",
         keuntungan: "优势与效益",
         alur: "流程说明",

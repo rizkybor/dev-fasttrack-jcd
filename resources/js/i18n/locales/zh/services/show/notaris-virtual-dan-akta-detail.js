@@ -12,6 +12,13 @@ export default {
         dokumen: "所需文件与信息",
         paket: "套餐与价格",
         dasar_hukum: "法律依据",
+        pilih_layanan: "选择服务类型",
+        penjelasan_layanan: "服务说明",
+        penjelasan_detail: "详细说明",
+    },
+    toggle: {
+        tutup: "关闭",
+        selengkapnya: "查看更多",
     },
     plans: {
         mulai_dari: "起价",
@@ -20,6 +27,7 @@ export default {
         termasuk: "包含",
         bonus: "赠品",
         pesan: "立即订购",
+        gratis_konsultasi: "免费售前售后咨询",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP 通道",
@@ -33,6 +41,11 @@ export default {
         related_from: "起价",
         related_packages: "套餐",
         related_cta: "查看更多",
+        other_paket_title: "其他公证服务",
+        benefit_1: "首次咨询免费",
+        benefit_2: "价格透明，无隐藏费用",
+        benefit_3: "18年以上经验团队",
+        benefit_4: "通过 WhatsApp 定期更新进度",
     },
     footer: {
         title: "没有找到您需要的服务？",

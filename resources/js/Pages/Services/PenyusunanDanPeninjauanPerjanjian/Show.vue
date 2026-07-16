@@ -4,7 +4,8 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { locale } = useI18n();
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
+const { t, locale } = useI18n();
 
 const props = defineProps({
     product: {
@@ -17,12 +18,7 @@ const props = defineProps({
     },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -140,7 +136,7 @@ const filteredContractCategories = computed(() => {
                         <a
                             href="/layanan"
                             class="text-sm font-medium text-[#9e1f16] hover:underline"
-                            >Layanan</a
+                            >{{ t("services.penyusunanDanPeninjauanPerjanjianDetail.breadcrumb.layanan") }}</a
                         >
                         <svg
                             class="h-3 w-3 text-[#9e1f16]"
@@ -198,7 +194,7 @@ const filteredContractCategories = computed(() => {
                                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
                             />
                         </svg>
-                        Kembali
+                        {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.back") }}
                     </a>
                 </div>
             </div>
@@ -225,7 +221,7 @@ const filteredContractCategories = computed(() => {
                                 <h2
                                     class="text-[15px] font-bold uppercase tracking-widest text-black"
                                 >
-                                    Informasi Umum
+                                    {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sections.informasi_umum") }}
                                 </h2>
                             </div>
                             <div class="space-y-4">
@@ -259,7 +255,7 @@ const filteredContractCategories = computed(() => {
                                     <h2
                                         class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black"
                                     >
-                                        Jenis Perjanjian / Kontrak
+                                        {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sections.jenis_perjanjian") }}
                                     </h2>
                                 </div>
 
@@ -267,7 +263,7 @@ const filteredContractCategories = computed(() => {
                                     <input
                                         v-model="contractSearchQuery"
                                         type="text"
-                                        placeholder="Cari jenis perjanjian / kontrak"
+                                        :placeholder="t('services.penyusunanDanPeninjauanPerjanjianDetail.contract.search_placeholder')"
                                         class="w-full rounded-lg border border-[#D9DAD8] bg-[#F9F9F9] px-4 py-2.5 pr-10 text-[12px] sm:text-[13px] text-[#1A1B18] placeholder:text-[#9C9D99] focus:outline-none focus:ring-1 focus:ring-primary"
                                     />
                                     <svg
@@ -306,7 +302,7 @@ const filteredContractCategories = computed(() => {
                                         <span
                                             class="text-[10px] sm:text-[11px] text-[#9C9D99]"
                                         >
-                                            {{ category.items.length }} Layanan
+                                            {{ category.items.length }} {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.contract.layanan_count_suffix") }}
                                         </span>
                                     </div>
 
@@ -341,7 +337,7 @@ const filteredContractCategories = computed(() => {
                                             <span
                                                 class="flex items-center gap-1.5 text-[11px] sm:text-[12px] font-semibold text-primary whitespace-nowrap flex-shrink-0 self-end sm:self-auto pl-[38px] sm:pl-0"
                                             >
-                                                Hubungi Kami
+                                                {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.contract.hubungi_kami") }}
                                                 <svg
                                                     class="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform"
                                                     fill="none"
@@ -366,8 +362,7 @@ const filteredContractCategories = computed(() => {
                                     "
                                     class="text-[12px] sm:text-[13px] text-[#686964] text-center py-8"
                                 >
-                                    Tidak ada jenis perjanjian yang sesuai
-                                    dengan pencarian Anda.
+                                    {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.contract.empty_state") }}
                                 </p>
                             </div>
                         </div>
@@ -394,17 +389,15 @@ const filteredContractCategories = computed(() => {
                                     <span
                                         class="text-[14px] font-extrabold uppercase tracking-widest text-white"
                                     >
-                                        FASTTRACK – VIP LINE
+                                        {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.vip_title") }}
                                     </span>
                                 </div>
                             </div>
 
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                            >
-                                Pendirian Badan Usaha Selesai dalam<br />1
-                                (Satu) Hari
-                            </p>
+                                v-html="t('services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.vip_desc')"
+                            ></p>
                             <a
                                 :href="buildWhatsappLink(product.name)"
                                 target="_blank"
@@ -416,13 +409,13 @@ const filteredContractCategories = computed(() => {
                                     class="mt-0.5 h-5 w-5 flex-shrink-0"
                                     alt="wa"
                                 />
-                                Pesan Layanan Sekarang
+                                {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.vip_cta") }}
                             </a>
 
                             <div
                                 class="relative mt-3 text-[11px] text-white/60"
                             >
-                                * (S&amp;K BERLAKU)
+                                {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.vip_note") }}
                             </div>
                         </div>
 
@@ -451,7 +444,7 @@ const filteredContractCategories = computed(() => {
                                 </svg>
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1">
-                                Estimasi total biaya
+                                {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.price_label") }}
                             </div>
                             <div
                                 class="text-[32px] font-bold leading-none text-primary mb-1"
@@ -459,7 +452,7 @@ const filteredContractCategories = computed(() => {
                                 {{ product.price_label }}
                             </div>
                             <div class="text-[11px] text-[#686964] mb-4">
-                                *Harga final dikonfirmasi setelah konsultasi
+                                {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.price_note") }}
                             </div>
                             <a
                                 :href="buildWhatsappLink(product.name)"
@@ -472,7 +465,7 @@ const filteredContractCategories = computed(() => {
                                     class="mt-0.5 h-6 w-6 flex-shrink-0"
                                     alt="wa"
                                 />
-                                Konsultasi Gratis via Whatsapp
+                                {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.konsultasi_cta") }}
                             </a>
                             <ul class="mt-4 space-y-2">
                                 <li
@@ -483,7 +476,7 @@ const filteredContractCategories = computed(() => {
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Konsultasi pertama gratis
+                                    {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.benefit_1") }}
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -493,7 +486,7 @@ const filteredContractCategories = computed(() => {
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Harga transparan, tanpa biaya tersembunyi
+                                    {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.benefit_2") }}
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -503,7 +496,7 @@ const filteredContractCategories = computed(() => {
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Tim berpengalaman 18+ tahun
+                                    {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.benefit_3") }}
                                 </li>
                                 <li
                                     class="flex items-center gap-2 text-[12px] text-[#3D3D3A]"
@@ -513,7 +506,7 @@ const filteredContractCategories = computed(() => {
                                         class="mt-0.5 h-4 w-4 flex-shrink-0"
                                         alt="done"
                                     />
-                                    Update proses berkala via WhatsApp
+                                    {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.benefit_4") }}
                                 </li>
                             </ul>
                         </div>
@@ -525,7 +518,7 @@ const filteredContractCategories = computed(() => {
                             <h3
                                 class="text-[13px] font-bold text-[#1A1B18] mb-4"
                             >
-                                Layanan Terkait
+                                {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.related_title") }}
                             </h3>
                             <div class="flex flex-col gap-3">
                                 <a
@@ -562,7 +555,7 @@ const filteredContractCategories = computed(() => {
                                             <div
                                                 class="text-[11px] text-[#686964] mb-0.5"
                                             >
-                                                Mulai dari
+                                                {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.related_from") }}
                                             </div>
                                             <div
                                                 class="text-[18px] font-bold text-primary leading-none"
@@ -578,7 +571,7 @@ const filteredContractCategories = computed(() => {
                                                     ? related.plans.length
                                                     : 0
                                             }}
-                                            Paket
+                                            {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.related_packages") }}
                                         </span>
                                     </div>
 
@@ -586,7 +579,7 @@ const filteredContractCategories = computed(() => {
                                     <div
                                         class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors"
                                     >
-                                        Selengkapnya
+                                        {{ t("services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.related_cta") }}
                                         <svg
                                             class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
                                             fill="none"
@@ -610,9 +603,10 @@ const filteredContractCategories = computed(() => {
         </section>
 
         <FooterCTA
-            title="Tidak Menemukan Layanan yang Anda Cari?"
-            description="Tim kami siap membantu Anda menemukan solusi yang tepat<br class='hidden sm:block' /> untuk kebutuhan legalitas bisnis Anda."
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar')"
+            :title="t('services.penyusunanDanPeninjauanPerjanjianDetail.footer.title')"
+            :description="t('services.penyusunanDanPeninjauanPerjanjianDetail.footer.desc')"
+            :button-text="t('services.penyusunanDanPeninjauanPerjanjianDetail.footer.cta')"
+            :whatsapp-link="buildWhatsappLink(t('services.penyusunanDanPeninjauanPerjanjianDetail.footer.wa_subject'))"
         />
     </MainLayout>
 </template>

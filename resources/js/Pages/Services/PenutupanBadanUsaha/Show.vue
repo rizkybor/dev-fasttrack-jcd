@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const props = defineProps({
@@ -11,12 +12,7 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -276,7 +272,7 @@ const activeBiayaTabData = computed(
     <div class="flex items-center justify-between mb-5">
         <div class="flex items-center gap-3">
             <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-            <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">Biaya Layanan</h2>
+            <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.penutupanBadanUsahaDetail.sections.biaya_layanan") }}</h2>
         </div>
         <!-- Tab buttons (jika ada biaya_layanan_tabs) -->
         <div v-if="localizedProduct.biaya_layanan_tabs?.length"
@@ -302,11 +298,11 @@ const activeBiayaTabData = computed(
             <p class="text-[24px] font-bold text-primary leading-tight mb-2">{{ activeBiayaTabData.harga }}</p>
             <div v-if="activeBiayaTabData.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
                 <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
-                <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Pra dan Pasca Selesai</span>
+                <span class="text-[11px] text-[#3D3D3A]">{{ t("services.penutupanBadanUsahaDetail.plans.gratis_konsultasi") }}</span>
             </div>
             <hr class="border-[#E8E8E6] mb-4" />
             <div v-if="activeBiayaTabData.mendapatkan?.length" class="mb-4">
-                <p class="text-[13px] font-bold text-[#1A1B18] mb-3">Mendapatkan</p>
+                <p class="text-[13px] font-bold text-[#1A1B18] mb-3">{{ t("services.penutupanBadanUsahaDetail.plans.mendapatkan") }}</p>
                 <ul class="space-y-2.5">
                     <li v-for="(m, mi) in activeBiayaTabData.mendapatkan" :key="`m-${mi}`"
                         class="flex items-start gap-2">
@@ -344,11 +340,11 @@ const activeBiayaTabData = computed(
             <p class="text-[24px] font-bold text-primary leading-tight mb-2">{{ localizedProduct.biaya_layanan_single.harga }}</p>
             <div v-if="localizedProduct.biaya_layanan_single.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
                 <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
-                <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Pra dan Pasca Seleksi</span>
+                <span class="text-[11px] text-[#3D3D3A]">{{ t("services.penutupanBadanUsahaDetail.plans.gratis_konsultasi") }}</span>
             </div>
             <hr class="border-[#E8E8E6] mb-4" />
             <div v-if="localizedProduct.biaya_layanan_single.mendapatkan?.length" class="mb-4">
-                <p class="text-[13px] font-bold text-[#1A1B18] mb-3">Mendapatkan</p>
+                <p class="text-[13px] font-bold text-[#1A1B18] mb-3">{{ t("services.penutupanBadanUsahaDetail.plans.mendapatkan") }}</p>
                 <ul class="space-y-2.5">
                     <li v-for="(m, mi) in localizedProduct.biaya_layanan_single.mendapatkan" :key="`sm-${mi}`"
                         class="flex items-start gap-2">
@@ -388,11 +384,11 @@ const activeBiayaTabData = computed(
                 <p class="text-[22px] font-bold text-primary leading-tight mb-2">{{ card.harga }}</p>
                 <div v-if="card.gratis_konsultasi" class="flex items-center gap-1.5 mb-4">
                     <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
-                    <span class="text-[11px] text-[#3D3D3A]">GRATIS Konsultasi Pra dan Pasca Seleksi</span>
+                    <span class="text-[11px] text-[#3D3D3A]">{{ t("services.penutupanBadanUsahaDetail.plans.gratis_konsultasi") }}</span>
                 </div>
                 <hr class="border-[#E8E8E6] mb-4" />
                 <div v-if="card.mendapatkan?.length" class="mb-4">
-                    <p class="text-[12px] font-bold text-[#1A1B18] mb-2">Mendapatkan</p>
+                    <p class="text-[12px] font-bold text-[#1A1B18] mb-2">{{ t("services.penutupanBadanUsahaDetail.plans.mendapatkan") }}</p>
                     <ul class="space-y-2">
                         <li v-for="(m, mi) in card.mendapatkan" :key="`m-${ci}-${mi}`"
                             class="flex items-start gap-2">

@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const dasarHukumOpen = ref(false);
@@ -19,12 +20,7 @@ const props = defineProps({
     },
 });
 
-const whatsappNumber = "6282298604144";
-
-const buildWhatsappLink = (productName) => {
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName}.`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {
@@ -179,7 +175,7 @@ const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Manfaat {{ product.name }}
+                                    {{ t("services.kekayaanIntelektualDetail.sections.manfaat_title", { name: product.name }) }}
                                 </h2>
                             </div>
                             <ul class="space-y-3">
@@ -201,7 +197,7 @@ const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
                             <div class="flex items-center gap-3 mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                                 <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Kriteria {{ product.name }} yang Dapat Didaftarkan
+                                    {{ t("services.kekayaanIntelektualDetail.sections.kriteria_title", { name: product.name }) }}
                                 </h2>
                             </div>
                             <ol class="space-y-3">
@@ -221,7 +217,7 @@ const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
                             <div class="flex items-center gap-3 mb-6">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Biaya Layanan
+                                    {{ t("services.kekayaanIntelektualDetail.sections.biaya_layanan") }}
                                 </h2>
                             </div>
 
@@ -248,7 +244,7 @@ const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
                                         </div>
                                         <a :href="buildWhatsappLink(plan.name)" target="_blank" rel="noopener noreferrer"
                                             class="flex-shrink-0 inline-flex items-center gap-1.5 rounded-lg bg-white px-4 py-2 text-[12px] font-semibold text-[#9e1f16] hover:bg-white/90 transition-colors">
-                                            {{ plan.cta ?? 'Hubungi Kami' }}
+                                            {{ plan.cta ?? t("services.kekayaanIntelektualDetail.plans.hubungi_kami") }}
                                             <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
                                                 stroke="currentColor" stroke-width="2.5">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -348,19 +344,19 @@ const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
                             <ul class="mt-4 space-y-2">
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Konsultasi pertama gratis
+                                    {{ t("services.kekayaanIntelektualDetail.sidebar.benefit_1") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Harga transparan, tanpa biaya tersembunyi
+                                    {{ t("services.kekayaanIntelektualDetail.sidebar.benefit_2") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Tim berpengalaman 18+ tahun
+                                    {{ t("services.kekayaanIntelektualDetail.sidebar.benefit_3") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Update proses berkala via WhatsApp
+                                    {{ t("services.kekayaanIntelektualDetail.sidebar.benefit_4") }}
                                 </li>
                             </ul>
                         </div>
@@ -409,7 +405,7 @@ const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
             :title="t('services.kekayaanIntelektualDetail.footer.title')"
             :description="t('services.kekayaanIntelektualDetail.footer.desc')"
             :button-text="t('services.kekayaanIntelektualDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar')"
+            :whatsapp-link="buildWhatsappLink(t('services.kekayaanIntelektualDetail.footer.wa_subject'))"
         />
     </MainLayout>
 </template>

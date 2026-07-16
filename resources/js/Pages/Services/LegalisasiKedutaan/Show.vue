@@ -4,6 +4,7 @@ import FooterCTA from "@/Components/FooterCTA.vue";
 import { ref, computed, watch } from "vue";
 import { useI18n } from "vue-i18n";
 
+import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { t, locale } = useI18n();
 
 const props = defineProps({
@@ -17,12 +18,10 @@ const props = defineProps({
     },
 });
 
-const whatsappNumber = "6282298604144";
-
+const { buildWhatsappLink: waLink } = useWhatsapp("default");
 const buildWhatsappLink = (productName, jenis) => {
     const jenisLabel = jenis === "perpanjangan" ? "Perpanjangan" : "Baru";
-    const message = `Halo FastTrack, saya ingin konsultasi mengenai ${productName} (${jenisLabel}).`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    return waLink(`${productName} (${jenisLabel})`);
 };
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -228,16 +227,16 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <div class="flex items-center gap-3 mb-4 sm:mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Pilih Jenis Pengajuan
+                                    {{ t("services.legalisasiKedutaanDetail.sections.toggle_title") }}
                                 </h2>
                             </div>
                             <div class="inline-flex rounded-full border border-[#E8E8E6] p-1 bg-[#F7F7F5]">
                                 <button @click="jenisPengajuan = 'baru'"
                                     class="px-4 sm:px-5 py-2 rounded-full text-[12px] sm:text-[13px] font-semibold transition-colors"
-                                    :class="jenisPengajuan === 'baru' ? 'bg-primary text-white' : 'text-[#686964] hover:text-black'">Baru</button>
+                                    :class="jenisPengajuan === 'baru' ? 'bg-primary text-white' : 'text-[#686964] hover:text-black'">{{ t("services.legalisasiKedutaanDetail.toggle.baru") }}</button>
                                 <button @click="jenisPengajuan = 'perpanjangan'"
                                     class="px-4 sm:px-5 py-2 rounded-full text-[12px] sm:text-[13px] font-semibold transition-colors"
-                                    :class="jenisPengajuan === 'perpanjangan' ? 'bg-primary text-white' : 'text-[#686964] hover:text-black'">Perpanjangan</button>
+                                    :class="jenisPengajuan === 'perpanjangan' ? 'bg-primary text-white' : 'text-[#686964] hover:text-black'">{{ t("services.legalisasiKedutaanDetail.toggle.perpanjangan") }}</button>
                             </div>
                         </div>
 
@@ -291,7 +290,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                 </h2>
                             </div>
                             <p class="text-[12px] sm:text-[13px] text-[#686964] mb-4 sm:mb-5">
-                                {{ currentData.dokumen_dapat_dilegalisasi_subtitle ?? 'Kami melayani legalisasi berbagai jenis dokumen, antara lain:' }}
+                                {{ currentData.dokumen_dapat_dilegalisasi_subtitle ?? t("services.legalisasiKedutaanDetail.sections.dokumen_dilegalisasi_subtitle_default") }}
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                                 <div v-for="(doc, i) in currentData.dokumen_dapat_dilegalisasi" :key="`dokleg-${i}`"
@@ -313,7 +312,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <div class="flex items-center gap-3 mb-3">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black">
-                                    {{ currentData.negara_title ?? 'Negara yang Memerlukan Legalisasi Kedutaan' }}
+                                    {{ currentData.negara_title ?? t("services.legalisasiKedutaanDetail.sections.negara_title_default") }}
                                 </h2>
                             </div>
                             <p v-if="currentData.negara_kawasan_subtitle"
@@ -413,7 +412,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <div class="flex items-center gap-3 mb-2">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black">
-                                    {{ currentData.negara_anggota_title ?? 'Negara Anggota Konvensi' }}
+                                    {{ currentData.negara_anggota_title ?? t("services.legalisasiKedutaanDetail.sections.negara_anggota_title_default") }}
                                 </h2>
                             </div>
                             <p v-if="currentData.negara_anggota_subtitle"
@@ -428,7 +427,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
-                                <input v-model="negaraSearch" type="text" placeholder="Cari negara..."
+                                <input v-model="negaraSearch" type="text" :placeholder="t('services.legalisasiKedutaanDetail.table.search_placeholder')"
                                     class="w-full border border-[#D9DAD8] rounded-lg pl-8 pr-3 py-2 text-[11px] sm:text-[12px] text-[#3D3D3A] placeholder-[#A8A8A4] focus:outline-none focus:border-[#9e1f16]/40 transition-colors bg-white" />
                             </div>
 
@@ -439,13 +438,13 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                     <div class="grid grid-cols-3 bg-[#F5F5F3]">
                                         <div
                                             class="px-4 py-2.5 text-[11px] font-semibold text-[#686964] uppercase tracking-wider border-r border-[#D9DAD8]">
-                                            Negara</div>
+                                            {{ t("services.legalisasiKedutaanDetail.table.column_negara") }}</div>
                                         <div
                                             class="px-4 py-2.5 text-[11px] font-semibold text-[#686964] uppercase tracking-wider border-r border-[#D9DAD8]">
-                                            Negara</div>
+                                            {{ t("services.legalisasiKedutaanDetail.table.column_negara") }}</div>
                                         <div
                                             class="px-4 py-2.5 text-[11px] font-semibold text-[#686964] uppercase tracking-wider">
-                                            Negara</div>
+                                            {{ t("services.legalisasiKedutaanDetail.table.column_negara") }}</div>
                                     </div>
                                     <!-- Table Body -->
                                     <template v-if="negaraRows.length">
@@ -474,7 +473,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                         </svg>
-                                        <p class="text-[13px] text-[#686964]">Tidak ada negara yang cocok dengan "<span
+                                        <p class="text-[13px] text-[#686964]">{{ t("services.legalisasiKedutaanDetail.table.empty_search") }} "<span
                                                 class="font-semibold text-[#3D3D3A]">{{ negaraSearch }}</span>"</p>
                                     </div>
                                 </div>
@@ -483,7 +482,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                 <div class="flex items-center justify-between mt-4 min-w-0 gap-3">
                                     <!-- Left: Row count -->
                                     <span class="text-[11px] sm:text-[12px] text-[#686964] flex-shrink-0 tabular-nums">
-                                        {{ negaraDisplayCount }} Row
+                                        {{ t("services.legalisasiKedutaanDetail.table.row_count", { count: negaraDisplayCount }) }}
                                     </span>
 
                                     <!-- Center: Page navigation -->
@@ -499,7 +498,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                         </button>
                                         <span
                                             class="text-[11px] sm:text-[12px] text-[#3D3D3A] whitespace-nowrap px-1.5 tabular-nums">
-                                            Page {{ negaraPage }} of {{ totalNegaraPages }}
+                                            {{ t("services.legalisasiKedutaanDetail.table.page_info", { page: negaraPage, total: totalNegaraPages }) }}
                                         </span>
                                         <button @click="negaraPage = Math.min(totalNegaraPages, negaraPage + 1)"
                                             :disabled="negaraPage >= totalNegaraPages"
@@ -513,8 +512,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
 
                                     <!-- Right: Rows per page -->
                                     <div class="flex items-center gap-1.5 flex-shrink-0">
-                                        <span class="text-[11px] sm:text-[12px] text-[#686964] whitespace-nowrap">Rows
-                                            per page</span>
+                                        <span class="text-[11px] sm:text-[12px] text-[#686964] whitespace-nowrap">{{ t("services.legalisasiKedutaanDetail.table.rows_per_page") }}</span>
                                         <select v-model.number="negaraRowsPerPage"
                                             class="border border-[#D9DAD8] rounded px-2 py-1 text-[11px] sm:text-[12px] text-[#3D3D3A] bg-white focus:outline-none focus:border-[#9e1f16]/40 cursor-pointer appearance-none pr-5"
                                             style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22%23686694%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z%22 clip-rule=%22evenodd%22 /%3E%3C/svg%3E'); background-position: right 4px center; background-repeat: no-repeat; background-size: 14px;">
@@ -535,7 +533,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                     </svg>
-                                    <input v-model="negaraSearch" type="text" placeholder="Cari negara..."
+                                    <input v-model="negaraSearch" type="text" :placeholder="t('services.legalisasiKedutaanDetail.table.search_placeholder')"
                                         class="w-full border border-[#D9DAD8] rounded-lg pl-9 pr-3 py-2.5 text-[13px] text-[#3D3D3A] placeholder-[#A8A8A4] focus:outline-none focus:border-[#9e1f16]/40 transition-colors bg-white" />
                                 </div>
 
@@ -546,10 +544,10 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                     <div class="grid grid-cols-2 bg-[#F5F5F3]">
                                         <div
                                             class="px-3 py-2 text-[10px] font-semibold text-[#686964] uppercase tracking-wider border-r border-[#D9DAD8]">
-                                            Negara</div>
+                                            {{ t("services.legalisasiKedutaanDetail.table.column_negara") }}</div>
                                         <div
                                             class="px-3 py-2 text-[10px] font-semibold text-[#686964] uppercase tracking-wider">
-                                            Negara</div>
+                                            {{ t("services.legalisasiKedutaanDetail.table.column_negara") }}</div>
                                     </div>
                                     <!-- Rows -->
                                     <div v-for="(row, ri) in negaraMobileRows" :key="`nmrow-m-${ri}`"
@@ -576,13 +574,13 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                     </svg>
-                                    <p class="text-[12px] text-[#686964]">Tidak ada negara ditemukan</p>
+                                    <p class="text-[12px] text-[#686964]">{{ t("services.legalisasiKedutaanDetail.table.empty_mobile") }}</p>
                                 </div>
 
                                 <!-- Mobile Pagination -->
                                 <div class="flex items-center justify-between mt-3 min-w-0 gap-2">
                                     <span class="text-[10px] text-[#686964] flex-shrink-0 tabular-nums">
-                                        {{ negaraDisplayCount }} Negara
+                                        {{ t("services.legalisasiKedutaanDetail.table.negara_count", { count: negaraDisplayCount }) }}
                                     </span>
                                     <div class="flex items-center gap-1.5 flex-shrink-0">
                                         <button @click="negaraPage = Math.max(1, negaraPage - 1)"
@@ -606,7 +604,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                         </button>
                                     </div>
                                     <div class="flex items-center gap-1 flex-shrink-0">
-                                        <span class="text-[10px] text-[#686964]">Per hal.</span>
+                                        <span class="text-[10px] text-[#686964]">{{ t("services.legalisasiKedutaanDetail.table.per_page_mobile") }}</span>
                                         <select v-model.number="negaraRowsPerPage"
                                             class="border border-[#D9DAD8] rounded px-1.5 py-1 text-[10px] text-[#3D3D3A] bg-white focus:outline-none appearance-none pr-3"
                                             style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22 fill=%22%23686694%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z%22 clip-rule=%22evenodd%22 /%3E%3C/svg%3E'); background-position: right 2px center; background-repeat: no-repeat; background-size: 10px;">
@@ -626,7 +624,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <div class="flex items-center gap-3 mb-6 sm:mb-8">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold text-black">
-                                    {{ currentData.tahapan_title ?? 'Tahapan' }}
+                                    {{ currentData.tahapan_title ?? t("services.legalisasiKedutaanDetail.sections.tahapan_title_default") }}
                                 </h2>
                             </div>
 
@@ -675,7 +673,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <div class="flex items-center gap-3 mb-4 sm:mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold text-black">
-                                    Mengapa Menggunakan Layanan Kami?
+                                    {{ t("services.legalisasiKedutaanDetail.sections.mengapa_kami") }}
                                 </h2>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 sm:gap-x-8 sm:gap-y-3">
@@ -695,7 +693,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <div class="flex items-center gap-3 mb-4 sm:mb-5">
                                 <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5 sm:w-6 sm:h-6" alt="" />
                                 <h2 class="text-[13px] sm:text-[15px] font-bold uppercase tracking-widest text-black">
-                                    Biaya Layanan
+                                    {{ t("services.legalisasiKedutaanDetail.sections.biaya_layanan") }}
                                 </h2>
                             </div>
 
@@ -739,7 +737,7 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                 <a :href="buildWhatsappLink(product.name, jenisPengajuan)" target="_blank"
                                     rel="noopener noreferrer"
                                     class="flex-shrink-0 flex items-center justify-center gap-1.5 rounded-lg bg-white px-3 py-2 sm:px-4 sm:py-2.5 text-[11px] sm:text-[13px] font-semibold text-primary whitespace-nowrap hover:bg-white/90 transition-colors">
-                                    Hubungi Kami
+                                    {{ t("services.legalisasiKedutaanDetail.plans.hubungi_kami") }}
                                     <svg class="h-3 w-3 sm:h-3.5 sm:w-3.5" fill="none" viewBox="0 0 24 24"
                                         stroke="currentColor" stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -801,19 +799,19 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                             <ul class="mt-4 space-y-2">
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Konsultasi pertama gratis
+                                    {{ t("services.legalisasiKedutaanDetail.sidebar.benefit_1") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Harga transparan, tanpa biaya tersembunyi
+                                    {{ t("services.legalisasiKedutaanDetail.sidebar.benefit_2") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Tim berpengalaman 18+ tahun
+                                    {{ t("services.legalisasiKedutaanDetail.sidebar.benefit_3") }}
                                 </li>
                                 <li class="flex items-center gap-2 text-[12px] text-[#3D3D3A]">
                                     <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="done" />
-                                    Update proses berkala via WhatsApp
+                                    {{ t("services.legalisasiKedutaanDetail.sidebar.benefit_4") }}
                                 </li>
                             </ul>
                         </div>

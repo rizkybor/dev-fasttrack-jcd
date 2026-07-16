@@ -12,6 +12,13 @@ export default {
         dokumen: "Required Documents & Information",
         paket: "Packages & Pricing",
         dasar_hukum: "Legal Basis",
+        pilih_layanan: "Select Service Type",
+        penjelasan_layanan: "Service Explanation",
+        penjelasan_detail: "Detailed Explanation",
+    },
+    toggle: {
+        tutup: "Close",
+        selengkapnya: "See More",
     },
     plans: {
         mulai_dari: "Starting from",
@@ -20,6 +27,7 @@ export default {
         termasuk: "Included",
         bonus: "Bonus",
         pesan: "Order Now",
+        gratis_konsultasi: "FREE Pre and Post Consultation",
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
@@ -33,12 +41,17 @@ export default {
         related_from: "Starting from",
         related_packages: "Packages",
         related_cta: "See More",
+        other_paket_title: "Other Notary Deed Services",
+        benefit_1: "Free first consultation",
+        benefit_2: "Transparent pricing, no hidden fees",
+        benefit_3: "18+ years of experienced team",
+        benefit_4: "Regular process updates via WhatsApp",
     },
     footer: {
         title: "Can't Find the Service You're Looking For?",
         desc: "Our team is ready to help you find the right solution for your business legal needs.",
         cta: "Chat Directly via WhatsApp",
-        wa_subject: "an unlisted service",
+        wa_subject: "notary deed services",
     },
     wa_message: "Hello FastTrack, I would like to consult about",
 }

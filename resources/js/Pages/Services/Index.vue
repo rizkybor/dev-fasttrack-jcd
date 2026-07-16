@@ -337,7 +337,6 @@ const serviceCategories = computed(() =>
                     </div>
 
                     <FooterCTA
-                        bare
                         :title="t('services.layanan.footerCta.title')"
                         :description="t('services.layanan.footerCta.description')"
                         :button-text="t('services.layanan.footerCta.whatsapp')"

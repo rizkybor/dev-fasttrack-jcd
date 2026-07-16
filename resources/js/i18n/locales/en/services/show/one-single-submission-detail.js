@@ -6,6 +6,10 @@ export default {
     back: "Back",
     sections: {
         penjelasan: "General Overview",
+        penjelasan_layanan: "Service Description",
+        legalitas_didapatkan: "Legal Documents You Will Receive",
+        paket_layanan: "Service Package",
+        biaya_layanan: "Service Fee",
         syarat: "Terms & Conditions",
         keuntungan: "Benefits & Advantages",
         alur: "Process Flow",
