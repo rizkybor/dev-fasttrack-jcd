@@ -46,15 +46,16 @@ const contactForm = reactive({
     whatsapp: "",
     business: "",
     message: "",
+    website: "", // honeypot anti-spam — harus selalu kosong, diisi otomatis oleh bot
 });
-const contactNotRobot = ref(false);
 const contactAgreeTerms = ref(false);
 const contactErrors = reactive({});
 const contactSubmitting = ref(false);
 const contactEmailFailed = ref(false);
+const contactHoneypotId = `contact-hp-${Math.random().toString(36).slice(2)}`;
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const WHATSAPP_PATTERN = /^[0-9+\-\s]{8,20}$/;
+const WHATSAPP_PATTERN = /^[0-9]{10,13}$/;
 
 const validateContactForm = () => {
     const errors = {};
@@ -71,16 +72,14 @@ const validateContactForm = () => {
 
     if (!contactForm.whatsapp.trim()) {
         errors.whatsapp = t("home.contact.errors.whatsapp_required");
-    } else if (!WHATSAPP_PATTERN.test(contactForm.whatsapp.trim())) {
+    } else if (
+        !WHATSAPP_PATTERN.test(contactForm.whatsapp.trim().replace(/[\s\-]/g, ""))
+    ) {
         errors.whatsapp = t("home.contact.errors.whatsapp_invalid");
     }
 
     if (!contactForm.message.trim()) {
         errors.message = t("home.contact.errors.message_required");
-    }
-
-    if (!contactNotRobot.value) {
-        errors.robot = t("home.contact.errors.robot_required");
     }
 
     if (!contactAgreeTerms.value) {
@@ -140,7 +139,6 @@ const submitContactForm = () => {
     contactForm.whatsapp = "";
     contactForm.business = "";
     contactForm.message = "";
-    contactNotRobot.value = false;
     contactAgreeTerms.value = false;
 };
 
@@ -1802,74 +1800,19 @@ onUnmounted(() => {
                                     <InputError :message="contactErrors.message" class="mt-1" />
                                 </div>
                             </div>
-                            <div>
-                                <div
-                                    class="flex items-center h-[53px] rounded-lg border bg-[#F9F9F9] px-3"
-                                    :class="
-                                        contactErrors.robot
-                                            ? 'border-red-400'
-                                            : 'border-[#D9DAD8]'
-                                    "
-                                >
-                                    <label
-                                        class="flex items-center gap-2 cursor-pointer"
-                                    >
-                                        <span
-                                            class="relative flex h-[14px] w-[14px] flex-shrink-0 items-center justify-center rounded-sm outline outline-1 outline-[#D9DAD8] bg-[#F9F9F9] shadow-sm"
-                                        >
-                                            <input
-                                                v-model="contactNotRobot"
-                                                type="checkbox"
-                                                class="peer absolute inset-0 h-full w-full cursor-pointer opacity-0"
-                                            />
-                                            <svg
-                                                class="hidden h-2.5 w-2.5 text-[#9e1f16] peer-checked:block pointer-events-none"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="3"
-                                            >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    d="M5 13l4 4L19 7"
-                                                />
-                                            </svg>
-                                        </span>
-                                        <span class="text-[12px] text-[#8E8F8B]">{{
-                                            t("home.contact.robot")
-                                        }}</span>
-                                    </label>
-                                    <div class="ml-auto flex flex-col items-center">
-                                        <svg
-                                            class="w-8 h-8 text-[#4A90D9]"
-                                            viewBox="0 0 38 38"
-                                            fill="none"
-                                        >
-                                            <path
-                                                d="M19 4C10.716 4 4 10.716 4 19C4 27.284 10.716 34 19 34C27.284 34 34 27.284 34 19"
-                                                stroke="currentColor"
-                                                stroke-width="2.5"
-                                                stroke-linecap="round"
-                                            />
-                                            <path
-                                                d="M34 19C34 15.5 32.5 12.3 30 10"
-                                                stroke="#9e1f16"
-                                                stroke-width="2.5"
-                                                stroke-linecap="round"
-                                            />
-                                        </svg>
-                                        <span
-                                            class="text-[8px] text-[#8E8F8B] leading-none"
-                                            >reCAPTCHA</span
-                                        >
-                                        <span
-                                            class="text-[6px] text-[#8E8F8B] leading-none"
-                                            >Privacy - Terms</span
-                                        >
-                                    </div>
-                                </div>
-                                <InputError :message="contactErrors.robot" class="mt-1" />
+                            <!-- Honeypot anti-spam: invisible untuk manusia, sering otomatis diisi oleh bot. -->
+                            <div
+                                class="absolute left-[-9999px] top-auto w-px h-px overflow-hidden"
+                                aria-hidden="true"
+                            >
+                                <label :for="contactHoneypotId">Website</label>
+                                <input
+                                    :id="contactHoneypotId"
+                                    v-model="contactForm.website"
+                                    type="text"
+                                    tabindex="-1"
+                                    autocomplete="off"
+                                />
                             </div>
                             <div class="flex flex-col gap-4">
                                 <div>

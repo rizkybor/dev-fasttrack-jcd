@@ -3,6 +3,7 @@ import { ref, computed } from "vue";
 import { useForm } from "@inertiajs/vue3";
 import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
+import InputError from "@/Components/InputError.vue";
 
 /**
  * Halaman "Kerjasama" — Program Client Get Client
@@ -20,6 +21,18 @@ const jenisPesertaOptions = computed(() => tm("kerjasama.form.jenis_peserta_opti
 const skemaInsentifOptions = computed(() => tm("kerjasama.form.skema_insentif_options"));
 const komisiHighlights = computed(() => tm("kerjasama.sidebar.highlights"));
 const pernyataanList = computed(() => tm("kerjasama.form.pernyataan_list"));
+
+// Autotext "Jenis Layanan Yang Dibutuhkan" — diambil dari katalog lengkap
+// layanan yang sama dengan dropdown /minta-penawaran, supaya selalu sesuai
+// dengan layanan yang benar-benar tersedia.
+const layananSuggestions = computed(() => {
+    const groups = tm("mintaPenawaran.detail_by_layanan");
+    const labels = Object.values(groups ?? {})
+        .flat()
+        .map((item) => item.label)
+        .filter(Boolean);
+    return [...new Set(labels)];
+});
 
 /* ------------------------------------------------------------------ */
 /* Form state                                                          */
@@ -58,7 +71,11 @@ const form = useForm({
 
     // 6. Persetujuan
     setuju_pernyataan: false,
+
+    website: "", // honeypot anti-spam — harus selalu kosong, diisi otomatis oleh bot
 });
+
+const contactHoneypotId = `kerjasama-hp-${Math.random().toString(36).slice(2)}`;
 
 const layananInput = ref("");
 
@@ -79,7 +96,61 @@ const isLainnya = computed(() => form.jenis_peserta === "lainnya");
 
 const submitted = ref(false);
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const WHATSAPP_PATTERN = /^[0-9]{10,13}$/;
+
+const validateForm = () => {
+    form.clearErrors();
+    let valid = true;
+
+    if (!form.no_whatsapp.trim()) {
+        form.setError("no_whatsapp", t("kerjasama.form.errors.whatsapp_required"));
+        valid = false;
+    } else if (!WHATSAPP_PATTERN.test(form.no_whatsapp.trim().replace(/[\s\-]/g, ""))) {
+        form.setError("no_whatsapp", t("kerjasama.form.errors.whatsapp_invalid"));
+        valid = false;
+    }
+
+    if (!form.email.trim()) {
+        form.setError("email", t("kerjasama.form.errors.email_required"));
+        valid = false;
+    } else if (!EMAIL_PATTERN.test(form.email.trim())) {
+        form.setError("email", t("kerjasama.form.errors.email_invalid"));
+        valid = false;
+    }
+
+    if (!form.nomor_kontak_klien.trim()) {
+        form.setError(
+            "nomor_kontak_klien",
+            t("kerjasama.form.errors.whatsapp_required"),
+        );
+        valid = false;
+    } else if (
+        !WHATSAPP_PATTERN.test(form.nomor_kontak_klien.trim().replace(/[\s\-]/g, ""))
+    ) {
+        form.setError(
+            "nomor_kontak_klien",
+            t("kerjasama.form.errors.whatsapp_invalid"),
+        );
+        valid = false;
+    }
+
+    if (form.email_klien.trim() && !EMAIL_PATTERN.test(form.email_klien.trim())) {
+        form.setError("email_klien", t("kerjasama.form.errors.email_invalid"));
+        valid = false;
+    }
+
+    return valid;
+};
+
 const submit = () => {
+    if (!validateForm()) return;
+
+    // Normalisasi nomor WhatsApp (hapus spasi/tanda hubung) agar konsisten
+    // dengan validasi digit 10-13 di server.
+    form.no_whatsapp = form.no_whatsapp.trim().replace(/[\s\-]/g, "");
+    form.nomor_kontak_klien = form.nomor_kontak_klien.trim().replace(/[\s\-]/g, "");
+
     form.post(route("kerjasama.store"), {
         preserveScroll: true,
         onSuccess: () => {
@@ -423,8 +494,10 @@ const submit = () => {
                                             v-model="form.no_whatsapp"
                                             type="text"
                                             :placeholder="t('kerjasama.form.section2.no_whatsapp_placeholder')"
-                                            class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                            class="w-full rounded-lg border px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                            :class="form.errors.no_whatsapp ? 'border-red-400' : 'border-[#D9DAD8]'"
                                         />
+                                        <InputError :message="form.errors.no_whatsapp" />
                                     </div>
                                     <div class="flex flex-col gap-1.5">
                                         <label
@@ -437,8 +510,10 @@ const submit = () => {
                                             v-model="form.email"
                                             type="email"
                                             :placeholder="t('kerjasama.form.section2.email_placeholder')"
-                                            class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                            class="w-full rounded-lg border px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                            :class="form.errors.email ? 'border-red-400' : 'border-[#D9DAD8]'"
                                         />
+                                        <InputError :message="form.errors.email" />
                                     </div>
                                 </div>
 
@@ -601,8 +676,10 @@ const submit = () => {
                                             v-model="form.nomor_kontak_klien"
                                             type="text"
                                             :placeholder="t('kerjasama.form.section4.nomor_kontak_klien_placeholder')"
-                                            class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                            class="w-full rounded-lg border px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                            :class="form.errors.nomor_kontak_klien ? 'border-red-400' : 'border-[#D9DAD8]'"
                                         />
+                                        <InputError :message="form.errors.nomor_kontak_klien" />
                                     </div>
                                     <div class="flex flex-col gap-1.5">
                                         <label
@@ -614,8 +691,10 @@ const submit = () => {
                                             v-model="form.email_klien"
                                             type="email"
                                             :placeholder="t('kerjasama.form.section4.email_klien_placeholder')"
-                                            class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                            class="w-full rounded-lg border px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                            :class="form.errors.email_klien ? 'border-red-400' : 'border-[#D9DAD8]'"
                                         />
+                                        <InputError :message="form.errors.email_klien" />
                                     </div>
                                 </div>
 
@@ -629,10 +708,18 @@ const submit = () => {
                                         <input
                                             v-model="layananInput"
                                             type="text"
+                                            list="layanan-suggestions"
                                             :placeholder="t('kerjasama.form.section4.layanan_placeholder')"
                                             class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
                                             @keydown.enter.prevent="addLayanan"
                                         />
+                                        <datalist id="layanan-suggestions">
+                                            <option
+                                                v-for="opt in layananSuggestions"
+                                                :key="opt"
+                                                :value="opt"
+                                            />
+                                        </datalist>
                                         <button
                                             type="button"
                                             @click="addLayanan"
@@ -804,6 +891,21 @@ const submit = () => {
                                         {{ t("kerjasama.form.setuju_label") }}
                                     </span>
                                 </label>
+                            </div>
+
+                            <!-- Honeypot anti-spam: invisible untuk manusia, sering otomatis diisi oleh bot. -->
+                            <div
+                                class="absolute left-[-9999px] top-auto w-px h-px overflow-hidden"
+                                aria-hidden="true"
+                            >
+                                <label :for="contactHoneypotId">Website</label>
+                                <input
+                                    :id="contactHoneypotId"
+                                    v-model="form.website"
+                                    type="text"
+                                    tabindex="-1"
+                                    autocomplete="off"
+                                />
                             </div>
 
                             <!-- Submit -->

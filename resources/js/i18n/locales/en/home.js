@@ -190,7 +190,6 @@ export default {
         whatsapp: "WhatsApp Number",
         business: "Business Field",
         message: "Message / Service Needs",
-        robot: "I'm not a robot",
         agree: "I have read and agree to the",
         terms: "Legal Terms*",
         submit: "Submit",
@@ -206,9 +205,8 @@ export default {
             email_required: "Email address is required.",
             email_invalid: "Please enter a valid email address.",
             whatsapp_required: "WhatsApp number is required.",
-            whatsapp_invalid: "Please enter a valid WhatsApp number.",
+            whatsapp_invalid: "WhatsApp number must be numeric, between 10 and 13 digits.",
             message_required: "Message / service needs is required.",
-            robot_required: "Please confirm that you're not a robot.",
             agree_required: "You must agree to the Legal Terms.",
         },
         email_status: {

@@ -4,6 +4,8 @@ import { useForm } from "@inertiajs/vue3";
 import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
+import InputError from "@/Components/InputError.vue";
+import { waLink } from "@/Composables/useWhatsapp";
 
 /**
  * Halaman "Minta Penawaran" — Penawaran Fasttrack
@@ -55,6 +57,13 @@ const selectedDetailData = computed(() => {
     );
 });
 
+const selectedKategoriLabel = computed(() => {
+    return (
+        kategoriOptions.value.find((k) => k.value === selectedKategori.value)
+            ?.label ?? ""
+    );
+});
+
 const selectedLayananLabel = computed(() => {
     return (
         layananOptions.value.find((l) => l.value === selectedLayanan.value)
@@ -66,6 +75,10 @@ const selectedLayananLabel = computed(() => {
 /* Biaya layanan                                                       */
 /* ------------------------------------------------------------------ */
 
+// harga null = "Hubungi Kami" (belum ada harga pasti untuk layanan ini)
+const hargaTersedia = computed(
+    () => selectedDetailData.value && selectedDetailData.value.harga !== null,
+);
 const biayaLayanan = computed(() => selectedDetailData.value?.harga ?? 0);
 const ppn = computed(() => Math.round(biayaLayanan.value * 0.11));
 const subtotal = computed(() => biayaLayanan.value + ppn.value);
@@ -82,30 +95,107 @@ const form = useForm({
     kategori: "",
     layanan: "",
     detail_layanan: "",
+    kategori_label: "",
+    layanan_label: "",
+    detail_label: "",
+    harga_label: "",
     nama: "",
     perusahaan: "",
     no_whatsapp: "",
     email: "",
-    captcha_verified: false,
+    website: "", // honeypot anti-spam — harus selalu kosong, diisi otomatis oleh bot
 });
+
+const contactHoneypotId = `mp-hp-${Math.random().toString(36).slice(2)}`;
+const submitSuccess = ref(false);
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const WHATSAPP_PATTERN = /^[0-9]{10,13}$/;
 
 const isFormValid = computed(() => {
     return (
         selectedDetail.value !== "" &&
         form.nama &&
         form.no_whatsapp &&
-        form.email &&
-        form.captcha_verified
+        form.email
     );
 });
 
+const validateForm = () => {
+    form.clearErrors();
+    let valid = true;
+
+    if (!selectedDetail.value) {
+        form.setError(
+            "detail_layanan",
+            t("mintaPenawaran.errors.kategori_required"),
+        );
+        valid = false;
+    }
+
+    if (!form.nama.trim()) {
+        form.setError("nama", t("mintaPenawaran.errors.nama_required"));
+        valid = false;
+    }
+
+    if (!form.email.trim()) {
+        form.setError("email", t("mintaPenawaran.errors.email_required"));
+        valid = false;
+    } else if (!EMAIL_PATTERN.test(form.email.trim())) {
+        form.setError("email", t("mintaPenawaran.errors.email_invalid"));
+        valid = false;
+    }
+
+    if (!form.no_whatsapp.trim()) {
+        form.setError(
+            "no_whatsapp",
+            t("mintaPenawaran.errors.whatsapp_required"),
+        );
+        valid = false;
+    } else if (
+        !WHATSAPP_PATTERN.test(form.no_whatsapp.trim().replace(/[\s\-]/g, ""))
+    ) {
+        form.setError(
+            "no_whatsapp",
+            t("mintaPenawaran.errors.whatsapp_invalid"),
+        );
+        valid = false;
+    }
+
+    return valid;
+};
+
 const submit = () => {
+    submitSuccess.value = false;
+
     form.kategori = selectedKategori.value;
     form.layanan = selectedLayanan.value;
     form.detail_layanan = selectedDetail.value;
+    form.kategori_label = selectedKategoriLabel.value;
+    form.layanan_label = selectedLayananLabel.value;
+    form.detail_label = selectedDetailData.value?.label ?? "";
+    form.harga_label = hargaTersedia.value
+        ? formatRupiah(biayaLayanan.value)
+        : t("mintaPenawaran.biaya.hubungi_kami");
+
+    if (!validateForm()) return;
+
+    // Normalisasi nomor WhatsApp (hapus spasi/tanda hubung) agar konsisten
+    // dengan validasi digit 10-13 di server.
+    form.no_whatsapp = form.no_whatsapp.trim().replace(/[\s\-]/g, "");
 
     form.post(route("minta-penawaran.store"), {
         preserveScroll: true,
+        onSuccess: () => {
+            submitSuccess.value = true;
+            form.reset(
+                "nama",
+                "perusahaan",
+                "no_whatsapp",
+                "email",
+                "website",
+            );
+        },
     });
 };
 
@@ -113,13 +203,7 @@ const submit = () => {
 /* WhatsApp CTA                                                        */
 /* ------------------------------------------------------------------ */
 
-const whatsappNumber = "6282298604144";
-
-const whatsappLink = computed(() => {
-    const message =
-        "Halo FastTrack, saya ingin konsultasi mengenai kebutuhan legalitas bisnis saya.";
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-});
+const whatsappLink = computed(() => waLink(t("mintaPenawaran.cta.title")));
 </script>
 
 <template>
@@ -380,15 +464,20 @@ const whatsappLink = computed(() => {
                                 >
                                     {{ selectedDetailData.label }}
                                 </p>
-                                <p class="mt-4 text-[11px] text-white/70">
-                                    {{
-                                        t(
-                                            "mintaPenawaran.pilih_layanan.starting_from",
-                                        )
-                                    }}
-                                </p>
-                                <p class="text-xl font-extrabold text-white">
-                                    {{ formatRupiah(selectedDetailData.harga) }}
+                                <template v-if="hargaTersedia">
+                                    <p class="mt-4 text-[11px] text-white/70">
+                                        {{
+                                            t(
+                                                "mintaPenawaran.pilih_layanan.starting_from",
+                                            )
+                                        }}
+                                    </p>
+                                    <p class="text-xl font-extrabold text-white">
+                                        {{ formatRupiah(selectedDetailData.harga) }}
+                                    </p>
+                                </template>
+                                <p v-else class="mt-4 text-xl font-extrabold text-white">
+                                    {{ t("mintaPenawaran.biaya.hubungi_kami") }}
                                 </p>
                             </div>
 
@@ -423,7 +512,7 @@ const whatsappLink = computed(() => {
                                 </h3>
 
                                 <div
-                                    v-if="selectedDetailData"
+                                    v-if="selectedDetailData && hargaTersedia"
                                     class="flex flex-col gap-2"
                                 >
                                     <p
@@ -496,6 +585,20 @@ const whatsappLink = computed(() => {
                                     </p>
                                 </div>
 
+                                <div
+                                    v-else-if="selectedDetailData"
+                                    class="flex flex-col gap-1"
+                                >
+                                    <p
+                                        class="text-[11px] font-semibold uppercase text-[#7A7B78]"
+                                    >
+                                        {{ selectedLayananLabel }}
+                                    </p>
+                                    <p class="text-[13px] font-bold text-[#9e1f16]">
+                                        {{ t("mintaPenawaran.biaya.hubungi_kami") }}
+                                    </p>
+                                </div>
+
                                 <p v-else class="text-[11px] text-[#B0B1AE]">
                                     {{ t("mintaPenawaran.biaya.empty") }}
                                 </p>
@@ -528,8 +631,10 @@ const whatsappLink = computed(() => {
                                                 'mintaPenawaran.pemohon.nama_placeholder',
                                             )
                                         "
-                                        class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                        class="w-full rounded-lg border px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                        :class="form.errors.nama ? 'border-red-400' : 'border-[#D9DAD8]'"
                                     />
+                                    <InputError :message="form.errors.nama" />
                                 </div>
 
                                 <div class="flex flex-col gap-1.5">
@@ -570,8 +675,10 @@ const whatsappLink = computed(() => {
                                                 'mintaPenawaran.pemohon.whatsapp_placeholder',
                                             )
                                         "
-                                        class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                        class="w-full rounded-lg border px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                        :class="form.errors.no_whatsapp ? 'border-red-400' : 'border-[#D9DAD8]'"
                                     />
+                                    <InputError :message="form.errors.no_whatsapp" />
                                 </div>
 
                                 <div class="flex flex-col gap-1.5">
@@ -591,31 +698,39 @@ const whatsappLink = computed(() => {
                                                 'mintaPenawaran.pemohon.email_placeholder',
                                             )
                                         "
-                                        class="w-full rounded-lg border border-[#D9DAD8] px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                        class="w-full rounded-lg border px-3 py-2.5 text-[12px] placeholder:text-[#B0B1AE] focus:border-[#9e1f16] focus:outline-none"
+                                        :class="form.errors.email ? 'border-red-400' : 'border-[#D9DAD8]'"
                                     />
+                                    <InputError :message="form.errors.email" />
                                 </div>
+
+                                <InputError
+                                    v-if="form.errors.detail_layanan"
+                                    :message="form.errors.detail_layanan"
+                                />
                             </div>
 
-                            <!-- Captcha (placeholder) -->
-                            <label
-                                class="flex items-center justify-between gap-2 rounded-lg border border-[#D9DAD8] px-3 py-2.5 cursor-pointer"
+                            <!-- Honeypot anti-spam: invisible untuk manusia, sering otomatis diisi oleh bot. -->
+                            <div
+                                class="absolute left-[-9999px] top-auto w-px h-px overflow-hidden"
+                                aria-hidden="true"
                             >
-                                <span class="flex items-center gap-2">
-                                    <input
-                                        v-model="form.captcha_verified"
-                                        type="checkbox"
-                                        class="h-4 w-4 rounded border-[#D9DAD8] text-[#9e1f16] focus:ring-[#9e1f16]"
-                                    />
-                                    <span class="text-[11px] text-[#1A1B18]">{{
-                                        t("mintaPenawaran.captcha_label")
-                                    }}</span>
-                                </span>
-                                <span
-                                    class="text-[8px] leading-tight text-[#B0B1AE] text-right"
-                                >
-                                    reCAPTCHA<br />Privacy - Terms
-                                </span>
-                            </label>
+                                <label :for="contactHoneypotId">Website</label>
+                                <input
+                                    :id="contactHoneypotId"
+                                    v-model="form.website"
+                                    type="text"
+                                    tabindex="-1"
+                                    autocomplete="off"
+                                />
+                            </div>
+
+                            <p
+                                v-if="submitSuccess"
+                                class="rounded-lg bg-green-50 border border-green-200 px-3 py-2.5 text-[11px] text-green-700"
+                            >
+                                {{ t("mintaPenawaran.submit_success") }}
+                            </p>
 
                             <!-- Submit -->
                             <button
@@ -623,7 +738,11 @@ const whatsappLink = computed(() => {
                                 :disabled="!isFormValid || form.processing"
                                 class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#9e1f16] px-6 py-3 text-[13px] font-semibold text-white transition hover:bg-[#7f1912] disabled:cursor-not-allowed disabled:opacity-50"
                             >
-                                {{ t("mintaPenawaran.submit_cta") }}
+                                {{
+                                    form.processing
+                                        ? t("mintaPenawaran.submitting")
+                                        : t("mintaPenawaran.submit_cta")
+                                }}
                                 <svg
                                     class="h-4 w-4"
                                     fill="none"

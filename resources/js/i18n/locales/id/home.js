@@ -190,7 +190,6 @@ export default {
         whatsapp: "Nomor Whatsapp",
         business: "Bidang Usaha",
         message: "Pesan / Kebutuhan Layanan",
-        robot: "I'm not a robot",
         agree: "Saya telah membaca dan setuju",
         terms: "Ketentuan Legal*",
         submit: "Submit",
@@ -206,9 +205,8 @@ export default {
             email_required: "Alamat email wajib diisi.",
             email_invalid: "Format alamat email tidak valid.",
             whatsapp_required: "Nomor WhatsApp wajib diisi.",
-            whatsapp_invalid: "Format nomor WhatsApp tidak valid.",
+            whatsapp_invalid: "Nomor WhatsApp harus berupa angka, minimal 10 dan maksimal 13 digit.",
             message_required: "Pesan / kebutuhan layanan wajib diisi.",
-            robot_required: "Mohon konfirmasi bahwa Anda bukan robot.",
             agree_required: "Anda harus menyetujui Ketentuan Legal.",
         },
         email_status: {

@@ -126,6 +126,12 @@ export default {
         setuju_label: 'I have read, understood, and agree to all the statements above.',
         submit_cta: 'Submit Registration',
         submit_note: 'By submitting this form, you agree to the Terms & Conditions of the Client Get Client Program.',
+        errors: {
+            whatsapp_required: 'WhatsApp number is required.',
+            whatsapp_invalid: 'WhatsApp number must be numeric, between 10 and 13 digits.',
+            email_required: 'Email address is required.',
+            email_invalid: 'Please enter a valid email address.',
+        },
     },
     sidebar: {
         title: 'How Commission is Calculated',
