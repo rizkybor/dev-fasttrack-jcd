@@ -715,6 +715,8 @@ export default {
         whatsapp_required: 'WhatsApp number is required.',
         whatsapp_invalid: 'WhatsApp number must be numeric, between 10 and 13 digits.',
     },
+    close: 'Close',
+    submit_success_title: 'Successfully Sent!',
     submit_success: 'Your quote request has been sent successfully. Our team will contact you shortly.',
     submit_error: 'Failed to send your quote request. Please try again.',
     cta: {

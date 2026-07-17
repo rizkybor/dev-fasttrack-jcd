@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, onUnmounted } from "vue";
 import { useForm } from "@inertiajs/vue3";
 import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
@@ -108,6 +108,20 @@ const form = useForm({
 
 const contactHoneypotId = `mp-hp-${Math.random().toString(36).slice(2)}`;
 const submitSuccess = ref(false);
+let submitSuccessTimer = null;
+
+const closeSuccessModal = () => {
+    clearTimeout(submitSuccessTimer);
+    submitSuccess.value = false;
+};
+
+const openSuccessModal = () => {
+    submitSuccess.value = true;
+    clearTimeout(submitSuccessTimer);
+    submitSuccessTimer = setTimeout(closeSuccessModal, 5000);
+};
+
+onUnmounted(() => clearTimeout(submitSuccessTimer));
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const WHATSAPP_PATTERN = /^[0-9]{10,13}$/;
@@ -166,7 +180,7 @@ const validateForm = () => {
 };
 
 const submit = () => {
-    submitSuccess.value = false;
+    closeSuccessModal();
 
     form.kategori = selectedKategori.value;
     form.layanan = selectedLayanan.value;
@@ -187,7 +201,7 @@ const submit = () => {
     form.post(route("minta-penawaran.store"), {
         preserveScroll: true,
         onSuccess: () => {
-            submitSuccess.value = true;
+            openSuccessModal();
             form.reset(
                 "nama",
                 "perusahaan",
@@ -725,13 +739,6 @@ const whatsappLink = computed(() => waLink(t("mintaPenawaran.cta.title")));
                                 />
                             </div>
 
-                            <p
-                                v-if="submitSuccess"
-                                class="rounded-lg bg-green-50 border border-green-200 px-3 py-2.5 text-[11px] text-green-700"
-                            >
-                                {{ t("mintaPenawaran.submit_success") }}
-                            </p>
-
                             <!-- Submit -->
                             <button
                                 type="submit"
@@ -794,4 +801,66 @@ const whatsappLink = computed(() => waLink(t("mintaPenawaran.cta.title")));
             :whatsapp-link="whatsappLink"
         />
     </MainLayout>
+
+    <!-- Modal sukses submit — auto-close setelah beberapa detik -->
+    <transition
+        enter-active-class="transition duration-200 ease-out"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition duration-150 ease-in"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+    >
+        <div
+            v-if="submitSuccess"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+            @click.self="closeSuccessModal"
+        >
+            <transition
+                enter-active-class="transition duration-250 ease-out"
+                enter-from-class="opacity-0 scale-95 translate-y-2"
+                enter-to-class="opacity-100 scale-100 translate-y-0"
+                leave-active-class="transition duration-150 ease-in"
+                leave-from-class="opacity-100 scale-100 translate-y-0"
+                leave-to-class="opacity-0 scale-95 translate-y-2"
+                appear
+            >
+                <div
+                    class="relative w-full max-w-[420px] bg-white rounded-2xl shadow-2xl overflow-hidden p-6 sm:p-8 text-center"
+                >
+                    <button
+                        type="button"
+                        @click="closeSuccessModal"
+                        class="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-lg text-[#7A7B78] hover:bg-[#F5F5F4] hover:text-[#1A1B18] transition-colors"
+                        :aria-label="t('mintaPenawaran.close')"
+                    >
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-50">
+                        <svg class="h-7 w-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+
+                    <h3 class="mt-4 text-[16px] font-bold text-[#1A1B18]">
+                        {{ t("mintaPenawaran.submit_success_title") }}
+                    </h3>
+                    <p class="mt-2 text-[13px] leading-relaxed text-[#42443D]">
+                        {{ t("mintaPenawaran.submit_success") }}
+                    </p>
+
+                    <button
+                        type="button"
+                        @click="closeSuccessModal"
+                        class="mt-6 w-full rounded-lg bg-[#9e1f16] px-6 py-2.5 text-[13px] font-semibold text-white transition hover:bg-[#7f1912]"
+                    >
+                        {{ t("mintaPenawaran.close") }}
+                    </button>
+                </div>
+            </transition>
+        </div>
+    </transition>
 </template>

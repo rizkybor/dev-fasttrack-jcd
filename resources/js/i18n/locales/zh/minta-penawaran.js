@@ -715,6 +715,8 @@ export default {
         whatsapp_required: '请填写 WhatsApp 号码。',
         whatsapp_invalid: 'WhatsApp 号码必须为数字，长度在 10 到 13 位之间。',
     },
+    close: '关闭',
+    submit_success_title: '发送成功！',
     submit_success: '您的报价请求已成功发送。我们的团队将尽快与您联系。',
     submit_error: '报价请求发送失败，请重试。',
     cta: {

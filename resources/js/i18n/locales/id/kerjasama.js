@@ -126,6 +126,9 @@ export default {
         setuju_label: 'Saya telah membaca, memahami, dan menyetujui seluruh pernyataan di atas.',
         submit_cta: 'Kirim Pendaftaran',
         submit_note: 'Dengan mengirim formulir, Anda menyetujui Syarat & Ketentuan Program Client Get Client.',
+        close: 'Tutup',
+        submit_success_title: 'Pendaftaran Berhasil Dikirim',
+        submit_success: 'Terima kasih telah mendaftar sebagai mitra referral. Tim kami akan segera menghubungi Anda.',
         errors: {
             whatsapp_required: 'Nomor WhatsApp wajib diisi.',
             whatsapp_invalid: 'Nomor WhatsApp harus berupa angka, minimal 10 dan maksimal 13 digit.',
