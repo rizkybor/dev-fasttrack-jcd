@@ -14,6 +14,7 @@ export default {
         dasar_hukum: "Dasar Hukum",
         pilih_layanan: "Pilih Jenis Layanan",
         penjelasan_layanan: "Penjelasan Layanan",
+        daftar_layanan: "Daftar Layanan",
         penjelasan_detail: "Penjelasan Detail",
     },
     toggle: {

@@ -14,6 +14,7 @@ export default {
         dasar_hukum: "Legal Basis",
         pilih_layanan: "Select Service Type",
         penjelasan_layanan: "Service Explanation",
+        daftar_layanan: "Service List",
         penjelasan_detail: "Detailed Explanation",
     },
     toggle: {
