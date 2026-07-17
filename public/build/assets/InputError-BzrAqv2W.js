@@ -1,0 +1,1 @@
+import{A as e,L as t,S as n,W as r,p as i,y as a}from"./app-CAMfjR9S.js";var o={class:`text-sm text-red-600`},s={__name:`InputError`,props:{message:{type:String}},setup(s){return(c,l)=>t((e(),n(`div`,null,[a(`p`,o,r(s.message),1)],512)),[[i,s.message]])}};export{s as t};
