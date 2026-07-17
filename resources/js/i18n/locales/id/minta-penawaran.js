@@ -715,6 +715,8 @@ export default {
         whatsapp_required: 'Nomor WhatsApp wajib diisi.',
         whatsapp_invalid: 'Nomor WhatsApp harus berupa angka, minimal 10 dan maksimal 13 digit.',
     },
+    close: 'Tutup',
+    submit_success_title: 'Berhasil Terkirim!',
     submit_success: 'Permintaan penawaran Anda berhasil dikirim. Tim kami akan segera menghubungi Anda.',
     submit_error: 'Gagal mengirim permintaan penawaran. Silakan coba lagi.',
     cta: {

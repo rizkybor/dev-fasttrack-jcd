@@ -126,6 +126,9 @@ export default {
         setuju_label: '我已阅读、理解并同意以上所有声明。',
         submit_cta: '提交注册',
         submit_note: '提交此表单即表示您同意介绍客户获客户计划的条款与条件。',
+        close: '关闭',
+        submit_success_title: '注册已成功发送',
+        submit_success: '感谢您注册成为推荐合作伙伴。我们的团队将尽快与您联系。',
         errors: {
             whatsapp_required: '请填写 WhatsApp 号码。',
             whatsapp_invalid: 'WhatsApp 号码必须为数字，长度在 10 到 13 位之间。',

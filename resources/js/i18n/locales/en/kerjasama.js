@@ -126,6 +126,9 @@ export default {
         setuju_label: 'I have read, understood, and agree to all the statements above.',
         submit_cta: 'Submit Registration',
         submit_note: 'By submitting this form, you agree to the Terms & Conditions of the Client Get Client Program.',
+        close: 'Close',
+        submit_success_title: 'Registration Successfully Sent',
+        submit_success: 'Thank you for registering as a referral partner. Our team will contact you shortly.',
         errors: {
             whatsapp_required: 'WhatsApp number is required.',
             whatsapp_invalid: 'WhatsApp number must be numeric, between 10 and 13 digits.',

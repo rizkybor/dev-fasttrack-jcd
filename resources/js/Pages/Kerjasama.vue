@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onUnmounted } from "vue";
 import { useForm } from "@inertiajs/vue3";
 import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
@@ -95,6 +95,20 @@ const removeLayanan = (index) => {
 const isLainnya = computed(() => form.jenis_peserta === "lainnya");
 
 const submitted = ref(false);
+let submittedTimer = null;
+
+const closeSuccessModal = () => {
+    clearTimeout(submittedTimer);
+    submitted.value = false;
+};
+
+const openSuccessModal = () => {
+    submitted.value = true;
+    clearTimeout(submittedTimer);
+    submittedTimer = setTimeout(closeSuccessModal, 5000);
+};
+
+onUnmounted(() => clearTimeout(submittedTimer));
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const WHATSAPP_PATTERN = /^[0-9]{10,13}$/;
@@ -154,7 +168,7 @@ const submit = () => {
     form.post(route("kerjasama.store"), {
         preserveScroll: true,
         onSuccess: () => {
-            submitted.value = true;
+            openSuccessModal();
             form.reset();
         },
     });
@@ -298,34 +312,6 @@ const submit = () => {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Success Banner -->
-                        <div
-                            v-if="submitted"
-                            class="flex items-start gap-3 rounded-xl border border-[#B7E4C7] bg-[#EAF9F0] p-5"
-                        >
-                            <svg
-                                class="mt-0.5 h-5 w-5 flex-shrink-0 text-[#1E9E5A]"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                                />
-                            </svg>
-                            <div>
-                                <p class="text-[14px] font-semibold text-[#0F6B37]">
-                                    Pendaftaran Berhasil Dikirim
-                                </p>
-                                <p class="mt-1 text-[13px] leading-[20px] text-[#1A1B18]">
-                                    Terima kasih telah mendaftar sebagai mitra referral. Tim kami akan segera menghubungi Anda.
-                                </p>
                             </div>
                         </div>
 
@@ -988,4 +974,66 @@ const submit = () => {
             </div>
         </section>
     </MainLayout>
+
+    <!-- Modal sukses submit — auto-close setelah beberapa detik -->
+    <transition
+        enter-active-class="transition duration-200 ease-out"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition duration-150 ease-in"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+    >
+        <div
+            v-if="submitted"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+            @click.self="closeSuccessModal"
+        >
+            <transition
+                enter-active-class="transition duration-250 ease-out"
+                enter-from-class="opacity-0 scale-95 translate-y-2"
+                enter-to-class="opacity-100 scale-100 translate-y-0"
+                leave-active-class="transition duration-150 ease-in"
+                leave-from-class="opacity-100 scale-100 translate-y-0"
+                leave-to-class="opacity-0 scale-95 translate-y-2"
+                appear
+            >
+                <div
+                    class="relative w-full max-w-[420px] bg-white rounded-2xl shadow-2xl overflow-hidden p-6 sm:p-8 text-center"
+                >
+                    <button
+                        type="button"
+                        @click="closeSuccessModal"
+                        class="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-lg text-[#7A7B78] hover:bg-[#F5F5F4] hover:text-[#1A1B18] transition-colors"
+                        :aria-label="t('kerjasama.form.close')"
+                    >
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-50">
+                        <svg class="h-7 w-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+
+                    <h3 class="mt-4 text-[16px] font-bold text-[#1A1B18]">
+                        {{ t("kerjasama.form.submit_success_title") }}
+                    </h3>
+                    <p class="mt-2 text-[13px] leading-relaxed text-[#42443D]">
+                        {{ t("kerjasama.form.submit_success") }}
+                    </p>
+
+                    <button
+                        type="button"
+                        @click="closeSuccessModal"
+                        class="mt-6 w-full rounded-lg bg-[#9e1f16] px-6 py-2.5 text-[13px] font-semibold text-white transition hover:bg-[#7f1912]"
+                    >
+                        {{ t("kerjasama.form.close") }}
+                    </button>
+                </div>
+            </transition>
+        </div>
+    </transition>
 </template>
