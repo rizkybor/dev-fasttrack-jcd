@@ -311,7 +311,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     </p>
 
                     <!-- PENAWARAN KHUSUS -->
-                    <a href="/promo"
+                    <a href="/#promo"
                         class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#9e1f16] transition-colors"
                         @click="closeAllMenus">
                         <span
@@ -405,7 +405,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     <div class="h-1"></div>
 
                     <!-- TENTANG KAMI -->
-                    <a href="/tentang-kami"
+                    <a href="/#tentang-kami"
                         class="flex items-center gap-3 px-3 py-3 rounded-xl text-[13.5px] font-semibold text-[#1A1B18] hover:bg-[#FEF0F0] hover:text-[#9e1f16] transition-colors"
                         @click="closeAllMenus">
                         <span
