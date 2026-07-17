@@ -1,5 +1,6 @@
 // id/index.js, en/index.js, zh/index.js
 import common from './common'
+import errors from './errors'
 import home from './home'
 import faq from './faq'
 import articles from './articles'
@@ -62,6 +63,7 @@ import megaMenu from './services/mega-menu'
 
 export default {
     common,
+    errors,
     home,
     faq,
     articles,
