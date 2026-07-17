@@ -14,6 +14,7 @@ export default {
         dasar_hukum: "法律依据",
         pilih_layanan: "选择服务类型",
         penjelasan_layanan: "服务说明",
+        daftar_layanan: "服务清单",
         penjelasan_detail: "详细说明",
     },
     toggle: {
