@@ -22,7 +22,7 @@ export default {
                 {
                     title: 'Kantor Perwakilan',
                     description: 'KPPA, KPPPA, dan perwakilan perusahaan asing di Indonesia.',
-                    packages: '6 Layanan',
+                    packages: '4 Layanan',
                 },
                 {
                     title: 'Badan Usaha Luar Negeri',

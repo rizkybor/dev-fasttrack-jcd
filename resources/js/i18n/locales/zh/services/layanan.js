@@ -22,7 +22,7 @@ export default {
                 {
                     title: '代表处',
                     description: 'KPPA、KP3A及外国公司在印度尼西亚的代表处。',
-                    packages: '6项服务',
+                    packages: '4项服务',
                 },
                 {
                     title: '境外企业',

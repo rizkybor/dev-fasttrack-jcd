@@ -14,14 +14,14 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-person.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-persons.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-person-check.svg", path: "/foreignservice" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/badan-usaha" },
-    { icon: "/icons/ft-building.svg", path: "/foreignservice" },
+    { icon: "/icons/layanan/pt-perorangan.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/pt-pmdn.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/pt-pma.png", path: "/foreignservice" },
+    { icon: "/icons/layanan/penfirian-cv.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/pendirian-yayasan.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/pendirian-koperasi.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/persekutuan-perdata.svg", path: "/badan-usaha" },
+    { icon: "/icons//layanan/persekutuan-firma.svg", path: "/badan-usaha" },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
@@ -180,7 +180,7 @@ const buildWhatsappLink = (productName) => {
                         >
                             <div class="flex flex-col gap-4 flex-grow">
                                 <div
-                                    class="flex h-[60px] w-[60px] items-center justify-center rounded-lg bg-[#FAD9DA]"
+                                    class="flex h-[60px] w-[60px] items-center justify-center rounded-lg bg-[#9e1f16]"
                                 >
                                     <img
                                         :src="item.icon"

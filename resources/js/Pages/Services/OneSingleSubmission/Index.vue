@@ -14,10 +14,8 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/one-single-submission" },
-    { icon: "/icons/ft-persons-w.svg", path: "/one-single-submission" },
-    { icon: "/icons/ft-persons-w.svg", path: "/one-single-submission" },
-    { icon: "/icons/ft-persons-w.svg", path: "/one-single-submission" },
+    { icon: "/icons/layanan/pendaftaran-nib.png", path: "/one-single-submission" },
+    { icon: "/icons/layanan/perubahan-pemutakhiran-nib.png", path: "/one-single-submission" },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)

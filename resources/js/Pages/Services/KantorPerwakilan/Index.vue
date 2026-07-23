@@ -14,10 +14,10 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-person.svg", path: "/kantor-perwakilan" },
-    { icon: "/icons/ft-persons.svg", path: "/kantor-perwakilan" },
-    { icon: "/icons/ft-person-check.svg", path: "/foreignservice" },
-    { icon: "/icons/ft-building.svg", path: "/kantor-perwakilan" },
+    { icon: "/icons/layanan/kantor-perwakilan-asing.svg", path: "/kantor-perwakilan" },
+    { icon: "/icons/layanan/kantor-perwakilan-perdagangan-asing.svg", path: "/kantor-perwakilan" },
+    { icon: "/icons/layanan/kp3a-perdagangan-sistem-elektronik.svg", path: "/foreignservice" },
+    { icon: "/icons/layanan/kantor-perwakilan-badan-usaha-jasa-konstruksi-asing.svg", path: "/kantor-perwakilan" },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
@@ -28,8 +28,6 @@ const serviceList = computed(() =>
         path: itemMeta[i].path,
     })),
 );
-
-console.log(serviceList,'<<<')
 
 const { buildWhatsappLink: waLink } = useWhatsapp("akta");
 const buildWhatsappLink = (productName) => {
@@ -178,7 +176,7 @@ const buildWhatsappLink = (productName) => {
                         >
                             <div class="flex flex-col gap-4 flex-grow">
                                 <div
-                                    class="flex h-[60px] w-[60px] items-center justify-center rounded-lg bg-[#FAD9DA]"
+                                    class="flex h-[60px] w-[60px] items-center justify-center rounded-lg bg-[#9e1f16]"
                                 >
                                     <img
                                         :src="item.icon"
