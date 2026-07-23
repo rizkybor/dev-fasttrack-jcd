@@ -14,10 +14,10 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/kewajiban-pelaporan-perusahaan" },
-    { icon: "/icons/ft-persons-w.svg", path: "/kewajiban-pelaporan-perusahaan" },
-    { icon: "/icons/ft-persons-w.svg", path: "/kewajiban-pelaporan-perusahaan" },
-    { icon: "/icons/ft-persons-w.svg", path: "/kewajiban-pelaporan-perusahaan" },
+    { icon: "/icons/layanan/laporan-kegiatan-penanaman-modal.svg", path: "/kewajiban-pelaporan-perusahaan" },
+    { icon: "/icons/layanan/SIINAS.svg", path: "/kewajiban-pelaporan-perusahaan" },
+    { icon: "/icons/layanan/wajib-lapor.svg", path: "/kewajiban-pelaporan-perusahaan" },
+    { icon: "/icons/layanan/wajib-lapor.svg", path: "/kewajiban-pelaporan-perusahaan" },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
@@ -180,7 +180,7 @@ const buildWhatsappLink = (productName) => {
                                 >
                                     <img
                                         :src="item.icon"
-                                        class="w-6 h-6"
+                                        class="w-9 h-9"
                                         alt=""
                                     />
                                 </div>
