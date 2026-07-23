@@ -14,10 +14,10 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/notaris-virtual-dan-akta" },
-    { icon: "/icons/ft-persons-w.svg", path: "/notaris-virtual-dan-akta" },
-    { icon: "/icons/ft-persons-w.svg", path: "/notaris-virtual-dan-akta" },
-    { icon: "/icons/ft-persons-w.svg", path: "/notaris-virtual-dan-akta" },
+    { icon: "/icons/layanan/perubahan-ad-perseroan.svg", path: "/notaris-virtual-dan-akta" },
+    { icon: "/icons/layanan/perubahan-data-perseroan.svg", path: "/notaris-virtual-dan-akta" },
+    { icon: "/icons/layanan/rapat-umum-pemegang-saham-tahunan.svg", path: "/notaris-virtual-dan-akta" },
+    { icon: "/icons/layanan/akta-notaris-lainnya.svg", path: "/notaris-virtual-dan-akta" },
 ];
 
 const DEFAULT_ICON = "/icons/ft-persons-w.svg";
@@ -184,7 +184,7 @@ const buildWhatsappLink = (productName) => {
                                 >
                                     <img
                                         :src="item.icon"
-                                        class="w-6 h-6"
+                                        class="w-9 h-9"
                                         alt=""
                                     />
                                 </div>

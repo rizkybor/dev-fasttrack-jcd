@@ -178,7 +178,7 @@ const buildWhatsappLink = (productName) => {
                                 >
                                     <img
                                         :src="item.icon"
-                                        class="w-6 h-6"
+                                        class="w-9 h-9"
                                         alt=""
                                     />
                                 </div>
