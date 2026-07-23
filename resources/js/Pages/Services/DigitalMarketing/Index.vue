@@ -14,8 +14,8 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/design" },
-    { icon: "/icons/ft-persons-w.svg", path: "/digital-marketing" },
+    { icon: "/icons/layanan/design.svg", path: "/design" },
+    { icon: "/icons/layanan/digital-marketing.svg", path: "/digital-marketing" },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
@@ -178,7 +178,7 @@ const buildWhatsappLink = (productName) => {
                                 >
                                     <img
                                         :src="item.icon"
-                                        class="w-6 h-6"
+                                        class="w-9 h-9"
                                         alt=""
                                     />
                                 </div>
