@@ -47,17 +47,17 @@ export default {
                 {
                     title: 'Notaris Terintegrasi Digital',
                     description: 'Akta pendirian, perubahan AD, RUPS, jual beli, hingga perjanjian kawin.',
-                    packages: '6 Layanan',
+                    packages: '3 Layanan',
                 },
                 {
                     title: 'Restrukturisasi Perseroan Terbatas',
                     description: 'Akuisisi, merger, dan perubahan struktur perseroan secara legal.',
-                    packages: '6 Layanan',
+                    packages: '3 Layanan',
                 },
                 {
                     title: 'Penutupan Badan Usaha',
                     description: 'Penutupan PT PMDN, PT PMA, CV, dan kantor perwakilan asing.',
-                    packages: '6 Layanan',
+                    packages: '3 Layanan',
                 },
                 {
                     title: 'Kewajiban Pelaporan Perusahaan',
@@ -67,7 +67,7 @@ export default {
                 {
                     title: 'Sertifikasi Badan Usaha',
                     description: 'Sertifikasi Kamar Dagang dan Industri (KADIN) untuk badan usaha.',
-                    packages: '6 Layanan',
+                    packages: '1 Layanan',
                 },
                 {
                     title: 'Retainer / Berlangganan',
@@ -77,12 +77,12 @@ export default {
                 {
                     title: 'Virtual Office',
                     description: 'Penutupan PT PMDN, PT PMA, CV, dan kantor perwakilan asing.',
-                    packages: '6 Layanan',
+                    packages: '1 Layanan',
                 },
                 {
                     title: 'Design & Digital Marketing',
                     description: 'LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.',
-                    packages: '6 Layanan',
+                    packages: '2 Layanan',
                 },
                 {
                     title: 'Perpajakan dan Pembukuan',

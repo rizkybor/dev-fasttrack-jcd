@@ -17,7 +17,7 @@ const itemMeta = [
     { icon: "/icons/layanan/npwp.svg", path: "/perizinan-lainnya" },
     { icon: "/icons/layanan/sppkp.svg", path: "/perizinan-lainnya" },
     { icon: "/icons/layanan/tanda-daftar-lembaga-kesejahteraan-sosial.svg", path: "/perizinan-lainnya" },
-    { icon: "/icons/", path: "/perizinan-lainnya" },
+    { icon: "/icons/layanan/tanda-daftar-lembaga-kesejahteraan-sosial.svg", path: "/perizinan-lainnya" },
     { icon: "/icons/layanan/tanda-daftar-yayasan.svg", path: "/perizinan-lainnya" },
     { icon: "/icons/layanan/peraturan-perusahaan.svg", path: "/perizinan-lainnya" },
 ];
@@ -186,7 +186,7 @@ const buildWhatsappLink = (productName) => {
                                 >
                                     <img
                                         :src="item.icon"
-                                        class="w-6 h-6"
+                                        class="w-9 h-9"
                                         alt=""
                                     />
                                 </div>

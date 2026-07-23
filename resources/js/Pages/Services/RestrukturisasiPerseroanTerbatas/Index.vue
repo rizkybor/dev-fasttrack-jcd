@@ -14,10 +14,9 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/restrukturisasi-perseroan-terbatas" },
-    { icon: "/icons/ft-persons-w.svg", path: "/restrukturisasi-perseroan-terbatas" },
-    { icon: "/icons/ft-persons-w.svg", path: "/restrukturisasi-perseroan-terbatas" },
-    { icon: "/icons/ft-persons-w.svg", path: "/restrukturisasi-perseroan-terbatas" },
+    { icon: "/icons/layanan/pengambilalihan-perseroan.svg", path: "/restrukturisasi-perseroan-terbatas" },
+    { icon: "/icons/layanan/penggabungan-perseroan.svg", path: "/restrukturisasi-perseroan-terbatas" },
+    { icon: "/icons/layanan/alih-status-perseroan.svg", path: "/restrukturisasi-perseroan-terbatas" },
 ];
 
 const DEFAULT_ICON = "/icons/ft-persons-w.svg";
@@ -184,7 +183,7 @@ const buildWhatsappLink = (productName) => {
                                 >
                                     <img
                                         :src="item.icon"
-                                        class="w-6 h-6"
+                                        class="w-9 h-9"
                                         alt=""
                                     />
                                 </div>

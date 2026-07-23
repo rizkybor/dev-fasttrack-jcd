@@ -47,17 +47,17 @@ export default {
                 {
                     title: 'Digitally Integrated Notary',
                     description: 'Establishment deeds, articles of association amendments, GMS, sale and purchase, and prenuptial agreements.',
-                    packages: '6 Services',
+                    packages: '3 Services',
                 },
                 {
                     title: 'Limited Liability Company Restructuring',
                     description: 'Acquisitions, mergers, and legal company structure changes.',
-                    packages: '6 Services',
+                    packages: '3 Services',
                 },
                 {
                     title: 'Business Entity Closure',
                     description: 'Closure of PT PMDN, PT PMA, CV, and foreign representative offices.',
-                    packages: '6 Services',
+                    packages: '3 Services',
                 },
                 {
                     title: 'Corporate Reporting Obligations',
@@ -67,7 +67,7 @@ export default {
                 {
                     title: 'Business Entity Certification',
                     description: 'Chamber of Commerce and Industry (KADIN) certification for business entities.',
-                    packages: '6 Services',
+                    packages: '1 Services',
                 },
                 {
                     title: 'Retainer / Subscription',
@@ -77,12 +77,12 @@ export default {
                 {
                     title: 'Virtual Office',
                     description: 'Closure of PT PMDN, PT PMA, CV, and foreign representative offices.',
-                    packages: '6 Services',
+                    packages: '1 Services',
                 },
                 {
                     title: 'Design & Digital Marketing',
                     description: 'LKPM, SIINAS, mandatory manpower and welfare reporting.',
-                    packages: '6 Services',
+                    packages: '2 Services',
                 },
                 {
                     title: 'Taxation & Bookkeeping',

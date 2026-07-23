@@ -47,17 +47,17 @@ export default {
                 {
                     title: '数字化集成公证',
                     description: '设立公证书、章程变更、股东大会、买卖及婚前协议等。',
-                    packages: '6项服务',
+                    packages: '3项服务',
                 },
                 {
                     title: '有限责任公司重组',
                     description: '收购、合并及公司结构合法变更。',
-                    packages: '6项服务',
+                    packages: '3项服务',
                 },
                 {
                     title: '企业注销',
                     description: 'PT PMDN、PT PMA、CV及外国代表处的注销。',
-                    packages: '6项服务',
+                    packages: '3项服务',
                 },
                 {
                     title: '企业报告义务',
@@ -67,7 +67,7 @@ export default {
                 {
                     title: '企业认证',
                     description: '为企业办理商会（KADIN）认证。',
-                    packages: '6项服务',
+                    packages: '1项服务',
                 },
                 {
                     title: '法律顾问 / 订阅服务',
@@ -77,12 +77,12 @@ export default {
                 {
                     title: '虚拟办公室',
                     description: 'PT PMDN、PT PMA、CV及外国代表处的注销。',
-                    packages: '6项服务',
+                    packages: '1项服务',
                 },
                 {
                     title: '设计与数字营销',
                     description: 'LKPM、SIINAS及强制性劳动与福利报告。',
-                    packages: '6项服务',
+                    packages: '2项服务',
                 },
                 {
                     title: '税务与簿记',
