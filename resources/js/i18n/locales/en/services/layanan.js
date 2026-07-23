@@ -22,7 +22,7 @@ export default {
                 {
                     title: 'Representative Office',
                     description: 'KPPA, KP3A, and foreign company representative offices in Indonesia.',
-                    packages: '6 Services',
+                    packages: '4 Services',
                 },
                 {
                     title: 'Foreign Business Entities',

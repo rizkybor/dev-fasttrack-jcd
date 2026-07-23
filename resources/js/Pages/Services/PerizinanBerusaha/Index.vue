@@ -14,9 +14,9 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/perizinan-berusaha" },
-    { icon: "/icons/ft-persons-w.svg", path: "/perizinan-berusaha" },
-    { icon: "/icons/ft-persons-w.svg", path: "/perizinan-berusaha" },
+    { icon: "/icons/layanan/kesesuaian-kegiatan-pemanfaatan-ruang.png", path: "/perizinan-berusaha" },
+    { icon: "/icons/layanan/perizinan-berusaha-sertifikat-izin.png", path: "/perizinan-berusaha" },
+    { icon: "/icons/layanan/perizinan-berusaha-menunjang-kegiatan.png", path: "/perizinan-berusaha" },
 ];
 
 const DEFAULT_ICON = "/icons/ft-persons-w.svg";

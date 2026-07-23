@@ -23,11 +23,32 @@ const kotaKedudukan = ref("");
 const provinsi = ref("");
 const alamatLengkap = ref("");
 
-const daftarKota = [
-    "Jakarta Selatan", "Jakarta Pusat", "Jakarta Barat", "Jakarta Timur", "Jakarta Utara",
-    "Surabaya", "Bandung", "Medan", "Semarang", "Makassar", "Yogyakarta", "Bali",
-    "Tangerang", "Bekasi", "Depok", "Bogor", "Palembang", "Balikpapan",
-];
+// Data wilayah (provinsi -> kota/kabupaten) dimuat dari public/data, mengikuti
+// pola yang sama dengan data KBLI di bawah. Kota/Kabupaten dropdown mengikuti
+// provinsi yang dipilih (cascading), bukan lagi daftar kota flat.
+const daftarWilayah = ref({ provinces: [], regencies: {} });
+const isLoadingWilayah = ref(true);
+
+fetch("/data/wilayah-indonesia.json")
+    .then((res) => res.json())
+    .then((data) => { daftarWilayah.value = data; })
+    .catch(() => console.error("Gagal memuat data wilayah"))
+    .finally(() => { isLoadingWilayah.value = false; });
+
+const daftarProvinsi = computed(() => daftarWilayah.value.provinces ?? []);
+
+const selectedProvinsi = computed(() =>
+    daftarProvinsi.value.find((p) => p.name === provinsi.value) ?? null
+);
+
+const daftarKota = computed(() => {
+    if (!selectedProvinsi.value) return [];
+    return daftarWilayah.value.regencies?.[selectedProvinsi.value.id] ?? [];
+});
+
+// Reset kota/kabupaten setiap kali provinsi berganti supaya tidak ada
+// kombinasi kota-provinsi yang tidak nyambung.
+watch(provinsi, () => { kotaKedudukan.value = ""; });
 
 // ===== 3. Bidang Usaha =====
 const searchKBLI = ref("");
@@ -282,6 +303,7 @@ const handleSimulasi = () => {
         modalDitempatkan: modalDitempatkan.value,
         modalDisetor: modalDisetor.value,
         sahamPerPendiri: sahamPerPendiri.value,
+        sahamBiasa: sahamBiasa.value,
         pemegangSaham: pemegangSaham.value,
         direksi: direksi.value,
         komisaris: komisaris.value,
@@ -381,15 +403,39 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
+                                    {{ t("simulasiAkta.steps.kedudukan.provinsi_label") }} <span class="text-red-500">*</span>
+                                </label>
+                                <select v-model="provinsi"
+                                    class="w-full rounded-lg border px-3.5 py-2.5 text-[13px] text-[#1A1B18] focus:outline-none focus:ring-1 transition"
+                                    :class="errors.provinsi
+                                        ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
+                                        : 'border-[#D9DAD8] focus:border-primary focus:ring-primary bg-white'">
+                                    <option value="">
+                                        {{ isLoadingWilayah ? t("simulasiAkta.steps.kedudukan.provinsi_loading") : t("simulasiAkta.steps.kedudukan.provinsi_placeholder") }}
+                                    </option>
+                                    <option v-for="prov in daftarProvinsi" :key="prov.id" :value="prov.name">{{ prov.name }}</option>
+                                </select>
+                                <p v-if="errors.provinsi"
+                                    class="field-error mt-1.5 flex items-center gap-1 text-[11px] text-red-500">
+                                    <svg class="h-3.5 w-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" :d="errorIconPath" clip-rule="evenodd" />
+                                    </svg>
+                                    {{ errors.provinsi }}
+                                </p>
+                            </div>
+                            <div>
+                                <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
                                     {{ t("simulasiAkta.steps.kedudukan.kota_label") }} <span class="text-red-500">*</span>
                                 </label>
-                                <select v-model="kotaKedudukan"
-                                    class="w-full rounded-lg border px-3.5 py-2.5 text-[13px] text-[#1A1B18] focus:outline-none focus:ring-1 transition"
+                                <select v-model="kotaKedudukan" :disabled="!provinsi"
+                                    class="w-full rounded-lg border px-3.5 py-2.5 text-[13px] text-[#1A1B18] focus:outline-none focus:ring-1 transition disabled:bg-[#F5F5F4] disabled:text-[#B0B1AE] disabled:cursor-not-allowed"
                                     :class="errors.kotaKedudukan
                                         ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
                                         : 'border-[#D9DAD8] focus:border-primary focus:ring-primary bg-white'">
-                                    <option value="">{{ t("simulasiAkta.steps.kedudukan.kota_placeholder") }}</option>
-                                    <option v-for="kota in daftarKota" :key="kota" :value="kota">{{ kota }}</option>
+                                    <option value="">
+                                        {{ provinsi ? t("simulasiAkta.steps.kedudukan.kota_placeholder") : t("simulasiAkta.steps.kedudukan.kota_pilih_provinsi_dulu") }}
+                                    </option>
+                                    <option v-for="kota in daftarKota" :key="kota.id" :value="kota.name">{{ kota.name }}</option>
                                 </select>
                                 <p v-if="errors.kotaKedudukan"
                                     class="field-error mt-1.5 flex items-center gap-1 text-[11px] text-red-500">
@@ -397,23 +443,6 @@ const errorIconPath = "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 
                                         <path fill-rule="evenodd" :d="errorIconPath" clip-rule="evenodd" />
                                     </svg>
                                     {{ errors.kotaKedudukan }}
-                                </p>
-                            </div>
-                            <div>
-                                <label class="block text-[13px] font-semibold text-[#1A1B18] mb-1.5">
-                                    {{ t("simulasiAkta.steps.kedudukan.provinsi_label") }} <span class="text-red-500">*</span>
-                                </label>
-                                <input v-model="provinsi" type="text" :placeholder="t('simulasiAkta.steps.kedudukan.provinsi_placeholder')"
-                                    class="w-full rounded-lg border px-3.5 py-2.5 text-[13px] text-[#1A1B18] placeholder-[#B0B0AE] focus:outline-none focus:ring-1 transition"
-                                    :class="errors.provinsi
-                                        ? 'border-red-400 focus:border-red-400 focus:ring-red-300 bg-red-50'
-                                        : 'border-[#D9DAD8] focus:border-primary focus:ring-primary bg-white'" />
-                                <p v-if="errors.provinsi"
-                                    class="field-error mt-1.5 flex items-center gap-1 text-[11px] text-red-500">
-                                    <svg class="h-3.5 w-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" :d="errorIconPath" clip-rule="evenodd" />
-                                    </svg>
-                                    {{ errors.provinsi }}
                                 </p>
                             </div>
                         </div>

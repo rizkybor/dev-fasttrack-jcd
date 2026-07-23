@@ -75,6 +75,7 @@ export const useAktaPDF = () => {
         modalDisetor,
         nominalPerSaham,
         sahamPerPendiri,
+        sahamBiasa,
         pemegangSaham,
         direksi,
         komisaris,
@@ -194,6 +195,7 @@ export const useAktaPDF = () => {
         const jSD = nS > 0 ? Math.round(mD / nS) : 0;
         const jST = nS > 0 ? Math.round(mDt / nS) : 0;
         const pDt = mD > 0 ? Math.round((mDt / mD) * 100) : 0;
+        const pDs = mDt > 0 ? Math.round((mDs / mDt) * 100) : 0;
         const thD = today.getFullYear() + 1;
 
         // ══════════════════════════════════════
@@ -265,11 +267,24 @@ export const useAktaPDF = () => {
         );
 
         pemegangSaham.forEach((ps, i) => {
+            const jabatanRangkap = [
+                ps.direksi ? "Direksi" : null,
+                ps.komisaris ? "Dewan Komisaris" : null,
+            ].filter(Boolean);
+            const rangkapTxt = jabatanRangkap.length
+                ? `, yang juga merangkap sebagai anggota ${jabatanRangkap.join(" dan ")} Perseroan sebagaimana disebutkan pada bagian akhir akta ini,`
+                : "";
+
             wA(
                 `${i + 1}.`,
-                `Tuan/Nyonya ${ps.nama || "_______________"}, Warga Negara ${ps.domisili === "WNA" ? "Asing" : "Indonesia"}, Nomor Identitas : _______________, bertempat tinggal di _______________, untuk selanjutnya disebut sebagai "PENDIRI ${i + 1}" atau "PEMEGANG SAHAM ${i + 1}";`,
+                `Tuan/Nyonya ${ps.nama || "_______________"}, Warga Negara ${ps.domisili === "WNA" ? "Asing" : "Indonesia"}, Nomor Identitas : _______________, bertempat tinggal di _______________${rangkapTxt}, untuk selanjutnya disebut sebagai "PENDIRI ${i + 1}" atau "PEMEGANG SAHAM ${i + 1}";`,
             );
         });
+
+        sp(2);
+        wP(
+            `Komposisi kewarganegaraan para pendiri Perseroan ini adalah: ${sahamPerPendiri || "_______________"}.`,
+        );
 
         sp(2);
         wP(
@@ -292,7 +307,7 @@ export const useAktaPDF = () => {
         // ✔️ PERBAIKAN: Pemisahan baris dan penyesuaian redaksi "di-Kota" sesuai dokumen
         wA(
             "1.1",
-            `Perseroan Terbatas ini bernama:\n-------------PT "${nUp}"\n(selanjutnya dalam Anggaran Dasar ini cukup\ndisingkat dengan "Perseroan"), dan berkedudukan di-Kota ${kotaKedudukan || "_______________"}, beralamat lengkap di ${alamatLengkap || "_______________"}.`,
+            `Perseroan Terbatas ini bernama:\n-------------PT "${nUp}"\n(selanjutnya dalam Anggaran Dasar ini cukup\ndisingkat dengan "Perseroan"), dan berkedudukan di ${kotaKedudukan || "_______________"}, Provinsi ${provinsi || "_______________"}, beralamat lengkap di ${alamatLengkap || "_______________"}.`,
         );
         wA(
             "1.2",
@@ -358,7 +373,11 @@ export const useAktaPDF = () => {
         // ✔️ PERBAIKAN 4: Hapus teks terbilang persen agar langsung memunculkan % saja
         wA(
             "",
-            `Dari modal dasar sebagaimana tersebut di atas, telah ditempatkan dan disetor sebanyak ${pDt}% atau ${jST.toLocaleString("id-ID")} saham dengan nilai nominal seluruhnya sebesar ${fmtRupiah(mDt)} oleh para pendiri yang telah mengambil bagian terhadap saham-saham tersebut dengan nilai nominal saham sebagaimana disebutkan pada bagian akhir akta ini.`,
+            `Dari modal dasar sebagaimana tersebut di atas, telah ditempatkan sebanyak ${pDt}% atau ${jST.toLocaleString("id-ID")} saham dengan nilai nominal seluruhnya sebesar ${fmtRupiah(mDt)} oleh para pendiri yang telah mengambil bagian terhadap saham-saham tersebut dengan nilai nominal saham sebagaimana disebutkan pada bagian akhir akta ini.`,
+        );
+        wA(
+            "",
+            `Dari saham yang telah ditempatkan tersebut, telah disetor penuh ke dalam kas Perseroan sebesar ${fmtRupiah(mDs)} (${angkaTerbilang(mDs)} Rupiah), atau ${pDs}% dari nilai saham yang ditempatkan.`,
         );
 
         // ── PASAL 5 ───────────────────────
@@ -366,6 +385,12 @@ export const useAktaPDF = () => {
         wA(
             "5.1",
             "Seluruh saham yang dikeluarkan oleh Perseroan adalah saham atas nama.",
+        );
+        wA(
+            "",
+            sahamBiasa === "Ya - Ada Saham Preferen"
+                ? "Selain saham biasa, Perseroan juga dapat mengeluarkan saham preferen sebagaimana diatur lebih lanjut oleh Direksi dengan persetujuan rapat umum pemegang saham."
+                : "Perseroan hanya mengeluarkan saham biasa dan tidak mengeluarkan saham preferen.",
         );
         wA(
             "5.2",
@@ -1449,9 +1474,27 @@ export const useAktaPDF = () => {
             5,
         );
         wP("Direksi", 10);
-        wP("-Direktur    : _________________________.", 10);
+        if (direksi?.length) {
+            direksi.forEach((d) => {
+                wP(
+                    `-${d.jabatan || "Direktur"}    : ${d.nama || "_________________________"}.`,
+                    10,
+                );
+            });
+        } else {
+            wP("-Direktur    : _________________________.", 10);
+        }
         wP("Dewan Komisaris", 10);
-        wP("-Komisaris   : _________________________.", 10);
+        if (komisaris?.length) {
+            komisaris.forEach((k) => {
+                wP(
+                    `-${k.jabatan || "Komisaris"}   : ${k.nama || "_________________________"}.`,
+                    10,
+                );
+            });
+        } else {
+            wP("-Komisaris   : _________________________.", 10);
+        }
         wP(
             "-Pengangkatan anggota Direksi dan Dewan Komisaris- tersebut telah diterima oleh masing-masing yang bersangkutan.",
             10,

@@ -14,10 +14,12 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/perizinan-lainnya" },
-    { icon: "/icons/ft-persons-w.svg", path: "/perizinan-lainnya" },
-    { icon: "/icons/ft-persons-w.svg", path: "/perizinan-lainnya" },
-    { icon: "/icons/ft-persons-w.svg", path: "/perizinan-lainnya" },
+    { icon: "/icons/layanan/npwp.svg", path: "/perizinan-lainnya" },
+    { icon: "/icons/layanan/sppkp.svg", path: "/perizinan-lainnya" },
+    { icon: "/icons/layanan/tanda-daftar-lembaga-kesejahteraan-sosial.svg", path: "/perizinan-lainnya" },
+    { icon: "/icons/", path: "/perizinan-lainnya" },
+    { icon: "/icons/layanan/tanda-daftar-yayasan.svg", path: "/perizinan-lainnya" },
+    { icon: "/icons/layanan/peraturan-perusahaan.svg", path: "/perizinan-lainnya" },
 ];
 
 const DEFAULT_ICON = "/icons/ft-persons-w.svg";

@@ -466,13 +466,9 @@ const whatsappLink = computed(() => waLink(t("mintaPenawaran.cta.title")));
                             <!-- Selected Service Preview -->
                             <div
                                 v-if="selectedDetailData"
-                                class="relative mt-6 overflow-hidden rounded-xl bg-[#9e1f16] px-6 py-10 text-center"
+                                class="relative mt-6 overflow-hidden rounded-xl bg-[#9e1f16] px-6 py-10 text-left"
+                                style="background-image: url('/images/minta-penawaran.svg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
                             >
-                                <img
-                                    src="/icons/left-arrow.svg"
-                                    class="absolute -right-6 -top-6 h-32 w-auto opacity-10 pointer-events-none"
-                                    alt=""
-                                />
                                 <p
                                     class="text-[15px] font-bold uppercase tracking-wide text-white"
                                 >
@@ -486,11 +482,11 @@ const whatsappLink = computed(() => waLink(t("mintaPenawaran.cta.title")));
                                             )
                                         }}
                                     </p>
-                                    <p class="text-xl font-extrabold text-white">
+                                    <p class="text-3xl font-extrabold text-white">
                                         {{ formatRupiah(selectedDetailData.harga) }}
                                     </p>
                                 </template>
-                                <p v-else class="mt-4 text-xl font-extrabold text-white">
+                                <p v-else class="mt-4 text-3xl font-extrabold text-white">
                                     {{ t("mintaPenawaran.biaya.hubungi_kami") }}
                                 </p>
                             </div>
