@@ -2,9 +2,9 @@ export default {
     hero: {
         breadcrumb: {
             layanan: 'Services',
-            current: 'Basic Licenses and Business Licenses',
+            current: 'Basic Licensing and Business Licensing',
         },
-        title: 'Basic Licenses and Business Licenses',
+        title: 'Basic Licensing and Business Licensing',
         titleSub: '',
         desc: 'Processing of risk-based business licensing through the OSS system — from spatial planning conformity to supporting business activity permits.',
         back: 'Back',

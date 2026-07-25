@@ -1,7 +1,7 @@
 export default {
     breadcrumb: {
         layanan: "Services",
-        current: "Business Licensing",
+        current: "Basic Licensing and Business Licensing",
     },
     back: "Back",
     sections: {

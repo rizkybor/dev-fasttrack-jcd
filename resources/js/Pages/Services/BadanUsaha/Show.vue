@@ -22,6 +22,18 @@ const props = defineProps({
     },
 });
 
+// Icon & path tidak perlu ditranslasi, tetap di sini
+const itemMeta = [
+    { icon: "/icons/layanan/pt-perorangan.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/pt-pmdn.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/pt-pma.png", path: "/foreignservice" },
+    { icon: "/icons/layanan/penfirian-cv.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/pendirian-yayasan.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/pendirian-koperasi.svg", path: "/badan-usaha" },
+    { icon: "/icons/layanan/persekutuan-perdata.svg", path: "/badan-usaha" },
+    { icon: "/icons//layanan/persekutuan-firma.svg", path: "/badan-usaha" },
+];
+
 const parseBold = (text) => {
     if (!text) return "";
     return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
@@ -44,8 +56,14 @@ const localizedProduct = computed(() => {
     const p = props.product;
     if (!p) return p;
 
+    const targetIndex = props.index ?? (p.id ? p.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...p,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(p.name),
         tag: pick(p.tag),
         duration: pick(p.duration),
@@ -224,8 +242,14 @@ const toggleDoc = (key) => {
                         class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
                     >
                         <img
-                            src="/icons/ft-persons.svg"
+                            :src="localizedProduct.icon"
                             class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
                             alt=""
                         />
                     </div>
@@ -2399,7 +2423,8 @@ const toggleDoc = (key) => {
                                         class="text-[12px] leading-[1.6] text-[#686964] line-clamp-3"
                                     >
                                         {{
-                                            pick(related.excerpt) ?? pick(related.description)
+                                            pick(related.excerpt) ??
+                                            pick(related.description)
                                         }}
                                     </p>
                                     <hr class="border-[#E8E8E6]" />
