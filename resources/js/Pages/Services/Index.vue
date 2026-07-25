@@ -52,24 +52,24 @@ const categoryMeta = [
         { price: "Rp 750.000", path: "/retainer-berlangganan/1", image: "/images/layanan-card/layanan-retainer-berlangganan.png" },
         { price: "Rp 750.000", path: "/virtual-office/1", image: "/images/layanan-card/layanan-virtual-office.png" },
         { price: "Rp 750.000", path: "/digital-marketing", image: "/images/layanan-card/layanan-design-digmart.png" },
-        { price: "Rp 750.000", path: "/perpajakan-dan-pembukuan", image: "/images/layanan-card/layanan-design-digmart.png" },
+        { price: "Rp 750.000", path: "/perpajakan-dan-pembukuan", image: "/images/layanan-card/layanan-perpajakan-dan-pembukuan.png" },
     ],
     // HUKUM & KONTRAK
     [
-        { price: "Rp 750.000", path: "/penyusunan-peninjauan/1", image: "/images/dummy-card.png" },
-        { price: "Rp 750.000", path: "/legalisasi-kedutaan", image: "/images/dummy-card.png" },
-        { price: "Rp 750.000", path: "/penerjemah/1", image: "/images/dummy-card.png" },
-        { price: "Rp 750.000", path: "/kekayaan-intelektual", image: "/images/dummy-card.png" },
-        { price: "Rp 750.000", path: "/uji-tuntas-hukum/1", image: "/images/dummy-card.png" },
+        { price: "Rp 750.000", path: "/penyusunan-peninjauan/1", image: "/images/layanan-card/layanan-penyusunan-dan-peninjauan.png" },
+        { price: "Rp 750.000", path: "/legalisasi-kedutaan", image: "/images/layanan-card/layanan-legalisasi-kedutaan.png" },
+        { price: "Rp 750.000", path: "/penerjemah/1", image: "/images/layanan-card/layanan-penerjemah-translator.png" },
+        { price: "Rp 750.000", path: "/kekayaan-intelektual", image: "/images/layanan-card/layanan-kekayaan-intelektual.png" },
+        { price: "Rp 750.000", path: "/uji-tuntas-hukum/1", image: "/images/layanan-card/layanan-uji-tuntas-hukum.png" },
     ],
     // EXPATRIATE & KEIMIGRASIAN
     [
-        { price: "Rp 3.500.000", path: "/izin-tinggal-terbatas", image: "/images/dummy-card.png" },
+        { price: "Rp 3.500.000", path: "/izin-tinggal-terbatas", image: "/images/layanan-card/layanan-izin-tinggal-terbatas.png" },
         { price: "Rp 750.000", path: "/izin-tinggal-tetap", image: "/images/layanan-card/layanan-itap.png" },
-        { price: "Rp 3.500.000", path: "/visa-indonesia", image: "/images/dummy-card.png" },
-        { price: "Rp 750.000", path: "/visa-mancanegara", image: "/images/dummy-card.png" },
+        { price: "Rp 3.500.000", path: "/visa-indonesia", image: "/images/layanan-card/layanan-visa-indonesia.png" },
+        { price: "Rp 750.000", path: "/visa-mancanegara", image: "/images/layanan-card/layanan-visa-mancanegara.png" },
         { price: "Rp 750.000", path: "/keimigrasian-wni-wna", image: "/images/layanan-card/layanan-keimigrasian.png" },
-        { price: "Rp 750.000", path: "/naturalisasi/1", image: "/images/dummy-card.png" },
+        { price: "Rp 750.000", path: "/naturalisasi/1", image: "/images/layanan-card/layanan-naturalisasi.png" },
     ],
 ];
 

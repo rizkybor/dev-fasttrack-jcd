@@ -1,6 +1,7 @@
 export default {
     breadcrumb: {
         layanan: "Services",
+        current: "retainer / subscription"
     },
     back: "Back",
     sections: {

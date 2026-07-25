@@ -69,129 +69,49 @@ const selectedPackagePrice = computed(
 
 <template>
     <MainLayout>
-        <!-- Hero Section -->
-        <section
-            class="relative overflow-hidden min-h-[240px] sm:min-h-[320px] lg:min-h-[360px]"
-        >
-            <!-- Background image + overlay -->
-            <div class="absolute inset-0">
-                <img
-                    src="/images/layanan-hero/ft-hero-badan-usaha.png"
-                    class="h-full w-full object-cover object-center"
-                    alt=""
-                />
-                <div
-                    class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"
-                ></div>
-            </div>
-
+          <!-- Hero -->
+        <section class="relative overflow-hidden min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] bg-[#9e1f16]">
+            <img src="/icons/left-arrow.svg"
+                class="absolute right-0 -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block" alt="" />
             <div
-                class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-14 lg:py-16 flex flex-col justify-between gap-6 h-full min-h-[240px] sm:min-h-[320px] lg:min-h-[360px]"
-            >
-                <!-- Breadcrumb -->
-                <nav aria-label="Breadcrumb" class="overflow-hidden">
-                    <div
-                        class="inline-flex max-w-full items-center gap-1.5 sm:gap-2 sm:rounded-md sm:bg-white sm:px-4 sm:py-2"
-                    >
-                        <a
-                            href="/"
-                            class="flex-shrink-0 text-[#9e1f16] hover:text-black transition"
-                        >
-                            <svg
-                                class="h-3.5 w-3.5 sm:h-4 sm:w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"
-                                />
+                class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]">
+                <nav aria-label="Breadcrumb">
+                    <div class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
+                        <a href="/" class="text-[#9e1f16] hover:text-black transition">
+                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
                             </svg>
                         </a>
-                        <svg
-                            class="h-2.5 w-2.5 sm:h-3 sm:w-3 flex-shrink-0 text-[#9e1f16]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M9 5l7 7-7 7"
-                            />
+                        <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a
-                            href="/layanan"
-                            class="flex-shrink-0 text-xs sm:text-sm font-medium text-[#9e1f16] hover:underline"
-                            >{{ t("services.virtualOfficeDetail.breadcrumb.layanan") }}</a
-                        >
-                        <svg
-                            class="h-2.5 w-2.5 sm:h-3 sm:w-3 flex-shrink-0 text-[#9e1f16]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M9 5l7 7-7 7"
-                            />
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                            t("services.virtualOfficeDetail.breadcrumb.layanan")
+                        }}</a>
+                        <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <span
-                            class="min-w-0 truncate text-xs sm:text-sm font-medium text-[#9e1f16]"
-                            >{{ product.name }}</span
-                        >
+                        <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
-
-                <!-- Center: Heading -->
-                <div class="flex items-center gap-3 sm:gap-5">
+                <div class="flex items-center gap-5">
                     <div
-                        class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md sm:h-16 sm:w-16 sm:rounded-2xl"
-                    >
-                        <img
-                            src="/icons/ft-building.svg"
-                            class="h-6 w-6 sm:h-9 sm:w-9"
-                            alt=""
-                        />
+                        class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md">
+                        <img src="/icons/ft-persons.svg" class="w-9 h-9" alt="" />
                     </div>
-                    <div class="min-w-0">
-                        <h1
-                            class="text-lg font-extrabold leading-tight text-white sm:text-2xl lg:text-3xl max-w-[800px] line-clamp-2"
-                        >
-                            {{ product.name }}
-                        </h1>
-                        <p
-                            class="mt-1.5 sm:mt-2 max-w-2xl text-xs sm:text-sm leading-relaxed text-white/80 line-clamp-2 sm:line-clamp-none"
-                        >
-                            {{ product.excerpt }}
-                        </p>
-                    </div>
+                    <h1
+                        class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
+                        {{ localizedProduct.name }}
+                    </h1>
                 </div>
-
-                <!-- Bottom: Back button -->
                 <div>
-                    <a
-                        href="/layanan"
-                        class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-white hover:text-white/70 transition"
-                    >
-                        <svg
-                            class="h-3.5 w-3.5 sm:h-4 sm:w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                            />
+                    <a href="/layanan"
+                        class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
                         {{ t("services.virtualOfficeDetail.back") }}
                     </a>

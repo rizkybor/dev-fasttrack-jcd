@@ -1,6 +1,7 @@
 export default {
     breadcrumb: {
         layanan: "Layanan",
+        current: "Retainer / Berlangganan",
     },
     back: "Kembali",
     sections: {
@@ -20,7 +21,8 @@ export default {
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Berlangganan Retainer & Corporate Secretary Selesai dalam<br />1 (Satu) Hari",
+        vip_desc:
+            "Berlangganan Retainer & Corporate Secretary Selesai dalam<br />1 (Satu) Hari",
         vip_cta: "Pesan Layanan Sekarang",
         vip_note: "* (S&K BERLAKU)",
         price_label: "Estimasi total biaya",
@@ -38,4 +40,4 @@ export default {
         wa_subject: "layanan yang tidak terdaftar",
     },
     wa_message: "Halo FastTrack, saya ingin konsultasi mengenai",
-}
+};

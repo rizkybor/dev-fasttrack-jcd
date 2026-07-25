@@ -44,7 +44,7 @@ const buildWhatsappLink = (productName) => {
         >
             <div class="absolute inset-0">
                 <img
-                    src="/images/layanan-legalisasi-kedutaan/ft-hero-legalisasi-kedutaan.png"
+                    src="/images/layanan-hero/ft-hero-legalisasi-kedutaan.png"
                     alt="Hero background"
                     class="h-full w-full object-cover object-center"
                 />
