@@ -127,117 +127,49 @@ const currentCorporatePackages = computed(
 
 <template>
     <MainLayout>
-        <!-- Hero Section -->
-        <section
-            class="relative overflow-hidden min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]"
-        >
-            <!-- Background image + overlay -->
-            <div class="absolute inset-0">
-                <img
-                    src="/images/layanan-hero/ft-hero-retainer-berlangganan.png"
-                    class="h-full w-full object-cover object-center"
-                    alt=""
-                />
-                <div
-                    class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"
-                ></div>
-            </div>
-
+         <!-- Hero -->
+        <section class="relative overflow-hidden min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] bg-[#9e1f16]">
+            <img src="/icons/left-arrow.svg"
+                class="absolute right-0 -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block" alt="" />
             <div
-                class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]"
-            >
-                <!-- Breadcrumb -->
+                class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]">
                 <nav aria-label="Breadcrumb">
-                    <div
-                        class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2"
-                    >
-                        <a
-                            href="/"
-                            class="text-[#9e1f16] hover:text-black transition"
-                        >
-                            <svg
-                                class="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"
-                                />
+                    <div class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
+                        <a href="/" class="text-[#9e1f16] hover:text-black transition">
+                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
                             </svg>
                         </a>
-                        <svg
-                            class="h-3 w-3 text-[#9e1f16]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M9 5l7 7-7 7"
-                            />
+                        <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a
-                            href="/layanan"
-                            class="text-sm font-medium text-[#9e1f16] hover:underline"
-                            >{{ t("services.retainerBerlanggananDetail.breadcrumb.layanan") }}</a
-                        >
-                        <svg
-                            class="h-3 w-3 text-[#9e1f16]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M9 5l7 7-7 7"
-                            />
+                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{
+                            t("services.retainerBerlanggananDetail.breadcrumb.layanan")
+                        }}</a>
+                        <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{
-                            product.name
-                        }}</span>
+                        <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
-
-                <!-- Center: Heading + description -->
-                <div class="flex flex-col gap-3 max-w-2xl">
+                <div class="flex items-center gap-5">
+                    <div
+                        class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md">
+                        <img src="/icons/ft-persons.svg" class="w-9 h-9" alt="" />
+                    </div>
                     <h1
-                        class="font-extrabold leading-tight text-white text-2xl sm:text-3xl lg:text-4xl"
-                    >
-                        {{ product.name }}
+                        class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
+                        {{ localizedProduct.name }}
                     </h1>
-                    <p
-                        class="text-sm sm:text-base text-white/85 leading-relaxed"
-                    >
-                        {{ product.description }}
-                    </p>
                 </div>
-
-                <!-- Bottom: Back button -->
                 <div>
-                    <a
-                        href="/layanan"
-                        class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition"
-                    >
-                        <svg
-                            class="h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                            />
+                    <a href="/layanan"
+                        class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
                         {{ t("services.retainerBerlanggananDetail.back") }}
                     </a>
