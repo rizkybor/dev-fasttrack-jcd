@@ -70,9 +70,9 @@ const isNegaraGrouped = computed(() => {
 // Breadcrumb dinamis
 const categoryPath = computed(() => product.value?.category_path ?? "/legalisasi-kedutaan");
 const categoryName = computed(() => product.value?.category_name ?? pick({
-    id: "Legalisasi Kedutaan",
-    en: "Embassy Legalization",
-    zh: "使馆认证",
+    id: "Legalisasi Kedutaan / Apostilled",
+    en: "Embassy Legalization / Apostilled",
+    zh: "使馆认证/海牙认证",
 }));
 
 // Footer CTA dinamis
@@ -191,13 +191,13 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                     </div>
                 </nav>
 
-                <div class="flex items-center gap-4 sm:gap-5 my-6 sm:my-0 min-w-0">
+                <div class="flex items-center gap-5">
                     <div
-                        class="flex h-12 w-12 sm:h-16 sm:w-16 flex-shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-white shadow-md">
-                        <img :src="product.icon ?? '/icons/ft-persons.svg'" class="w-7 h-7 sm:w-9 sm:h-9" alt="" />
+                        class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl">
+                        <img :src="product.icon ?? '/icons/ft-persons.svg'" class="h-6 w-6 md:h-9 md:w-9" alt="" />
                     </div>
                     <h1
-                        class="text-xl sm:text-2xl lg:text-3xl font-extrabold leading-tight text-white max-w-[800px] line-clamp-2 break-words min-w-0">
+                        class="text-base font-extrabold leading-tight text-white sm:text-2xl lg:text-2xl max-w-[800px] line-clamp-2">
                         {{ product.name }}
                     </h1>
                 </div>

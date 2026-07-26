@@ -160,7 +160,7 @@ const filteredContractCategories = computed(() => {
                 <!-- Center: Heading -->
                 <div class="flex items-center gap-5">
                     <div
-                        class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
+                        class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl"
                     >
                         <img
                             src="/icons/ft-persons.svg"
@@ -169,7 +169,7 @@ const filteredContractCategories = computed(() => {
                         />
                     </div>
                     <h1
-                        class="font-extrabold leading-tight text-white sm:text-2xl lg:text-4xl max-w-[800px] line-clamp-2"
+                        class="text-base font-extrabold leading-tight text-white sm:text-2xl lg:text-2xl max-w-[800px] line-clamp-2"
                     >
                         {{ product.name }}
                     </h1>
