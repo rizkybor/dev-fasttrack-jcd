@@ -12,6 +12,12 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
+const itemMeta = [
+    { icon: "/icons/layanan/pembubaran.svg", path: "/penutupan-badan-usaha" },
+    { icon: "/icons/layanan/pembubaran.svg", path: "/penutupan-badan-usaha" },
+    { icon: "/icons/layanan/pembubaran.svg", path: "/penutupan-badan-usaha" },
+];
+
 const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -31,8 +37,14 @@ const localizedProduct = computed(() => {
     const p = props.product;
     if (!p) return p;
 
+    const targetIndex = props.index ?? (p.id ? p.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...p,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(p.name),
         excerpt: pick(p.excerpt),
         penjelasan_umum: pick(p.penjelasan_umum) ?? [],
@@ -85,14 +97,28 @@ const activeBiayaTabData = computed(
                         <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
+
+                <!-- Center: Heading -->
                 <div class="flex items-center gap-5">
                     <div class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md">
-                        <img src="/icons/ft-persons.svg" class="w-9 h-9" alt="" />
+                        <img
+                            :src="localizedProduct.icon"
+                            class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                     </div>
                     <h1 class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
                         {{ localizedProduct.name }}
                     </h1>
                 </div>
+
+                <!-- Bottom: Back button -->
                 <div>
                     <a href="/penutupan-badan-usaha" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition">
                         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -502,7 +528,18 @@ const activeBiayaTabData = computed(
                                     :href="related.detail_path"
                                     class="group flex items-center gap-3 rounded-xl border border-[#E8E8E6] bg-white p-3 hover:border-primary/30 hover:shadow-sm transition-all">
                                     <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#FFF0EF]">
-                                        <img src="/icons/ft-persons.svg" class="w-5 h-5" alt="" />
+                                        <!-- <img src="/icons/ft-persons.svg" class="w-5 h-5" alt="" /> -->
+                                         <img
+                            :src="localizedProduct.icon"
+                            class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                                     </div>
                                     <div class="flex-1 min-w-0">
                                         <p class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug line-clamp-2">

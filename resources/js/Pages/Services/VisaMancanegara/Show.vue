@@ -12,6 +12,9 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
+// Icon tidak perlu ditranslasi, sama untuk semua item
+const itemIcon = "/icons/layanan/visa.svg";
+
 const { buildWhatsappLink } = useWhatsapp("visa");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -113,7 +116,17 @@ const currentSidebar = computed(() =>
                 </nav>
                 <div class="flex items-center gap-5">
                     <div class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md">
-                        <img src="/icons/ft-persons.svg" class="w-9 h-9" alt="" />
+                        <img
+                            :src="itemIcon"
+                            class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                     </div>
                     <h1 class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
                         {{ product.name }}
