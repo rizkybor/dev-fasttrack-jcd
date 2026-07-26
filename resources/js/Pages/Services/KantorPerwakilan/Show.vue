@@ -215,11 +215,11 @@ const toggleDoc = (key) => {
                 <!-- Center: Heading -->
                 <div class="flex items-center gap-5">
                     <div
-                        class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
+                        class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl"
                     >
                         <img
                             :src="localizedProduct.icon"
-                            class="w-9 h-9"
+                            class="h-6 w-6 md:h-9 md:w-9"
                             style="
                                 filter: brightness(0) saturate(100%) invert(14%)
                                     sepia(82%) saturate(4150%)
@@ -230,7 +230,7 @@ const toggleDoc = (key) => {
                         />
                     </div>
                     <h1
-                        class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2"
+                        class="text-base font-extrabold leading-tight text-white sm:text-2xl lg:text-2xl max-w-[800px] line-clamp-2"
                     >
                         {{ localizedProduct.name }}
                     </h1>
