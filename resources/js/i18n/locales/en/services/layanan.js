@@ -47,7 +47,7 @@ export default {
                 {
                     title: 'Digitally Integrated Notary',
                     description: 'Establishment deeds, articles of association amendments, GMS, sale and purchase, and prenuptial agreements.',
-                    packages: '3 Services',
+                    packages: '4 Services',
                 },
                 {
                     title: 'Limited Liability Company Restructuring',
@@ -62,7 +62,7 @@ export default {
                 {
                     title: 'Corporate Reporting Obligations',
                     description: 'LKPM, SIINAS, mandatory manpower and welfare reporting.',
-                    packages: '3 Services',
+                    packages: '4 Services',
                 },
                 {
                     title: 'Business Entity Certification',
@@ -142,17 +142,17 @@ export default {
                 {
                     title: 'Visa to Foreign Countries',
                     description: 'Processing of visas to foreign countries for various purposes.',
-                    packages: '6 Services',
+                    packages: '14 Services',
                 },
                 {
                     title: 'Immigration',
                     description: 'Republic of Indonesia passports and other immigration services.',
-                    packages: '6 Services',
+                    packages: '5 Services',
                 },
                 {
                     title: 'Naturalization',
                     description: 'Naturalization of foreign nationals to become Indonesian citizens.',
-                    packages: '6 Services',
+                    packages: '1 Services',
                 },
             ],
         },
