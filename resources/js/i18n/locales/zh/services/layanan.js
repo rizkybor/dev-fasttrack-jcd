@@ -47,7 +47,7 @@ export default {
                 {
                     title: '数字化集成公证',
                     description: '设立公证书、章程变更、股东大会、买卖及婚前协议等。',
-                    packages: '3项服务',
+                    packages: '4项服务',
                 },
                 {
                     title: '有限责任公司重组',
@@ -62,7 +62,7 @@ export default {
                 {
                     title: '企业报告义务',
                     description: 'LKPM、SIINAS及强制性劳动与福利报告。',
-                    packages: '3项服务',
+                    packages: '4项服务',
                 },
                 {
                     title: '企业认证',
@@ -142,17 +142,17 @@ export default {
                 {
                     title: '赴国外签证',
                     description: '为各类需求办理赴国外签证。',
-                    packages: '6项服务',
+                    packages: '14项服务',
                 },
                 {
                     title: '移民事务',
                     description: '印度尼西亚共和国护照及其他移民服务。',
-                    packages: '6项服务',
+                    packages: '5项服务',
                 },
                 {
                     title: '入籍',
                     description: '外籍人士入籍成为印度尼西亚公民（归化）。',
-                    packages: '6项服务',
+                    packages: '1项服务',
                 },
             ],
         },

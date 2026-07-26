@@ -47,7 +47,7 @@ export default {
                 {
                     title: 'Notaris Terintegrasi Digital',
                     description: 'Akta pendirian, perubahan AD, RUPS, jual beli, hingga perjanjian kawin.',
-                    packages: '3 Layanan',
+                    packages: '4 Layanan',
                 },
                 {
                     title: 'Restrukturisasi Perseroan Terbatas',
@@ -62,7 +62,7 @@ export default {
                 {
                     title: 'Kewajiban Pelaporan Perusahaan',
                     description: 'LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.',
-                    packages: '3 Layanan',
+                    packages: '4 Layanan',
                 },
                 {
                     title: 'Sertifikasi Badan Usaha',
@@ -142,17 +142,17 @@ export default {
                 {
                     title: 'Visa ke Mancanegara',
                     description: 'Pengurusan visa ke luar negeri untuk berbagai keperluan.',
-                    packages: '6 Layanan',
+                    packages: '14 Layanan',
                 },
                 {
                     title: 'Keimigrasian',
                     description: 'Paspor Republik Indonesia dan layanan keimigrasian lainnya.',
-                    packages: '6 Layanan',
+                    packages: '5 Layanan',
                 },
                 {
                     title: 'Naturalisasi',
                     description: 'Alih kewarganegaraan (naturalisasi) bagi WNA menjadi WNI.',
-                    packages: '6 Layanan',
+                    packages: '1 Layanan',
                 },
             ],
         },
