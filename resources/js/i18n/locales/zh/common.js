@@ -60,7 +60,7 @@ export default {
             indramayu: {
                 title: "井里汶办公室：",
                 address:
-                    "Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, 东爪哇 61256",
+                    "Jl. Letnan Joni No.53, Jatibarang Baru, Kec. Jatibarang, Kab. Indramayu, 东爪哇 61256",
             },
         },
         popularLinks: {

@@ -20,7 +20,9 @@ const props = defineProps({
 
 const { buildWhatsappLink: waLink } = useWhatsapp("virtual_office");
 const buildWhatsappLink = (productName, packageName) => {
-    return waLink(packageName ? `${productName} - ${packageName}` : productName);
+    return waLink(
+        packageName ? `${productName} - ${packageName}` : productName,
+    );
 };
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -69,49 +71,113 @@ const selectedPackagePrice = computed(
 
 <template>
     <MainLayout>
-          <!-- Hero -->
-        <section class="relative overflow-hidden min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] bg-[#9e1f16]">
-            <img src="/icons/left-arrow.svg"
-                class="absolute right-0 -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block" alt="" />
+        <!-- Hero -->
+        <section
+            class="relative overflow-hidden min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] bg-[#9e1f16]"
+        >
+            <img
+                src="/icons/left-arrow.svg"
+                class="absolute right-0 -top-[15%] h-[130%] w-auto pointer-events-none hidden lg:block"
+                alt=""
+            />
             <div
-                class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]">
+                class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col justify-between h-full min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]"
+            >
                 <nav aria-label="Breadcrumb">
-                    <div class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2">
-                        <a href="/" class="text-[#9e1f16] hover:text-black transition">
-                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" />
+                    <div
+                        class="hidden sm:inline-flex items-center gap-2 rounded-md bg-white px-4 py-2"
+                    >
+                        <a
+                            href="/"
+                            class="text-[#9e1f16] hover:text-black transition"
+                        >
+                            <svg
+                                class="h-4 w-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"
+                                />
                             </svg>
                         </a>
-                        <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        <svg
+                            class="h-3 w-3 text-[#9e1f16]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
                         </svg>
-                        <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{
-                            t("services.virtualOfficeDetail.breadcrumb.layanan")
-                        }}</a>
-                        <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        <a
+                            href="/layanan"
+                            class="text-sm font-medium text-[#9e1f16] hover:underline"
+                            >{{
+                                t(
+                                    "services.virtualOfficeDetail.breadcrumb.layanan",
+                                )
+                            }}</a
+                        >
+                        <svg
+                            class="h-3 w-3 text-[#9e1f16]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
                         </svg>
-                        <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
+                        <span class="text-sm font-medium text-[#9e1f16]">{{
+                            localizedProduct.name
+                        }}</span>
                     </div>
                 </nav>
                 <div class="flex items-center gap-5">
                     <div
-                        class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md">
-                        <img src="/icons/ft-persons.svg" class="w-9 h-9" alt="" />
+                        class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl"
+                    >
+                        <img
+                            src="/icons/ft-persons.svg"
+                            class="h-6 w-6 md:h-9 md:w-9"
+                            alt=""
+                        />
                     </div>
                     <h1
-                        class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
+                        class="text-base font-extrabold leading-tight text-white sm:text-2xl lg:text-2xl max-w-[800px] line-clamp-2"
+                    >
                         {{ localizedProduct.name }}
                     </h1>
                 </div>
                 <div>
-                    <a href="/layanan"
-                        class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition">
-                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    <a
+                        href="/layanan"
+                        class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition"
+                    >
+                        <svg
+                            class="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                            />
                         </svg>
                         {{ t("services.virtualOfficeDetail.back") }}
                     </a>
@@ -131,7 +197,9 @@ const selectedPackagePrice = computed(
                         <div
                             class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-6 md:p-8"
                         >
-                            <div class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
+                            <div
+                                class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5"
+                            >
                                 <img
                                     src="/icons/ic-menu-arrow.svg"
                                     class="h-5 w-5 flex-shrink-0 sm:h-6 sm:w-6"
@@ -161,7 +229,9 @@ const selectedPackagePrice = computed(
                             class="relative overflow-hidden rounded-xl bg-[#9e1f16] px-4 py-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between sm:rounded-2xl sm:px-8 sm:py-6"
                         >
                             <div>
-                                <p class="text-[11px] text-white/70 sm:text-[12px]">
+                                <p
+                                    class="text-[11px] text-white/70 sm:text-[12px]"
+                                >
                                     {{ detail.promo.label }}
                                 </p>
                                 <p
@@ -182,7 +252,9 @@ const selectedPackagePrice = computed(
                             v-if="detail.keunggulan?.length"
                             class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-6 md:p-8"
                         >
-                            <div class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
+                            <div
+                                class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5"
+                            >
                                 <img
                                     src="/icons/ic-menu-arrow.svg"
                                     class="h-5 w-5 flex-shrink-0 sm:h-6 sm:w-6"
@@ -191,10 +263,16 @@ const selectedPackagePrice = computed(
                                 <h2
                                     class="text-xs font-bold uppercase leading-snug tracking-wide text-black sm:text-[15px] sm:tracking-widest"
                                 >
-                                    {{ t("services.virtualOfficeDetail.sections.keunggulan_heading") }}
+                                    {{
+                                        t(
+                                            "services.virtualOfficeDetail.sections.keunggulan_heading",
+                                        )
+                                    }}
                                 </h2>
                             </div>
-                            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+                            <div
+                                class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
+                            >
                                 <div
                                     v-for="(item, index) in detail.keunggulan"
                                     :key="`keunggulan-${index}`"
@@ -226,7 +304,9 @@ const selectedPackagePrice = computed(
                             v-if="paketReguler.columns?.length"
                             class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-6 md:p-8"
                         >
-                            <div class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
+                            <div
+                                class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5"
+                            >
                                 <img
                                     src="/icons/ic-menu-arrow.svg"
                                     class="h-5 w-5 flex-shrink-0 sm:h-6 sm:w-6"
@@ -256,102 +336,110 @@ const selectedPackagePrice = computed(
                                             class="w-[78px] sm:w-[110px]"
                                         />
                                     </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th
-                                                    class="text-left font-semibold text-[#686964] p-2 border-b border-[#E8E8E6] break-words sm:p-3"
-                                                >
-                                                    {{ paketReguler.jenis_label }}
-                                                </th>
-                                                <th
-                                                    v-for="(
-                                                        col, cIndex
-                                                    ) in paketReguler.columns"
-                                                    :key="`col-${cIndex}`"
-                                                    class="cursor-pointer p-2 border-b break-words text-center text-[10.5px] font-bold uppercase leading-tight tracking-normal transition-colors sm:p-3 sm:text-[12px] sm:tracking-wide"
-                                                    :class="
-                                                        selectedPackageIndex ===
-                                                        cIndex
-                                                            ? 'bg-[#9e1f16] text-white border-[#9e1f16]'
-                                                            : 'text-[#1A1B18] border-[#E8E8E6] hover:bg-[#F9F9F9]'
-                                                    "
-                                                    @click="
-                                                        selectedPackageIndex =
-                                                            cIndex
-                                                    "
-                                                >
-                                                    {{ col }}
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr
-                                                v-for="(row, rIndex) in paketReguler.rows"
-                                                :key="`row-${rIndex}`"
+                                    <thead>
+                                        <tr>
+                                            <th
+                                                class="text-left font-semibold text-[#686964] p-2 border-b border-[#E8E8E6] break-words sm:p-3"
                                             >
-                                                <td
-                                                    class="p-2 border-b border-[#E8E8E6] text-[#3D3D3A] break-words sm:p-3"
-                                                >
-                                                    {{ row.label }}
-                                                </td>
-                                                <td
-                                                    v-for="(
-                                                        val, cIndex
-                                                    ) in row.values"
-                                                    :key="`val-${rIndex}-${cIndex}`"
-                                                    class="p-2 border-b text-center border-[#E8E8E6] sm:p-3"
-                                                    :class="
-                                                        selectedPackageIndex ===
+                                                {{ paketReguler.jenis_label }}
+                                            </th>
+                                            <th
+                                                v-for="(
+                                                    col, cIndex
+                                                ) in paketReguler.columns"
+                                                :key="`col-${cIndex}`"
+                                                class="cursor-pointer p-2 border-b break-words text-center text-[10.5px] font-bold uppercase leading-tight tracking-normal transition-colors sm:p-3 sm:text-[12px] sm:tracking-wide"
+                                                :class="
+                                                    selectedPackageIndex ===
+                                                    cIndex
+                                                        ? 'bg-[#9e1f16] text-white border-[#9e1f16]'
+                                                        : 'text-[#1A1B18] border-[#E8E8E6] hover:bg-[#F9F9F9]'
+                                                "
+                                                @click="
+                                                    selectedPackageIndex =
                                                         cIndex
-                                                            ? 'bg-[#FBEAE8]'
-                                                            : ''
-                                                    "
+                                                "
+                                            >
+                                                {{ col }}
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr
+                                            v-for="(
+                                                row, rIndex
+                                            ) in paketReguler.rows"
+                                            :key="`row-${rIndex}`"
+                                        >
+                                            <td
+                                                class="p-2 border-b border-[#E8E8E6] text-[#3D3D3A] break-words sm:p-3"
+                                            >
+                                                {{ row.label }}
+                                            </td>
+                                            <td
+                                                v-for="(
+                                                    val, cIndex
+                                                ) in row.values"
+                                                :key="`val-${rIndex}-${cIndex}`"
+                                                class="p-2 border-b text-center border-[#E8E8E6] sm:p-3"
+                                                :class="
+                                                    selectedPackageIndex ===
+                                                    cIndex
+                                                        ? 'bg-[#FBEAE8]'
+                                                        : ''
+                                                "
+                                            >
+                                                <img
+                                                    v-if="val === true"
+                                                    src="/icons/ft-done.svg"
+                                                    class="inline-block h-3.5 w-3.5 sm:h-4 sm:w-4"
+                                                    alt="ya"
+                                                />
+                                                <span
+                                                    v-else-if="val === false"
+                                                    class="text-[#B7B8B4]"
+                                                    >-</span
                                                 >
-                                                    <img
-                                                        v-if="val === true"
-                                                        src="/icons/ft-done.svg"
-                                                        class="inline-block h-3.5 w-3.5 sm:h-4 sm:w-4"
-                                                        alt="ya"
-                                                    />
-                                                    <span
-                                                        v-else-if="val === false"
-                                                        class="text-[#B7B8B4]"
-                                                        >-</span
-                                                    >
-                                                    <span
-                                                        v-else
-                                                        class="text-[#3D3D3A] break-words"
-                                                        >{{ val }}</span
-                                                    >
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    class="p-2 font-bold text-[#1A1B18] break-words sm:p-3"
+                                                <span
+                                                    v-else
+                                                    class="text-[#3D3D3A] break-words"
+                                                    >{{ val }}</span
                                                 >
-                                                    {{ paketReguler.harga_label }}
-                                                </td>
-                                                <td
-                                                    v-for="(
-                                                        harga, hIndex
-                                                    ) in paketReguler.harga"
-                                                    :key="`harga-${hIndex}`"
-                                                    class="p-2 text-center font-bold text-[#9e1f16] break-words sm:p-3"
-                                                    :class="
-                                                        selectedPackageIndex ===
-                                                        hIndex
-                                                            ? 'bg-[#FBEAE8]'
-                                                            : ''
-                                                    "
-                                                >
-                                                    {{ harga }}
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            <p class="mt-2 text-[10px] text-[#B7B8B4] sm:hidden">
-                                {{ t("services.virtualOfficeDetail.table.swipe_hint") }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="p-2 font-bold text-[#1A1B18] break-words sm:p-3"
+                                            >
+                                                {{ paketReguler.harga_label }}
+                                            </td>
+                                            <td
+                                                v-for="(
+                                                    harga, hIndex
+                                                ) in paketReguler.harga"
+                                                :key="`harga-${hIndex}`"
+                                                class="p-2 text-center font-bold text-[#9e1f16] break-words sm:p-3"
+                                                :class="
+                                                    selectedPackageIndex ===
+                                                    hIndex
+                                                        ? 'bg-[#FBEAE8]'
+                                                        : ''
+                                                "
+                                            >
+                                                {{ harga }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p
+                                class="mt-2 text-[10px] text-[#B7B8B4] sm:hidden"
+                            >
+                                {{
+                                    t(
+                                        "services.virtualOfficeDetail.table.swipe_hint",
+                                    )
+                                }}
                             </p>
 
                             <div
@@ -387,7 +475,11 @@ const selectedPackagePrice = computed(
                                         class="h-4 w-4"
                                         alt="wa"
                                     />
-                                    {{ t("services.virtualOfficeDetail.table.konsultasi_cta") }}
+                                    {{
+                                        t(
+                                            "services.virtualOfficeDetail.table.konsultasi_cta",
+                                        )
+                                    }}
                                 </a>
                             </div>
                         </div>
@@ -397,7 +489,9 @@ const selectedPackagePrice = computed(
                             v-if="detail.gallery?.items?.length"
                             class="rounded-xl border border-[#E8E8E6] bg-white p-4 sm:rounded-2xl sm:p-6 md:p-8"
                         >
-                            <div class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
+                            <div
+                                class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5"
+                            >
                                 <img
                                     src="/icons/ic-menu-arrow.svg"
                                     class="h-5 w-5 flex-shrink-0 sm:h-6 sm:w-6"
@@ -413,8 +507,7 @@ const selectedPackagePrice = computed(
                                 class="grid grid-cols-2 gap-2.5 sm:grid-cols-4 sm:gap-3"
                             >
                                 <div
-                                    v-for="(loc, index) in detail.gallery
-                                        .items"
+                                    v-for="(loc, index) in detail.gallery.items"
                                     :key="`loc-${index}`"
                                     class="relative overflow-hidden rounded-lg aspect-[3/4] sm:rounded-xl"
                                 >
@@ -432,11 +525,18 @@ const selectedPackagePrice = computed(
                                     >
                                         {{ detail.gallery.available_badge }}
                                     </span>
-                                    <div class="absolute bottom-1.5 left-1.5 right-1.5 sm:bottom-2 sm:left-2 sm:right-2">
+                                    <div
+                                        class="absolute bottom-1.5 left-1.5 right-1.5 sm:bottom-2 sm:left-2 sm:right-2"
+                                    >
                                         <p
                                             class="text-[12px] font-bold text-white sm:text-[13px]"
                                         >
-                                            {{ t("services.virtualOfficeDetail.gallery.lokasi_prefix") }} {{ loc.location }}
+                                            {{
+                                                t(
+                                                    "services.virtualOfficeDetail.gallery.lokasi_prefix",
+                                                )
+                                            }}
+                                            {{ loc.location }}
                                         </p>
                                         <span
                                             class="mt-1 inline-block rounded bg-white/20 px-1.5 py-0.5 text-[9px] text-white backdrop-blur-sm sm:text-[10px]"
@@ -541,7 +641,9 @@ const selectedPackagePrice = computed(
                                     />
                                 </svg>
                             </label>
-                            <div class="text-[11px] text-[#686964] mb-1 sm:text-[12px]">
+                            <div
+                                class="text-[11px] text-[#686964] mb-1 sm:text-[12px]"
+                            >
                                 {{ detail.sidebar?.starting_from }}
                             </div>
                             <div
@@ -550,8 +652,14 @@ const selectedPackagePrice = computed(
                                 {{ selectedPackagePrice
                                 }}{{ paketReguler.per_tahun }}
                             </div>
-                            <div class="text-[10px] text-[#686964] mb-3 sm:text-[11px] sm:mb-4">
-                                {{ t("services.virtualOfficeDetail.sidebar.price_note") }}
+                            <div
+                                class="text-[10px] text-[#686964] mb-3 sm:text-[11px] sm:mb-4"
+                            >
+                                {{
+                                    t(
+                                        "services.virtualOfficeDetail.sidebar.price_note",
+                                    )
+                                }}
                             </div>
                             <a
                                 :href="
@@ -573,9 +681,8 @@ const selectedPackagePrice = computed(
                             </a>
                             <ul class="mt-3 space-y-2 sm:mt-4">
                                 <li
-                                    v-for="(
-                                        item, index
-                                    ) in detail.sidebar?.checklist"
+                                    v-for="(item, index) in detail.sidebar
+                                        ?.checklist"
                                     :key="`check-${index}`"
                                     class="flex items-start gap-2 text-[12px] text-[#3D3D3A]"
                                 >
@@ -597,7 +704,11 @@ const selectedPackagePrice = computed(
                             <h3
                                 class="text-[13px] font-bold text-[#1A1B18] mb-3 sm:mb-4"
                             >
-                                {{ t("services.virtualOfficeDetail.sidebar.related_title") }}
+                                {{
+                                    t(
+                                        "services.virtualOfficeDetail.sidebar.related_title",
+                                    )
+                                }}
                             </h3>
                             <div class="flex flex-col gap-3">
                                 <a
@@ -617,7 +728,8 @@ const selectedPackagePrice = computed(
                                         class="text-[12px] leading-[1.6] text-[#686964] line-clamp-3"
                                     >
                                         {{
-                                            pick(related.excerpt) ?? pick(related.description)
+                                            pick(related.excerpt) ??
+                                            pick(related.description)
                                         }}
                                     </p>
                                     <hr class="border-[#E8E8E6]" />
@@ -628,7 +740,11 @@ const selectedPackagePrice = computed(
                                             <div
                                                 class="text-[11px] text-[#686964] mb-0.5"
                                             >
-                                                {{ t("services.virtualOfficeDetail.sidebar.related_from") }}
+                                                {{
+                                                    t(
+                                                        "services.virtualOfficeDetail.sidebar.related_from",
+                                                    )
+                                                }}
                                             </div>
                                             <div
                                                 class="text-[16px] font-bold text-primary leading-none sm:text-[18px]"
@@ -640,7 +756,11 @@ const selectedPackagePrice = computed(
                                     <div
                                         class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors"
                                     >
-                                        {{ t("services.virtualOfficeDetail.sidebar.related_cta") }}
+                                        {{
+                                            t(
+                                                "services.virtualOfficeDetail.sidebar.related_cta",
+                                            )
+                                        }}
                                         <svg
                                             class="h-4 w-4 group-hover:translate-x-0.5 transition-transform"
                                             fill="none"
@@ -667,7 +787,12 @@ const selectedPackagePrice = computed(
             :title="t('services.virtualOfficeDetail.footer.title')"
             :description="t('services.virtualOfficeDetail.footer.desc')"
             :button-text="t('services.virtualOfficeDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink(t('services.virtualOfficeDetail.footer.wa_subject'), '')"
+            :whatsapp-link="
+                buildWhatsappLink(
+                    t('services.virtualOfficeDetail.footer.wa_subject'),
+                    '',
+                )
+            "
         />
     </MainLayout>
 </template>

@@ -55,7 +55,7 @@ export default {
             },
             indramayu: {
                 title: 'Indramayu Office:',
-                address: 'Jl. Taman Pondok Legi III, Blok Y No. 1A, Peplegi, Waru, Kab. Sidoarjo, East Java 61256',
+                address: 'Jl. Letnan Joni No.53, Jatibarang Baru, Kec. Jatibarang, Kab. Indramayu, East Java 61256',
             },
         },
         popularLinks: {

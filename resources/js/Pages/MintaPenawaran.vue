@@ -763,7 +763,7 @@ const whatsappLink = computed(() => waLink(t("mintaPenawaran.cta.title")));
                         </form>
 
                         <!-- Info Box -->
-                        <div
+                        <!-- <div
                             class="flex items-start gap-2.5 rounded-lg bg-[#E7F3FB] border border-[#C7E4F5] px-4 py-3.5"
                         >
                             <svg
@@ -784,7 +784,7 @@ const whatsappLink = computed(() => waLink(t("mintaPenawaran.cta.title")));
                             >
                                 {{ t("mintaPenawaran.info_box") }}
                             </p>
-                        </div>
+                        </div> -->
                     </aside>
                 </div>
             </div>
