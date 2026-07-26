@@ -1050,8 +1050,15 @@ onUnmounted(() => {
             </div>
         </section>
 
-        <!-- ===== 7. WHY CHOOSE US ===== -->
-        <section class="py-[52px] bg-[#9e1f16]">
+       <!-- ===== 7. WHY CHOOSE US ===== -->
+        <section class="py-[52px] bg-[#9E1F16] relative overflow-hidden">
+            <div
+                class="hidden md:block absolute inset-0 bg-no-repeat bg-center opacity-10 pointer-events-none"
+                style="
+                    background-image: url('/images/peta-dunia-white.svg');
+                    background-size: 150%;
+                "
+            ></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                 <div class="flex flex-col items-center gap-8">
                     <div
