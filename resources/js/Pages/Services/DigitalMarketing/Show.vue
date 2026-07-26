@@ -11,6 +11,11 @@ const props = defineProps({
     service: { type: [Object, Array], required: true },
 });
 
+const itemMeta = [
+    { icon: "/icons/layanan/design.svg", path: "/design" },
+    { icon: "/icons/layanan/digital-marketing.svg", path: "/digital-marketing" },
+];
+
 const { buildWhatsappLink } = useWhatsapp("digital");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -32,8 +37,14 @@ const localizedService = computed(() => {
 
     const content = pick(raw.content) ?? {};
 
+    const targetIndex = props.index ?? (raw.id ? raw.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...raw,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(raw.name),
         excerpt: pick(raw.excerpt),
         penjelasan_umum: content.penjelasan_umum ?? [],
@@ -187,8 +198,14 @@ const otherSubServices = computed(() =>
                         class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
                     >
                         <img
-                            src="/icons/ft-persons.svg"
+                            :src="service.icon"
                             class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
                             alt=""
                         />
                     </div>
@@ -294,7 +311,7 @@ const otherSubServices = computed(() =>
                                     : 'bg-[#FEFEFE] border-[#D9DAD8] hover:border-primary/30'
                             "
                         >
-                            <div
+                            <!-- <div
                                 class="flex h-10 w-10 items-center justify-center rounded-lg mb-4"
                                 :class="
                                     currentSub?.id === sub.id
@@ -307,7 +324,7 @@ const otherSubServices = computed(() =>
                                     class="w-5 h-5"
                                     alt=""
                                 />
-                            </div>
+                            </div> -->
                             <h4
                                 class="text-[14px] font-bold leading-[20px] mb-1 line-clamp-2"
                                 :class="
@@ -488,13 +505,19 @@ const otherSubServices = computed(() =>
                         >
                             <div class="flex items-center gap-3">
                                 <span
-                                    class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/15"
+                                    class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white"
                                 >
                                     <img
-                                        src="/icons/ft-persons-w.svg"
-                                        class="w-5 h-5"
-                                        alt=""
-                                    />
+                            :src="service.icon"
+                            class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                                 </span>
                                 <span
                                     class="text-[14px] font-semibold text-white"

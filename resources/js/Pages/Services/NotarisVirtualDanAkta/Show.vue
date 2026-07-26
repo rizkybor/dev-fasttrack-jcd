@@ -12,6 +12,14 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
+// Icon & path tidak perlu ditranslasi, tetap di sini
+const itemMeta = [
+    { icon: "/icons/layanan/perubahan-ad-perseroan.svg", path: "/notaris-virtual-dan-akta" },
+    { icon: "/icons/layanan/perubahan-data-perseroan.svg", path: "/notaris-virtual-dan-akta" },
+    { icon: "/icons/layanan/rapat-umum-pemegang-saham-tahunan.svg", path: "/notaris-virtual-dan-akta" },
+    { icon: "/icons/layanan/akta-notaris-lainnya.svg", path: "/notaris-virtual-dan-akta" },
+];
+
 const { buildWhatsappLink: waLink } = useWhatsapp("akta");
 const buildWhatsappLink = (productName, paketNama = "") => {
     return waLink(paketNama ? `${productName} - ${paketNama}` : productName);
@@ -37,8 +45,14 @@ const localizedProduct = computed(() => {
     const p = props.product;
     if (!p) return p;
 
+    const targetIndex = props.index ?? (p.id ? p.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...p,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(p.name),
         tag: pick(p.tag),
         duration: pick(p.duration),
@@ -112,16 +126,30 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                         <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
+
+                <!-- Center: Heading -->
                 <div class="flex items-center gap-5">
                     <div
                         class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md">
-                        <img src="/icons/ft-persons.svg" class="w-9 h-9" alt="" />
+                         <img
+                            :src="localizedProduct.icon"
+                            class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                     </div>
                     <h1
                         class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
                         {{ localizedProduct.name }}
                     </h1>
                 </div>
+
+                <!-- Bottom: Back button -->
                 <div>
                     <a href="/notaris-virtual-dan-akta"
                         class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition">
@@ -166,10 +194,10 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                             :class="selectedPaketId === paket.id
                                 ? 'border-primary bg-primary text-white shadow-md'
                                 : 'border-[#E8E8E6] bg-white hover:border-primary/40 hover:shadow-sm'">
-                            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg"
+                            <!-- <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg"
                                 :class="selectedPaketId === paket.id ? 'bg-white/20' : 'bg-[#FFF0EF]'">
                                 <img src="/icons/ft-persons.svg" class="w-5 h-5" alt="" />
-                            </div>
+                            </div> -->
                             <p class="text-[13px] font-bold leading-snug mb-3"
                                 :class="selectedPaketId === paket.id ? 'text-white' : 'text-[#1A1B18]'">
                                 {{ paket.nama }}
@@ -593,10 +621,10 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                     @click="() => { selectedPaketId = paket.id; openItemId = null; }"
                                     class="group flex items-center justify-between rounded-xl border border-[#E8E8E6] bg-white px-4 py-3 text-left hover:border-primary/30 hover:shadow-sm transition-all">
                                     <div class="flex items-center gap-3">
-                                        <div
+                                        <!-- <div
                                             class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#FFF0EF]">
                                             <img src="/icons/ft-persons.svg" class="w-4 h-4" alt="" />
-                                        </div>
+                                        </div> -->
                                         <div>
                                             <p class="text-[12px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug">
                                                 {{ paket.nama }}

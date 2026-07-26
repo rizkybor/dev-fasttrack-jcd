@@ -13,6 +13,13 @@ const props = defineProps({
     relatedTitle: { type: String, default: "Layanan Lainnya" },
 });
 
+// Icon & path tidak perlu ditranslasi, tetap di sini
+const itemMeta = [
+    { icon: "/icons/layanan/kesesuaian-kegiatan-pemanfaatan-ruang.png", path: "/perizinan-berusaha" },
+    { icon: "/icons/layanan/perizinan-berusaha-sertifikat-izin.png", path: "/perizinan-berusaha" },
+    { icon: "/icons/layanan/perizinan-berusaha-menunjang-kegiatan.png", path: "/perizinan-berusaha" },
+];
+
 const { buildWhatsappLink } = useWhatsapp("visa");
 
 // Recursively resolve setiap field translatable {id,en,zh} sesuai locale aktif
@@ -224,13 +231,21 @@ const dokumenDibutuhkan = computed(
                         }}</span>
                     </div>
                 </nav>
+                
+                <!-- Center: Heading -->
                 <div class="flex items-center gap-5">
                     <div
                         class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
                     >
                         <img
-                            src="/icons/ft-persons.svg"
+                            :src="localizedProduct.icon"
                             class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
                             alt=""
                         />
                     </div>
@@ -333,7 +348,7 @@ const dokumenDibutuhkan = computed(
                                     : 'border border-[#E8E8E6] bg-white text-[#1A1B18] hover:border-primary/40 hover:shadow-sm',
                             ]"
                         >
-                            <div
+                            <!-- <div
                                 class="flex items-center justify-center rounded-xl mb-4"
                                 :class="[
                                     isLargeJenisLayananCard
@@ -359,7 +374,7 @@ const dokumenDibutuhkan = computed(
                                     "
                                     alt=""
                                 />
-                            </div>
+                            </div> -->
 
                             <p
                                 class="font-bold leading-snug mb-2"
@@ -781,7 +796,7 @@ const dokumenDibutuhkan = computed(
                                         class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white/20"
                                     >
                                         <img
-                                            src="/icons/ft-persons.svg"
+                                            :src="localizedProduct.icon"
                                             class="w-5 h-5"
                                             alt=""
                                         />

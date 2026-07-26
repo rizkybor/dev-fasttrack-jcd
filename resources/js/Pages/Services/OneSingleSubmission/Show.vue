@@ -18,6 +18,12 @@ const props = defineProps({
     },
 });
 
+// Icon & path tidak perlu ditranslasi, tetap di sini
+const itemMeta = [
+    { icon: "/icons/layanan/pendaftaran-nib.png", path: "/one-single-submission" },
+    { icon: "/icons/layanan/perubahan-pemutakhiran-nib.png", path: "/one-single-submission" },
+];
+
 const { buildWhatsappLink: waLink } = useWhatsapp("perizinan");
 const buildWhatsappLink = (productName, paketNama) => {
     return waLink(paketNama ? `${productName} - ${paketNama}` : productName);
@@ -99,8 +105,14 @@ const localizedProduct = computed(() => {
     const p = props.product;
     if (!p) return p;
 
+     const targetIndex = props.index ?? (p.id ? p.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...p,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(p.name),
         tag: pick(p.tag),
         duration: pick(p.duration),
@@ -261,14 +273,20 @@ const dokumenSectionLabel = computed(() => {
                     </div>
                 </nav>
 
-                <!-- Heading -->
+                <!-- Center: Heading -->
                 <div class="flex items-center gap-5">
                     <div
                         class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md"
                     >
                         <img
-                            src="/icons/ft-persons.svg"
+                            :src="localizedProduct.icon"
                             class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
                             alt=""
                         />
                     </div>
@@ -409,7 +427,7 @@ const dokumenSectionLabel = computed(() => {
                                     : 'border-[#E8E8E6] bg-white hover:border-primary/40 hover:shadow-sm'
                             "
                         >
-                            <div
+                            <!-- <div
                                 class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg"
                                 :class="
                                     selectedPaketId === paket.id
@@ -422,7 +440,7 @@ const dokumenSectionLabel = computed(() => {
                                     class="w-5 h-5"
                                     alt=""
                                 />
-                            </div>
+                            </div> -->
                             <p
                                 class="text-[13px] font-bold leading-snug mb-3"
                                 :class="
@@ -911,7 +929,7 @@ const dokumenSectionLabel = computed(() => {
                                                 class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white/20"
                                             >
                                                 <img
-                                                    src="/icons/ft-persons.svg"
+                                                     :src="localizedProduct.icon"
                                                     class="w-5 h-5"
                                                     alt=""
                                                 />
@@ -1241,7 +1259,7 @@ const dokumenSectionLabel = computed(() => {
                                     class="group flex items-center justify-between rounded-xl border border-[#E8E8E6] bg-white px-4 py-3 text-left hover:border-primary/30 hover:shadow-sm transition-all"
                                 >
                                     <div class="flex items-center gap-3">
-                                        <div
+                                        <!-- <div
                                             class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#FFF0EF]"
                                         >
                                             <img
@@ -1249,7 +1267,7 @@ const dokumenSectionLabel = computed(() => {
                                                 class="w-4 h-4"
                                                 alt=""
                                             />
-                                        </div>
+                                        </div> -->
                                         <div>
                                             <p
                                                 class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors"

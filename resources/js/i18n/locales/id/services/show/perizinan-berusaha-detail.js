@@ -1,7 +1,7 @@
 export default {
     breadcrumb: {
         layanan: "Layanan",
-        current: "Perizinan Berusaha",
+        current: "Perizinan Dasar dan Perizinan Berusaha",
     },
     back: "Kembali",
     sections: {

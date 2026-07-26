@@ -13,7 +13,7 @@ const props = defineProps({
 });
 
 // Icon tidak perlu ditranslasi, sama untuk semua item
-const itemIcon = "/icons/ft-persons-w.svg";
+const itemIcon = "/icons/layanan/visa.svg";
 
 // Merge data locale (title, desc, price, packages) + path ke halaman detail
 const serviceList = computed(() =>

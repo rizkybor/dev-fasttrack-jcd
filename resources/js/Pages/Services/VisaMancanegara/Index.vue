@@ -13,11 +13,11 @@ const props = defineProps({
 });
 
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/visaMancanegara" },
+    { icon: "/icons/layanan/visa.svg", path: "/visaMancanegara" },
     // tambah sesuai jumlah item di locale
 ];
 
-const DEFAULT_ICON = "/icons/ft-persons-w.svg";
+const DEFAULT_ICON = "/icons/layanan/visa.svg";
 const DEFAULT_PATH = "/visaMancanegara";
 
 const serviceList = computed(() => {

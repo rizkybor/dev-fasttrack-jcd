@@ -1,7 +1,7 @@
 export default {
     breadcrumb: {
         layanan: "服务",
-        current: "营业许可",
+        current: "基本许可证和营业执照",
     },
     back: "返回",
     sections: {

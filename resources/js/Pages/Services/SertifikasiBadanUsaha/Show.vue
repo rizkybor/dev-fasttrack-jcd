@@ -12,6 +12,10 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
+const itemMeta = [
+    { icon: "/icons/ft-building.svg", path: "/sertifikasi-badan-usaha" },
+];
+
 const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -31,8 +35,14 @@ const localizedProduct = computed(() => {
     const p = props.product;
     if (!p) return p;
 
+    const targetIndex = props.index ?? (p.id ? p.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...p,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(p.name),
         excerpt: pick(p.excerpt),
         penjelasan_title: pick(p.penjelasan_title),
@@ -71,14 +81,28 @@ const localizedProduct = computed(() => {
                         <span class="text-sm font-medium text-[#9e1f16]">{{ localizedProduct.name }}</span>
                     </div>
                 </nav>
+                
+                <!-- Center: Heading -->
                 <div class="flex items-center gap-5">
                     <div class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white shadow-md">
-                        <img src="/icons/ft-persons.svg" class="w-9 h-9" alt="" />
+                        <img
+                            :src="localizedProduct.icon"
+                            class="w-9 h-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                     </div>
                     <h1 class="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl max-w-[800px] line-clamp-2">
                         {{ localizedProduct.name }}
                     </h1>
                 </div>
+
+                <!-- Bottom: Back button -->
                 <div>
                     <a href="/sertifikasi-badan-usaha"
                         class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white/70 transition">
