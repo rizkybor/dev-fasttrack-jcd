@@ -68,6 +68,16 @@ const localizedProduct = computed(() => {
 
 const product = localizedProduct;
 
+// Flag: file lokal di /public/flags belum tersedia, fallback ke CDN flagcdn berdasarkan kode negara
+const getFlagUrl = (item) => {
+    const raw = item?.img_flag ?? "";
+    const code = raw.match(/([a-zA-Z]{2})\.svg$/)?.[1]?.toLowerCase();
+    return code ? `https://flagcdn.com/${code}.svg` : raw;
+};
+const onFlagError = (event) => {
+    event.target.style.visibility = "hidden";
+};
+
 // Bahasa & Wilayah search + pagination
 const bahasaSearch = ref("");
 const bahasaPage = ref(1);
@@ -312,9 +322,9 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                                 <div v-if="item"
                                                     class="flex items-center gap-2.5 px-4 py-2.5 min-w-0 hover:bg-[#FAFAF8] transition-colors"
                                                     :class="ci === 0 ? 'border-r border-[#E8E8E6]' : ''">
-                                                    <img :src="item.img_flag" :alt="item.negara_title"
+                                                    <img :src="getFlagUrl(item)" :alt="item.negara_title"
                                                         class="w-6 h-[15px] object-cover rounded-[2px] flex-shrink-0 shadow-sm"
-                                                        loading="lazy" />
+                                                        loading="lazy" @error="onFlagError" />
                                                     <span class="text-[12px] leading-[1.4] text-[#3D3D3A] truncate">{{
                                                         item.negara_title }}</span>
                                                 </div>
@@ -399,9 +409,9 @@ const bannerCta = computed(() => product.value?.banner_cta ?? null);
                                     <div v-for="(item, i) in bahasaMobileRows" :key="`bm-${i}`"
                                         class="flex items-center gap-2.5 px-3 py-2.5"
                                         :class="i < bahasaMobileRows.length - 1 ? 'border-b border-[#E8E8E6]' : ''">
-                                        <img :src="item.img_flag" :alt="item.negara_title"
+                                        <img :src="getFlagUrl(item)" :alt="item.negara_title"
                                             class="w-5 h-[13px] object-cover rounded-[2px] flex-shrink-0 shadow-sm"
-                                            loading="lazy" />
+                                            loading="lazy" @error="onFlagError" />
                                         <span class="text-[12px] text-[#3D3D3A]">{{ item.negara_title }}</span>
                                     </div>
                                 </div>
