@@ -14,10 +14,26 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/keimigrasian-wni-wna" },
-    { icon: "/icons/ft-persons-w.svg", path: "/keimigrasian-wni-wna" },
-    { icon: "/icons/ft-persons-w.svg", path: "/keimigrasian-wni-wna" },
-    { icon: "/icons/ft-persons-w.svg", path: "/keimigrasian-wni-wna" },
+    {
+        icon: "/icons/layanan/epassport.svg",
+        path: "/keimigrasian-wni-wna",
+    },
+    {
+        icon: "/icons/layanan/mutasi-alamat.svg",
+        path: "/keimigrasian-wni-wna",
+    },
+    {
+        icon: "/icons/layanan/mutasi-passport.svg",
+        path: "/keimigrasian-wni-wna",
+    },
+    {
+        icon: "/icons/layanan/exit-terminationexit-expatriate.svg",
+        path: "/keimigrasian-wni-wna",
+    },
+        {
+        icon: "/icons/layanan/exit-terminationexit-expatriate.svg",
+        path: "/keimigrasian-wni-wna",
+    },
 ];
 
 const DEFAULT_ICON = "/icons/ft-persons-w.svg";

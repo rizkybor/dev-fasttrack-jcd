@@ -14,10 +14,22 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
-    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
-    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
-    { icon: "/icons/ft-persons-w.svg", path: "/izin-tinggal-terbatas" },
+    {
+        icon: "/icons/layanan/stay-permit.svg",
+        path: "/izin-tinggal-terbatas",
+    },
+    {
+        icon: "/icons/layanan/stay-permit.svg",
+        path: "/izin-tinggal-terbatas",
+    },
+    {
+        icon: "/icons/layanan/stay-permit.svg",
+        path: "/izin-tinggal-terbatas",
+    },
+    {
+        icon: "/icons/layanan/stay-permit.svg",
+        path: "/izin-tinggal-terbatas",
+    },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)

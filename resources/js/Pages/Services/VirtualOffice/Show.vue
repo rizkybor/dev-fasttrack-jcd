@@ -18,6 +18,10 @@ const props = defineProps({
     },
 });
 
+const itemMeta = [
+    { icon: "/icons/layanan/virtual-office.svg", path: "/virtual-office" },
+];
+
 const { buildWhatsappLink: waLink } = useWhatsapp("virtual_office");
 const buildWhatsappLink = (productName, packageName) => {
     return waLink(
@@ -42,8 +46,14 @@ const localizedProduct = computed(() => {
     const p = props.product;
     if (!p) return p;
 
+    const targetIndex = props.index ?? (p.id ? p.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...p,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(p.name),
         excerpt: pick(p.excerpt),
         detail: pick(p.detail),
@@ -149,9 +159,15 @@ const selectedPackagePrice = computed(
                     <div
                         class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl"
                     >
-                        <img
-                            src="/icons/ft-persons.svg"
+                         <img
+                            :src="localizedProduct.icon"
                             class="h-6 w-6 md:h-9 md:w-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
                             alt=""
                         />
                     </div>

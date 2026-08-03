@@ -12,9 +12,8 @@ const props = defineProps({
     products: { type: Array, default: () => [] },
 });
 
-// Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/naturalisasi" },
+    { icon: "/icons/layanan/naturalisasi.svg", path: "/naturalisasi" },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)

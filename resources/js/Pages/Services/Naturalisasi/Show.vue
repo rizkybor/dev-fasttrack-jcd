@@ -12,6 +12,10 @@ const props = defineProps({
     relatedProducts: { type: Array, default: () => [] },
 });
 
+const itemMeta = [
+    { icon: "/icons/layanan/naturalisasi.svg", path: "/naturalisasi" },
+];
+
 const { buildWhatsappLink } = useWhatsapp("imigrasi");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -31,8 +35,14 @@ const localizedProduct = computed(() => {
     const p = props.product;
     if (!p) return p;
 
+    const targetIndex = props.index ?? (p.id ? p.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...p,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(p.name),
         excerpt: pick(p.excerpt),
         sections: pick(p.sections) ?? [],
@@ -73,7 +83,17 @@ const product = localizedProduct;
                 </nav>
                 <div class="flex items-center gap-5">
                     <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl">
-                        <img src="/icons/ft-persons.svg" class="h-6 w-6 md:h-9 md:w-9" alt="" />
+                        <img
+                            :src="localizedProduct.icon"
+                            class="h-6 w-6 md:h-9 md:w-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                     </div>
                     <h1 class="text-base font-extrabold leading-tight text-white sm:text-2xl lg:text-2xl max-w-[800px] line-clamp-2">
                         {{ product.name }}
@@ -183,7 +203,17 @@ const product = localizedProduct;
                                 style="background-image: url('/images/card-arrow-item-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                                 <div class="flex items-center gap-4 px-5 py-5">
                                     <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white">
-                                        <img src="/icons/ft-persons.svg" class="w-6 h-6" alt="" />
+                                        <img
+                            :src="localizedProduct.icon"
+                            class="h-6 w-6 md:h-9 md:w-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                                     </div>
                                     <div class="flex-1 min-w-0">
                                         <div class="text-[11px] text-white/70 uppercase tracking-wide mb-0.5">
@@ -260,7 +290,17 @@ const product = localizedProduct;
                                     :href="related.detail_path"
                                     class="group flex items-center gap-3 rounded-xl border border-[#E8E8E6] bg-white p-3 hover:border-primary/30 hover:shadow-sm transition-all">
                                     <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#FFF0EF]">
-                                        <img src="/icons/ft-persons.svg" class="w-5 h-5" alt="" />
+                                        <img
+                            :src="localizedProduct.icon"
+                            class="h-6 w-6 md:h-9 md:w-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                                     </div>
                                     <div class="flex-1 min-w-0">
                                         <p class="text-[13px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug line-clamp-2">
