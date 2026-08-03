@@ -18,6 +18,13 @@ const props = defineProps({
     },
 });
 
+const itemMeta = [
+    {
+        icon: "/icons/layanan/penyusunan-dan-peninjauan-kontrak.svg",
+        path: "/penyusunan-peninjauan",
+    },
+];
+
 const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -37,8 +44,14 @@ const localizedProduct = computed(() => {
     const p = props.product;
     if (!p) return p;
 
+    const targetIndex = props.index ?? (p.id ? p.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...p,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(p.name),
         tag: pick(p.tag),
         duration: pick(p.duration),
@@ -163,8 +176,14 @@ const filteredContractCategories = computed(() => {
                         class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl"
                     >
                         <img
-                            src="/icons/ft-persons.svg"
-                            class="w-9 h-9"
+                            :src="localizedProduct.icon"
+                            class="h-6 w-6 md:h-9 md:w-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
                             alt=""
                         />
                     </div>

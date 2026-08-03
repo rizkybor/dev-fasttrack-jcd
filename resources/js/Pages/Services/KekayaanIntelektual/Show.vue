@@ -20,6 +20,22 @@ const props = defineProps({
     },
 });
 
+// Icon & path tidak perlu ditranslasi, tetap di sini
+const itemMeta = [
+    {
+        icon: "/icons/layanan/pendaftaran-merek.svg",
+        path: "/kekayaan-intelektual",
+    },
+    {
+        icon: "/icons/layanan/perpanjangan-merek.svg",
+        path: "/kekayaan-intelektual",
+    },
+    {
+        icon: "/icons/layanan/hak-cipta.svg",
+        path: "/kekayaan-intelektual",
+    },
+];
+
 const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
@@ -39,8 +55,14 @@ const localizedProduct = computed(() => {
     const p = props.product;
     if (!p) return p;
 
+    const targetIndex = props.index ?? (p.id ? p.id - 1 : 0);
+
+    // Ambil meta berdasarkan index yang sudah aman
+    const meta = itemMeta[targetIndex] || {};
     return {
         ...p,
+        icon: meta.icon ?? "",
+        path: meta.path ?? "",
         name: pick(p.name),
         tag: pick(p.tag),
         duration: pick(p.duration),
@@ -105,7 +127,17 @@ const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
                 <!-- Heading -->
                 <div class="flex items-center gap-5">
                     <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl">
-                        <img src="/icons/ft-persons.svg" class="h-6 w-6 md:h-9 md:w-9" alt="" />
+                        <img
+                            :src="localizedProduct.icon"
+                            class="h-6 w-6 md:h-9 md:w-9"
+                            style="
+                                filter: brightness(0) saturate(100%) invert(14%)
+                                    sepia(82%) saturate(4150%)
+                                    hue-rotate(352deg) brightness(91%)
+                                    contrast(93%);
+                            "
+                            alt=""
+                        />
                     </div>
                     <h1 class="text-base font-extrabold leading-tight text-white sm:text-2xl lg:text-2xl max-w-[800px] line-clamp-2">
                         {{ product.name }}

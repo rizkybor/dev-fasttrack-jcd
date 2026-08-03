@@ -22,7 +22,7 @@ const props = defineProps({
 });
 
 const itemMeta = [
-    { icon: "/icons/ft-persons.svg", path: "/retainer-berlangganan" },
+    { icon: "/icons/layanan/retainer-berlangganan.svg", path: "/retainer-berlangganan" },
 ];
 
 const parseBold = (text) => {

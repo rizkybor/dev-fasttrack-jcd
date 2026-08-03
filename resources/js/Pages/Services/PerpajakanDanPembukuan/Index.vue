@@ -14,10 +14,9 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/perpajakan-dan-pembukuan" },
-    { icon: "/icons/ft-persons-w.svg", path: "/perpajakan-dan-pembukuan" },
-    { icon: "/icons/ft-persons-w.svg", path: "/perpajakan-dan-pembukuan" },
-    { icon: "/icons/ft-persons-w.svg", path: "/perpajakan-dan-pembukuan" },
+    { icon: "/icons/layanan/akuntansi-dan-pelaporan-pajak.svg", path: "/perpajakan-dan-pembukuan" },
+    { icon: "/icons/layanan/jasa-lapor-spt.svg", path: "/perpajakan-dan-pembukuan" },
+    { icon: "/icons/layanan/jasa-lapor-spt.svg", path: "/perpajakan-dan-pembukuan" },
 ];
 
 const DEFAULT_ICON = "/icons/ft-persons-w.svg";

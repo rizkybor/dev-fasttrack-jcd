@@ -14,10 +14,18 @@ const props = defineProps({
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
 const itemMeta = [
-    { icon: "/icons/ft-persons-w.svg", path: "/kekayaan-intelektual" },
-    { icon: "/icons/ft-persons-w.svg", path: "/kekayaan-intelektual" },
-    { icon: "/icons/ft-persons-w.svg", path: "/kekayaan-intelektual" },
-    { icon: "/icons/ft-persons-w.svg", path: "/kekayaan-intelektual" },
+    {
+        icon: "/icons/layanan/pendaftaran-merek.svg",
+        path: "/kekayaan-intelektual",
+    },
+    {
+        icon: "/icons/layanan/perpanjangan-merek.svg",
+        path: "/kekayaan-intelektual",
+    },
+    {
+        icon: "/icons/layanan/hak-cipta.svg",
+        path: "/kekayaan-intelektual",
+    },
 ];
 
 // Merge data locale (title, desc, price, packages) + meta (icon, path)
