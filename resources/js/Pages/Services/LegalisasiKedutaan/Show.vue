@@ -116,6 +116,16 @@ const defaultFooterCta = computed(() => pick({
 }));
 const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.value);
 
+// Flag: file lokal di /public/flags belum tersedia, fallback ke CDN flagcdn berdasarkan kode negara
+const getFlagUrl = (country) => {
+    const raw = country?.img_flag ?? "";
+    const code = raw.match(/([a-zA-Z]{2})\.svg$/)?.[1]?.toLowerCase();
+    return code ? `https://flagcdn.com/${code}.svg` : raw;
+};
+const onFlagError = (event) => {
+    event.target.style.visibility = "hidden";
+};
+
 // ===== NEGARA ANGGOTA: Pagination & Search =====
 const negaraSearch = ref("");
 const negaraPage = ref(1);
@@ -483,9 +493,9 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                                 <div v-if="country"
                                                     class="flex items-center gap-2.5 px-4 py-2.5 min-w-0 hover:bg-[#FAFAF8] transition-colors"
                                                     :class="ci < 2 ? 'border-r border-[#E8E8E6]' : ''">
-                                                    <img :src="country.img_flag" :alt="country.negara_title"
+                                                    <img :src="getFlagUrl(country)" :alt="country.negara_title"
                                                         class="w-6 h-[15px] object-cover rounded-[2px] flex-shrink-0 shadow-sm"
-                                                        loading="lazy" />
+                                                        loading="lazy" @error="onFlagError" />
                                                     <span class="text-[12px] leading-[1.4] text-[#3D3D3A] truncate">{{
                                                         country.negara_title }}</span>
                                                 </div>
@@ -584,9 +594,9 @@ watch(negaraRowsPerPage, () => { negaraPage.value = 1; });
                                         <template v-for="(country, ci) in row" :key="`nmcell-m-${ri}-${ci}`">
                                             <div v-if="country" class="flex items-center gap-2 px-3 py-2.5 min-w-0"
                                                 :class="ci === 0 ? 'border-r border-[#E8E8E6]' : ''">
-                                                <img :src="country.img_flag" :alt="country.negara_title"
+                                                <img :src="getFlagUrl(country)" :alt="country.negara_title"
                                                     class="w-5 h-[13px] object-cover rounded-[2px] flex-shrink-0 shadow-sm"
-                                                    loading="lazy" />
+                                                    loading="lazy" @error="onFlagError" />
                                                 <span class="text-[11px] leading-[1.4] text-[#3D3D3A] truncate">{{
                                                     country.negara_title }}</span>
                                             </div>
