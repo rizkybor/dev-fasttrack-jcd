@@ -123,7 +123,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                         {{ t("common.nav.cooperation") }}
                     </span>
                     <img
-                        src="icons/ic-kerjasama-w.svg"
+                        src="/icons/ic-kerjasama-w.svg"
                         class="w-9 h-9"
                         alt=""
                     />
