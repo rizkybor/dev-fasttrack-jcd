@@ -32,7 +32,7 @@ export default {
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP 通道",
-        vip_desc: "虚拟公证书制作1（一）个工作日内完成",
+        vip_desc: "公司章程的修改在一天内完成",
         vip_cta: "立即订购服务",
         vip_note: "*（适用条款与条件）",
         price_label: "预估总费用",

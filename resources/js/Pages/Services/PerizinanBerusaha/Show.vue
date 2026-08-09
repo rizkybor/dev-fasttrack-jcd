@@ -1244,7 +1244,7 @@ const dokumenDibutuhkan = computed(
             :title="t('services.perizinanBerusahaDetail.footer.title')"
             :description="t('services.perizinanBerusahaDetail.footer.desc')"
             :button-text="t('services.perizinanBerusahaDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar')"
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)"
         />
     </MainLayout>
 </template>

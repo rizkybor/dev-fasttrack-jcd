@@ -621,12 +621,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
 
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                                v-html="
-                                    t(
-                                        'services.izinTinggalTerbatasDetail.sidebar.vip_desc',
-                                    )
-                                "
-                            ></p>
+                            >{{ product.name }}</p>
                             <a
                                 :href="
                                     buildWhatsappLink(
