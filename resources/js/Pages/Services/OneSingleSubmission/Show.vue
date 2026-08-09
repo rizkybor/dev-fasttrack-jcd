@@ -1200,11 +1200,10 @@ const dokumenSectionLabel = computed(() => {
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
                             >
-                                {{
-                                    t(
-                                        "services.oneSingleSubmissionDetail.sidebar.vip_desc",
-                                    )
-                                }}
+                                 {{
+                                        selectedPaket?.nama ??
+                                        localizedProduct.name
+                                    }}
                             </p>
                             <a
                                 :href="
@@ -1389,9 +1388,7 @@ const dokumenSectionLabel = computed(() => {
             :title="t('services.oneSingleSubmissionDetail.footer.title')"
             :description="t('services.oneSingleSubmissionDetail.footer.desc')"
             :button-text="t('services.oneSingleSubmissionDetail.footer.cta')"
-            :whatsapp-link="
-                buildWhatsappLink('layanan yang tidak terdaftar', '')
-            "
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)"
         />
     </MainLayout>
 </template>

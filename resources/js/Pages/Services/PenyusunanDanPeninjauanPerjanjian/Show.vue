@@ -415,8 +415,7 @@ const filteredContractCategories = computed(() => {
 
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                                v-html="t('services.penyusunanDanPeninjauanPerjanjianDetail.sidebar.vip_desc')"
-                            ></p>
+                            > {{ localizedProduct.name }} Selesai dalam 1 (Satu) Hari</p>
                             <a
                                 :href="buildWhatsappLink(product.name)"
                                 target="_blank"
@@ -625,7 +624,7 @@ const filteredContractCategories = computed(() => {
             :title="t('services.penyusunanDanPeninjauanPerjanjianDetail.footer.title')"
             :description="t('services.penyusunanDanPeninjauanPerjanjianDetail.footer.desc')"
             :button-text="t('services.penyusunanDanPeninjauanPerjanjianDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink(t('services.penyusunanDanPeninjauanPerjanjianDetail.footer.wa_subject'))"
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)"
         />
     </MainLayout>
 </template>

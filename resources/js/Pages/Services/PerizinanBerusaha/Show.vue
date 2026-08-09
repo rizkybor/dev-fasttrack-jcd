@@ -1154,7 +1154,7 @@ const dokumenDibutuhkan = computed(
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
                             >
-                                Pendirian Badan Usaha Selesai dalam 1
+                                {{ activeNama }} Selesai dalam 1
                                 (Satu) Hari
                             </p>
                             <a

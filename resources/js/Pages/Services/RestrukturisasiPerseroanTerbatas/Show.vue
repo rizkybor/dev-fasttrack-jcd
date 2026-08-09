@@ -396,11 +396,7 @@ const toggleSection = (id) => {
                                 </div>
                             </div>
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                {{
-                                    t(
-                                        "services.restrukturisasiPerseroanTerbatasDetail.sidebar.vip_desc",
-                                    )
-                                }}
+                                {{ localizedProduct.name }}
                             </p>
                             <a :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank" rel="noopener noreferrer"
@@ -423,7 +419,7 @@ const toggleSection = (id) => {
                         <div class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
                             <div class="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#FFF0EF] px-3 py-1">
                                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                                <span class="text-[11px] font-semibold text-primary">{{ t("services.restrukturisasiPerseroanTerbatasDetail.sidebar.free_konsultasi_badge") }}</span>
+                                <span class="text-[11px] font-semibold text-primary">{{ localizedProduct.name }}</span>
                             </div>
                             <div class="text-[12px] text-[#686964] mb-1 mt-2">{{
                                 t(

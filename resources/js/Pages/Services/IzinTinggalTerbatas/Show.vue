@@ -865,7 +865,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
             :title="t('services.izinTinggalTerbatasDetail.footer.title')"
             :description="t('services.izinTinggalTerbatasDetail.footer.desc')"
             :button-text="t('services.izinTinggalTerbatasDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink(t('services.izinTinggalTerbatasDetail.footer.wa_subject'), jenisPengajuan)"
+            :whatsapp-link="buildWhatsappLink(product.name)"
         />
     </MainLayout>
 </template>

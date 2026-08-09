@@ -110,7 +110,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                         </svg>
                         <a href="/layanan" class="text-sm font-medium text-[#9e1f16] hover:underline">{{
                             t("services.notarisVirtualDanAktaDetail.breadcrumb.layanan")
-                        }}</a>
+                            }}</a>
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -130,19 +130,13 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                 <!-- Center: Heading -->
                 <div class="flex items-center gap-5">
                     <div
-                        class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl"
-                        >
-                         <img
-                            :src="localizedProduct.icon"
-                            class="h-6 w-6 md:h-9 md:w-9"
-                            style="
+                        class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white shadow-md md:h-16 md:w-16 md:rounded-2xl">
+                        <img :src="localizedProduct.icon" class="h-6 w-6 md:h-9 md:w-9" style="
                                 filter: brightness(0) saturate(100%) invert(14%)
                                     sepia(82%) saturate(4150%)
                                     hue-rotate(352deg) brightness(91%)
                                     contrast(93%);
-                            "
-                            alt=""
-                        />
+                            " alt="" />
                     </div>
                     <h1
                         class="text-base font-extrabold leading-tight text-white sm:text-2xl lg:text-2xl max-w-[800px] line-clamp-2">
@@ -174,7 +168,7 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
                         <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{
                             t("services.notarisVirtualDanAktaDetail.sections.penjelasan")
-                        }}</h2>
+                            }}</h2>
                     </div>
                     <div class="space-y-4">
                         <p v-for="(p, i) in localizedProduct.penjelasan_umum" :key="`pu-${i}`"
@@ -186,13 +180,13 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                 <div v-if="hasMultiplePaket" class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8 mb-5">
                     <div class="flex items-center gap-3 mb-5">
                         <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.notarisVirtualDanAktaDetail.sections.pilih_layanan") }}</h2>
+                        <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{
+                            t("services.notarisVirtualDanAktaDetail.sections.pilih_layanan") }}</h2>
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                         <button v-for="paket in localizedProduct.paket" :key="paket.id"
                             @click="() => { selectedPaketId = paket.id; openItemId = null; }"
-                            class="flex flex-col items-start rounded-xl border p-4 text-left transition-all"
-                            :class="selectedPaketId === paket.id
+                            class="flex flex-col items-start rounded-xl border p-4 text-left transition-all" :class="selectedPaketId === paket.id
                                 ? 'border-primary bg-primary text-white shadow-md'
                                 : 'border-[#E8E8E6] bg-white hover:border-primary/40 hover:shadow-sm'">
                             <!-- <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg"
@@ -280,12 +274,15 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                             </div>
                                             <div class="flex items-center gap-1.5 flex-shrink-0">
                                                 <span class="text-[12px] font-medium text-primary">
-                                                    {{ openItemId === item.id ? t("services.notarisVirtualDanAktaDetail.toggle.tutup") : t("services.notarisVirtualDanAktaDetail.toggle.selengkapnya") }}
+                                                    {{ openItemId === item.id ?
+                                                        t("services.notarisVirtualDanAktaDetail.toggle.tutup") :
+                                                    t("services.notarisVirtualDanAktaDetail.toggle.selengkapnya") }}
                                                 </span>
                                                 <svg class="h-4 w-4 text-primary transition-transform duration-200"
-                                                    :class="openItemId === item.id ? 'rotate-90' : ''"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                                    :class="openItemId === item.id ? 'rotate-90' : ''" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M9 5l7 7-7 7" />
                                                 </svg>
                                             </div>
                                         </button>
@@ -296,8 +293,11 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                 class="rounded-xl border border-[#E8E8E6] bg-[#F7F7F5] p-5 mb-4">
                                                 <div class="flex items-center gap-2 mb-4">
                                                     <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
-                                                    <h3 class="text-[13px] font-bold uppercase tracking-widest text-black">
-                                                        {{ t("services.notarisVirtualDanAktaDetail.sections.penjelasan_detail") }}
+                                                    <h3
+                                                        class="text-[13px] font-bold uppercase tracking-widest text-black">
+                                                        {{
+                                                            t("services.notarisVirtualDanAktaDetail.sections.penjelasan_detail")
+                                                        }}
                                                     </h3>
                                                 </div>
                                                 <div class="space-y-2">
@@ -314,13 +314,15 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                 class="rounded-xl border border-[#E8E8E6] bg-[#F7F7F5] p-5 mb-4">
                                                 <div class="flex items-center gap-2 mb-4">
                                                     <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
-                                                    <h3 class="text-[13px] font-bold uppercase tracking-widest text-black">
+                                                    <h3
+                                                        class="text-[13px] font-bold uppercase tracking-widest text-black">
                                                         {{ t("services.notarisVirtualDanAktaDetail.sections.paket") }}
                                                     </h3>
                                                 </div>
                                                 <div class="rounded-xl border border-[#E8E8E6] bg-white p-4">
                                                     <div class="flex items-start justify-between gap-2 mb-1">
-                                                        <p class="text-[13px] font-bold text-[#1A1B18]">{{ item.paket_harga.nama }}</p>
+                                                        <p class="text-[13px] font-bold text-[#1A1B18]">{{
+                                                            item.paket_harga.nama }}</p>
                                                         <span v-if="item.paket_harga.modal_note"
                                                             class="text-[10px] text-[#686964] whitespace-nowrap flex-shrink-0">
                                                             {{ item.paket_harga.modal_note }}
@@ -328,37 +330,46 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                     </div>
                                                     <p class="text-[11px] text-[#686964] mb-0.5">{{
                                                         t("services.notarisVirtualDanAktaDetail.plans.mulai_dari")
-                                                    }}</p>
+                                                        }}</p>
                                                     <p class="text-[24px] font-bold text-primary leading-tight mb-2">
                                                         {{ item.paket_harga.harga }}
                                                     </p>
                                                     <div v-if="item.paket_harga.gratis_konsultasi"
                                                         class="flex items-center gap-1.5 mb-4">
-                                                        <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
-                                                        <span class="text-[11px] text-[#3D3D3A]">{{ t("services.notarisVirtualDanAktaDetail.plans.gratis_konsultasi") }}</span>
+                                                        <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0"
+                                                            alt="" />
+                                                        <span class="text-[11px] text-[#3D3D3A]">{{
+                                                            t("services.notarisVirtualDanAktaDetail.plans.gratis_konsultasi")
+                                                            }}</span>
                                                     </div>
                                                     <hr class="border-[#E8E8E6] mb-4" />
                                                     <div v-if="item.paket_harga.dokumen_legalitas?.length" class="mb-4">
                                                         <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">{{
                                                             t("services.notarisVirtualDanAktaDetail.plans.dokumen_legalitas")
-                                                        }}</p>
+                                                            }}</p>
                                                         <ul class="space-y-2">
                                                             <li v-for="(dok, di) in item.paket_harga.dokumen_legalitas"
                                                                 :key="`dok-${di}`" class="flex items-start gap-2">
-                                                                <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                                                <span class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{ dok }}</span>
+                                                                <img src="/icons/ft-done.svg"
+                                                                    class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
+                                                                <span
+                                                                    class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{
+                                                                    dok }}</span>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div v-if="item.paket_harga.termasuk?.length" class="mb-5">
                                                         <p class="text-[12px] font-bold text-[#1A1B18] mb-2.5">{{
                                                             t("services.notarisVirtualDanAktaDetail.plans.termasuk")
-                                                        }}</p>
+                                                            }}</p>
                                                         <ul class="space-y-2">
                                                             <li v-for="(tmsk, ti) in item.paket_harga.termasuk"
                                                                 :key="`tmsk-${ti}`" class="flex items-start gap-2">
-                                                                <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                                                <span class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{ tmsk }}</span>
+                                                                <img src="/icons/ft-done.svg"
+                                                                    class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
+                                                                <span
+                                                                    class="text-[12px] leading-[1.6] text-[#3D3D3A]">{{
+                                                                    tmsk }}</span>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -368,7 +379,8 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                         {{ t("services.notarisVirtualDanAktaDetail.plans.pesan") }}
                                                         <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
                                                             stroke="currentColor" stroke-width="2.5">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                                         </svg>
                                                     </a>
                                                 </div>
@@ -379,7 +391,8 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                 class="rounded-xl border border-[#E8E8E6] bg-[#F7F7F5] p-5">
                                                 <div class="flex items-center gap-2 mb-4">
                                                     <img src="/icons/ic-menu-arrow.svg" class="w-5 h-5" alt="" />
-                                                    <h3 class="text-[13px] font-bold uppercase tracking-widest text-black">
+                                                    <h3
+                                                        class="text-[13px] font-bold uppercase tracking-widest text-black">
                                                         {{ t("services.notarisVirtualDanAktaDetail.sections.dokumen") }}
                                                     </h3>
                                                 </div>
@@ -391,14 +404,16 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                             {{ dok.nomor }}
                                                         </span>
                                                         <div>
-                                                            <p class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-2">
+                                                            <p
+                                                                class="text-[13px] font-bold text-[#1A1B18] leading-snug mb-2">
                                                                 {{ dok.judul }}
                                                             </p>
                                                             <ul v-if="dok.items?.length" class="space-y-1.5">
                                                                 <li v-for="(point, pi) in dok.items"
                                                                     :key="`ddp-point-${pi}`"
                                                                     class="flex items-start gap-2 text-[12px] leading-[1.6] text-[#3D3D3A]">
-                                                                    <span class="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3D3D3A]"></span>
+                                                                    <span
+                                                                        class="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3D3D3A]"></span>
                                                                     <span>{{ point }}</span>
                                                                 </li>
                                                             </ul>
@@ -428,39 +443,50 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                         </div>
                                         <div class="rounded-xl border border-[#E8E8E6] p-5">
                                             <div class="flex items-start justify-between gap-2 mb-1">
-                                                <p class="text-[13px] font-bold text-[#1A1B18]">{{ item.paket_harga.nama }}</p>
+                                                <p class="text-[13px] font-bold text-[#1A1B18]">{{ item.paket_harga.nama
+                                                    }}</p>
                                                 <span v-if="item.paket_harga.modal_note"
                                                     class="text-[10px] text-[#686964] whitespace-nowrap flex-shrink-0">
                                                     {{ item.paket_harga.modal_note }}
                                                 </span>
                                             </div>
-                                            <p class="text-[11px] text-[#686964] mb-0.5">{{ t("services.notarisVirtualDanAktaDetail.plans.mulai_dari") }}</p>
+                                            <p class="text-[11px] text-[#686964] mb-0.5">{{
+                                                t("services.notarisVirtualDanAktaDetail.plans.mulai_dari") }}</p>
                                             <p class="text-[24px] font-bold text-primary leading-tight mb-2">
                                                 {{ item.paket_harga.harga }}
                                             </p>
                                             <div v-if="item.paket_harga.gratis_konsultasi"
                                                 class="flex items-center gap-1.5 mb-4">
                                                 <img src="/icons/ft-done.svg" class="h-4 w-4 flex-shrink-0" alt="" />
-                                                <span class="text-[11px] text-[#3D3D3A]">{{ t("services.notarisVirtualDanAktaDetail.plans.gratis_konsultasi") }}</span>
+                                                <span class="text-[11px] text-[#3D3D3A]">{{
+                                                    t("services.notarisVirtualDanAktaDetail.plans.gratis_konsultasi")
+                                                    }}</span>
                                             </div>
                                             <hr class="border-[#E8E8E6] mb-4" />
                                             <div v-if="item.paket_harga.dokumen_legalitas?.length" class="mb-4">
-                                                <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">{{ t("services.notarisVirtualDanAktaDetail.plans.dokumen_legalitas") }}</p>
+                                                <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">{{
+                                                    t("services.notarisVirtualDanAktaDetail.plans.dokumen_legalitas") }}
+                                                </p>
                                                 <ul class="space-y-2">
                                                     <li v-for="(dok, di) in item.paket_harga.dokumen_legalitas"
                                                         :key="`fdok-${di}`" class="flex items-start gap-2">
-                                                        <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                                        <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ dok }}</span>
+                                                        <img src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
+                                                        <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ dok
+                                                            }}</span>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div v-if="item.paket_harga.termasuk?.length" class="mb-5">
-                                                <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">{{ t("services.notarisVirtualDanAktaDetail.plans.termasuk") }}</p>
+                                                <p class="text-[13px] font-bold text-[#1A1B18] mb-2.5">{{
+                                                    t("services.notarisVirtualDanAktaDetail.plans.termasuk") }}</p>
                                                 <ul class="space-y-2">
                                                     <li v-for="(tmsk, ti) in item.paket_harga.termasuk"
                                                         :key="`ftmsk-${ti}`" class="flex items-start gap-2">
-                                                        <img src="/icons/ft-done.svg" class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
-                                                        <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ tmsk }}</span>
+                                                        <img src="/icons/ft-done.svg"
+                                                            class="mt-0.5 h-4 w-4 flex-shrink-0" alt="" />
+                                                        <span class="text-[13px] leading-[1.6] text-[#3D3D3A]">{{ tmsk
+                                                            }}</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -470,7 +496,8 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                 {{ t("services.notarisVirtualDanAktaDetail.plans.pesan") }}
                                                 <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
                                                     stroke="currentColor" stroke-width="2.5">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                                 </svg>
                                             </a>
                                         </div>
@@ -490,8 +517,8 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                             </h2>
                                         </div>
                                         <div class="space-y-5">
-                                            <div v-for="dok in item.dokumen_diperlukan"
-                                                :key="`fddp-${dok.nomor}`" class="flex gap-4">
+                                            <div v-for="dok in item.dokumen_diperlukan" :key="`fddp-${dok.nomor}`"
+                                                class="flex gap-4">
                                                 <span
                                                     class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white text-[12px] font-bold mt-0.5">
                                                     {{ dok.nomor }}
@@ -501,10 +528,10 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                                         {{ dok.judul }}
                                                     </p>
                                                     <ul v-if="dok.items?.length" class="space-y-1.5 mb-2">
-                                                        <li v-for="(point, pi) in dok.items"
-                                                            :key="`fddp-point-${pi}`"
+                                                        <li v-for="(point, pi) in dok.items" :key="`fddp-point-${pi}`"
                                                             class="flex items-start gap-2 text-[13px] leading-[1.6] text-[#3D3D3A]">
-                                                            <span class="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3D3D3A]"></span>
+                                                            <span
+                                                                class="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3D3D3A]"></span>
                                                             <span>{{ point }}</span>
                                                         </li>
                                                     </ul>
@@ -523,7 +550,8 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                 class="rounded-2xl border border-[#E8E8E6] bg-white p-6 sm:p-8">
                                 <div class="flex items-center gap-3 mb-5">
                                     <img src="/icons/ic-menu-arrow.svg" class="w-6 h-6" alt="" />
-                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{ t("services.notarisVirtualDanAktaDetail.sections.dasar_hukum") }}</h2>
+                                    <h2 class="text-[15px] font-bold uppercase tracking-widest text-black">{{
+                                        t("services.notarisVirtualDanAktaDetail.sections.dasar_hukum") }}</h2>
                                 </div>
                                 <ul class="space-y-4">
                                     <li v-for="(hukum, i) in selectedPaket.dasar_hukum" :key="`hukum-${i}`"
@@ -532,7 +560,8 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                             class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#ddffe3]">
                                             <img src="/icons/ft-save.svg" class="w-4 h-4" alt="" />
                                         </span>
-                                        <span class="text-[13px] leading-[1.7] text-[#3D3D3A] text-justify">{{ hukum }}</span>
+                                        <span class="text-[13px] leading-[1.7] text-[#3D3D3A] text-justify">{{ hukum
+                                            }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -551,16 +580,21 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                     {{ selectedPaket?.nama ?? localizedProduct.name }}
                                 </span>
                             </div>
-                            <div class="text-[12px] text-[#686964] mb-1 mt-2">{{ t("services.notarisVirtualDanAktaDetail.plans.mulai_dari") }}</div>
+                            <div class="text-[12px] text-[#686964] mb-1 mt-2">{{
+                                t("services.notarisVirtualDanAktaDetail.plans.mulai_dari")
+                                }}</div>
                             <div class="text-[32px] font-bold leading-none text-primary mb-1">
                                 {{ selectedPaket?.harga ?? localizedProduct.price_label }}
                             </div>
-                            <div class="text-[11px] text-[#686964] mb-4">{{ t("services.notarisVirtualDanAktaDetail.sidebar.price_note") }}</div>
+                            <div class="text-[11px] text-[#686964] mb-4">{{
+                                t("services.notarisVirtualDanAktaDetail.sidebar.price_note") }}
+                            </div>
                             <a :href="buildWhatsappLink(localizedProduct.name, selectedPaket?.nama ?? '')"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-[13px] font-semibold text-white hover:bg-primary/90 transition-colors mb-2">
                                 {{ t("services.notarisVirtualDanAktaDetail.plans.pesan") }}
-                                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
                             </a>
@@ -600,24 +634,33 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                     </span>
                                 </div>
                             </div>
-                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                                v-html="t('services.notarisVirtualDanAktaDetail.sidebar.vip_desc')">
+                            <p v-if="!hasMultiplePaket" class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
+                                {{ localizedProduct.name }} Selesai dalam 1
+                                (Satu) Hari
                             </p>
+                          
+                                <p v-if="hasMultiplePaket"
+                                    class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
+                                    {{ selectedPaket?.nama ?? localizedProduct.name }} Selesai dalam 1
+                                    (Satu) Hari
+                                </p>
                             <a :href="buildWhatsappLink(localizedProduct.name, selectedPaket?.nama ?? '')"
                                 target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
                                 {{ t("services.notarisVirtualDanAktaDetail.sidebar.vip_cta") }}
                             </a>
-                            <div class="relative mt-3 text-[11px] text-white/60">{{ t("services.notarisVirtualDanAktaDetail.sidebar.vip_note") }}</div>
+                            <div class="relative mt-3 text-[11px] text-white/60">{{
+                                t("services.notarisVirtualDanAktaDetail.sidebar.vip_note") }}</div>
                         </div>
 
                         <!-- Layanan Akta Notaris Lainnya -->
-                        <div v-if="localizedProduct.paket?.length > 1" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.notarisVirtualDanAktaDetail.sidebar.other_paket_title") }}</h3>
+                        <div v-if="localizedProduct.paket?.length > 1"
+                            class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{
+                                t("services.notarisVirtualDanAktaDetail.sidebar.other_paket_title") }}</h3>
                             <div class="flex flex-col gap-2">
-                                <button
-                                    v-for="paket in localizedProduct.paket.filter(p => p.id !== selectedPaketId)"
+                                <button v-for="paket in localizedProduct.paket.filter(p => p.id !== selectedPaketId)"
                                     :key="`other-${paket.id}`"
                                     @click="() => { selectedPaketId = paket.id; openItemId = null; }"
                                     class="group flex items-center justify-between rounded-xl border border-[#E8E8E6] bg-white px-4 py-3 text-left hover:border-primary/30 hover:shadow-sm transition-all">
@@ -627,10 +670,13 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                             <img src="/icons/ft-persons.svg" class="w-4 h-4" alt="" />
                                         </div> -->
                                         <div>
-                                            <p class="text-[12px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug">
+                                            <p
+                                                class="text-[12px] font-semibold text-[#1A1B18] group-hover:text-primary transition-colors leading-snug">
                                                 {{ paket.nama }}
                                             </p>
-                                            <p class="text-[11px] font-bold text-primary">{{ t("services.notarisVirtualDanAktaDetail.plans.mulai_dari") }} {{ paket.harga }}</p>
+                                            <p class="text-[11px] font-bold text-primary">{{
+                                                t("services.notarisVirtualDanAktaDetail.plans.mulai_dari") }} {{
+                                                paket.harga }}</p>
                                         </div>
                                     </div>
                                     <svg class="h-4 w-4 flex-shrink-0 text-[#686964] group-hover:text-primary transition-colors"
@@ -643,12 +689,14 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
 
                         <!-- Layanan Terkait -->
                         <div v-if="relatedProducts.length" class="rounded-2xl border border-[#E8E8E6] bg-white p-5">
-                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{ t("services.notarisVirtualDanAktaDetail.sidebar.related_title") }}</h3>
+                            <h3 class="text-[13px] font-bold text-[#1A1B18] mb-4">{{
+                                t("services.notarisVirtualDanAktaDetail.sidebar.related_title") }}</h3>
                             <div class="flex flex-col gap-3">
                                 <a v-for="(related, index) in relatedProducts.slice(0, 3)" :key="`related-${index}`"
                                     :href="related.detail_path"
                                     class="group flex flex-col gap-2 rounded-xl border border-[#E8E8E6] bg-white p-4 hover:border-primary/30 hover:shadow-sm transition-all">
-                                    <div class="text-[14px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors">
+                                    <div
+                                        class="text-[14px] font-bold text-[#1A1B18] group-hover:text-primary transition-colors">
                                         {{ pick(related.name) }}
                                     </div>
                                     <p class="text-[12px] leading-[1.6] text-[#686964] line-clamp-3">
@@ -656,8 +704,10 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
                                     </p>
                                     <hr class="border-[#E8E8E6]" />
                                     <div>
-                                        <div class="text-[11px] text-[#686964] mb-0.5">{{ t("services.notarisVirtualDanAktaDetail.sidebar.related_from") }}</div>
-                                        <div class="text-[18px] font-bold text-primary leading-none">{{ related.price_label }}</div>
+                                        <div class="text-[11px] text-[#686964] mb-0.5">{{
+                                            t("services.notarisVirtualDanAktaDetail.sidebar.related_from") }}</div>
+                                        <div class="text-[18px] font-bold text-primary leading-none">{{
+                                            related.price_label }}</div>
                                     </div>
                                     <div
                                         class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-primary py-2.5 text-[13px] font-semibold text-primary group-hover:bg-primary/5 transition-colors">
@@ -676,11 +726,9 @@ const isAccordionMode = computed(() => props.product?.id === 1 || props.product?
             </div>
         </section>
 
-        <FooterCTA
-            :title="t('services.notarisVirtualDanAktaDetail.footer.title')"
+        <FooterCTA :title="t('services.notarisVirtualDanAktaDetail.footer.title')"
             :description="t('services.notarisVirtualDanAktaDetail.footer.desc')"
             :button-text="t('services.notarisVirtualDanAktaDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink(t('services.notarisVirtualDanAktaDetail.footer.wa_subject'))"
-        />
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)" />
     </MainLayout>
 </template>
