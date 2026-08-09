@@ -16,7 +16,7 @@ const itemMeta = [
     { icon: "/icons/layanan/digital-marketing.svg", path: "/digital-marketing" },
 ];
 
-const { buildWhatsappLink } = useWhatsapp("digital");
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {

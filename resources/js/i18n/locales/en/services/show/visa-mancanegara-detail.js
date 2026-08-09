@@ -23,7 +23,7 @@ export default {
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Visa to Foreign Countries Application<br />Completed in 1 (One) Day",
+        vip_desc: "Visa to Foreign Countries ApplicationCompleted in 1 (One) Day",
         vip_cta: "Order Service Now",
         vip_note: "* (T&C APPLY)",
         price_label: "Estimated total cost",

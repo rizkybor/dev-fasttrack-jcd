@@ -22,7 +22,7 @@ const itemMeta = [
     { icon: "/icons/layanan/virtual-office.svg", path: "/virtual-office" },
 ];
 
-const { buildWhatsappLink: waLink } = useWhatsapp("virtual_office");
+const { buildWhatsappLink: waLink } = useWhatsapp("default");
 const buildWhatsappLink = (productName, packageName) => {
     return waLink(
         packageName ? `${productName} - ${packageName}` : productName,

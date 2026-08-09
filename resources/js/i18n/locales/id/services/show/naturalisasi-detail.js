@@ -10,7 +10,7 @@ export default {
     hubungi_kami: "Hubungi Kami",
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Pengurusan Naturalisasi Selesai dalam<br />1 (Satu) Hari",
+        vip_desc: "Pengurusan Naturalisasi Selesai dalam 1 (Satu) Hari",
         vip_cta: "Pesan Layanan Sekarang",
         vip_note: "* (S&K BERLAKU)",
         free_konsultasi_badge: "Free Konsultasi",

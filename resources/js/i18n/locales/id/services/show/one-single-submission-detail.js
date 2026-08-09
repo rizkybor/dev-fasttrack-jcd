@@ -27,7 +27,7 @@ export default {
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Pengajuan OSS Selesai dalam<br />1 (Satu) Hari",
+        vip_desc: "Pengajuan OSS Selesai dalam 1 (Satu) Hari",
         vip_cta: "Pesan Layanan Sekarang",
         vip_note: "* (S&K BERLAKU)",
         price_label: "Estimasi total biaya",

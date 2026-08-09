@@ -22,7 +22,7 @@ export default {
     hubungi_kami: "Contact Us",
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Document Translation<br />Completed in 1 (One) Day",
+        vip_desc: "Document TranslationCompleted in 1 (One) Day",
         vip_cta: "Order Service Now",
         vip_note: "* (T&C APPLY)",
         price_label: "Price",

@@ -24,7 +24,7 @@ const itemMeta = [
     { icon: "/icons/layanan/perubahan-pemutakhiran-nib.png", path: "/one-single-submission" },
 ];
 
-const { buildWhatsappLink: waLink } = useWhatsapp("perizinan");
+const { buildWhatsappLink: waLink } = useWhatsapp("default");
 const buildWhatsappLink = (productName, paketNama) => {
     return waLink(paketNama ? `${productName} - ${paketNama}` : productName);
 };

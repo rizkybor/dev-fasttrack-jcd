@@ -33,11 +33,7 @@ const serviceList = computed(() => {
     }));
 });
 
-const { buildWhatsappLink: waLink } = useWhatsapp("akta");
-const buildWhatsappLink = (productName) => {
-    const greeting = `${t("services.notarisVirtualDanAkta.cta.waMessage")} ${productName}.`;
-    return waLink(productName, { greeting });
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 </script>
 
 <template>

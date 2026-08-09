@@ -30,7 +30,7 @@ const itemMeta = [
     },
 ];
 
-const { buildWhatsappLink: waLink } = useWhatsapp("imigrasi");
+const { buildWhatsappLink: waLink } = useWhatsapp("cs2");
 const buildWhatsappLink = (productName, jenis) => {
     const jenisLabel = jenis === "perpanjangan" ? "Perpanjangan" : "Baru";
     return waLink(`${productName} (${jenisLabel})`);

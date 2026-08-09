@@ -9,7 +9,7 @@ export default {
     hubungi_kami: "Hubungi Kami",
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Uji Tuntas Hukum Selesai dalam<br />1 (Satu) Hari",
+        vip_desc: "Uji Tuntas Hukum Selesai dalam 1 (Satu) Hari",
         vip_cta: "Pesan Layanan Sekarang",
         vip_note: "* (S&K BERLAKU)",
         price_label: "Estimasi total biaya",

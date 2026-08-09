@@ -26,7 +26,7 @@ export default {
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP 通道",
-        vip_desc: "企业关闭<br />1（一）个工作日内完成",
+        vip_desc: "企业关闭1（一）个工作日内完成",
         vip_cta: "立即订购服务",
         vip_note: "*（适用条款与条件）",
         price_label: "预估总费用",

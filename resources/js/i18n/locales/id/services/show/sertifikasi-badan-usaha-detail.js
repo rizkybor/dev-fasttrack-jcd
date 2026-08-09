@@ -18,7 +18,7 @@ export default {
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Sertifikasi Badan Usaha Selesai dalam<br />1 (Satu) Hari",
+        vip_desc: "Sertifikasi Badan Usaha Selesai dalam 1 (Satu) Hari",
         vip_cta: "Pesan Layanan Sekarang",
         vip_note: "* (S&K BERLAKU)",
         konsultasi_cta: "Konsultasi Gratis via Whatsapp",

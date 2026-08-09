@@ -33,11 +33,7 @@ const serviceList = computed(() =>
     })),
 );
 
-const { buildWhatsappLink: waLink } = useWhatsapp("imigrasi");
-const buildWhatsappLink = (productName) => {
-    const greeting = `${t("services.izinTinggalTetap.cta.waMessage")} ${productName}.`;
-    return waLink(productName, { greeting });
-};
+const { buildWhatsappLink } = useWhatsapp("cs2");
 </script>
 
 <template>

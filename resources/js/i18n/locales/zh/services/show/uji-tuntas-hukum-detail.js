@@ -9,7 +9,7 @@ export default {
     hubungi_kami: "联系我们",
     sidebar: {
         vip_title: "FASTTRACK – VIP 通道",
-        vip_desc: "法律尽职调查办理<br />1（一）个工作日内完成",
+        vip_desc: "法律尽职调查办理1（一）个工作日内完成",
         vip_cta: "立即订购服务",
         vip_note: "*（适用条款与条件）",
         price_label: "预估总费用",

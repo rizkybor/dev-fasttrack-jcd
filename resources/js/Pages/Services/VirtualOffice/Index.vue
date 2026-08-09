@@ -24,11 +24,7 @@ const serviceList = computed(() =>
     })),
 );
 
-const { buildWhatsappLink: waLink } = useWhatsapp("virtual_office");
-const buildWhatsappLink = (productName) => {
-    const greeting = `${t("services.virtualOffice.cta.waMessage")} ${productName}.`;
-    return waLink(productName, { greeting });
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 </script>
 
 <template>

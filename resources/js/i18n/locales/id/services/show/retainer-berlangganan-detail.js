@@ -22,7 +22,7 @@ export default {
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
         vip_desc:
-            "Berlangganan Retainer & Corporate Secretary Selesai dalam<br />1 (Satu) Hari",
+            "Berlangganan Retainer & Corporate Secretary Selesai dalam 1 (Satu) Hari",
         vip_cta: "Pesan Layanan Sekarang",
         vip_note: "* (S&K BERLAKU)",
         price_label: "Estimasi total biaya",
