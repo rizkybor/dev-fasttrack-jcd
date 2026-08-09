@@ -36,7 +36,7 @@ const itemMeta = [
     },
 ];
 
-const { buildWhatsappLink } = useWhatsapp("default");
+const { buildWhatsappLink } = useWhatsapp("cs2");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {

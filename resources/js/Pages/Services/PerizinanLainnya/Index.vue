@@ -35,11 +35,7 @@ const serviceList = computed(() => {
     }));
 });
 
-const { buildWhatsappLink: waLink } = useWhatsapp("default");
-const buildWhatsappLink = (productName) => {
-    const greeting = `${t("services.perizinanLainnya.cta.waMessage")} ${productName}.`;
-    return waLink(productName, { greeting });
-};
+const { buildWhatsappLink } = useWhatsapp("default");
 </script>
 
 <template>
