@@ -1154,7 +1154,7 @@ const dokumenDibutuhkan = computed(
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
                             >
-                                Pendirian Badan Usaha Selesai dalam 1
+                                {{ activeNama }} Selesai dalam 1
                                 (Satu) Hari
                             </p>
                             <a
@@ -1244,7 +1244,7 @@ const dokumenDibutuhkan = computed(
             :title="t('services.perizinanBerusahaDetail.footer.title')"
             :description="t('services.perizinanBerusahaDetail.footer.desc')"
             :button-text="t('services.perizinanBerusahaDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar')"
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)"
         />
     </MainLayout>
 </template>

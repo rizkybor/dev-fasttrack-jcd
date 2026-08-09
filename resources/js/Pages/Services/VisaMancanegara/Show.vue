@@ -343,11 +343,7 @@ const currentSidebar = computed(() =>
                                 </div>
                             </div>
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                {{
-                                    t(
-                                        "services.visaMancanegaraDetail.sidebar.vip_desc",
-                                    )
-                                }}
+                                {{ currentSidebar.label }}
                             </p>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">

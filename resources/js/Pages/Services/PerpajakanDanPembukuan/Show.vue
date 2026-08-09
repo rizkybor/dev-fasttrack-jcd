@@ -846,11 +846,8 @@ const toggleSection = (id) => {
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
                             >
-                                {{
-                                    t(
-                                        "services.perpajakanDanPembukuanDetail.sidebar.vip_desc",
-                                    )
-                                }}
+                                {{ product.name }} Selesai dalam 1
+                                (Satu) Hari
                             </p>
                             <a
                                 :href="buildWhatsappLink(product.name)"

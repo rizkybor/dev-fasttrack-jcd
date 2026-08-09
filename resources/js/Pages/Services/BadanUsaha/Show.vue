@@ -2282,11 +2282,7 @@ const toggleDoc = (key) => {
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
                             >
-                                {{
-                                    t(
-                                        "services.badanUsahaDetail.sidebar.vip_desc",
-                                    )
-                                }}
+                                {{ localizedProduct.name }}
                             </p>
                             <a
                                 :href="buildWhatsappLink(localizedProduct.name)"

@@ -343,7 +343,7 @@ const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
                                     </span>
                                 </div>
                             </div>
-                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5" v-html="t('services.kekayaanIntelektualDetail.sidebar.vip_desc')"></p>
+                            <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">{{ product.name }}</p>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
                                 <img src="/icons/ft-wa.svg" class="mt-0.5 h-5 w-5 flex-shrink-0" alt="wa" />
@@ -437,7 +437,7 @@ const currentDasarHukum = computed(() => product.value?.dasar_hukum ?? []);
             :title="t('services.kekayaanIntelektualDetail.footer.title')"
             :description="t('services.kekayaanIntelektualDetail.footer.desc')"
             :button-text="t('services.kekayaanIntelektualDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink(t('services.kekayaanIntelektualDetail.footer.wa_subject'))"
+            :whatsapp-link="buildWhatsappLink(product.name)"
         />
     </MainLayout>
 </template>

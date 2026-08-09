@@ -852,12 +852,7 @@ watch(activeIndex, () => {
                             </div>
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                                v-html="
-                                    t(
-                                        'services.visaIndonesiaDetail.sidebar.vip_desc',
-                                    )
-                                "
-                            ></p>
+                            >{{ localizedProduct.name }}</p>
                             <a
                                 :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank"
@@ -962,11 +957,7 @@ watch(activeIndex, () => {
             :title="t('services.visaIndonesiaDetail.footer.title')"
             :description="t('services.visaIndonesiaDetail.footer.desc')"
             :button-text="t('services.visaIndonesiaDetail.footer.cta')"
-            :whatsapp-link="
-                buildWhatsappLink(
-                    t('services.visaIndonesiaDetail.footer.wa_subject'),
-                )
-            "
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)"
         />
     </MainLayout>
 </template>

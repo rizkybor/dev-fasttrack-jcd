@@ -584,13 +584,8 @@ const otherSubServices = computed(() =>
                             </div>
 
                             <p
-                                class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                                v-html="
-                                    t(
-                                        'services.digitalMarketingDetail.sidebar.vip_desc',
-                                    )
-                                "
-                            ></p>
+                                class="relative text-[14px] leading-[1.6] text-white/90 mb-5"    
+                            >  {{ currentSub.name }}</p>
                             <a
                                 :href="
                                     buildWhatsappLink(

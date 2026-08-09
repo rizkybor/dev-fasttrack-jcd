@@ -754,12 +754,9 @@ const localizedProduct = computed(() => {
                             </div>
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                                v-html="
-                                    t(
-                                        'services.perizinanLainnyaDetail.sidebar.vip_desc',
-                                    )
-                                "
-                            ></p>
+                            >
+                                {{ localizedProduct.name }}
+                            </p>
                             <a
                                 :href="buildWhatsappLink(localizedProduct.name)"
                                 target="_blank"
@@ -1004,11 +1001,7 @@ const localizedProduct = computed(() => {
             :title="t('services.perizinanLainnyaDetail.footer.title')"
             :description="t('services.perizinanLainnyaDetail.footer.desc')"
             :button-text="t('services.perizinanLainnyaDetail.footer.cta')"
-            :whatsapp-link="
-                buildWhatsappLink(
-                    t('services.perizinanLainnyaDetail.footer.wa_subject'),
-                )
-            "
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)"
         />
     </MainLayout>
 </template>

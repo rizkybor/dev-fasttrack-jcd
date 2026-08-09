@@ -2301,11 +2301,7 @@ const toggleDoc = (key) => {
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
                             >
-                                {{
-                                    t(
-                                        "services.kantorPerwakilanDetail.sidebar.vip_desc",
-                                    )
-                                }}
+                                {{localizedProduct.name}}
                             </p>
                             <a
                                 :href="buildWhatsappLink(localizedProduct.name)"
@@ -2551,7 +2547,7 @@ const toggleDoc = (key) => {
             :title="t('services.kantorPerwakilanDetail.footer.title')"
             :description="t('services.kantorPerwakilanDetail.footer.desc')"
             :button-text="t('services.kantorPerwakilanDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink('layanan yang tidak terdaftar')"
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)"
         />
     </MainLayout>
 </template>

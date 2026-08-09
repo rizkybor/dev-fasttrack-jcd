@@ -665,11 +665,7 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
                                 </div>
                             </div>
                             <p class="relative text-[14px] leading-[1.6] text-white/90 mb-5">
-                                {{
-                                    t(
-                                        "services.kewajibanPelaporanUsahaDetail.sidebar.vip_desc",
-                                    )
-                                }}
+                                {{ localizedProduct.name }} Selesai dalam 1 (Satu) Hari
                             </p>
                             <a :href="buildWhatsappLink(product.name)" target="_blank" rel="noopener noreferrer"
                                 class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20">
@@ -785,10 +781,9 @@ const footerCta = computed(() => product.value?.footer_cta ?? defaultFooterCta.v
         </section>
 
         <FooterCTA
-            :title="footerCta.title"
-            :description="footerCta.subtitle"
-            :button-text="footerCta.button_text"
-            :whatsapp-link="buildWhatsappLink(footerCta.wa_message)"
-        />
+            :title="t('services.kewajibanPelaporanUsahaDetail.footer.title')"
+            :description="t('services.kewajibanPelaporanUsahaDetail.footer.desc')"
+            :button-text="t('services.kewajibanPelaporanUsahaDetail.footer.cta')"
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)"        />
     </MainLayout>
 </template>

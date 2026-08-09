@@ -653,8 +653,9 @@ const currentCorporatePackages = computed(
 
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                                v-html="t('services.retainerBerlanggananDetail.sidebar.vip_desc')"
-                            ></p>
+                            >
+                                {{ localizedProduct.name }} Selesai dalam 1 (Satu) Hari
+                            </p>
                             <a
                                 :href="buildWhatsappLink(product.name)"
                                 target="_blank"
@@ -776,7 +777,7 @@ const currentCorporatePackages = computed(
             :title="t('services.retainerBerlanggananDetail.footer.title')"
             :description="t('services.retainerBerlanggananDetail.footer.desc')"
             :button-text="t('services.retainerBerlanggananDetail.footer.cta')"
-            :whatsapp-link="buildWhatsappLink(t('services.retainerBerlanggananDetail.footer.wa_subject'))"
+            :whatsapp-link="buildWhatsappLink(localizedProduct.name)"
         />
     </MainLayout>
 </template>
