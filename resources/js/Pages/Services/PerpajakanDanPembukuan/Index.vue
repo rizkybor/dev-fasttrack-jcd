@@ -32,7 +32,7 @@ const serviceList = computed(() => {
     }));
 });
 
-const { buildWhatsappLink: waLink } = useWhatsapp("pajak");
+const { buildWhatsappLink: waLink } = useWhatsapp("default");
 const buildWhatsappLink = (productName) => {
     const greeting = `${t("services.perpajakanDanPembukuan.cta.waMessage")} ${productName}.`;
     return waLink(productName, { greeting });

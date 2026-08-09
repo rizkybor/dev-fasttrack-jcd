@@ -29,7 +29,7 @@ const serviceList = computed(() =>
     })),
 );
 
-const { buildWhatsappLink: waLink } = useWhatsapp("akta");
+const { buildWhatsappLink: waLink } = useWhatsapp("default");
 const buildWhatsappLink = (productName) => {
     const greeting = `${t("services.kantorPerwakilan.cta.waMessage")} ${productName}.`;
     return waLink(productName, { greeting });

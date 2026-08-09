@@ -30,7 +30,7 @@ const serviceList = computed(() => {
     }));
 });
 
-const { buildWhatsappLink: waLink } = useWhatsapp("visa");
+const { buildWhatsappLink: waLink } = useWhatsapp("cs2");
 const buildWhatsappLink = (productName) => {
     const greeting = `${t("services.visaMancanegara.cta.waMessage")} ${productName}.`;
     return waLink(productName, { greeting });

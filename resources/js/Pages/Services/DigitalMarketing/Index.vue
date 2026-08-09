@@ -27,7 +27,7 @@ const serviceList = computed(() =>
     })),
 );
 
-const { buildWhatsappLink: waLink } = useWhatsapp("digital");
+const { buildWhatsappLink: waLink } = useWhatsapp("default");
 const buildWhatsappLink = (productName) => {
     const greeting = `${t("services.digitalMarketing.cta.waMessage")} ${productName}.`;
     return waLink(productName, { greeting });

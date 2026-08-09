@@ -20,7 +20,7 @@ const itemMeta = [
     { icon: "/icons/layanan/akta-notaris-lainnya.svg", path: "/notaris-virtual-dan-akta" },
 ];
 
-const { buildWhatsappLink: waLink } = useWhatsapp("akta");
+const { buildWhatsappLink: waLink } = useWhatsapp("default");
 const buildWhatsappLink = (productName, paketNama = "") => {
     return waLink(paketNama ? `${productName} - ${paketNama}` : productName);
 };
