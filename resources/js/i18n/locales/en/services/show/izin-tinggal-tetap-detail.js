@@ -30,7 +30,7 @@ export default {
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Permanent Stay Permit (ITAP) Application<br />Completed in 1 (One) Day",
+        vip_desc: "Permanent Stay Permit (ITAP) ApplicationCompleted in 1 (One) Day",
         vip_cta: "Order Service Now",
         vip_note: "* (T&C APPLY)",
         price_label: "Estimated total cost",

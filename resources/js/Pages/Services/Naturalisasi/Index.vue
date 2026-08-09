@@ -25,7 +25,7 @@ const serviceList = computed(() =>
     })),
 );
 
-const { buildWhatsappLink: waLink } = useWhatsapp("imigrasi");
+const { buildWhatsappLink: waLink } = useWhatsapp("cs2  ");
 const buildWhatsappLink = (productName) => {
     const greeting = `${t("services.naturalisasi.cta.waMessage")} ${productName}.`;
     return waLink(productName, { greeting });

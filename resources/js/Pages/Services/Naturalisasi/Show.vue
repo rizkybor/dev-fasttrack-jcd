@@ -16,7 +16,7 @@ const itemMeta = [
     { icon: "/icons/layanan/naturalisasi.svg", path: "/naturalisasi" },
 ];
 
-const { buildWhatsappLink } = useWhatsapp("imigrasi");
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {

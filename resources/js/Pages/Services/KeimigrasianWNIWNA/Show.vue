@@ -36,7 +36,7 @@ const itemMeta = [
     },
 ];
 
-const { buildWhatsappLink } = useWhatsapp("imigrasi");
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {

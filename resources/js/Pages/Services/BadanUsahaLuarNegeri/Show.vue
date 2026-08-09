@@ -32,7 +32,7 @@ const parseBold = (text) => {
     return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 };
 
-const { buildWhatsappLink } = useWhatsapp("akta");
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {

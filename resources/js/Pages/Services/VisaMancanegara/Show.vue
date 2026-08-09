@@ -15,7 +15,7 @@ const props = defineProps({
 // Icon tidak perlu ditranslasi, sama untuk semua item
 const itemIcon = "/icons/layanan/visa.svg";
 
-const { buildWhatsappLink } = useWhatsapp("visa");
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Helper: pick nilai berdasarkan locale, fallback ke 'id'
 const pick = (field) => {

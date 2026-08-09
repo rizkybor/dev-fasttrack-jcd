@@ -20,7 +20,7 @@ const itemMeta = [
     { icon: "/icons/layanan/perizinan-berusaha-menunjang-kegiatan.png", path: "/perizinan-berusaha" },
 ];
 
-const { buildWhatsappLink } = useWhatsapp("visa");
+const { buildWhatsappLink } = useWhatsapp("default");
 
 // Recursively resolve setiap field translatable {id,en,zh} sesuai locale aktif
 const pick = (obj) => {
@@ -1154,7 +1154,7 @@ const dokumenDibutuhkan = computed(
                             <p
                                 class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
                             >
-                                Pendirian Badan Usaha Selesai dalam<br />1
+                                Pendirian Badan Usaha Selesai dalam 1
                                 (Satu) Hari
                             </p>
                             <a

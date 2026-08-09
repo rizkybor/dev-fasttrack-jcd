@@ -9,7 +9,7 @@ export default {
     hubungi_kami: "Contact Us",
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Legal Due Diligence<br />Completed in 1 (One) Day",
+        vip_desc: "Legal Due DiligenceCompleted in 1 (One) Day",
         vip_cta: "Order Service Now",
         vip_note: "* (T&C APPLY)",
         price_label: "Estimated total cost",

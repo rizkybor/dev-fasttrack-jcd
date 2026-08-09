@@ -24,7 +24,7 @@ export default {
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Foreign Business Entity Establishment<br />Completed in 1 (One) Day",
+        vip_desc: "Foreign Business Entity EstablishmentCompleted in 1 (One) Day",
         vip_cta: "Order Service Now",
         vip_note: "* (T&C APPLY)",
         price_label: "Estimated total cost",

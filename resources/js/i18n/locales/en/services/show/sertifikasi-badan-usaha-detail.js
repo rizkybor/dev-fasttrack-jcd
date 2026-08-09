@@ -18,7 +18,7 @@ export default {
     },
     sidebar: {
         vip_title: "FASTTRACK – VIP LINE",
-        vip_desc: "Business Entity Certification<br />Completed in 1 (One) Day",
+        vip_desc: "Business Entity CertificationCompleted in 1 (One) Day",
         vip_cta: "Order Service Now",
         vip_note: "* (T&C APPLY)",
         konsultasi_cta: "Free Consultation via WhatsApp",
