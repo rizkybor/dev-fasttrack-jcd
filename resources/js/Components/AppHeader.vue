@@ -177,6 +177,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     href="/"
                     class="flex-shrink-0 flex items-center"
                     aria-label="FastTrack Beranda"
+                    @click="closeAllMenus"
                 >
                     <img
                         src="/icons/logo-fasttrack.svg"
@@ -194,6 +195,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     <a
                         href="/#promo"
                         class="flex items-center gap-1 px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
+                        @click="closeAllMenus"
                     >
                         {{ t("common.nav.promo") }}
                         <img
@@ -242,6 +244,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     <a
                         href="/#tentang-kami"
                         class="flex items-center px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
+                        @click="closeAllMenus"
                     >
                         {{ t("common.nav.about") }}
                     </a>
@@ -250,6 +253,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     <a
                         href="/artikel"
                         class="flex items-center px-3 py-2.5 text-[14px] font-semibold text-[#1A1B18] hover:text-primary transition-colors whitespace-nowrap"
+                        @click="closeAllMenus"
                     >
                         {{ t("common.nav.blog") }}
                     </a>
@@ -411,6 +415,7 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                     <a
                         href="/minta-penawaran"
                         class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-[16px] px-4 py-2 rounded-lg transition-colors shadow-sm whitespace-nowrap"
+                        @click="closeAllMenus"
                     >
                         {{ t("common.nav.cta") }}
                         <svg
