@@ -76,17 +76,17 @@ export default {
                 },
                 {
                     title: 'Virtual Office',
-                    description: 'Penutupan PT PMDN, PT PMA, CV, dan kantor perwakilan asing.',
+                    description: 'Layanan alamat bisnis resmi untuk legalitas usaha tanpa sewa kantor fisik.',
                     packages: '1 Layanan',
                 },
                 {
                     title: 'Design & Digital Marketing',
-                    description: 'LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.',
+                    description: 'Layanan desain profesional dan pemasaran digital untuk membangun identitas.',
                     packages: '2 Layanan',
                 },
                 {
                     title: 'Perpajakan dan Pembukuan',
-                    description: 'LKPM, SIINAS, wajib lapor ketenagakerjaan &  kesejahteraan.',
+                    description: 'Layanan pengelolaan pajak dan pembukuan bisnis yang akurat, tepat waktu, dan patuh hukum.',
                     packages: '3 Layanan',
                 },
             ],
