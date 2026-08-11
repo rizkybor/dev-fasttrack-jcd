@@ -76,17 +76,17 @@ export default {
                 },
                 {
                     title: 'Virtual Office',
-                    description: 'Closure of PT PMDN, PT PMA, CV, and foreign representative offices.',
+                    description: 'Official business address service for legal compliance without the need to rent a physical office.',
                     packages: '1 Services',
                 },
                 {
                     title: 'Design & Digital Marketing',
-                    description: 'LKPM, SIINAS, mandatory manpower and welfare reporting.',
+                    description: 'Professional design and digital marketing services to build brand identity.',
                     packages: '2 Services',
                 },
                 {
                     title: 'Taxation & Bookkeeping',
-                    description: 'LKPM, SIINAS, mandatory manpower and welfare reporting.',
+                    description: 'Accurate, timely, and compliant tax management and business bookkeeping services.',
                     packages: '3 Services',
                 },
             ],

@@ -74,10 +74,6 @@ const product = localizedProduct;
                         <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                        <a href="/naturalisasi" class="text-sm font-medium text-[#9e1f16] hover:underline">{{ t("services.naturalisasiDetail.breadcrumb.current") }}</a>
-                        <svg class="h-3 w-3 text-[#9e1f16]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
                         <span class="text-sm font-medium text-[#9e1f16]">{{ product.name }}</span>
                     </div>
                 </nav>
