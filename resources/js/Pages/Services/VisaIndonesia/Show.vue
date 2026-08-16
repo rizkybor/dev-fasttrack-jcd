@@ -826,61 +826,6 @@ watch(activeIndex, () => {
                             </a>
                         </div>
 
-                        <!-- VIP Line Banner -->
-                        <div
-                            class="rounded-2xl px-5 py-6 text-center overflow-hidden relative"
-                            style="
-                                background-image: url(&quot;/images/card-arrow-bg.png&quot;);
-                                background-size: cover;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                            "
-                        >
-                            <div class="relative mb-4">
-                                <div
-                                    class="inline-block w-full rounded-xl border border-white/60 px-4 py-2.5"
-                                >
-                                    <span
-                                        class="text-[14px] font-extrabold uppercase tracking-widest text-white"
-                                        >{{
-                                            t(
-                                                "services.visaIndonesiaDetail.sidebar.vip_title",
-                                            )
-                                        }}</span
-                                    >
-                                </div>
-                            </div>
-                            <p
-                                class="relative text-[14px] leading-[1.6] text-white/90 mb-5"
-                            >{{ localizedProduct.name }}</p>
-                            <a
-                                :href="buildWhatsappLink(localizedProduct.name)"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-3 text-[13px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20"
-                            >
-                                <img
-                                    src="/icons/ft-wa.svg"
-                                    class="mt-0.5 h-5 w-5 flex-shrink-0"
-                                    alt="wa"
-                                />
-                                {{
-                                    t(
-                                        "services.visaIndonesiaDetail.sidebar.vip_cta",
-                                    )
-                                }}
-                            </a>
-                            <div
-                                class="relative mt-3 text-[11px] text-white/60"
-                            >
-                                {{
-                                    t(
-                                        "services.visaIndonesiaDetail.sidebar.vip_note",
-                                    )
-                                }}
-                            </div>
-                        </div>
-
                         <!-- Index Visa Lainnya -->
                         <div
                             v-if="localizedRelatedProducts.length"
