@@ -569,58 +569,6 @@ const selectedPackagePrice = computed(
                     <div
                         class="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start min-w-0"
                     >
-                        <!-- VIP Line Banner -->
-                        <div
-                            class="rounded-2xl px-5 py-6 text-center overflow-hidden relative"
-                            style="
-                                background-image: url(&quot;/images/card-arrow-bg.png&quot;);
-                                background-size: cover;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                            "
-                        >
-                            <div class="relative mb-3 sm:mb-4">
-                                <div
-                                    class="inline-block w-full rounded-xl border border-white/60 px-3 py-2 sm:px-4 sm:py-2.5"
-                                >
-                                    <span
-                                        class="text-[12px] font-extrabold uppercase tracking-wide text-white sm:text-[14px] sm:tracking-widest"
-                                    >
-                                        {{ detail.sidebar?.vip_title }}
-                                    </span>
-                                </div>
-                            </div>
-
-                            <p
-                                class="relative text-[13px] leading-[1.55] text-white/90 mb-4 sm:text-[14px] sm:leading-[1.6] sm:mb-5"
-                            >
-                                {{ detail.sidebar?.vip_desc }}
-                            </p>
-                            <a
-                                :href="
-                                    buildWhatsappLink(
-                                        product.name,
-                                        selectedPackageName,
-                                    )
-                                "
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="relative flex w-full items-center justify-center gap-2.5 rounded-xl bg-[#25D366] py-2.5 text-[12.5px] font-bold text-white hover:bg-[#20BD5A] transition-colors shadow-lg shadow-black/20 sm:py-3 sm:text-[13px]"
-                            >
-                                <img
-                                    src="/icons/ft-wa.svg"
-                                    class="mt-0.5 h-4.5 w-4.5 flex-shrink-0 sm:h-5 sm:w-5"
-                                    alt="wa"
-                                />
-                                {{ detail.sidebar?.vip_cta }}
-                            </a>
-
-                            <div
-                                class="relative mt-2.5 text-[10px] text-white/60 sm:mt-3 sm:text-[11px]"
-                            >
-                                {{ detail.sidebar?.vip_note }}
-                            </div>
-                        </div>
 
                         <!-- Price Card -->
                         <div
