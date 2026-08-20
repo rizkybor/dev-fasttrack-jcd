@@ -24,7 +24,7 @@ export default {
             id: '1',
             title: 'Naturalisasi (Alih Kewarganegaraan)',
             description: 'Pengurusan proses naturalisasi dan alih kewarganegaraan sesuai ketentuan hukum yang berlaku di Indonesia.',
-            price: 'Rp 2.500.000',
+            price: 'Hubungi Kami',
             packages: '',
         },
     ],
