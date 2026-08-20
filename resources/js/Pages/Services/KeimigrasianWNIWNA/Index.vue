@@ -49,7 +49,7 @@ const serviceList = computed(() => {
     }));
 });
 
-const { buildWhatsappLink } = useWhatsapp("cs2");
+const { buildWhatsappLink } = useWhatsapp("default");
 </script>
 
 <template>

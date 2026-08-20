@@ -283,17 +283,16 @@ const serviceCategories = computed(() =>
                                     </div>
 
                                     <!-- Divider -->
-                                    <div class="my-3">
+                                    <!-- <div class="my-3">
                                         <div
                                             class="h-px w-full bg-[#E0E0E0]"
                                         ></div>
-                                    </div>
+                                    </div> -->
 
                                     <!-- Price & Packages -->
-                                    <div
+                                    <!-- <div
                                         class="flex items-start justify-between gap-3"
                                     >
-                                        <!-- Kiri: Mulai dari + Price -->
                                         <div class="flex flex-col gap-1">
                                             <span
                                                 class="text-[11px] font-medium leading-[16px] text-[#6B6B6B]"
@@ -304,13 +303,12 @@ const serviceCategories = computed(() =>
                                                 >{{ item.price }}</span
                                             >
                                         </div>
-                                        <!-- Kanan: Packages badge -->
                                         <span
                                             class="inline-flex items-center rounded-md bg-[#F1F1F1] px-2 py-1 text-[11px] font-medium leading-[16px] text-[#6B6B6B] flex-shrink-0"
                                         >
                                             {{ item.packages }}
                                         </span>
-                                    </div>
+                                    </div> -->
 
                                     <!-- CTA Button -->
                                     <div
