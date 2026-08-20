@@ -229,6 +229,78 @@ export default {
                 },
             ],
         },
+        {
+            title: "Expatriate & Immigration",
+            icon: "shield",
+            services: [
+                {
+                    title: "Limited Stay Permit (ITAS)",
+                    path: "/izin-tinggal-terbatas",
+                    items: [
+                        { label: "Foreign Worker Stay & Work Permit", path: "/izin-tinggal-terbatas/1" },
+                        { label: "Foreign Worker Family Stay Permit", path: "/izin-tinggal-terbatas/2" },
+                        { label: "Investor Limited Stay Permit", path: "/izin-tinggal-terbatas/3" },
+                        { label: "Elderly Limited Stay Permit", path: "/izin-tinggal-terbatas/4" },
+                    ],
+                },
+                {
+                    title: "Permanent Stay Permit (ITAP)",
+                    path: "/izin-tinggal-tetap",
+                    items: [
+                        { label: "Conversion of Limited Stay Permit to Permanent Stay Permit with Company Sponsorship", path: "/izin-tinggal-tetap/1" },
+                        { label: "Conversion of Limited Stay Permit to Permanent Stay Permit Sponsored by an Indonesian Spouse", path: "/izin-tinggal-tetap/2" },
+                    ],
+                },
+                {
+                    title: "Immigration for Indonesian & Foreign Citizens",
+                    path: "/keimigrasian-wni-wna",
+                    items: [
+                        { label: "Republic of Indonesia E-Passport", path: "/keimigrasian-wni-wna/1" },
+                        { label: "Address Change", path: "/keimigrasian-wni-wna/2" },
+                        { label: "Passport Change for ITAS Holders", path: "/keimigrasian-wni-wna/3" },
+                        { label: "Exit Permit Only (EPO)", path: "/keimigrasian-wni-wna/4" },
+                        { label: "Exit Termination of Stay Permit (TSP)", path: "/keimigrasian-wni-wna/5" },
+                    ],
+                },
+                {
+                    title: "Indonesia Visa",
+                    path: "/visa-indonesia",
+                    items: [
+                        { label: "Single-Entry Visit Visa", path: "/visa-indonesia/1" },
+                        { label: "Multiple-Entry Visit Visa", path: "/visa-indonesia/2" },
+                        { label: "Investor Visa", path: "/visa-indonesia/3" },
+                        { label: "Family Visa", path: "/visa-indonesia/4" },
+                        { label: "Repatriation Visa for Former Indonesian Citizens and Their Descendants", path: "/visa-indonesia/5" },
+                        { label: "Second Home Visa", path: "/visa-indonesia/6" },
+                    ],
+                },
+                {
+                    title: "Overseas Visa",
+                    path: "/visa-mancanegara",
+                    items: [
+                        { label: "China Visa", path: "/visa-mancanegara/1" },
+                        { label: "United States of America Visa", path: "/visa-mancanegara/2" },
+                        { label: "United Arab Emirates Visa", path: "/visa-mancanegara/3" },
+                        { label: "Australia Visa", path: "/visa-mancanegara/4" },
+                        { label: "Taiwan Visa", path: "/visa-mancanegara/5" },
+                        { label: "South Korea Visa", path: "/visa-mancanegara/6" },
+                        { label: "India Visa", path: "/visa-mancanegara/7" },
+                        { label: "United Kingdom (UK) Visa", path: "/visa-mancanegara/8" },
+                        { label: "South Africa Visa", path: "/visa-mancanegara/9" },
+                        { label: "Schengen Visa – Germany", path: "/visa-mancanegara/10" },
+                        { label: "Schengen Visa – Italy", path: "/visa-mancanegara/11" },
+                        { label: "Schengen Visa – New Zealand", path: "/visa-mancanegara/12" },
+                        { label: "Schengen Visa – Sweden", path: "/visa-mancanegara/13" },
+                        { label: "Japan Visa", path: "/visa-mancanegara/14" },
+                    ],
+                },
+                {
+                    title: "Naturalization",
+                    path: "/naturalisasi/1",
+                    items: [],
+                },
+            ],
+        },
     ],
     tools: [
         {

@@ -229,6 +229,78 @@ export default {
                 },
             ],
         },
+        {
+            title: "Expatriate & Keimigrasian",
+            icon: "shield",
+            services: [
+                {
+                    title: "Izin Tinggal Terbatas",
+                    path: "/izin-tinggal-terbatas",
+                    items: [
+                        { label: "Izin Tinggal & Kerja Tenaga Kerja Asing", path: "/izin-tinggal-terbatas/1" },
+                        { label: "Izin Tinggal Keluarga Tenaga Kerja Asing", path: "/izin-tinggal-terbatas/2" },
+                        { label: "Izin Tinggal Terbatas Investor", path: "/izin-tinggal-terbatas/3" },
+                        { label: "Izin Tinggal Terbatas Lansia", path: "/izin-tinggal-terbatas/4" },
+                    ],
+                },
+                {
+                    title: "Izin Tinggal Tetap",
+                    path: "/izin-tinggal-tetap",
+                    items: [
+                        { label: "Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap Sponsor Perusahaan", path: "/izin-tinggal-tetap/1" },
+                        { label: "Alih Status Izin Tinggal Terbatas ke Izin Tinggal Tetap Sponsor Suami/Istri WNI", path: "/izin-tinggal-tetap/2" },
+                    ],
+                },
+                {
+                    title: "Keimigrasian WNI & WNA",
+                    path: "/keimigrasian-wni-wna",
+                    items: [
+                        { label: "E-Paspor Republik Indonesia", path: "/keimigrasian-wni-wna/1" },
+                        { label: "Mutasi Alamat", path: "/keimigrasian-wni-wna/2" },
+                        { label: "Mutasi Paspor Pemegang Itas", path: "/keimigrasian-wni-wna/3" },
+                        { label: "Exit Permit Only (EPO)", path: "/keimigrasian-wni-wna/4" },
+                        { label: "Exit Termination Of Stay Permit (TSP)", path: "/keimigrasian-wni-wna/5" },
+                    ],
+                },
+                {
+                    title: "Visa Indonesia",
+                    path: "/visa-indonesia",
+                    items: [
+                        { label: "Visa Kunjungan Satu Kali Perjalanan", path: "/visa-indonesia/1" },
+                        { label: "Visa Kunjungan Beberapa Kali Perjalanan", path: "/visa-indonesia/2" },
+                        { label: "Visa Investor", path: "/visa-indonesia/3" },
+                        { label: "Visa Keluarga", path: "/visa-indonesia/4" },
+                        { label: "Visa Repatriasi Dan Keturunan EX-WNI", path: "/visa-indonesia/5" },
+                        { label: "Visa Rumah Kedua", path: "/visa-indonesia/6" },
+                    ],
+                },
+                {
+                    title: "Visa Mancanegara",
+                    path: "/visa-mancanegara",
+                    items: [
+                        { label: "Visa China", path: "/visa-mancanegara/1" },
+                        { label: "Visa United State Of America", path: "/visa-mancanegara/2" },
+                        { label: "Visa Uni Emirat Arab", path: "/visa-mancanegara/3" },
+                        { label: "Visa Australia", path: "/visa-mancanegara/4" },
+                        { label: "Visa Taiwan", path: "/visa-mancanegara/5" },
+                        { label: "Visa Korea Selatan", path: "/visa-mancanegara/6" },
+                        { label: "Visa India", path: "/visa-mancanegara/7" },
+                        { label: "Visa United Kingdom (Inggris)", path: "/visa-mancanegara/8" },
+                        { label: "Visa Afrika Selatan", path: "/visa-mancanegara/9" },
+                        { label: "Visa Schengen – Germany", path: "/visa-mancanegara/10" },
+                        { label: "Visa Schengen – Italy", path: "/visa-mancanegara/11" },
+                        { label: "Visa Schengen – New Zealand", path: "/visa-mancanegara/12" },
+                        { label: "Visa Schengen – Sweden", path: "/visa-mancanegara/13" },
+                        { label: "Visa Jepang", path: "/visa-mancanegara/14" },
+                    ],
+                },
+                {
+                    title: "Naturalisasi",
+                    path: "/naturalisasi/1",
+                    items: [],
+                },
+            ],
+        },
     ],
     tools: [
         {

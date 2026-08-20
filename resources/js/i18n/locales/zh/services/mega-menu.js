@@ -229,6 +229,78 @@ export default {
                 },
             ],
         },
+        {
+            title: "外籍人士与移民服务",
+            icon: "shield",
+            services: [
+                {
+                    title: "临时居留许可（ITAS）",
+                    path: "/izin-tinggal-terbatas",
+                    items: [
+                        { label: "外籍劳工居留及工作许可", path: "/izin-tinggal-terbatas/1" },
+                        { label: "外籍劳工家属居留许可", path: "/izin-tinggal-terbatas/2" },
+                        { label: "投资者临时居留许可", path: "/izin-tinggal-terbatas/3" },
+                        { label: "老年人临时居留许可", path: "/izin-tinggal-terbatas/4" },
+                    ],
+                },
+                {
+                    title: "永久居留许可（ITAP）",
+                    path: "/izin-tinggal-tetap",
+                    items: [
+                        { label: "由公司担保的临时居留许可转永久居留许可地位转换", path: "/izin-tinggal-tetap/1" },
+                        { label: "由印尼籍配偶担保的临时居留许可转永久居留许可地位转换", path: "/izin-tinggal-tetap/2" },
+                    ],
+                },
+                {
+                    title: "印尼籍与外籍人士移民服务",
+                    path: "/keimigrasian-wni-wna",
+                    items: [
+                        { label: "印度尼西亚共和国电子护照", path: "/keimigrasian-wni-wna/1" },
+                        { label: "地址变更", path: "/keimigrasian-wni-wna/2" },
+                        { label: "ITAS持有人护照变更", path: "/keimigrasian-wni-wna/3" },
+                        { label: "单次出境许可（EPO）", path: "/keimigrasian-wni-wna/4" },
+                        { label: "出境居留许可终止（TSP）", path: "/keimigrasian-wni-wna/5" },
+                    ],
+                },
+                {
+                    title: "印度尼西亚签证",
+                    path: "/visa-indonesia",
+                    items: [
+                        { label: "单次入境访问签证", path: "/visa-indonesia/1" },
+                        { label: "多次入境访问签证", path: "/visa-indonesia/2" },
+                        { label: "投资者签证", path: "/visa-indonesia/3" },
+                        { label: "家庭签证", path: "/visa-indonesia/4" },
+                        { label: "前印尼籍人士及其后裔遣返签证", path: "/visa-indonesia/5" },
+                        { label: "第二居所签证", path: "/visa-indonesia/6" },
+                    ],
+                },
+                {
+                    title: "境外签证",
+                    path: "/visa-mancanegara",
+                    items: [
+                        { label: "中国签证", path: "/visa-mancanegara/1" },
+                        { label: "美利坚合众国签证", path: "/visa-mancanegara/2" },
+                        { label: "阿拉伯联合酋长国签证", path: "/visa-mancanegara/3" },
+                        { label: "澳大利亚签证", path: "/visa-mancanegara/4" },
+                        { label: "台湾签证", path: "/visa-mancanegara/5" },
+                        { label: "韩国签证", path: "/visa-mancanegara/6" },
+                        { label: "印度签证", path: "/visa-mancanegara/7" },
+                        { label: "英国签证", path: "/visa-mancanegara/8" },
+                        { label: "南非签证", path: "/visa-mancanegara/9" },
+                        { label: "申根签证-德国", path: "/visa-mancanegara/10" },
+                        { label: "申根签证-意大利", path: "/visa-mancanegara/11" },
+                        { label: "申根签证-新西兰", path: "/visa-mancanegara/12" },
+                        { label: "申根签证-瑞典", path: "/visa-mancanegara/13" },
+                        { label: "日本签证", path: "/visa-mancanegara/14" },
+                    ],
+                },
+                {
+                    title: "入籍",
+                    path: "/naturalisasi/1",
+                    items: [],
+                },
+            ],
+        },
     ],
     tools: [
         {
