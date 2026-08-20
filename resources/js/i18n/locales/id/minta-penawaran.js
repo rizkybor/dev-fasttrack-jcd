@@ -569,7 +569,7 @@ export default {
             {
                 value: 'itas-lansia',
                 label: 'Izin Tinggal Terbatas Lansia',
-                harga: 3500000,
+                harga: 7000000,
             },
         ],
         'izin-tinggal-tetap': [

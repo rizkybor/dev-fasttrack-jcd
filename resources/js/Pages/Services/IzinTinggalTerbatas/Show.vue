@@ -462,7 +462,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
                                 class="flex flex-col sm:flex-row sm:items-center gap-4"
                             >
                                 <!-- Daftar biaya -->
-                                <div class="flex-1 space-y-3">
+                                <div class="sm:flex-1 sm:max-w-[65%] space-y-3">
                                     <div
                                         v-for="(item, index) in currentData
                                             .rincian_biaya.items"
@@ -484,7 +484,7 @@ const currentData = computed(() => product.value?.[jenisPengajuan.value] ?? {});
 
                                 <!-- Card total + CTA -->
                                 <div
-                                    class="rounded-xl px-5 py-4 flex items-center justify-between gap-4 sm:w-[320px]"
+                                    class="rounded-xl px-5 py-4 flex items-center justify-between gap-4 sm:w-[380px]"
                                     style="
                                         background-image: url(&quot;/images/card-arrow-item-bg.png&quot;);
                                         background-size: cover;

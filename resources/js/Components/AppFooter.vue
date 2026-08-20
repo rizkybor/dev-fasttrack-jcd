@@ -126,7 +126,7 @@ const legalLinks = [
                                     d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.58 4.23.95 1.2 2.27 2.04 3.75 2.41v3.92c-1.33-.14-2.61-.63-3.69-1.42-.87-.65-1.57-1.49-2.06-2.47v7.5c0 1.63-.44 3.23-1.28 4.62s-2.07 2.47-3.53 3.1c-1.47.63-3.09.83-4.66.56-1.57-.26-3.02-1.02-4.16-2.18-1.15-1.15-1.9-2.61-2.16-4.19-.26-1.57-.05-3.19.6-4.65s1.73-2.66 3.13-3.48c1.4-.82 2.99-1.23 4.61-1.19v4.03c-.8-.06-1.6.14-2.29.57-.69.43-1.21 1.08-1.49 1.84s-.27 1.61.02 2.34c.29.74.83 1.35 1.53 1.74.69.39 1.49.49 2.26.29.77-.2 1.44-.67 1.91-1.33.47-.66.69-1.46.63-2.27V0h.02z" />
                             </svg>
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn FastTrack"
+                        <a href="https://www.linkedin.com/in/fast-track-legal-abb351383/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn FastTrack"
                             class="inline-flex items-center justify-center rounded bg-white text-[#9e1f16] hover:bg-primary hover:text-white transition-colors p-2">
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path

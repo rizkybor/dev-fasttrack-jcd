@@ -38,7 +38,7 @@ const { buildWhatsappLink } = useWhatsapp("default");
         >
             <div class="absolute inset-0">
                 <img
-                    src="/images/layanan-hero/ft-hero-badan-usaha.png"
+                    src="/images/layanan-hero/ft-hero-digmart.png"
                     alt="Hero background"
                     class="h-full w-full object-cover object-center"
                 />
