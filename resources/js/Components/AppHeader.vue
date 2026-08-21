@@ -2,9 +2,35 @@
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useLocale } from "@/Composables/useLocale";
+import { useModals } from "@/Composables/useModals";
+import GeneratorNamaModal from "@/Components/ModalGenerateName.vue";
+import CekNamaModal from "@/Components/ModalCheckName.vue";
 
 const { t, tm } = useI18n();
 const { languages, current, setLocale } = useLocale();
+const {
+    showGeneratorModal,
+    showCheckNameModal,
+    prefillCheckName,
+    openGenerator,
+    openCheckName,
+    closeCheckName,
+    transferToCheckName,
+} = useModals();
+
+const toolActions = {
+    "/icons/ic-tools-sedianamapt.svg": () => openCheckName(),
+    "/icons/ic-tools-gennama.svg": () => openGenerator(),
+};
+
+const handleToolClick = (group, event) => {
+    const action = toolActions[group.icon];
+    if (action) {
+        event.preventDefault();
+        action();
+    }
+    closeAllMenus();
+};
 const langOpen = ref(false);
 
 const servicesOpen = ref(false);
@@ -1170,9 +1196,9 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                             <a
                                 v-for="group in serviceTools"
                                 :key="group.title"
-                                :href="group.path"
+                                :href="toolActions[group.icon] ? '#' : group.path"
                                 class="group rounded-xl border border-[#D9DAD8] bg-white p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md"
-                                @click="closeAllMenus"
+                                @click="handleToolClick(group, $event)"
                             >
                                 <div class="flex items-start gap-2.5">
                                     <img
@@ -1205,4 +1231,14 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
             </div>
         </template>
     </header>
+
+    <GeneratorNamaModal
+        v-model="showGeneratorModal"
+        @check-name="transferToCheckName"
+    />
+    <CekNamaModal
+        v-model="showCheckNameModal"
+        :prefill-name="prefillCheckName"
+        @update:modelValue="(val) => !val && closeCheckName()"
+    />
 </template>

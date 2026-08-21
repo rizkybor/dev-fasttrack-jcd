@@ -323,7 +323,7 @@ export default {
         },
         {
             title: "Simulasi Akta Pendirian",
-            path: "",
+            path: "/simulasi-akta",
             icon: "/icons/ic-tools-simulasiakta.svg",
             desc: "",
         },

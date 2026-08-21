@@ -323,7 +323,7 @@ export default {
         },
         {
             title: "Deed of Establishment Simulator",
-            path: "",
+            path: "/simulasi-akta",
             icon: "/icons/ic-tools-simulasiakta.svg",
             desc: "",
         },
