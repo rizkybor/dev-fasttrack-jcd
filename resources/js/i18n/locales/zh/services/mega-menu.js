@@ -323,7 +323,7 @@ export default {
         },
         {
             title: "设立契据模拟",
-            path: "",
+            path: "/simulasi-akta",
             icon: "/icons/ic-tools-simulasiakta.svg",
             desc: "",
         },
