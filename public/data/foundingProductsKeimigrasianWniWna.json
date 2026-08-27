@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "slug": "e-paspor-republik-indonesia",
         "name": {
             "id": "E-Paspor Republik Indonesia",
             "en": "Republic of Indonesia E-Passport",
@@ -230,6 +231,7 @@
     },
     {
         "id": 2,
+        "slug": "mutasi-alamat",
         "name": {
             "id": "Mutasi Alamat",
             "en": "Address Change",
@@ -547,6 +549,7 @@
     },
     {
         "id": 3,
+        "slug": "mutasi-paspor-pemegang-itas",
         "name": {
             "id": "Mutasi Paspor Pemegang Itas",
             "en": "Passport Change for ITAS Holders",
@@ -689,6 +692,7 @@
     },
     {
         "id": 4,
+        "slug": "exit-permit-only-epo",
         "name": {
             "id": "Exit Permit Only (EPO)",
             "en": "Exit Permit Only (EPO)",
@@ -970,6 +974,7 @@
     },
     {
         "id": 5,
+        "slug": "exit-termination-of-stay-permit-tsp",
         "name": {
             "id": "Exit Termination Of Stay Permit (TSP)",
             "en": "Exit Termination of Stay Permit (TSP)",

@@ -5,6 +5,7 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
 
 import { useWhatsapp } from "@/Composables/useWhatsapp.js";
+import productSlugs from "@/Data/productSlugs";
 const { t, tm } = useI18n();
 
 const props = defineProps({
@@ -171,7 +172,7 @@ const { buildWhatsappLink } = useWhatsapp("default");
                         <a
                             v-for="(item, idx) in serviceList"
                             :key="idx"
-                            :href="`/izin-tinggal-tetap/${item.id}`"
+                            :href="`/izin-tinggal-tetap/${productSlugs['izin-tinggal-tetap'][item.id]}`"
                             class="group flex flex-col rounded-[14px] border border-[#D9DAD8] bg-[#FEFEFE] p-[15px] backdrop-blur-[13px] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-primary/30"
                         >
                             <div class="flex flex-col gap-4 flex-grow">
