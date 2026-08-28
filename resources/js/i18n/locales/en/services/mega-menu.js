@@ -81,7 +81,7 @@ export default {
                         { label: "Spatial Use Activity Conformity (KKPR)", path: "/perizinan-berusaha/perizinan-dasar" },
                         { label: "Environmental Permit", path: "/perizinan-berusaha/perizinan-dasar" },
                         { label: "Building Approval (PBG)", path: "/perizinan-berusaha/perizinan-dasar" },
-                        { label: "Certificate of Building Worthiness (SLF)", path: "/perizinan-berusaha/4" },
+                        { label: "Certificate of Building Worthiness (SLF)", path: "/perizinan-berusaha/perizinan-dasar" },
                     ],
                 },
                 {

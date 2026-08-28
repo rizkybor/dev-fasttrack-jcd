@@ -81,7 +81,7 @@ export default {
                         { label: "空间利用活动符合性（KKPR）", path: "/perizinan-berusaha/perizinan-dasar" },
                         { label: "环境许可", path: "/perizinan-berusaha/perizinan-dasar" },
                         { label: "建筑物批准（PBG）", path: "/perizinan-berusaha/perizinan-dasar" },
-                        { label: "使用功能合格证（SLF）", path: "/perizinan-berusaha/4" },
+                        { label: "使用功能合格证（SLF）", path: "/perizinan-berusaha/perizinan-dasar" },
                     ],
                 },
                 {

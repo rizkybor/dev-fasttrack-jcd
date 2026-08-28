@@ -81,7 +81,7 @@ export default {
                         { label: "Kesesuaian Kegiatan Pemanfaatan Ruang", path: "/perizinan-berusaha/perizinan-dasar" },
                         { label: "Perizinan Lingkungan", path: "/perizinan-berusaha/perizinan-dasar" },
                         { label: "Persetujuan Bangunan Gedung", path: "/perizinan-berusaha/perizinan-dasar" },
-                        { label: "Sertifikat Laik Fungsi", path: "/perizinan-berusaha/4" },
+                        { label: "Sertifikat Laik Fungsi", path: "/perizinan-berusaha/perizinan-dasar" },
                     ],
                 },
                 {
