@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "slug": "pengambilalihan-perseroan-akuisisi",
         "name": {
             "id": "Pengambilalihan Perseroan (Akuisisi)",
             "en": "Company Acquisition (Takeover)",
@@ -329,6 +330,7 @@
     },
     {
         "id": 2,
+        "slug": "penggabungan-perseroan-merger",
         "name": {
             "id": "Penggabungan Perseroan (Merger)",
             "en": "Company Merger",
@@ -780,6 +782,7 @@
     },
     {
         "id": 3,
+        "slug": "alih-status-perseroan",
         "name": {
             "id": "Alih Status Perseroan",
             "en": "Company Status Conversion",

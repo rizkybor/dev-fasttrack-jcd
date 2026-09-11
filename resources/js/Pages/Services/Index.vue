@@ -48,19 +48,19 @@ const categoryMeta = [
         { price: "Rp 750.000", path: "/restrukturisasi-perseroan-terbatas", image: "/images/layanan-card/layanan-restrukturisasi-perseroan-terbatas.png" },
         { price: "Rp 750.000", path: "/penutupan-badan-usaha", image: "/images/layanan-card/layanan-penutupan-badan-usaha.png" },
         { price: "Rp 750.000", path: "/kewajiban-pelaporan-perusahaan", image: "/images/layanan-card/layanan-kewajiban-pelaporan-perusahaan.png" },
-        { price: "Rp 750.000", path: "/sertifikasi-badan-usaha/1", image: "/images/layanan-card/layanan-sertifikasi-badan-usaha.png" },
-        { price: "Rp 750.000", path: "/retainer-berlangganan/1", image: "/images/layanan-card/layanan-retainer-berlangganan.png" },
-        { price: "Rp 750.000", path: "/virtual-office/1", image: "/images/layanan-card/layanan-virtual-office.png" },
+        { price: "Rp 750.000", path: "/sertifikasi-badan-usaha/sertifikasi-badan-usaha-jasa-konstruksi", image: "/images/layanan-card/layanan-sertifikasi-badan-usaha.png" },
+        { price: "Rp 750.000", path: "/retainer-berlangganan/retainer-berlangganan", image: "/images/layanan-card/layanan-retainer-berlangganan.png" },
+        { price: "Rp 750.000", path: "/virtual-office/virtual-office", image: "/images/layanan-card/layanan-virtual-office.png" },
         { price: "Rp 750.000", path: "/digital-marketing", image: "/images/layanan-card/layanan-design-digmart.png" },
         { price: "Rp 750.000", path: "/perpajakan-dan-pembukuan", image: "/images/layanan-card/layanan-perpajakan-dan-pembukuan.png" },
     ],
     // HUKUM & KONTRAK
     [
-        { price: "Rp 750.000", path: "/penyusunan-peninjauan/1", image: "/images/layanan-card/layanan-penyusunan-dan-peninjauan.png" },
+        { price: "Rp 750.000", path: "/penyusunan-peninjauan/penyusunan-peninjauan-perjanjian-kontrak", image: "/images/layanan-card/layanan-penyusunan-dan-peninjauan.png" },
         { price: "Rp 750.000", path: "/legalisasi-kedutaan", image: "/images/layanan-card/layanan-legalisasi-kedutaan.png" },
-        { price: "Rp 750.000", path: "/penerjemah/1", image: "/images/layanan-card/layanan-penerjemah-translator.png" },
+        { price: "Rp 750.000", path: "/penerjemah/penerjemah-tersumpah-sworn-translator", image: "/images/layanan-card/layanan-penerjemah-translator.png" },
         { price: "Rp 750.000", path: "/kekayaan-intelektual", image: "/images/layanan-card/layanan-kekayaan-intelektual.png" },
-        { price: "Rp 750.000", path: "/uji-tuntas-hukum/1", image: "/images/layanan-card/layanan-uji-tuntas-hukum.png" },
+        { price: "Rp 750.000", path: "/uji-tuntas-hukum/uji-tuntas-hukum", image: "/images/layanan-card/layanan-uji-tuntas-hukum.png" },
     ],
     // EXPATRIATE & KEIMIGRASIAN
     [
@@ -69,7 +69,7 @@ const categoryMeta = [
         { price: "Rp 3.500.000", path: "/visa-indonesia", image: "/images/layanan-card/layanan-visa-indonesia.png" },
         { price: "Rp 750.000", path: "/visa-mancanegara", image: "/images/layanan-card/layanan-visa-mancanegara.png" },
         { price: "Rp 750.000", path: "/keimigrasian-wni-wna", image: "/images/layanan-card/layanan-keimigrasian.png" },
-        { price: "Rp 750.000", path: "/naturalisasi/1", image: "/images/layanan-card/layanan-naturalisasi.png" },
+        { price: "Rp 750.000", path: "/naturalisasi/naturalisasi-alih-kewarganegaraan", image: "/images/layanan-card/layanan-naturalisasi.png" },
     ],
 ];
 
