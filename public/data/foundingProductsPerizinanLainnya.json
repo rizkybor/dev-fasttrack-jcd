@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "slug": "nomor-pokok-wajib-pajak-npwp",
         "name": {
             "id": "Nomor Pokok Wajib Pajak (NPWP)",
             "en": "Taxpayer Identification Number (NPWP)",
@@ -165,6 +166,7 @@
     },
     {
         "id": 2,
+        "slug": "surat-pengukuhan-pengusaha-kena-pajak-sp-pkp",
         "name": {
             "id": "Surat Pengukuhan Pengusaha Kena Pajak (SP PKP)",
             "en": "Taxable Entrepreneur Confirmation Letter (SP PKP)",
@@ -304,6 +306,7 @@
     },
     {
         "id": 3,
+        "slug": "tanda-daftar-lembaga-kesejahteraan-sosial-lks",
         "name": {
             "id": "Tanda Daftar Lembaga Kesejahteraan Sosial (LKS)",
             "en": "Social Welfare Institution Registration Certificate (LKS)",
@@ -460,6 +463,7 @@
     },
     {
         "id": 4,
+        "slug": "izin-kegiatan-lks-daerah-lokal-dki-jakarta",
         "name": {
             "id": "Izin Kegiatan LKS Daerah/Lokal — DKI Jakarta",
             "en": "Regional/Local LKS Activity Permit — DKI Jakarta",
@@ -595,6 +599,7 @@
     },
     {
         "id": 5,
+        "slug": "tanda-daftar-yayasan",
         "name": {
             "id": "Tanda Daftar Yayasan",
             "en": "Foundation Registration Certificate",
@@ -745,6 +750,7 @@
     },
     {
         "id": 6,
+        "slug": "peraturan-perusahaan",
         "name": {
             "id": "Peraturan Perusahaan",
             "en": "Company Regulations",
