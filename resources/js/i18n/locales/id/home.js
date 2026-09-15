@@ -162,6 +162,17 @@ export default {
                     "/images/vo/ft-indramayu-3.png",
                 ],
             },
+            {
+                name: "Bali",
+                location: "Bali",
+                kpp: "KPP Bali",
+                status: "AVAILABLE",
+                path: "/virtual-office",
+                images: [
+                    "/images/vo/ft-bali-1.png",
+                    "/images/vo/ft-bali-2.png",
+                ],
+            },
         ],
     },
     blog: {
