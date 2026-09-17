@@ -3,6 +3,7 @@ import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
+import FaqAccordionSection from "@/Components/FaqAccordionSection.vue";
 
 import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 import productSlugs from "@/Data/productSlugs";
@@ -11,6 +12,7 @@ const { t, tm } = useI18n();
 const props = defineProps({
     service: { type: Object, required: true },
     products: { type: Array, default: () => [] },
+    sharedFaq: { type: Array, default: () => [] },
 });
 
 // Icon & path tidak perlu ditranslasi, tetap di sini
@@ -259,8 +261,13 @@ const { buildWhatsappLink } = useWhatsapp("default");
                             </div>
                         </a>
                     </div>
+                        <section class="py-10 bg-[#FAFAF9]">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <FaqAccordionSection :faq="sharedFaq" title="FAQ" />
+                            </div>
+                        </section>
 
-                    <FooterCTA
+                        <FooterCTA
                         :title="t('services.izinTinggalTerbatas.cta.title')"
                         :description="t('services.izinTinggalTerbatas.cta.desc')"
                         :button-text="t('services.izinTinggalTerbatas.cta.whatsapp')"
