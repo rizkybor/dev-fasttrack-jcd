@@ -3,6 +3,7 @@ import MainLayout from "@/Layouts/MainLayout.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 import FooterCTA from "@/Components/FooterCTA.vue";
+import FaqAccordionSection from "@/Components/FaqAccordionSection.vue";
 import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 const { buildWhatsappLink } = useWhatsapp("default");
 
@@ -74,6 +75,7 @@ const localizedProduct = computed(() => {
         benefits: pick(p.benefits) ?? [],
         requirements: pick(p.requirements) ?? [],
         process: pick(p.process) ?? [],
+        faq: pick(p.faq) ?? [],
         plans_alert: pick(p.plans_alert) ?? [],
         dasar_hukum: pick(p.dasar_hukum) ?? [],
         plans: (p.plans ?? []).map((plan) => ({
@@ -2485,6 +2487,14 @@ const toggleDoc = (key) => {
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="py-10 bg-[#FAFAF9]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <FaqAccordionSection
+                    :faq="localizedProduct.faq"
+                    title="FAQ"
+                />
             </div>
         </section>
 

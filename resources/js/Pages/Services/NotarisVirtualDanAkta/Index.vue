@@ -251,8 +251,7 @@ const { buildWhatsappLink } = useWhatsapp("default");
                             </div>
                         </a>
                     </div>
-
-                    <FooterCTA
+                        <FooterCTA
                         :title="t('services.notarisVirtualDanAkta.cta.title')"
                         :description="t('services.notarisVirtualDanAkta.cta.desc')"
                         :button-text="t('services.notarisVirtualDanAkta.cta.whatsapp')"

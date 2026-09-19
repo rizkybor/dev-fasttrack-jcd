@@ -1,6 +1,7 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
+import FaqAccordionSection from "@/Components/FaqAccordionSection.vue";
 import { ref, computed, watch } from "vue";
 import { useWhatsapp } from "@/Composables/useWhatsapp.js";
 import { useI18n } from "vue-i18n";
@@ -895,6 +896,14 @@ watch(activeIndex, () => {
                     <!-- ===== END KANAN ===== -->
                 </div>
                 <!-- ===== END GRID 2 KOLOM ===== -->
+            </div>
+        </section>
+        <section class="py-10 bg-[#FAFAF9]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <FaqAccordionSection
+                    :faq="localizedProduct.faq"
+                    title="FAQ"
+                />
             </div>
         </section>
 

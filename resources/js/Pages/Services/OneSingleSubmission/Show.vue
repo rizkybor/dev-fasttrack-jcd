@@ -1,6 +1,7 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import FooterCTA from "@/Components/FooterCTA.vue";
+import FaqAccordionSection from "@/Components/FaqAccordionSection.vue";
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
@@ -1315,6 +1316,14 @@ const dokumenSectionLabel = computed(() => {
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="py-10 bg-[#FAFAF9]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <FaqAccordionSection
+                    :faq="localizedProduct.faq"
+                    title="FAQ"
+                />
             </div>
         </section>
 

@@ -250,8 +250,7 @@ const { buildWhatsappLink } = useWhatsapp("default");
                             </div>
                         </a>
                     </div>
-
-                    <FooterCTA
+                        <FooterCTA
                         :title="t('services.perizinanBerusaha.cta.title')"
                         :description="t('services.perizinanBerusaha.cta.desc')"
                         :button-text="t('services.perizinanBerusaha.cta.whatsapp')"
