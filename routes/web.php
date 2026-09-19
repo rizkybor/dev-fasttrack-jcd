@@ -674,6 +674,33 @@ $staticPages = [
 // robots.txt & sitemap.xml are registered at the end of this file (see bottom),
 // once every *Products collection and $articles has been defined above.
 
+// Helper pick locale — tambahkan di dekat $resolveBaseUrl
+$pickLocale = static function (mixed $field, string $locale = null) use (&$pickLocale): mixed {
+    $locale = $locale ?? app()->getLocale();
+    if (is_array($field) && (isset($field['id']) || isset($field['en']) || isset($field['zh']))) {
+        return $field[$locale] ?? $field['id'] ?? null;
+    }
+    return $field;
+};
+
+// FAQ bersama per keluarga layanan — dipakai oleh beberapa grup produk sekaligus
+// supaya kontennya tidak perlu diduplikasi ke setiap file JSON produk.
+$loadSharedFaq = static function (string $filename): array {
+    $path = public_path('data/' . $filename);
+
+    if (!file_exists($path)) {
+        return [];
+    }
+
+    $decoded = json_decode(file_get_contents($path), true);
+
+    return is_array($decoded) ? $decoded : [];
+};
+
+$faqSharedBadanUsaha = $loadSharedFaq('faqSharedBadanUsaha.json');
+$faqSharedExpatriateVisa = $loadSharedFaq('faqSharedExpatriateVisa.json');
+$faqSharedOssPerizinan = $loadSharedFaq('faqSharedOssPerizinan.json');
+
 foreach ($customServices as $service) {
     Route::get($service['path'], function (Request $request) use ($sertifikasiBadanUsahaProducts, $visaMancanegaraProducts, $visaIndonesiaProducts, $virtualOfficeProducts, $naturalisasiProducts, $digitalMarketingProducts, $perpajakanDanPembukuanProducts, $perizinanBerusahaProducts, $keimigrasianWniWnaProducts, $notarisVirtualDanAktaProducts, $perizinanLainnyaProducts, $restrukturisasiPerseroanTerbatasProducts, $penutupanBadanUsahaProducts, $penerjemahProducts, $ujiTuntasHukumProducts, $kekayaanIntelektualProducts, $kewajibanPelaporanPerusahaanProducts, $legalisasiKedutaanProducts, $oneSingleSubmissionProducts, $badanUsahaLuarNegeriProducts, $izinTinggalTetapProducts, $izinTinggalTerbatasProducts, $retainerBerlanggananProducts, $service, $resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $serviceSchema, $foundingProducts, $kantorPerwakilanProducts, $penyusunanDanPeninjauanProducts) {
         $baseUrl = $resolveBaseUrl($request);
@@ -1293,16 +1320,7 @@ foreach ($customServices as $service) {
         return Inertia::render($service['component'], $props);
     });
 }
-// Helper pick locale — tambahkan di dekat $resolveBaseUrl
-$pickLocale = static function (mixed $field, string $locale = null) use (&$pickLocale): mixed {
-    $locale = $locale ?? app()->getLocale();
-    if (is_array($field) && (isset($field['id']) || isset($field['en']) || isset($field['zh']))) {
-        return $field[$locale] ?? $field['id'] ?? null;
-    }
-    return $field;
-};
-
-Route::get('/badan-usaha/{idOrSlug}', function (Request $request, string $idOrSlug) use ($foundingProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/badan-usaha/{idOrSlug}', function (Request $request, string $idOrSlug) use ($foundingProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedBadanUsaha) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($foundingProducts)->firstWhere('id', (int) $idOrSlug)
@@ -1313,6 +1331,13 @@ Route::get('/badan-usaha/{idOrSlug}', function (Request $request, string $idOrSl
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedBadanUsaha['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedBadanUsaha['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedBadanUsaha['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($foundingProducts)
         ->where('id', '!=', $product['id'])
@@ -1379,7 +1404,7 @@ Route::get('/badan-usaha/{idOrSlug}', function (Request $request, string $idOrSl
     ]);
 });
 
-Route::get('/kantor-perwakilan/{idOrSlug}', function (Request $request, string $idOrSlug) use ($kantorPerwakilanProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/kantor-perwakilan/{idOrSlug}', function (Request $request, string $idOrSlug) use ($kantorPerwakilanProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedOssPerizinan) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($kantorPerwakilanProducts)->firstWhere('id', (int) $idOrSlug)
@@ -1390,6 +1415,13 @@ Route::get('/kantor-perwakilan/{idOrSlug}', function (Request $request, string $
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedOssPerizinan['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedOssPerizinan['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedOssPerizinan['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($kantorPerwakilanProducts)
         ->where('id', '!=', $product['id'])
@@ -1610,7 +1642,7 @@ Route::get('/retainer-berlangganan/{idOrSlug}', function (Request $request, stri
 });
 
 // IZIN TINGGAL TERBATAS 
-Route::get('/izin-tinggal-terbatas/{idOrSlug}', function (Request $request, string $idOrSlug) use ($izinTinggalTerbatasProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/izin-tinggal-terbatas/{idOrSlug}', function (Request $request, string $idOrSlug) use ($izinTinggalTerbatasProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedExpatriateVisa) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($izinTinggalTerbatasProducts)->firstWhere('id', (int) $idOrSlug)
@@ -1621,6 +1653,13 @@ Route::get('/izin-tinggal-terbatas/{idOrSlug}', function (Request $request, stri
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedExpatriateVisa['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedExpatriateVisa['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedExpatriateVisa['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($izinTinggalTerbatasProducts)
         ->where('id', '!=', $product['id'])
@@ -1687,7 +1726,7 @@ Route::get('/izin-tinggal-terbatas/{idOrSlug}', function (Request $request, stri
 });
 
 // IZIN TINGGAL TERBATAS 
-Route::get('/izin-tinggal-tetap/{idOrSlug}', function (Request $request, string $idOrSlug) use ($izinTinggalTetapProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/izin-tinggal-tetap/{idOrSlug}', function (Request $request, string $idOrSlug) use ($izinTinggalTetapProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedExpatriateVisa) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($izinTinggalTetapProducts)->firstWhere('id', (int) $idOrSlug)
@@ -1698,6 +1737,13 @@ Route::get('/izin-tinggal-tetap/{idOrSlug}', function (Request $request, string 
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedExpatriateVisa['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedExpatriateVisa['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedExpatriateVisa['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($izinTinggalTetapProducts)
         ->where('id', '!=', $product['id'])
@@ -1764,7 +1810,7 @@ Route::get('/izin-tinggal-tetap/{idOrSlug}', function (Request $request, string 
 });
 
 // BADAN USAHA LUAR NEGERI
-Route::get('/badan-usaha-luar-negeri/{idOrSlug}', function (Request $request, string $idOrSlug) use ($badanUsahaLuarNegeriProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/badan-usaha-luar-negeri/{idOrSlug}', function (Request $request, string $idOrSlug) use ($badanUsahaLuarNegeriProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedBadanUsaha) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($badanUsahaLuarNegeriProducts)->firstWhere('id', (int) $idOrSlug)
@@ -1775,6 +1821,13 @@ Route::get('/badan-usaha-luar-negeri/{idOrSlug}', function (Request $request, st
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedBadanUsaha['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedBadanUsaha['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedBadanUsaha['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($badanUsahaLuarNegeriProducts)
         ->where('id', '!=', $product['id'])
@@ -1836,7 +1889,7 @@ Route::get('/badan-usaha-luar-negeri/{idOrSlug}', function (Request $request, st
 });
 
 // ONE SINGLE SUBMISSION
-Route::get('/one-single-submission/{idOrSlug}', function (Request $request, string $idOrSlug) use ($oneSingleSubmissionProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/one-single-submission/{idOrSlug}', function (Request $request, string $idOrSlug) use ($oneSingleSubmissionProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedOssPerizinan) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($oneSingleSubmissionProducts)->firstWhere('id', (int) $idOrSlug)
@@ -1847,6 +1900,13 @@ Route::get('/one-single-submission/{idOrSlug}', function (Request $request, stri
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedOssPerizinan['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedOssPerizinan['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedOssPerizinan['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($oneSingleSubmissionProducts)
         ->where('id', '!=', $product['id'])
@@ -1979,7 +2039,7 @@ Route::get('/kewajiban-pelaporan-perusahaan/{idOrSlug}', function (Request $requ
 });
 
 // LEGALISASI KEDUTAAN
-Route::get('/legalisasi-kedutaan/{idOrSlug}', function (Request $request, string $idOrSlug) use ($legalisasiKedutaanProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/legalisasi-kedutaan/{idOrSlug}', function (Request $request, string $idOrSlug) use ($legalisasiKedutaanProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedBadanUsaha) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($legalisasiKedutaanProducts)->firstWhere('id', (int) $idOrSlug)
@@ -1990,6 +2050,13 @@ Route::get('/legalisasi-kedutaan/{idOrSlug}', function (Request $request, string
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedBadanUsaha['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedBadanUsaha['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedBadanUsaha['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($legalisasiKedutaanProducts)
         ->where('id', '!=', $product['id'])
@@ -2050,7 +2117,7 @@ Route::get('/legalisasi-kedutaan/{idOrSlug}', function (Request $request, string
 });
 
 // KEKAYAAN INTELEKTUAL
-Route::get('/kekayaan-intelektual/{idOrSlug}', function (Request $request, string $idOrSlug) use ($kekayaanIntelektualProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/kekayaan-intelektual/{idOrSlug}', function (Request $request, string $idOrSlug) use ($kekayaanIntelektualProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedBadanUsaha) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($kekayaanIntelektualProducts)->firstWhere('id', (int) $idOrSlug)
@@ -2061,6 +2128,13 @@ Route::get('/kekayaan-intelektual/{idOrSlug}', function (Request $request, strin
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedBadanUsaha['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedBadanUsaha['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedBadanUsaha['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($kekayaanIntelektualProducts)
         ->where('id', '!=', $product['id'])
@@ -2347,7 +2421,7 @@ Route::get('/perizinan-lainnya/{idOrSlug}', function (Request $request, string $
 });
 
 // PERIZINAN BERUSAHA
-Route::get('/perizinan-berusaha/{idOrSlug}', function (Request $request, string $idOrSlug) use ($perizinanBerusahaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/perizinan-berusaha/{idOrSlug}', function (Request $request, string $idOrSlug) use ($perizinanBerusahaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedOssPerizinan) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($perizinanBerusahaProducts)->firstWhere('id', (int) $idOrSlug)
@@ -2358,6 +2432,13 @@ Route::get('/perizinan-berusaha/{idOrSlug}', function (Request $request, string 
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedOssPerizinan['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedOssPerizinan['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedOssPerizinan['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($perizinanBerusahaProducts)
         ->where('id', '!=', $product['id'])
@@ -2419,7 +2500,7 @@ Route::get('/perizinan-berusaha/{idOrSlug}', function (Request $request, string 
 });
 
 // NOTARIS VIRTUAL DAN AKTA
-Route::get('/notaris-virtual-dan-akta/{idOrSlug}', function (Request $request, string $idOrSlug) use ($notarisVirtualDanAktaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/notaris-virtual-dan-akta/{idOrSlug}', function (Request $request, string $idOrSlug) use ($notarisVirtualDanAktaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedBadanUsaha) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($notarisVirtualDanAktaProducts)->firstWhere('id', (int) $idOrSlug)
@@ -2430,6 +2511,13 @@ Route::get('/notaris-virtual-dan-akta/{idOrSlug}', function (Request $request, s
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedBadanUsaha['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedBadanUsaha['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedBadanUsaha['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($notarisVirtualDanAktaProducts)
         ->where('id', '!=', $product['id'])
@@ -2491,7 +2579,7 @@ Route::get('/notaris-virtual-dan-akta/{idOrSlug}', function (Request $request, s
 });
 
 // RESTRUKTURISASI PERSEROAN TERBATAS
-Route::get('/restrukturisasi-perseroan-terbatas/{idOrSlug}', function (Request $request, string $idOrSlug) use ($restrukturisasiPerseroanTerbatasProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/restrukturisasi-perseroan-terbatas/{idOrSlug}', function (Request $request, string $idOrSlug) use ($restrukturisasiPerseroanTerbatasProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedBadanUsaha) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($restrukturisasiPerseroanTerbatasProducts)->firstWhere('id', (int) $idOrSlug)
@@ -2502,6 +2590,13 @@ Route::get('/restrukturisasi-perseroan-terbatas/{idOrSlug}', function (Request $
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedBadanUsaha['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedBadanUsaha['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedBadanUsaha['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($restrukturisasiPerseroanTerbatasProducts)
         ->where('id', '!=', $product['id'])
@@ -2563,7 +2658,7 @@ Route::get('/restrukturisasi-perseroan-terbatas/{idOrSlug}', function (Request $
 });
 
 // PENUTUPAN BADAN USAHA
-Route::get('/penutupan-badan-usaha/{idOrSlug}', function (Request $request, string $idOrSlug) use ($penutupanBadanUsahaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/penutupan-badan-usaha/{idOrSlug}', function (Request $request, string $idOrSlug) use ($penutupanBadanUsahaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedBadanUsaha) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($penutupanBadanUsahaProducts)->firstWhere('id', (int) $idOrSlug)
@@ -2574,6 +2669,13 @@ Route::get('/penutupan-badan-usaha/{idOrSlug}', function (Request $request, stri
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedBadanUsaha['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedBadanUsaha['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedBadanUsaha['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($penutupanBadanUsahaProducts)
         ->where('id', '!=', $product['id'])
@@ -2635,7 +2737,7 @@ Route::get('/penutupan-badan-usaha/{idOrSlug}', function (Request $request, stri
 });
 
 // KEIMIGRASIAN WNI WNA
-Route::get('/keimigrasian-wni-wna/{idOrSlug}', function (Request $request, string $idOrSlug) use ($keimigrasianWniWnaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/keimigrasian-wni-wna/{idOrSlug}', function (Request $request, string $idOrSlug) use ($keimigrasianWniWnaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedExpatriateVisa) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($keimigrasianWniWnaProducts)->firstWhere('id', (int) $idOrSlug)
@@ -2646,6 +2748,13 @@ Route::get('/keimigrasian-wni-wna/{idOrSlug}', function (Request $request, strin
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedExpatriateVisa['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedExpatriateVisa['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedExpatriateVisa['zh'] ?? []),
+    ];
+
 
     $relatedProducts = collect($keimigrasianWniWnaProducts)
         ->where('id', '!=', $product['id'])
@@ -2733,7 +2842,7 @@ Route::get('/sertifikasi-badan-usaha/{idOrSlug}', function (Request $request, st
 });
 
 // VISA MANCANEGARA
-Route::get('/visa-mancanegara/{idOrSlug}', function (Request $request, string $idOrSlug) use ($visaMancanegaraProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/visa-mancanegara/{idOrSlug}', function (Request $request, string $idOrSlug) use ($visaMancanegaraProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedExpatriateVisa) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($visaMancanegaraProducts)->firstWhere('id', (int) $idOrSlug)
@@ -2743,6 +2852,13 @@ Route::get('/visa-mancanegara/{idOrSlug}', function (Request $request, string $i
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedExpatriateVisa['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedExpatriateVisa['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedExpatriateVisa['zh'] ?? []),
+    ];
+
     $relatedProducts = collect($visaMancanegaraProducts)->where('id', '!=', $product['id'])->take(3)->values()->all();
     $productName = $pickLocale($product['name']);
     $productExcerpt = $pickLocale($product['excerpt']);
@@ -2760,7 +2876,7 @@ Route::get('/visa-mancanegara/{idOrSlug}', function (Request $request, string $i
 });
 
 // VISA INDONESIA
-Route::get('/visa-indonesia/{idOrSlug}', function (Request $request, string $idOrSlug) use ($visaIndonesiaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/visa-indonesia/{idOrSlug}', function (Request $request, string $idOrSlug) use ($visaIndonesiaProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedExpatriateVisa) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($visaIndonesiaProducts)->firstWhere('id', (int) $idOrSlug)
@@ -2770,6 +2886,13 @@ Route::get('/visa-indonesia/{idOrSlug}', function (Request $request, string $idO
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedExpatriateVisa['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedExpatriateVisa['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedExpatriateVisa['zh'] ?? []),
+    ];
+
     $relatedProducts = collect($visaIndonesiaProducts)->where('id', '!=', $product['id'])->take(3)->values()->all();
 
     $productName = $pickLocale($product['name']);
@@ -2847,7 +2970,7 @@ Route::get('/digital-marketing/{idOrSlug}', function (Request $request, string $
 });
 
 // NATURALISASI
-Route::get('/naturalisasi/{idOrSlug}', function (Request $request, string $idOrSlug) use ($naturalisasiProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale) {
+Route::get('/naturalisasi/{idOrSlug}', function (Request $request, string $idOrSlug) use ($naturalisasiProducts, $resolveBaseUrl, $defaultImageUrl, $organizationReference, $breadcrumbSchema, $pickLocale, $faqSharedExpatriateVisa) {
     $baseUrl = $resolveBaseUrl($request);
     $product = ctype_digit($idOrSlug)
         ? collect($naturalisasiProducts)->firstWhere('id', (int) $idOrSlug)
@@ -2857,6 +2980,13 @@ Route::get('/naturalisasi/{idOrSlug}', function (Request $request, string $idOrS
     if (ctype_digit($idOrSlug)) {
         return redirect($product['detail_path'], 301);
     }
+
+    $product['faq'] = [
+        'id' => array_merge($product['faq']['id'] ?? [], $faqSharedExpatriateVisa['id'] ?? []),
+        'en' => array_merge($product['faq']['en'] ?? [], $faqSharedExpatriateVisa['en'] ?? []),
+        'zh' => array_merge($product['faq']['zh'] ?? [], $faqSharedExpatriateVisa['zh'] ?? []),
+    ];
+
     $relatedProducts = collect($naturalisasiProducts)->where('id', '!=', $product['id'])->take(3)->values()->all();
     $productName = $pickLocale($product['name']);
     $productExcerpt = $pickLocale($product['excerpt']);
