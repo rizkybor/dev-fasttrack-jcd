@@ -1061,6 +1061,20 @@ onUnmounted(() => document.removeEventListener("click", handleOutsideClick));
                                         />
                                     </svg>
                                     <svg
+                                        v-else-if="category.icon === 'megaphone'"
+                                        class="h-5 w-5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.8"
+                                            d="M3 11v2a2 2 0 002 2h1l3 5V4L6 9H5a2 2 0 00-2 2zM11 8l6-4v16l-6-4M18 10a2 2 0 010 4"
+                                        />
+                                    </svg>
+                                    <svg
                                         v-else
                                         class="h-5 w-5"
                                         fill="none"

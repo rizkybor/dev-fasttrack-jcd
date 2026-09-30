@@ -3513,10 +3513,32 @@ Route::get('/penawaran-khusus', function (Request $request) use ($resolveBaseUrl
 });
 
 // FAQ
-Route::get('/faq', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema) {
+Route::get('/faq', function (Request $request) use ($resolveBaseUrl, $defaultImageUrl, $breadcrumbSchema, $pickLocale, $faqSharedBadanUsaha, $faqSharedExpatriateVisa, $faqSharedOssPerizinan) {
     $baseUrl = $resolveBaseUrl($request);
 
+    // Kirim struktur multi-bahasa utuh (id/en/zh) ke frontend — pemilihan
+    // bahasa dilakukan di client via vue-i18n, bukan di server, karena
+    // switch bahasa di UI tidak melakukan reload/request baru ke Laravel.
+    $groups = [
+        [
+            'title' => ['id' => 'Pendirian Badan Usaha', 'en' => 'Business Entity Establishment', 'zh' => '企业设立'],
+            'faq' => $faqSharedBadanUsaha,
+        ],
+        [
+            'title' => ['id' => 'Expatriate & Keimigrasian', 'en' => 'Expatriate & Immigration', 'zh' => '外籍人士与移民'],
+            'faq' => $faqSharedExpatriateVisa,
+        ],
+        [
+            'title' => ['id' => 'Kantor Perwakilan, OSS & Perizinan Berusaha', 'en' => 'Representative Office, OSS & Business Licensing', 'zh' => '代表处、OSS与经营许可'],
+            'faq' => $faqSharedOssPerizinan,
+        ],
+    ];
+
+    // Schema SEO tetap butuh satu bahasa statis (non-reaktif), pakai locale server saja.
+    $allFaqForSchema = collect($groups)->flatMap(fn(array $group): array => $pickLocale($group['faq']) ?? [])->all();
+
     return Inertia::render('Faq', [
+        'faqGroups' => $groups,
         'seo' => [
             'title' => 'FAQ - FastTrack',
             'description' => 'Jawaban singkat untuk pertanyaan yang paling sering ditanyakan terkait legalitas bisnis dan layanan FastTrack.',
@@ -3536,6 +3558,20 @@ Route::get('/faq', function (Request $request) use ($resolveBaseUrl, $defaultIma
                 ['name' => 'Beranda', 'item' => $baseUrl . '/'],
                 ['name' => 'FAQ', 'item' => $baseUrl . '/faq'],
             ]),
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($allFaqForSchema)->map(
+                    static fn(array $faq): array => [
+                        '@type' => 'Question',
+                        'name' => $faq['question'],
+                        'acceptedAnswer' => [
+                            '@type' => 'Answer',
+                            'text' => $faq['answer'],
+                        ],
+                    ]
+                )->all(),
+            ],
         ],
     ]);
 });
