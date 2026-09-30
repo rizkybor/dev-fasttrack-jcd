@@ -1,8 +1,37 @@
 <script setup>
+import { computed } from 'vue';
 import MainLayout from '@/Layouts/MainLayout.vue';
 import { useI18n } from 'vue-i18n';
+import FaqAccordionSection from '@/Components/FaqAccordionSection.vue';
 
-const { t, tm } = useI18n();
+const { t, locale } = useI18n();
+
+const props = defineProps({
+    faqGroups: {
+        type: Array,
+        default: () => [],
+    },
+});
+
+// Helper: pick nilai berdasarkan locale aktif, fallback ke 'id'
+const pick = (field) => {
+    if (field === null || field === undefined) return field;
+    if (
+        typeof field === 'object' &&
+        !Array.isArray(field) &&
+        ('id' in field || 'en' in field || 'zh' in field)
+    ) {
+        return field[locale.value] ?? field.id ?? field;
+    }
+    return field;
+};
+
+const localizedGroups = computed(() =>
+    props.faqGroups.map((group) => ({
+        title: pick(group.title),
+        faq: (group.faq?.[locale.value] ?? group.faq?.id ?? []),
+    })),
+);
 </script>
 
 <template>
@@ -17,10 +46,9 @@ const { t, tm } = useI18n();
                     </p>
                 </div>
 
-                <div class="mt-12 space-y-4">
-                    <div v-for="faq in tm('faq.list')" :key="faq.question" class="rounded-2xl border border-gray-100 bg-gray-50 p-6">
-                        <h2 class="text-lg font-bold text-secondary">{{ faq.question }}</h2>
-                        <p class="mt-3 text-sm leading-6 text-gray-600">{{ faq.answer }}</p>
+                <div v-if="localizedGroups.length" class="mt-12 space-y-8">
+                    <div v-for="group in localizedGroups" :key="group.title">
+                        <FaqAccordionSection :faq="group.faq" :title="group.title" />
                     </div>
                 </div>
             </div>

@@ -301,6 +301,20 @@ export default {
                 },
             ],
         },
+        {
+            title: "数字营销",
+            icon: "megaphone",
+            services: [
+                {
+                    title: "数字营销",
+                    path: "/digital-marketing",
+                    items: [
+                        { label: "设计", path: "/digital-marketing/design" },
+                        { label: "数字营销", path: "/digital-marketing/digital-marketing" },
+                    ],
+                },
+            ],
+        },
     ],
     tools: [
         {
