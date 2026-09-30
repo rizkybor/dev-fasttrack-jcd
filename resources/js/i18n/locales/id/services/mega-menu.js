@@ -301,6 +301,20 @@ export default {
                 },
             ],
         },
+        {
+            title: "Digital Marketing",
+            icon: "megaphone",
+            services: [
+                {
+                    title: "Digital Marketing",
+                    path: "/digital-marketing",
+                    items: [
+                        { label: "Design", path: "/digital-marketing/design" },
+                        { label: "Digital Marketing", path: "/digital-marketing/digital-marketing" },
+                    ],
+                },
+            ],
+        },
     ],
     tools: [
         {
