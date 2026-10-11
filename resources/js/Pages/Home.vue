@@ -437,7 +437,7 @@ onUnmounted(() => {
                     </div>
                     <div class="flex flex-wrap gap-3">
                         <a
-                            href="/kontak"
+                            href="#kontak"
                             class="inline-flex items-center gap-2 bg-[#9e1f16] hover:bg-red-600 text-white font-semibold text-base px-6 py-3 rounded-lg transition-colors shadow-md"
                         >
                             {{ t("home.hero.cta_primary") }}
@@ -1693,7 +1693,7 @@ onUnmounted(() => {
         </section>
 
         <!-- ===== 13. KONTAK SECTION ===== -->
-        <section class="py-[52px] bg-[#42443D] mb-20">
+        <section id="kontak" class="py-[52px] bg-[#42443D] mb-20 scroll-mt-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                 <div class="flex flex-col lg:flex-row gap-6">
                     <!-- Left: Form -->
