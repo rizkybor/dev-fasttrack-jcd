@@ -91,7 +91,7 @@ const teams = [
                         </p>
 
                         <div class="mt-10 flex flex-wrap gap-4">
-                            <a href="/kontak" class="rounded-full bg-primary px-7 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-pink-600">
+                            <a href="/#kontak" class="rounded-full bg-primary px-7 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-pink-600">
                                 Konsultasi Sekarang
                             </a>
                             <a href="#team" class="rounded-full border border-white/30 px-7 py-3 text-sm font-bold text-white transition hover:bg-white hover:text-secondary">

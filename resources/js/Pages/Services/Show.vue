@@ -53,7 +53,7 @@ const formatPrice = (price) => {
                 <div class="bg-white rounded-xl shadow border border-gray-100 p-6 lg:sticky lg:top-24">
                     <h3 class="text-xl font-bold mb-4">{{ t("services.layananDetail.sidebar.title") }}</h3>
                     <p class="text-gray-600 mb-6">{{ t("services.layananDetail.sidebar.desc") }}</p>
-                    <a href="/kontak" class="block w-full text-center bg-primary hover:bg-pink-600 text-white font-semibold py-3 rounded-lg transition mb-3">
+                    <a href="/#kontak" class="block w-full text-center bg-primary hover:bg-pink-600 text-white font-semibold py-3 rounded-lg transition mb-3">
                         {{ t("services.layananDetail.sidebar.konsultasi_cta") }}
                     </a>
                     <a :href="buildWhatsappLink(service.name)" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg transition">
